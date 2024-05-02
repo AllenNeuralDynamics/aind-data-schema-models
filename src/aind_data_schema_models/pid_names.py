@@ -2,13 +2,13 @@
 
 from typing import Optional
 
-from pydantic import Field
-
-from aind_data_schema_models.base import AindModel
+from pydantic import BaseModel, ConfigDict, Field
 
 
-class BaseName(AindModel):
+class BaseName(BaseModel):
     """A simple model associating a name with an abbreviation"""
+
+    model_config = ConfigDict(extra="forbid", use_enum_values=True)
 
     name: str = Field(..., title="Name")
     abbreviation: Optional[str] = Field(None, title="Abbreviation")
