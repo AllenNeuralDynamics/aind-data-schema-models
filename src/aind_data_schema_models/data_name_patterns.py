@@ -50,18 +50,57 @@ class Group(str, Enum):
 
 
 def datetime_to_name_string(dt: datetime) -> str:
-    """Take a date and time object, format it as a string"""
+    """
+    Take a datetime object, format it as a string
+    Parameters
+    ----------
+    dt : datetime
+      For example, datetime(2020, 12, 29, 10, 04, 59)
+
+    Returns
+    -------
+    str
+      For example, '2020-12-29_10-04-59'
+
+    """
     return dt.strftime("%Y-%m-%d_%H-%M-%S")
 
 
 def datetime_from_name_string(d: str, t: str) -> datetime:
-    """Take date and time strings, generate date and time objects"""
+    """
+    Take date and time strings, generate datetime object
+    Parameters
+    ----------
+    d : str
+      Date string formatted as %Y-%m-%d
+    t : str
+      Time string formatted as %H-%M-%S
+
+    Returns
+    -------
+    datetime
+
+    """
     d = datetime.strptime(d, "%Y-%m-%d").date()
     t = datetime.strptime(t, "%H-%M-%S").time()
     return datetime.combine(d, t)
 
 
 def build_data_name(label: str, creation_datetime: datetime) -> str:
-    """Construct a valid data description name"""
+    """
+    Construct a data description name from a label and datetime object
+    Parameters
+    ----------
+    label : str
+      For example, 'ecephys_123456'
+    creation_datetime : datetime
+      For example, datetime(2020, 12, 29, 10, 04, 59)
+
+    Returns
+    -------
+    str
+      For example, 'ecephys_123456_2020-12-29_10-04-59'
+
+    """
     dt_str = datetime_to_name_string(creation_datetime)
     return f"{label}_{dt_str}"
