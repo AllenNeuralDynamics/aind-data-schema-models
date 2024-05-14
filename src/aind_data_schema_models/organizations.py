@@ -846,7 +846,7 @@ class Organization:
             Semrock,
             Thorlabs,
             Other
-        ], 
+        ],
         Field(discriminator="name"),
     ]
     LENS_MANUFACTURERS = Annotated[
