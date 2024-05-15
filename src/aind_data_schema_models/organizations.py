@@ -853,6 +853,7 @@ class Organization:
         Union[
             Computar,
             EdmundOptics,
+            Fujinon,
             Hamamatsu,
             InfinityPhotoOptical,
             Leica,
