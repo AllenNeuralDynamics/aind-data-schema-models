@@ -2,7 +2,6 @@ from enum import Enum
 
 
 class SpecimenProcedureType(str, Enum):
-
     """Names for general specimen procedures"""
 
     DELIPIDATION = "Delipidation"
