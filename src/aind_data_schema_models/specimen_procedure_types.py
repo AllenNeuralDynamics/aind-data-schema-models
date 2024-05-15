@@ -1,3 +1,5 @@
+"""Script for the SpecimenProcedureType enum class."""
+
 from enum import Enum
 
 
