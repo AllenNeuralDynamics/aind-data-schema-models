@@ -763,7 +763,7 @@ class Organization:
     LG = Lg()
     LIFECANVAS = LifeCanvas()
     MEADOWLARK = MeadowlarkOptics()
-    MIDWEST_OPTICAL_SYSTEMS = MidwestOpticalSystems()
+    MIDOPT = MidwestOpticalSystems()
     MIGHTY_ZAP = IRRobotCo()
     MITUTUYO = Mitutuyo()
     MKS_NEWPORT = MKSNewport()
