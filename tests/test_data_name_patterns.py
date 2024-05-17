@@ -86,8 +86,9 @@ class TestDataRegex(unittest.TestCase):
         for c in special_chars:
             malformed_no_special_chars = f"abc-123{c}something{c}"
             self.assertNotRegex(malformed_no_special_chars, DataRegex.NO_SPECIAL_CHARS)
-            if c == " ": continue
-            malformed_no_special_chars_except_space =  f"abc efg - 123 {c}something{c}"
+            if c == " ":
+                continue
+            malformed_no_special_chars_except_space = f"abc efg - 123 {c}something{c}"
             self.assertNotRegex(malformed_no_special_chars_except_space, DataRegex.NO_SPECIAL_CHARS_EXCEPT_SPACE)
 
 
