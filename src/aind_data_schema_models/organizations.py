@@ -450,7 +450,9 @@ class MBFBioscience(_Organization):
 class MichaelJFoxFoundationForParkinsonsResearch(_Organization):
     """MichaelJFoxFoundationForParkinsonsResearch"""
 
-    name: Literal["Michael J. Fox Foundation for Parkinson's Research"] = "Michael J. Fox Foundation for Parkinson's Research"
+    name: Literal["Michael J. Fox Foundation for Parkinson's Research"] = (
+        "Michael J. Fox Foundation for Parkinson's Research"
+    )
     abbreviation: Literal["MJFF"] = "MJFF"
     registry: Annotated[Union[ResearchOrganizationRegistry], Field(default=Registry.ROR, discriminator="name")]
     registry_identifier: Literal["03arq3225"] = "03arq3225"
@@ -495,7 +497,9 @@ class Mpi(_Organization):
 class NationalCenterForComplementaryAndIntegrativeHealth(_Organization):
     """NationalCenterForComplementaryAndIntegrativeHealth"""
 
-    name: Literal["National Center for Complementary and Integrative Health"] = "National Center for Complementary and Integrative Health"
+    name: Literal["National Center for Complementary and Integrative Health"] = (
+        "National Center for Complementary and Integrative Health"
+    )
     abbreviation: Literal["NCCIH"] = "NCCIH"
     registry: Annotated[Union[ResearchOrganizationRegistry], Field(default=Registry.ROR, discriminator="name")]
     registry_identifier: Literal["00190t495"] = "00190t495"
@@ -904,14 +908,7 @@ class Organization:
         Field(discriminator="name"),
     ]
     FILTER_MANUFACTURERS = Annotated[
-        Union[
-            Chroma,
-            EdmundOptics,
-            MidwestOpticalSystems,
-            Semrock,
-            Thorlabs,
-            Other
-        ],
+        Union[Chroma, EdmundOptics, MidwestOpticalSystems, Semrock, Thorlabs, Other],
         Field(discriminator="name"),
     ]
     LENS_MANUFACTURERS = Annotated[
