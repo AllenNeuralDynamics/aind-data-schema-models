@@ -784,7 +784,21 @@ class CarlZeiss(_Organization):
     registry: Annotated[Union[ResearchOrganizationRegistry], Field(default=Registry.ROR, discriminator="name")]
     registry_identifier: Literal["01xk5xs43"] = "01xk5xs43"
 
+class Chameleon(_Organization):
+    """Chameleon"""
 
+    name: Literal["Chameleon"] = "Chameleon"
+    abbreviation: Literal[None] = Field(None)
+    registry: Literal[None] = Field(None)
+    registry_identifier: Literal[None] = Field(None)
+
+class LumenDynamics(_Organization):
+    """Lumen Dynamics"""
+
+    name: Literal["Lumen Dynamics"] = "Lumen Dynamics"
+    abbreviation: Literal[None] = Field(None)
+    registry: Literal[None] = Field(None)
+    registry_identifier: Literal[None] = Field(None)
 class Other(_Organization):
     """Other"""
 
@@ -812,6 +826,7 @@ class Organization:
     CAMBRIDGE_TECHNOLOGY = CambridgeTechnology()
     CHAMPALIMAUD = ChampalimaudFoundation()
     CZI = ChanZuckerbergInitiative()
+    CHAMELEON = Chameleon()
     CHROMA = Chroma()
     COHERENT_SCIENTIFIC = CoherentScientific()
     COLUMBIA = ColumbiaUniversity()
@@ -840,6 +855,7 @@ class Organization:
     LEICA = Leica()
     LG = Lg()
     LIFECANVAS = LifeCanvas()
+    LUMEN_DYNAMICS = LumenDynamics()
     MBF = MBFBioscience()
     MEADOWLARK = MeadowlarkOptics()
     MIDOPT = MidwestOpticalSystems()
@@ -957,7 +973,7 @@ class Organization:
         Field(discriminator="name"),
     ]
     LASER_MANUFACTURERS = Annotated[
-        Union[CoherentScientific, Hamamatsu, Oxxius, Quantifi, Vortran, Other], Field(discriminator="name")
+        Union[CoherentScientific, Hamamatsu, Oxxius, Quantifi, Vortran, Chameleon, Other], Field(discriminator="name")
     ]
     LED_MANUFACTURERS = Annotated[Union[AmsOsram, Doric, Prizmatix, Thorlabs, Other], Field(discriminator="name")]
     MANIPULATOR_MANUFACTURERS = Annotated[Union[NewScaleTechnologies, Other], Field(discriminator="name")]
