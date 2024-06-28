@@ -302,6 +302,13 @@ class TheImagingSource(_Organization):
     registry: Literal[None] = Field(None)
     registry_identifier: Literal[None] = Field(None)
 
+class IntegratedDNATechnologies(_Organization):
+    """IntegratedDNATechnologies"""
+
+    name: Literal["Integrated DNA Technologies"] = "Integrated DNA Technologies"
+    abbreviation: Literal["IDT"] = "IDT"
+    registry: Annotated[Union[ResearchOrganizationRegistry], Field(default=Registry.ROR, discriminator="name")]
+    registry_identifier: Literal["009jvpf03"] = "009jvpf03"
 
 class InteruniversityMicroelectronicsCenter(_Organization):
     """InteruniversityMicroelectronicsCenter"""
@@ -831,6 +838,7 @@ class Organization:
     IMAGING_SOURCE = TheImagingSource()
     IMEC = InteruniversityMicroelectronicsCenter()
     INFINITY_PHOTO_OPTICAL = InfinityPhotoOptical()
+    IDT = IntegratedDNATechnologies()
     INVITROGEN = Invitrogen()
     ISL = ISLProductsInternational()
     JAX = JacksonLaboratory()
