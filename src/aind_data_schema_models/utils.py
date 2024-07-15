@@ -32,13 +32,13 @@ def create_literal_class(objects:List[dict], class_name:str, base_model:BaseMode
     setattr(
         cls, 
         '_ALL',
-        Annotated[Union[all_models], Field(discriminator=discriminator)]
+        tuple(all_models)
     )
 
     setattr(
         cls,
         'ONE_OF',
-        Annotated[Union[cls._ALL], Field(discriminator="name")]
+        Annotated[Union[cls._ALL], Field(discriminator=discriminator)]
     )    
 
     # add the model instances as class variables
