@@ -9,10 +9,15 @@ def create_literal_model(obj:dict, base_model:BaseModel, discriminator:str):
     
     literal_fields = { k: (Literal[v], v) for k,v in obj.items() }
 
-    return create_model(obj[discriminator],
+    return create_model(create_model_class_name(obj[discriminator]),
                         model_config=ConfigDict(frozen=True),
                         __base__=base_model,
                         **literal_fields)
+
+
+def create_model_class_name(class_name:str):
+    """lint class name"""
+    return re.sub(r'\s+', '', class_name)
 
 
 def create_literal_class(objects:List[dict], class_name:str, base_model:BaseModel=BaseModel, discriminator:str='name'):    
@@ -37,7 +42,7 @@ def create_literal_class(objects:List[dict], class_name:str, base_model:BaseMode
     )    
 
     # add the model instances as class variables
-    for m in all_models:
-        setattr(cls, m.model_fields[discriminator].default.upper(), m())
+    for m in all_models:        
+        setattr(cls, m.__name__, m())
 
     return cls
