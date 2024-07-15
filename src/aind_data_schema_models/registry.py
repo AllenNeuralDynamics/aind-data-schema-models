@@ -21,5 +21,5 @@ Registries = create_literal_class(
     objects=pd.read_csv('models/registries.csv').to_dict(orient='records'), 
     class_name='Registries', 
     base_model=Registry, 
-    discriminator='name'
+    discriminator='abbreviation'
 )
