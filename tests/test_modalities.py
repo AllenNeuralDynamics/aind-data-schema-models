@@ -11,7 +11,7 @@ class TestModality(unittest.TestCase):
     def test_from_abbreviation(self):
         """Tests modality can be constructed from abbreviation"""
 
-        self.assertEqual(Modalities.Ecephys, Modality.from_abbreviation("ecephys"))
+        self.assertEqual(Modalities.Ecephys, Modalities.from_abbreviation("ecephys"))
 
 
 if __name__ == "__main__":

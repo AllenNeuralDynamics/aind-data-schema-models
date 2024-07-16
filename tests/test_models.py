@@ -2,10 +2,10 @@
 
 import unittest
 
-from aind_data_schema_models.harp_types import HarpDeviceType
-from aind_data_schema_models.organizations import Organization
-from aind_data_schema_models.platforms import Platform
-from aind_data_schema_models.registry import Registry
+from aind_data_schema_models.harp_types import HarpDeviceTypes
+from aind_data_schema_models.organizations import Organizations
+from aind_data_schema_models.platforms import Platforms
+from aind_data_schema_models.registry import Registries
 from aind_data_schema_models.species import Species
 
 
@@ -15,7 +15,7 @@ class LiteralAndDefaultTests(unittest.TestCase):
     def test_organizations(self):
         """Test Literals match defaults"""
 
-        for organization in Organization._ALL:
+        for organization in Organizations._ALL:
             model = organization()
             round_trip = model.model_validate_json(model.model_dump_json())
             self.assertIsNotNone(round_trip)
@@ -23,7 +23,7 @@ class LiteralAndDefaultTests(unittest.TestCase):
     def test_harp(self):
         """Test Literals match defaults"""
 
-        for harp in HarpDeviceType._ALL:
+        for harp in HarpDeviceTypes._ALL:
             model = harp()
             round_trip = model.model_validate_json(model.model_dump_json())
             self.assertIsNotNone(round_trip)
@@ -31,7 +31,7 @@ class LiteralAndDefaultTests(unittest.TestCase):
     def test_registry(self):
         """Test Literals match defaults"""
 
-        for registry in Registry._ALL:
+        for registry in Registries._ALL:
             model = registry()
             round_trip = model.model_validate_json(model.model_dump_json())
             self.assertIsNotNone(round_trip)
@@ -39,7 +39,7 @@ class LiteralAndDefaultTests(unittest.TestCase):
     def test_platforms(self):
         """Test Literals match defaults"""
 
-        for platform in Platform._ALL:
+        for platform in Platforms._ALL:
             model = platform()
             round_trip = model.model_validate_json(model.model_dump_json())
             self.assertIsNotNone(round_trip)
