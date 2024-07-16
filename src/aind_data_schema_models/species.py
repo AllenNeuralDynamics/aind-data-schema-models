@@ -2,7 +2,7 @@
 
 from pydantic import BaseModel, ConfigDict, Field
 
-from aind_data_schema_models.registry import Registry, map_registry
+from aind_data_schema_models.registries import Registry, map_registry
 from aind_data_schema_models.utils import create_literal_class, read_csv
 
 

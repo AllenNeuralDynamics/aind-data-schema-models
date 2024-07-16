@@ -5,7 +5,7 @@ import unittest
 from aind_data_schema_models.harp_types import HarpDeviceTypes
 from aind_data_schema_models.organizations import Organizations
 from aind_data_schema_models.platforms import Platforms
-from aind_data_schema_models.registry import Registries
+from aind_data_schema_models.registries import Registries
 from aind_data_schema_models.species import Species
 
 
