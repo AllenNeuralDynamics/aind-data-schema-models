@@ -2,11 +2,10 @@
 
 from typing import Annotated, Union
 
-import pandas as pd
 from pydantic import ConfigDict, Field
 
 from aind_data_schema_models.pid_names import BaseName
-from aind_data_schema_models.utils import create_literal_class
+from aind_data_schema_models.utils import create_literal_class, read_csv
 
 
 class Registry(BaseName):
@@ -19,7 +18,7 @@ class Registry(BaseName):
 
 
 Registries = create_literal_class(
-    objects=pd.read_csv("models/registries.csv").to_dict(orient="records"),
+    objects=read_csv("models/registries.csv"),
     class_name="Registries",
     base_model=Registry,
     discriminator="abbreviation",
