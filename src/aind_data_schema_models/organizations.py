@@ -56,7 +56,7 @@ Organizations.DETECTOR_MANUFACTURERS = Annotated[
         Organizations.EdmundOptics,
         Organizations.Hamamatsu,
         Organizations.Spinnaker,
-        Organizations.TeledyneFLIR,
+        Organizations.TeledyneFlir,
         Organizations.TheImagingSource,
         Organizations.Thorlabs,
         Organizations.Vieworks,
@@ -99,7 +99,7 @@ Organizations.LENS_MANUFACTURERS = Annotated[
 
 Organizations.DAQ_DEVICE_MANUFACTURERS = Annotated[
     Union[
-        Organizations.AllenInstituteforNeuralDynamics,
+        Organizations.AllenInstituteForNeuralDynamics,
         Organizations.ChampalimaudFoundation,
         Organizations.NationalInstruments,
         Organizations.InteruniversityMicroelectronicsCenter,
@@ -124,7 +124,7 @@ Organizations.LASER_MANUFACTURERS = Annotated[
 
 Organizations.LED_MANUFACTURERS = Annotated[
     Union[
-        Organizations.amsOSRAM,
+        Organizations.AmsOsram,
         Organizations.Doric,
         Organizations.Prizmatix,
         Organizations.Thorlabs,
@@ -138,11 +138,11 @@ Organizations.MANIPULATOR_MANUFACTURERS = Annotated[
 ]
 
 Organizations.MONITOR_MANUFACTURERS = Annotated[
-    Union[Organizations.ASUS, Organizations.LG, Organizations.Other], Field(discriminator="name")
+    Union[Organizations.Asus, Organizations.Lg, Organizations.Other], Field(discriminator="name")
 ]
 
 Organizations.SPEAKER_MANUFACTURERS = Annotated[
-    Union[Organizations.Tymphany, Organizations.ISLProductsInternational, Organizations.Other],
+    Union[Organizations.Tymphany, Organizations.IslProductsInternational, Organizations.Other],
     Field(discriminator="name"),
 ]
 
@@ -150,11 +150,11 @@ Organizations.FUNDERS = Annotated[
     Union[
         Organizations.AllenInstitute,
         Organizations.ChanZuckerbergInitiative,
-        Organizations.MBFBioscience,
-        Organizations.MichaelJFoxFoundationforParkinsonsResearch,
-        Organizations.NationalCenterforComplementaryandIntegrativeHealth,
-        Organizations.NationalInstituteofMentalHealth,
-        Organizations.NationalInstituteofNeurologicalDisordersandStroke,
+        Organizations.MbfBioscience,
+        Organizations.MichaelJFoxFoundationForParkinsonsResearch,
+        Organizations.NationalCenterForComplementaryAndIntegrativeHealth,
+        Organizations.NationalInstituteOfMentalHealth,
+        Organizations.NationalInstituteOfNeurologicalDisordersAndStroke,
         Organizations.SimonsFoundation,
         Organizations.TempletonWorldCharityFoundation,
     ],
@@ -163,10 +163,10 @@ Organizations.FUNDERS = Annotated[
 
 Organizations.RESEARCH_INSTITUTIONS = Annotated[
     Union[
-        Organizations.AllenInstituteforBrainScience,
-        Organizations.AllenInstituteforNeuralDynamics,
+        Organizations.AllenInstituteForBrainScience,
+        Organizations.AllenInstituteForNeuralDynamics,
         Organizations.ColumbiaUniversity,
-        Organizations.HuazhongUniversityofScienceandTechnology,
+        Organizations.HuazhongUniversityOfScienceAndTechnology,
         Organizations.JaneliaResearchCampus,
         Organizations.NewYorkUniversity,
         Organizations.Other,
@@ -178,7 +178,7 @@ Organizations.SUBJECT_SOURCES = Annotated[
     Union[
         Organizations.AllenInstitute,
         Organizations.ColumbiaUniversity,
-        Organizations.HuazhongUniversityofScienceandTechnology,
+        Organizations.HuazhongUniversityOfScienceAndTechnology,
         Organizations.JaneliaResearchCampus,
         Organizations.JacksonLaboratory,
         Organizations.NewYorkUniversity,

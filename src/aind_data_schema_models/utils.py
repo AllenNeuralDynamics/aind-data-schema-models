@@ -29,8 +29,14 @@ def create_literal_model(
 
 def create_model_class_name(class_name: str):
     """lint class name"""
+
+    # remove punctuation
+    punctuation = re.compile(r'[.,!?;:\'"-()]')
+    class_name = punctuation.sub("", class_name)
+
+    # remove whitespace from title case
     pattern = re.compile(r"[\W_]+")
-    return pattern.sub("", class_name)
+    return pattern.sub("", class_name.title())
 
 
 def create_literal_class(
