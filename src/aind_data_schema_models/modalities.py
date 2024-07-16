@@ -1,10 +1,9 @@
 """Module for Modality definitions"""
 
-import pandas as pd
 from pydantic import ConfigDict, Field
 
 from aind_data_schema_models.pid_names import BaseName
-from aind_data_schema_models.utils import create_literal_class
+from aind_data_schema_models.utils import create_literal_class, read_csv
 
 
 class Modality(BaseName):
@@ -16,10 +15,10 @@ class Modality(BaseName):
 
 
 Modalities = create_literal_class(
-    objects=pd.read_csv("models/modalities.csv").to_dict(orient="records"),
+    objects=read_csv("models/modalities.csv"),
     class_name="Modalities",
     base_model=Modality,
-    discriminator="name",
+    discriminator="abbreviation",
     class_module=__name__,
 )
 

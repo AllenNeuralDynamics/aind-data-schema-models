@@ -2,12 +2,11 @@
 
 from typing import Union
 
-import pandas as pd
 from pydantic import BaseModel, ConfigDict, Field
 from typing_extensions import Annotated
 
 from aind_data_schema_models.registry import Registry, map_registry
-from aind_data_schema_models.utils import create_literal_class
+from aind_data_schema_models.utils import create_literal_class, read_csv
 
 
 class Organization(BaseModel):
@@ -22,7 +21,7 @@ class Organization(BaseModel):
 
 
 Organizations = create_literal_class(
-    objects=pd.read_csv("models/organizations.csv", keep_default_na=False).to_dict(orient="records"),
+    objects=read_csv("models/organizations.csv"),
     class_name="Organizations",
     base_model=Organization,
     discriminator="name",

@@ -1,4 +1,5 @@
 import re
+import csv
 from typing import Annotated, List, Literal, Optional, Union
 
 from pydantic import BaseModel, ConfigDict, Field, create_model
@@ -72,3 +73,9 @@ def create_literal_class(
         setattr(cls, m.__name__, m())
 
     return cls
+
+def read_csv(file_path: str):
+    """read a csv file and return the contents as a list of dictionaries"""
+    with open(file_path, 'r') as f:
+        reader = csv.DictReader(f)
+        return list(reader)    

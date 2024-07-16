@@ -3,7 +3,7 @@
 import pandas as pd
 from pydantic import BaseModel, ConfigDict, Field
 
-from aind_data_schema_models.utils import create_literal_class
+from aind_data_schema_models.utils import create_literal_class, read_csv
 
 
 class HarpDeviceType(BaseModel):
@@ -15,7 +15,7 @@ class HarpDeviceType(BaseModel):
 
 
 HarpDeviceTypes = create_literal_class(
-    objects=pd.read_csv("models/harp_types.csv").to_dict(orient="records"),
+    objects=read_csv("models/harp_types.csv"),
     class_name="HarpDeviceTypes",
     base_model=HarpDeviceType,
     discriminator="name",
