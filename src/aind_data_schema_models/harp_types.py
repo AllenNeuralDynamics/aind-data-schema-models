@@ -19,4 +19,5 @@ HarpDeviceTypes = create_literal_class(
     objects=pd.read_csv('models/harp_types.csv').to_dict(orient='records'), 
     class_name='HarpDeviceTypes', 
     base_model=HarpDeviceType, 
-    discriminator='name')
+    discriminator='name',
+    class_module=__name__)

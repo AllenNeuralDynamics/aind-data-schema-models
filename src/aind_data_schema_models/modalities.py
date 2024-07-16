@@ -21,7 +21,8 @@ Modalities = create_literal_class(
     objects=pd.read_csv('models/modalities.csv').to_dict(orient='records'), 
     class_name='Modalities', 
     base_model=Modality, 
-    discriminator='name'
+    discriminator='name',    
+    class_module=__name__
 )
 
 @classmethod
