@@ -2,7 +2,7 @@
 
 import unittest
 
-from aind_data_schema_models.organizations import Organizations
+from aind_data_schema_models.organizations import Organization
 
 
 class TestOrganization(unittest.TestCase):
@@ -11,7 +11,7 @@ class TestOrganization(unittest.TestCase):
     def test_name_map(self):
         """Tests Organization name_map property"""
 
-        self.assertEqual(Organizations.AllenInstitute, Organizations._name_map["Allen Institute"])
+        self.assertEqual(Organization.AllenInstitute, Organization._name_map["Allen Institute"])
 
 
 if __name__ == "__main__":

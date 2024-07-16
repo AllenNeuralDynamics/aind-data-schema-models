@@ -2,7 +2,7 @@
 
 from pydantic import BaseModel, ConfigDict, Field
 
-from aind_data_schema_models.registries import Registry, map_registry
+from aind_data_schema_models.registries import RegistryModel, map_registry
 from aind_data_schema_models.utils import create_literal_class, read_csv
 
 
@@ -10,7 +10,7 @@ class SpeciesModel(BaseModel):
     model_config = ConfigDict(frozen=True)
 
     name: str = Field(..., title="Species name")
-    registry: Registry = Field(..., title="Species registry")
+    registry: RegistryModel = Field(..., title="Species registry")
     registry_identifier: str = Field(..., title="Species registry identifier")
 
 

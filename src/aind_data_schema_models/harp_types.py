@@ -5,7 +5,7 @@ from pydantic import BaseModel, ConfigDict, Field
 from aind_data_schema_models.utils import create_literal_class, read_csv
 
 
-class HarpDeviceType(BaseModel):
+class HarpDeviceTypeModel(BaseModel):
     """Base model config"""
 
     model_config = ConfigDict(frozen=True)
@@ -13,10 +13,10 @@ class HarpDeviceType(BaseModel):
     whoami: int = Field(..., title="Harp whoami value")
 
 
-HarpDeviceTypes = create_literal_class(
+HarpDeviceType = create_literal_class(
     objects=read_csv("models/harp_types.csv"),
-    class_name="HarpDeviceTypes",
-    base_model=HarpDeviceType,
+    class_name="HarpDeviceType",
+    base_model=HarpDeviceTypeModel,
     discriminator="name",
     class_module=__name__,
 )

@@ -5,25 +5,25 @@ from typing import Union
 from pydantic import BaseModel, ConfigDict, Field
 from typing_extensions import Annotated
 
-from aind_data_schema_models.registries import Registry, map_registry
+from aind_data_schema_models.registries import RegistryModel, map_registry
 from aind_data_schema_models.utils import create_literal_class, read_csv
 
 
-class Organization(BaseModel):
+class OrganizationModel(BaseModel):
     """Base model config"""
 
     model_config = ConfigDict(frozen=True)
 
     name: str
     abbreviation: str = None
-    registry: Registry = None
+    registry: RegistryModel = None
     registry_identifier: str = None
 
 
-Organizations = create_literal_class(
+Organization = create_literal_class(
     objects=read_csv("models/organizations.csv"),
-    class_name="Organizations",
-    base_model=Organization,
+    class_name="Organization",
+    base_model=OrganizationModel,
     discriminator="name",
     field_handlers={"registry_abbreviation": map_registry},
     class_module=__name__,
@@ -40,148 +40,148 @@ def from_name(cls, name: str):
     return cls._name_map[name]
 
 
-Organizations._abbreviation_map = {m().abbreviation: m() for m in Organizations._ALL}
-Organizations._name_map = {m().name: m() for m in Organizations._ALL}
-Organizations.from_abbreviation = from_abbreviation
-Organizations.from_name = from_name
+Organization._abbreviation_map = {m().abbreviation: m() for m in Organization._ALL}
+Organization._name_map = {m().name: m() for m in Organization._ALL}
+Organization.from_abbreviation = from_abbreviation
+Organization.from_name = from_name
 
 
-Organizations.DETECTOR_MANUFACTURERS = Annotated[
+Organization.DETECTOR_MANUFACTURERS = Annotated[
     Union[
-        Organizations.AilipuTechnologyCo,
-        Organizations.Allied,
-        Organizations.Basler,
-        Organizations.Dodotronic,
-        Organizations.EdmundOptics,
-        Organizations.Hamamatsu,
-        Organizations.Spinnaker,
-        Organizations.TeledyneFlir,
-        Organizations.TheImagingSource,
-        Organizations.Thorlabs,
-        Organizations.Vieworks,
-        Organizations.Other,
+        Organization.AilipuTechnologyCo,
+        Organization.Allied,
+        Organization.Basler,
+        Organization.Dodotronic,
+        Organization.EdmundOptics,
+        Organization.Hamamatsu,
+        Organization.Spinnaker,
+        Organization.TeledyneFlir,
+        Organization.TheImagingSource,
+        Organization.Thorlabs,
+        Organization.Vieworks,
+        Organization.Other,
     ],
     Field(discriminator="name"),
 ]
 
-Organizations.FILTER_MANUFACTURERS = Annotated[
+Organization.FILTER_MANUFACTURERS = Annotated[
     Union[
-        Organizations.Chroma,
-        Organizations.EdmundOptics,
-        Organizations.MidwestOpticalSystemsInc,
-        Organizations.Semrock,
-        Organizations.Thorlabs,
-        Organizations.Other,
+        Organization.Chroma,
+        Organization.EdmundOptics,
+        Organization.MidwestOpticalSystemsInc,
+        Organization.Semrock,
+        Organization.Thorlabs,
+        Organization.Other,
     ],
     Field(discriminator="name"),
 ]
 
-Organizations.LENS_MANUFACTURERS = Annotated[
+Organization.LENS_MANUFACTURERS = Annotated[
     Union[
-        Organizations.Computar,
-        Organizations.EdmundOptics,
-        Organizations.Fujinon,
-        Organizations.Hamamatsu,
-        Organizations.InfinityPhotoOptical,
-        Organizations.Leica,
-        Organizations.Mitutuyo,
-        Organizations.Navitar,
-        Organizations.Nikon,
-        Organizations.Olympus,
-        Organizations.SchneiderKreuznach,
-        Organizations.Thorlabs,
-        Organizations.CarlZeiss,
-        Organizations.Other,
+        Organization.Computar,
+        Organization.EdmundOptics,
+        Organization.Fujinon,
+        Organization.Hamamatsu,
+        Organization.InfinityPhotoOptical,
+        Organization.Leica,
+        Organization.Mitutuyo,
+        Organization.Navitar,
+        Organization.Nikon,
+        Organization.Olympus,
+        Organization.SchneiderKreuznach,
+        Organization.Thorlabs,
+        Organization.CarlZeiss,
+        Organization.Other,
     ],
     Field(discriminator="name"),
 ]
 
-Organizations.DAQ_DEVICE_MANUFACTURERS = Annotated[
+Organization.DAQ_DEVICE_MANUFACTURERS = Annotated[
     Union[
-        Organizations.AllenInstituteForNeuralDynamics,
-        Organizations.ChampalimaudFoundation,
-        Organizations.NationalInstruments,
-        Organizations.InteruniversityMicroelectronicsCenter,
-        Organizations.OpenEphysProductionSite,
-        Organizations.SecondOrderEffects,
-        Organizations.Other,
+        Organization.AllenInstituteForNeuralDynamics,
+        Organization.ChampalimaudFoundation,
+        Organization.NationalInstruments,
+        Organization.InteruniversityMicroelectronicsCenter,
+        Organization.OpenEphysProductionSite,
+        Organization.SecondOrderEffects,
+        Organization.Other,
     ],
     Field(discriminator="name"),
 ]
 
-Organizations.LASER_MANUFACTURERS = Annotated[
+Organization.LASER_MANUFACTURERS = Annotated[
     Union[
-        Organizations.CoherentScientific,
-        Organizations.Hamamatsu,
-        Organizations.Oxxius,
-        Organizations.Quantifi,
-        Organizations.Vortran,
-        Organizations.Other,
+        Organization.CoherentScientific,
+        Organization.Hamamatsu,
+        Organization.Oxxius,
+        Organization.Quantifi,
+        Organization.Vortran,
+        Organization.Other,
     ],
     Field(discriminator="name"),
 ]
 
-Organizations.LED_MANUFACTURERS = Annotated[
+Organization.LED_MANUFACTURERS = Annotated[
     Union[
-        Organizations.AmsOsram,
-        Organizations.Doric,
-        Organizations.Prizmatix,
-        Organizations.Thorlabs,
-        Organizations.Other,
+        Organization.AmsOsram,
+        Organization.Doric,
+        Organization.Prizmatix,
+        Organization.Thorlabs,
+        Organization.Other,
     ],
     Field(discriminator="name"),
 ]
 
-Organizations.MANIPULATOR_MANUFACTURERS = Annotated[
-    Union[Organizations.NewScaleTechnologies, Organizations.Other], Field(discriminator="name")
+Organization.MANIPULATOR_MANUFACTURERS = Annotated[
+    Union[Organization.NewScaleTechnologies, Organization.Other], Field(discriminator="name")
 ]
 
-Organizations.MONITOR_MANUFACTURERS = Annotated[
-    Union[Organizations.Asus, Organizations.Lg, Organizations.Other], Field(discriminator="name")
+Organization.MONITOR_MANUFACTURERS = Annotated[
+    Union[Organization.Asus, Organization.Lg, Organization.Other], Field(discriminator="name")
 ]
 
-Organizations.SPEAKER_MANUFACTURERS = Annotated[
-    Union[Organizations.Tymphany, Organizations.IslProductsInternational, Organizations.Other],
+Organization.SPEAKER_MANUFACTURERS = Annotated[
+    Union[Organization.Tymphany, Organization.IslProductsInternational, Organization.Other],
     Field(discriminator="name"),
 ]
 
-Organizations.FUNDERS = Annotated[
+Organization.FUNDERS = Annotated[
     Union[
-        Organizations.AllenInstitute,
-        Organizations.ChanZuckerbergInitiative,
-        Organizations.MbfBioscience,
-        Organizations.MichaelJFoxFoundationForParkinsonsResearch,
-        Organizations.NationalCenterForComplementaryAndIntegrativeHealth,
-        Organizations.NationalInstituteOfMentalHealth,
-        Organizations.NationalInstituteOfNeurologicalDisordersAndStroke,
-        Organizations.SimonsFoundation,
-        Organizations.TempletonWorldCharityFoundation,
+        Organization.AllenInstitute,
+        Organization.ChanZuckerbergInitiative,
+        Organization.MbfBioscience,
+        Organization.MichaelJFoxFoundationForParkinsonsResearch,
+        Organization.NationalCenterForComplementaryAndIntegrativeHealth,
+        Organization.NationalInstituteOfMentalHealth,
+        Organization.NationalInstituteOfNeurologicalDisordersAndStroke,
+        Organization.SimonsFoundation,
+        Organization.TempletonWorldCharityFoundation,
     ],
     Field(discriminator="name"),
 ]
 
-Organizations.RESEARCH_INSTITUTIONS = Annotated[
+Organization.RESEARCH_INSTITUTIONS = Annotated[
     Union[
-        Organizations.AllenInstituteForBrainScience,
-        Organizations.AllenInstituteForNeuralDynamics,
-        Organizations.ColumbiaUniversity,
-        Organizations.HuazhongUniversityOfScienceAndTechnology,
-        Organizations.JaneliaResearchCampus,
-        Organizations.NewYorkUniversity,
-        Organizations.Other,
+        Organization.AllenInstituteForBrainScience,
+        Organization.AllenInstituteForNeuralDynamics,
+        Organization.ColumbiaUniversity,
+        Organization.HuazhongUniversityOfScienceAndTechnology,
+        Organization.JaneliaResearchCampus,
+        Organization.NewYorkUniversity,
+        Organization.Other,
     ],
     Field(discriminator="name"),
 ]
 
-Organizations.SUBJECT_SOURCES = Annotated[
+Organization.SUBJECT_SOURCES = Annotated[
     Union[
-        Organizations.AllenInstitute,
-        Organizations.ColumbiaUniversity,
-        Organizations.HuazhongUniversityOfScienceAndTechnology,
-        Organizations.JaneliaResearchCampus,
-        Organizations.JacksonLaboratory,
-        Organizations.NewYorkUniversity,
-        Organizations.Other,
+        Organization.AllenInstitute,
+        Organization.ColumbiaUniversity,
+        Organization.HuazhongUniversityOfScienceAndTechnology,
+        Organization.JaneliaResearchCampus,
+        Organization.JacksonLaboratory,
+        Organization.NewYorkUniversity,
+        Organization.Other,
     ],
     Field(discriminator="name"),
 ]

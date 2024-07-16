@@ -1,8 +1,9 @@
 import csv
 import re
-from typing import Annotated, List, Literal, Optional, Union
+from typing import List, Literal, Optional, Union
 
 from pydantic import BaseModel, ConfigDict, Field, create_model
+from typing_extensions import Annotated
 
 
 def create_literal_model(

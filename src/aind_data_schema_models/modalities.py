@@ -6,7 +6,7 @@ from aind_data_schema_models.pid_names import BaseName
 from aind_data_schema_models.utils import create_literal_class, read_csv
 
 
-class Modality(BaseName):
+class ModalityModel(BaseName):
     """Base model config"""
 
     model_config = ConfigDict(frozen=True)
@@ -14,10 +14,10 @@ class Modality(BaseName):
     abbreviation: str = Field(..., title="Modality abbreviation")
 
 
-Modalities = create_literal_class(
+Modality = create_literal_class(
     objects=read_csv("models/modalities.csv"),
-    class_name="Modalities",
-    base_model=Modality,
+    class_name="Modality",
+    base_model=ModalityModel,
     discriminator="abbreviation",
     class_module=__name__,
 )
@@ -29,5 +29,5 @@ def from_abbreviation(cls, abbreviation: str):
     return cls._abbreviation_map[abbreviation]
 
 
-Modalities._abbreviation_map = {m().abbreviation: m() for m in Modalities._ALL}
-Modalities.from_abbreviation = from_abbreviation
+Modality._abbreviation_map = {m().abbreviation: m() for m in Modality._ALL}
+Modality.from_abbreviation = from_abbreviation

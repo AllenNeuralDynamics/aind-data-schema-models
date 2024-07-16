@@ -5,7 +5,7 @@ from pydantic import BaseModel, ConfigDict, Field
 from aind_data_schema_models.utils import create_literal_class, read_csv
 
 
-class Platform(BaseModel):
+class PlatformModel(BaseModel):
     """Base model config"""
 
     model_config = ConfigDict(frozen=True)
@@ -14,10 +14,10 @@ class Platform(BaseModel):
     abbreviation: str = Field(..., title="Platform abbreviation")
 
 
-Platforms = create_literal_class(
+Platform = create_literal_class(
     objects=read_csv("models/platforms.csv"),
-    class_name="Platforms",
-    base_model=Platform,
+    class_name="Platform",
+    base_model=PlatformModel,
     discriminator="name",
     class_module=__name__,
 )
@@ -29,5 +29,5 @@ def from_abbreviation(cls, abbreviation: str):
     return cls._abbreviation_map[abbreviation]
 
 
-Platforms._abbreviation_map = {p().abbreviation: p() for p in Platforms._ALL}
-Platforms.from_abbreviation = from_abbreviation
+Platform._abbreviation_map = {p().abbreviation: p() for p in Platform._ALL}
+Platform.from_abbreviation = from_abbreviation
