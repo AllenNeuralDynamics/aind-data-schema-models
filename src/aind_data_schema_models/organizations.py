@@ -6,7 +6,7 @@ from pydantic import ConfigDict, Field, BaseModel
 from typing_extensions import Annotated
 import pandas as pd
 from aind_data_schema_models.utils import create_literal_class
-from aind_data_schema_models.registry import Registry, Registries
+from aind_data_schema_models.registry import Registry, Registries, map_registry
 
 
 class Organization(BaseModel):
@@ -19,12 +19,6 @@ class Organization(BaseModel):
     registry: Registry = None
     registry_identifier: str = None
 
-def map_registry(abbreviation:str, record:dict):
-    registry = Registries.from_abbreviation(abbreviation)
-    if registry:
-        record['registry'] = Annotated[Union[registry], Field(default=registry, discriminator="name")]
-    else:
-        record['registry'] = Annotated[None, Field(None)]
 
 Organizations = create_literal_class(
     objects=pd.read_csv('models/organizations.csv', keep_default_na=False).to_dict(orient='records'), 
@@ -34,8 +28,6 @@ Organizations = create_literal_class(
     field_handlers={'registry_abbreviation': map_registry},
     class_module=__name__
 )
-#for o in Organizations._ALL:
-#    __dict__[o.__name__] = o
 
 @classmethod
 def from_abbreviation(cls, abbreviation: str):    

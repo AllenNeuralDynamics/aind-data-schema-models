@@ -25,6 +25,14 @@ Registries = create_literal_class(
     class_module=__name__
 )
 
+def map_registry(abbreviation:str, record:dict):
+    registry = Registries.from_abbreviation(abbreviation)
+    if registry:
+        record['registry'] = Annotated[Union[registry], Field(default=registry, discriminator="name")]
+    else:
+        record['registry'] = Annotated[None, Field(None)]
+
+        
 @classmethod
 def from_abbreviation(cls, abbreviation: str):
     """Get class from abbreviation"""
