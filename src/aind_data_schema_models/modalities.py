@@ -1,5 +1,7 @@
 """Module for Modality definitions"""
 
+from importlib.resources import files
+
 from pydantic import ConfigDict, Field
 
 from aind_data_schema_models.pid_names import BaseName
@@ -15,7 +17,7 @@ class ModalityModel(BaseName):
 
 
 Modality = create_literal_class(
-    objects=read_csv("models/modalities.csv"),
+    objects=read_csv(files("aind_data_schema_models.models").joinpath("modalities.csv")),
     class_name="Modality",
     base_model=ModalityModel,
     discriminator="abbreviation",

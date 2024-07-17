@@ -1,5 +1,6 @@
 """Common registries"""
 
+from importlib.resources import files
 from typing import Union
 
 from pydantic import ConfigDict, Field
@@ -19,7 +20,7 @@ class RegistryModel(BaseName):
 
 
 Registry = create_literal_class(
-    objects=read_csv("models/registries.csv"),
+    objects=read_csv(files("aind_data_schema_models.models").joinpath("registries.csv")),
     class_name="Registry",
     base_model=RegistryModel,
     discriminator="abbreviation",

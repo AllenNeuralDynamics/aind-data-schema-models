@@ -1,5 +1,7 @@
 """Module for species definitions"""
 
+from importlib.resources import files
+
 from pydantic import BaseModel, ConfigDict, Field
 
 from aind_data_schema_models.registries import RegistryModel, map_registry
@@ -17,7 +19,7 @@ class SpeciesModel(BaseModel):
 
 
 Species = create_literal_class(
-    objects=read_csv("models/species.csv"),
+    objects=read_csv(files("aind_data_schema_models.models").joinpath("species.csv")),
     class_name="Species",
     base_model=SpeciesModel,
     discriminator="name",

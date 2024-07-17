@@ -1,5 +1,7 @@
 """Module for Organization definitions, including manufacturers, institutions, and vendors"""
 
+from importlib.resources import files
+
 from pydantic import BaseModel, ConfigDict
 
 from aind_data_schema_models.registries import RegistryModel, map_registry
@@ -18,7 +20,7 @@ class OrganizationModel(BaseModel):
 
 
 Organization = create_literal_class(
-    objects=read_csv("models/organizations.csv"),
+    objects=read_csv(files("aind_data_schema_models.models").joinpath("organizations.csv")),
     class_name="Organization",
     base_model=OrganizationModel,
     discriminator="name",

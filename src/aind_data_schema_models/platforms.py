@@ -1,5 +1,7 @@
 """Module for Platform definitions"""
 
+from importlib.resources import files
+
 from pydantic import BaseModel, ConfigDict, Field
 
 from aind_data_schema_models.utils import create_literal_class, read_csv
@@ -15,7 +17,7 @@ class PlatformModel(BaseModel):
 
 
 Platform = create_literal_class(
-    objects=read_csv("models/platforms.csv"),
+    objects=read_csv(files("aind_data_schema_models.models").joinpath("platforms.csv")),
     class_name="Platform",
     base_model=PlatformModel,
     discriminator="name",
