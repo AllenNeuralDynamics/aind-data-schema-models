@@ -1,9 +1,6 @@
 """Module for Organization definitions, including manufacturers, institutions, and vendors"""
 
-from typing import Union
-
-from pydantic import BaseModel, ConfigDict, Field
-from typing_extensions import Annotated
+from pydantic import BaseModel, ConfigDict
 
 from aind_data_schema_models.registries import RegistryModel, map_registry
 from aind_data_schema_models.utils import create_literal_class, one_of_instance, read_csv
