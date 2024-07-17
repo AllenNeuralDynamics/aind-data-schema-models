@@ -1,8 +1,8 @@
 """Common registries"""
 
-from importlib.resources import files
 from typing import Union
 
+from importlib_resources import files
 from pydantic import ConfigDict, Field
 from typing_extensions import Annotated
 

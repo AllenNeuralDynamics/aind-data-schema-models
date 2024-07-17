@@ -1,7 +1,6 @@
 """Module for Organization definitions, including manufacturers, institutions, and vendors"""
 
-from importlib.resources import files
-
+from importlib_resources import files
 from pydantic import BaseModel, ConfigDict
 
 from aind_data_schema_models.registries import RegistryModel, map_registry

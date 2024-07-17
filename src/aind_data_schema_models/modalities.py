@@ -1,7 +1,6 @@
 """Module for Modality definitions"""
 
-from importlib.resources import files
-
+from importlib_resources import files
 from pydantic import ConfigDict, Field
 
 from aind_data_schema_models.pid_names import BaseName

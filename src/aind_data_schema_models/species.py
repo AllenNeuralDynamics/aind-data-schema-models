@@ -1,7 +1,6 @@
 """Module for species definitions"""
 
-from importlib.resources import files
-
+from importlib_resources import files
 from pydantic import BaseModel, ConfigDict, Field
 
 from aind_data_schema_models.registries import RegistryModel, map_registry

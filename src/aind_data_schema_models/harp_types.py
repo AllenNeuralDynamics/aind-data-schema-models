@@ -1,7 +1,6 @@
 """Module for Harp Device Types"""
 
-from importlib.resources import files
-
+from importlib_resources import files
 from pydantic import BaseModel, ConfigDict, Field
 
 from aind_data_schema_models.utils import create_literal_class, read_csv
