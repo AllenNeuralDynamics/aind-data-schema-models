@@ -6,7 +6,7 @@ from pydantic import BaseModel, ConfigDict, Field
 from typing_extensions import Annotated
 
 from aind_data_schema_models.registries import RegistryModel, map_registry
-from aind_data_schema_models.utils import create_literal_class, read_csv
+from aind_data_schema_models.utils import create_literal_class, one_of_instance, read_csv
 
 
 class OrganizationModel(BaseModel):
@@ -40,11 +40,6 @@ def from_abbreviation(cls, abbreviation: str):
 def from_name(cls, name: str):
     """look up an Organization by its name"""
     return cls._name_map[name]
-
-
-def one_of_instance(instances, discriminator="name"):
-    """make an annotated union of class instances"""
-    return Annotated[Union[tuple(type(i) for i in instances)], Field(discriminator=discriminator)]
 
 
 Organization._abbreviation_map = {m().abbreviation: m() for m in Organization._ALL}

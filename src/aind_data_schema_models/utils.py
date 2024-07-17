@@ -83,3 +83,8 @@ def read_csv(file_path: str):
     with open(file_path, "r") as f:
         reader = csv.DictReader(f)
         return list(reader)
+
+
+def one_of_instance(instances, discriminator="name"):
+    """make an annotated union of class instances"""
+    return Annotated[Union[tuple(type(i) for i in instances)], Field(discriminator=discriminator)]
