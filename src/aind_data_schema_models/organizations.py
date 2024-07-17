@@ -42,14 +42,19 @@ def from_name(cls, name: str):
     return cls._name_map[name]
 
 
+def one_of_instance(instances, discriminator="name"):
+    """make an annotated union of class instances"""
+    return Annotated[Union[tuple(type(i) for i in instances)], Field(discriminator=discriminator)]
+
+
 Organization._abbreviation_map = {m().abbreviation: m() for m in Organization._ALL}
 Organization._name_map = {m().name: m() for m in Organization._ALL}
 Organization.from_abbreviation = from_abbreviation
 Organization.from_name = from_name
 
 
-Organization.DETECTOR_MANUFACTURERS = Annotated[
-    Union[
+Organization.DETECTOR_MANUFACTURERS = one_of_instance(
+    [
         Organization.AilipuTechnologyCo,
         Organization.Allied,
         Organization.Basler,
@@ -62,24 +67,22 @@ Organization.DETECTOR_MANUFACTURERS = Annotated[
         Organization.Thorlabs,
         Organization.Vieworks,
         Organization.Other,
-    ],
-    Field(discriminator="name"),
-]
+    ]
+)
 
-Organization.FILTER_MANUFACTURERS = Annotated[
-    Union[
+Organization.FILTER_MANUFACTURERS = one_of_instance(
+    [
         Organization.Chroma,
         Organization.EdmundOptics,
         Organization.MidwestOpticalSystemsInc,
         Organization.Semrock,
         Organization.Thorlabs,
         Organization.Other,
-    ],
-    Field(discriminator="name"),
-]
+    ]
+)
 
-Organization.LENS_MANUFACTURERS = Annotated[
-    Union[
+Organization.LENS_MANUFACTURERS = one_of_instance(
+    [
         Organization.Computar,
         Organization.EdmundOptics,
         Organization.Fujinon,
@@ -94,12 +97,11 @@ Organization.LENS_MANUFACTURERS = Annotated[
         Organization.Thorlabs,
         Organization.CarlZeiss,
         Organization.Other,
-    ],
-    Field(discriminator="name"),
-]
+    ]
+)
 
-Organization.DAQ_DEVICE_MANUFACTURERS = Annotated[
-    Union[
+Organization.DAQ_DEVICE_MANUFACTURERS = one_of_instance(
+    [
         Organization.AllenInstituteForNeuralDynamics,
         Organization.ChampalimaudFoundation,
         Organization.NationalInstruments,
@@ -107,48 +109,34 @@ Organization.DAQ_DEVICE_MANUFACTURERS = Annotated[
         Organization.OpenEphysProductionSite,
         Organization.SecondOrderEffects,
         Organization.Other,
-    ],
-    Field(discriminator="name"),
-]
+    ]
+)
 
-Organization.LASER_MANUFACTURERS = Annotated[
-    Union[
+Organization.LASER_MANUFACTURERS = one_of_instance(
+    [
         Organization.CoherentScientific,
         Organization.Hamamatsu,
         Organization.Oxxius,
         Organization.Quantifi,
         Organization.Vortran,
         Organization.Other,
-    ],
-    Field(discriminator="name"),
-]
+    ]
+)
 
-Organization.LED_MANUFACTURERS = Annotated[
-    Union[
-        Organization.AmsOsram,
-        Organization.Doric,
-        Organization.Prizmatix,
-        Organization.Thorlabs,
-        Organization.Other,
-    ],
-    Field(discriminator="name"),
-]
+Organization.LED_MANUFACTURERS = one_of_instance(
+    [Organization.AmsOsram, Organization.Doric, Organization.Prizmatix, Organization.Thorlabs, Organization.Other]
+)
 
-Organization.MANIPULATOR_MANUFACTURERS = Annotated[
-    Union[Organization.NewScaleTechnologies, Organization.Other], Field(discriminator="name")
-]
+Organization.MANIPULATOR_MANUFACTURERS = one_of_instance([Organization.NewScaleTechnologies, Organization.Other])
 
-Organization.MONITOR_MANUFACTURERS = Annotated[
-    Union[Organization.Asus, Organization.Lg, Organization.Other], Field(discriminator="name")
-]
+Organization.MONITOR_MANUFACTURERS = one_of_instance([Organization.Asus, Organization.Lg, Organization.Other])
 
-Organization.SPEAKER_MANUFACTURERS = Annotated[
-    Union[Organization.Tymphany, Organization.IslProductsInternational, Organization.Other],
-    Field(discriminator="name"),
-]
+Organization.SPEAKER_MANUFACTURERS = one_of_instance(
+    [Organization.Tymphany, Organization.IslProductsInternational, Organization.Other]
+)
 
-Organization.FUNDERS = Annotated[
-    Union[
+Organization.FUNDERS = one_of_instance(
+    [
         Organization.AllenInstitute,
         Organization.ChanZuckerbergInitiative,
         Organization.MbfBioscience,
@@ -158,12 +146,11 @@ Organization.FUNDERS = Annotated[
         Organization.NationalInstituteOfNeurologicalDisordersAndStroke,
         Organization.SimonsFoundation,
         Organization.TempletonWorldCharityFoundation,
-    ],
-    Field(discriminator="name"),
-]
+    ]
+)
 
-Organization.RESEARCH_INSTITUTIONS = Annotated[
-    Union[
+Organization.RESEARCH_INSTITUTIONS = one_of_instance(
+    [
         Organization.AllenInstituteForBrainScience,
         Organization.AllenInstituteForNeuralDynamics,
         Organization.ColumbiaUniversity,
@@ -171,12 +158,11 @@ Organization.RESEARCH_INSTITUTIONS = Annotated[
         Organization.JaneliaResearchCampus,
         Organization.NewYorkUniversity,
         Organization.Other,
-    ],
-    Field(discriminator="name"),
-]
+    ]
+)
 
-Organization.SUBJECT_SOURCES = Annotated[
-    Union[
+Organization.SUBJECT_SOURCES = one_of_instance(
+    [
         Organization.AllenInstitute,
         Organization.ColumbiaUniversity,
         Organization.HuazhongUniversityOfScienceAndTechnology,
@@ -184,6 +170,5 @@ Organization.SUBJECT_SOURCES = Annotated[
         Organization.JacksonLaboratory,
         Organization.NewYorkUniversity,
         Organization.Other,
-    ],
-    Field(discriminator="name"),
-]
+    ]
+)
