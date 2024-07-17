@@ -28,6 +28,7 @@ Registry = create_literal_class(
 
 
 def map_registry(abbreviation: str, record: dict):
+    """replace the "registry" key of a dictionary with a RegisryModel object"""
     registry = Registry.from_abbreviation(abbreviation)
     if registry:
         record["registry"] = Annotated[Union[registry], Field(default=registry, discriminator="name")]

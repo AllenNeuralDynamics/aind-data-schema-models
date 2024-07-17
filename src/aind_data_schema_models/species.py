@@ -7,6 +7,8 @@ from aind_data_schema_models.utils import create_literal_class, read_csv
 
 
 class SpeciesModel(BaseModel):
+    """base model for species, like Mus musculus"""
+
     model_config = ConfigDict(frozen=True)
 
     name: str = Field(..., title="Species name")

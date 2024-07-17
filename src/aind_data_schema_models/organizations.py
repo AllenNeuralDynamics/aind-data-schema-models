@@ -32,11 +32,13 @@ Organization = create_literal_class(
 
 @classmethod
 def from_abbreviation(cls, abbreviation: str):
+    """look up an Organization by its abbreviation"""
     return cls._abbreviation_map[abbreviation]
 
 
 @classmethod
 def from_name(cls, name: str):
+    """look up an Organization by its name"""
     return cls._name_map[name]
 
 

@@ -1,3 +1,5 @@
+""" General utilities for constructing models from CSV files """
+
 import csv
 import re
 from typing import List, Literal, Optional, Union
