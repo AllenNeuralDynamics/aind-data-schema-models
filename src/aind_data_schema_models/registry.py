@@ -20,7 +20,7 @@ class Addgene(_Registry):
     abbreviation: Literal["ADDGENE"] = "ADDGENE"
 
 
-class EMAPA(_Registry):
+class EdinburghMouseAtlasProject(_Registry):
     """EMAPA"""
 
     name: Literal["Edinburgh Mouse Atlas Project"] = "Edinburgh Mouse Atlas Project"
@@ -66,7 +66,7 @@ class Registry:
     """Registry definitions"""
 
     ADDGENE = Addgene()
-    EMAPA = EMAPA()
+    EMAPA = EdinburghMouseAtlasProject()
     ROR = ResearchOrganizationRegistry()
     MGI = MouseGenomeInformatics()
     NCBI = NationalCenterForBiotechnologyInformation()
