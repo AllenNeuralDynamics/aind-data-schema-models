@@ -16,19 +16,12 @@ class ModalityModel(BaseName):
 
 
 Modality = create_literal_class(
-    objects=read_csv(files("aind_data_schema_models.models").joinpath("modalities.csv")),
+    objects=read_csv(str(files("aind_data_schema_models.models").joinpath("modalities.csv"))),
     class_name="Modality",
     base_model=ModalityModel,
     discriminator="abbreviation",
     class_module=__name__,
 )
 
-
-@classmethod
-def from_abbreviation(cls, abbreviation: str):
-    """Get class from abbreviation"""
-    return cls._abbreviation_map[abbreviation]
-
-
-Modality._abbreviation_map = {m().abbreviation: m() for m in Modality._ALL}
-Modality.from_abbreviation = from_abbreviation
+Modality.abbreviation_map = {m().abbreviation: m() for m in Modality.ALL}
+Modality.from_abbreviation = lambda x: Modality.abbreviation_map.get(x)

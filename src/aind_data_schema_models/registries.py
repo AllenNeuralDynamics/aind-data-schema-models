@@ -20,12 +20,15 @@ class RegistryModel(BaseName):
 
 
 Registry = create_literal_class(
-    objects=read_csv(files("aind_data_schema_models.models").joinpath("registries.csv")),
+    objects=read_csv(str(files("aind_data_schema_models.models").joinpath("registries.csv"))),
     class_name="Registry",
     base_model=RegistryModel,
     discriminator="abbreviation",
     class_module=__name__,
 )
+
+Registry.abbreviation_map = {m().abbreviation: m() for m in Registry.ALL}
+Registry.from_abbreviation = lambda x: Registry.abbreviation_map.get(x)
 
 
 def map_registry(abbreviation: str, record: dict):
@@ -35,13 +38,3 @@ def map_registry(abbreviation: str, record: dict):
         record["registry"] = Annotated[Union[type(registry)], Field(default=registry, discriminator="name")]
     else:
         record["registry"] = Annotated[None, Field(None)]
-
-
-@classmethod
-def from_abbreviation(cls, abbreviation: str):
-    """Get class from abbreviation"""
-    return cls._abbreviation_map.get(abbreviation, None)
-
-
-Registry._abbreviation_map = {m().abbreviation: m() for m in Registry._ALL}
-Registry.from_abbreviation = from_abbreviation

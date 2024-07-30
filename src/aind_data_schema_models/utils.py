@@ -2,14 +2,15 @@
 
 import csv
 import re
-from typing import List, Literal, Optional, Union
+from pathlib import Path
+from typing import List, Literal, Optional, Type, Union
 
 from pydantic import BaseModel, ConfigDict, Field, create_model
 from typing_extensions import Annotated
 
 
 def create_literal_model(
-    obj: dict, base_model: BaseModel, discriminator: str, field_handlers: Optional[dict] = None, class_module=None
+    obj: dict, base_model: Type[BaseModel], discriminator: str, field_handlers: Optional[dict] = None, class_module=None
 ):
     """make a dynamic pydantic literal model"""
 
@@ -47,7 +48,7 @@ def create_literal_class(
     objects: List[dict],
     class_name: str,
     class_module=None,
-    base_model: BaseModel = BaseModel,
+    base_model: Type[BaseModel] = BaseModel,
     discriminator: str = "name",
     field_handlers: Optional[dict] = None,
 ):
@@ -67,9 +68,10 @@ def create_literal_class(
         for obj in objects
     )
 
-    setattr(cls, "_ALL", tuple(all_models))
+    setattr(cls, "ALL", tuple(all_models))
 
-    setattr(cls, "ONE_OF", Annotated[Union[cls._ALL], Field(discriminator=discriminator)])
+    # Older versions of flake8 raise errors about 'ALL' being undefined
+    setattr(cls, "ONE_OF", Annotated[Union[getattr(cls, "ALL")], Field(discriminator=discriminator)])  # noqa: F821
 
     # add the model instances as class variables
     for m in all_models:
@@ -78,7 +80,7 @@ def create_literal_class(
     return cls
 
 
-def read_csv(file_path: str):
+def read_csv(file_path: Union[str, Path]):
     """read a csv file and return the contents as a list of dictionaries"""
     with open(file_path, "r") as f:
         reader = csv.DictReader(f)
@@ -86,5 +88,15 @@ def read_csv(file_path: str):
 
 
 def one_of_instance(instances, discriminator="name"):
-    """make an annotated union of class instances"""
+    """
+    Make an annotated union of class instances
+    Parameters
+    ----------
+    instances :
+    discriminator :
+
+    Returns
+    -------
+
+    """
     return Annotated[Union[tuple(type(i) for i in instances)], Field(discriminator=discriminator)]
