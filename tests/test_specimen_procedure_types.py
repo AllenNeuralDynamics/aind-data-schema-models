@@ -11,4 +11,4 @@ class TestSpecimenProcedureTypes(unittest.TestCase):
     def test_class_construction(self):
         """Tests enum can be instantiated via string"""
 
-        self.assertEqual(SpecimenProcedureType.DELIPIDATION, SpecimenProcedureType("Delipidation"))
+        self.assertEqual(SpecimenProcedureType.Delipidation, SpecimenProcedureType("Delipidation"))

@@ -2,10 +2,16 @@
 
 import csv
 import re
+import sys
 from typing import List, Literal, Optional, Union
 
 from pydantic import BaseModel, ConfigDict, Field, create_model
 from typing_extensions import Annotated
+
+if sys.version_info >= (3, 11):
+    from enum import StrEnum
+else:
+    from backports.strenum import StrEnum
 
 
 def create_literal_model(
@@ -88,3 +94,9 @@ def read_csv(file_path: str):
 def one_of_instance(instances, discriminator="name"):
     """make an annotated union of class instances"""
     return Annotated[Union[tuple(type(i) for i in instances)], Field(discriminator=discriminator)]
+
+
+def create_string_enum(name, objects, value_key="name"):
+    """create a string enum from a list of objects"""
+
+    return StrEnum(name, {create_model_class_name(obj[value_key]): obj[value_key] for obj in objects})
