@@ -7,7 +7,6 @@ from pathlib import Path
 from typing import Any, Dict, List, Literal, Optional, Type, Union
 
 from pydantic import BaseModel, ConfigDict, Field, create_model
-from pydantic.main import Model
 from typing_extensions import Annotated
 
 
@@ -17,7 +16,7 @@ def create_literal_model(
     discriminator: str,
     field_handlers: Optional[dict] = None,
     class_module: Optional[str] = None,
-) -> Type[Model]:
+) -> Type[BaseModel]:
     """
     Make a dynamic pydantic literal model
     Parameters
@@ -32,7 +31,7 @@ def create_literal_model(
 
     Returns
     -------
-    Type[Model]
+    Type[BaseModel]
 
     """
 
