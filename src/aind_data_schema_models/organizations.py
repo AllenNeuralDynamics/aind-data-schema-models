@@ -489,6 +489,7 @@ class NationalCenterForComplementaryAndIntegrativeHealth(_Organization):
 
 class NationalInstituteOfMentalHealth(_Organization):
     """NationalInstituteofMentalHealth"""
+
     name: Literal["National Institute of Mental Health"] = "National Institute of Mental Health"
     abbreviation: Literal["NIMH"] = "NIMH"
     registry: Annotated[Union[ResearchOrganizationRegistry], Field(default=Registry.ROR, discriminator="name")]
@@ -784,6 +785,7 @@ class CarlZeiss(_Organization):
     registry: Annotated[Union[ResearchOrganizationRegistry], Field(default=Registry.ROR, discriminator="name")]
     registry_identifier: Literal["01xk5xs43"] = "01xk5xs43"
 
+
 class LumenDynamics(_Organization):
     """Lumen Dynamics"""
 
@@ -791,6 +793,8 @@ class LumenDynamics(_Organization):
     abbreviation: Literal[None] = Field(None)
     registry: Literal[None] = Field(None)
     registry_identifier: Literal[None] = Field(None)
+
+
 class Other(_Organization):
     """Other"""
 
