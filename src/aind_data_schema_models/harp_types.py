@@ -15,7 +15,7 @@ class HarpDeviceTypeModel(BaseModel):
 
 
 HarpDeviceType = create_literal_class(
-    objects=read_csv(files("aind_data_schema_models.models").joinpath("harp_types.csv")),
+    objects=read_csv(str(files("aind_data_schema_models.models").joinpath("harp_types.csv"))),
     class_name="HarpDeviceType",
     base_model=HarpDeviceTypeModel,
     discriminator="name",

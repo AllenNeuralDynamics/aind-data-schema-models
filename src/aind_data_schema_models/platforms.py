@@ -16,19 +16,12 @@ class PlatformModel(BaseModel):
 
 
 Platform = create_literal_class(
-    objects=read_csv(files("aind_data_schema_models.models").joinpath("platforms.csv")),
+    objects=read_csv(str(files("aind_data_schema_models.models").joinpath("platforms.csv"))),
     class_name="Platform",
     base_model=PlatformModel,
     discriminator="name",
     class_module=__name__,
 )
 
-
-@classmethod
-def from_abbreviation(cls, abbreviation: str):
-    """Get class from abbreviation"""
-    return cls._abbreviation_map[abbreviation]
-
-
-Platform._abbreviation_map = {p().abbreviation: p() for p in Platform._ALL}
-Platform.from_abbreviation = from_abbreviation
+Platform.abbreviation_map = {p().abbreviation: p() for p in Platform.ALL}
+Platform.from_abbreviation = lambda x: Platform.abbreviation_map.get(x)

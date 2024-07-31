@@ -19,7 +19,7 @@ class OrganizationModel(BaseModel):
 
 
 Organization = create_literal_class(
-    objects=read_csv(files("aind_data_schema_models.models").joinpath("organizations.csv")),
+    objects=read_csv(str(files("aind_data_schema_models.models").joinpath("organizations.csv"))),
     class_name="Organization",
     base_model=OrganizationModel,
     discriminator="name",
@@ -27,23 +27,10 @@ Organization = create_literal_class(
     class_module=__name__,
 )
 
-
-@classmethod
-def from_abbreviation(cls, abbreviation: str):
-    """look up an Organization by its abbreviation"""
-    return cls._abbreviation_map[abbreviation]
-
-
-@classmethod
-def from_name(cls, name: str):
-    """look up an Organization by its name"""
-    return cls._name_map[name]
-
-
-Organization._abbreviation_map = {m().abbreviation: m() for m in Organization._ALL}
-Organization._name_map = {m().name: m() for m in Organization._ALL}
-Organization.from_abbreviation = from_abbreviation
-Organization.from_name = from_name
+Organization.abbreviation_map = {m().abbreviation: m() for m in Organization.ALL}
+Organization.name_map = {m().name: m() for m in Organization.ALL}
+Organization.from_abbreviation = lambda x: Organization.abbreviation_map.get(x)
+Organization.from_name = lambda x: Organization.name_map.get(x)
 
 
 Organization.DETECTOR_MANUFACTURERS = one_of_instance(
