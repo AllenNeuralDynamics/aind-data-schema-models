@@ -249,6 +249,15 @@ class EdmundOptics(_Organization):
     registry_identifier: Literal["01j1gwp17"] = "01j1gwp17"
 
 
+class EmoryUniversity(_Organization):
+    """EmoryUniversity"""
+
+    name: Literal["Emory University"] = "Emory University"
+    abbreviation: Literal["Emory"] = "Emory"
+    registry: Annotated[Union[ResearchOrganizationRegistry], Field(default=Registry.ROR, discriminator="name")]
+    registry_identifier: Literal["03czfpz43"] = "03czfpz43"
+
+
 class Euresys(_Organization):
     """Euresys"""
 
@@ -301,6 +310,15 @@ class TheImagingSource(_Organization):
     abbreviation: Literal[None] = Field(None)
     registry: Literal[None] = Field(None)
     registry_identifier: Literal[None] = Field(None)
+
+
+class IntegratedDNATechnologies(_Organization):
+    """IntegratedDNATechnologies"""
+
+    name: Literal["Integrated DNA Technologies"] = "Integrated DNA Technologies"
+    abbreviation: Literal["IDT"] = "IDT"
+    registry: Annotated[Union[ResearchOrganizationRegistry], Field(default=Registry.ROR, discriminator="name")]
+    registry_identifier: Literal["009jvpf03"] = "009jvpf03"
 
 
 class InteruniversityMicroelectronicsCenter(_Organization):
@@ -832,6 +850,7 @@ class Organization:
     DORIC = Doric()
     EALING = Ealing()
     EDMUND_OPTICS = EdmundOptics()
+    EMORY = EmoryUniversity()
     EURESYS = Euresys()
     FLIR = TeledyneFLIR()
     FUJINON = Fujinon()
@@ -841,6 +860,7 @@ class Organization:
     IMAGING_SOURCE = TheImagingSource()
     IMEC = InteruniversityMicroelectronicsCenter()
     INFINITY_PHOTO_OPTICAL = InfinityPhotoOptical()
+    IDT = IntegratedDNATechnologies()
     INVITROGEN = Invitrogen()
     ISL = ISLProductsInternational()
     JAX = JacksonLaboratory()
