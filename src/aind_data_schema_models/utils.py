@@ -41,7 +41,7 @@ def create_literal_model(
             field_handlers[k](v, fields)
         else:
             fields[k] = (Literal[v], Field(v))
-        
+
     class_str = obj.get("abbreviation") or obj.get("name")
 
     class_name = create_model_class_name(class_str)
