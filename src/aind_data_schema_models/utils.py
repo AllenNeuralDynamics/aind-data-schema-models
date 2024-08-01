@@ -40,6 +40,8 @@ def create_literal_model(
         if k in field_handlers:
             field_handlers[k](v, fields)
         else:
+            field_type = base_model.__annotations__[k]
+            v = field_type(v)
             fields[k] = (Literal[v], Field(v))
 
     class_str = obj.get("abbreviation") or obj.get("name")

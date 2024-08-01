@@ -58,7 +58,7 @@ class TestUtils(unittest.TestCase):
                     "title": "Name",
                     "type": "string",
                 },
-                "whoami": {"const": "1216", "default": "1216", "enum": ["1216"], "title": "Whoami", "type": "string"},
+                "whoami": {"const": 1216, "default": 1216, "enum": [1216], "title": "Whoami", "type": "integer"},
             },
             "title": "BEHAVIOR",
             "type": "object",
@@ -83,11 +83,11 @@ class TestUtils(unittest.TestCase):
             class_module=__name__,
         )
         self.assertEqual("Behavior", HarpDeviceType.BEHAVIOR.name)
-        self.assertEqual("1216", HarpDeviceType.BEHAVIOR.whoami)
+        self.assertEqual(1216, HarpDeviceType.BEHAVIOR.whoami)
         self.assertEqual("Cuttlefish", HarpDeviceType.CUTTLEFISH.name)
-        self.assertEqual("1403", HarpDeviceType.CUTTLEFISH.whoami)
+        self.assertEqual(1403, HarpDeviceType.CUTTLEFISH.whoami)
         self.assertEqual("Treadmill", HarpDeviceType.TREADMILL.name)
-        self.assertEqual("1402", HarpDeviceType.TREADMILL.whoami)
+        self.assertEqual(1402, HarpDeviceType.TREADMILL.whoami)
 
     def test_one_of_instances(self):
         """Tests one_of_instance method"""
