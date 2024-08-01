@@ -35,120 +35,120 @@ Organization.from_name = lambda x: Organization.name_map.get(x)
 
 Organization.DETECTOR_MANUFACTURERS = one_of_instance(
     [
-        Organization.AilipuTechnologyCo,
-        Organization.Allied,
-        Organization.Basler,
-        Organization.Dodotronic,
-        Organization.EdmundOptics,
-        Organization.Hamamatsu,
-        Organization.Spinnaker,
-        Organization.TeledyneFlir,
-        Organization.TheImagingSource,
-        Organization.Thorlabs,
-        Organization.Vieworks,
-        Organization.Other,
+        Organization.AILIPU_TECHNOLOGY_CO,
+        Organization.ALLIED,
+        Organization.BASLER,
+        Organization.DODOTRONIC,
+        Organization.EDMUND_OPTICS,
+        Organization.HAMAMATSU,
+        Organization.SPINNAKER,
+        Organization.FLIR,
+        Organization.THE_IMAGING_SOURCE,
+        Organization.THORLABS,
+        Organization.VIEWORKS,
+        Organization.OTHER,
     ]
 )
 
 Organization.FILTER_MANUFACTURERS = one_of_instance(
     [
-        Organization.Chroma,
-        Organization.EdmundOptics,
-        Organization.MidwestOpticalSystemsInc,
-        Organization.Semrock,
-        Organization.Thorlabs,
-        Organization.Other,
+        Organization.CHROMA,
+        Organization.EDMUND_OPTICS,
+        Organization.MIDOPT,
+        Organization.SEMROCK,
+        Organization.THORLABS,
+        Organization.OTHER,
     ]
 )
 
 Organization.LENS_MANUFACTURERS = one_of_instance(
     [
-        Organization.Computar,
-        Organization.EdmundOptics,
-        Organization.Fujinon,
-        Organization.Hamamatsu,
-        Organization.InfinityPhotoOptical,
-        Organization.Leica,
-        Organization.Mitutuyo,
-        Organization.Navitar,
-        Organization.Nikon,
-        Organization.Olympus,
-        Organization.SchneiderKreuznach,
-        Organization.Thorlabs,
-        Organization.CarlZeiss,
-        Organization.Other,
+        Organization.COMPUTAR,
+        Organization.EDMUND_OPTICS,
+        Organization.FUJINON,
+        Organization.HAMAMATSU,
+        Organization.INFINITY_PHOTO_OPTICAL,
+        Organization.LEICA,
+        Organization.MITUTUYO,
+        Organization.NAVITAR,
+        Organization.NIKON,
+        Organization.OLYMPUS,
+        Organization.SCHNEIDER_KREUZNACH,
+        Organization.THORLABS,
+        Organization.CARL_ZEISS,
+        Organization.OTHER,
     ]
 )
 
 Organization.DAQ_DEVICE_MANUFACTURERS = one_of_instance(
     [
-        Organization.AllenInstituteForNeuralDynamics,
-        Organization.ChampalimaudFoundation,
-        Organization.NationalInstruments,
-        Organization.InteruniversityMicroelectronicsCenter,
-        Organization.OpenEphysProductionSite,
-        Organization.SecondOrderEffects,
-        Organization.Other,
+        Organization.AIND,
+        Organization.CHAMPALIMAUD_FOUNDATION,
+        Organization.NATIONAL_INSTRUMENTS,
+        Organization.IMEC,
+        Organization.OEPS,
+        Organization.SECOND_ORDER_EFFECTS,
+        Organization.OTHER,
     ]
 )
 
 Organization.LASER_MANUFACTURERS = one_of_instance(
     [
-        Organization.CoherentScientific,
-        Organization.Hamamatsu,
-        Organization.Oxxius,
-        Organization.Quantifi,
-        Organization.Vortran,
-        Organization.Other,
+        Organization.COHERENT_SCIENTIFIC,
+        Organization.HAMAMATSU,
+        Organization.OXXIUS,
+        Organization.QUANTIFI,
+        Organization.VORTRAN,
+        Organization.OTHER,
     ]
 )
 
 Organization.LED_MANUFACTURERS = one_of_instance(
-    [Organization.AmsOsram, Organization.Doric, Organization.Prizmatix, Organization.Thorlabs, Organization.Other]
+    [Organization.AMS_OSRAM, Organization.DORIC, Organization.PRIZMATIX, Organization.THORLABS, Organization.OTHER]
 )
 
-Organization.MANIPULATOR_MANUFACTURERS = one_of_instance([Organization.NewScaleTechnologies, Organization.Other])
+Organization.MANIPULATOR_MANUFACTURERS = one_of_instance([Organization.NEW_SCALE_TECHNOLOGIES, Organization.OTHER])
 
-Organization.MONITOR_MANUFACTURERS = one_of_instance([Organization.Asus, Organization.Lg, Organization.Other])
+Organization.MONITOR_MANUFACTURERS = one_of_instance([Organization.ASUS, Organization.LG, Organization.OTHER])
 
 Organization.SPEAKER_MANUFACTURERS = one_of_instance(
-    [Organization.Tymphany, Organization.IslProductsInternational, Organization.Other]
+    [Organization.TYMPHANY, Organization.ISL, Organization.OTHER]
 )
 
 Organization.FUNDERS = one_of_instance(
     [
-        Organization.AllenInstitute,
-        Organization.ChanZuckerbergInitiative,
-        Organization.MbfBioscience,
-        Organization.MichaelJFoxFoundationForParkinsonsResearch,
-        Organization.NationalCenterForComplementaryAndIntegrativeHealth,
-        Organization.NationalInstituteOfMentalHealth,
-        Organization.NationalInstituteOfNeurologicalDisordersAndStroke,
-        Organization.SimonsFoundation,
-        Organization.TempletonWorldCharityFoundation,
+        Organization.AI,
+        Organization.CZI,
+        Organization.MBF,
+        Organization.MJFF,
+        Organization.NCCIH,
+        Organization.NIMH,
+        Organization.NINDS,
+        Organization.SIMONS_FOUNDATION,
+        Organization.TWCF,
     ]
 )
 
 Organization.RESEARCH_INSTITUTIONS = one_of_instance(
     [
-        Organization.AllenInstituteForBrainScience,
-        Organization.AllenInstituteForNeuralDynamics,
-        Organization.ColumbiaUniversity,
-        Organization.HuazhongUniversityOfScienceAndTechnology,
-        Organization.JaneliaResearchCampus,
-        Organization.NewYorkUniversity,
-        Organization.Other,
+        Organization.AIBS,
+        Organization.AIND,
+        Organization.COLUMBIA,
+        Organization.HUST,
+        Organization.JANELIA,
+        Organization.NYU,
+        Organization.OTHER,
     ]
 )
 
 Organization.SUBJECT_SOURCES = one_of_instance(
     [
-        Organization.AllenInstitute,
-        Organization.ColumbiaUniversity,
-        Organization.HuazhongUniversityOfScienceAndTechnology,
-        Organization.JaneliaResearchCampus,
-        Organization.JacksonLaboratory,
-        Organization.NewYorkUniversity,
-        Organization.Other,
+        Organization.AI,
+        Organization.COLUMBIA,
+        Organization.HUST,
+        Organization.JANELIA,
+        Organization.JAX,
+        Organization.NYU,
+        Organization.OTHER,
     ]
 )

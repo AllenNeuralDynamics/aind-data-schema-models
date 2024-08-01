@@ -11,7 +11,7 @@ class TestProcessName(unittest.TestCase):
     def test_class_construction(self):
         """Tests enum can be instantiated via string"""
 
-        self.assertEqual(ProcessName.Compression, ProcessName("Compression"))
+        self.assertEqual(ProcessName.COMPRESSION, ProcessName("Compression"))
 
 
 if __name__ == "__main__":

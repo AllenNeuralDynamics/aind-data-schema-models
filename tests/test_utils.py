@@ -29,9 +29,9 @@ class TestUtils(unittest.TestCase):
     def test_create_model_class_name(self):
         """Tests method removes punctuation and white space from strings."""
 
-        self.assertEqual("HelloWorld", utils.create_model_class_name("HELLO_WORLD"))
-        self.assertEqual("HelloWorld", utils.create_model_class_name("HELLO WORLD!"))
-        self.assertEqual("HelloWorld1", utils.create_model_class_name("HELLO # WORLD! 1"))
+        self.assertEqual("HELLO_WORLD", utils.create_model_class_name("HELLO_WORLD"))
+        self.assertEqual("HELLO_WORLD", utils.create_model_class_name("HELLO WORLD!"))
+        self.assertEqual("HELLO_WORLD_1", utils.create_model_class_name("HELLO # WORLD! 1"))
 
     def test_create_literal_model(self):
         """Tests create_literal_model method"""
@@ -47,7 +47,6 @@ class TestUtils(unittest.TestCase):
         behavior_model = utils.create_literal_model(
             obj=harp_types_dict[0],
             base_model=HarpDeviceTypeModel,
-            discriminator="name",
             class_module=__name__,
         )
         expected_behavior_schema = {
@@ -61,7 +60,7 @@ class TestUtils(unittest.TestCase):
                 },
                 "whoami": {"const": "1216", "default": "1216", "enum": ["1216"], "title": "Whoami", "type": "string"},
             },
-            "title": "Behavior",
+            "title": "BEHAVIOR",
             "type": "object",
         }
         self.assertEqual(expected_behavior_schema, behavior_model.model_json_schema())
@@ -81,15 +80,14 @@ class TestUtils(unittest.TestCase):
             objects=harp_types_dict,
             class_name="HarpDeviceType",
             base_model=HarpDeviceTypeModel,
-            discriminator="name",
             class_module=__name__,
         )
-        self.assertEqual("Behavior", HarpDeviceType.Behavior.name)
-        self.assertEqual("1216", HarpDeviceType.Behavior.whoami)
-        self.assertEqual("Cuttlefish", HarpDeviceType.Cuttlefish.name)
-        self.assertEqual("1403", HarpDeviceType.Cuttlefish.whoami)
-        self.assertEqual("Treadmill", HarpDeviceType.Treadmill.name)
-        self.assertEqual("1402", HarpDeviceType.Treadmill.whoami)
+        self.assertEqual("Behavior", HarpDeviceType.BEHAVIOR.name)
+        self.assertEqual("1216", HarpDeviceType.BEHAVIOR.whoami)
+        self.assertEqual("Cuttlefish", HarpDeviceType.CUTTLEFISH.name)
+        self.assertEqual("1403", HarpDeviceType.CUTTLEFISH.whoami)
+        self.assertEqual("Treadmill", HarpDeviceType.TREADMILL.name)
+        self.assertEqual("1402", HarpDeviceType.TREADMILL.whoami)
 
     def test_one_of_instances(self):
         """Tests one_of_instance method"""
@@ -106,10 +104,9 @@ class TestUtils(unittest.TestCase):
             objects=harp_types_dict,
             class_name="HarpDeviceType",
             base_model=HarpDeviceTypeModel,
-            discriminator="name",
             class_module=__name__,
         )
-        annotated_list = utils.one_of_instance([HarpDeviceType.Cuttlefish, HarpDeviceType.Treadmill])
+        annotated_list = utils.one_of_instance([HarpDeviceType.CUTTLEFISH, HarpDeviceType.TREADMILL])
 
         class Model(BaseModel):
             """A small model to test the annotated list field"""
@@ -117,14 +114,14 @@ class TestUtils(unittest.TestCase):
             my_choice: annotated_list
 
         with self.assertRaises(ValidationError) as e:
-            Model(my_choice=HarpDeviceType.Behavior)
+            Model(my_choice=HarpDeviceType.BEHAVIOR)
 
         expected_error_message = (
             "Input tag 'Behavior' found using 'name' does not match any of the "
             "expected tags: 'Cuttlefish', 'Treadmill'"
         )
 
-        model_instance = Model(my_choice=HarpDeviceType.Cuttlefish)
+        model_instance = Model(my_choice=HarpDeviceType.CUTTLEFISH)
 
         deserialized_model = Model.model_validate_json(model_instance.model_dump_json())
 
