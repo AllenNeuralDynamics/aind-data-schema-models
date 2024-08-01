@@ -133,7 +133,8 @@ def create_literal_class(
 
 def read_csv(file_path: Union[str, Path]) -> List[dict]:
     """
-    Read a csv file and return the contents as a list of dictionaries.
+    Read a csv file and return the contents as a list of dictionaries. If a field is empty, it will be set to None.
+
     Parameters
     ----------
     file_path : Union[str, Path]
@@ -146,6 +147,12 @@ def read_csv(file_path: Union[str, Path]) -> List[dict]:
     with open(file_path, "r") as f:
         reader = csv.DictReader(f)
         contents = list(reader)
+
+    for item in contents:
+        for k, v in item.items():
+            if v == "":
+                item[k] = None
+
     return contents
 
 
