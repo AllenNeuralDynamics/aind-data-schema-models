@@ -35,7 +35,7 @@ Organization.from_name = lambda x: Organization.name_map.get(x)
 
 Organization.DETECTOR_MANUFACTURERS = one_of_instance(
     [
-        Organization.AILIPU_TECHNOLOGY_CO,
+        Organization.AILIPU,
         Organization.ALLIED,
         Organization.BASLER,
         Organization.DODOTRONIC,
@@ -83,7 +83,7 @@ Organization.LENS_MANUFACTURERS = one_of_instance(
 Organization.DAQ_DEVICE_MANUFACTURERS = one_of_instance(
     [
         Organization.AIND,
-        Organization.CHAMPALIMAUD_FOUNDATION,
+        Organization.CHAMPALIMAUD,
         Organization.NATIONAL_INSTRUMENTS,
         Organization.IMEC,
         Organization.OEPS,
