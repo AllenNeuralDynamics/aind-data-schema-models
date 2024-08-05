@@ -14,7 +14,7 @@ class MouseAnatomyModel(BaseModel):
     name: str = Field(..., title="Structure name")
 
 
-MouseAnatomyType = create_literal_class(
+MouseAnatomicalStructure = create_literal_class(
     objects=read_csv(str(files("aind_data_schema_models.models").joinpath("mouse_dev_anat_ontology.csv"))),
     class_name="MouseAnatomyType",
     base_model=MouseAnatomyModel,
