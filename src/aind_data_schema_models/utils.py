@@ -44,8 +44,6 @@ def create_literal_model(
             if v is not None:
                 v = field_type(v)
             fields[k] = (Literal[v], Field(v))
-        else:
-            pass
 
     class_str = obj.get("abbreviation") or obj.get("name")
 
