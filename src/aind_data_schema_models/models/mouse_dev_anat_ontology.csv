@@ -1,4 +1,4 @@
-id,name,namespace,alt_id,is_a,parents,start,end,registry_abberviation,registry_identifier
+id,name,namespace,alt_id,is_a,parents,start,end,registry_abbreviation,registry_identifier
 0,Anatomical structure,anatomical_structure,,,,,,EMAPA,EMAPA_0
 16032,first polar body,anatomical_structure,,31859,36041,,TS:01,EMAPA,EMAPA_16032
 16033,1-cell stage embryo,anatomical_structure,,36032,36041,,TS:01,EMAPA,EMAPA_16033
