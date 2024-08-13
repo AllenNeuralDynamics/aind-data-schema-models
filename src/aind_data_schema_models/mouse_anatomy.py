@@ -1,6 +1,6 @@
 """Module for Mouse Anatomy"""
 
-from typing import Annotated
+from typing_extensions import Annotated
 from importlib_resources import files
 from pydantic import BaseModel, ConfigDict, Field
 
