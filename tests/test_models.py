@@ -61,6 +61,8 @@ class LiteralAndDefaultTests(unittest.TestCase):
             round_trip = model.model_validate_json(model.model_dump_json())
             self.assertIsNotNone(round_trip)
 
+            self.assertEqual(model.id, int(model.registry_identifier.split('_')[1]))
+
 
 if __name__ == "__main__":
     unittest.main()

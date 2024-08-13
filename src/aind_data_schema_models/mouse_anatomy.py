@@ -1,9 +1,10 @@
 """Module for Mouse Anatomy"""
 
+from typing import Annotated
 from importlib_resources import files
 from pydantic import BaseModel, ConfigDict, Field
 
-from aind_data_schema_models.registries import RegistryModel, map_registry
+from aind_data_schema_models.registries import Registry, RegistryModel
 from aind_data_schema_models.utils import create_literal_class, read_csv, one_of_instance
 
 
@@ -12,10 +13,13 @@ class MouseAnatomyModel(BaseModel):
 
     model_config = ConfigDict(frozen=True)
 
-    id: int = Field(..., title="Structure EMAPA ID")
     name: str = Field(..., title="Structure name")
-    registry: RegistryModel = None
-    registry_identifier: str = None
+    registry: Annotated[RegistryModel, Field(default=Registry.from_abbreviation('EMAPA'))]
+    registry_identifier: str = Field(title="Structure EMAPA ID")
+
+    @property
+    def id(self) -> int:
+        return int(self.registry_identifier.split('_')[1])
 
 
 mouse_objects = read_csv(str(files("aind_data_schema_models.models").joinpath("mouse_dev_anat_ontology.csv")))
@@ -24,8 +28,7 @@ MouseAnatomicalStructure = create_literal_class(
     objects=mouse_objects,
     class_name="MouseAnatomyType",
     base_model=MouseAnatomyModel,
-    discriminator="id",
-    field_handlers={"registry_abbreviation": map_registry},
+    discriminator="registry_identifier",
     class_module=__name__,
 )
 
