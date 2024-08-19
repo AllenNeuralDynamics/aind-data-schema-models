@@ -11,7 +11,12 @@ class TestOrganization(unittest.TestCase):
     def test_name_map(self):
         """Tests Organization name_map property"""
 
-        self.assertEqual(Organization.AI, Organization().name_map["Allen Institute"])
+        self.assertEqual(Organization.AI, Organization.name_map["Allen Institute"])
+
+    def test_none(self):
+        """Tests that empty strings map to None"""
+
+        self.assertEqual(Organization.LIFECANVAS.abbreviation, None)
 
 
 if __name__ == "__main__":
