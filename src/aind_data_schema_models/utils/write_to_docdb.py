@@ -7,6 +7,7 @@ from aind_data_access_api.document_db_ssh import (
 )
 
 DB_NAME = os.getenv("DB_NAME")
+PATH_TO_MODELS = os.getenv("PATH_TO_MODELS")
 DOCDB_READWRITE_SECRET = os.getenv("READWRITE_SECRET")
 DOCDB_SSH_TUNNEL_SECRET = os.getenv("DOCDB_SSH_TUNNEL_SECRET")
 AWS_DEFAULT_REGION = os.getenv("AWS_DEFAULT_REGION")
@@ -40,7 +41,7 @@ def publish_to_docdb(folder_path: str, credentials: DocumentDbSSHCredentials) ->
 
 
 if __name__ == "__main__":
-    folder_path = '../models'
+    folder_path = PATH_TO_MODELS
     credentials = DocumentDbSSHCredentials.from_secrets_manager(
         doc_db_secret_name=DOCDB_READWRITE_SECRET,
         ssh_secret_name=DOCDB_SSH_TUNNEL_SECRET
