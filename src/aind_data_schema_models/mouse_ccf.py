@@ -12,10 +12,10 @@ class CCFStructureModel(BaseName):
 
     model_config = ConfigDict(frozen=True)
 
-    atlas: str = Field(default='CCFv3')
-    acronym: str = Field(title="Structure acronym")
-    name: str = Field(title="Structure name")
-    id: int = Field(title="Atlas ID")
+    atlas: str = Field(default='CCFv3', title="Atlas name")
+    acronym: str = Field(..., title="Structure acronym")
+    name: str = Field(..., title="Structure name")
+    id: int = Field(..., title="Structure ID")
 
 
 CCFStructure = create_literal_class(
