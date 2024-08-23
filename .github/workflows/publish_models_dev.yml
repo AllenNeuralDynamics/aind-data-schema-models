@@ -32,7 +32,7 @@ jobs:
           role-to-assume: ${{ env.AWS_DATA_SCHEMA_MODELS_ROLE }}
           role-session-name: github-schema-upload-session
           aws-region: ${{ env.AWS_DEFAULT_REGION }}
-      - name: Create and upload schemas
+      - name: Publish models to docdb
         run: | 
           python -m pip install -e .
           python -m pip install aind-data-access-api[full]
