@@ -1,3 +1,5 @@
+"""Module to publish models to docdb"""
+
 import os
 import csv
 from typing import Iterator
@@ -8,7 +10,7 @@ from aind_data_access_api.document_db_ssh import (
 
 DB_NAME = os.getenv("DB_NAME")
 PATH_TO_MODELS = os.getenv("PATH_TO_MODELS")
-DOCDB_READWRITE_SECRET = os.getenv("READWRITE_SECRET")
+DOCDB_READWRITE_SECRET = os.getenv("DOCDB_READWRITE_SECRET")
 DOCDB_SSH_TUNNEL_SECRET = os.getenv("DOCDB_SSH_TUNNEL_SECRET")
 AWS_DEFAULT_REGION = os.getenv("AWS_DEFAULT_REGION")
 
