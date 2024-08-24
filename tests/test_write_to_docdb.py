@@ -1,17 +1,16 @@
-"""Tests for write_to_docdb module"""
+"""Tests for write_to_docdb script"""
 
 from pathlib import Path
 import unittest
 from unittest.mock import patch, MagicMock
 import os
-from aind_data_schema_models.scripts.write_to_docdb import csv_to_json, publish_to_docdb
+from ..scripts.write_to_docdb import csv_to_json, publish_to_docdb
 from aind_data_access_api.document_db_ssh import (
     DocumentDbSSHCredentials,
 )
 
 TEST_DIRECTORY = Path(os.path.dirname(os.path.realpath(__file__)))
 SAMPLE_CSV_FILE = TEST_DIRECTORY / "resources" / "harp_types.csv"
-
 
 class TestWriteToDocdb(unittest.TestCase):
     """Tests methods in write_to_docdb module"""

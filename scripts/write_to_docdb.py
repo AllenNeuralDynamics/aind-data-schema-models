@@ -29,16 +29,17 @@ def publish_to_docdb(folder_path: str, credentials: DocumentDbSSHCredentials) ->
     """
     Writes models to docdb
     """
-    for file_name in os.listdir(folder_path):
-        if file_name.endswith('.csv'):
-            collection = file_name[:-4]
-            credentials.collection = collection
-            csv_file_path = os.path.join(folder_path, file_name)
-            json_data = csv_to_json(csv_file_path)
-            with DocumentDbSSHClient(credentials=credentials) as doc_db_client:
+    with DocumentDbSSHClient(credentials=credentials) as doc_db_client:
+        database = doc_db_client._client[doc_db_client.database_name]
+        for file_name in os.listdir(folder_path):
+            if file_name.endswith('.csv'):
+                collection_name = file_name[:-4]
+                collection = database[collection_name]
+                csv_file_path = os.path.join(folder_path, file_name)
+                json_data = csv_to_json(csv_file_path)
                 for records in json_data:
                     filter = {"name": records["name"]}
-                    response = doc_db_client.collection.update_one(filter=filter, update={"$set": records}, upsert=True)
+                    response = collection.update_one(filter=filter, update={"$set": records}, upsert=True)
                     print(response.raw_result)
 
 

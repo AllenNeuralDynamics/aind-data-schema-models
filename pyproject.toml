@@ -30,7 +30,8 @@ dev = [
     'interrogate',
     'isort',
     'Sphinx',
-    'furo'
+    'furo',
+    'aind-data-access-api[docdb]'
 ]
 
 [tool.setuptools.packages.find]
@@ -65,7 +66,7 @@ exclude = '''
 
 [tool.coverage.run]
 omit = ["*__init__*"]
-source = ["aind_data_schema_models", "tests"]
+source = ["aind_data_schema_models", "tests", "scripts"]
 
 [tool.coverage.report]
 exclude_lines = [
