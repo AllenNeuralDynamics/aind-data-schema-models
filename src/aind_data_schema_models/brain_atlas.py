@@ -9,7 +9,8 @@ from aind_data_schema_models.utils import create_literal_class, read_csv
 class BrainStructureModel(BaseModel):
     """Abstract model for brain atlas structures
 
-    Use this class to create a specific atlas of structures by defining a CSV with columns corresponding to the acronym, name, and id
+    Use this class to create a specific atlas of structures by defining a CSV with
+    columns corresponding to the acronym, name, and id
     """
 
     atlas: str = Field(..., title="Atlas name")
