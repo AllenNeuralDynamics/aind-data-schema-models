@@ -1,18 +1,18 @@
-"""Module for CCF Area definitions"""
+"""Module for brain atlas definitions"""
 
 from importlib_resources import files
-from pydantic import ConfigDict, Field
+from pydantic import Field, BaseModel
 
-from aind_data_schema_models.pid_names import BaseName
 from aind_data_schema_models.utils import create_literal_class, read_csv
 
 
-class CCFStructureModel(BaseName):
-    """Base model config"""
+class BrainStructureModel(BaseModel):
+    """Abstract model for brain atlas structures
 
-    model_config = ConfigDict(frozen=True)
+    Use this class to create a specific atlas of structures by defining a CSV with columns corresponding to the acronym, name, and id
+    """
 
-    atlas: str = Field(default='CCFv3', title="Atlas name")
+    atlas: str = Field(..., title="Atlas name")
     acronym: str = Field(..., title="Structure acronym")
     name: str = Field(..., title="Structure name")
     id: int = Field(..., title="Structure ID")
@@ -21,7 +21,8 @@ class CCFStructureModel(BaseName):
 CCFStructure = create_literal_class(
     objects=read_csv(str(files("aind_data_schema_models.models").joinpath("mouse_ccf_structures.csv"))),
     class_name="CCFStructure",
-    base_model=CCFStructureModel,
+    base_model=BrainStructureModel,
+    shared_fields={"atlas": "CCFv3"},
     discriminator="id",
     class_module=__name__,
 )
