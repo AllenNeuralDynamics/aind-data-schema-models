@@ -10,7 +10,10 @@ class BrainStructureModel(BaseModel):
     """Abstract model for brain atlas structures
 
     Use this class to create a specific atlas of structures by defining a CSV with
-    columns corresponding to the acronym, name, and id
+    columns corresponding to the acronym, name, and id.
+
+    Define the atlas using the shared_fields feature in create_literal_class,
+    see CCF example.
     """
 
     atlas: str = Field(..., title="Atlas name")
