@@ -36,7 +36,6 @@ jobs:
       - name: Install dependencies
         run: | 
           python -m pip install -e .
-          python -m pip install aind-data-access-api[dodcb]
       - name: Publish models to docdb
         run: |
           python ./src/aind_data_schema_models/scripts/write_to_docdb.py
