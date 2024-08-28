@@ -2,7 +2,7 @@ name: Publish models to dev
 on:
   push:
     branches:
-      - dev
+      - main
     paths:
       - 'src/aind_data_schema_models/models/**'
 
@@ -22,7 +22,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Pull latest changes
-        run: git pull origin dev
+        run: git pull origin main
       - name: Set up Python 3.8
         uses: actions/setup-python@v3
         with:
