@@ -30,7 +30,8 @@ dev = [
     'interrogate',
     'isort',
     'Sphinx',
-    'furo'
+    'furo',
+    'aind-flake8-extensions'
 ]
 
 [tool.setuptools.packages.find]
