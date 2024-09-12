@@ -1,3 +1,5 @@
+"""Testing script for system architecture classes"""
+
 import unittest
 from aind_data_schema_models.system_architecture import OperatingSystem, CPUArchitecture
 

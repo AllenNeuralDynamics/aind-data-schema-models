@@ -4,6 +4,8 @@ from enum import Enum
 
 
 class OperatingSystem(str, Enum):
+    """Operating systems"""
+
     WINDOWS_8 = "Windows 8"
     WINDOWS_10 = "Windows 10"
     WINDOWS_11 = "Windows 11"
@@ -29,6 +31,8 @@ class OperatingSystem(str, Enum):
 
 
 class CPUArchitecture(str, Enum):
+    """CPU architectures"""
+    
     X86_64 = "x86-64"
     X86_32 = "x86-32"
     ARM64 = "Arm64"
