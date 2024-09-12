@@ -24,6 +24,8 @@ class OperatingSystem(str, Enum):
     MINT_22 = "Linux Mint 22"
     DEBIAN_11 = "Debian 11"
     DEBIAN_12 = "Debian 12"
+    ROCKY_8 = "Rocky Linux 8"
+    ROCKY_9 = "Rocky Linux 9"
 
 
 class CPUArchitecture(str, Enum):
