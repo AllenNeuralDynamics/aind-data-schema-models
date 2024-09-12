@@ -32,7 +32,7 @@ class OperatingSystem(str, Enum):
 
 class CPUArchitecture(str, Enum):
     """CPU architectures"""
-    
+
     X86_64 = "x86-64"
     X86_32 = "x86-32"
     ARM64 = "Arm64"
