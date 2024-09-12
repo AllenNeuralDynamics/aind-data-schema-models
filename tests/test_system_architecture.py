@@ -5,8 +5,8 @@ from aind_data_schema_models.system_architecture import OperatingSystem, CPUArch
 class UnitsTests(unittest.TestCase):
     """Class for testing Utils.Units"""
 
-    def test_units(self):
-        """Tests creation of a SizeVal object"""
+    def test_system_architecture(self):
+        """Tests that OperatingSystem/CPUArchitecture instantiate"""
 
         self.assertIsNotNone(OperatingSystem.MACOS_SONOMA)
         self.assertIsNotNone(CPUArchitecture.X86_64)
