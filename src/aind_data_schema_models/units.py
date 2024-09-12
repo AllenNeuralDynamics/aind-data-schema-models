@@ -115,9 +115,8 @@ class VoltageUnit(str, Enum):
 class MemoryUnit(str, Enum):
     """Computer memory units"""
 
-    b = "bit"
     B = "Byte"
-    kB = "Kilobyte"
+    KB = "Kilobyte"
     MB = "Megabyte"
     GB = "Gigabyte"
     TB = "Terabyte"
