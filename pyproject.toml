@@ -31,7 +31,8 @@ dev = [
     'isort',
     'Sphinx',
     'furo',
-    'aind-flake8-extensions'
+    'aind-flake8-extensions',
+    'aind-data-access-api[docdb]'
 ]
 
 [tool.setuptools.packages.find]
