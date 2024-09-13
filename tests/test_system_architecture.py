@@ -7,7 +7,7 @@ from aind_data_schema_models.system_architecture import OperatingSystem, CPUArch
 class TestSystemArchitecture(unittest.TestCase):
     """Class for testing Utils.Units"""
 
-    def test_class_Construction(self):
+    def test_class_construction(self):
         """Tests that OperatingSystem/CPUArchitecture instantiate"""
 
         self.assertIsNotNone(OperatingSystem.MACOS_SONOMA)
