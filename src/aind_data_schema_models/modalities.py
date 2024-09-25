@@ -69,11 +69,7 @@ def map_file_requirement(value: int, record: dict, field: str):
     record[field] = Annotated[
         FileRequirement,
         Field(
-            default=(
-                FileRequirement.REQUIRED if value == 1
-                else FileRequirement.OPTIONAL if value == 0
-                else FileRequirement.IGNORED
-            )
+            default=FileRequirement(int(value))
         ),
     ]
 
