@@ -31,6 +31,7 @@ Modality.from_abbreviation = lambda x: Modality.abbreviation_map.get(x)
 
 class FileRequirement(IntEnum):
     """Whether a file is required for a specific modality"""
+
     REQUIRED = 1
     OPTIONAL = 0
     IGNORED = -1
@@ -42,19 +43,28 @@ class ExpectedFilesModel(BaseName):
     model_config = ConfigDict(frozen=True)
     name: str = Field(..., title="Modality name")
     modality_abbreviation: str = Field(..., title="Modality abbreviation")
-    subject: FileRequirement = Field(..., title="Subject file requirement") 
-    data_description: FileRequirement = Field(..., title="Data description file requirement") 
-    procedures: FileRequirement = Field(..., title="Procedures file requirement") 
-    session: FileRequirement = Field(..., title="Session file requirement") 
-    rig: FileRequirement = Field(..., title="Processing file requirement") 
-    processing: FileRequirement = Field(..., title="Processing file requirement") 
-    acquisition: FileRequirement = Field(..., title="Acquisition file requirement") 
-    instrument: FileRequirement = Field(..., title="Instrument file requirement") 
+    subject: FileRequirement = Field(..., title="Subject file requirement")
+    data_description: FileRequirement = Field(..., title="Data description file requirement")
+    procedures: FileRequirement = Field(..., title="Procedures file requirement")
+    session: FileRequirement = Field(..., title="Session file requirement")
+    rig: FileRequirement = Field(..., title="Processing file requirement")
+    processing: FileRequirement = Field(..., title="Processing file requirement")
+    acquisition: FileRequirement = Field(..., title="Acquisition file requirement")
+    instrument: FileRequirement = Field(..., title="Instrument file requirement")
     quality_control: FileRequirement = Field(..., title="Quality control file requirement")
 
 
 def map_file_requirement(value: int, record: dict, field: str):
-    record[field] = Annotated[FileRequirement, Field(default=FileRequirement.REQUIRED if value == 1 else FileRequirement.OPTIONAL if value == 0 else FileRequirement.IGNORED)]
+    record[field] = Annotated[
+        FileRequirement,
+        Field(
+            default=(
+                FileRequirement.REQUIRED if value == 1
+                else FileRequirement.OPTIONAL if value == 0
+                else FileRequirement.IGNORED
+            )
+        ),
+    ]
 
 
 ExpectedFiles = create_literal_class(
