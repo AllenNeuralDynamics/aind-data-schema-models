@@ -34,7 +34,7 @@ class FileRequirement(IntEnum):
 
     REQUIRED = 1
     OPTIONAL = 0
-    IGNORED = -1
+    EXCLUDED = -1
 
 
 class ExpectedFilesModel(BaseName):
