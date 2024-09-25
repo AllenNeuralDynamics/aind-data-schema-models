@@ -55,6 +55,17 @@ class ExpectedFilesModel(BaseName):
 
 
 def map_file_requirement(value: int, record: dict, field: str):
+    """Map integers to Annotated[FileRequirement, value]
+
+    Parameters
+    ----------
+    value : int
+        File required value
+    record : dict
+        Full class dictionary
+    field : str
+        Field name that the FileRequirement value will be assigned to
+    """
     record[field] = Annotated[
         FileRequirement,
         Field(

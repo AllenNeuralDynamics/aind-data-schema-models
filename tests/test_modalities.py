@@ -13,6 +13,8 @@ class TestModality(unittest.TestCase):
 
         self.assertEqual(Modality.ECEPHYS, Modality.from_abbreviation("ecephys"))
 
+class TestExpectedFiles(unittest.TestCase):
+    """Test methods in ExpectedFiles class"""
 
 if __name__ == "__main__":
     unittest.main()
