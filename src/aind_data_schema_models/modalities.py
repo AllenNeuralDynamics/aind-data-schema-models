@@ -2,7 +2,7 @@
 
 from importlib_resources import files
 from pydantic import ConfigDict, Field
-from enum import Enum
+from enum import IntEnum
 from typing_extensions import Annotated
 
 from aind_data_schema_models.pid_names import BaseName
@@ -29,10 +29,10 @@ Modality.abbreviation_map = {m().abbreviation: m() for m in Modality.ALL}
 Modality.from_abbreviation = lambda x: Modality.abbreviation_map.get(x)
 
 
-class FileRequirement(int, Enum):
+class FileRequirement(IntEnum):
     """Whether a file is required for a specific modality"""
-    REQUIRED = 1,
-    OPTIONAL = 0,
+    REQUIRED = 1
+    OPTIONAL = 0
     IGNORED = -1
 
 
@@ -40,6 +40,7 @@ class ExpectedFilesModel(BaseName):
     """Model config"""
 
     model_config = ConfigDict(frozen=True)
+    name: str = Field(..., title="Modality name")
     modality_abbreviation: str = Field(..., title="Modality abbreviation")
     subject: FileRequirement = Field(..., title="Subject file requirement") 
     data_description: FileRequirement = Field(..., title="Data description file requirement") 
@@ -53,7 +54,7 @@ class ExpectedFilesModel(BaseName):
 
 
 def map_file_requirement(value: int, record: dict, field: str):
-    record[field] = Annotated[FileRequirement, Field(default=FileRequirement(value))]
+    record[field] = Annotated[FileRequirement, Field(default=FileRequirement.REQUIRED if value == 1 else FileRequirement.OPTIONAL if value == 0 else FileRequirement.IGNORED)]
 
 
 ExpectedFiles = create_literal_class(
