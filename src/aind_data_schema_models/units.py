@@ -129,20 +129,3 @@ class UnitlessUnit(str, Enum):
 
     PERCENT = "percent"
     FC = "fraction of cycle"
-
-
-def create_unit_with_value(model_name, scalar_type, unit_type, unit_default):
-    """this uses create_model instead of generics, which lets us set default values"""
-
-    m = create_model(model_name, value=(scalar_type, ...), unit=(unit_type, unit_default))
-    return m
-
-
-SizeValue = create_unit_with_value("SizeValue", Decimal, SizeUnit, SizeUnit.MM)
-MassValue = create_unit_with_value("MassValue", Decimal, MassUnit, MassUnit.MG)
-VolumeValue = create_unit_with_value("VolumeValue", Decimal, VolumeUnit, VolumeUnit.NL)
-FrequencyValue = create_unit_with_value("FrequencyValue", Decimal, FrequencyUnit, FrequencyUnit.HZ)
-AngleValue = create_unit_with_value("AngleValue", Decimal, AngleUnit, AngleUnit.DEG)
-TimeValue = create_unit_with_value("TimeValue", Decimal, TimeUnit, TimeUnit.S)
-PowerValue = create_unit_with_value("PowerValue", Decimal, PowerUnit, PowerUnit.MW)
-MemoryValue = create_unit_with_value("MemoryValue", Decimal, MemoryUnit, MemoryUnit.GB)
