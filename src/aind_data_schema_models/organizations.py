@@ -74,7 +74,7 @@ Organization.LENS_MANUFACTURERS = one_of_instance(
         Organization.NIKON,
         Organization.OLYMPUS,
         Organization.SCHNEIDER_KREUZNACH,
-        Orgniazation.TAMRON,
+        Organization.TAMRON,
         Organization.THORLABS,
         Organization.CARL_ZEISS,
         Organization.OTHER,
