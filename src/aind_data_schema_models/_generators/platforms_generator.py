@@ -1,4 +1,4 @@
-from jinja2 import Template, Environment
+from jinja2 import Environment
 import pandas as pd
 from aind_data_schema_models.utils import to_class_name
 
@@ -37,7 +37,7 @@ class Platform:
 """
 
 env = Environment()
-env.filters['to_class_name'] = to_class_name
+env.filters["to_class_name"] = to_class_name
 
 rendered_template = env.from_string(template)
 rendered_code = rendered_template.render(data=data)
