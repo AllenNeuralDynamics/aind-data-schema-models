@@ -10,6 +10,11 @@ from pydantic import BaseModel, ConfigDict, Field, create_model
 from typing_extensions import Annotated
 
 
+def to_class_name(name: str) -> str:
+    """Convert a name to a valid class name by capitalizing and removing non-alphanumeric characters."""
+    return re.sub(r'\W|^(?=\d)', '_', name.title()).replace(" ", "")
+
+
 def create_literal_model(
     obj: dict,
     base_model: Type[BaseModel],
