@@ -15,6 +15,21 @@ TEST_DIR = Path(os.path.dirname(os.path.realpath(__file__))) / "resources"
 class TestUtils(unittest.TestCase):
     """Tests methods in utils module"""
 
+    def test_to_class_name(self):
+        """Test to class name method"""
+
+        example0 = "Smart SPIM"
+        expected0 = "Smart_Spim"
+        self.assertEqual(utils.to_class_name(example0), expected0)
+
+        example0 = "SmartSPIM"
+        expected0 = "Smartspim"
+        self.assertEqual(utils.to_class_name(example0), expected0)
+
+        example0 = "single-plane-ophys"
+        expected0 = "Single_Plane_Ophys"
+        self.assertEqual(utils.to_class_name(example0), expected0)
+
     def test_read_csv(self):
         """Tests read csv method"""
 
