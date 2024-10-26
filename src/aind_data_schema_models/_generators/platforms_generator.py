@@ -39,6 +39,7 @@ class Platform:
     def from_abbreviation(cls, abbreviation: str):
         \"\"\"Get platform from abbreviation\"\"\"
         return cls.abbreviation_map.get(abbreviation, None)
+
 """
 
 env = Environment()
