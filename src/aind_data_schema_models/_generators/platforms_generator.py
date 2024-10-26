@@ -1,3 +1,5 @@
+"""Platforms generator"""
+
 from jinja2 import Environment
 import pandas as pd
 from aind_data_schema_models.utils import to_class_name
@@ -5,11 +7,13 @@ from aind_data_schema_models.utils import to_class_name
 data = pd.read_csv("./src/aind_data_schema_models/models/platforms.csv")
 
 template = """
+\"\"\"Platforms\"\"\"
 from pydantic import BaseModel, Field
 from typing import Literal, Annotated, Union
 
 
 class _PlatformModel(BaseModel):
+    \"\"\"Base model for platform\"\"\"
     name: Literal[str]
     abbreviation: Literal[str]
 
@@ -33,6 +37,7 @@ class Platform:
 
     @classmethod
     def from_abbreviation(cls, abbreviation: str):
+        \"\"\"Get platform from abbreviation\"\"\"
         return cls.abbreviation_map.get(abbreviation, None)
 """
 
