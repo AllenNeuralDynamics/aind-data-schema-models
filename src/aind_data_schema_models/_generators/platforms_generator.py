@@ -48,6 +48,8 @@ env.filters["to_class_name"] = to_class_name
 rendered_template = env.from_string(template)
 rendered_code = rendered_template.render(data=data)
 
+# need to autorun isort and black
+
 # Output the generated code to a file or print it
 with open("./src/aind_data_schema_models/platforms.py", "w") as f:
     f.write(rendered_code)
