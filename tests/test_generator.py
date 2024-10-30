@@ -1,3 +1,4 @@
+"""Test generator class"""
 import unittest
 from unittest.mock import patch, mock_open, MagicMock
 from pathlib import Path
@@ -6,11 +7,13 @@ from aind_data_schema_models._generators.generator import generate_code
 
 
 class TestGenerateCode(unittest.TestCase):
+    """Test generate_code"""
     @patch("builtins.open", new_callable=mock_open, read_data="template content")
     @patch("pandas.read_csv")
     @patch("subprocess.run")
     @patch("jinja2.Environment.from_string")
     def test_generate_code(self, mock_from_string, mock_subprocess_run, mock_read_csv, mock_open):
+        """Test the generate_code function"""
         # Mock the CSV data to be used
         mock_data = pd.DataFrame({"column": ["value"]})
         mock_read_csv.return_value = mock_data
@@ -48,6 +51,7 @@ class TestGenerateCode(unittest.TestCase):
     @patch("pandas.read_csv")
     @patch("builtins.open", new_callable=mock_open, read_data="template content")
     def test_generate_code_without_isort_black(self, mock_open, mock_read_csv, mock_from_string, mock_subprocess_run):
+        """Test the generate_code function without running isort/black"""
         # Mock the CSV data
         mock_read_csv.return_value = pd.DataFrame({"column": ["value"]})
 
@@ -71,6 +75,7 @@ class TestGenerateCode(unittest.TestCase):
     @patch("builtins.open", side_effect=FileNotFoundError)
     @patch("pandas.read_csv")
     def test_generate_code_missing_template_file(self, mock_read_csv, mock_open):
+        """Test that the function crashes if a file is missing"""
         # Mock the CSV data to be used
         mock_read_csv.return_value = pd.DataFrame({"column": ["value"]})
 
