@@ -1,7 +1,8 @@
 """Organizations"""
 {% raw -%}
 from pydantic import BaseModel, Field, ConfigDict
-from typing import Literal, Annotated, Union
+from typing import Literal, Union
+from typing_extensions import Annotated
 from aind_data_schema_models.registries import Registry, _RegistryModel
 {% endraw %}
 
@@ -19,6 +20,7 @@ class {{ row['name'] | to_class_name_underscored }}(_OrganizationModel):
     name: Literal["{{ row['name'] }}"] = "{{ row['name'] }}"
     {% set abbreviation = row['abbreviation'] -%}
     abbreviation: Literal[{{ "'" + abbreviation + "'" if abbreviation == abbreviation else None }}] = {{ "'" + abbreviation + "'" if abbreviation == abbreviation else None }}
+    {% set reg_abb = row['registry_abbreviation'] -%}
     registry: _RegistryModel = Registry.{{ row['registry_abbreviation'] | upper }}
     registry_identifier: Literal["{{ row['registry_identifier'] }}"] = "{{ row['registry_identifier'] }}"
 

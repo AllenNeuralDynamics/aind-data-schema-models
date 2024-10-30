@@ -1,7 +1,8 @@
 """Modalities"""
 {% raw -%}
 from pydantic import BaseModel, Field, ConfigDict
-from typing import Literal, Annotated, Union
+from typing import Literal, Union
+from typing_extensions import Annotated
 from enum import IntEnum
 {% endraw %}
 
