@@ -1,14 +1,16 @@
 """Platforms"""
 
-from pydantic import BaseModel, Field
-from typing import Literal, Annotated, Union
+from typing import Annotated, Literal, Union
+
+from pydantic import BaseModel, ConfigDict, Field
 
 
 class _PlatformModel(BaseModel):
     """Base model for platform"""
 
-    name: Literal[str]
-    abbreviation: Literal[str]
+    model_config = ConfigDict(frozen=True)
+    name: str
+    abbreviation: str
 
 
 class _Behavior(_PlatformModel):
@@ -129,35 +131,20 @@ class Platform:
     """Platforms"""
 
     BEHAVIOR = _Behavior()
-
     CONFOCAL = _Confocal()
-
     ECEPHYS = _Ecephys()
-
     EXASPIM = _Exaspim()
-
     FIP = _Fip()
-
     HCR = _Hcr()
-
     HSFP = _Hsfp()
-
     ISI = _Isi()
-
     MERFISH = _Merfish()
-
     MRI = _Mri()
-
     MESOSPIM = _Mesospim()
-
     MOTOR_OBSERVATORY = _Motor_Observatory()
-
     MULTIPLANE_OPHYS = _Multiplane_Ophys()
-
     SLAP2 = _Slap2()
-
     SINGLE_PLANE_OPHYS = _Single_Plane_Ophys()
-
     SMARTSPIM = _Smartspim()
 
     ALL = tuple(_PlatformModel.__subclasses__())
