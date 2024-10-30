@@ -57,5 +57,5 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate code from templates.")
     parser.add_argument("--type", required=True, help="The data type to generate code for (e.g., 'platforms').")
     args = parser.parse_args()
-    
+
     generate_code(args.type)
