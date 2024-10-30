@@ -31,7 +31,7 @@ class TestGenerateCode(unittest.TestCase):
         generate_code(data_type, isort=True, black=True)
 
         # Check if the CSV file was read correctly
-        mock_read_csv.assert_called_once_with(Path(f"./src/aind_data_schema_models/models/{data_type}.csv"))
+        mock_read_csv.assert_called_once_with(Path(f"./src/aind_data_schema_models/_generators/models/{data_type}.csv"))
 
         # Check if the template was read correctly
         mock_open.assert_any_call(Path(f"./src/aind_data_schema_models/_generators/templates/{data_type}.txt"))

@@ -19,7 +19,7 @@ def generate_code(data_type: str, isort: bool = True, black: bool = True):
         Whether to run black on the output, by default True
     """
     ROOT_DIR = Path("./src/aind_data_schema_models/")
-    data_file = ROOT_DIR / "models" / f"{data_type}.csv"
+    data_file = ROOT_DIR / "_generators" / "models" / f"{data_type}.csv"
     template_file = ROOT_DIR / "_generators" / "templates" / f"{data_type}.txt"
     output_file = ROOT_DIR / f"{data_type}.py"
 
