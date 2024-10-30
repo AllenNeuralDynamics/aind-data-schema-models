@@ -23,7 +23,7 @@ class _Aa_Opto_Electronic(_OrganizationModel):
 
     name: Literal["AA Opto Electronic"] = "AA Opto Electronic"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = None
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 
@@ -59,7 +59,7 @@ class _Ailipu_Technology_Co(_OrganizationModel):
 
     name: Literal["Ailipu Technology Co"] = "Ailipu Technology Co"
     abbreviation: Literal["Ailipu"] = "Ailipu"
-    registry: _RegistryModel = None
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 
@@ -95,7 +95,7 @@ class _Allied(_OrganizationModel):
 
     name: Literal["Allied"] = "Allied"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = None
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 
@@ -104,7 +104,7 @@ class _Applied_Scientific_Instrumentation(_OrganizationModel):
 
     name: Literal["Applied Scientific Instrumentation"] = "Applied Scientific Instrumentation"
     abbreviation: Literal["ASI"] = "ASI"
-    registry: _RegistryModel = None
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 
@@ -113,7 +113,7 @@ class _Arecont_Vision_Costar(_OrganizationModel):
 
     name: Literal["Arecont Vision Costar"] = "Arecont Vision Costar"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = None
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 
@@ -122,7 +122,7 @@ class _Basler(_OrganizationModel):
 
     name: Literal["Basler"] = "Basler"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = None
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 
@@ -131,7 +131,7 @@ class _Cambridge_Technology(_OrganizationModel):
 
     name: Literal["Cambridge Technology"] = "Cambridge Technology"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = None
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 
@@ -167,7 +167,7 @@ class _Chroma(_OrganizationModel):
 
     name: Literal["Chroma"] = "Chroma"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = None
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 
@@ -194,7 +194,7 @@ class _Computar(_OrganizationModel):
 
     name: Literal["Computar"] = "Computar"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = None
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 
@@ -203,7 +203,7 @@ class _Conoptics(_OrganizationModel):
 
     name: Literal["Conoptics"] = "Conoptics"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = None
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 
@@ -212,7 +212,7 @@ class _Custom(_OrganizationModel):
 
     name: Literal["Custom"] = "Custom"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = None
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 
@@ -221,7 +221,7 @@ class _Dodotronic(_OrganizationModel):
 
     name: Literal["Dodotronic"] = "Dodotronic"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = None
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 
@@ -239,7 +239,7 @@ class _Ealing(_OrganizationModel):
 
     name: Literal["Ealing"] = "Ealing"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = None
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 
@@ -266,7 +266,7 @@ class _Euresys(_OrganizationModel):
 
     name: Literal["Euresys"] = "Euresys"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = None
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 
@@ -275,7 +275,7 @@ class _Fujinon(_OrganizationModel):
 
     name: Literal["Fujinon"] = "Fujinon"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = None
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 
@@ -293,7 +293,7 @@ class _Hamilton(_OrganizationModel):
 
     name: Literal["Hamilton"] = "Hamilton"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = None
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 
@@ -311,7 +311,7 @@ class _Ir_Robot_Co(_OrganizationModel):
 
     name: Literal["IR Robot Co"] = "IR Robot Co"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = None
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 
@@ -320,7 +320,7 @@ class _Isl_Products_International(_OrganizationModel):
 
     name: Literal["ISL Products International"] = "ISL Products International"
     abbreviation: Literal["ISL"] = "ISL"
-    registry: _RegistryModel = None
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 
@@ -329,7 +329,7 @@ class _Infinity_Photo_Optical(_OrganizationModel):
 
     name: Literal["Infinity Photo-Optical"] = "Infinity Photo-Optical"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = None
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 
@@ -383,7 +383,7 @@ class _Julabo(_OrganizationModel):
 
     name: Literal["Julabo"] = "Julabo"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = None
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 
@@ -401,7 +401,7 @@ class _Leica(_OrganizationModel):
 
     name: Literal["Leica"] = "Leica"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = None
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 
@@ -410,7 +410,7 @@ class _Lumen_Dynamics(_OrganizationModel):
 
     name: Literal["Lumen Dynamics"] = "Lumen Dynamics"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = None
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 
@@ -419,7 +419,7 @@ class _Lifecanvas(_OrganizationModel):
 
     name: Literal["LifeCanvas"] = "LifeCanvas"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = None
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 
@@ -446,7 +446,7 @@ class _Mpi(_OrganizationModel):
 
     name: Literal["MPI"] = "MPI"
     abbreviation: Literal["MPI"] = "MPI"
-    registry: _RegistryModel = None
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 
@@ -475,7 +475,7 @@ class _Midwest_Optical_Systems_Inc_(_OrganizationModel):
 
     name: Literal["Midwest Optical Systems, Inc."] = "Midwest Optical Systems, Inc."
     abbreviation: Literal["MidOpt"] = "MidOpt"
-    registry: _RegistryModel = None
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 
@@ -484,7 +484,7 @@ class _Mitutuyo(_OrganizationModel):
 
     name: Literal["Mitutuyo"] = "Mitutuyo"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = None
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 
@@ -493,7 +493,7 @@ class _Nresearch_Inc(_OrganizationModel):
 
     name: Literal["NResearch Inc"] = "NResearch Inc"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = None
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 
@@ -542,7 +542,7 @@ class _Navitar(_OrganizationModel):
 
     name: Literal["Navitar"] = "Navitar"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = None
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 
@@ -551,7 +551,7 @@ class _Neurophotometrics(_OrganizationModel):
 
     name: Literal["Neurophotometrics"] = "Neurophotometrics"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = None
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 
@@ -560,7 +560,7 @@ class _New_Scale_Technologies(_OrganizationModel):
 
     name: Literal["New Scale Technologies"] = "New Scale Technologies"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = None
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 
@@ -605,7 +605,7 @@ class _Optotune(_OrganizationModel):
 
     name: Literal["Optotune"] = "Optotune"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = None
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 
@@ -614,7 +614,7 @@ class _Other(_OrganizationModel):
 
     name: Literal["Other"] = "Other"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = None
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 
@@ -623,7 +623,7 @@ class _Oxxius(_OrganizationModel):
 
     name: Literal["Oxxius"] = "Oxxius"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = None
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 
@@ -632,7 +632,7 @@ class _Prizmatix(_OrganizationModel):
 
     name: Literal["Prizmatix"] = "Prizmatix"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = None
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 
@@ -641,7 +641,7 @@ class _Quantifi(_OrganizationModel):
 
     name: Literal["Quantifi"] = "Quantifi"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = None
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 
@@ -650,7 +650,7 @@ class _Raspberry_Pi(_OrganizationModel):
 
     name: Literal["Raspberry Pi"] = "Raspberry Pi"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = None
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 
@@ -659,7 +659,7 @@ class _Sicgen(_OrganizationModel):
 
     name: Literal["SICGEN"] = "SICGEN"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = None
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 
@@ -668,7 +668,7 @@ class _Schneider_Kreuznach(_OrganizationModel):
 
     name: Literal["Schneider-Kreuznach"] = "Schneider-Kreuznach"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = None
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 
@@ -677,7 +677,7 @@ class _Second_Order_Effects(_OrganizationModel):
 
     name: Literal["Second Order Effects"] = "Second Order Effects"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = None
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 
@@ -686,7 +686,7 @@ class _Semrock(_OrganizationModel):
 
     name: Literal["Semrock"] = "Semrock"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = None
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 
@@ -695,7 +695,7 @@ class _Sigma_Aldritch(_OrganizationModel):
 
     name: Literal["Sigma-Aldritch"] = "Sigma-Aldritch"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = None
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 
@@ -713,7 +713,7 @@ class _Spinnaker(_OrganizationModel):
 
     name: Literal["Spinnaker"] = "Spinnaker"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = None
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 
@@ -722,7 +722,7 @@ class _Tamron(_OrganizationModel):
 
     name: Literal["Tamron"] = "Tamron"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = None
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 
@@ -731,7 +731,7 @@ class _Technical_Manufacturing_Corporation(_OrganizationModel):
 
     name: Literal["Technical Manufacturing Corporation"] = "Technical Manufacturing Corporation"
     abbreviation: Literal["TMC"] = "TMC"
-    registry: _RegistryModel = None
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 
@@ -758,7 +758,7 @@ class _The_Imaging_Source(_OrganizationModel):
 
     name: Literal["The Imaging Source"] = "The Imaging Source"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = None
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 
@@ -767,7 +767,7 @@ class _The_Lee_Company(_OrganizationModel):
 
     name: Literal["The Lee Company"] = "The Lee Company"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = None
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 
@@ -794,7 +794,7 @@ class _Tymphany(_OrganizationModel):
 
     name: Literal["Tymphany"] = "Tymphany"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = None
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 
@@ -803,7 +803,7 @@ class _Vieworks(_OrganizationModel):
 
     name: Literal["Vieworks"] = "Vieworks"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = None
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 
@@ -812,7 +812,7 @@ class _Vortran(_OrganizationModel):
 
     name: Literal["Vortran"] = "Vortran"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = None
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 

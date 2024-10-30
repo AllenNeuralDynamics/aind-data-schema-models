@@ -22,7 +22,7 @@ class {{ row['name'] | to_class_name_underscored }}(_OrganizationModel):
     abbreviation: Literal[{{ "'" + abbreviation + "'" if abbreviation == abbreviation else None }}] = {{ "'" + abbreviation + "'" if abbreviation == abbreviation else None }}
     {%- set reg_abb = row['registry_abbreviation'] %}
     {% set reg_abb_upper = reg_abb | upper -%}
-    registry: _RegistryModel = {{None if reg_abb != reg_abb else "Registry." + reg_abb_upper}}
+    registry: {{"_" + "RegistryModel" if reg_abb == reg_abb else None}} = {{None if reg_abb != reg_abb else "Registry." + reg_abb_upper}}
     registry_identifier: Literal["{{ row['registry_identifier'] }}"] = "{{ row['registry_identifier'] }}"
 
 {% endfor %}
