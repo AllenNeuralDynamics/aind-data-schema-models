@@ -1,8 +1,9 @@
 """Harp device types"""
 
-from typing import Annotated, Literal, Union
+from typing import Literal, Union
 
 from pydantic import BaseModel, ConfigDict, Field
+from typing_extensions import Annotated
 
 
 class _HarpDeviceTypeModel(BaseModel):
