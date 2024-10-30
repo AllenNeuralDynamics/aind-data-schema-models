@@ -6836,12 +6836,12 @@ class _Cst(_BrainStructureModel):
     id: Literal["784"] = "784"
 
 
-class _Cn(_BrainStructureModel):
-    """Model cn"""
+class _Cne(_BrainStructureModel):
+    """Model cne"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
     name: Literal["cranial nerves"] = "cranial nerves"
-    acronym: Literal["cn"] = "cn"
+    acronym: Literal["cne"] = "cne"
     id: Literal["967"] = "967"
 
 
@@ -8439,7 +8439,7 @@ class CCFStructure:
     FP = _Fp()
     CCS = _Ccs()
     CST = _Cst()
-    CN = _Cn()
+    CNE = _Cne()
     TSPC = _Tspc()
     CUF = _Cuf()
     TSPD = _Tspd()
