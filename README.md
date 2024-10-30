@@ -25,6 +25,16 @@ pip install -e .[dev]
 
 ## Contributing
 
+### How to add a new model class
+
+The model class files, `brain_atlas.py` etc, are auto-generated. **You should never need to modify the class files directly.**
+
+Instead, take a look at the `jinja2` templates in the folder `_generators/templates`. The filename of the template is used to pull the corresponding `.csv` file and populate the `data` DataFrame. In the template you can pull data from the various columns and use them to populate each of the fields in your class.
+
+To re-build all the models, run the `run_all.sh` bash script in the root folder, which loops through the template files and runs them through the `generate_code` function.
+
+There are a few special cases, e.g. if data are missing in columns they will show up as `float: nan`. See the `organizations.txt` template for examples of how to handle this.
+
 ### Linters and testing
 
 There are several libraries used to run linters, check documentation, and run tests.
