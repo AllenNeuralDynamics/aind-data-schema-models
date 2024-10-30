@@ -1,8 +1,9 @@
 """Registries"""
 
-from typing import Annotated, Literal, Union
+from typing import Literal, Union
 
 from pydantic import BaseModel, ConfigDict, Field
+from typing_extensions import Annotated
 
 
 class _RegistryModel(BaseModel):
@@ -62,13 +63,6 @@ class _Rrid(_RegistryModel):
     abbreviation: Literal["RRID"] = "RRID"
 
 
-class _Nan(_RegistryModel):
-    """Model NAN"""
-
-    name: Literal["No Registry"] = "No Registry"
-    abbreviation: Literal["NAN"] = "NAN"
-
-
 class Registry:
     """Registries"""
 
@@ -79,7 +73,6 @@ class Registry:
     ORCID = _Orcid()
     ROR = _Ror()
     RRID = _Rrid()
-    NAN = _Nan()
 
     ALL = tuple(_RegistryModel.__subclasses__())
 
