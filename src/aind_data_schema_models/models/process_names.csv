@@ -15,6 +15,8 @@ Image background subtraction
 Image cell classification
 Image cell quantification
 Image cell segmentation
+Image cross-round alignment
+Image cross-session alignment
 Image destriping
 Image flat-field correction
 Image importing
@@ -24,6 +26,7 @@ Image tile alignment
 Image tile fusing
 Image tile projection
 Image spot detection
+Image spot spectral unmixing
 Neuropil subtraction
 Other
 Simulation
