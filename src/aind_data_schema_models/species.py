@@ -8,7 +8,7 @@ from typing_extensions import Annotated
 from aind_data_schema_models.registries import Registry, _RegistryModel
 
 
-class SpeciesModel(BaseModel):
+class _SpeciesModel(BaseModel):
     """Base model for platform"""
 
     model_config = ConfigDict(frozen=True)

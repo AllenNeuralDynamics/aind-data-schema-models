@@ -7,7 +7,7 @@ from pydantic import BaseModel, ConfigDict, Field
 from typing_extensions import Annotated
 
 
-class ModalityModel(BaseModel):
+class _ModalityModel(BaseModel):
     """Base model for modality"""
 
     model_config = ConfigDict(frozen=True)

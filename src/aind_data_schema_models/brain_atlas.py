@@ -6,7 +6,7 @@ from pydantic import BaseModel, ConfigDict, Field
 from typing_extensions import Annotated
 
 
-class BrainStructureModel(BaseModel):
+class _BrainStructureModel(BaseModel):
     """Base model for brain strutures"""
 
     model_config = ConfigDict(frozen=True)

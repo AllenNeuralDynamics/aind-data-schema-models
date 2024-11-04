@@ -6,7 +6,7 @@ from pydantic import BaseModel, ConfigDict, Field
 from typing_extensions import Annotated
 
 
-class HarpDeviceTypeModel(BaseModel):
+class _HarpDeviceTypeModel(BaseModel):
     """Base model for platform"""
 
     model_config = ConfigDict(frozen=True)
