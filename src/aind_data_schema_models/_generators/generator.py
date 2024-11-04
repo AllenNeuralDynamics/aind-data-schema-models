@@ -6,7 +6,10 @@ from pathlib import Path
 import subprocess
 
 
-def generate_code(data_type: str, isort: bool = True, black: bool = True):
+def generate_code(data_type: str,
+                  root_path: str,
+                  isort: bool = True,
+                  black: bool = True):
     """Generate code from the template type
 
     Parameters
@@ -18,7 +21,7 @@ def generate_code(data_type: str, isort: bool = True, black: bool = True):
     black : bool, optional
         Whether to run black on the output, by default True
     """
-    ROOT_DIR = Path("./src/aind_data_schema_models/")
+    ROOT_DIR = Path(root_path)
     data_file = ROOT_DIR / "_generators" / "models" / f"{data_type}.csv"
     template_file = ROOT_DIR / "_generators" / "templates" / f"{data_type}.txt"
     output_file = ROOT_DIR / f"{data_type}.py"
@@ -56,6 +59,7 @@ def generate_code(data_type: str, isort: bool = True, black: bool = True):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate code from templates.")
     parser.add_argument("--type", required=True, help="The data type to generate code for (e.g., 'platforms').")
+    parser.add_argument("--root-path", required=True, default="./src/aind_data_schema_models/", help="Path to the source folder of the project")
     args = parser.parse_args()
 
-    generate_code(args.type)
+    generate_code(args.type, args.root_path)
