@@ -30,7 +30,7 @@ class TestGenerateCode(unittest.TestCase):
 
         # Define the paths that will be used in the function
         data_type = "test_data"
-        output_path = Path("./src/aind_data_schema_models/test_data.py")
+        output_path = Path("root/test_data.py")
 
         # Run the function with isort and black enabled
         generate_code(data_type, root_path="root", isort=True, black=True)
