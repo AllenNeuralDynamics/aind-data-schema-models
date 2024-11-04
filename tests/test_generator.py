@@ -1,4 +1,5 @@
 """Test generator class"""
+
 import unittest
 from unittest.mock import patch, mock_open, MagicMock
 from pathlib import Path
@@ -13,6 +14,7 @@ ROOT_DIR = TEST_DIR / ".." / "src/aind_data_schema_models"
 
 class TestGenerateCode(unittest.TestCase):
     """Test generate_code"""
+
     @patch("builtins.open", new_callable=mock_open, read_data="template content")
     @patch("pandas.read_csv")
     @patch("subprocess.run")
