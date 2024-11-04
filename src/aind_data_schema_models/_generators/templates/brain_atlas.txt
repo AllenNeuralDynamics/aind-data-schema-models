@@ -5,7 +5,7 @@ from typing import Literal, Union
 from typing_extensions import Annotated
 {% endraw %}
 
-class BrainStructureModel(BaseModel):
+class _BrainStructureModel(BaseModel):
     """Base model for brain strutures"""
     model_config = ConfigDict(frozen=True)
     atlas: str
