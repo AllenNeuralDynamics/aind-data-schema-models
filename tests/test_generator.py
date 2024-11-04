@@ -4,6 +4,11 @@ from unittest.mock import patch, mock_open, MagicMock
 from pathlib import Path
 import pandas as pd
 from aind_data_schema_models._generators.generator import generate_code
+import os
+
+
+TEST_DIR = Path(os.path.dirname(os.path.realpath(__file__)))
+ROOT_DIR = TEST_DIR / ".." / "src/aind_data_schema_models"
 
 
 class TestGenerateCode(unittest.TestCase):
@@ -28,13 +33,13 @@ class TestGenerateCode(unittest.TestCase):
         output_path = Path("./src/aind_data_schema_models/test_data.py")
 
         # Run the function with isort and black enabled
-        generate_code(data_type, isort=True, black=True)
+        generate_code(data_type, root_path="root", isort=True, black=True)
 
         # Check if the CSV file was read correctly
-        mock_read_csv.assert_called_once_with(Path(f"./src/aind_data_schema_models/_generators/models/{data_type}.csv"))
+        mock_read_csv.assert_called_once_with(Path(f"root/_generators/models/{data_type}.csv"))
 
         # Check if the template was read correctly
-        mock_open.assert_any_call(Path(f"./src/aind_data_schema_models/_generators/templates/{data_type}.txt"))
+        mock_open.assert_any_call(Path(f"root/_generators/templates/{data_type}.txt"))
 
         # Ensure the template rendering was called with the correct context
         mock_template.render.assert_called_once_with(data=mock_data)
@@ -61,7 +66,7 @@ class TestGenerateCode(unittest.TestCase):
         mock_from_string.return_value = mock_template
 
         # Run the function without isort and black
-        generate_code("test_data", isort=False, black=False)
+        generate_code("test_data", root_path="root", isort=False, black=False)
 
         # Ensure that neither isort nor black was called
         mock_subprocess_run.assert_not_called()
@@ -70,7 +75,7 @@ class TestGenerateCode(unittest.TestCase):
     def test_generate_code_missing_data_file(self, mock_read_csv):
         # Run the function expecting a FileNotFoundError due to missing CSV file
         with self.assertRaises(FileNotFoundError):
-            generate_code("missing_data")
+            generate_code("missing_data", root_path=ROOT_DIR)
 
     @patch("builtins.open", side_effect=FileNotFoundError)
     @patch("pandas.read_csv")
@@ -81,7 +86,7 @@ class TestGenerateCode(unittest.TestCase):
 
         # Run the function expecting a FileNotFoundError due to missing template file
         with self.assertRaises(FileNotFoundError):
-            generate_code("missing_template")
+            generate_code("missing_template", root_path=ROOT_DIR)
 
 
 if __name__ == "__main__":
