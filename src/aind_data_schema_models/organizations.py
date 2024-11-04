@@ -8,7 +8,7 @@ from typing_extensions import Annotated
 from aind_data_schema_models.registries import Registry, _RegistryModel
 
 
-class _OrganizationModel(BaseModel):
+class OrganizationModel(BaseModel):
     """Base model for organizations"""
 
     model_config = ConfigDict(frozen=True)

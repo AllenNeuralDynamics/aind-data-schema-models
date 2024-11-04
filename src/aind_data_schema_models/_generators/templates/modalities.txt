@@ -6,7 +6,7 @@ from typing_extensions import Annotated
 from enum import IntEnum
 {% endraw %}
 
-class _ModalityModel(BaseModel):
+class ModalityModel(BaseModel):
     """Base model for modality"""
     model_config = ConfigDict(frozen=True)
     name: str

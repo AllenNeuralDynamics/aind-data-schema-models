@@ -6,7 +6,7 @@ from pydantic import BaseModel, ConfigDict, Field
 from typing_extensions import Annotated
 
 
-class _PlatformModel(BaseModel):
+class PlatformModel(BaseModel):
     """Base model for platform"""
 
     model_config = ConfigDict(frozen=True)

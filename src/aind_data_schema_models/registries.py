@@ -6,7 +6,7 @@ from pydantic import BaseModel, ConfigDict, Field
 from typing_extensions import Annotated
 
 
-class _RegistryModel(BaseModel):
+class RegistryModel(BaseModel):
     """Base model for registries"""
 
     model_config = ConfigDict(frozen=True)

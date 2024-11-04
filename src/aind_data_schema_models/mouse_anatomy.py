@@ -8,7 +8,7 @@ from typing_extensions import Annotated
 from aind_data_schema_models.registries import Registry, _RegistryModel
 
 
-class _MouseAnatomicalStructureModel(BaseModel):
+class MouseAnatomicalStructureModel(BaseModel):
     """Base model for mouse anatomy"""
 
     model_config = ConfigDict(frozen=True)

@@ -5,7 +5,7 @@ from typing import Literal, Union
 from typing_extensions import Annotated
 {% endraw %}
 
-class _RegistryModel(BaseModel):
+class RegistryModel(BaseModel):
     """Base model for registries"""
     model_config = ConfigDict(frozen=True)
     name: str

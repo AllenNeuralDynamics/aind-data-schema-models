@@ -59,7 +59,7 @@ def generate_code(data_type: str,
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate code from templates.")
     parser.add_argument("--type", required=True, help="The data type to generate code for (e.g., 'platforms').")
-    parser.add_argument("--root-path", required=True, default="./src/aind_data_schema_models/", help="Path to the source folder of the project")
+    parser.add_argument("--root-path", required=False, default="./src/aind_data_schema_models/", help="Path to the source folder of the project")
     args = parser.parse_args()
 
     generate_code(args.type, args.root_path)
