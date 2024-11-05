@@ -1,8 +1,8 @@
 """ General utilities for constructing models from CSV files """
 
 import re
-from pydantic import BaseModel
-from typing import Annotated, Union, Field, List, Type, Any
+from pydantic import BaseModel, Field
+from typing import Annotated, Union, List, Type, Any
 
 
 def to_class_name_underscored(name: str) -> str:
