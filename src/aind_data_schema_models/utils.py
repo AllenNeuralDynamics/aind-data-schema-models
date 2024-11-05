@@ -2,7 +2,8 @@
 
 import re
 from pydantic import BaseModel, Field
-from typing import Annotated, Union, List, Type, Any
+from typing import Union, List, Type, Any
+from typing_extensions import Annotated
 
 
 def to_class_name_underscored(name: str) -> str:
