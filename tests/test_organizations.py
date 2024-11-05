@@ -18,6 +18,12 @@ class TestOrganization(unittest.TestCase):
 
         self.assertEqual(Organization.LIFECANVAS.abbreviation, None)
 
+    def test_groups(self):
+        """Test that the organization groups are present"""
+
+        self.assertIn(Organization.AI, Organization.SUBJECT_SOURCES)
+        self.assertIn(Organization.AIBS, Organization.RESEARCH_INSTITUTIONS)
+
 
 if __name__ == "__main__":
     unittest.main()
