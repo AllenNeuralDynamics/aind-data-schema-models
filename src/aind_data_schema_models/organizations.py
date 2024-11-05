@@ -6,6 +6,7 @@ from pydantic import BaseModel, ConfigDict, Field
 from typing_extensions import Annotated
 
 from aind_data_schema_models.registries import Registry, _RegistryModel
+from aind_data_schema_models.utils import one_of_instance
 
 
 class _OrganizationModel(BaseModel):
@@ -690,10 +691,10 @@ class _Semrock(_OrganizationModel):
     registry_identifier: Literal["nan"] = "nan"
 
 
-class _Sigma_Aldritch(_OrganizationModel):
-    """Model Sigma-Aldritch"""
+class _Sigma_Aldrich(_OrganizationModel):
+    """Model Sigma-Aldrich"""
 
-    name: Literal["Sigma-Aldritch"] = "Sigma-Aldritch"
+    name: Literal["Sigma-Aldrich"] = "Sigma-Aldrich"
     abbreviation: Literal[None] = None
     registry: None = None
     registry_identifier: Literal["nan"] = "nan"
@@ -902,7 +903,7 @@ class Organization:
     SCHNEIDER_KREUZNACH = _Schneider_Kreuznach()
     SECOND_ORDER_EFFECTS = _Second_Order_Effects()
     SEMROCK = _Semrock()
-    SIGMA_ALDRITCH = _Sigma_Aldritch()
+    SIGMA_ALDRICH = _Sigma_Aldrich()
     SIMONS_FOUNDATION = _Simons_Foundation()
     SPINNAKER = _Spinnaker()
     TAMRON = _Tamron()
@@ -935,3 +936,123 @@ class Organization:
     def from_name(cls, name: str):
         """Get platform from name"""
         return cls.name_map.get(name, None)
+
+
+Organization.DETECTOR_MANUFACTURERS = one_of_instance(
+    [
+        Organization.AILIPU,
+        Organization.ALLIED,
+        Organization.BASLER,
+        Organization.DODOTRONIC,
+        Organization.EDMUND_OPTICS,
+        Organization.HAMAMATSU,
+        Organization.SPINNAKER,
+        Organization.FLIR,
+        Organization.THE_IMAGING_SOURCE,
+        Organization.THORLABS,
+        Organization.VIEWORKS,
+        Organization.OTHER,
+    ]
+)
+
+Organization.FILTER_MANUFACTURERS = one_of_instance(
+    [
+        Organization.CHROMA,
+        Organization.EDMUND_OPTICS,
+        Organization.MIDOPT,
+        Organization.SEMROCK,
+        Organization.THORLABS,
+        Organization.OTHER,
+    ]
+)
+
+Organization.LENS_MANUFACTURERS = one_of_instance(
+    [
+        Organization.COMPUTAR,
+        Organization.EDMUND_OPTICS,
+        Organization.FUJINON,
+        Organization.HAMAMATSU,
+        Organization.INFINITY_PHOTO_OPTICAL,
+        Organization.LEICA,
+        Organization.MITUTUYO,
+        Organization.NAVITAR,
+        Organization.NIKON,
+        Organization.OLYMPUS,
+        Organization.SCHNEIDER_KREUZNACH,
+        Organization.TAMRON,
+        Organization.THORLABS,
+        Organization.CARL_ZEISS,
+        Organization.OTHER,
+    ]
+)
+
+Organization.DAQ_DEVICE_MANUFACTURERS = one_of_instance(
+    [
+        Organization.AIND,
+        Organization.CHAMPALIMAUD,
+        Organization.NATIONAL_INSTRUMENTS,
+        Organization.IMEC,
+        Organization.OEPS,
+        Organization.SECOND_ORDER_EFFECTS,
+        Organization.OTHER,
+    ]
+)
+
+Organization.LASER_MANUFACTURERS = one_of_instance(
+    [
+        Organization.COHERENT_SCIENTIFIC,
+        Organization.HAMAMATSU,
+        Organization.OXXIUS,
+        Organization.QUANTIFI,
+        Organization.VORTRAN,
+        Organization.OTHER,
+    ]
+)
+
+Organization.LED_MANUFACTURERS = one_of_instance(
+    [Organization.AMS_OSRAM, Organization.DORIC, Organization.PRIZMATIX, Organization.THORLABS, Organization.OTHER]
+)
+
+Organization.MANIPULATOR_MANUFACTURERS = one_of_instance([Organization.NEW_SCALE_TECHNOLOGIES, Organization.OTHER])
+
+Organization.MONITOR_MANUFACTURERS = one_of_instance([Organization.ASUS, Organization.LG, Organization.OTHER])
+
+Organization.SPEAKER_MANUFACTURERS = one_of_instance([Organization.TYMPHANY, Organization.ISL, Organization.OTHER])
+
+Organization.FUNDERS = one_of_instance(
+    [
+        Organization.AI,
+        Organization.CZI,
+        Organization.MBF,
+        Organization.MJFF,
+        Organization.NCCIH,
+        Organization.NIMH,
+        Organization.NINDS,
+        Organization.SIMONS_FOUNDATION,
+        Organization.TWCF,
+    ]
+)
+
+Organization.RESEARCH_INSTITUTIONS = one_of_instance(
+    [
+        Organization.AIBS,
+        Organization.AIND,
+        Organization.COLUMBIA,
+        Organization.HUST,
+        Organization.JANELIA,
+        Organization.NYU,
+        Organization.OTHER,
+    ]
+)
+
+Organization.SUBJECT_SOURCES = one_of_instance(
+    [
+        Organization.AI,
+        Organization.COLUMBIA,
+        Organization.HUST,
+        Organization.JANELIA,
+        Organization.JAX,
+        Organization.NYU,
+        Organization.OTHER,
+    ]
+)
