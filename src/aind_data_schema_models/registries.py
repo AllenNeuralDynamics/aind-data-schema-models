@@ -2,11 +2,13 @@
 
 from typing import Literal, Union
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import ConfigDict, Field
 from typing_extensions import Annotated
 
+from aind_data_schema_models.pid_names import BaseName
 
-class _RegistryModel(BaseModel):
+
+class _RegistryModel(BaseName):
     """Base model for registries"""
 
     model_config = ConfigDict(frozen=True)
