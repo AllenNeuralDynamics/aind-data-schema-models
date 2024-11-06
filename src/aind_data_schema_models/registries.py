@@ -78,7 +78,7 @@ class Registry:
 
     ALL = tuple(_RegistryModel.__subclasses__())
 
-    ONE_OF = Annotated[Union[tuple(_RegistryModel.__subclasses__())], Field(discriminator="name")]
+    ONE_OF = Annotated[Union[tuple(_RegistryModel.__subclasses__())], Field(discriminator="abbreviation")]
 
     abbreviation_map = {m().abbreviation: m() for m in ALL}
 
