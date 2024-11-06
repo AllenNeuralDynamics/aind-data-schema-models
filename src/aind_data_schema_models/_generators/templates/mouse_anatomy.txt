@@ -3,21 +3,21 @@
 from pydantic import BaseModel, Field, ConfigDict
 from typing import Literal, Union
 from typing_extensions import Annotated
-from aind_data_schema_models.registries import Registry, _RegistryModel
+from aind_data_schema_models.registries import Registry
 {% endraw %}
 
 class _MouseAnatomicalStructureModel(BaseModel):
     """Base model for mouse anatomy"""
     model_config = ConfigDict(frozen=True)
     name: str
-    registry: _RegistryModel
+    registry: Registry.ONE_OF
     registry_identifier: str
 
 {% for _, row in data.iterrows() %}
 class {{ row['name'] | to_class_name_underscored }}(_MouseAnatomicalStructureModel):
     """Model {{row['name']}}"""
     name: Literal["{{ row['name'] }}"] = "{{ row['name'] }}"
-    registry: _RegistryModel = Registry.EMAPA
+    registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["{{ row['registry_identifier'] }}"] = "{{ row['registry_identifier'] }}"
 
 {% endfor %}

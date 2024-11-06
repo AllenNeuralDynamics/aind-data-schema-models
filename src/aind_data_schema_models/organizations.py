@@ -5,7 +5,7 @@ from typing import Literal, Union
 from pydantic import BaseModel, ConfigDict, Field
 from typing_extensions import Annotated
 
-from aind_data_schema_models.registries import Registry, _RegistryModel
+from aind_data_schema_models.registries import Registry
 from aind_data_schema_models.utils import one_of_instance
 
 
@@ -15,7 +15,7 @@ class _OrganizationModel(BaseModel):
     model_config = ConfigDict(frozen=True)
     name: str
     abbreviation: str
-    registry: _RegistryModel
+    registry: Registry.ONE_OF
     registry_identifier: str
 
 
@@ -33,7 +33,7 @@ class _Asus(_OrganizationModel):
 
     name: Literal["ASUS"] = "ASUS"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = Registry.ROR
+    registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["00bxkz165"] = "00bxkz165"
 
 
@@ -42,7 +42,7 @@ class _Abcam(_OrganizationModel):
 
     name: Literal["Abcam"] = "Abcam"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = Registry.ROR
+    registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["02e1wjw63"] = "02e1wjw63"
 
 
@@ -51,7 +51,7 @@ class _Addgene(_OrganizationModel):
 
     name: Literal["Addgene"] = "Addgene"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = Registry.ROR
+    registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["01nn1pw54"] = "01nn1pw54"
 
 
@@ -69,7 +69,7 @@ class _Allen_Institute(_OrganizationModel):
 
     name: Literal["Allen Institute"] = "Allen Institute"
     abbreviation: Literal["AI"] = "AI"
-    registry: _RegistryModel = Registry.ROR
+    registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["03cpe7c52"] = "03cpe7c52"
 
 
@@ -78,7 +78,7 @@ class _Allen_Institute_For_Brain_Science(_OrganizationModel):
 
     name: Literal["Allen Institute for Brain Science"] = "Allen Institute for Brain Science"
     abbreviation: Literal["AIBS"] = "AIBS"
-    registry: _RegistryModel = Registry.ROR
+    registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["00dcv1019"] = "00dcv1019"
 
 
@@ -87,7 +87,7 @@ class _Allen_Institute_For_Neural_Dynamics(_OrganizationModel):
 
     name: Literal["Allen Institute for Neural Dynamics"] = "Allen Institute for Neural Dynamics"
     abbreviation: Literal["AIND"] = "AIND"
-    registry: _RegistryModel = Registry.ROR
+    registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["04szwah67"] = "04szwah67"
 
 
@@ -141,7 +141,7 @@ class _Carl_Zeiss(_OrganizationModel):
 
     name: Literal["Carl Zeiss"] = "Carl Zeiss"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = Registry.ROR
+    registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["01xk5xs43"] = "01xk5xs43"
 
 
@@ -150,7 +150,7 @@ class _Champalimaud_Foundation(_OrganizationModel):
 
     name: Literal["Champalimaud Foundation"] = "Champalimaud Foundation"
     abbreviation: Literal["Champalimaud"] = "Champalimaud"
-    registry: _RegistryModel = Registry.ROR
+    registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["03g001n57"] = "03g001n57"
 
 
@@ -159,7 +159,7 @@ class _Chan_Zuckerberg_Initiative(_OrganizationModel):
 
     name: Literal["Chan Zuckerberg Initiative"] = "Chan Zuckerberg Initiative"
     abbreviation: Literal["CZI"] = "CZI"
-    registry: _RegistryModel = Registry.ROR
+    registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["02qenvm24"] = "02qenvm24"
 
 
@@ -177,7 +177,7 @@ class _Coherent_Scientific(_OrganizationModel):
 
     name: Literal["Coherent Scientific"] = "Coherent Scientific"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = Registry.ROR
+    registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["031tysd23"] = "031tysd23"
 
 
@@ -186,7 +186,7 @@ class _Columbia_University(_OrganizationModel):
 
     name: Literal["Columbia University"] = "Columbia University"
     abbreviation: Literal["Columbia"] = "Columbia"
-    registry: _RegistryModel = Registry.ROR
+    registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["00hj8s172"] = "00hj8s172"
 
 
@@ -231,7 +231,7 @@ class _Doric(_OrganizationModel):
 
     name: Literal["Doric"] = "Doric"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = Registry.ROR
+    registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["059n53q30"] = "059n53q30"
 
 
@@ -249,7 +249,7 @@ class _Edmund_Optics(_OrganizationModel):
 
     name: Literal["Edmund Optics"] = "Edmund Optics"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = Registry.ROR
+    registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["01j1gwp17"] = "01j1gwp17"
 
 
@@ -258,7 +258,7 @@ class _Emory_University(_OrganizationModel):
 
     name: Literal["Emory University"] = "Emory University"
     abbreviation: Literal["Emory"] = "Emory"
-    registry: _RegistryModel = Registry.ROR
+    registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["03czfpz43"] = "03czfpz43"
 
 
@@ -285,7 +285,7 @@ class _Hamamatsu(_OrganizationModel):
 
     name: Literal["Hamamatsu"] = "Hamamatsu"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = Registry.ROR
+    registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["03natb733"] = "03natb733"
 
 
@@ -303,7 +303,7 @@ class _Huazhong_University_Of_Science_And_Technology(_OrganizationModel):
 
     name: Literal["Huazhong University of Science and Technology"] = "Huazhong University of Science and Technology"
     abbreviation: Literal["HUST"] = "HUST"
-    registry: _RegistryModel = Registry.ROR
+    registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["00p991c53"] = "00p991c53"
 
 
@@ -339,7 +339,7 @@ class _Integrated_Dna_Technologies(_OrganizationModel):
 
     name: Literal["Integrated DNA Technologies"] = "Integrated DNA Technologies"
     abbreviation: Literal["IDT"] = "IDT"
-    registry: _RegistryModel = Registry.ROR
+    registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["009jvpf03"] = "009jvpf03"
 
 
@@ -348,7 +348,7 @@ class _Interuniversity_Microelectronics_Center(_OrganizationModel):
 
     name: Literal["Interuniversity Microelectronics Center"] = "Interuniversity Microelectronics Center"
     abbreviation: Literal["IMEC"] = "IMEC"
-    registry: _RegistryModel = Registry.ROR
+    registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["02kcbn207"] = "02kcbn207"
 
 
@@ -357,7 +357,7 @@ class _Invitrogen(_OrganizationModel):
 
     name: Literal["Invitrogen"] = "Invitrogen"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = Registry.ROR
+    registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["03x1ewr52"] = "03x1ewr52"
 
 
@@ -366,7 +366,7 @@ class _Jackson_Laboratory(_OrganizationModel):
 
     name: Literal["Jackson Laboratory"] = "Jackson Laboratory"
     abbreviation: Literal["JAX"] = "JAX"
-    registry: _RegistryModel = Registry.ROR
+    registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["021sy4w91"] = "021sy4w91"
 
 
@@ -375,7 +375,7 @@ class _Janelia_Research_Campus(_OrganizationModel):
 
     name: Literal["Janelia Research Campus"] = "Janelia Research Campus"
     abbreviation: Literal["Janelia"] = "Janelia"
-    registry: _RegistryModel = Registry.ROR
+    registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["013sk6x84"] = "013sk6x84"
 
 
@@ -393,7 +393,7 @@ class _Lg(_OrganizationModel):
 
     name: Literal["LG"] = "LG"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = Registry.ROR
+    registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["02b948n83"] = "02b948n83"
 
 
@@ -429,7 +429,7 @@ class _Mbf_Bioscience(_OrganizationModel):
 
     name: Literal["MBF Bioscience"] = "MBF Bioscience"
     abbreviation: Literal["MBF"] = "MBF"
-    registry: _RegistryModel = Registry.ROR
+    registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["02zynam48"] = "02zynam48"
 
 
@@ -438,7 +438,7 @@ class _Mks_Newport(_OrganizationModel):
 
     name: Literal["MKS Newport"] = "MKS Newport"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = Registry.ROR
+    registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["00k17f049"] = "00k17f049"
 
 
@@ -456,7 +456,7 @@ class _Meadowlark_Optics(_OrganizationModel):
 
     name: Literal["Meadowlark Optics"] = "Meadowlark Optics"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = Registry.ROR
+    registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["00n8qbq54"] = "00n8qbq54"
 
 
@@ -467,7 +467,7 @@ class _Michael_J_Fox_Foundation_For_Parkinson_S_Research(_OrganizationModel):
         "Michael J. Fox Foundation for Parkinson's Research"
     )
     abbreviation: Literal["MJFF"] = "MJFF"
-    registry: _RegistryModel = Registry.ROR
+    registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["03arq3225"] = "03arq3225"
 
 
@@ -505,7 +505,7 @@ class _National_Center_For_Complementary_And_Integrative_Health(_OrganizationMod
         "National Center for Complementary and Integrative Health"
     )
     abbreviation: Literal["NCCIH"] = "NCCIH"
-    registry: _RegistryModel = Registry.ROR
+    registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["00190t495"] = "00190t495"
 
 
@@ -514,7 +514,7 @@ class _National_Institute_Of_Mental_Health(_OrganizationModel):
 
     name: Literal["National Institute of Mental Health"] = "National Institute of Mental Health"
     abbreviation: Literal["NIMH"] = "NIMH"
-    registry: _RegistryModel = Registry.ROR
+    registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["04xeg9z08"] = "04xeg9z08"
 
 
@@ -525,7 +525,7 @@ class _National_Institute_Of_Neurological_Disorders_And_Stroke(_OrganizationMode
         "National Institute of Neurological Disorders and Stroke"
     )
     abbreviation: Literal["NINDS"] = "NINDS"
-    registry: _RegistryModel = Registry.ROR
+    registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["01s5ya894"] = "01s5ya894"
 
 
@@ -534,7 +534,7 @@ class _National_Instruments(_OrganizationModel):
 
     name: Literal["National Instruments"] = "National Instruments"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = Registry.ROR
+    registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["026exqw73"] = "026exqw73"
 
 
@@ -570,7 +570,7 @@ class _New_York_University(_OrganizationModel):
 
     name: Literal["New York University"] = "New York University"
     abbreviation: Literal["NYU"] = "NYU"
-    registry: _RegistryModel = Registry.ROR
+    registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["0190ak572"] = "0190ak572"
 
 
@@ -579,7 +579,7 @@ class _Nikon(_OrganizationModel):
 
     name: Literal["Nikon"] = "Nikon"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = Registry.ROR
+    registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["0280y9h11"] = "0280y9h11"
 
 
@@ -588,7 +588,7 @@ class _Olympus(_OrganizationModel):
 
     name: Literal["Olympus"] = "Olympus"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = Registry.ROR
+    registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["02vcdte90"] = "02vcdte90"
 
 
@@ -597,7 +597,7 @@ class _Open_Ephys_Production_Site(_OrganizationModel):
 
     name: Literal["Open Ephys Production Site"] = "Open Ephys Production Site"
     abbreviation: Literal["OEPS"] = "OEPS"
-    registry: _RegistryModel = Registry.ROR
+    registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["007rkz355"] = "007rkz355"
 
 
@@ -705,7 +705,7 @@ class _Simons_Foundation(_OrganizationModel):
 
     name: Literal["Simons Foundation"] = "Simons Foundation"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = Registry.ROR
+    registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["01cmst727"] = "01cmst727"
 
 
@@ -741,7 +741,7 @@ class _Teledyne_Flir(_OrganizationModel):
 
     name: Literal["Teledyne FLIR"] = "Teledyne FLIR"
     abbreviation: Literal["FLIR"] = "FLIR"
-    registry: _RegistryModel = Registry.ROR
+    registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["01j1gwp17"] = "01j1gwp17"
 
 
@@ -750,7 +750,7 @@ class _Templeton_World_Charity_Foundation(_OrganizationModel):
 
     name: Literal["Templeton World Charity Foundation"] = "Templeton World Charity Foundation"
     abbreviation: Literal["TWCF"] = "TWCF"
-    registry: _RegistryModel = Registry.ROR
+    registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["00x0z1472"] = "00x0z1472"
 
 
@@ -777,7 +777,7 @@ class _Thermo_Fisher_Scientific(_OrganizationModel):
 
     name: Literal["Thermo Fisher Scientific"] = "Thermo Fisher Scientific"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = Registry.ROR
+    registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["03x1ewr52"] = "03x1ewr52"
 
 
@@ -786,7 +786,7 @@ class _Thorlabs(_OrganizationModel):
 
     name: Literal["Thorlabs"] = "Thorlabs"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = Registry.ROR
+    registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["04gsnvb07"] = "04gsnvb07"
 
 
@@ -822,7 +822,7 @@ class _Ams_Osram(_OrganizationModel):
 
     name: Literal["ams OSRAM"] = "ams OSRAM"
     abbreviation: Literal[None] = None
-    registry: _RegistryModel = Registry.ROR
+    registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["045d0h266"] = "045d0h266"
 
 

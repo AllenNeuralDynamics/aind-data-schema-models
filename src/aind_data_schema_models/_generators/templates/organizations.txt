@@ -3,7 +3,7 @@
 from pydantic import BaseModel, Field, ConfigDict
 from typing import Literal, Union
 from typing_extensions import Annotated
-from aind_data_schema_models.registries import Registry, _RegistryModel
+from aind_data_schema_models.registries import Registry
 from aind_data_schema_models.utils import one_of_instance
 {% endraw %}
 
@@ -12,7 +12,7 @@ class _OrganizationModel(BaseModel):
     model_config = ConfigDict(frozen=True)
     name: str
     abbreviation: str
-    registry: _RegistryModel
+    registry: Registry.ONE_OF
     registry_identifier: str
 
 {% for _, row in data.iterrows() %}
@@ -23,7 +23,7 @@ class {{ row['name'] | to_class_name_underscored }}(_OrganizationModel):
     abbreviation: Literal[{{ "'" + abbreviation + "'" if abbreviation == abbreviation else None }}] = {{ "'" + abbreviation + "'" if abbreviation == abbreviation else None }}
     {%- set reg_abb = row['registry_abbreviation'] %}
     {% set reg_abb_upper = reg_abb | upper -%}
-    registry: {{"_" + "RegistryModel" if reg_abb == reg_abb else None}} = {{None if reg_abb != reg_abb else "Registry." + reg_abb_upper}}
+    registry: {{"Registry.ONE_OF" if reg_abb == reg_abb else None}} = {{None if reg_abb != reg_abb else "Registry." + reg_abb_upper}}
     registry_identifier: {{ "Literal['" + row['registry_identifier'] + "']" if reg_abb == reg_abb else None }} = {{ "'" + row['registry_identifier'] + "'" if reg_abb == reg_abb else "None" }}
 
 {% endfor %}

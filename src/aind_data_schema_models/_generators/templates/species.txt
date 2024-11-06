@@ -10,14 +10,14 @@ class _SpeciesModel(BaseModel):
     """Base model for platform"""
     model_config = ConfigDict(frozen=True)
     name: str
-    registry: _RegistryModel
+    registry: Registry.ONE_OF
     registry_identifier: str
 
 {% for _, row in data.iterrows() %}
 class {{ row['name'] | to_class_name_underscored }}(_SpeciesModel):
     """Model {{row['name']}}"""
     name: Literal["{{ row['name'] }}"] = "{{ row['name'] }}"
-    registry: _RegistryModel = Registry.{{ row['registry_abbreviation'] | upper }}
+    registry: Registry.ONE_OF = Registry.{{ row['registry_abbreviation'] | upper }}
     registry_identifier: Literal["{{ row['registry_identifier'] }}"] = "{{ row['registry_identifier'] }}"
 
 {% endfor %}

@@ -13,7 +13,7 @@ class _SpeciesModel(BaseModel):
 
     model_config = ConfigDict(frozen=True)
     name: str
-    registry: _RegistryModel
+    registry: Registry.ONE_OF
     registry_identifier: str
 
 
@@ -21,7 +21,7 @@ class _Callithrix_Jacchus(_SpeciesModel):
     """Model Callithrix jacchus"""
 
     name: Literal["Callithrix jacchus"] = "Callithrix jacchus"
-    registry: _RegistryModel = Registry.NCBI
+    registry: Registry.ONE_OF = Registry.NCBI
     registry_identifier: Literal["NCBI:txid9483"] = "NCBI:txid9483"
 
 
@@ -29,7 +29,7 @@ class _Homo_Sapiens(_SpeciesModel):
     """Model Homo sapiens"""
 
     name: Literal["Homo sapiens"] = "Homo sapiens"
-    registry: _RegistryModel = Registry.NCBI
+    registry: Registry.ONE_OF = Registry.NCBI
     registry_identifier: Literal["NCBI:txid9606"] = "NCBI:txid9606"
 
 
@@ -37,7 +37,7 @@ class _Macaca_Mulatta(_SpeciesModel):
     """Model Macaca mulatta"""
 
     name: Literal["Macaca mulatta"] = "Macaca mulatta"
-    registry: _RegistryModel = Registry.NCBI
+    registry: Registry.ONE_OF = Registry.NCBI
     registry_identifier: Literal["NCBI:txid9544"] = "NCBI:txid9544"
 
 
@@ -45,7 +45,7 @@ class _Mus_Musculus(_SpeciesModel):
     """Model Mus musculus"""
 
     name: Literal["Mus musculus"] = "Mus musculus"
-    registry: _RegistryModel = Registry.NCBI
+    registry: Registry.ONE_OF = Registry.NCBI
     registry_identifier: Literal["NCBI:txid10090"] = "NCBI:txid10090"
 
 
@@ -53,7 +53,7 @@ class _Rattus_Norvegicus(_SpeciesModel):
     """Model Rattus norvegicus"""
 
     name: Literal["Rattus norvegicus"] = "Rattus norvegicus"
-    registry: _RegistryModel = Registry.NCBI
+    registry: Registry.ONE_OF = Registry.NCBI
     registry_identifier: Literal["NCBI:txid10116"] = "NCBI:txid10116"
 
 
