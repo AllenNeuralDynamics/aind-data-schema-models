@@ -4,7 +4,7 @@ on:
     branches:
       - main
     paths:
-      - 'src/aind_data_schema_models/models/**'
+      - 'src/aind_data_schema_models/_generators/models/**'
 
 jobs:
   publish_models:
