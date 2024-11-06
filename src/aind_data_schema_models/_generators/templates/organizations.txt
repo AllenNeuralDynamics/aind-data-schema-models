@@ -24,7 +24,7 @@ class {{ row['name'] | to_class_name_underscored }}(_OrganizationModel):
     {%- set reg_abb = row['registry_abbreviation'] %}
     {% set reg_abb_upper = reg_abb | upper -%}
     registry: {{"_" + "RegistryModel" if reg_abb == reg_abb else None}} = {{None if reg_abb != reg_abb else "Registry." + reg_abb_upper}}
-    registry_identifier: Literal["{{ row['registry_identifier'] }}"] = "{{ row['registry_identifier'] }}"
+    registry_identifier: {{ "Literal['" + row['registry_identifier'] + "']" if reg_abb == reg_abb else None }} = {{ "'" + row['registry_identifier'] + "'" if reg_abb == reg_abb else "None" }}
 
 {% endfor %}
 class Organization:
