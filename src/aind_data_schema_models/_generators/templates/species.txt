@@ -3,7 +3,7 @@
 from pydantic import BaseModel, Field, ConfigDict
 from typing import Literal, Union
 from typing_extensions import Annotated
-from aind_data_schema_models.registries import Registry, _RegistryModel
+from aind_data_schema_models.registries import Registry
 {% endraw %}
 
 class _SpeciesModel(BaseModel):
