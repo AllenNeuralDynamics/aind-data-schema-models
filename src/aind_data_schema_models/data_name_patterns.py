@@ -47,6 +47,7 @@ class Group(str, Enum):
     EPHYS = "ephys"
     MSMA = "MSMA"
     OPHYS = "ophys"
+    NBA = "NBA"
 
 
 def datetime_to_name_string(dt: datetime) -> str:
