@@ -14,19 +14,10 @@ class _MouseAnatomicalStructureModel(BaseModel):
     registry: Registry.ONE_OF
     registry_identifier: str
 
-data = pd.read_csv('./_generators/models/mouse_anatomy.csv')
+data = pd.read_csv('./src/aind_data_schema_models/_generators/models/mouse_anatomy.csv')
 
-class MouseAnatomicalStructure:
-    """MouseAnatomicalStructure"""
-
-    def __init__(self):
-{% for _, row in data.iterrows() %}
-        self.{{ row['name'] | to_class_name | upper }} = None
-{%- endfor %}
-
-    # todo: figure how ALL and ONE_OF will work
-
-    def __getattribute__(self, name):
+class MouseAnatomicalStructureMeta(type):
+    def __getattribute__(cls, name):
         value = object.__getattribute__(self, name)
 
         if value is None:
@@ -36,3 +27,14 @@ class MouseAnatomicalStructure:
                 registry="temp",
                 registry_identifier="temp",
             )
+
+
+
+class MouseAnatomicalStructure(metaclass=MouseAnatomicalStructureMeta):
+    """MouseAnatomicalStructure"""
+
+{% for _, row in data.iterrows() %}
+    {{ row['name'] | to_class_name | upper }} = None
+{%- endfor %}
+
+    # todo: figure how ALL and ONE_OF will work
