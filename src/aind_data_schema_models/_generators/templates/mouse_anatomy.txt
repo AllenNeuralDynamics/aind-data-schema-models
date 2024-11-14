@@ -4,6 +4,7 @@ from pydantic import BaseModel, Field, ConfigDict
 from typing import Literal, Union
 from typing_extensions import Annotated
 from aind_data_schema_models.registries import Registry
+import pandas as pd
 {% endraw %}
 
 class _MouseAnatomicalStructureModel(BaseModel):
@@ -13,53 +14,25 @@ class _MouseAnatomicalStructureModel(BaseModel):
     registry: Registry.ONE_OF
     registry_identifier: str
 
-{% for _, row in data.iterrows() %}
-class {{ row['name'] | to_class_name_underscored }}(_MouseAnatomicalStructureModel):
-    """Model {{row['name']}}"""
-    name: Literal["{{ row['name'] }}"] = "{{ row['name'] }}"
-    registry: Registry.ONE_OF = Registry.EMAPA
-    registry_identifier: Literal["{{ row['registry_identifier'] }}"] = "{{ row['registry_identifier'] }}"
+data = pd.read_csv('./_generators/models/mouse_anatomy.csv')
 
-{% endfor %}
 class MouseAnatomicalStructure:
     """MouseAnatomicalStructure"""
+
+    def __init__(self):
 {% for _, row in data.iterrows() %}
-    {{ row['name'] | to_class_name | upper }} = {{ row['name'] | to_class_name_underscored }}()
+        self.{{ row['name'] | to_class_name | upper }} = None
 {%- endfor %}
 
-    ALL = tuple(_MouseAnatomicalStructureModel.__subclasses__())
+    # todo: figure how ALL and ONE_OF will work
 
-    ONE_OF = Annotated[Union[tuple(_MouseAnatomicalStructureModel.__subclasses__())], Field(discriminator="registry_identifier")]
+    def __getattribute__(self, name):
+        value = object.__getattribute__(self, name)
 
-
-MouseAnatomicalStructure.EMG_MUSCLES = Annotated[Union[
-    _Deltoid,
-    _Pectoralis_Major,
-    _Triceps_Brachii,
-    _Lateral_Head_Of_Triceps_Brachii,
-    _Long_Head_Of_Triceps_Brachii,
-    _Medial_Head_Of_Triceps_Brachii,
-    _Biceps_Brachii,
-    _Long_Head_Of_Biceps_Brachii,
-    _Short_Head_Of_Biceps_Brachii,
-    _Tendon_Of_Biceps_Brachii,
-    _Pars_Scapularis_Of_Deltoid,
-    _Extensor_Carpi_Radialis_Longus,
-    _Extensor_Digitorum_Communis,
-    _Extensor_Digitorum_Lateralis,
-    _Extensor_Carpi_Ulnaris,
-    _Flexor_Carpi_Radialis,
-    _Flexor_Carpi_Ulnaris,
-    _Flexor_Digitorum_Profundus,
-], Field(discriminator="registry_identifier")]
-
-MouseAnatomicalStructure.BODY_PARTS = Annotated[Union[
-    _Forelimb,
-    _Head,
-    _Hindlimb,
-    _Neck,
-    _Tail,
-    _Trunk,
-], Field(discriminator="registry_identifier")]
-
-
+        if value is None:
+            # get the data, in our case we'll use the loaded pandas file but this is not a great solution
+            return _MouseAnatomicalStructureModel(
+                name="temp",
+                registry="temp",
+                registry_identifier="temp",
+            )
