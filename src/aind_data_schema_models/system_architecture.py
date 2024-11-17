@@ -38,3 +38,13 @@ class CPUArchitecture(str, Enum):
     ARM64 = "Arm64"
     ARM = "Arm32"
     RISC_V = "RISC-V"
+
+
+class ModelBackbone(str, Enum):
+    """Model backbones"""
+
+    ALEXNET = "AlexNet"
+    CUSTOM = "Custom"
+    RESNET = "ResNet"
+    VGGNET = "VGGNet"
+    UNET = "UNet"
