@@ -55,6 +55,11 @@ def get_emapa_id(class_name):
 
 class MouseAnatomyMeta(type):
     def __getattribute__(cls, name):
+
+        # bypass
+        if name.startswith("__"):
+            return object.__getattribute__(cls, name)
+
         class_dict = object.__getattribute__(cls, "__dict__")
 
         if name in class_dict:
@@ -71,6 +76,7 @@ class MouseAnatomyMeta(type):
             else:
                 raise ValueError(f"Could not find EMAPA ID for {original_name}")
 
+        # second bypass for defined values
         return super().__getattribute__(name)
 
 

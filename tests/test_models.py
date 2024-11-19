@@ -84,6 +84,10 @@ class LiteralAndDefaultTests(unittest.TestCase):
             self.assertIsNotNone(round_trip)
             self.assertEqual(model, round_trip)
 
+        # ensure that class methods still return properly and don't trigger the custom __getattribute__ functionality
+        self.assertIsNotNone(MouseAnatomy.__module__)
+        self.assertIsNotNone(MouseAnatomy.__dict__)
+
 
 if __name__ == "__main__":
     unittest.main()
