@@ -55,18 +55,30 @@ def get_emapa_id(class_name):
 
 class MouseAnatomyMeta(type):
     def __getattribute__(cls, name):
-        original_name = super().__getattribute__(name)
 
-        emapa_id = get_emapa_id(original_name)
+        # bypass
+        if name.startswith("__"):
+            return object.__getattribute__(cls, name)
 
-        if emapa_id:
-            return MouseAnatomyModel(
-                name=original_name,
-                registry=Registry.EMAPA,
-                registry_identifier=emapa_id,
-            )
-        else:
-            raise ValueError(f"Could not find EMAPA ID for {original_name}")
+        class_dict = object.__getattribute__(cls, "__dict__")
+
+        if name in class_dict:
+            original_name = super().__getattribute__(name)
+
+            emapa_id = get_emapa_id(original_name)
+
+            if emapa_id:
+                return MouseAnatomyModel(
+                    name=original_name,
+                    registry=Registry.EMAPA,
+                    registry_identifier=emapa_id,
+                )
+            else:
+                raise ValueError(f"Could not find EMAPA ID for {original_name}")
+
+        # second bypass for defined values
+        return super().__getattribute__(name)
+
 
 class MouseAnatomy(metaclass=MouseAnatomyMeta):
     """MouseAnatomicalStructure"""
@@ -77,32 +89,33 @@ class MouseAnatomy(metaclass=MouseAnatomyMeta):
 class MouseEmgMuscles(metaclass=MouseAnatomyMeta):
     """EMG muscles"""
 
-    DELTOID = None
-    PECTORALIS_MAJOR = None
-    TRICEPS_BRACHII = None
-    LATERAL_HEAD_OF_TRICEPS_BRACHII = None
-    LONG_HEAD_OF_TRICEPS_BRACHII = None
-    MEDIAL_HEAD_OF_TRICEPS_BRACHII = None
-    BICEPS_BRACHII = None
-    LONG_HEAD_OF_BICEPS_BRACHII = None
-    SHORT_HEAD_OF_BICEPS_BRACHII = None
-    TENDON_OF_BICEPS_BRACHII = None
-    PARS_SCAPULARIS_OF_DELTOID = None
-    EXTENSOR_CARPI_RADIALIS_LONGUS = None
-    EXTENSOR_DIGITORUM_COMMUNIS = None
-    EXTENSOR_DIGITORUM_LATERALIS = None
-    EXTENSOR_CARPI_ULNARIS = None
-    FLEXOR_CARPI_RADIALIS = None
-    FLEXOR_CARPI_ULNARIS = None
-    FLEXOR_DIGITORUM_PROFUNDUS = None
+    DELTOID = "deltoid"
+    PECTORALIS_MAJOR = "pectoralis major"
+    TRICEPS_BRACHII = "triceps brachii"
+    LATERAL_HEAD_OF_TRICEPS_BRACHII = "lateral head of triceps brachii"
+    LONG_HEAD_OF_TRICEPS_BRACHII = "long head of triceps brachii"
+    MEDIAL_HEAD_OF_TRICEPS_BRACHII = "medial head of triceps brachii"
+    BICEPS_BRACHII = "biceps brachii"
+    LONG_HEAD_OF_BICEPS_BRACHII = "long head of biceps brachii"
+    SHORT_HEAD_OF_BICEPS_BRACHII = "short head of biceps brachii"
+    TENDON_OF_BICEPS_BRACHII = "tendon of biceps brachii"
+    PARS_SCAPULARIS_OF_DELTOID = "pars scapularis of deltoid"
+    EXTENSOR_CARPI_RADIALIS_LONGUS = "extensor carpi radialis longus"
+    EXTENSOR_DIGITORUM_COMMUNIS = "extensor digitorum communis"
+    EXTENSOR_DIGITORUM_LATERALIS = "extensor digitorum lateralis"
+    EXTENSOR_CARPI_ULNARIS = "extensor carpi ulnaris"
+    FLEXOR_CARPI_RADIALIS = "flexor carpi radialis"
+    FLEXOR_CARPI_ULNARIS = "flexor carpi ulnaris"
+    FLEXOR_DIGITORUM_PROFUNDUS = "flexor digitorum profundus"
+
 
 class MouseBodyParts(metaclass=MouseAnatomyMeta):
     """Body parts"""
 
-    FORELIMB = None
-    HEAD = None
-    Hindlimb = None
-    NECK = None
-    TAIL = None
-    TRUNK = None
+    FORELIMB = "forelimb"
+    HEAD = "head"
+    Hindlimb = "hindlimb"
+    NECK = "neck"
+    TAIL = "tail"
+    TRUNK = "trunk"
 
