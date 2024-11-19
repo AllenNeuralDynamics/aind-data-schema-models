@@ -4,6 +4,7 @@ import unittest
 
 from aind_data_schema_models.organizations import Organization
 from typing import get_args
+from pydantic import ValidationError
 
 
 class TestOrganization(unittest.TestCase):
@@ -18,6 +19,11 @@ class TestOrganization(unittest.TestCase):
         """Tests that empty strings map to None"""
 
         self.assertEqual(Organization.LIFECANVAS.abbreviation, None)
+
+    def test_from_none(self):
+        """Test that you can't get an organization from None"""
+
+        self.assertEqual(Organization.from_abbreviation(None), None)
 
     def test_groups(self):
         """Test that the organization groups are present"""
