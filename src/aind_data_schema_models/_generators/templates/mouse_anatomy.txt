@@ -1,40 +1,108 @@
 """Mouse anatomy"""
 {% raw -%}
-from pydantic import BaseModel, Field, ConfigDict
 from typing import Literal, Union
-from typing_extensions import Annotated
-from aind_data_schema_models.registries import Registry
-import pandas as pd
-{% endraw %}
 
-class _MouseAnatomicalStructureModel(BaseModel):
+from pydantic import BaseModel, ConfigDict, Field
+from typing_extensions import Annotated
+import requests
+
+from aind_data_schema_models.registries import Registry
+{% endraw %}
+"""Mouse anatomy"""
+
+
+class MouseAnatomyModel(BaseModel):
     """Base model for mouse anatomy"""
+
     model_config = ConfigDict(frozen=True)
     name: str
     registry: Registry.ONE_OF
     registry_identifier: str
 
-data = pd.read_csv('./src/aind_data_schema_models/_generators/models/mouse_anatomy.csv')
 
-class MouseAnatomicalStructureMeta(type):
+def search_emapa_exact_match(class_name):
+    base_url = "https://www.ebi.ac.uk/ols/api/search"
+    params = {
+        "q": class_name,
+        "ontology": "emapa",  # Specify the ontology
+        "type": "class",      # Search for classes
+    }
+    response = requests.get(base_url, params=params)
+    if response.status_code == 200:
+        results = response.json()
+        # Extract terms with exact label match
+        exact_matches = [
+            {
+                "iri": entry["iri"],
+                "label": entry["label"],
+            }
+            for entry in results.get("response", {}).get("docs", [])
+            if entry["label"].lower() == class_name.lower()
+        ]
+        return exact_matches
+    else:
+        raise Exception(f"OLS query failed: {response.status_code}, {response.text}")
+
+
+def get_emapa_id(class_name):
+    results = search_emapa_exact_match(class_name)
+
+    if results:
+        return results[0]['iri'].split('_')[1]
+    else:
+        return None
+
+
+class MouseAnatomyMeta(type):
     def __getattribute__(cls, name):
-        value = object.__getattribute__(self, name)
+        original_name = super().__getattribute__(name)
 
-        if value is None:
-            # get the data, in our case we'll use the loaded pandas file but this is not a great solution
-            return _MouseAnatomicalStructureModel(
-                name="temp",
-                registry="temp",
-                registry_identifier="temp",
+        emapa_id = get_emapa_id(original_name)
+
+        if emapa_id:
+            return MouseAnatomyModel(
+                name=original_name,
+                registry=Registry.EMAPA,
+                registry_identifier=emapa_id,
             )
+        else:
+            raise ValueError(f"Could not find EMAPA ID for {original_name}")
 
-
-
-class MouseAnatomicalStructure(metaclass=MouseAnatomicalStructureMeta):
+class MouseAnatomy(metaclass=MouseAnatomyMeta):
     """MouseAnatomicalStructure"""
-
 {% for _, row in data.iterrows() %}
-    {{ row['name'] | to_class_name | upper }} = None
+    {{ row['name'] | to_class_name | upper }} = "{{ row['name'] }}"
 {%- endfor %}
 
-    # todo: figure how ALL and ONE_OF will work
+class MouseEmgMuscles(metaclass=MouseAnatomyMeta):
+    """EMG muscles"""
+
+    DELTOID = None
+    PECTORALIS_MAJOR = None
+    TRICEPS_BRACHII = None
+    LATERAL_HEAD_OF_TRICEPS_BRACHII = None
+    LONG_HEAD_OF_TRICEPS_BRACHII = None
+    MEDIAL_HEAD_OF_TRICEPS_BRACHII = None
+    BICEPS_BRACHII = None
+    LONG_HEAD_OF_BICEPS_BRACHII = None
+    SHORT_HEAD_OF_BICEPS_BRACHII = None
+    TENDON_OF_BICEPS_BRACHII = None
+    PARS_SCAPULARIS_OF_DELTOID = None
+    EXTENSOR_CARPI_RADIALIS_LONGUS = None
+    EXTENSOR_DIGITORUM_COMMUNIS = None
+    EXTENSOR_DIGITORUM_LATERALIS = None
+    EXTENSOR_CARPI_ULNARIS = None
+    FLEXOR_CARPI_RADIALIS = None
+    FLEXOR_CARPI_ULNARIS = None
+    FLEXOR_DIGITORUM_PROFUNDUS = None
+
+class MouseBodyParts(metaclass=MouseAnatomyMeta):
+    """Body parts"""
+
+    FORELIMB = None
+    HEAD = None
+    Hindlimb = None
+    NECK = None
+    TAIL = None
+    TRUNK = None
+
