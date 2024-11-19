@@ -1,10 +1,7 @@
 """Mouse anatomy"""
 
-from typing import Literal, Union
-
 import requests
-from pydantic import BaseModel, ConfigDict, Field
-from typing_extensions import Annotated
+from pydantic import BaseModel, ConfigDict
 
 from aind_data_schema_models.registries import Registry
 
