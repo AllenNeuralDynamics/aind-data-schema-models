@@ -77,7 +77,7 @@ class LiteralAndDefaultTests(unittest.TestCase):
             "_1_CELL_STAGE_EMBRYO",
             "SECOND_POLAR_BODY",
             "ZONA_PELLUCIDA",
-            "_2_CELL_STAGE_EMBRYO"
+            "_2_CELL_STAGE_EMBRYO",
         ]
 
         for structure in structures:
