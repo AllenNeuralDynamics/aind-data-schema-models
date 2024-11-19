@@ -18,6 +18,22 @@ class MouseAnatomyModel(BaseModel):
 
 
 def search_emapa_exact_match(class_name):
+    """Pull the exact name match from the EMAPA ontology
+
+    Parameters
+    ----------
+    class_name : str
+        Name of class
+
+    Returns
+    -------
+    list
+
+    Raises
+    ------
+    Exception
+        OLS query failed on any status code other than 200
+    """
     base_url = "https://www.ebi.ac.uk/ols/api/search"
     params = {
         "q": class_name,
@@ -42,6 +58,16 @@ def search_emapa_exact_match(class_name):
 
 
 def get_emapa_id(class_name):
+    """Get the EMAPA ID for a given class name
+
+    Parameters
+    ----------
+    class_name : str
+
+    Returns
+    -------
+    int
+    """
     results = search_emapa_exact_match(class_name)
 
     if results:
@@ -51,7 +77,21 @@ def get_emapa_id(class_name):
 
 
 class MouseAnatomyMeta(type):
+    """Meta class for MouseAnatomy groups"""
+
     def __getattribute__(cls, name):
+        """Custom get attribute function, validates anatomy names against external EMAPA registry
+
+        Parameters
+        ----------
+        name : str
+            Attribute name
+
+        Raises
+        ------
+        ValueError
+            Name not found in the EMAPA registry
+        """
 
         # bypass
         if name.startswith("__"):

@@ -86,12 +86,15 @@ class LiteralAndDefaultTests(unittest.TestCase):
             self.assertIsNotNone(round_trip)
             self.assertEqual(model, round_trip)
 
+    def test_mouse_custom_features(self):
+        """Test that the custom __getattribute__ functionality works properly"""
         # ensure that class methods still return properly and don't trigger the custom __getattribute__ functionality
         self.assertIsNotNone(MouseAnatomy.__module__)
         self.assertIsNotNone(MouseAnatomy.__dict__)
 
         # generate a model from the class
         class TestModel(BaseModel):
+            """test class"""
             structure: MouseAnatomyModel = MouseAnatomy.ANATOMICAL_STRUCTURE
 
         test = TestModel()
@@ -99,6 +102,7 @@ class LiteralAndDefaultTests(unittest.TestCase):
 
         # generate a test model using the emg group
         class TestModel2(BaseModel):
+            """test class"""
             structure: MouseAnatomyModel = MouseEmgMuscles.DELTOID
 
         test = TestModel2()
