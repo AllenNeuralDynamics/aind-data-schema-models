@@ -77,7 +77,7 @@ class LiteralAndDefaultTests(unittest.TestCase):
             "ZONA_PELLUCIDA",
             "_2_CELL_STAGE_EMBRYO"
         ]
-        
+
         for structure in structures:
             model = getattr(MouseAnatomy, structure)
             round_trip = model.model_validate_json(model.model_dump_json())

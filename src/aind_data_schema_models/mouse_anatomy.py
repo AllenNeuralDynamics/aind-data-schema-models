@@ -55,18 +55,23 @@ def get_emapa_id(class_name):
 
 class MouseAnatomyMeta(type):
     def __getattribute__(cls, name):
-        original_name = super().__getattribute__(name)
+        class_dict = object.__getattribute__(cls, "__dict__")
 
-        emapa_id = get_emapa_id(original_name)
+        if name in class_dict:
+            original_name = super().__getattribute__(name)
 
-        if emapa_id:
-            return MouseAnatomyModel(
-                name=original_name,
-                registry=Registry.EMAPA,
-                registry_identifier=emapa_id,
-            )
-        else:
-            raise ValueError(f"Could not find EMAPA ID for {original_name}")
+            emapa_id = get_emapa_id(original_name)
+
+            if emapa_id:
+                return MouseAnatomyModel(
+                    name=original_name,
+                    registry=Registry.EMAPA,
+                    registry_identifier=emapa_id,
+                )
+            else:
+                raise ValueError(f"Could not find EMAPA ID for {original_name}")
+
+        return super().__getattribute__(name)
 
 
 class MouseAnatomy(metaclass=MouseAnatomyMeta):
