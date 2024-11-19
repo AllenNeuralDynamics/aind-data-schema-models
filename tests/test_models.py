@@ -2,12 +2,14 @@
 
 import unittest
 
+from pydantic import BaseModel
+
 from aind_data_schema_models.harp_types import HarpDeviceType
 from aind_data_schema_models.organizations import Organization
 from aind_data_schema_models.platforms import Platform
 from aind_data_schema_models.registries import Registry
 from aind_data_schema_models.species import Species
-from aind_data_schema_models.mouse_anatomy import MouseAnatomy
+from aind_data_schema_models.mouse_anatomy import MouseAnatomy, MouseAnatomyModel, MouseEmgMuscles
 from aind_data_schema_models.brain_atlas import CCFStructure
 
 
@@ -87,6 +89,20 @@ class LiteralAndDefaultTests(unittest.TestCase):
         # ensure that class methods still return properly and don't trigger the custom __getattribute__ functionality
         self.assertIsNotNone(MouseAnatomy.__module__)
         self.assertIsNotNone(MouseAnatomy.__dict__)
+
+        # generate a model from the class
+        class TestModel(BaseModel):
+            structure: MouseAnatomyModel = MouseAnatomy.ANATOMICAL_STRUCTURE
+
+        test = TestModel()
+        self.assertIsNotNone(test)
+
+        # generate a test model using the emg group
+        class TestModel2(BaseModel):
+            structure: MouseAnatomyModel = MouseEmgMuscles.DELTOID
+
+        test = TestModel2()
+        self.assertIsNotNone(test)
 
 
 if __name__ == "__main__":
