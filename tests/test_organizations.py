@@ -4,7 +4,6 @@ import unittest
 
 from aind_data_schema_models.organizations import Organization
 from typing import get_args
-from pydantic import ValidationError
 
 
 class TestOrganization(unittest.TestCase):
