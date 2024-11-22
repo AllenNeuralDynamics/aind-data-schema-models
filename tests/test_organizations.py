@@ -19,6 +19,11 @@ class TestOrganization(unittest.TestCase):
 
         self.assertEqual(Organization.LIFECANVAS.abbreviation, None)
 
+    def test_from_none(self):
+        """Test that you can't get an organization from None"""
+
+        self.assertEqual(Organization.from_abbreviation(None), None)
+
     def test_groups(self):
         """Test that the organization groups are present"""
 
