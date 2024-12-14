@@ -1032,6 +1032,7 @@ Organization.LENS_MANUFACTURERS = one_of_instance(
         Organization.FUJINON,
         Organization.HAMAMATSU,
         Organization.INFINITY_PHOTO_OPTICAL,
+        Organization.KOWA,
         Organization.LEICA,
         Organization.MITUTUYO,
         Organization.NAVITAR,
@@ -1076,7 +1077,14 @@ Organization.MANIPULATOR_MANUFACTURERS = one_of_instance([Organization.NEW_SCALE
 
 Organization.MONITOR_MANUFACTURERS = one_of_instance([Organization.ASUS, Organization.LG, Organization.OTHER])
 
-Organization.SPEAKER_MANUFACTURERS = one_of_instance([Organization.TYMPHANY, Organization.ISL, Organization.OTHER])
+Organization.SPEAKER_MANUFACTURERS = one_of_instance(
+    [
+        Organization.DIGIKEY,
+        Organization.TYMPHANY,
+        Organization.ISL,
+        Organization.OTHER
+    ]
+)
 
 Organization.FUNDERS = one_of_instance(
     [
