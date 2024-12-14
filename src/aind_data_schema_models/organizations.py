@@ -217,6 +217,15 @@ class _Custom(_OrganizationModel):
     registry_identifier: None = None
 
 
+class _DigiKey(_OrganizationModel):
+    """Model DigiKey"""
+
+    name: Literal["DigiKey"] = "DigiKey"
+    abbreviation: Literal[None] = None
+    registry: None = None
+    registry_identifier: None = None
+
+
 class _Dodotronic(_OrganizationModel):
     """Model Dodotronic"""
 
@@ -307,24 +316,6 @@ class _Huazhong_University_Of_Science_And_Technology(_OrganizationModel):
     registry_identifier: Literal["00p991c53"] = "00p991c53"
 
 
-class _Ir_Robot_Co(_OrganizationModel):
-    """Model IR Robot Co"""
-
-    name: Literal["IR Robot Co"] = "IR Robot Co"
-    abbreviation: Literal[None] = None
-    registry: None = None
-    registry_identifier: None = None
-
-
-class _Isl_Products_International(_OrganizationModel):
-    """Model ISL Products International"""
-
-    name: Literal["ISL Products International"] = "ISL Products International"
-    abbreviation: Literal["ISL"] = "ISL"
-    registry: None = None
-    registry_identifier: None = None
-
-
 class _Infinity_Photo_Optical(_OrganizationModel):
     """Model Infinity Photo-Optical"""
 
@@ -361,6 +352,33 @@ class _Invitrogen(_OrganizationModel):
     registry_identifier: Literal["03x1ewr52"] = "03x1ewr52"
 
 
+class _Ir_Robot_Co(_OrganizationModel):
+    """Model IR Robot Co"""
+
+    name: Literal["IR Robot Co"] = "IR Robot Co"
+    abbreviation: Literal[None] = None
+    registry: None = None
+    registry_identifier: None = None
+
+
+class _Isl_Products_International(_OrganizationModel):
+    """Model ISL Products International"""
+
+    name: Literal["ISL Products International"] = "ISL Products International"
+    abbreviation: Literal["ISL"] = "ISL"
+    registry: None = None
+    registry_identifier: None = None
+
+
+class _Item(_OrganizationModel):
+    """Model Item"""
+
+    name: Literal["Item"] = "Item"
+    abbreviation: Literal[None] = None
+    registry: None = None
+    registry_identifier: None = None
+
+
 class _Jackson_Laboratory(_OrganizationModel):
     """Model Jackson Laboratory"""
 
@@ -386,6 +404,15 @@ class _Julabo(_OrganizationModel):
     abbreviation: Literal[None] = None
     registry: None = None
     registry_identifier: None = None
+
+
+class _Kowa(_OrganizationModel):
+    """Model Kowa"""
+
+    name: Literal["Kowa"] = "Kowa"
+    abbreviation: Literal[None] = None
+    registry: Registry.ONE_OF = Registry.ROR
+    registry_identifier: Literal["03zbwg482"] = "03zbwg482"
 
 
 class _Lg(_OrganizationModel):
@@ -628,6 +655,15 @@ class _Oxxius(_OrganizationModel):
     registry_identifier: None = None
 
 
+class _Placid_Industries(_OrganizationModel):
+    """Model Placid Industries"""
+
+    name: Literal["Placid Industries"] = "Placid Industries"
+    abbreviation: Literal[None] = None
+    registry: None = None
+    registry_identifier: None = None
+
+
 class _Prizmatix(_OrganizationModel):
     """Model Prizmatix"""
 
@@ -655,10 +691,10 @@ class _Raspberry_Pi(_OrganizationModel):
     registry_identifier: None = None
 
 
-class _Sicgen(_OrganizationModel):
-    """Model SICGEN"""
+class _Same_Sky(_OrganizationModel):
+    """Model Same Sky"""
 
-    name: Literal["SICGEN"] = "SICGEN"
+    name: Literal["Same Sky"] = "Same Sky"
     abbreviation: Literal[None] = None
     registry: None = None
     registry_identifier: None = None
@@ -686,6 +722,15 @@ class _Semrock(_OrganizationModel):
     """Model Semrock"""
 
     name: Literal["Semrock"] = "Semrock"
+    abbreviation: Literal[None] = None
+    registry: None = None
+    registry_identifier: None = None
+
+
+class _Sicgen(_OrganizationModel):
+    """Model SICGEN"""
+
+    name: Literal["SICGEN"] = "SICGEN"
     abbreviation: Literal[None] = None
     registry: None = None
     registry_identifier: None = None
@@ -790,6 +835,15 @@ class _Thorlabs(_OrganizationModel):
     registry_identifier: Literal["04gsnvb07"] = "04gsnvb07"
 
 
+class _Transducer_Techniques(_OrganizationModel):
+    """Model Transducter Techniques"""
+
+    name: Literal["Transducer Techniques"] = "Transducer Techniques"
+    abbreviation: Literal[None] = None
+    registry: None = None
+    registry_identifier: None = None
+
+
 class _Tymphany(_OrganizationModel):
     """Model Tymphany"""
 
@@ -851,6 +905,7 @@ class Organization:
     COMPUTAR = _Computar()
     CONOPTICS = _Conoptics()
     CUSTOM = _Custom()
+    DIGIKEY = _DigiKey()
     DODOTRONIC = _Dodotronic()
     DORIC = _Doric()
     EALING = _Ealing()
@@ -861,15 +916,17 @@ class Organization:
     HAMAMATSU = _Hamamatsu()
     HAMILTON = _Hamilton()
     HUST = _Huazhong_University_Of_Science_And_Technology()
-    IR_ROBOT_CO = _Ir_Robot_Co()
-    ISL = _Isl_Products_International()
     INFINITY_PHOTO_OPTICAL = _Infinity_Photo_Optical()
     IDT = _Integrated_Dna_Technologies()
     IMEC = _Interuniversity_Microelectronics_Center()
     INVITROGEN = _Invitrogen()
+    IR_ROBOT_CO = _Ir_Robot_Co()
+    ISL = _Isl_Products_International()
+    ITEM = _Item()
     JAX = _Jackson_Laboratory()
     JANELIA = _Janelia_Research_Campus()
     JULABO = _Julabo()
+    KOWA = _Kowa()
     LG = _Lg()
     LEICA = _Leica()
     LUMEN_DYNAMICS = _Lumen_Dynamics()
@@ -896,13 +953,15 @@ class Organization:
     OPTOTUNE = _Optotune()
     OTHER = _Other()
     OXXIUS = _Oxxius()
+    PLACID_INDUSTRIES = _Placid_Industries()
     PRIZMATIX = _Prizmatix()
     QUANTIFI = _Quantifi()
     RASPBERRY_PI = _Raspberry_Pi()
-    SICGEN = _Sicgen()
+    SAME_SKY = _Same_Sky()
     SCHNEIDER_KREUZNACH = _Schneider_Kreuznach()
     SECOND_ORDER_EFFECTS = _Second_Order_Effects()
     SEMROCK = _Semrock()
+    SICGEN = _Sicgen()
     SIGMA_ALDRICH = _Sigma_Aldrich()
     SIMONS_FOUNDATION = _Simons_Foundation()
     SPINNAKER = _Spinnaker()
@@ -914,6 +973,7 @@ class Organization:
     THE_LEE_COMPANY = _The_Lee_Company()
     THERMO_FISHER_SCIENTIFIC = _Thermo_Fisher_Scientific()
     THORLABS = _Thorlabs()
+    TRANSDUCER_TECHNIQUES = _Transducer_Techniques()
     TYMPHANY = _Tymphany()
     VIEWORKS = _Vieworks()
     VORTRAN = _Vortran()
@@ -973,6 +1033,7 @@ Organization.LENS_MANUFACTURERS = one_of_instance(
         Organization.FUJINON,
         Organization.HAMAMATSU,
         Organization.INFINITY_PHOTO_OPTICAL,
+        Organization.KOWA,
         Organization.LEICA,
         Organization.MITUTUYO,
         Organization.NAVITAR,
@@ -1017,7 +1078,7 @@ Organization.MANIPULATOR_MANUFACTURERS = one_of_instance([Organization.NEW_SCALE
 
 Organization.MONITOR_MANUFACTURERS = one_of_instance([Organization.ASUS, Organization.LG, Organization.OTHER])
 
-Organization.SPEAKER_MANUFACTURERS = one_of_instance([Organization.TYMPHANY, Organization.ISL, Organization.OTHER])
+Organization.SPEAKER_MANUFACTURERS = one_of_instance([Organization.DIGIKEY, Organization.TYMPHANY, Organization.ISL, Organization.OTHER])
 
 Organization.FUNDERS = one_of_instance(
     [
