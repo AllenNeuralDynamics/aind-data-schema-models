@@ -162,6 +162,15 @@ class _Chan_Zuckerberg_Initiative(_OrganizationModel):
     registry_identifier: Literal["02qenvm24"] = "02qenvm24"
 
 
+class _Charles_River_Laboratories(_OrganizationModel):
+    """Model Charles River Laboratories"""
+
+    name: Literal["Charles River Laboratories"] = "Charles River Laboratories"
+    abbreviation: Literal[" CRL"] = " CRL"
+    registry: Registry.ONE_OF = Registry.ROR
+    registry_identifier: Literal[" 03ndmsg87"] = " 03ndmsg87"
+
+
 class _Chroma(_OrganizationModel):
     """Model Chroma"""
 
@@ -898,6 +907,7 @@ class Organization:
     CARL_ZEISS = _Carl_Zeiss()
     CHAMPALIMAUD = _Champalimaud_Foundation()
     CZI = _Chan_Zuckerberg_Initiative()
+    _CRL = _Charles_River_Laboratories()
     CHROMA = _Chroma()
     COHERENT_SCIENTIFIC = _Coherent_Scientific()
     COLUMBIA = _Columbia_University()
@@ -1032,7 +1042,6 @@ Organization.LENS_MANUFACTURERS = one_of_instance(
         Organization.FUJINON,
         Organization.HAMAMATSU,
         Organization.INFINITY_PHOTO_OPTICAL,
-        Organization.KOWA,
         Organization.LEICA,
         Organization.MITUTUYO,
         Organization.NAVITAR,
@@ -1077,14 +1086,7 @@ Organization.MANIPULATOR_MANUFACTURERS = one_of_instance([Organization.NEW_SCALE
 
 Organization.MONITOR_MANUFACTURERS = one_of_instance([Organization.ASUS, Organization.LG, Organization.OTHER])
 
-Organization.SPEAKER_MANUFACTURERS = one_of_instance(
-    [
-        Organization.DIGIKEY,
-        Organization.TYMPHANY,
-        Organization.ISL,
-        Organization.OTHER
-    ]
-)
+Organization.SPEAKER_MANUFACTURERS = one_of_instance([Organization.TYMPHANY, Organization.ISL, Organization.OTHER])
 
 Organization.FUNDERS = one_of_instance(
     [
