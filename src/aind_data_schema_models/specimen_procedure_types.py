@@ -1,5 +1,4 @@
 """Specimen procedure types"""
-
 from enum import Enum
 
 

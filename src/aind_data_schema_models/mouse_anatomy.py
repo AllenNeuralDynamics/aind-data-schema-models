@@ -1,5 +1,4 @@
 """Mouse anatomy"""
-
 from typing import Literal, Union
 
 from pydantic import BaseModel, ConfigDict, Field
@@ -732,9 +731,9 @@ class _1St_Branchial_Arch_Mesenchyme(_MouseAnatomicalStructureModel):
 class _1St_Branchial_Arch_Mesenchyme_Derived_From_Neural_Crest(_MouseAnatomicalStructureModel):
     """Model 1st branchial arch mesenchyme derived from neural crest"""
 
-    name: Literal["1st branchial arch mesenchyme derived from neural crest"] = (
+    name: Literal[
         "1st branchial arch mesenchyme derived from neural crest"
-    )
+    ] = "1st branchial arch mesenchyme derived from neural crest"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_16129"] = "EMAPA_16129"
 
@@ -742,9 +741,9 @@ class _1St_Branchial_Arch_Mesenchyme_Derived_From_Neural_Crest(_MouseAnatomicalS
 class _1St_Branchial_Arch_Mesenchyme_Derived_From_Head_Mesoderm(_MouseAnatomicalStructureModel):
     """Model 1st branchial arch mesenchyme derived from head mesoderm"""
 
-    name: Literal["1st branchial arch mesenchyme derived from head mesoderm"] = (
+    name: Literal[
         "1st branchial arch mesenchyme derived from head mesoderm"
-    )
+    ] = "1st branchial arch mesenchyme derived from head mesoderm"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_16130"] = "EMAPA_16130"
 
@@ -1720,9 +1719,9 @@ class _2Nd_Branchial_Arch_Mesenchyme(_MouseAnatomicalStructureModel):
 class _2Nd_Branchial_Arch_Mesenchyme_Derived_From_Head_Mesoderm(_MouseAnatomicalStructureModel):
     """Model 2nd branchial arch mesenchyme derived from head mesoderm"""
 
-    name: Literal["2nd branchial arch mesenchyme derived from head mesoderm"] = (
+    name: Literal[
         "2nd branchial arch mesenchyme derived from head mesoderm"
-    )
+    ] = "2nd branchial arch mesenchyme derived from head mesoderm"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_16280"] = "EMAPA_16280"
 
@@ -1730,9 +1729,9 @@ class _2Nd_Branchial_Arch_Mesenchyme_Derived_From_Head_Mesoderm(_MouseAnatomical
 class _2Nd_Branchial_Arch_Mesenchyme_Derived_From_Neural_Crest(_MouseAnatomicalStructureModel):
     """Model 2nd branchial arch mesenchyme derived from neural crest"""
 
-    name: Literal["2nd branchial arch mesenchyme derived from neural crest"] = (
+    name: Literal[
         "2nd branchial arch mesenchyme derived from neural crest"
-    )
+    ] = "2nd branchial arch mesenchyme derived from neural crest"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_16281"] = "EMAPA_16281"
 
@@ -1780,9 +1779,9 @@ class _Future_Hindbrain_Posterior_To_Rhombomere_5(_MouseAnatomicalStructureModel
 class _Future_Hindbrain_Posterior_To_Rhombomere_5_Floor_Plate(_MouseAnatomicalStructureModel):
     """Model future hindbrain posterior to rhombomere 5 floor plate"""
 
-    name: Literal["future hindbrain posterior to rhombomere 5 floor plate"] = (
+    name: Literal[
         "future hindbrain posterior to rhombomere 5 floor plate"
-    )
+    ] = "future hindbrain posterior to rhombomere 5 floor plate"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_16287"] = "EMAPA_16287"
 
@@ -1790,9 +1789,9 @@ class _Future_Hindbrain_Posterior_To_Rhombomere_5_Floor_Plate(_MouseAnatomicalSt
 class _Future_Hindbrain_Posterior_To_Rhombomere_5_Neural_Fold(_MouseAnatomicalStructureModel):
     """Model future hindbrain posterior to rhombomere 5 neural fold"""
 
-    name: Literal["future hindbrain posterior to rhombomere 5 neural fold"] = (
+    name: Literal[
         "future hindbrain posterior to rhombomere 5 neural fold"
-    )
+    ] = "future hindbrain posterior to rhombomere 5 neural fold"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_16288"] = "EMAPA_16288"
 
@@ -1800,9 +1799,9 @@ class _Future_Hindbrain_Posterior_To_Rhombomere_5_Neural_Fold(_MouseAnatomicalSt
 class _Future_Hindbrain_Posterior_To_Rhombomere_5_Neural_Crest(_MouseAnatomicalStructureModel):
     """Model future hindbrain posterior to rhombomere 5 neural crest"""
 
-    name: Literal["future hindbrain posterior to rhombomere 5 neural crest"] = (
+    name: Literal[
         "future hindbrain posterior to rhombomere 5 neural crest"
-    )
+    ] = "future hindbrain posterior to rhombomere 5 neural crest"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_16289"] = "EMAPA_16289"
 
@@ -2522,9 +2521,9 @@ class _1St_Branchial_Arch_Mandibular_Component(_MouseAnatomicalStructureModel):
 class _1St_Branchial_Arch_Mandibular_Component_Ectoderm(_MouseAnatomicalStructureModel):
     """Model 1st branchial arch mandibular component ectoderm"""
 
-    name: Literal["1st branchial arch mandibular component ectoderm"] = (
+    name: Literal[
         "1st branchial arch mandibular component ectoderm"
-    )
+    ] = "1st branchial arch mandibular component ectoderm"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_16383"] = "EMAPA_16383"
 
@@ -2532,9 +2531,9 @@ class _1St_Branchial_Arch_Mandibular_Component_Ectoderm(_MouseAnatomicalStructur
 class _1St_Branchial_Arch_Mandibular_Component_Endoderm(_MouseAnatomicalStructureModel):
     """Model 1st branchial arch mandibular component endoderm"""
 
-    name: Literal["1st branchial arch mandibular component endoderm"] = (
+    name: Literal[
         "1st branchial arch mandibular component endoderm"
-    )
+    ] = "1st branchial arch mandibular component endoderm"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_16384"] = "EMAPA_16384"
 
@@ -2542,9 +2541,9 @@ class _1St_Branchial_Arch_Mandibular_Component_Endoderm(_MouseAnatomicalStructur
 class _1St_Branchial_Arch_Mandibular_Component_Mesenchyme(_MouseAnatomicalStructureModel):
     """Model 1st branchial arch mandibular component mesenchyme"""
 
-    name: Literal["1st branchial arch mandibular component mesenchyme"] = (
+    name: Literal[
         "1st branchial arch mandibular component mesenchyme"
-    )
+    ] = "1st branchial arch mandibular component mesenchyme"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_16385"] = "EMAPA_16385"
 
@@ -2552,9 +2551,9 @@ class _1St_Branchial_Arch_Mandibular_Component_Mesenchyme(_MouseAnatomicalStruct
 class _1St_Branchial_Arch_Mandibular_Component_Mesenchyme_Derived_From_Head_Mesoderm(_MouseAnatomicalStructureModel):
     """Model 1st branchial arch mandibular component mesenchyme derived from head mesoderm"""
 
-    name: Literal["1st branchial arch mandibular component mesenchyme derived from head mesoderm"] = (
+    name: Literal[
         "1st branchial arch mandibular component mesenchyme derived from head mesoderm"
-    )
+    ] = "1st branchial arch mandibular component mesenchyme derived from head mesoderm"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_16386"] = "EMAPA_16386"
 
@@ -2562,9 +2561,9 @@ class _1St_Branchial_Arch_Mandibular_Component_Mesenchyme_Derived_From_Head_Meso
 class _1St_Branchial_Arch_Mandibular_Component_Mesenchyme_Derived_From_Neural_Crest(_MouseAnatomicalStructureModel):
     """Model 1st branchial arch mandibular component mesenchyme derived from neural crest"""
 
-    name: Literal["1st branchial arch mandibular component mesenchyme derived from neural crest"] = (
+    name: Literal[
         "1st branchial arch mandibular component mesenchyme derived from neural crest"
-    )
+    ] = "1st branchial arch mandibular component mesenchyme derived from neural crest"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_16387"] = "EMAPA_16387"
 
@@ -2596,9 +2595,9 @@ class _1St_Branchial_Arch_Maxillary_Component_Endoderm(_MouseAnatomicalStructure
 class _1St_Branchial_Arch_Maxillary_Component_Mesenchyme(_MouseAnatomicalStructureModel):
     """Model 1st branchial arch maxillary component mesenchyme"""
 
-    name: Literal["1st branchial arch maxillary component mesenchyme"] = (
+    name: Literal[
         "1st branchial arch maxillary component mesenchyme"
-    )
+    ] = "1st branchial arch maxillary component mesenchyme"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_16391"] = "EMAPA_16391"
 
@@ -2606,9 +2605,9 @@ class _1St_Branchial_Arch_Maxillary_Component_Mesenchyme(_MouseAnatomicalStructu
 class _1St_Branchial_Arch_Maxillary_Component_Mesenchyme_Derived_From_Head_Mesoderm(_MouseAnatomicalStructureModel):
     """Model 1st branchial arch maxillary component mesenchyme derived from head mesoderm"""
 
-    name: Literal["1st branchial arch maxillary component mesenchyme derived from head mesoderm"] = (
+    name: Literal[
         "1st branchial arch maxillary component mesenchyme derived from head mesoderm"
-    )
+    ] = "1st branchial arch maxillary component mesenchyme derived from head mesoderm"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_16392"] = "EMAPA_16392"
 
@@ -2616,9 +2615,9 @@ class _1St_Branchial_Arch_Maxillary_Component_Mesenchyme_Derived_From_Head_Mesod
 class _1St_Branchial_Arch_Maxillary_Component_Mesenchyme_Derived_From_Neural_Crest(_MouseAnatomicalStructureModel):
     """Model 1st branchial arch maxillary component mesenchyme derived from neural crest"""
 
-    name: Literal["1st branchial arch maxillary component mesenchyme derived from neural crest"] = (
+    name: Literal[
         "1st branchial arch maxillary component mesenchyme derived from neural crest"
-    )
+    ] = "1st branchial arch maxillary component mesenchyme derived from neural crest"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_16393"] = "EMAPA_16393"
 
@@ -2634,9 +2633,9 @@ class _1St_Branchial_Arch_Maxillary_Mandibular_Groove(_MouseAnatomicalStructureM
 class _1St_Branchial_Arch_Maxillary_Mandibular_Groove_Ectoderm(_MouseAnatomicalStructureModel):
     """Model 1st branchial arch maxillary-mandibular groove ectoderm"""
 
-    name: Literal["1st branchial arch maxillary-mandibular groove ectoderm"] = (
+    name: Literal[
         "1st branchial arch maxillary-mandibular groove ectoderm"
-    )
+    ] = "1st branchial arch maxillary-mandibular groove ectoderm"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_16395"] = "EMAPA_16395"
 
@@ -2700,9 +2699,9 @@ class _3Rd_Branchial_Arch_Mesenchyme(_MouseAnatomicalStructureModel):
 class _3Rd_Branchial_Arch_Mesenchyme_Derived_From_Head_Mesoderm(_MouseAnatomicalStructureModel):
     """Model 3rd branchial arch mesenchyme derived from head mesoderm"""
 
-    name: Literal["3rd branchial arch mesenchyme derived from head mesoderm"] = (
+    name: Literal[
         "3rd branchial arch mesenchyme derived from head mesoderm"
-    )
+    ] = "3rd branchial arch mesenchyme derived from head mesoderm"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_16403"] = "EMAPA_16403"
 
@@ -2710,9 +2709,9 @@ class _3Rd_Branchial_Arch_Mesenchyme_Derived_From_Head_Mesoderm(_MouseAnatomical
 class _3Rd_Branchial_Arch_Mesenchyme_Derived_From_Neural_Crest(_MouseAnatomicalStructureModel):
     """Model 3rd branchial arch mesenchyme derived from neural crest"""
 
-    name: Literal["3rd branchial arch mesenchyme derived from neural crest"] = (
+    name: Literal[
         "3rd branchial arch mesenchyme derived from neural crest"
-    )
+    ] = "3rd branchial arch mesenchyme derived from neural crest"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_16404"] = "EMAPA_16404"
 
@@ -3608,9 +3607,9 @@ class _Atrioventricular_Canal(_MouseAnatomicalStructureModel):
 class _Vessels_Connecting_Internal_Carotid_Artery_To_Primary_Head_Veins(_MouseAnatomicalStructureModel):
     """Model vessels connecting internal carotid artery to primary head veins"""
 
-    name: Literal["vessels connecting internal carotid artery to primary head veins"] = (
+    name: Literal[
         "vessels connecting internal carotid artery to primary head veins"
-    )
+    ] = "vessels connecting internal carotid artery to primary head veins"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_16547"] = "EMAPA_16547"
 
@@ -3874,9 +3873,9 @@ class _Visceral_Pericardium(_MouseAnatomicalStructureModel):
 class _Pericardio_Peritoneal_Canal_Parietal_Mesothelium(_MouseAnatomicalStructureModel):
     """Model pericardio-peritoneal canal parietal mesothelium"""
 
-    name: Literal["pericardio-peritoneal canal parietal mesothelium"] = (
+    name: Literal[
         "pericardio-peritoneal canal parietal mesothelium"
-    )
+    ] = "pericardio-peritoneal canal parietal mesothelium"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_16590"] = "EMAPA_16590"
 
@@ -3924,9 +3923,9 @@ class _Hindlimb_Ridge_Mesenchyme(_MouseAnatomicalStructureModel):
 class _Trunk_Mesenchyme_Derived_From_Neural_Crest_Lateral_Migration_Pathway(_MouseAnatomicalStructureModel):
     """Model trunk mesenchyme derived from neural crest lateral migration pathway"""
 
-    name: Literal["trunk mesenchyme derived from neural crest lateral migration pathway"] = (
+    name: Literal[
         "trunk mesenchyme derived from neural crest lateral migration pathway"
-    )
+    ] = "trunk mesenchyme derived from neural crest lateral migration pathway"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_16596"] = "EMAPA_16596"
 
@@ -3934,9 +3933,9 @@ class _Trunk_Mesenchyme_Derived_From_Neural_Crest_Lateral_Migration_Pathway(_Mou
 class _Trunk_Mesenchyme_Derived_From_Neural_Crest_Medial_Migration_Pathway(_MouseAnatomicalStructureModel):
     """Model trunk mesenchyme derived from neural crest medial migration pathway"""
 
-    name: Literal["trunk mesenchyme derived from neural crest medial migration pathway"] = (
+    name: Literal[
         "trunk mesenchyme derived from neural crest medial migration pathway"
-    )
+    ] = "trunk mesenchyme derived from neural crest medial migration pathway"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_16597"] = "EMAPA_16597"
 
@@ -5184,9 +5183,9 @@ class _4Th_Branchial_Arch_Mesenchyme(_MouseAnatomicalStructureModel):
 class _4Th_Branchial_Arch_Mesenchyme_Derived_From_Head_Mesoderm(_MouseAnatomicalStructureModel):
     """Model 4th branchial arch mesenchyme derived from head mesoderm"""
 
-    name: Literal["4th branchial arch mesenchyme derived from head mesoderm"] = (
+    name: Literal[
         "4th branchial arch mesenchyme derived from head mesoderm"
-    )
+    ] = "4th branchial arch mesenchyme derived from head mesoderm"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_16771"] = "EMAPA_16771"
 
@@ -5194,9 +5193,9 @@ class _4Th_Branchial_Arch_Mesenchyme_Derived_From_Head_Mesoderm(_MouseAnatomical
 class _4Th_Branchial_Arch_Mesenchyme_Derived_From_Neural_Crest(_MouseAnatomicalStructureModel):
     """Model 4th branchial arch mesenchyme derived from neural crest"""
 
-    name: Literal["4th branchial arch mesenchyme derived from neural crest"] = (
+    name: Literal[
         "4th branchial arch mesenchyme derived from neural crest"
-    )
+    ] = "4th branchial arch mesenchyme derived from neural crest"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_16772"] = "EMAPA_16772"
 
@@ -5516,9 +5515,9 @@ class _Common_Atrial_Chamber_Left_Part_Cardiac_Jelly(_MouseAnatomicalStructureMo
 class _Common_Atrial_Chamber_Left_Part_Endocardial_Lining(_MouseAnatomicalStructureModel):
     """Model common atrial chamber left part endocardial lining"""
 
-    name: Literal["common atrial chamber left part endocardial lining"] = (
+    name: Literal[
         "common atrial chamber left part endocardial lining"
-    )
+    ] = "common atrial chamber left part endocardial lining"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_16815"] = "EMAPA_16815"
 
@@ -5574,9 +5573,9 @@ class _Common_Atrial_Chamber_Right_Part_Cardiac_Jelly(_MouseAnatomicalStructureM
 class _Common_Atrial_Chamber_Right_Part_Endocardial_Lining(_MouseAnatomicalStructureModel):
     """Model common atrial chamber right part endocardial lining"""
 
-    name: Literal["common atrial chamber right part endocardial lining"] = (
+    name: Literal[
         "common atrial chamber right part endocardial lining"
-    )
+    ] = "common atrial chamber right part endocardial lining"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_16822"] = "EMAPA_16822"
 
@@ -6872,9 +6871,9 @@ class _Hindgut_Diverticulum_Postanal_Component(_MouseAnatomicalStructureModel):
 class _Hindgut_Diverticulum_Postanal_Component_Mesenchyme(_MouseAnatomicalStructureModel):
     """Model hindgut diverticulum postanal component mesenchyme"""
 
-    name: Literal["hindgut diverticulum postanal component mesenchyme"] = (
+    name: Literal[
         "hindgut diverticulum postanal component mesenchyme"
-    )
+    ] = "hindgut diverticulum postanal component mesenchyme"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17029"] = "EMAPA_17029"
 
@@ -6882,9 +6881,9 @@ class _Hindgut_Diverticulum_Postanal_Component_Mesenchyme(_MouseAnatomicalStruct
 class _Hindgut_Diverticulum_Postanal_Component_Epithelium(_MouseAnatomicalStructureModel):
     """Model hindgut diverticulum postanal component epithelium"""
 
-    name: Literal["hindgut diverticulum postanal component epithelium"] = (
+    name: Literal[
         "hindgut diverticulum postanal component epithelium"
-    )
+    ] = "hindgut diverticulum postanal component epithelium"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17030"] = "EMAPA_17030"
 
@@ -6892,9 +6891,9 @@ class _Hindgut_Diverticulum_Postanal_Component_Epithelium(_MouseAnatomicalStruct
 class _Hindgut_Diverticulum_Postanal_Component_Vascular_Element(_MouseAnatomicalStructureModel):
     """Model hindgut diverticulum postanal component vascular element"""
 
-    name: Literal["hindgut diverticulum postanal component vascular element"] = (
+    name: Literal[
         "hindgut diverticulum postanal component vascular element"
-    )
+    ] = "hindgut diverticulum postanal component vascular element"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17031"] = "EMAPA_17031"
 
@@ -6910,9 +6909,9 @@ class _Hindgut_Diverticulum_Preanal_Component(_MouseAnatomicalStructureModel):
 class _Hindgut_Diverticulum_Preanal_Component_Mesenchyme(_MouseAnatomicalStructureModel):
     """Model hindgut diverticulum preanal component mesenchyme"""
 
-    name: Literal["hindgut diverticulum preanal component mesenchyme"] = (
+    name: Literal[
         "hindgut diverticulum preanal component mesenchyme"
-    )
+    ] = "hindgut diverticulum preanal component mesenchyme"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17033"] = "EMAPA_17033"
 
@@ -6920,9 +6919,9 @@ class _Hindgut_Diverticulum_Preanal_Component_Mesenchyme(_MouseAnatomicalStructu
 class _Hindgut_Diverticulum_Preanal_Component_Epithelium(_MouseAnatomicalStructureModel):
     """Model hindgut diverticulum preanal component epithelium"""
 
-    name: Literal["hindgut diverticulum preanal component epithelium"] = (
+    name: Literal[
         "hindgut diverticulum preanal component epithelium"
-    )
+    ] = "hindgut diverticulum preanal component epithelium"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17034"] = "EMAPA_17034"
 
@@ -6930,9 +6929,9 @@ class _Hindgut_Diverticulum_Preanal_Component_Epithelium(_MouseAnatomicalStructu
 class _Hindgut_Diverticulum_Preanal_Component_Vascular_Element(_MouseAnatomicalStructureModel):
     """Model hindgut diverticulum preanal component vascular element"""
 
-    name: Literal["hindgut diverticulum preanal component vascular element"] = (
+    name: Literal[
         "hindgut diverticulum preanal component vascular element"
-    )
+    ] = "hindgut diverticulum preanal component vascular element"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17035"] = "EMAPA_17035"
 
@@ -8580,9 +8579,9 @@ class _Right_Atrium_Auricular_Region(_MouseAnatomicalStructureModel):
 class _Right_Atrium_Auricular_Region_Endocardial_Lining(_MouseAnatomicalStructureModel):
     """Model right atrium auricular region endocardial lining"""
 
-    name: Literal["right atrium auricular region endocardial lining"] = (
+    name: Literal[
         "right atrium auricular region endocardial lining"
-    )
+    ] = "right atrium auricular region endocardial lining"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17323"] = "EMAPA_17323"
 
@@ -9022,9 +9021,9 @@ class _Left_Lung_Rudiment_Lobar_Bronchus_Epithelium(_MouseAnatomicalStructureMod
 class _Left_Lung_Rudiment_Lobar_Bronchus_Vascular_Element(_MouseAnatomicalStructureModel):
     """Model left lung rudiment lobar bronchus vascular element"""
 
-    name: Literal["left lung rudiment lobar bronchus vascular element"] = (
+    name: Literal[
         "left lung rudiment lobar bronchus vascular element"
-    )
+    ] = "left lung rudiment lobar bronchus vascular element"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17391"] = "EMAPA_17391"
 
@@ -9456,9 +9455,9 @@ class _Hand_Rest_Of_Epithelium(_MouseAnatomicalStructureModel):
 class _Interdigital_Region_Between_Forelimb_Digits_1_And_2(_MouseAnatomicalStructureModel):
     """Model interdigital region between forelimb digits 1 and 2"""
 
-    name: Literal["interdigital region between forelimb digits 1 and 2"] = (
+    name: Literal[
         "interdigital region between forelimb digits 1 and 2"
-    )
+    ] = "interdigital region between forelimb digits 1 and 2"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17445"] = "EMAPA_17445"
 
@@ -9466,9 +9465,9 @@ class _Interdigital_Region_Between_Forelimb_Digits_1_And_2(_MouseAnatomicalStruc
 class _Interdigital_Region_Between_Forelimb_Digits_1_And_2_Epithelium(_MouseAnatomicalStructureModel):
     """Model interdigital region between forelimb digits 1 and 2 epithelium"""
 
-    name: Literal["interdigital region between forelimb digits 1 and 2 epithelium"] = (
+    name: Literal[
         "interdigital region between forelimb digits 1 and 2 epithelium"
-    )
+    ] = "interdigital region between forelimb digits 1 and 2 epithelium"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17446"] = "EMAPA_17446"
 
@@ -9476,9 +9475,9 @@ class _Interdigital_Region_Between_Forelimb_Digits_1_And_2_Epithelium(_MouseAnat
 class _Interdigital_Region_Between_Forelimb_Digits_1_And_2_Mesenchyme(_MouseAnatomicalStructureModel):
     """Model interdigital region between forelimb digits 1 and 2 mesenchyme"""
 
-    name: Literal["interdigital region between forelimb digits 1 and 2 mesenchyme"] = (
+    name: Literal[
         "interdigital region between forelimb digits 1 and 2 mesenchyme"
-    )
+    ] = "interdigital region between forelimb digits 1 and 2 mesenchyme"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17447"] = "EMAPA_17447"
 
@@ -9486,9 +9485,9 @@ class _Interdigital_Region_Between_Forelimb_Digits_1_And_2_Mesenchyme(_MouseAnat
 class _Interdigital_Region_Between_Forelimb_Digits_2_And_3(_MouseAnatomicalStructureModel):
     """Model interdigital region between forelimb digits 2 and 3"""
 
-    name: Literal["interdigital region between forelimb digits 2 and 3"] = (
+    name: Literal[
         "interdigital region between forelimb digits 2 and 3"
-    )
+    ] = "interdigital region between forelimb digits 2 and 3"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17448"] = "EMAPA_17448"
 
@@ -9496,9 +9495,9 @@ class _Interdigital_Region_Between_Forelimb_Digits_2_And_3(_MouseAnatomicalStruc
 class _Interdigital_Region_Between_Forelimb_Digits_2_And_3_Epithelium(_MouseAnatomicalStructureModel):
     """Model interdigital region between forelimb digits 2 and 3 epithelium"""
 
-    name: Literal["interdigital region between forelimb digits 2 and 3 epithelium"] = (
+    name: Literal[
         "interdigital region between forelimb digits 2 and 3 epithelium"
-    )
+    ] = "interdigital region between forelimb digits 2 and 3 epithelium"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17449"] = "EMAPA_17449"
 
@@ -9506,9 +9505,9 @@ class _Interdigital_Region_Between_Forelimb_Digits_2_And_3_Epithelium(_MouseAnat
 class _Interdigital_Region_Between_Forelimb_Digits_2_And_3_Mesenchyme(_MouseAnatomicalStructureModel):
     """Model interdigital region between forelimb digits 2 and 3 mesenchyme"""
 
-    name: Literal["interdigital region between forelimb digits 2 and 3 mesenchyme"] = (
+    name: Literal[
         "interdigital region between forelimb digits 2 and 3 mesenchyme"
-    )
+    ] = "interdigital region between forelimb digits 2 and 3 mesenchyme"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17450"] = "EMAPA_17450"
 
@@ -9516,9 +9515,9 @@ class _Interdigital_Region_Between_Forelimb_Digits_2_And_3_Mesenchyme(_MouseAnat
 class _Interdigital_Region_Between_Forelimb_Digits_3_And_4(_MouseAnatomicalStructureModel):
     """Model interdigital region between forelimb digits 3 and 4"""
 
-    name: Literal["interdigital region between forelimb digits 3 and 4"] = (
+    name: Literal[
         "interdigital region between forelimb digits 3 and 4"
-    )
+    ] = "interdigital region between forelimb digits 3 and 4"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17451"] = "EMAPA_17451"
 
@@ -9526,9 +9525,9 @@ class _Interdigital_Region_Between_Forelimb_Digits_3_And_4(_MouseAnatomicalStruc
 class _Interdigital_Region_Between_Forelimb_Digits_3_And_4_Epithelium(_MouseAnatomicalStructureModel):
     """Model interdigital region between forelimb digits 3 and 4 epithelium"""
 
-    name: Literal["interdigital region between forelimb digits 3 and 4 epithelium"] = (
+    name: Literal[
         "interdigital region between forelimb digits 3 and 4 epithelium"
-    )
+    ] = "interdigital region between forelimb digits 3 and 4 epithelium"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17452"] = "EMAPA_17452"
 
@@ -9536,9 +9535,9 @@ class _Interdigital_Region_Between_Forelimb_Digits_3_And_4_Epithelium(_MouseAnat
 class _Interdigital_Region_Between_Forelimb_Digits_3_And_4_Mesenchyme(_MouseAnatomicalStructureModel):
     """Model interdigital region between forelimb digits 3 and 4 mesenchyme"""
 
-    name: Literal["interdigital region between forelimb digits 3 and 4 mesenchyme"] = (
+    name: Literal[
         "interdigital region between forelimb digits 3 and 4 mesenchyme"
-    )
+    ] = "interdigital region between forelimb digits 3 and 4 mesenchyme"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17453"] = "EMAPA_17453"
 
@@ -9546,9 +9545,9 @@ class _Interdigital_Region_Between_Forelimb_Digits_3_And_4_Mesenchyme(_MouseAnat
 class _Interdigital_Region_Between_Forelimb_Digits_4_And_5(_MouseAnatomicalStructureModel):
     """Model interdigital region between forelimb digits 4 and 5"""
 
-    name: Literal["interdigital region between forelimb digits 4 and 5"] = (
+    name: Literal[
         "interdigital region between forelimb digits 4 and 5"
-    )
+    ] = "interdigital region between forelimb digits 4 and 5"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17454"] = "EMAPA_17454"
 
@@ -9556,9 +9555,9 @@ class _Interdigital_Region_Between_Forelimb_Digits_4_And_5(_MouseAnatomicalStruc
 class _Interdigital_Region_Between_Forelimb_Digits_4_And_5_Epithelium(_MouseAnatomicalStructureModel):
     """Model interdigital region between forelimb digits 4 and 5 epithelium"""
 
-    name: Literal["interdigital region between forelimb digits 4 and 5 epithelium"] = (
+    name: Literal[
         "interdigital region between forelimb digits 4 and 5 epithelium"
-    )
+    ] = "interdigital region between forelimb digits 4 and 5 epithelium"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17455"] = "EMAPA_17455"
 
@@ -9566,9 +9565,9 @@ class _Interdigital_Region_Between_Forelimb_Digits_4_And_5_Epithelium(_MouseAnat
 class _Interdigital_Region_Between_Forelimb_Digits_4_And_5_Mesenchyme(_MouseAnatomicalStructureModel):
     """Model interdigital region between forelimb digits 4 and 5 mesenchyme"""
 
-    name: Literal["interdigital region between forelimb digits 4 and 5 mesenchyme"] = (
+    name: Literal[
         "interdigital region between forelimb digits 4 and 5 mesenchyme"
-    )
+    ] = "interdigital region between forelimb digits 4 and 5 mesenchyme"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17456"] = "EMAPA_17456"
 
@@ -9728,9 +9727,9 @@ class _Foot_Rest_Of_Epithelium(_MouseAnatomicalStructureModel):
 class _Interdigital_Region_Between_Hindlimb_Digits_1_And_2(_MouseAnatomicalStructureModel):
     """Model interdigital region between hindlimb digits 1 and 2"""
 
-    name: Literal["interdigital region between hindlimb digits 1 and 2"] = (
+    name: Literal[
         "interdigital region between hindlimb digits 1 and 2"
-    )
+    ] = "interdigital region between hindlimb digits 1 and 2"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17476"] = "EMAPA_17476"
 
@@ -9738,9 +9737,9 @@ class _Interdigital_Region_Between_Hindlimb_Digits_1_And_2(_MouseAnatomicalStruc
 class _Interdigital_Region_Between_Hindlimb_Digits_1_And_2_Epithelium(_MouseAnatomicalStructureModel):
     """Model interdigital region between hindlimb digits 1 and 2 epithelium"""
 
-    name: Literal["interdigital region between hindlimb digits 1 and 2 epithelium"] = (
+    name: Literal[
         "interdigital region between hindlimb digits 1 and 2 epithelium"
-    )
+    ] = "interdigital region between hindlimb digits 1 and 2 epithelium"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17477"] = "EMAPA_17477"
 
@@ -9748,9 +9747,9 @@ class _Interdigital_Region_Between_Hindlimb_Digits_1_And_2_Epithelium(_MouseAnat
 class _Interdigital_Region_Between_Hindlimb_Digits_1_And_2_Mesenchyme(_MouseAnatomicalStructureModel):
     """Model interdigital region between hindlimb digits 1 and 2 mesenchyme"""
 
-    name: Literal["interdigital region between hindlimb digits 1 and 2 mesenchyme"] = (
+    name: Literal[
         "interdigital region between hindlimb digits 1 and 2 mesenchyme"
-    )
+    ] = "interdigital region between hindlimb digits 1 and 2 mesenchyme"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17478"] = "EMAPA_17478"
 
@@ -9758,9 +9757,9 @@ class _Interdigital_Region_Between_Hindlimb_Digits_1_And_2_Mesenchyme(_MouseAnat
 class _Interdigital_Region_Between_Hindlimb_Digits_2_And_3(_MouseAnatomicalStructureModel):
     """Model interdigital region between hindlimb digits 2 and 3"""
 
-    name: Literal["interdigital region between hindlimb digits 2 and 3"] = (
+    name: Literal[
         "interdigital region between hindlimb digits 2 and 3"
-    )
+    ] = "interdigital region between hindlimb digits 2 and 3"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17479"] = "EMAPA_17479"
 
@@ -9768,9 +9767,9 @@ class _Interdigital_Region_Between_Hindlimb_Digits_2_And_3(_MouseAnatomicalStruc
 class _Interdigital_Region_Between_Hindlimb_Digits_2_And_3_Epithelium(_MouseAnatomicalStructureModel):
     """Model interdigital region between hindlimb digits 2 and 3 epithelium"""
 
-    name: Literal["interdigital region between hindlimb digits 2 and 3 epithelium"] = (
+    name: Literal[
         "interdigital region between hindlimb digits 2 and 3 epithelium"
-    )
+    ] = "interdigital region between hindlimb digits 2 and 3 epithelium"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17480"] = "EMAPA_17480"
 
@@ -9778,9 +9777,9 @@ class _Interdigital_Region_Between_Hindlimb_Digits_2_And_3_Epithelium(_MouseAnat
 class _Interdigital_Region_Between_Hindlimb_Digits_2_And_3_Mesenchyme(_MouseAnatomicalStructureModel):
     """Model interdigital region between hindlimb digits 2 and 3 mesenchyme"""
 
-    name: Literal["interdigital region between hindlimb digits 2 and 3 mesenchyme"] = (
+    name: Literal[
         "interdigital region between hindlimb digits 2 and 3 mesenchyme"
-    )
+    ] = "interdigital region between hindlimb digits 2 and 3 mesenchyme"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17481"] = "EMAPA_17481"
 
@@ -9788,9 +9787,9 @@ class _Interdigital_Region_Between_Hindlimb_Digits_2_And_3_Mesenchyme(_MouseAnat
 class _Interdigital_Region_Between_Hindlimb_Digits_3_And_4(_MouseAnatomicalStructureModel):
     """Model interdigital region between hindlimb digits 3 and 4"""
 
-    name: Literal["interdigital region between hindlimb digits 3 and 4"] = (
+    name: Literal[
         "interdigital region between hindlimb digits 3 and 4"
-    )
+    ] = "interdigital region between hindlimb digits 3 and 4"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17482"] = "EMAPA_17482"
 
@@ -9798,9 +9797,9 @@ class _Interdigital_Region_Between_Hindlimb_Digits_3_And_4(_MouseAnatomicalStruc
 class _Interdigital_Region_Between_Hindlimb_Digits_3_And_4_Epithelium(_MouseAnatomicalStructureModel):
     """Model interdigital region between hindlimb digits 3 and 4 epithelium"""
 
-    name: Literal["interdigital region between hindlimb digits 3 and 4 epithelium"] = (
+    name: Literal[
         "interdigital region between hindlimb digits 3 and 4 epithelium"
-    )
+    ] = "interdigital region between hindlimb digits 3 and 4 epithelium"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17483"] = "EMAPA_17483"
 
@@ -9808,9 +9807,9 @@ class _Interdigital_Region_Between_Hindlimb_Digits_3_And_4_Epithelium(_MouseAnat
 class _Interdigital_Region_Between_Hindlimb_Digits_3_And_4_Mesenchyme(_MouseAnatomicalStructureModel):
     """Model interdigital region between hindlimb digits 3 and 4 mesenchyme"""
 
-    name: Literal["interdigital region between hindlimb digits 3 and 4 mesenchyme"] = (
+    name: Literal[
         "interdigital region between hindlimb digits 3 and 4 mesenchyme"
-    )
+    ] = "interdigital region between hindlimb digits 3 and 4 mesenchyme"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17484"] = "EMAPA_17484"
 
@@ -9818,9 +9817,9 @@ class _Interdigital_Region_Between_Hindlimb_Digits_3_And_4_Mesenchyme(_MouseAnat
 class _Interdigital_Region_Between_Hindlimb_Digits_4_And_5(_MouseAnatomicalStructureModel):
     """Model interdigital region between hindlimb digits 4 and 5"""
 
-    name: Literal["interdigital region between hindlimb digits 4 and 5"] = (
+    name: Literal[
         "interdigital region between hindlimb digits 4 and 5"
-    )
+    ] = "interdigital region between hindlimb digits 4 and 5"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17485"] = "EMAPA_17485"
 
@@ -9828,9 +9827,9 @@ class _Interdigital_Region_Between_Hindlimb_Digits_4_And_5(_MouseAnatomicalStruc
 class _Interdigital_Region_Between_Hindlimb_Digits_4_And_5_Epithelium(_MouseAnatomicalStructureModel):
     """Model interdigital region between hindlimb digits 4 and 5 epithelium"""
 
-    name: Literal["interdigital region between hindlimb digits 4 and 5 epithelium"] = (
+    name: Literal[
         "interdigital region between hindlimb digits 4 and 5 epithelium"
-    )
+    ] = "interdigital region between hindlimb digits 4 and 5 epithelium"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17486"] = "EMAPA_17486"
 
@@ -9838,9 +9837,9 @@ class _Interdigital_Region_Between_Hindlimb_Digits_4_And_5_Epithelium(_MouseAnat
 class _Interdigital_Region_Between_Hindlimb_Digits_4_And_5_Mesenchyme(_MouseAnatomicalStructureModel):
     """Model interdigital region between hindlimb digits 4 and 5 mesenchyme"""
 
-    name: Literal["interdigital region between hindlimb digits 4 and 5 mesenchyme"] = (
+    name: Literal[
         "interdigital region between hindlimb digits 4 and 5 mesenchyme"
-    )
+    ] = "interdigital region between hindlimb digits 4 and 5 mesenchyme"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17487"] = "EMAPA_17487"
 
@@ -10472,9 +10471,9 @@ class _Metencephalon_Sulcus_Limitans(_MouseAnatomicalStructureModel):
 class _Metencephalon_Part_Of_4Th_Ventricle_Choroid_Plexus(_MouseAnatomicalStructureModel):
     """Model metencephalon part of 4th ventricle choroid plexus"""
 
-    name: Literal["metencephalon part of 4th ventricle choroid plexus"] = (
+    name: Literal[
         "metencephalon part of 4th ventricle choroid plexus"
-    )
+    ] = "metencephalon part of 4th ventricle choroid plexus"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17568"] = "EMAPA_17568"
 
@@ -11586,9 +11585,9 @@ class _Humerus_Cartilage_Condensation(_MouseAnatomicalStructureModel):
 class _Forelimb_Digit_1_Metacarpus_Pre_Cartilage_Condensation(_MouseAnatomicalStructureModel):
     """Model forelimb digit 1 metacarpus pre-cartilage condensation"""
 
-    name: Literal["forelimb digit 1 metacarpus pre-cartilage condensation"] = (
+    name: Literal[
         "forelimb digit 1 metacarpus pre-cartilage condensation"
-    )
+    ] = "forelimb digit 1 metacarpus pre-cartilage condensation"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17714"] = "EMAPA_17714"
 
@@ -11596,9 +11595,9 @@ class _Forelimb_Digit_1_Metacarpus_Pre_Cartilage_Condensation(_MouseAnatomicalSt
 class _Forelimb_Digit_1_Phalanx_Pre_Cartilage_Condensation(_MouseAnatomicalStructureModel):
     """Model forelimb digit 1 phalanx pre-cartilage condensation"""
 
-    name: Literal["forelimb digit 1 phalanx pre-cartilage condensation"] = (
+    name: Literal[
         "forelimb digit 1 phalanx pre-cartilage condensation"
-    )
+    ] = "forelimb digit 1 phalanx pre-cartilage condensation"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17715"] = "EMAPA_17715"
 
@@ -11606,9 +11605,9 @@ class _Forelimb_Digit_1_Phalanx_Pre_Cartilage_Condensation(_MouseAnatomicalStruc
 class _Forelimb_Digit_2_Metacarpus_Pre_Cartilage_Condensation(_MouseAnatomicalStructureModel):
     """Model forelimb digit 2 metacarpus pre-cartilage condensation"""
 
-    name: Literal["forelimb digit 2 metacarpus pre-cartilage condensation"] = (
+    name: Literal[
         "forelimb digit 2 metacarpus pre-cartilage condensation"
-    )
+    ] = "forelimb digit 2 metacarpus pre-cartilage condensation"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17716"] = "EMAPA_17716"
 
@@ -11616,9 +11615,9 @@ class _Forelimb_Digit_2_Metacarpus_Pre_Cartilage_Condensation(_MouseAnatomicalSt
 class _Forelimb_Digit_2_Phalanx_Pre_Cartilage_Condensation(_MouseAnatomicalStructureModel):
     """Model forelimb digit 2 phalanx pre-cartilage condensation"""
 
-    name: Literal["forelimb digit 2 phalanx pre-cartilage condensation"] = (
+    name: Literal[
         "forelimb digit 2 phalanx pre-cartilage condensation"
-    )
+    ] = "forelimb digit 2 phalanx pre-cartilage condensation"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17717"] = "EMAPA_17717"
 
@@ -11626,9 +11625,9 @@ class _Forelimb_Digit_2_Phalanx_Pre_Cartilage_Condensation(_MouseAnatomicalStruc
 class _Forelimb_Digit_3_Metacarpus_Pre_Cartilage_Condensation(_MouseAnatomicalStructureModel):
     """Model forelimb digit 3 metacarpus pre-cartilage condensation"""
 
-    name: Literal["forelimb digit 3 metacarpus pre-cartilage condensation"] = (
+    name: Literal[
         "forelimb digit 3 metacarpus pre-cartilage condensation"
-    )
+    ] = "forelimb digit 3 metacarpus pre-cartilage condensation"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17718"] = "EMAPA_17718"
 
@@ -11636,9 +11635,9 @@ class _Forelimb_Digit_3_Metacarpus_Pre_Cartilage_Condensation(_MouseAnatomicalSt
 class _Forelimb_Digit_3_Phalanx_Pre_Cartilage_Condensation(_MouseAnatomicalStructureModel):
     """Model forelimb digit 3 phalanx pre-cartilage condensation"""
 
-    name: Literal["forelimb digit 3 phalanx pre-cartilage condensation"] = (
+    name: Literal[
         "forelimb digit 3 phalanx pre-cartilage condensation"
-    )
+    ] = "forelimb digit 3 phalanx pre-cartilage condensation"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17719"] = "EMAPA_17719"
 
@@ -11646,9 +11645,9 @@ class _Forelimb_Digit_3_Phalanx_Pre_Cartilage_Condensation(_MouseAnatomicalStruc
 class _Forelimb_Digit_4_Metacarpus_Pre_Cartilage_Condensation(_MouseAnatomicalStructureModel):
     """Model forelimb digit 4 metacarpus pre-cartilage condensation"""
 
-    name: Literal["forelimb digit 4 metacarpus pre-cartilage condensation"] = (
+    name: Literal[
         "forelimb digit 4 metacarpus pre-cartilage condensation"
-    )
+    ] = "forelimb digit 4 metacarpus pre-cartilage condensation"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17720"] = "EMAPA_17720"
 
@@ -11656,9 +11655,9 @@ class _Forelimb_Digit_4_Metacarpus_Pre_Cartilage_Condensation(_MouseAnatomicalSt
 class _Forelimb_Digit_4_Phalanx_Pre_Cartilage_Condensation(_MouseAnatomicalStructureModel):
     """Model forelimb digit 4 phalanx pre-cartilage condensation"""
 
-    name: Literal["forelimb digit 4 phalanx pre-cartilage condensation"] = (
+    name: Literal[
         "forelimb digit 4 phalanx pre-cartilage condensation"
-    )
+    ] = "forelimb digit 4 phalanx pre-cartilage condensation"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17721"] = "EMAPA_17721"
 
@@ -11666,9 +11665,9 @@ class _Forelimb_Digit_4_Phalanx_Pre_Cartilage_Condensation(_MouseAnatomicalStruc
 class _Forelimb_Digit_5_Metacarpus_Pre_Cartilage_Condensation(_MouseAnatomicalStructureModel):
     """Model forelimb digit 5 metacarpus pre-cartilage condensation"""
 
-    name: Literal["forelimb digit 5 metacarpus pre-cartilage condensation"] = (
+    name: Literal[
         "forelimb digit 5 metacarpus pre-cartilage condensation"
-    )
+    ] = "forelimb digit 5 metacarpus pre-cartilage condensation"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17722"] = "EMAPA_17722"
 
@@ -11676,9 +11675,9 @@ class _Forelimb_Digit_5_Metacarpus_Pre_Cartilage_Condensation(_MouseAnatomicalSt
 class _Forelimb_Digit_5_Phalanx_Pre_Cartilage_Condensation(_MouseAnatomicalStructureModel):
     """Model forelimb digit 5 phalanx pre-cartilage condensation"""
 
-    name: Literal["forelimb digit 5 phalanx pre-cartilage condensation"] = (
+    name: Literal[
         "forelimb digit 5 phalanx pre-cartilage condensation"
-    )
+    ] = "forelimb digit 5 phalanx pre-cartilage condensation"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17723"] = "EMAPA_17723"
 
@@ -11694,9 +11693,9 @@ class _Carpus_Pre_Cartilage_Condensation(_MouseAnatomicalStructureModel):
 class _Hindlimb_Digit_1_Metatarsus_Pre_Cartilage_Condensation(_MouseAnatomicalStructureModel):
     """Model hindlimb digit 1 metatarsus pre-cartilage condensation"""
 
-    name: Literal["hindlimb digit 1 metatarsus pre-cartilage condensation"] = (
+    name: Literal[
         "hindlimb digit 1 metatarsus pre-cartilage condensation"
-    )
+    ] = "hindlimb digit 1 metatarsus pre-cartilage condensation"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17725"] = "EMAPA_17725"
 
@@ -11704,9 +11703,9 @@ class _Hindlimb_Digit_1_Metatarsus_Pre_Cartilage_Condensation(_MouseAnatomicalSt
 class _Hindlimb_Digit_1_Phalanx_Pre_Cartilage_Condensation(_MouseAnatomicalStructureModel):
     """Model hindlimb digit 1 phalanx pre-cartilage condensation"""
 
-    name: Literal["hindlimb digit 1 phalanx pre-cartilage condensation"] = (
+    name: Literal[
         "hindlimb digit 1 phalanx pre-cartilage condensation"
-    )
+    ] = "hindlimb digit 1 phalanx pre-cartilage condensation"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17726"] = "EMAPA_17726"
 
@@ -11714,9 +11713,9 @@ class _Hindlimb_Digit_1_Phalanx_Pre_Cartilage_Condensation(_MouseAnatomicalStruc
 class _Hindlimb_Digit_2_Metatarsus_Pre_Cartilage_Condensation(_MouseAnatomicalStructureModel):
     """Model hindlimb digit 2 metatarsus pre-cartilage condensation"""
 
-    name: Literal["hindlimb digit 2 metatarsus pre-cartilage condensation"] = (
+    name: Literal[
         "hindlimb digit 2 metatarsus pre-cartilage condensation"
-    )
+    ] = "hindlimb digit 2 metatarsus pre-cartilage condensation"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17727"] = "EMAPA_17727"
 
@@ -11724,9 +11723,9 @@ class _Hindlimb_Digit_2_Metatarsus_Pre_Cartilage_Condensation(_MouseAnatomicalSt
 class _Hindlimb_Digit_2_Phalanx_Pre_Cartilage_Condensation(_MouseAnatomicalStructureModel):
     """Model hindlimb digit 2 phalanx pre-cartilage condensation"""
 
-    name: Literal["hindlimb digit 2 phalanx pre-cartilage condensation"] = (
+    name: Literal[
         "hindlimb digit 2 phalanx pre-cartilage condensation"
-    )
+    ] = "hindlimb digit 2 phalanx pre-cartilage condensation"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17728"] = "EMAPA_17728"
 
@@ -11734,9 +11733,9 @@ class _Hindlimb_Digit_2_Phalanx_Pre_Cartilage_Condensation(_MouseAnatomicalStruc
 class _Hindlimb_Digit_3_Metatarsus_Pre_Cartilage_Condensation(_MouseAnatomicalStructureModel):
     """Model hindlimb digit 3 metatarsus pre-cartilage condensation"""
 
-    name: Literal["hindlimb digit 3 metatarsus pre-cartilage condensation"] = (
+    name: Literal[
         "hindlimb digit 3 metatarsus pre-cartilage condensation"
-    )
+    ] = "hindlimb digit 3 metatarsus pre-cartilage condensation"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17729"] = "EMAPA_17729"
 
@@ -11744,9 +11743,9 @@ class _Hindlimb_Digit_3_Metatarsus_Pre_Cartilage_Condensation(_MouseAnatomicalSt
 class _Hindlimb_Digit_3_Phalanx_Pre_Cartilage_Condensation(_MouseAnatomicalStructureModel):
     """Model hindlimb digit 3 phalanx pre-cartilage condensation"""
 
-    name: Literal["hindlimb digit 3 phalanx pre-cartilage condensation"] = (
+    name: Literal[
         "hindlimb digit 3 phalanx pre-cartilage condensation"
-    )
+    ] = "hindlimb digit 3 phalanx pre-cartilage condensation"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17730"] = "EMAPA_17730"
 
@@ -11754,9 +11753,9 @@ class _Hindlimb_Digit_3_Phalanx_Pre_Cartilage_Condensation(_MouseAnatomicalStruc
 class _Hindlimb_Digit_4_Metatarsus_Pre_Cartilage_Condensation(_MouseAnatomicalStructureModel):
     """Model hindlimb digit 4 metatarsus pre-cartilage condensation"""
 
-    name: Literal["hindlimb digit 4 metatarsus pre-cartilage condensation"] = (
+    name: Literal[
         "hindlimb digit 4 metatarsus pre-cartilage condensation"
-    )
+    ] = "hindlimb digit 4 metatarsus pre-cartilage condensation"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17731"] = "EMAPA_17731"
 
@@ -11764,9 +11763,9 @@ class _Hindlimb_Digit_4_Metatarsus_Pre_Cartilage_Condensation(_MouseAnatomicalSt
 class _Hindlimb_Digit_4_Phalanx_Pre_Cartilage_Condensation(_MouseAnatomicalStructureModel):
     """Model hindlimb digit 4 phalanx pre-cartilage condensation"""
 
-    name: Literal["hindlimb digit 4 phalanx pre-cartilage condensation"] = (
+    name: Literal[
         "hindlimb digit 4 phalanx pre-cartilage condensation"
-    )
+    ] = "hindlimb digit 4 phalanx pre-cartilage condensation"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17732"] = "EMAPA_17732"
 
@@ -11774,9 +11773,9 @@ class _Hindlimb_Digit_4_Phalanx_Pre_Cartilage_Condensation(_MouseAnatomicalStruc
 class _Hindlimb_Digit_5_Metatarsus_Pre_Cartilage_Condensation(_MouseAnatomicalStructureModel):
     """Model hindlimb digit 5 metatarsus pre-cartilage condensation"""
 
-    name: Literal["hindlimb digit 5 metatarsus pre-cartilage condensation"] = (
+    name: Literal[
         "hindlimb digit 5 metatarsus pre-cartilage condensation"
-    )
+    ] = "hindlimb digit 5 metatarsus pre-cartilage condensation"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17733"] = "EMAPA_17733"
 
@@ -11784,9 +11783,9 @@ class _Hindlimb_Digit_5_Metatarsus_Pre_Cartilage_Condensation(_MouseAnatomicalSt
 class _Hindlimb_Digit_5_Phalanx_Pre_Cartilage_Condensation(_MouseAnatomicalStructureModel):
     """Model hindlimb digit 5 phalanx pre-cartilage condensation"""
 
-    name: Literal["hindlimb digit 5 phalanx pre-cartilage condensation"] = (
+    name: Literal[
         "hindlimb digit 5 phalanx pre-cartilage condensation"
-    )
+    ] = "hindlimb digit 5 phalanx pre-cartilage condensation"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17734"] = "EMAPA_17734"
 
@@ -11882,9 +11881,9 @@ class _Anterior_Abdominal_Wall_Muscle(_MouseAnatomicalStructureModel):
 class _Anterior_Abdominal_Wall_Undifferentiated_Pre_Muscle_Mass(_MouseAnatomicalStructureModel):
     """Model anterior abdominal wall undifferentiated pre-muscle mass"""
 
-    name: Literal["anterior abdominal wall undifferentiated pre-muscle mass"] = (
+    name: Literal[
         "anterior abdominal wall undifferentiated pre-muscle mass"
-    )
+    ] = "anterior abdominal wall undifferentiated pre-muscle mass"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17746"] = "EMAPA_17746"
 
@@ -11892,9 +11891,9 @@ class _Anterior_Abdominal_Wall_Undifferentiated_Pre_Muscle_Mass(_MouseAnatomical
 class _Pectoral_Girdle_And_Thoracic_Body_Wall_Musculature(_MouseAnatomicalStructureModel):
     """Model pectoral girdle and thoracic body wall musculature"""
 
-    name: Literal["pectoral girdle and thoracic body wall musculature"] = (
+    name: Literal[
         "pectoral girdle and thoracic body wall musculature"
-    )
+    ] = "pectoral girdle and thoracic body wall musculature"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17747"] = "EMAPA_17747"
 
@@ -13390,9 +13389,9 @@ class _Right_Lung_Accessory_Lobe_Lobar_Bronchus(_MouseAnatomicalStructureModel):
 class _Right_Lung_Accessory_Lobe_Lobar_Bronchus_Mesenchyme(_MouseAnatomicalStructureModel):
     """Model right lung accessory lobe lobar bronchus mesenchyme"""
 
-    name: Literal["right lung accessory lobe lobar bronchus mesenchyme"] = (
+    name: Literal[
         "right lung accessory lobe lobar bronchus mesenchyme"
-    )
+    ] = "right lung accessory lobe lobar bronchus mesenchyme"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17983"] = "EMAPA_17983"
 
@@ -13400,9 +13399,9 @@ class _Right_Lung_Accessory_Lobe_Lobar_Bronchus_Mesenchyme(_MouseAnatomicalStruc
 class _Right_Lung_Accessory_Lobe_Lobar_Bronchus_Epithelium(_MouseAnatomicalStructureModel):
     """Model right lung accessory lobe lobar bronchus epithelium"""
 
-    name: Literal["right lung accessory lobe lobar bronchus epithelium"] = (
+    name: Literal[
         "right lung accessory lobe lobar bronchus epithelium"
-    )
+    ] = "right lung accessory lobe lobar bronchus epithelium"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17984"] = "EMAPA_17984"
 
@@ -13410,9 +13409,9 @@ class _Right_Lung_Accessory_Lobe_Lobar_Bronchus_Epithelium(_MouseAnatomicalStruc
 class _Right_Lung_Accessory_Lobe_Lobar_Bronchus_Vascular_Element(_MouseAnatomicalStructureModel):
     """Model right lung accessory lobe lobar bronchus vascular element"""
 
-    name: Literal["right lung accessory lobe lobar bronchus vascular element"] = (
+    name: Literal[
         "right lung accessory lobe lobar bronchus vascular element"
-    )
+    ] = "right lung accessory lobe lobar bronchus vascular element"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17985"] = "EMAPA_17985"
 
@@ -13436,9 +13435,9 @@ class _Right_Lung_Caudal_Lobe_Lobar_Bronchus(_MouseAnatomicalStructureModel):
 class _Right_Lung_Caudal_Lobe_Lobar_Bronchus_Mesenchyme(_MouseAnatomicalStructureModel):
     """Model right lung caudal lobe lobar bronchus mesenchyme"""
 
-    name: Literal["right lung caudal lobe lobar bronchus mesenchyme"] = (
+    name: Literal[
         "right lung caudal lobe lobar bronchus mesenchyme"
-    )
+    ] = "right lung caudal lobe lobar bronchus mesenchyme"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17988"] = "EMAPA_17988"
 
@@ -13446,9 +13445,9 @@ class _Right_Lung_Caudal_Lobe_Lobar_Bronchus_Mesenchyme(_MouseAnatomicalStructur
 class _Right_Lung_Caudal_Lobe_Lobar_Bronchus_Epithelium(_MouseAnatomicalStructureModel):
     """Model right lung caudal lobe lobar bronchus epithelium"""
 
-    name: Literal["right lung caudal lobe lobar bronchus epithelium"] = (
+    name: Literal[
         "right lung caudal lobe lobar bronchus epithelium"
-    )
+    ] = "right lung caudal lobe lobar bronchus epithelium"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17989"] = "EMAPA_17989"
 
@@ -13456,9 +13455,9 @@ class _Right_Lung_Caudal_Lobe_Lobar_Bronchus_Epithelium(_MouseAnatomicalStructur
 class _Right_Lung_Caudal_Lobe_Lobar_Bronchus_Vascular_Element(_MouseAnatomicalStructureModel):
     """Model right lung caudal lobe lobar bronchus vascular element"""
 
-    name: Literal["right lung caudal lobe lobar bronchus vascular element"] = (
+    name: Literal[
         "right lung caudal lobe lobar bronchus vascular element"
-    )
+    ] = "right lung caudal lobe lobar bronchus vascular element"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17990"] = "EMAPA_17990"
 
@@ -13482,9 +13481,9 @@ class _Right_Lung_Cranial_Lobe_Lobar_Bronchus(_MouseAnatomicalStructureModel):
 class _Right_Lung_Cranial_Lobe_Lobar_Bronchus_Mesenchyme(_MouseAnatomicalStructureModel):
     """Model right lung cranial lobe lobar bronchus mesenchyme"""
 
-    name: Literal["right lung cranial lobe lobar bronchus mesenchyme"] = (
+    name: Literal[
         "right lung cranial lobe lobar bronchus mesenchyme"
-    )
+    ] = "right lung cranial lobe lobar bronchus mesenchyme"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17993"] = "EMAPA_17993"
 
@@ -13492,9 +13491,9 @@ class _Right_Lung_Cranial_Lobe_Lobar_Bronchus_Mesenchyme(_MouseAnatomicalStructu
 class _Right_Lung_Cranial_Lobe_Lobar_Bronchus_Epithelium(_MouseAnatomicalStructureModel):
     """Model right lung cranial lobe lobar bronchus epithelium"""
 
-    name: Literal["right lung cranial lobe lobar bronchus epithelium"] = (
+    name: Literal[
         "right lung cranial lobe lobar bronchus epithelium"
-    )
+    ] = "right lung cranial lobe lobar bronchus epithelium"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17994"] = "EMAPA_17994"
 
@@ -13502,9 +13501,9 @@ class _Right_Lung_Cranial_Lobe_Lobar_Bronchus_Epithelium(_MouseAnatomicalStructu
 class _Right_Lung_Cranial_Lobe_Lobar_Bronchus_Vascular_Element(_MouseAnatomicalStructureModel):
     """Model right lung cranial lobe lobar bronchus vascular element"""
 
-    name: Literal["right lung cranial lobe lobar bronchus vascular element"] = (
+    name: Literal[
         "right lung cranial lobe lobar bronchus vascular element"
-    )
+    ] = "right lung cranial lobe lobar bronchus vascular element"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17995"] = "EMAPA_17995"
 
@@ -13536,9 +13535,9 @@ class _Right_Lung_Middle_Lobe_Lobar_Bronchus(_MouseAnatomicalStructureModel):
 class _Right_Lung_Middle_Lobe_Lobar_Bronchus_Mesenchyme(_MouseAnatomicalStructureModel):
     """Model right lung middle lobe lobar bronchus mesenchyme"""
 
-    name: Literal["right lung middle lobe lobar bronchus mesenchyme"] = (
+    name: Literal[
         "right lung middle lobe lobar bronchus mesenchyme"
-    )
+    ] = "right lung middle lobe lobar bronchus mesenchyme"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_17999"] = "EMAPA_17999"
 
@@ -13546,9 +13545,9 @@ class _Right_Lung_Middle_Lobe_Lobar_Bronchus_Mesenchyme(_MouseAnatomicalStructur
 class _Right_Lung_Middle_Lobe_Lobar_Bronchus_Epithelium(_MouseAnatomicalStructureModel):
     """Model right lung middle lobe lobar bronchus epithelium"""
 
-    name: Literal["right lung middle lobe lobar bronchus epithelium"] = (
+    name: Literal[
         "right lung middle lobe lobar bronchus epithelium"
-    )
+    ] = "right lung middle lobe lobar bronchus epithelium"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_18000"] = "EMAPA_18000"
 
@@ -13556,9 +13555,9 @@ class _Right_Lung_Middle_Lobe_Lobar_Bronchus_Epithelium(_MouseAnatomicalStructur
 class _Right_Lung_Middle_Lobe_Lobar_Bronchus_Vascular_Element(_MouseAnatomicalStructureModel):
     """Model right lung middle lobe lobar bronchus vascular element"""
 
-    name: Literal["right lung middle lobe lobar bronchus vascular element"] = (
+    name: Literal[
         "right lung middle lobe lobar bronchus vascular element"
-    )
+    ] = "right lung middle lobe lobar bronchus vascular element"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_18001"] = "EMAPA_18001"
 
@@ -14022,9 +14021,9 @@ class _Upper_Arm_Epidermis(_MouseAnatomicalStructureModel):
 class _Forelimb_Digit_1_Metacarpus_Cartilage_Condensation(_MouseAnatomicalStructureModel):
     """Model forelimb digit 1 metacarpus cartilage condensation"""
 
-    name: Literal["forelimb digit 1 metacarpus cartilage condensation"] = (
+    name: Literal[
         "forelimb digit 1 metacarpus cartilage condensation"
-    )
+    ] = "forelimb digit 1 metacarpus cartilage condensation"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_18065"] = "EMAPA_18065"
 
@@ -14064,9 +14063,9 @@ class _Forelimb_Digit_1_Epidermis(_MouseAnatomicalStructureModel):
 class _Forelimb_Digit_2_Metacarpus_Cartilage_Condensation(_MouseAnatomicalStructureModel):
     """Model forelimb digit 2 metacarpus cartilage condensation"""
 
-    name: Literal["forelimb digit 2 metacarpus cartilage condensation"] = (
+    name: Literal[
         "forelimb digit 2 metacarpus cartilage condensation"
-    )
+    ] = "forelimb digit 2 metacarpus cartilage condensation"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_18070"] = "EMAPA_18070"
 
@@ -14106,9 +14105,9 @@ class _Forelimb_Digit_2_Epidermis(_MouseAnatomicalStructureModel):
 class _Forelimb_Digit_3_Metacarpus_Cartilage_Condensation(_MouseAnatomicalStructureModel):
     """Model forelimb digit 3 metacarpus cartilage condensation"""
 
-    name: Literal["forelimb digit 3 metacarpus cartilage condensation"] = (
+    name: Literal[
         "forelimb digit 3 metacarpus cartilage condensation"
-    )
+    ] = "forelimb digit 3 metacarpus cartilage condensation"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_18075"] = "EMAPA_18075"
 
@@ -14148,9 +14147,9 @@ class _Forelimb_Digit_3_Epidermis(_MouseAnatomicalStructureModel):
 class _Forelimb_Digit_4_Metacarpus_Cartilage_Condensation(_MouseAnatomicalStructureModel):
     """Model forelimb digit 4 metacarpus cartilage condensation"""
 
-    name: Literal["forelimb digit 4 metacarpus cartilage condensation"] = (
+    name: Literal[
         "forelimb digit 4 metacarpus cartilage condensation"
-    )
+    ] = "forelimb digit 4 metacarpus cartilage condensation"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_18080"] = "EMAPA_18080"
 
@@ -14190,9 +14189,9 @@ class _Forelimb_Digit_4_Epidermis(_MouseAnatomicalStructureModel):
 class _Forelimb_Digit_5_Metacarpus_Cartilage_Condensation(_MouseAnatomicalStructureModel):
     """Model forelimb digit 5 metacarpus cartilage condensation"""
 
-    name: Literal["forelimb digit 5 metacarpus cartilage condensation"] = (
+    name: Literal[
         "forelimb digit 5 metacarpus cartilage condensation"
-    )
+    ] = "forelimb digit 5 metacarpus cartilage condensation"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_18085"] = "EMAPA_18085"
 
@@ -14232,9 +14231,9 @@ class _Forelimb_Digit_5_Epidermis(_MouseAnatomicalStructureModel):
 class _Interdigital_Region_Between_Forelimb_Digits_1_And_2_Skin(_MouseAnatomicalStructureModel):
     """Model interdigital region between forelimb digits 1 and 2 skin"""
 
-    name: Literal["interdigital region between forelimb digits 1 and 2 skin"] = (
+    name: Literal[
         "interdigital region between forelimb digits 1 and 2 skin"
-    )
+    ] = "interdigital region between forelimb digits 1 and 2 skin"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_18090"] = "EMAPA_18090"
 
@@ -14242,9 +14241,9 @@ class _Interdigital_Region_Between_Forelimb_Digits_1_And_2_Skin(_MouseAnatomical
 class _Interdigital_Region_Between_Forelimb_Digits_1_And_2_Dermis(_MouseAnatomicalStructureModel):
     """Model interdigital region between forelimb digits 1 and 2 dermis"""
 
-    name: Literal["interdigital region between forelimb digits 1 and 2 dermis"] = (
+    name: Literal[
         "interdigital region between forelimb digits 1 and 2 dermis"
-    )
+    ] = "interdigital region between forelimb digits 1 and 2 dermis"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_18091"] = "EMAPA_18091"
 
@@ -14252,9 +14251,9 @@ class _Interdigital_Region_Between_Forelimb_Digits_1_And_2_Dermis(_MouseAnatomic
 class _Interdigital_Region_Between_Forelimb_Digits_1_And_2_Epidermis(_MouseAnatomicalStructureModel):
     """Model interdigital region between forelimb digits 1 and 2 epidermis"""
 
-    name: Literal["interdigital region between forelimb digits 1 and 2 epidermis"] = (
+    name: Literal[
         "interdigital region between forelimb digits 1 and 2 epidermis"
-    )
+    ] = "interdigital region between forelimb digits 1 and 2 epidermis"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_18092"] = "EMAPA_18092"
 
@@ -14262,9 +14261,9 @@ class _Interdigital_Region_Between_Forelimb_Digits_1_And_2_Epidermis(_MouseAnato
 class _Interdigital_Region_Between_Forelimb_Digits_2_And_3_Skin(_MouseAnatomicalStructureModel):
     """Model interdigital region between forelimb digits 2 and 3 skin"""
 
-    name: Literal["interdigital region between forelimb digits 2 and 3 skin"] = (
+    name: Literal[
         "interdigital region between forelimb digits 2 and 3 skin"
-    )
+    ] = "interdigital region between forelimb digits 2 and 3 skin"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_18093"] = "EMAPA_18093"
 
@@ -14272,9 +14271,9 @@ class _Interdigital_Region_Between_Forelimb_Digits_2_And_3_Skin(_MouseAnatomical
 class _Interdigital_Region_Between_Forelimb_Digits_2_And_3_Dermis(_MouseAnatomicalStructureModel):
     """Model interdigital region between forelimb digits 2 and 3 dermis"""
 
-    name: Literal["interdigital region between forelimb digits 2 and 3 dermis"] = (
+    name: Literal[
         "interdigital region between forelimb digits 2 and 3 dermis"
-    )
+    ] = "interdigital region between forelimb digits 2 and 3 dermis"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_18094"] = "EMAPA_18094"
 
@@ -14282,9 +14281,9 @@ class _Interdigital_Region_Between_Forelimb_Digits_2_And_3_Dermis(_MouseAnatomic
 class _Interdigital_Region_Between_Forelimb_Digits_2_And_3_Epidermis(_MouseAnatomicalStructureModel):
     """Model interdigital region between forelimb digits 2 and 3 epidermis"""
 
-    name: Literal["interdigital region between forelimb digits 2 and 3 epidermis"] = (
+    name: Literal[
         "interdigital region between forelimb digits 2 and 3 epidermis"
-    )
+    ] = "interdigital region between forelimb digits 2 and 3 epidermis"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_18095"] = "EMAPA_18095"
 
@@ -14292,9 +14291,9 @@ class _Interdigital_Region_Between_Forelimb_Digits_2_And_3_Epidermis(_MouseAnato
 class _Interdigital_Region_Between_Forelimb_Digits_3_And_4_Skin(_MouseAnatomicalStructureModel):
     """Model interdigital region between forelimb digits 3 and 4 skin"""
 
-    name: Literal["interdigital region between forelimb digits 3 and 4 skin"] = (
+    name: Literal[
         "interdigital region between forelimb digits 3 and 4 skin"
-    )
+    ] = "interdigital region between forelimb digits 3 and 4 skin"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_18096"] = "EMAPA_18096"
 
@@ -14302,9 +14301,9 @@ class _Interdigital_Region_Between_Forelimb_Digits_3_And_4_Skin(_MouseAnatomical
 class _Interdigital_Region_Between_Forelimb_Digits_3_And_4_Dermis(_MouseAnatomicalStructureModel):
     """Model interdigital region between forelimb digits 3 and 4 dermis"""
 
-    name: Literal["interdigital region between forelimb digits 3 and 4 dermis"] = (
+    name: Literal[
         "interdigital region between forelimb digits 3 and 4 dermis"
-    )
+    ] = "interdigital region between forelimb digits 3 and 4 dermis"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_18097"] = "EMAPA_18097"
 
@@ -14312,9 +14311,9 @@ class _Interdigital_Region_Between_Forelimb_Digits_3_And_4_Dermis(_MouseAnatomic
 class _Interdigital_Region_Between_Forelimb_Digits_3_And_4_Epidermis(_MouseAnatomicalStructureModel):
     """Model interdigital region between forelimb digits 3 and 4 epidermis"""
 
-    name: Literal["interdigital region between forelimb digits 3 and 4 epidermis"] = (
+    name: Literal[
         "interdigital region between forelimb digits 3 and 4 epidermis"
-    )
+    ] = "interdigital region between forelimb digits 3 and 4 epidermis"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_18098"] = "EMAPA_18098"
 
@@ -14322,9 +14321,9 @@ class _Interdigital_Region_Between_Forelimb_Digits_3_And_4_Epidermis(_MouseAnato
 class _Interdigital_Region_Between_Forelimb_Digits_4_And_5_Skin(_MouseAnatomicalStructureModel):
     """Model interdigital region between forelimb digits 4 and 5 skin"""
 
-    name: Literal["interdigital region between forelimb digits 4 and 5 skin"] = (
+    name: Literal[
         "interdigital region between forelimb digits 4 and 5 skin"
-    )
+    ] = "interdigital region between forelimb digits 4 and 5 skin"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_18099"] = "EMAPA_18099"
 
@@ -14332,9 +14331,9 @@ class _Interdigital_Region_Between_Forelimb_Digits_4_And_5_Skin(_MouseAnatomical
 class _Interdigital_Region_Between_Forelimb_Digits_4_And_5_Dermis(_MouseAnatomicalStructureModel):
     """Model interdigital region between forelimb digits 4 and 5 dermis"""
 
-    name: Literal["interdigital region between forelimb digits 4 and 5 dermis"] = (
+    name: Literal[
         "interdigital region between forelimb digits 4 and 5 dermis"
-    )
+    ] = "interdigital region between forelimb digits 4 and 5 dermis"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_18100"] = "EMAPA_18100"
 
@@ -14342,9 +14341,9 @@ class _Interdigital_Region_Between_Forelimb_Digits_4_And_5_Dermis(_MouseAnatomic
 class _Interdigital_Region_Between_Forelimb_Digits_4_And_5_Epidermis(_MouseAnatomicalStructureModel):
     """Model interdigital region between forelimb digits 4 and 5 epidermis"""
 
-    name: Literal["interdigital region between forelimb digits 4 and 5 epidermis"] = (
+    name: Literal[
         "interdigital region between forelimb digits 4 and 5 epidermis"
-    )
+    ] = "interdigital region between forelimb digits 4 and 5 epidermis"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_18101"] = "EMAPA_18101"
 
@@ -14384,9 +14383,9 @@ class _Hand_Rest_Of_Skin_Epidermis(_MouseAnatomicalStructureModel):
 class _Hindlimb_Digit_1_Metatarsus_Cartilage_Condensation(_MouseAnatomicalStructureModel):
     """Model hindlimb digit 1 metatarsus cartilage condensation"""
 
-    name: Literal["hindlimb digit 1 metatarsus cartilage condensation"] = (
+    name: Literal[
         "hindlimb digit 1 metatarsus cartilage condensation"
-    )
+    ] = "hindlimb digit 1 metatarsus cartilage condensation"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_18106"] = "EMAPA_18106"
 
@@ -14426,9 +14425,9 @@ class _Hindlimb_Digit_1_Epidermis(_MouseAnatomicalStructureModel):
 class _Hindlimb_Digit_2_Metatarsus_Cartilage_Condensation(_MouseAnatomicalStructureModel):
     """Model hindlimb digit 2 metatarsus cartilage condensation"""
 
-    name: Literal["hindlimb digit 2 metatarsus cartilage condensation"] = (
+    name: Literal[
         "hindlimb digit 2 metatarsus cartilage condensation"
-    )
+    ] = "hindlimb digit 2 metatarsus cartilage condensation"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_18111"] = "EMAPA_18111"
 
@@ -14468,9 +14467,9 @@ class _Hindlimb_Digit_2_Epidermis(_MouseAnatomicalStructureModel):
 class _Hindlimb_Digit_3_Metatarsus_Cartilage_Condensation(_MouseAnatomicalStructureModel):
     """Model hindlimb digit 3 metatarsus cartilage condensation"""
 
-    name: Literal["hindlimb digit 3 metatarsus cartilage condensation"] = (
+    name: Literal[
         "hindlimb digit 3 metatarsus cartilage condensation"
-    )
+    ] = "hindlimb digit 3 metatarsus cartilage condensation"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_18116"] = "EMAPA_18116"
 
@@ -14510,9 +14509,9 @@ class _Hindlimb_Digit_3_Epidermis(_MouseAnatomicalStructureModel):
 class _Hindlimb_Digit_4_Metatarsus_Cartilage_Condensation(_MouseAnatomicalStructureModel):
     """Model hindlimb digit 4 metatarsus cartilage condensation"""
 
-    name: Literal["hindlimb digit 4 metatarsus cartilage condensation"] = (
+    name: Literal[
         "hindlimb digit 4 metatarsus cartilage condensation"
-    )
+    ] = "hindlimb digit 4 metatarsus cartilage condensation"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_18121"] = "EMAPA_18121"
 
@@ -14552,9 +14551,9 @@ class _Hindlimb_Digit_4_Epidermis(_MouseAnatomicalStructureModel):
 class _Hindlimb_Digit_5_Metatarsus_Cartilage_Condensation(_MouseAnatomicalStructureModel):
     """Model hindlimb digit 5 metatarsus cartilage condensation"""
 
-    name: Literal["hindlimb digit 5 metatarsus cartilage condensation"] = (
+    name: Literal[
         "hindlimb digit 5 metatarsus cartilage condensation"
-    )
+    ] = "hindlimb digit 5 metatarsus cartilage condensation"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_18126"] = "EMAPA_18126"
 
@@ -14594,9 +14593,9 @@ class _Hindlimb_Digit_5_Epidermis(_MouseAnatomicalStructureModel):
 class _Interdigital_Region_Between_Hindlimb_Digits_1_And_2_Skin(_MouseAnatomicalStructureModel):
     """Model interdigital region between hindlimb digits 1 and 2 skin"""
 
-    name: Literal["interdigital region between hindlimb digits 1 and 2 skin"] = (
+    name: Literal[
         "interdigital region between hindlimb digits 1 and 2 skin"
-    )
+    ] = "interdigital region between hindlimb digits 1 and 2 skin"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_18131"] = "EMAPA_18131"
 
@@ -14604,9 +14603,9 @@ class _Interdigital_Region_Between_Hindlimb_Digits_1_And_2_Skin(_MouseAnatomical
 class _Interdigital_Region_Between_Hindlimb_Digits_1_And_2_Dermis(_MouseAnatomicalStructureModel):
     """Model interdigital region between hindlimb digits 1 and 2 dermis"""
 
-    name: Literal["interdigital region between hindlimb digits 1 and 2 dermis"] = (
+    name: Literal[
         "interdigital region between hindlimb digits 1 and 2 dermis"
-    )
+    ] = "interdigital region between hindlimb digits 1 and 2 dermis"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_18132"] = "EMAPA_18132"
 
@@ -14614,9 +14613,9 @@ class _Interdigital_Region_Between_Hindlimb_Digits_1_And_2_Dermis(_MouseAnatomic
 class _Interdigital_Region_Between_Hindlimb_Digits_1_And_2_Epidermis(_MouseAnatomicalStructureModel):
     """Model interdigital region between hindlimb digits 1 and 2 epidermis"""
 
-    name: Literal["interdigital region between hindlimb digits 1 and 2 epidermis"] = (
+    name: Literal[
         "interdigital region between hindlimb digits 1 and 2 epidermis"
-    )
+    ] = "interdigital region between hindlimb digits 1 and 2 epidermis"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_18133"] = "EMAPA_18133"
 
@@ -14624,9 +14623,9 @@ class _Interdigital_Region_Between_Hindlimb_Digits_1_And_2_Epidermis(_MouseAnato
 class _Interdigital_Region_Between_Hindlimb_Digits_2_And_3_Skin(_MouseAnatomicalStructureModel):
     """Model interdigital region between hindlimb digits 2 and 3 skin"""
 
-    name: Literal["interdigital region between hindlimb digits 2 and 3 skin"] = (
+    name: Literal[
         "interdigital region between hindlimb digits 2 and 3 skin"
-    )
+    ] = "interdigital region between hindlimb digits 2 and 3 skin"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_18134"] = "EMAPA_18134"
 
@@ -14634,9 +14633,9 @@ class _Interdigital_Region_Between_Hindlimb_Digits_2_And_3_Skin(_MouseAnatomical
 class _Interdigital_Region_Between_Hindlimb_Digits_2_And_3_Dermis(_MouseAnatomicalStructureModel):
     """Model interdigital region between hindlimb digits 2 and 3 dermis"""
 
-    name: Literal["interdigital region between hindlimb digits 2 and 3 dermis"] = (
+    name: Literal[
         "interdigital region between hindlimb digits 2 and 3 dermis"
-    )
+    ] = "interdigital region between hindlimb digits 2 and 3 dermis"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_18135"] = "EMAPA_18135"
 
@@ -14644,9 +14643,9 @@ class _Interdigital_Region_Between_Hindlimb_Digits_2_And_3_Dermis(_MouseAnatomic
 class _Interdigital_Region_Between_Hindlimb_Digits_2_And_3_Epidermis(_MouseAnatomicalStructureModel):
     """Model interdigital region between hindlimb digits 2 and 3 epidermis"""
 
-    name: Literal["interdigital region between hindlimb digits 2 and 3 epidermis"] = (
+    name: Literal[
         "interdigital region between hindlimb digits 2 and 3 epidermis"
-    )
+    ] = "interdigital region between hindlimb digits 2 and 3 epidermis"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_18136"] = "EMAPA_18136"
 
@@ -14654,9 +14653,9 @@ class _Interdigital_Region_Between_Hindlimb_Digits_2_And_3_Epidermis(_MouseAnato
 class _Interdigital_Region_Between_Hindlimb_Digits_3_And_4_Skin(_MouseAnatomicalStructureModel):
     """Model interdigital region between hindlimb digits 3 and 4 skin"""
 
-    name: Literal["interdigital region between hindlimb digits 3 and 4 skin"] = (
+    name: Literal[
         "interdigital region between hindlimb digits 3 and 4 skin"
-    )
+    ] = "interdigital region between hindlimb digits 3 and 4 skin"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_18137"] = "EMAPA_18137"
 
@@ -14664,9 +14663,9 @@ class _Interdigital_Region_Between_Hindlimb_Digits_3_And_4_Skin(_MouseAnatomical
 class _Interdigital_Region_Between_Hindlimb_Digits_3_And_4_Dermis(_MouseAnatomicalStructureModel):
     """Model interdigital region between hindlimb digits 3 and 4 dermis"""
 
-    name: Literal["interdigital region between hindlimb digits 3 and 4 dermis"] = (
+    name: Literal[
         "interdigital region between hindlimb digits 3 and 4 dermis"
-    )
+    ] = "interdigital region between hindlimb digits 3 and 4 dermis"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_18138"] = "EMAPA_18138"
 
@@ -14674,9 +14673,9 @@ class _Interdigital_Region_Between_Hindlimb_Digits_3_And_4_Dermis(_MouseAnatomic
 class _Interdigital_Region_Between_Hindlimb_Digits_3_And_4_Epidermis(_MouseAnatomicalStructureModel):
     """Model interdigital region between hindlimb digits 3 and 4 epidermis"""
 
-    name: Literal["interdigital region between hindlimb digits 3 and 4 epidermis"] = (
+    name: Literal[
         "interdigital region between hindlimb digits 3 and 4 epidermis"
-    )
+    ] = "interdigital region between hindlimb digits 3 and 4 epidermis"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_18139"] = "EMAPA_18139"
 
@@ -14684,9 +14683,9 @@ class _Interdigital_Region_Between_Hindlimb_Digits_3_And_4_Epidermis(_MouseAnato
 class _Interdigital_Region_Between_Hindlimb_Digits_4_And_5_Skin(_MouseAnatomicalStructureModel):
     """Model interdigital region between hindlimb digits 4 and 5 skin"""
 
-    name: Literal["interdigital region between hindlimb digits 4 and 5 skin"] = (
+    name: Literal[
         "interdigital region between hindlimb digits 4 and 5 skin"
-    )
+    ] = "interdigital region between hindlimb digits 4 and 5 skin"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_18140"] = "EMAPA_18140"
 
@@ -14694,9 +14693,9 @@ class _Interdigital_Region_Between_Hindlimb_Digits_4_And_5_Skin(_MouseAnatomical
 class _Interdigital_Region_Between_Hindlimb_Digits_4_And_5_Dermis(_MouseAnatomicalStructureModel):
     """Model interdigital region between hindlimb digits 4 and 5 dermis"""
 
-    name: Literal["interdigital region between hindlimb digits 4 and 5 dermis"] = (
+    name: Literal[
         "interdigital region between hindlimb digits 4 and 5 dermis"
-    )
+    ] = "interdigital region between hindlimb digits 4 and 5 dermis"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_18141"] = "EMAPA_18141"
 
@@ -14704,9 +14703,9 @@ class _Interdigital_Region_Between_Hindlimb_Digits_4_And_5_Dermis(_MouseAnatomic
 class _Interdigital_Region_Between_Hindlimb_Digits_4_And_5_Epidermis(_MouseAnatomicalStructureModel):
     """Model interdigital region between hindlimb digits 4 and 5 epidermis"""
 
-    name: Literal["interdigital region between hindlimb digits 4 and 5 epidermis"] = (
+    name: Literal[
         "interdigital region between hindlimb digits 4 and 5 epidermis"
-    )
+    ] = "interdigital region between hindlimb digits 4 and 5 epidermis"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_18142"] = "EMAPA_18142"
 
@@ -17170,9 +17169,9 @@ class _Cerebellum_Intraventricular_Portion(_MouseAnatomicalStructureModel):
 class _Cerebellum_Intraventricular_Portion_Mantle_Layer(_MouseAnatomicalStructureModel):
     """Model cerebellum intraventricular portion mantle layer"""
 
-    name: Literal["cerebellum intraventricular portion mantle layer"] = (
+    name: Literal[
         "cerebellum intraventricular portion mantle layer"
-    )
+    ] = "cerebellum intraventricular portion mantle layer"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_18556"] = "EMAPA_18556"
 
@@ -17180,9 +17179,9 @@ class _Cerebellum_Intraventricular_Portion_Mantle_Layer(_MouseAnatomicalStructur
 class _Cerebellum_Intraventricular_Portion_Marginal_Layer(_MouseAnatomicalStructureModel):
     """Model cerebellum intraventricular portion marginal layer"""
 
-    name: Literal["cerebellum intraventricular portion marginal layer"] = (
+    name: Literal[
         "cerebellum intraventricular portion marginal layer"
-    )
+    ] = "cerebellum intraventricular portion marginal layer"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_18557"] = "EMAPA_18557"
 
@@ -17190,9 +17189,9 @@ class _Cerebellum_Intraventricular_Portion_Marginal_Layer(_MouseAnatomicalStruct
 class _Cerebellum_Intraventricular_Portion_Ventricular_Layer(_MouseAnatomicalStructureModel):
     """Model cerebellum intraventricular portion ventricular layer"""
 
-    name: Literal["cerebellum intraventricular portion ventricular layer"] = (
+    name: Literal[
         "cerebellum intraventricular portion ventricular layer"
-    )
+    ] = "cerebellum intraventricular portion ventricular layer"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_18558"] = "EMAPA_18558"
 
@@ -17256,9 +17255,9 @@ class _Metencephalon_Rest_Of_Alar_Plate_Marginal_Layer(_MouseAnatomicalStructure
 class _Metencephalon_Rest_Of_Alar_Plate_Ventricular_Layer(_MouseAnatomicalStructureModel):
     """Model metencephalon rest of alar plate ventricular layer"""
 
-    name: Literal["metencephalon rest of alar plate ventricular layer"] = (
+    name: Literal[
         "metencephalon rest of alar plate ventricular layer"
-    )
+    ] = "metencephalon rest of alar plate ventricular layer"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_18566"] = "EMAPA_18566"
 
@@ -18482,9 +18481,9 @@ class _Pineal_Gland(_MouseAnatomicalStructureModel):
 class _Anterior_Horn_Of_Lateral_Ventricle_Choroid_Plexus(_MouseAnatomicalStructureModel):
     """Model anterior horn of lateral ventricle choroid plexus"""
 
-    name: Literal["anterior horn of lateral ventricle choroid plexus"] = (
+    name: Literal[
         "anterior horn of lateral ventricle choroid plexus"
-    )
+    ] = "anterior horn of lateral ventricle choroid plexus"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_18779"] = "EMAPA_18779"
 
@@ -18500,9 +18499,9 @@ class _Lateral_Ventricle_Inferior_Horn_Choroid_Plexus(_MouseAnatomicalStructureM
 class _Posterior_Horn_Of_Lateral_Ventricle_Choroid_Plexus(_MouseAnatomicalStructureModel):
     """Model posterior horn of lateral ventricle choroid plexus"""
 
-    name: Literal["posterior horn of lateral ventricle choroid plexus"] = (
+    name: Literal[
         "posterior horn of lateral ventricle choroid plexus"
-    )
+    ] = "posterior horn of lateral ventricle choroid plexus"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_18781"] = "EMAPA_18781"
 
@@ -18510,9 +18509,9 @@ class _Posterior_Horn_Of_Lateral_Ventricle_Choroid_Plexus(_MouseAnatomicalStruct
 class _Superior_Horn_Of_Lateral_Ventricle_Choroid_Plexus(_MouseAnatomicalStructureModel):
     """Model superior horn of lateral ventricle choroid plexus"""
 
-    name: Literal["superior horn of lateral ventricle choroid plexus"] = (
+    name: Literal[
         "superior horn of lateral ventricle choroid plexus"
-    )
+    ] = "superior horn of lateral ventricle choroid plexus"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_18782"] = "EMAPA_18782"
 
@@ -18544,9 +18543,9 @@ class _Medulla_Oblongata_Rest_Of_Basal_Plate(_MouseAnatomicalStructureModel):
 class _Medulla_Oblongata_Rest_Of_Basal_Plate_Mantle_Layer(_MouseAnatomicalStructureModel):
     """Model medulla oblongata rest of basal plate mantle layer"""
 
-    name: Literal["medulla oblongata rest of basal plate mantle layer"] = (
+    name: Literal[
         "medulla oblongata rest of basal plate mantle layer"
-    )
+    ] = "medulla oblongata rest of basal plate mantle layer"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_18787"] = "EMAPA_18787"
 
@@ -18554,9 +18553,9 @@ class _Medulla_Oblongata_Rest_Of_Basal_Plate_Mantle_Layer(_MouseAnatomicalStruct
 class _Medulla_Oblongata_Rest_Of_Basal_Plate_Marginal_Layer(_MouseAnatomicalStructureModel):
     """Model medulla oblongata rest of basal plate marginal layer"""
 
-    name: Literal["medulla oblongata rest of basal plate marginal layer"] = (
+    name: Literal[
         "medulla oblongata rest of basal plate marginal layer"
-    )
+    ] = "medulla oblongata rest of basal plate marginal layer"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_18788"] = "EMAPA_18788"
 
@@ -18564,9 +18563,9 @@ class _Medulla_Oblongata_Rest_Of_Basal_Plate_Marginal_Layer(_MouseAnatomicalStru
 class _Medulla_Oblongata_Rest_Of_Basal_Plate_Ventricular_Layer(_MouseAnatomicalStructureModel):
     """Model medulla oblongata rest of basal plate ventricular layer"""
 
-    name: Literal["medulla oblongata rest of basal plate ventricular layer"] = (
+    name: Literal[
         "medulla oblongata rest of basal plate ventricular layer"
-    )
+    ] = "medulla oblongata rest of basal plate ventricular layer"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_18789"] = "EMAPA_18789"
 
@@ -19518,9 +19517,9 @@ class _Ciliary_Body(_MouseAnatomicalStructureModel):
 class _Medulla_Oblongata_Part_Of_4Th_Ventricle_Choroid_Plexus(_MouseAnatomicalStructureModel):
     """Model medulla oblongata part of 4th ventricle choroid plexus"""
 
-    name: Literal["medulla oblongata part of 4th ventricle choroid plexus"] = (
+    name: Literal[
         "medulla oblongata part of 4th ventricle choroid plexus"
-    )
+    ] = "medulla oblongata part of 4th ventricle choroid plexus"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_19074"] = "EMAPA_19074"
 
@@ -20856,9 +20855,9 @@ class _Hindgut_Derived_Large_Intestine_Mesentery(_MouseAnatomicalStructureModel)
 class _Hindgut_Derived_Large_Intestine_Dorsal_Mesentery(_MouseAnatomicalStructureModel):
     """Model hindgut derived large intestine dorsal mesentery"""
 
-    name: Literal["hindgut derived large intestine dorsal mesentery"] = (
+    name: Literal[
         "hindgut derived large intestine dorsal mesentery"
-    )
+    ] = "hindgut derived large intestine dorsal mesentery"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_19265"] = "EMAPA_19265"
 
@@ -20866,9 +20865,9 @@ class _Hindgut_Derived_Large_Intestine_Dorsal_Mesentery(_MouseAnatomicalStructur
 class _Hindgut_Derived_Large_Intestine_Vascular_Element(_MouseAnatomicalStructureModel):
     """Model hindgut derived large intestine vascular element"""
 
-    name: Literal["hindgut derived large intestine vascular element"] = (
+    name: Literal[
         "hindgut derived large intestine vascular element"
-    )
+    ] = "hindgut derived large intestine vascular element"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_19266"] = "EMAPA_19266"
 
@@ -21108,9 +21107,9 @@ class _Thymus_Thin_Fibrous_Capsule(_MouseAnatomicalStructureModel):
 class _Thyroid_Gland_Left_Lobe_Colloid_Filled_Follicles(_MouseAnatomicalStructureModel):
     """Model thyroid gland left lobe colloid-filled follicles"""
 
-    name: Literal["thyroid gland left lobe colloid-filled follicles"] = (
+    name: Literal[
         "thyroid gland left lobe colloid-filled follicles"
-    )
+    ] = "thyroid gland left lobe colloid-filled follicles"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_19307"] = "EMAPA_19307"
 
@@ -21118,9 +21117,9 @@ class _Thyroid_Gland_Left_Lobe_Colloid_Filled_Follicles(_MouseAnatomicalStructur
 class _Thyroid_Gland_Right_Lobe_Colloid_Filled_Follicles(_MouseAnatomicalStructureModel):
     """Model thyroid gland right lobe colloid-filled follicles"""
 
-    name: Literal["thyroid gland right lobe colloid-filled follicles"] = (
+    name: Literal[
         "thyroid gland right lobe colloid-filled follicles"
-    )
+    ] = "thyroid gland right lobe colloid-filled follicles"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_19308"] = "EMAPA_19308"
 
@@ -24576,9 +24575,9 @@ class _L1_Neural_Arch_Transverse_Process(_MouseAnatomicalStructureModel):
 class _Cartilage_Primordium_Of_Future_L1_Spinous_Process(_MouseAnatomicalStructureModel):
     """Model cartilage primordium of future L1 spinous process"""
 
-    name: Literal["cartilage primordium of future L1 spinous process"] = (
+    name: Literal[
         "cartilage primordium of future L1 spinous process"
-    )
+    ] = "cartilage primordium of future L1 spinous process"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_25107"] = "EMAPA_25107"
 
@@ -26450,9 +26449,9 @@ class _Subcutaneous_Vein(_MouseAnatomicalStructureModel):
 class _Trunk_Mesenchyme_Derived_From_Neural_Crest_Non_Migrating_Cells(_MouseAnatomicalStructureModel):
     """Model trunk mesenchyme derived from neural crest non-migrating cells"""
 
-    name: Literal["trunk mesenchyme derived from neural crest non-migrating cells"] = (
+    name: Literal[
         "trunk mesenchyme derived from neural crest non-migrating cells"
-    )
+    ] = "trunk mesenchyme derived from neural crest non-migrating cells"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_25355"] = "EMAPA_25355"
 
@@ -26564,9 +26563,9 @@ class _L2_Neural_Arch_Pedicle(_MouseAnatomicalStructureModel):
 class _Cartilage_Primordium_Of_Future_L2_Spinous_Process(_MouseAnatomicalStructureModel):
     """Model cartilage primordium of future L2 spinous process"""
 
-    name: Literal["cartilage primordium of future L2 spinous process"] = (
+    name: Literal[
         "cartilage primordium of future L2 spinous process"
-    )
+    ] = "cartilage primordium of future L2 spinous process"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_25372"] = "EMAPA_25372"
 
@@ -26622,9 +26621,9 @@ class _L3_Neural_Arch_Pedicle(_MouseAnatomicalStructureModel):
 class _Cartilage_Primordium_Of_Future_L3_Spinous_Process(_MouseAnatomicalStructureModel):
     """Model cartilage primordium of future L3 spinous process"""
 
-    name: Literal["cartilage primordium of future L3 spinous process"] = (
+    name: Literal[
         "cartilage primordium of future L3 spinous process"
-    )
+    ] = "cartilage primordium of future L3 spinous process"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_25380"] = "EMAPA_25380"
 
@@ -26680,9 +26679,9 @@ class _L4_Neural_Arch_Pedicle(_MouseAnatomicalStructureModel):
 class _Cartilage_Primordium_Of_Future_L4_Spinous_Process(_MouseAnatomicalStructureModel):
     """Model cartilage primordium of future L4 spinous process"""
 
-    name: Literal["cartilage primordium of future L4 spinous process"] = (
+    name: Literal[
         "cartilage primordium of future L4 spinous process"
-    )
+    ] = "cartilage primordium of future L4 spinous process"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_25388"] = "EMAPA_25388"
 
@@ -26738,9 +26737,9 @@ class _L5_Neural_Arch_Pedicle(_MouseAnatomicalStructureModel):
 class _Cartilage_Primordium_Of_Future_L5_Spinous_Process(_MouseAnatomicalStructureModel):
     """Model cartilage primordium of future L5 spinous process"""
 
-    name: Literal["cartilage primordium of future L5 spinous process"] = (
+    name: Literal[
         "cartilage primordium of future L5 spinous process"
-    )
+    ] = "cartilage primordium of future L5 spinous process"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_25396"] = "EMAPA_25396"
 
@@ -26796,9 +26795,9 @@ class _L6_Neural_Arch_Pedicle(_MouseAnatomicalStructureModel):
 class _Cartilage_Primordium_Of_Future_L6_Spinous_Process(_MouseAnatomicalStructureModel):
     """Model cartilage primordium of future L6 spinous process"""
 
-    name: Literal["cartilage primordium of future L6 spinous process"] = (
+    name: Literal[
         "cartilage primordium of future L6 spinous process"
-    )
+    ] = "cartilage primordium of future L6 spinous process"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_25404"] = "EMAPA_25404"
 
@@ -26854,9 +26853,9 @@ class _S1_Neural_Arch_Pedicle(_MouseAnatomicalStructureModel):
 class _Cartilage_Primordium_Of_Future_S1_Spinous_Process(_MouseAnatomicalStructureModel):
     """Model cartilage primordium of future S1 spinous process"""
 
-    name: Literal["cartilage primordium of future S1 spinous process"] = (
+    name: Literal[
         "cartilage primordium of future S1 spinous process"
-    )
+    ] = "cartilage primordium of future S1 spinous process"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_25412"] = "EMAPA_25412"
 
@@ -26912,9 +26911,9 @@ class _S2_Neural_Arch_Pedicle(_MouseAnatomicalStructureModel):
 class _Cartilage_Primordium_Of_Future_S2_Spinous_Process(_MouseAnatomicalStructureModel):
     """Model cartilage primordium of future S2 spinous process"""
 
-    name: Literal["cartilage primordium of future S2 spinous process"] = (
+    name: Literal[
         "cartilage primordium of future S2 spinous process"
-    )
+    ] = "cartilage primordium of future S2 spinous process"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_25420"] = "EMAPA_25420"
 
@@ -26970,9 +26969,9 @@ class _S3_Neural_Arch_Pedicle(_MouseAnatomicalStructureModel):
 class _Cartilage_Primordium_Of_Future_S3_Spinous_Process(_MouseAnatomicalStructureModel):
     """Model cartilage primordium of future S3 spinous process"""
 
-    name: Literal["cartilage primordium of future S3 spinous process"] = (
+    name: Literal[
         "cartilage primordium of future S3 spinous process"
-    )
+    ] = "cartilage primordium of future S3 spinous process"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_25428"] = "EMAPA_25428"
 
@@ -27028,9 +27027,9 @@ class _S4_Neural_Arch_Pedicle(_MouseAnatomicalStructureModel):
 class _Cartilage_Primordium_Of_Future_S4_Spinous_Process(_MouseAnatomicalStructureModel):
     """Model cartilage primordium of future S4 spinous process"""
 
-    name: Literal["cartilage primordium of future S4 spinous process"] = (
+    name: Literal[
         "cartilage primordium of future S4 spinous process"
-    )
+    ] = "cartilage primordium of future S4 spinous process"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_25436"] = "EMAPA_25436"
 
@@ -27086,9 +27085,9 @@ class _T1_Neural_Arch_Pedicle(_MouseAnatomicalStructureModel):
 class _Cartilage_Primordium_Of_Future_T1_Spinous_Process(_MouseAnatomicalStructureModel):
     """Model cartilage primordium of future T1 spinous process"""
 
-    name: Literal["cartilage primordium of future T1 spinous process"] = (
+    name: Literal[
         "cartilage primordium of future T1 spinous process"
-    )
+    ] = "cartilage primordium of future T1 spinous process"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_25444"] = "EMAPA_25444"
 
@@ -27144,9 +27143,9 @@ class _T10_Neural_Arch_Pedicle(_MouseAnatomicalStructureModel):
 class _Cartilage_Primordium_Of_Future_T10_Spinous_Process(_MouseAnatomicalStructureModel):
     """Model cartilage primordium of future T10 spinous process"""
 
-    name: Literal["cartilage primordium of future T10 spinous process"] = (
+    name: Literal[
         "cartilage primordium of future T10 spinous process"
-    )
+    ] = "cartilage primordium of future T10 spinous process"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_25452"] = "EMAPA_25452"
 
@@ -27202,9 +27201,9 @@ class _T11_Neural_Arch_Pedicle(_MouseAnatomicalStructureModel):
 class _Cartilage_Primordium_Of_Future_T11_Spinous_Process(_MouseAnatomicalStructureModel):
     """Model cartilage primordium of future T11 spinous process"""
 
-    name: Literal["cartilage primordium of future T11 spinous process"] = (
+    name: Literal[
         "cartilage primordium of future T11 spinous process"
-    )
+    ] = "cartilage primordium of future T11 spinous process"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_25460"] = "EMAPA_25460"
 
@@ -27260,9 +27259,9 @@ class _T12_Neural_Arch_Pedicle(_MouseAnatomicalStructureModel):
 class _Cartilage_Primordium_Of_Future_T12_Spinous_Process(_MouseAnatomicalStructureModel):
     """Model cartilage primordium of future T12 spinous process"""
 
-    name: Literal["cartilage primordium of future T12 spinous process"] = (
+    name: Literal[
         "cartilage primordium of future T12 spinous process"
-    )
+    ] = "cartilage primordium of future T12 spinous process"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_25468"] = "EMAPA_25468"
 
@@ -27318,9 +27317,9 @@ class _T13_Neural_Arch_Pedicle(_MouseAnatomicalStructureModel):
 class _Cartilage_Primordium_Of_Future_T13_Spinous_Process(_MouseAnatomicalStructureModel):
     """Model cartilage primordium of future T13 spinous process"""
 
-    name: Literal["cartilage primordium of future T13 spinous process"] = (
+    name: Literal[
         "cartilage primordium of future T13 spinous process"
-    )
+    ] = "cartilage primordium of future T13 spinous process"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_25476"] = "EMAPA_25476"
 
@@ -27376,9 +27375,9 @@ class _T2_Neural_Arch_Pedicle(_MouseAnatomicalStructureModel):
 class _Cartilage_Primordium_Of_Future_T2_Spinous_Process(_MouseAnatomicalStructureModel):
     """Model cartilage primordium of future T2 spinous process"""
 
-    name: Literal["cartilage primordium of future T2 spinous process"] = (
+    name: Literal[
         "cartilage primordium of future T2 spinous process"
-    )
+    ] = "cartilage primordium of future T2 spinous process"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_25484"] = "EMAPA_25484"
 
@@ -27434,9 +27433,9 @@ class _T3_Neural_Arch_Pedicle(_MouseAnatomicalStructureModel):
 class _Cartilage_Primordium_Of_Future_T3_Spinous_Process(_MouseAnatomicalStructureModel):
     """Model cartilage primordium of future T3 spinous process"""
 
-    name: Literal["cartilage primordium of future T3 spinous process"] = (
+    name: Literal[
         "cartilage primordium of future T3 spinous process"
-    )
+    ] = "cartilage primordium of future T3 spinous process"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_25492"] = "EMAPA_25492"
 
@@ -27492,9 +27491,9 @@ class _T4_Neural_Arch_Pedicle(_MouseAnatomicalStructureModel):
 class _Cartilage_Primordium_Of_Future_T4_Spinous_Process(_MouseAnatomicalStructureModel):
     """Model cartilage primordium of future T4 spinous process"""
 
-    name: Literal["cartilage primordium of future T4 spinous process"] = (
+    name: Literal[
         "cartilage primordium of future T4 spinous process"
-    )
+    ] = "cartilage primordium of future T4 spinous process"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_25500"] = "EMAPA_25500"
 
@@ -27550,9 +27549,9 @@ class _T5_Neural_Arch_Pedicle(_MouseAnatomicalStructureModel):
 class _Cartilage_Primordium_Of_Future_T5_Spinous_Process(_MouseAnatomicalStructureModel):
     """Model cartilage primordium of future T5 spinous process"""
 
-    name: Literal["cartilage primordium of future T5 spinous process"] = (
+    name: Literal[
         "cartilage primordium of future T5 spinous process"
-    )
+    ] = "cartilage primordium of future T5 spinous process"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_25508"] = "EMAPA_25508"
 
@@ -27608,9 +27607,9 @@ class _T6_Neural_Arch_Pedicle(_MouseAnatomicalStructureModel):
 class _Cartilage_Primordium_Of_Future_T6_Spinous_Process(_MouseAnatomicalStructureModel):
     """Model cartilage primordium of future T6 spinous process"""
 
-    name: Literal["cartilage primordium of future T6 spinous process"] = (
+    name: Literal[
         "cartilage primordium of future T6 spinous process"
-    )
+    ] = "cartilage primordium of future T6 spinous process"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_25516"] = "EMAPA_25516"
 
@@ -27666,9 +27665,9 @@ class _T7_Neural_Arch_Pedicle(_MouseAnatomicalStructureModel):
 class _Cartilage_Primordium_Of_Future_T7_Spinous_Process(_MouseAnatomicalStructureModel):
     """Model cartilage primordium of future T7 spinous process"""
 
-    name: Literal["cartilage primordium of future T7 spinous process"] = (
+    name: Literal[
         "cartilage primordium of future T7 spinous process"
-    )
+    ] = "cartilage primordium of future T7 spinous process"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_25524"] = "EMAPA_25524"
 
@@ -27724,9 +27723,9 @@ class _T8_Neural_Arch_Pedicle(_MouseAnatomicalStructureModel):
 class _Cartilage_Primordium_Of_Future_T8_Spinous_Process(_MouseAnatomicalStructureModel):
     """Model cartilage primordium of future T8 spinous process"""
 
-    name: Literal["cartilage primordium of future T8 spinous process"] = (
+    name: Literal[
         "cartilage primordium of future T8 spinous process"
-    )
+    ] = "cartilage primordium of future T8 spinous process"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_25532"] = "EMAPA_25532"
 
@@ -27782,9 +27781,9 @@ class _T9_Neural_Arch_Pedicle(_MouseAnatomicalStructureModel):
 class _Cartilage_Primordium_Of_Future_T9_Spinous_Process(_MouseAnatomicalStructureModel):
     """Model cartilage primordium of future T9 spinous process"""
 
-    name: Literal["cartilage primordium of future T9 spinous process"] = (
+    name: Literal[
         "cartilage primordium of future T9 spinous process"
-    )
+    ] = "cartilage primordium of future T9 spinous process"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_25540"] = "EMAPA_25540"
 
@@ -27840,9 +27839,9 @@ class _Tl1_Neural_Arch_Pedicle(_MouseAnatomicalStructureModel):
 class _Cartilage_Primordium_Of_Future_Tl1_Spinous_Process(_MouseAnatomicalStructureModel):
     """Model cartilage primordium of future Tl1 spinous process"""
 
-    name: Literal["cartilage primordium of future Tl1 spinous process"] = (
+    name: Literal[
         "cartilage primordium of future Tl1 spinous process"
-    )
+    ] = "cartilage primordium of future Tl1 spinous process"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_25548"] = "EMAPA_25548"
 
@@ -27898,9 +27897,9 @@ class _Tl10_Neural_Arch_Pedicle(_MouseAnatomicalStructureModel):
 class _Cartilage_Primordium_Of_Future_Tl10_Spinous_Process(_MouseAnatomicalStructureModel):
     """Model cartilage primordium of future Tl10 spinous process"""
 
-    name: Literal["cartilage primordium of future Tl10 spinous process"] = (
+    name: Literal[
         "cartilage primordium of future Tl10 spinous process"
-    )
+    ] = "cartilage primordium of future Tl10 spinous process"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_25556"] = "EMAPA_25556"
 
@@ -27956,9 +27955,9 @@ class _Tl11_Neural_Arch_Pedicle(_MouseAnatomicalStructureModel):
 class _Cartilage_Primordium_Of_Future_Tl11_Spinous_Process(_MouseAnatomicalStructureModel):
     """Model cartilage primordium of future Tl11 spinous process"""
 
-    name: Literal["cartilage primordium of future Tl11 spinous process"] = (
+    name: Literal[
         "cartilage primordium of future Tl11 spinous process"
-    )
+    ] = "cartilage primordium of future Tl11 spinous process"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_25564"] = "EMAPA_25564"
 
@@ -28014,9 +28013,9 @@ class _Tl12_Neural_Arch_Pedicle(_MouseAnatomicalStructureModel):
 class _Cartilage_Primordium_Of_Future_Tl12_Spinous_Process(_MouseAnatomicalStructureModel):
     """Model cartilage primordium of future Tl12 spinous process"""
 
-    name: Literal["cartilage primordium of future Tl12 spinous process"] = (
+    name: Literal[
         "cartilage primordium of future Tl12 spinous process"
-    )
+    ] = "cartilage primordium of future Tl12 spinous process"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_25572"] = "EMAPA_25572"
 
@@ -28072,9 +28071,9 @@ class _Tl13_Neural_Arch_Pedicle(_MouseAnatomicalStructureModel):
 class _Cartilage_Primordium_Of_Future_Tl13_Spinous_Process(_MouseAnatomicalStructureModel):
     """Model cartilage primordium of future Tl13 spinous process"""
 
-    name: Literal["cartilage primordium of future Tl13 spinous process"] = (
+    name: Literal[
         "cartilage primordium of future Tl13 spinous process"
-    )
+    ] = "cartilage primordium of future Tl13 spinous process"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_25580"] = "EMAPA_25580"
 
@@ -28130,9 +28129,9 @@ class _Tl14_Neural_Arch_Pedicle(_MouseAnatomicalStructureModel):
 class _Cartilage_Primordium_Of_Future_Tl14_Spinous_Process(_MouseAnatomicalStructureModel):
     """Model cartilage primordium of future Tl14 spinous process"""
 
-    name: Literal["cartilage primordium of future Tl14 spinous process"] = (
+    name: Literal[
         "cartilage primordium of future Tl14 spinous process"
-    )
+    ] = "cartilage primordium of future Tl14 spinous process"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_25588"] = "EMAPA_25588"
 
@@ -28188,9 +28187,9 @@ class _Tl15_Neural_Arch_Pedicle(_MouseAnatomicalStructureModel):
 class _Cartilage_Primordium_Of_Future_Tl15_Spinous_Process(_MouseAnatomicalStructureModel):
     """Model cartilage primordium of future Tl15 spinous process"""
 
-    name: Literal["cartilage primordium of future Tl15 spinous process"] = (
+    name: Literal[
         "cartilage primordium of future Tl15 spinous process"
-    )
+    ] = "cartilage primordium of future Tl15 spinous process"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_25596"] = "EMAPA_25596"
 
@@ -28246,9 +28245,9 @@ class _Tl16_Neural_Arch_Pedicle(_MouseAnatomicalStructureModel):
 class _Cartilage_Primordium_Of_Future_Tl16_Spinous_Process(_MouseAnatomicalStructureModel):
     """Model cartilage primordium of future Tl16 spinous process"""
 
-    name: Literal["cartilage primordium of future Tl16 spinous process"] = (
+    name: Literal[
         "cartilage primordium of future Tl16 spinous process"
-    )
+    ] = "cartilage primordium of future Tl16 spinous process"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_25604"] = "EMAPA_25604"
 
@@ -28304,9 +28303,9 @@ class _Tl17_Neural_Arch_Pedicle(_MouseAnatomicalStructureModel):
 class _Cartilage_Primordium_Of_Future_Tl17_Spinous_Process(_MouseAnatomicalStructureModel):
     """Model cartilage primordium of future Tl17 spinous process"""
 
-    name: Literal["cartilage primordium of future Tl17 spinous process"] = (
+    name: Literal[
         "cartilage primordium of future Tl17 spinous process"
-    )
+    ] = "cartilage primordium of future Tl17 spinous process"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_25612"] = "EMAPA_25612"
 
@@ -28362,9 +28361,9 @@ class _Tl18_Neural_Arch_Pedicle(_MouseAnatomicalStructureModel):
 class _Cartilage_Primordium_Of_Future_Tl18_Spinous_Process(_MouseAnatomicalStructureModel):
     """Model cartilage primordium of future Tl18 spinous process"""
 
-    name: Literal["cartilage primordium of future Tl18 spinous process"] = (
+    name: Literal[
         "cartilage primordium of future Tl18 spinous process"
-    )
+    ] = "cartilage primordium of future Tl18 spinous process"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_25620"] = "EMAPA_25620"
 
@@ -28420,9 +28419,9 @@ class _Tl19_Neural_Arch_Pedicle(_MouseAnatomicalStructureModel):
 class _Cartilage_Primordium_Of_Future_Tl19_Spinous_Process(_MouseAnatomicalStructureModel):
     """Model cartilage primordium of future Tl19 spinous process"""
 
-    name: Literal["cartilage primordium of future Tl19 spinous process"] = (
+    name: Literal[
         "cartilage primordium of future Tl19 spinous process"
-    )
+    ] = "cartilage primordium of future Tl19 spinous process"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_25628"] = "EMAPA_25628"
 
@@ -28478,9 +28477,9 @@ class _Tl2_Neural_Arch_Pedicle(_MouseAnatomicalStructureModel):
 class _Cartilage_Primordium_Of_Future_Tl2_Spinous_Process(_MouseAnatomicalStructureModel):
     """Model cartilage primordium of future Tl2 spinous process"""
 
-    name: Literal["cartilage primordium of future Tl2 spinous process"] = (
+    name: Literal[
         "cartilage primordium of future Tl2 spinous process"
-    )
+    ] = "cartilage primordium of future Tl2 spinous process"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_25636"] = "EMAPA_25636"
 
@@ -28536,9 +28535,9 @@ class _Tl3_Neural_Arch_Pedicle(_MouseAnatomicalStructureModel):
 class _Cartilage_Primordium_Of_Future_Tl3_Spinous_Process(_MouseAnatomicalStructureModel):
     """Model cartilage primordium of future Tl3 spinous process"""
 
-    name: Literal["cartilage primordium of future Tl3 spinous process"] = (
+    name: Literal[
         "cartilage primordium of future Tl3 spinous process"
-    )
+    ] = "cartilage primordium of future Tl3 spinous process"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_25644"] = "EMAPA_25644"
 
@@ -28594,9 +28593,9 @@ class _Tl4_Neural_Arch_Pedicle(_MouseAnatomicalStructureModel):
 class _Cartilage_Primordium_Of_Future_Tl4_Spinous_Process(_MouseAnatomicalStructureModel):
     """Model cartilage primordium of future Tl4 spinous process"""
 
-    name: Literal["cartilage primordium of future Tl4 spinous process"] = (
+    name: Literal[
         "cartilage primordium of future Tl4 spinous process"
-    )
+    ] = "cartilage primordium of future Tl4 spinous process"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_25652"] = "EMAPA_25652"
 
@@ -28652,9 +28651,9 @@ class _Tl5_Neural_Arch_Pedicle(_MouseAnatomicalStructureModel):
 class _Cartilage_Primordium_Of_Future_Tl5_Spinous_Process(_MouseAnatomicalStructureModel):
     """Model cartilage primordium of future Tl5 spinous process"""
 
-    name: Literal["cartilage primordium of future Tl5 spinous process"] = (
+    name: Literal[
         "cartilage primordium of future Tl5 spinous process"
-    )
+    ] = "cartilage primordium of future Tl5 spinous process"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_25660"] = "EMAPA_25660"
 
@@ -28710,9 +28709,9 @@ class _Tl6_Neural_Arch_Pedicle(_MouseAnatomicalStructureModel):
 class _Cartilage_Primordium_Of_Future_Tl6_Spinous_Process(_MouseAnatomicalStructureModel):
     """Model cartilage primordium of future Tl6 spinous process"""
 
-    name: Literal["cartilage primordium of future Tl6 spinous process"] = (
+    name: Literal[
         "cartilage primordium of future Tl6 spinous process"
-    )
+    ] = "cartilage primordium of future Tl6 spinous process"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_25668"] = "EMAPA_25668"
 
@@ -28768,9 +28767,9 @@ class _Tl7_Neural_Arch_Pedicle(_MouseAnatomicalStructureModel):
 class _Cartilage_Primordium_Of_Future_Tl7_Spinous_Process(_MouseAnatomicalStructureModel):
     """Model cartilage primordium of future Tl7 spinous process"""
 
-    name: Literal["cartilage primordium of future Tl7 spinous process"] = (
+    name: Literal[
         "cartilage primordium of future Tl7 spinous process"
-    )
+    ] = "cartilage primordium of future Tl7 spinous process"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_25676"] = "EMAPA_25676"
 
@@ -28826,9 +28825,9 @@ class _Tl8_Neural_Arch_Pedicle(_MouseAnatomicalStructureModel):
 class _Cartilage_Primordium_Of_Future_Tl8_Spinous_Process(_MouseAnatomicalStructureModel):
     """Model cartilage primordium of future Tl8 spinous process"""
 
-    name: Literal["cartilage primordium of future Tl8 spinous process"] = (
+    name: Literal[
         "cartilage primordium of future Tl8 spinous process"
-    )
+    ] = "cartilage primordium of future Tl8 spinous process"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_25684"] = "EMAPA_25684"
 
@@ -28884,9 +28883,9 @@ class _Tl9_Neural_Arch_Pedicle(_MouseAnatomicalStructureModel):
 class _Cartilage_Primordium_Of_Future_Tl9_Spinous_Process(_MouseAnatomicalStructureModel):
     """Model cartilage primordium of future Tl9 spinous process"""
 
-    name: Literal["cartilage primordium of future Tl9 spinous process"] = (
+    name: Literal[
         "cartilage primordium of future Tl9 spinous process"
-    )
+    ] = "cartilage primordium of future Tl9 spinous process"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_25692"] = "EMAPA_25692"
 
@@ -29230,9 +29229,9 @@ class _C3_Neural_Arch_Pedicle(_MouseAnatomicalStructureModel):
 class _Cartilage_Primordium_Of_Future_C3_Spinous_Process(_MouseAnatomicalStructureModel):
     """Model cartilage primordium of future C3 spinous process"""
 
-    name: Literal["cartilage primordium of future C3 spinous process"] = (
+    name: Literal[
         "cartilage primordium of future C3 spinous process"
-    )
+    ] = "cartilage primordium of future C3 spinous process"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_25735"] = "EMAPA_25735"
 
@@ -29288,9 +29287,9 @@ class _C4_Neural_Arch_Pedicle(_MouseAnatomicalStructureModel):
 class _Cartilage_Primordium_Of_Future_C4_Spinous_Process(_MouseAnatomicalStructureModel):
     """Model cartilage primordium of future C4 spinous process"""
 
-    name: Literal["cartilage primordium of future C4 spinous process"] = (
+    name: Literal[
         "cartilage primordium of future C4 spinous process"
-    )
+    ] = "cartilage primordium of future C4 spinous process"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_25742"] = "EMAPA_25742"
 
@@ -29346,9 +29345,9 @@ class _C5_Neural_Arch_Pedicle(_MouseAnatomicalStructureModel):
 class _Cartilage_Primordium_Of_Future_C5_Spinous_Process(_MouseAnatomicalStructureModel):
     """Model cartilage primordium of future C5 spinous process"""
 
-    name: Literal["cartilage primordium of future C5 spinous process"] = (
+    name: Literal[
         "cartilage primordium of future C5 spinous process"
-    )
+    ] = "cartilage primordium of future C5 spinous process"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_25749"] = "EMAPA_25749"
 
@@ -29404,9 +29403,9 @@ class _C6_Neural_Arch_Pedicle(_MouseAnatomicalStructureModel):
 class _Cartilage_Primordium_Of_Future_C6_Spinous_Process(_MouseAnatomicalStructureModel):
     """Model cartilage primordium of future C6 spinous process"""
 
-    name: Literal["cartilage primordium of future C6 spinous process"] = (
+    name: Literal[
         "cartilage primordium of future C6 spinous process"
-    )
+    ] = "cartilage primordium of future C6 spinous process"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_25756"] = "EMAPA_25756"
 
@@ -29462,9 +29461,9 @@ class _C7_Neural_Arch_Pedicle(_MouseAnatomicalStructureModel):
 class _Cartilage_Primordium_Of_Future_C7_Spinous_Process(_MouseAnatomicalStructureModel):
     """Model cartilage primordium of future C7 spinous process"""
 
-    name: Literal["cartilage primordium of future C7 spinous process"] = (
+    name: Literal[
         "cartilage primordium of future C7 spinous process"
-    )
+    ] = "cartilage primordium of future C7 spinous process"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_25763"] = "EMAPA_25763"
 
@@ -29616,9 +29615,9 @@ class _Cavity_Of_Physiological_Umbilical_Hernia(_MouseAnatomicalStructureModel):
 class _Cavity_Of_Physiological_Umbilical_Hernia_Mesothelium(_MouseAnatomicalStructureModel):
     """Model cavity of physiological umbilical hernia mesothelium"""
 
-    name: Literal["cavity of physiological umbilical hernia mesothelium"] = (
+    name: Literal[
         "cavity of physiological umbilical hernia mesothelium"
-    )
+    ] = "cavity of physiological umbilical hernia mesothelium"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_26172"] = "EMAPA_26172"
 
@@ -29730,9 +29729,9 @@ class _C1_Vertebra_Neural_Arch(_MouseAnatomicalStructureModel):
 class _Cartilage_Primordium_Of_Future_C1_Spinous_Process(_MouseAnatomicalStructureModel):
     """Model cartilage primordium of future C1 spinous process"""
 
-    name: Literal["cartilage primordium of future C1 spinous process"] = (
+    name: Literal[
         "cartilage primordium of future C1 spinous process"
-    )
+    ] = "cartilage primordium of future C1 spinous process"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_26525"] = "EMAPA_26525"
 
@@ -29788,9 +29787,9 @@ class _C2_Vertebra_Neural_Arch(_MouseAnatomicalStructureModel):
 class _Cartilage_Primordium_Of_Future_C2_Spinous_Process(_MouseAnatomicalStructureModel):
     """Model cartilage primordium of future C2 spinous process"""
 
-    name: Literal["cartilage primordium of future C2 spinous process"] = (
+    name: Literal[
         "cartilage primordium of future C2 spinous process"
-    )
+    ] = "cartilage primordium of future C2 spinous process"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_26541"] = "EMAPA_26541"
 
@@ -31686,9 +31685,9 @@ class _Capillary_Loop_Renal_Corpuscle(_MouseAnatomicalStructureModel):
 class _Visceral_Epithelium_Of_Capillary_Loop_Renal_Corpuscle(_MouseAnatomicalStructureModel):
     """Model visceral epithelium of capillary loop renal corpuscle"""
 
-    name: Literal["visceral epithelium of capillary loop renal corpuscle"] = (
+    name: Literal[
         "visceral epithelium of capillary loop renal corpuscle"
-    )
+    ] = "visceral epithelium of capillary loop renal corpuscle"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_27772"] = "EMAPA_27772"
 
@@ -31696,9 +31695,9 @@ class _Visceral_Epithelium_Of_Capillary_Loop_Renal_Corpuscle(_MouseAnatomicalStr
 class _Parietal_Epithelium_Of_Capillary_Loop_Renal_Corpuscle(_MouseAnatomicalStructureModel):
     """Model parietal epithelium of capillary loop renal corpuscle"""
 
-    name: Literal["parietal epithelium of capillary loop renal corpuscle"] = (
+    name: Literal[
         "parietal epithelium of capillary loop renal corpuscle"
-    )
+    ] = "parietal epithelium of capillary loop renal corpuscle"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_27774"] = "EMAPA_27774"
 
@@ -31706,9 +31705,9 @@ class _Parietal_Epithelium_Of_Capillary_Loop_Renal_Corpuscle(_MouseAnatomicalStr
 class _Associated_Interstitium_Of_Capillary_Loop_Renal_Corpuscle(_MouseAnatomicalStructureModel):
     """Model associated interstitium of capillary loop renal corpuscle"""
 
-    name: Literal["associated interstitium of capillary loop renal corpuscle"] = (
+    name: Literal[
         "associated interstitium of capillary loop renal corpuscle"
-    )
+    ] = "associated interstitium of capillary loop renal corpuscle"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_27776"] = "EMAPA_27776"
 
@@ -31716,9 +31715,9 @@ class _Associated_Interstitium_Of_Capillary_Loop_Renal_Corpuscle(_MouseAnatomica
 class _Presumptive_Mesangium_Of_Capillary_Loop_Renal_Corpuscle(_MouseAnatomicalStructureModel):
     """Model presumptive mesangium of capillary loop renal corpuscle"""
 
-    name: Literal["presumptive mesangium of capillary loop renal corpuscle"] = (
+    name: Literal[
         "presumptive mesangium of capillary loop renal corpuscle"
-    )
+    ] = "presumptive mesangium of capillary loop renal corpuscle"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_27778"] = "EMAPA_27778"
 
@@ -31726,9 +31725,9 @@ class _Presumptive_Mesangium_Of_Capillary_Loop_Renal_Corpuscle(_MouseAnatomicalS
 class _Presumptive_Endothelium_Of_Capillary_Loop_Renal_Corpuscle(_MouseAnatomicalStructureModel):
     """Model presumptive endothelium of capillary loop renal corpuscle"""
 
-    name: Literal["presumptive endothelium of capillary loop renal corpuscle"] = (
+    name: Literal[
         "presumptive endothelium of capillary loop renal corpuscle"
-    )
+    ] = "presumptive endothelium of capillary loop renal corpuscle"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_27780"] = "EMAPA_27780"
 
@@ -31768,9 +31767,9 @@ class _Early_Distal_Tubule(_MouseAnatomicalStructureModel):
 class _Renal_Connecting_Tubule_Of_Capillary_Loop_Nephron(_MouseAnatomicalStructureModel):
     """Model renal connecting tubule of capillary loop nephron"""
 
-    name: Literal["renal connecting tubule of capillary loop nephron"] = (
+    name: Literal[
         "renal connecting tubule of capillary loop nephron"
-    )
+    ] = "renal connecting tubule of capillary loop nephron"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_27790"] = "EMAPA_27790"
 
@@ -31810,9 +31809,9 @@ class _Maturing_Glomerular_Tuft(_MouseAnatomicalStructureModel):
 class _Glomerular_Capillary_System_Of_Maturing_Glomerular_Tuft(_MouseAnatomicalStructureModel):
     """Model glomerular capillary system of maturing glomerular tuft"""
 
-    name: Literal["glomerular capillary system of maturing glomerular tuft"] = (
+    name: Literal[
         "glomerular capillary system of maturing glomerular tuft"
-    )
+    ] = "glomerular capillary system of maturing glomerular tuft"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_27955"] = "EMAPA_27955"
 
@@ -31820,9 +31819,9 @@ class _Glomerular_Capillary_System_Of_Maturing_Glomerular_Tuft(_MouseAnatomicalS
 class _Glomerular_Mesangium_Of_Maturing_Glomerular_Tuft(_MouseAnatomicalStructureModel):
     """Model glomerular mesangium of maturing glomerular tuft"""
 
-    name: Literal["glomerular mesangium of maturing glomerular tuft"] = (
+    name: Literal[
         "glomerular mesangium of maturing glomerular tuft"
-    )
+    ] = "glomerular mesangium of maturing glomerular tuft"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_27961"] = "EMAPA_27961"
 
@@ -31950,9 +31949,9 @@ class _Developing_Vasculature_Of_Renal_Medulla(_MouseAnatomicalStructureModel):
 class _Developing_Arterial_Vasculature_Of_Renal_Medulla(_MouseAnatomicalStructureModel):
     """Model developing arterial vasculature of renal medulla"""
 
-    name: Literal["developing arterial vasculature of renal medulla"] = (
+    name: Literal[
         "developing arterial vasculature of renal medulla"
-    )
+    ] = "developing arterial vasculature of renal medulla"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_28071"] = "EMAPA_28071"
 
@@ -32160,9 +32159,9 @@ class _Glomerular_Mesangium_Of_Glomerular_Tuft(_MouseAnatomicalStructureModel):
 class _Glomerular_Basement_Membrane_Of_Mature_Renal_Corpuscle(_MouseAnatomicalStructureModel):
     """Model glomerular basement membrane of mature renal corpuscle"""
 
-    name: Literal["glomerular basement membrane of mature renal corpuscle"] = (
+    name: Literal[
         "glomerular basement membrane of mature renal corpuscle"
-    )
+    ] = "glomerular basement membrane of mature renal corpuscle"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_28251"] = "EMAPA_28251"
 
@@ -32210,9 +32209,9 @@ class _Afferent_Arteriole_Of_Mature_Renal_Corpuscle(_MouseAnatomicalStructureMod
 class _Part_Of_Afferent_Arteriole_Forming_The_Juxtaglomerular_Complex(_MouseAnatomicalStructureModel):
     """Model part of afferent arteriole forming the juxtaglomerular complex"""
 
-    name: Literal["part of afferent arteriole forming the juxtaglomerular complex"] = (
+    name: Literal[
         "part of afferent arteriole forming the juxtaglomerular complex"
-    )
+    ] = "part of afferent arteriole forming the juxtaglomerular complex"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_28269"] = "EMAPA_28269"
 
@@ -32292,9 +32291,9 @@ class _Thin_Ascending_Limb_Of_Outer_Medulla(_MouseAnatomicalStructureModel):
 class _Premacula_Segment_Of_Distal_Straight_Tubule_Of_Outer_Medulla(_MouseAnatomicalStructureModel):
     """Model premacula segment of distal straight tubule of outer medulla"""
 
-    name: Literal["premacula segment of distal straight tubule of outer medulla"] = (
+    name: Literal[
         "premacula segment of distal straight tubule of outer medulla"
-    )
+    ] = "premacula segment of distal straight tubule of outer medulla"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_28331"] = "EMAPA_28331"
 
@@ -32758,9 +32757,9 @@ class _Ureteral_Smooth_Muscle_Layer(_MouseAnatomicalStructureModel):
 class _Ureteral_Smooth_Muscle_Layer_Smooth_Muscle_Component(_MouseAnatomicalStructureModel):
     """Model ureteral smooth muscle layer smooth muscle component"""
 
-    name: Literal["ureteral smooth muscle layer smooth muscle component"] = (
+    name: Literal[
         "ureteral smooth muscle layer smooth muscle component"
-    )
+    ] = "ureteral smooth muscle layer smooth muscle component"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_28814"] = "EMAPA_28814"
 
@@ -32816,9 +32815,9 @@ class _Muscle_Layer_Of_Phallic_Urethra_Of_Male(_MouseAnatomicalStructureModel):
 class _Proximal_Straight_Tubule_Outer_Medullary_Portion(_MouseAnatomicalStructureModel):
     """Model proximal straight tubule, outer medullary portion"""
 
-    name: Literal["proximal straight tubule, outer medullary portion"] = (
+    name: Literal[
         "proximal straight tubule, outer medullary portion"
-    )
+    ] = "proximal straight tubule, outer medullary portion"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_28862"] = "EMAPA_28862"
 
@@ -32890,9 +32889,9 @@ class _Coelomic_Epithelium_Of_Female_Mesonephros(_MouseAnatomicalStructureModel)
 class _Paramesonephric_Duct_Of_Female_Mesonephric_Portion(_MouseAnatomicalStructureModel):
     """Model paramesonephric duct of female, mesonephric portion"""
 
-    name: Literal["paramesonephric duct of female, mesonephric portion"] = (
+    name: Literal[
         "paramesonephric duct of female, mesonephric portion"
-    )
+    ] = "paramesonephric duct of female, mesonephric portion"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_28937"] = "EMAPA_28937"
 
@@ -32932,9 +32931,9 @@ class _Mesenchyme_Of_Nephric_Duct_Of_Female(_MouseAnatomicalStructureModel):
 class _Epithelium_Of_Rest_Of_Paramesonephric_Duct_Of_Female(_MouseAnatomicalStructureModel):
     """Model epithelium of rest of paramesonephric duct of female"""
 
-    name: Literal["epithelium of rest of paramesonephric duct of female"] = (
+    name: Literal[
         "epithelium of rest of paramesonephric duct of female"
-    )
+    ] = "epithelium of rest of paramesonephric duct of female"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_28957"] = "EMAPA_28957"
 
@@ -32942,9 +32941,9 @@ class _Epithelium_Of_Rest_Of_Paramesonephric_Duct_Of_Female(_MouseAnatomicalStru
 class _Mesenchyme_Of_Rest_Of_Paramesonephric_Duct_Of_Female(_MouseAnatomicalStructureModel):
     """Model mesenchyme of rest of paramesonephric duct of female"""
 
-    name: Literal["mesenchyme of rest of paramesonephric duct of female"] = (
+    name: Literal[
         "mesenchyme of rest of paramesonephric duct of female"
-    )
+    ] = "mesenchyme of rest of paramesonephric duct of female"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_28961"] = "EMAPA_28961"
 
@@ -32976,9 +32975,9 @@ class _Degenerating_Mesonephric_Tubule_Of_Female(_MouseAnatomicalStructureModel)
 class _Degenerating_Mesonephric_Portion_Of_Nephric_Duct_Of_Female(_MouseAnatomicalStructureModel):
     """Model degenerating mesonephric portion of nephric duct of female"""
 
-    name: Literal["degenerating mesonephric portion of nephric duct of female"] = (
+    name: Literal[
         "degenerating mesonephric portion of nephric duct of female"
-    )
+    ] = "degenerating mesonephric portion of nephric duct of female"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_28981"] = "EMAPA_28981"
 
@@ -33162,9 +33161,9 @@ class _Mesonephric_Tubule_Of_Male(_MouseAnatomicalStructureModel):
 class _Paramesonephric_Duct_Of_Male_Mesonephric_Portion(_MouseAnatomicalStructureModel):
     """Model paramesonephric duct of male, mesonephric portion"""
 
-    name: Literal["paramesonephric duct of male, mesonephric portion"] = (
+    name: Literal[
         "paramesonephric duct of male, mesonephric portion"
-    )
+    ] = "paramesonephric duct of male, mesonephric portion"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_29158"] = "EMAPA_29158"
 
@@ -33172,9 +33171,9 @@ class _Paramesonephric_Duct_Of_Male_Mesonephric_Portion(_MouseAnatomicalStructur
 class _Degenerating_Mesonephric_Portion_Of_Male_Paramesonephric_Duct(_MouseAnatomicalStructureModel):
     """Model degenerating mesonephric portion of male paramesonephric duct"""
 
-    name: Literal["degenerating mesonephric portion of male paramesonephric duct"] = (
+    name: Literal[
         "degenerating mesonephric portion of male paramesonephric duct"
-    )
+    ] = "degenerating mesonephric portion of male paramesonephric duct"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_29161"] = "EMAPA_29161"
 
@@ -33230,9 +33229,9 @@ class _Paramesonephric_Duct_Of_Male_Rest_Of(_MouseAnatomicalStructureModel):
 class _Epithelium_Of_Rest_Of_Paramesonephric_Duct_Of_Male(_MouseAnatomicalStructureModel):
     """Model epithelium of rest of paramesonephric duct of male"""
 
-    name: Literal["epithelium of rest of paramesonephric duct of male"] = (
+    name: Literal[
         "epithelium of rest of paramesonephric duct of male"
-    )
+    ] = "epithelium of rest of paramesonephric duct of male"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_29187"] = "EMAPA_29187"
 
@@ -33240,9 +33239,9 @@ class _Epithelium_Of_Rest_Of_Paramesonephric_Duct_Of_Male(_MouseAnatomicalStruct
 class _Mesenchyme_Of_Rest_Of_Paramesonephric_Duct_Of_Male(_MouseAnatomicalStructureModel):
     """Model mesenchyme of rest of paramesonephric duct of male"""
 
-    name: Literal["mesenchyme of rest of paramesonephric duct of male"] = (
+    name: Literal[
         "mesenchyme of rest of paramesonephric duct of male"
-    )
+    ] = "mesenchyme of rest of paramesonephric duct of male"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_29189"] = "EMAPA_29189"
 
@@ -33250,9 +33249,9 @@ class _Mesenchyme_Of_Rest_Of_Paramesonephric_Duct_Of_Male(_MouseAnatomicalStruct
 class _Degenerating_Rest_Of_Paramesonephric_Duct_Of_Male(_MouseAnatomicalStructureModel):
     """Model degenerating rest of paramesonephric duct of male"""
 
-    name: Literal["degenerating rest of paramesonephric duct of male"] = (
+    name: Literal[
         "degenerating rest of paramesonephric duct of male"
-    )
+    ] = "degenerating rest of paramesonephric duct of male"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_29196"] = "EMAPA_29196"
 
@@ -33260,9 +33259,9 @@ class _Degenerating_Rest_Of_Paramesonephric_Duct_Of_Male(_MouseAnatomicalStructu
 class _Epithelium_Of_Degenerating_Rest_Of_Paramesonephric_Duct_Of_Male(_MouseAnatomicalStructureModel):
     """Model epithelium of degenerating rest of paramesonephric duct of male"""
 
-    name: Literal["epithelium of degenerating rest of paramesonephric duct of male"] = (
+    name: Literal[
         "epithelium of degenerating rest of paramesonephric duct of male"
-    )
+    ] = "epithelium of degenerating rest of paramesonephric duct of male"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_29199"] = "EMAPA_29199"
 
@@ -33270,9 +33269,9 @@ class _Epithelium_Of_Degenerating_Rest_Of_Paramesonephric_Duct_Of_Male(_MouseAna
 class _Mesenchyme_Of_Degenerating_Rest_Of_Paramesonephric_Duct_Of_Male(_MouseAnatomicalStructureModel):
     """Model mesenchyme of degenerating rest of paramesonephric duct of male"""
 
-    name: Literal["mesenchyme of degenerating rest of paramesonephric duct of male"] = (
+    name: Literal[
         "mesenchyme of degenerating rest of paramesonephric duct of male"
-    )
+    ] = "mesenchyme of degenerating rest of paramesonephric duct of male"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_29202"] = "EMAPA_29202"
 
@@ -33448,9 +33447,9 @@ class _Vasculature_Of_Ovary(_MouseAnatomicalStructureModel):
 class _Ureteral_Smooth_Muscle_Layer_Inner_Longitudinal_Muscle(_MouseAnatomicalStructureModel):
     """Model ureteral smooth muscle layer inner longitudinal muscle"""
 
-    name: Literal["ureteral smooth muscle layer inner longitudinal muscle"] = (
+    name: Literal[
         "ureteral smooth muscle layer inner longitudinal muscle"
-    )
+    ] = "ureteral smooth muscle layer inner longitudinal muscle"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_29633"] = "EMAPA_29633"
 
@@ -33458,9 +33457,9 @@ class _Ureteral_Smooth_Muscle_Layer_Inner_Longitudinal_Muscle(_MouseAnatomicalSt
 class _Ureteral_Smooth_Muscle_Layer_Outer_Circular_Muscle(_MouseAnatomicalStructureModel):
     """Model ureteral smooth muscle layer outer circular muscle"""
 
-    name: Literal["ureteral smooth muscle layer outer circular muscle"] = (
+    name: Literal[
         "ureteral smooth muscle layer outer circular muscle"
-    )
+    ] = "ureteral smooth muscle layer outer circular muscle"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_29635"] = "EMAPA_29635"
 
@@ -33548,9 +33547,9 @@ class _Loop_Of_Henle_Of_Outer_Stripe_Of_Outer_Medulla(_MouseAnatomicalStructureM
 class _Proximal_Straight_Tubule_Of_Outer_Stripe_Of_Outer_Medulla(_MouseAnatomicalStructureModel):
     """Model proximal straight tubule of outer stripe of outer medulla"""
 
-    name: Literal["proximal straight tubule of outer stripe of outer medulla"] = (
+    name: Literal[
         "proximal straight tubule of outer stripe of outer medulla"
-    )
+    ] = "proximal straight tubule of outer stripe of outer medulla"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_29669"] = "EMAPA_29669"
 
@@ -33558,9 +33557,9 @@ class _Proximal_Straight_Tubule_Of_Outer_Stripe_Of_Outer_Medulla(_MouseAnatomica
 class _Distal_Straight_Tubule_Of_Outer_Stripe_Of_Outer_Medulla(_MouseAnatomicalStructureModel):
     """Model distal straight tubule of outer stripe of outer medulla"""
 
-    name: Literal["distal straight tubule of outer stripe of outer medulla"] = (
+    name: Literal[
         "distal straight tubule of outer stripe of outer medulla"
-    )
+    ] = "distal straight tubule of outer stripe of outer medulla"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_29671"] = "EMAPA_29671"
 
@@ -33584,9 +33583,9 @@ class _Loop_Of_Henle_Of_Inner_Stripe_Of_Outer_Medulla(_MouseAnatomicalStructureM
 class _Thin_Descending_Limb_Of_Inner_Stripe_Of_Outer_Medulla(_MouseAnatomicalStructureModel):
     """Model thin descending limb of inner stripe of outer medulla"""
 
-    name: Literal["thin descending limb of inner stripe of outer medulla"] = (
+    name: Literal[
         "thin descending limb of inner stripe of outer medulla"
-    )
+    ] = "thin descending limb of inner stripe of outer medulla"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_29681"] = "EMAPA_29681"
 
@@ -33594,9 +33593,9 @@ class _Thin_Descending_Limb_Of_Inner_Stripe_Of_Outer_Medulla(_MouseAnatomicalStr
 class _Premacula_Segment_Of_Distal_Straight_Tubule_Of_Inner_Stripe_Of_Inner_Medulla(_MouseAnatomicalStructureModel):
     """Model premacula segment of distal straight tubule of inner stripe of inner medulla"""
 
-    name: Literal["premacula segment of distal straight tubule of inner stripe of inner medulla"] = (
+    name: Literal[
         "premacula segment of distal straight tubule of inner stripe of inner medulla"
-    )
+    ] = "premacula segment of distal straight tubule of inner stripe of inner medulla"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_29683"] = "EMAPA_29683"
 
@@ -34420,9 +34419,9 @@ class _Smooth_Muscle_Layer_Of_Renal_Vein(_MouseAnatomicalStructureModel):
 class _Glomerular_Mesangium_Of_Maturing_Renal_Corpuscle(_MouseAnatomicalStructureModel):
     """Model glomerular mesangium of maturing renal corpuscle"""
 
-    name: Literal["glomerular mesangium of maturing renal corpuscle"] = (
+    name: Literal[
         "glomerular mesangium of maturing renal corpuscle"
-    )
+    ] = "glomerular mesangium of maturing renal corpuscle"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_30031"] = "EMAPA_30031"
 
@@ -34494,9 +34493,9 @@ class _Cranial_Suspensory_Ligament(_MouseAnatomicalStructureModel):
 class _Epithelium_Of_Paramesonephric_Duct_Of_Female_Mesonephric_Portion(_MouseAnatomicalStructureModel):
     """Model epithelium of paramesonephric duct of female, mesonephric portion"""
 
-    name: Literal["epithelium of paramesonephric duct of female, mesonephric portion"] = (
+    name: Literal[
         "epithelium of paramesonephric duct of female, mesonephric portion"
-    )
+    ] = "epithelium of paramesonephric duct of female, mesonephric portion"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_30070"] = "EMAPA_30070"
 
@@ -34504,9 +34503,9 @@ class _Epithelium_Of_Paramesonephric_Duct_Of_Female_Mesonephric_Portion(_MouseAn
 class _Mesenchyme_Of_Paramesonephric_Duct_Of_Female_Mesonephric_Portion(_MouseAnatomicalStructureModel):
     """Model mesenchyme of paramesonephric duct of female, mesonephric portion"""
 
-    name: Literal["mesenchyme of paramesonephric duct of female, mesonephric portion"] = (
+    name: Literal[
         "mesenchyme of paramesonephric duct of female, mesonephric portion"
-    )
+    ] = "mesenchyme of paramesonephric duct of female, mesonephric portion"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_30072"] = "EMAPA_30072"
 
@@ -35578,9 +35577,9 @@ class _Muscle_Layer_Of_Prostatic_Urethra(_MouseAnatomicalStructureModel):
 class _Glomerular_Basement_Membrane_Of_Maturing_Renal_Corpuscle(_MouseAnatomicalStructureModel):
     """Model glomerular basement membrane of maturing renal corpuscle"""
 
-    name: Literal["glomerular basement membrane of maturing renal corpuscle"] = (
+    name: Literal[
         "glomerular basement membrane of maturing renal corpuscle"
-    )
+    ] = "glomerular basement membrane of maturing renal corpuscle"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_30965"] = "EMAPA_30965"
 
@@ -35660,9 +35659,9 @@ class _Pre_Granulosa_Cell(_MouseAnatomicalStructureModel):
 class _Rest_Of_Cortical_Component_Of_Mesenchymal_Stroma_Of_Ovary(_MouseAnatomicalStructureModel):
     """Model rest of cortical component of mesenchymal stroma of ovary"""
 
-    name: Literal["rest of cortical component of mesenchymal stroma of ovary"] = (
+    name: Literal[
         "rest of cortical component of mesenchymal stroma of ovary"
-    )
+    ] = "rest of cortical component of mesenchymal stroma of ovary"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_31040"] = "EMAPA_31040"
 
@@ -35670,9 +35669,9 @@ class _Rest_Of_Cortical_Component_Of_Mesenchymal_Stroma_Of_Ovary(_MouseAnatomica
 class _Ureteric_Tree_Terminal_Branch_Excluding_Tip_Itself(_MouseAnatomicalStructureModel):
     """Model ureteric tree terminal branch excluding tip itself"""
 
-    name: Literal["ureteric tree terminal branch excluding tip itself"] = (
+    name: Literal[
         "ureteric tree terminal branch excluding tip itself"
-    )
+    ] = "ureteric tree terminal branch excluding tip itself"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_31045"] = "EMAPA_31045"
 
@@ -35912,9 +35911,9 @@ class _Renal_Fibroblasts(_MouseAnatomicalStructureModel):
 class _Anlage_Of_Loop_Of_Henle_Of_Cortical_Renal_Tubule(_MouseAnatomicalStructureModel):
     """Model anlage of loop of Henle of cortical renal tubule"""
 
-    name: Literal["anlage of loop of Henle of cortical renal tubule"] = (
+    name: Literal[
         "anlage of loop of Henle of cortical renal tubule"
-    )
+    ] = "anlage of loop of Henle of cortical renal tubule"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_31281"] = "EMAPA_31281"
 
@@ -36010,9 +36009,9 @@ class _Perihilar_Fibroblast(_MouseAnatomicalStructureModel):
 class _Resident_Macrophage_Of_The_Perihilar_Interstitium(_MouseAnatomicalStructureModel):
     """Model resident macrophage of the perihilar interstitium"""
 
-    name: Literal["resident macrophage of the perihilar interstitium"] = (
+    name: Literal[
         "resident macrophage of the perihilar interstitium"
-    )
+    ] = "resident macrophage of the perihilar interstitium"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_31367"] = "EMAPA_31367"
 
@@ -36028,9 +36027,9 @@ class _Rest_Of_Perihilar_Interstitium(_MouseAnatomicalStructureModel):
 class _Premacula_Segment_Of_Distal_Straight_Tubule_Of_Renal_Cortex(_MouseAnatomicalStructureModel):
     """Model premacula segment of distal straight tubule of renal cortex"""
 
-    name: Literal["premacula segment of distal straight tubule of renal cortex"] = (
+    name: Literal[
         "premacula segment of distal straight tubule of renal cortex"
-    )
+    ] = "premacula segment of distal straight tubule of renal cortex"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_31379"] = "EMAPA_31379"
 
@@ -36254,9 +36253,9 @@ class _Skin_Of_Proximal_Genital_Tubercle_Of_Male(_MouseAnatomicalStructureModel)
 class _Developing_Vasculature_Of_Female_Genital_Tubercle(_MouseAnatomicalStructureModel):
     """Model developing vasculature of female genital tubercle"""
 
-    name: Literal["developing vasculature of female genital tubercle"] = (
+    name: Literal[
         "developing vasculature of female genital tubercle"
-    )
+    ] = "developing vasculature of female genital tubercle"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_31503"] = "EMAPA_31503"
 
@@ -36448,9 +36447,9 @@ class _Nerves_Of_Urogenital_Sinus(_MouseAnatomicalStructureModel):
 class _Mesenchyme_Of_Proximal_Genital_Tubercle_Of_Female(_MouseAnatomicalStructureModel):
     """Model mesenchyme of proximal genital tubercle of female"""
 
-    name: Literal["mesenchyme of proximal genital tubercle of female"] = (
+    name: Literal[
         "mesenchyme of proximal genital tubercle of female"
-    )
+    ] = "mesenchyme of proximal genital tubercle of female"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_31534"] = "EMAPA_31534"
 
@@ -36538,9 +36537,9 @@ class _Proximal_Renal_Vesicle(_MouseAnatomicalStructureModel):
 class _Mesenchymal_Layer_Of_Ventral_Pelvic_Urethra_Of_Male(_MouseAnatomicalStructureModel):
     """Model mesenchymal layer of ventral pelvic urethra of male"""
 
-    name: Literal["mesenchymal layer of ventral pelvic urethra of male"] = (
+    name: Literal[
         "mesenchymal layer of ventral pelvic urethra of male"
-    )
+    ] = "mesenchymal layer of ventral pelvic urethra of male"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_31550"] = "EMAPA_31550"
 
@@ -36548,9 +36547,9 @@ class _Mesenchymal_Layer_Of_Ventral_Pelvic_Urethra_Of_Male(_MouseAnatomicalStruc
 class _Mesenchymal_Layer_Of_Dorsal_Pelvic_Urethra_Of_Male(_MouseAnatomicalStructureModel):
     """Model mesenchymal layer of dorsal pelvic urethra of male"""
 
-    name: Literal["mesenchymal layer of dorsal pelvic urethra of male"] = (
+    name: Literal[
         "mesenchymal layer of dorsal pelvic urethra of male"
-    )
+    ] = "mesenchymal layer of dorsal pelvic urethra of male"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_31552"] = "EMAPA_31552"
 
@@ -36558,9 +36557,9 @@ class _Mesenchymal_Layer_Of_Dorsal_Pelvic_Urethra_Of_Male(_MouseAnatomicalStruct
 class _Mesenchymal_Layer_Of_Ventral_Pelvic_Urethra_Of_Female(_MouseAnatomicalStructureModel):
     """Model mesenchymal layer of ventral pelvic urethra of female"""
 
-    name: Literal["mesenchymal layer of ventral pelvic urethra of female"] = (
+    name: Literal[
         "mesenchymal layer of ventral pelvic urethra of female"
-    )
+    ] = "mesenchymal layer of ventral pelvic urethra of female"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_31553"] = "EMAPA_31553"
 
@@ -36568,9 +36567,9 @@ class _Mesenchymal_Layer_Of_Ventral_Pelvic_Urethra_Of_Female(_MouseAnatomicalStr
 class _Mesenchymal_Layer_Of_Dorsal_Pelvic_Urethra_Of_Female(_MouseAnatomicalStructureModel):
     """Model mesenchymal layer of dorsal pelvic urethra of female"""
 
-    name: Literal["mesenchymal layer of dorsal pelvic urethra of female"] = (
+    name: Literal[
         "mesenchymal layer of dorsal pelvic urethra of female"
-    )
+    ] = "mesenchymal layer of dorsal pelvic urethra of female"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_31554"] = "EMAPA_31554"
 
@@ -36594,9 +36593,9 @@ class _Muscle_Layer_Of_Dorsal_Pelvic_Urethra_Of_Male(_MouseAnatomicalStructureMo
 class _Muscle_Layer_Of_Ventral_Pelvic_Urethra_Of_Female(_MouseAnatomicalStructureModel):
     """Model muscle layer of ventral pelvic urethra of female"""
 
-    name: Literal["muscle layer of ventral pelvic urethra of female"] = (
+    name: Literal[
         "muscle layer of ventral pelvic urethra of female"
-    )
+    ] = "muscle layer of ventral pelvic urethra of female"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_31559"] = "EMAPA_31559"
 
@@ -36652,9 +36651,9 @@ class _Cortical_Renal_Tubule_Of_Maturing_Nephron_Group(_MouseAnatomicalStructure
 class _Cortical_Renal_Tubule_Of_Capillary_Loop_Nephron_Group(_MouseAnatomicalStructureModel):
     """Model cortical renal tubule of capillary loop nephron group"""
 
-    name: Literal["cortical renal tubule of capillary loop nephron group"] = (
+    name: Literal[
         "cortical renal tubule of capillary loop nephron group"
-    )
+    ] = "cortical renal tubule of capillary loop nephron group"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_31571"] = "EMAPA_31571"
 
@@ -36902,9 +36901,9 @@ class _Lamina_Propria_Of_Sinovaginal_Bulb(_MouseAnatomicalStructureModel):
 class _Basal_Cell_Layer_Of_Dorsal_Pelvic_Urethra_Of_Male(_MouseAnatomicalStructureModel):
     """Model basal cell layer of dorsal pelvic urethra of male"""
 
-    name: Literal["basal cell layer of dorsal pelvic urethra of male"] = (
+    name: Literal[
         "basal cell layer of dorsal pelvic urethra of male"
-    )
+    ] = "basal cell layer of dorsal pelvic urethra of male"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_32260"] = "EMAPA_32260"
 
@@ -36912,9 +36911,9 @@ class _Basal_Cell_Layer_Of_Dorsal_Pelvic_Urethra_Of_Male(_MouseAnatomicalStructu
 class _Basal_Cell_Layer_Of_Ventral_Pelvic_Urethra_Of_Male(_MouseAnatomicalStructureModel):
     """Model basal cell layer of ventral pelvic urethra of male"""
 
-    name: Literal["basal cell layer of ventral pelvic urethra of male"] = (
+    name: Literal[
         "basal cell layer of ventral pelvic urethra of male"
-    )
+    ] = "basal cell layer of ventral pelvic urethra of male"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_32261"] = "EMAPA_32261"
 
@@ -36930,9 +36929,9 @@ class _Vasculature_Of_Pelvic_Urethra_Of_Male(_MouseAnatomicalStructureModel):
 class _Superficial_Cell_Layer_Of_Dorsal_Pelvic_Urethra_Of_Male(_MouseAnatomicalStructureModel):
     """Model superficial cell layer of dorsal pelvic urethra of male"""
 
-    name: Literal["superficial cell layer of dorsal pelvic urethra of male"] = (
+    name: Literal[
         "superficial cell layer of dorsal pelvic urethra of male"
-    )
+    ] = "superficial cell layer of dorsal pelvic urethra of male"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_32263"] = "EMAPA_32263"
 
@@ -36956,9 +36955,9 @@ class _Vasculature_Of_Prostatic_Urethra(_MouseAnatomicalStructureModel):
 class _Superficial_Cell_Layer_Of_Dorsal_Pelvic_Urethra_Of_Female(_MouseAnatomicalStructureModel):
     """Model superficial cell layer of dorsal pelvic urethra of female"""
 
-    name: Literal["superficial cell layer of dorsal pelvic urethra of female"] = (
+    name: Literal[
         "superficial cell layer of dorsal pelvic urethra of female"
-    )
+    ] = "superficial cell layer of dorsal pelvic urethra of female"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_32266"] = "EMAPA_32266"
 
@@ -36966,9 +36965,9 @@ class _Superficial_Cell_Layer_Of_Dorsal_Pelvic_Urethra_Of_Female(_MouseAnatomica
 class _Basal_Cell_Layer_Of_Dorsal_Pelvic_Urethra_Of_Female(_MouseAnatomicalStructureModel):
     """Model basal cell layer of dorsal pelvic urethra of female"""
 
-    name: Literal["basal cell layer of dorsal pelvic urethra of female"] = (
+    name: Literal[
         "basal cell layer of dorsal pelvic urethra of female"
-    )
+    ] = "basal cell layer of dorsal pelvic urethra of female"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_32267"] = "EMAPA_32267"
 
@@ -37104,9 +37103,9 @@ class _Vasculature_Of_Pelvic_Urethra_Of_Female(_MouseAnatomicalStructureModel):
 class _Superficial_Cell_Layer_Of_Ventral_Pelvic_Urethra_Of_Male(_MouseAnatomicalStructureModel):
     """Model superficial cell layer of ventral pelvic urethra of male"""
 
-    name: Literal["superficial cell layer of ventral pelvic urethra of male"] = (
+    name: Literal[
         "superficial cell layer of ventral pelvic urethra of male"
-    )
+    ] = "superficial cell layer of ventral pelvic urethra of male"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_32284"] = "EMAPA_32284"
 
@@ -37122,9 +37121,9 @@ class _Nerve_Of_Prostate_Gland(_MouseAnatomicalStructureModel):
 class _Presumptive_Neural_Crest_Derivative_Of_Pelvic_Urethra_Of_Male(_MouseAnatomicalStructureModel):
     """Model presumptive neural crest derivative of pelvic urethra of male"""
 
-    name: Literal["presumptive neural crest derivative of pelvic urethra of male"] = (
+    name: Literal[
         "presumptive neural crest derivative of pelvic urethra of male"
-    )
+    ] = "presumptive neural crest derivative of pelvic urethra of male"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_32286"] = "EMAPA_32286"
 
@@ -37140,9 +37139,9 @@ class _Mesenchymal_Pad_Of_Pelvic_Urethra_Of_Female(_MouseAnatomicalStructureMode
 class _Presumptive_Neural_Crest_Derivative_Of_Pelvic_Urethra_Of_Female(_MouseAnatomicalStructureModel):
     """Model presumptive neural crest derivative of pelvic urethra of female"""
 
-    name: Literal["presumptive neural crest derivative of pelvic urethra of female"] = (
+    name: Literal[
         "presumptive neural crest derivative of pelvic urethra of female"
-    )
+    ] = "presumptive neural crest derivative of pelvic urethra of female"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_32288"] = "EMAPA_32288"
 
@@ -37158,9 +37157,9 @@ class _Muscle_Of_Ejaculatory_Duct(_MouseAnatomicalStructureModel):
 class _Superficial_Cell_Layer_Of_Ventral_Pelvic_Urethra_Of_Female(_MouseAnatomicalStructureModel):
     """Model superficial cell layer of ventral pelvic urethra of female"""
 
-    name: Literal["superficial cell layer of ventral pelvic urethra of female"] = (
+    name: Literal[
         "superficial cell layer of ventral pelvic urethra of female"
-    )
+    ] = "superficial cell layer of ventral pelvic urethra of female"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_32291"] = "EMAPA_32291"
 
@@ -37168,9 +37167,9 @@ class _Superficial_Cell_Layer_Of_Ventral_Pelvic_Urethra_Of_Female(_MouseAnatomic
 class _Basal_Cell_Layer_Of_Ventral_Pelvic_Urethra_Of_Female(_MouseAnatomicalStructureModel):
     """Model basal cell layer of ventral pelvic urethra of female"""
 
-    name: Literal["basal cell layer of ventral pelvic urethra of female"] = (
+    name: Literal[
         "basal cell layer of ventral pelvic urethra of female"
-    )
+    ] = "basal cell layer of ventral pelvic urethra of female"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_32292"] = "EMAPA_32292"
 
@@ -37186,9 +37185,9 @@ class _Submucosa_Of_Dorsal_Pelvic_Urethra_Of_Male(_MouseAnatomicalStructureModel
 class _Lamina_Propria_Of_Ventral_Pelvic_Urethra_Of_Male(_MouseAnatomicalStructureModel):
     """Model lamina propria of ventral pelvic urethra of male"""
 
-    name: Literal["lamina propria of ventral pelvic urethra of male"] = (
+    name: Literal[
         "lamina propria of ventral pelvic urethra of male"
-    )
+    ] = "lamina propria of ventral pelvic urethra of male"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_32294"] = "EMAPA_32294"
 
@@ -37196,9 +37195,9 @@ class _Lamina_Propria_Of_Ventral_Pelvic_Urethra_Of_Male(_MouseAnatomicalStructur
 class _Muscularis_Mucosa_Of_Dorsal_Pelvic_Urethra_Of_Female(_MouseAnatomicalStructureModel):
     """Model muscularis mucosa of dorsal pelvic urethra of female"""
 
-    name: Literal["muscularis mucosa of dorsal pelvic urethra of female"] = (
+    name: Literal[
         "muscularis mucosa of dorsal pelvic urethra of female"
-    )
+    ] = "muscularis mucosa of dorsal pelvic urethra of female"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_32295"] = "EMAPA_32295"
 
@@ -37206,9 +37205,9 @@ class _Muscularis_Mucosa_Of_Dorsal_Pelvic_Urethra_Of_Female(_MouseAnatomicalStru
 class _Lamina_Propria_Of_Dorsal_Pelvic_Urethra_Of_Female(_MouseAnatomicalStructureModel):
     """Model lamina propria of dorsal pelvic urethra of female"""
 
-    name: Literal["lamina propria of dorsal pelvic urethra of female"] = (
+    name: Literal[
         "lamina propria of dorsal pelvic urethra of female"
-    )
+    ] = "lamina propria of dorsal pelvic urethra of female"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_32296"] = "EMAPA_32296"
 
@@ -37216,9 +37215,9 @@ class _Lamina_Propria_Of_Dorsal_Pelvic_Urethra_Of_Female(_MouseAnatomicalStructu
 class _Muscularis_Mucosa_Of_Ventral_Pelvic_Urethra_Of_Male(_MouseAnatomicalStructureModel):
     """Model muscularis mucosa of ventral pelvic urethra of male"""
 
-    name: Literal["muscularis mucosa of ventral pelvic urethra of male"] = (
+    name: Literal[
         "muscularis mucosa of ventral pelvic urethra of male"
-    )
+    ] = "muscularis mucosa of ventral pelvic urethra of male"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_32297"] = "EMAPA_32297"
 
@@ -37282,9 +37281,9 @@ class _Submucosa_Of_Trigone(_MouseAnatomicalStructureModel):
 class _Intermediate_Cell_Layer_Of_Ventral_Pelvic_Urethra_Of_Female(_MouseAnatomicalStructureModel):
     """Model intermediate cell layer of ventral pelvic urethra of female"""
 
-    name: Literal["intermediate cell layer of ventral pelvic urethra of female"] = (
+    name: Literal[
         "intermediate cell layer of ventral pelvic urethra of female"
-    )
+    ] = "intermediate cell layer of ventral pelvic urethra of female"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_32305"] = "EMAPA_32305"
 
@@ -37292,9 +37291,9 @@ class _Intermediate_Cell_Layer_Of_Ventral_Pelvic_Urethra_Of_Female(_MouseAnatomi
 class _Intermediate_Cell_Layer_Of_Dorsal_Pelvic_Urethra_Of_Female(_MouseAnatomicalStructureModel):
     """Model intermediate cell layer of dorsal pelvic urethra of female"""
 
-    name: Literal["intermediate cell layer of dorsal pelvic urethra of female"] = (
+    name: Literal[
         "intermediate cell layer of dorsal pelvic urethra of female"
-    )
+    ] = "intermediate cell layer of dorsal pelvic urethra of female"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_32306"] = "EMAPA_32306"
 
@@ -37302,9 +37301,9 @@ class _Intermediate_Cell_Layer_Of_Dorsal_Pelvic_Urethra_Of_Female(_MouseAnatomic
 class _Intermediate_Cell_Layer_Of_Dorsal_Pelvic_Urethra_Of_Male(_MouseAnatomicalStructureModel):
     """Model intermediate cell layer of dorsal pelvic urethra of male"""
 
-    name: Literal["intermediate cell layer of dorsal pelvic urethra of male"] = (
+    name: Literal[
         "intermediate cell layer of dorsal pelvic urethra of male"
-    )
+    ] = "intermediate cell layer of dorsal pelvic urethra of male"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_32307"] = "EMAPA_32307"
 
@@ -37320,9 +37319,9 @@ class _Submucosa_Of_Ventral_Pelvic_Urethra_Of_Female(_MouseAnatomicalStructureMo
 class _Muscularis_Mucosa_Of_Ventral_Pelvic_Urethra_Of_Female(_MouseAnatomicalStructureModel):
     """Model muscularis mucosa of ventral pelvic urethra of female"""
 
-    name: Literal["muscularis mucosa of ventral pelvic urethra of female"] = (
+    name: Literal[
         "muscularis mucosa of ventral pelvic urethra of female"
-    )
+    ] = "muscularis mucosa of ventral pelvic urethra of female"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_32309"] = "EMAPA_32309"
 
@@ -37330,9 +37329,9 @@ class _Muscularis_Mucosa_Of_Ventral_Pelvic_Urethra_Of_Female(_MouseAnatomicalStr
 class _Lamina_Propria_Of_Ventral_Pelvic_Urethra_Of_Female(_MouseAnatomicalStructureModel):
     """Model lamina propria of ventral pelvic urethra of female"""
 
-    name: Literal["lamina propria of ventral pelvic urethra of female"] = (
+    name: Literal[
         "lamina propria of ventral pelvic urethra of female"
-    )
+    ] = "lamina propria of ventral pelvic urethra of female"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_32310"] = "EMAPA_32310"
 
@@ -37348,9 +37347,9 @@ class _Lamina_Propria_Of_Dorsal_Pelvic_Urethra_Of_Male(_MouseAnatomicalStructure
 class _Muscularis_Mucosa_Of_Dorsal_Pelvic_Urethra_Of_Male(_MouseAnatomicalStructureModel):
     """Model muscularis mucosa of dorsal pelvic urethra of male"""
 
-    name: Literal["muscularis mucosa of dorsal pelvic urethra of male"] = (
+    name: Literal[
         "muscularis mucosa of dorsal pelvic urethra of male"
-    )
+    ] = "muscularis mucosa of dorsal pelvic urethra of male"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_32312"] = "EMAPA_32312"
 
@@ -37366,9 +37365,9 @@ class _Submucosa_Of_Dorsal_Pelvic_Urethra_Of_Female(_MouseAnatomicalStructureMod
 class _Intermediate_Cell_Layer_Of_Ventral_Pelvic_Urethra_Of_Male(_MouseAnatomicalStructureModel):
     """Model intermediate cell layer of ventral pelvic urethra of male"""
 
-    name: Literal["intermediate cell layer of ventral pelvic urethra of male"] = (
+    name: Literal[
         "intermediate cell layer of ventral pelvic urethra of male"
-    )
+    ] = "intermediate cell layer of ventral pelvic urethra of male"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_32314"] = "EMAPA_32314"
 
@@ -38496,9 +38495,9 @@ class _Branchial_Groove(_MouseAnatomicalStructureModel):
 class _Branchial_Arch_Mesenchyme_Derived_From_Head_Mesoderm(_MouseAnatomicalStructureModel):
     """Model branchial arch mesenchyme derived from head mesoderm"""
 
-    name: Literal["branchial arch mesenchyme derived from head mesoderm"] = (
+    name: Literal[
         "branchial arch mesenchyme derived from head mesoderm"
-    )
+    ] = "branchial arch mesenchyme derived from head mesoderm"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_32751"] = "EMAPA_32751"
 
@@ -38538,9 +38537,9 @@ class _Branchial_Arch_Mesenchyme(_MouseAnatomicalStructureModel):
 class _Branchial_Arch_Mesenchyme_Derived_From_Neural_Crest(_MouseAnatomicalStructureModel):
     """Model branchial arch mesenchyme derived from neural crest"""
 
-    name: Literal["branchial arch mesenchyme derived from neural crest"] = (
+    name: Literal[
         "branchial arch mesenchyme derived from neural crest"
-    )
+    ] = "branchial arch mesenchyme derived from neural crest"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_32756"] = "EMAPA_32756"
 
@@ -38700,9 +38699,9 @@ class _Lingual_Swelling_Epithelium(_MouseAnatomicalStructureModel):
 class _Forelimb_Bud_Presumptive_Apical_Ectodermal_Ridge(_MouseAnatomicalStructureModel):
     """Model forelimb bud presumptive apical ectodermal ridge"""
 
-    name: Literal["forelimb bud presumptive apical ectodermal ridge"] = (
+    name: Literal[
         "forelimb bud presumptive apical ectodermal ridge"
-    )
+    ] = "forelimb bud presumptive apical ectodermal ridge"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_32776"] = "EMAPA_32776"
 
@@ -40238,9 +40237,9 @@ class _Accessory_Olfactory_Bulb(_MouseAnatomicalStructureModel):
 class _Accessory_Olfactory_Bulb_External_Plexiform_Layer(_MouseAnatomicalStructureModel):
     """Model accessory olfactory bulb external plexiform layer"""
 
-    name: Literal["accessory olfactory bulb external plexiform layer"] = (
+    name: Literal[
         "accessory olfactory bulb external plexiform layer"
-    )
+    ] = "accessory olfactory bulb external plexiform layer"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_35107"] = "EMAPA_35107"
 
@@ -40264,9 +40263,9 @@ class _Accessory_Olfactory_Bulb_Granule_Cell_Layer(_MouseAnatomicalStructureMode
 class _Accessory_Olfactory_Bulb_Internal_Plexiform_Layer(_MouseAnatomicalStructureModel):
     """Model accessory olfactory bulb internal plexiform layer"""
 
-    name: Literal["accessory olfactory bulb internal plexiform layer"] = (
+    name: Literal[
         "accessory olfactory bulb internal plexiform layer"
-    )
+    ] = "accessory olfactory bulb internal plexiform layer"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_35110"] = "EMAPA_35110"
 
@@ -41842,9 +41841,9 @@ class _Epithelium_Of_Capillary_Loop_Renal_Corpuscle(_MouseAnatomicalStructureMod
 class _Epithelium_Of_Degenerating_Paramesonephric_Duct_Of_Male(_MouseAnatomicalStructureModel):
     """Model epithelium of degenerating paramesonephric duct of male"""
 
-    name: Literal["epithelium of degenerating paramesonephric duct of male"] = (
+    name: Literal[
         "epithelium of degenerating paramesonephric duct of male"
-    )
+    ] = "epithelium of degenerating paramesonephric duct of male"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_35318"] = "EMAPA_35318"
 
@@ -43628,9 +43627,9 @@ class _Medullary_Tubule(_MouseAnatomicalStructureModel):
 class _Mesenchyme_Of_Degenerating_Paramesonephric_Duct_Of_Male(_MouseAnatomicalStructureModel):
     """Model mesenchyme of degenerating paramesonephric duct of male"""
 
-    name: Literal["mesenchyme of degenerating paramesonephric duct of male"] = (
+    name: Literal[
         "mesenchyme of degenerating paramesonephric duct of male"
-    )
+    ] = "mesenchyme of degenerating paramesonephric duct of male"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_35558"] = "EMAPA_35558"
 
@@ -47438,9 +47437,9 @@ class _Common_Atrial_Chamber_Auricular_Region(_MouseAnatomicalStructureModel):
 class _Common_Atrial_Chamber_Auricular_Region_Cardiac_Muscle(_MouseAnatomicalStructureModel):
     """Model common atrial chamber auricular region cardiac muscle"""
 
-    name: Literal["common atrial chamber auricular region cardiac muscle"] = (
+    name: Literal[
         "common atrial chamber auricular region cardiac muscle"
-    )
+    ] = "common atrial chamber auricular region cardiac muscle"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_36060"] = "EMAPA_36060"
 
@@ -47448,9 +47447,9 @@ class _Common_Atrial_Chamber_Auricular_Region_Cardiac_Muscle(_MouseAnatomicalStr
 class _Common_Atrial_Chamber_Auricular_Region_Endocardial_Lining(_MouseAnatomicalStructureModel):
     """Model common atrial chamber auricular region endocardial lining"""
 
-    name: Literal["common atrial chamber auricular region endocardial lining"] = (
+    name: Literal[
         "common atrial chamber auricular region endocardial lining"
-    )
+    ] = "common atrial chamber auricular region endocardial lining"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_36061"] = "EMAPA_36061"
 
@@ -47546,9 +47545,9 @@ class _Intermediate_Cell_Layer_Of_Bladder_Urothelium(_MouseAnatomicalStructureMo
 class _Krt5_Expressing_Basal_Cell_Of_Bladder_Urothelium(_MouseAnatomicalStructureModel):
     """Model Krt5-expressing basal cell of bladder urothelium"""
 
-    name: Literal["Krt5-expressing basal cell of bladder urothelium"] = (
+    name: Literal[
         "Krt5-expressing basal cell of bladder urothelium"
-    )
+    ] = "Krt5-expressing basal cell of bladder urothelium"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_36074"] = "EMAPA_36074"
 
@@ -47636,9 +47635,9 @@ class _Urethra_Junction_Of_Ventral_Bladder_Neck(_MouseAnatomicalStructureModel):
 class _Undifferentiated_Epithelial_Cell_Of_Urothelium_Of_Primitive_Bladder(_MouseAnatomicalStructureModel):
     """Model undifferentiated epithelial cell of urothelium of primitive bladder"""
 
-    name: Literal["undifferentiated epithelial cell of urothelium of primitive bladder"] = (
+    name: Literal[
         "undifferentiated epithelial cell of urothelium of primitive bladder"
-    )
+    ] = "undifferentiated epithelial cell of urothelium of primitive bladder"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_36085"] = "EMAPA_36085"
 
@@ -47646,9 +47645,9 @@ class _Undifferentiated_Epithelial_Cell_Of_Urothelium_Of_Primitive_Bladder(_Mous
 class _Intermediate_Cell_Of_Urothelium_Of_Primitive_Bladder(_MouseAnatomicalStructureModel):
     """Model intermediate cell of urothelium of primitive bladder"""
 
-    name: Literal["intermediate cell of urothelium of primitive bladder"] = (
+    name: Literal[
         "intermediate cell of urothelium of primitive bladder"
-    )
+    ] = "intermediate cell of urothelium of primitive bladder"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_36086"] = "EMAPA_36086"
 
@@ -47688,9 +47687,9 @@ class _Muscle_Layer_Of_Primitive_Bladder(_MouseAnatomicalStructureModel):
 class _Smooth_Muscle_Cell_Of_Outer_Mesenchymal_Layer_Of_Primitive_Bladder(_MouseAnatomicalStructureModel):
     """Model smooth muscle cell of outer mesenchymal layer of primitive bladder"""
 
-    name: Literal["smooth muscle cell of outer mesenchymal layer of primitive bladder"] = (
+    name: Literal[
         "smooth muscle cell of outer mesenchymal layer of primitive bladder"
-    )
+    ] = "smooth muscle cell of outer mesenchymal layer of primitive bladder"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_36091"] = "EMAPA_36091"
 
@@ -47698,9 +47697,9 @@ class _Smooth_Muscle_Cell_Of_Outer_Mesenchymal_Layer_Of_Primitive_Bladder(_Mouse
 class _Mesenchymal_Cell_Of_Outer_Mesenchymal_Layer_Of_Primitive_Bladder(_MouseAnatomicalStructureModel):
     """Model mesenchymal cell of outer mesenchymal layer of primitive bladder"""
 
-    name: Literal["mesenchymal cell of outer mesenchymal layer of primitive bladder"] = (
+    name: Literal[
         "mesenchymal cell of outer mesenchymal layer of primitive bladder"
-    )
+    ] = "mesenchymal cell of outer mesenchymal layer of primitive bladder"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_36092"] = "EMAPA_36092"
 
@@ -47732,9 +47731,9 @@ class _Adventitia_Of_Primitive_Bladder(_MouseAnatomicalStructureModel):
 class _Primitive_Bladder_Caudal_Urogenital_Sinus_Transition_Zone(_MouseAnatomicalStructureModel):
     """Model primitive bladder-caudal urogenital sinus transition zone"""
 
-    name: Literal["primitive bladder-caudal urogenital sinus transition zone"] = (
+    name: Literal[
         "primitive bladder-caudal urogenital sinus transition zone"
-    )
+    ] = "primitive bladder-caudal urogenital sinus transition zone"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_36096"] = "EMAPA_36096"
 
@@ -47742,9 +47741,9 @@ class _Primitive_Bladder_Caudal_Urogenital_Sinus_Transition_Zone(_MouseAnatomica
 class _Epithelium_Of_Primitive_Bladder_Caudal_Urogenital_Sinus_Transition_Zone(_MouseAnatomicalStructureModel):
     """Model epithelium of primitive bladder-caudal urogenital sinus transition zone"""
 
-    name: Literal["epithelium of primitive bladder-caudal urogenital sinus transition zone"] = (
+    name: Literal[
         "epithelium of primitive bladder-caudal urogenital sinus transition zone"
-    )
+    ] = "epithelium of primitive bladder-caudal urogenital sinus transition zone"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_36097"] = "EMAPA_36097"
 
@@ -47752,9 +47751,9 @@ class _Epithelium_Of_Primitive_Bladder_Caudal_Urogenital_Sinus_Transition_Zone(_
 class _Mesenchyme_Of_Primitive_Bladder_Caudal_Urogenital_Sinus_Transition_Zone(_MouseAnatomicalStructureModel):
     """Model mesenchyme of primitive bladder-caudal urogenital sinus transition zone"""
 
-    name: Literal["mesenchyme of primitive bladder-caudal urogenital sinus transition zone"] = (
+    name: Literal[
         "mesenchyme of primitive bladder-caudal urogenital sinus transition zone"
-    )
+    ] = "mesenchyme of primitive bladder-caudal urogenital sinus transition zone"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_36098"] = "EMAPA_36098"
 
@@ -47810,9 +47809,9 @@ class _Rest_Of_Epithelium_Of_Pelvic_Urethra(_MouseAnatomicalStructureModel):
 class _Superficial_Cell_Layer_Of_Pelvic_Urethra_Of_Female(_MouseAnatomicalStructureModel):
     """Model superficial cell layer of pelvic urethra of female"""
 
-    name: Literal["superficial cell layer of pelvic urethra of female"] = (
+    name: Literal[
         "superficial cell layer of pelvic urethra of female"
-    )
+    ] = "superficial cell layer of pelvic urethra of female"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_36105"] = "EMAPA_36105"
 
@@ -47820,9 +47819,9 @@ class _Superficial_Cell_Layer_Of_Pelvic_Urethra_Of_Female(_MouseAnatomicalStruct
 class _Intermediate_Cell_Layer_Of_Pelvic_Urethra_Of_Female(_MouseAnatomicalStructureModel):
     """Model intermediate cell layer of pelvic urethra of female"""
 
-    name: Literal["intermediate cell layer of pelvic urethra of female"] = (
+    name: Literal[
         "intermediate cell layer of pelvic urethra of female"
-    )
+    ] = "intermediate cell layer of pelvic urethra of female"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_36106"] = "EMAPA_36106"
 
@@ -47846,9 +47845,9 @@ class _Urogenital_Sinus_Ridge_Of_Female(_MouseAnatomicalStructureModel):
 class _Rest_Of_Epithelium_Of_Dorsal_Pelvic_Urethra_Of_Female(_MouseAnatomicalStructureModel):
     """Model rest of epithelium of dorsal pelvic urethra of female"""
 
-    name: Literal["rest of epithelium of dorsal pelvic urethra of female"] = (
+    name: Literal[
         "rest of epithelium of dorsal pelvic urethra of female"
-    )
+    ] = "rest of epithelium of dorsal pelvic urethra of female"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_36109"] = "EMAPA_36109"
 
@@ -47936,9 +47935,9 @@ class _Egg_Cylinder(_MouseAnatomicalStructureModel):
 class _Superficial_Cell_Layer_Of_Pelvic_Urethra_Of_Male(_MouseAnatomicalStructureModel):
     """Model superficial cell layer of pelvic urethra of male"""
 
-    name: Literal["superficial cell layer of pelvic urethra of male"] = (
+    name: Literal[
         "superficial cell layer of pelvic urethra of male"
-    )
+    ] = "superficial cell layer of pelvic urethra of male"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_36120"] = "EMAPA_36120"
 
@@ -47946,9 +47945,9 @@ class _Superficial_Cell_Layer_Of_Pelvic_Urethra_Of_Male(_MouseAnatomicalStructur
 class _Intermediate_Cell_Layer_Of_Pelvic_Urethra_Of_Male(_MouseAnatomicalStructureModel):
     """Model intermediate cell layer of pelvic urethra of male"""
 
-    name: Literal["intermediate cell layer of pelvic urethra of male"] = (
+    name: Literal[
         "intermediate cell layer of pelvic urethra of male"
-    )
+    ] = "intermediate cell layer of pelvic urethra of male"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_36121"] = "EMAPA_36121"
 
@@ -47972,9 +47971,9 @@ class _Urogenital_Sinus_Ridge_Of_Male(_MouseAnatomicalStructureModel):
 class _Rest_Of_Epithelium_Of_Dorsal_Pelvic_Urethra_Of_Male(_MouseAnatomicalStructureModel):
     """Model rest of epithelium of dorsal pelvic urethra of male"""
 
-    name: Literal["rest of epithelium of dorsal pelvic urethra of male"] = (
+    name: Literal[
         "rest of epithelium of dorsal pelvic urethra of male"
-    )
+    ] = "rest of epithelium of dorsal pelvic urethra of male"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_36124"] = "EMAPA_36124"
 
@@ -48158,9 +48157,9 @@ class _Epithelium_Of_Anterior_Prostate_Bud(_MouseAnatomicalStructureModel):
 class _Peri_Prostatic_Mesenchyme_Of_Anterior_Prostate_Bud(_MouseAnatomicalStructureModel):
     """Model peri-prostatic mesenchyme of anterior prostate bud"""
 
-    name: Literal["peri-prostatic mesenchyme of anterior prostate bud"] = (
+    name: Literal[
         "peri-prostatic mesenchyme of anterior prostate bud"
-    )
+    ] = "peri-prostatic mesenchyme of anterior prostate bud"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_36147"] = "EMAPA_36147"
 
@@ -48176,9 +48175,9 @@ class _Epithelium_Of_Dorsal_Prostate_Bud(_MouseAnatomicalStructureModel):
 class _Peri_Prostatic_Mesenchyme_Of_Dorsal_Prostate_Bud(_MouseAnatomicalStructureModel):
     """Model peri-prostatic mesenchyme of dorsal prostate bud"""
 
-    name: Literal["peri-prostatic mesenchyme of dorsal prostate bud"] = (
+    name: Literal[
         "peri-prostatic mesenchyme of dorsal prostate bud"
-    )
+    ] = "peri-prostatic mesenchyme of dorsal prostate bud"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_36149"] = "EMAPA_36149"
 
@@ -48194,9 +48193,9 @@ class _Epithelium_Of_Ventral_Prostate_Bud(_MouseAnatomicalStructureModel):
 class _Peri_Prostatic_Mesenchyme_Of_Ventral_Prostate_Bud(_MouseAnatomicalStructureModel):
     """Model peri-prostatic mesenchyme of ventral prostate bud"""
 
-    name: Literal["peri-prostatic mesenchyme of ventral prostate bud"] = (
+    name: Literal[
         "peri-prostatic mesenchyme of ventral prostate bud"
-    )
+    ] = "peri-prostatic mesenchyme of ventral prostate bud"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_36151"] = "EMAPA_36151"
 
@@ -48212,9 +48211,9 @@ class _Epithelium_Of_Lateral_Prostate_Bud(_MouseAnatomicalStructureModel):
 class _Peri_Prostatic_Mesenchyme_Of_Lateral_Prostate_Bud(_MouseAnatomicalStructureModel):
     """Model peri-prostatic mesenchyme of lateral prostate bud"""
 
-    name: Literal["peri-prostatic mesenchyme of lateral prostate bud"] = (
+    name: Literal[
         "peri-prostatic mesenchyme of lateral prostate bud"
-    )
+    ] = "peri-prostatic mesenchyme of lateral prostate bud"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_36153"] = "EMAPA_36153"
 
@@ -49798,9 +49797,9 @@ class _Nerve_Of_Lamina_Propria_Of_Bladder_Neck(_MouseAnatomicalStructureModel):
 class _Nerve_Of_Blood_Vessel_Of_Lamina_Propria_Of_Bladder_Fundus(_MouseAnatomicalStructureModel):
     """Model nerve of blood vessel of lamina propria of bladder fundus"""
 
-    name: Literal["nerve of blood vessel of lamina propria of bladder fundus"] = (
+    name: Literal[
         "nerve of blood vessel of lamina propria of bladder fundus"
-    )
+    ] = "nerve of blood vessel of lamina propria of bladder fundus"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_36353"] = "EMAPA_36353"
 
@@ -49808,9 +49807,9 @@ class _Nerve_Of_Blood_Vessel_Of_Lamina_Propria_Of_Bladder_Fundus(_MouseAnatomica
 class _Nerve_Of_Blood_Vessel_Of_Lamina_Propria_Of_Bladder_Neck(_MouseAnatomicalStructureModel):
     """Model nerve of blood vessel of lamina propria of bladder neck"""
 
-    name: Literal["nerve of blood vessel of lamina propria of bladder neck"] = (
+    name: Literal[
         "nerve of blood vessel of lamina propria of bladder neck"
-    )
+    ] = "nerve of blood vessel of lamina propria of bladder neck"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_36354"] = "EMAPA_36354"
 
@@ -49818,9 +49817,9 @@ class _Nerve_Of_Blood_Vessel_Of_Lamina_Propria_Of_Bladder_Neck(_MouseAnatomicalS
 class _Nerve_Of_Suburothelial_Lamina_Propria_Of_Bladder_Fundus(_MouseAnatomicalStructureModel):
     """Model nerve of suburothelial lamina propria of bladder fundus"""
 
-    name: Literal["nerve of suburothelial lamina propria of bladder fundus"] = (
+    name: Literal[
         "nerve of suburothelial lamina propria of bladder fundus"
-    )
+    ] = "nerve of suburothelial lamina propria of bladder fundus"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_36355"] = "EMAPA_36355"
 
@@ -49852,9 +49851,9 @@ class _Nerve_Of_Lamina_Propria_Of_Ventral_Bladder_Neck(_MouseAnatomicalStructure
 class _Nerve_Of_Blood_Vessel_Of_Suburothelial_Lamina_Propria_Of_Bladder_Fundus(_MouseAnatomicalStructureModel):
     """Model nerve of blood vessel of suburothelial lamina propria of bladder fundus"""
 
-    name: Literal["nerve of blood vessel of suburothelial lamina propria of bladder fundus"] = (
+    name: Literal[
         "nerve of blood vessel of suburothelial lamina propria of bladder fundus"
-    )
+    ] = "nerve of blood vessel of suburothelial lamina propria of bladder fundus"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_36359"] = "EMAPA_36359"
 
@@ -49862,9 +49861,9 @@ class _Nerve_Of_Blood_Vessel_Of_Suburothelial_Lamina_Propria_Of_Bladder_Fundus(_
 class _Nerve_Of_Blood_Vessel_Of_Outer_Lamina_Propria_Of_Bladder_Fundus(_MouseAnatomicalStructureModel):
     """Model nerve of blood vessel of outer lamina propria of bladder fundus"""
 
-    name: Literal["nerve of blood vessel of outer lamina propria of bladder fundus"] = (
+    name: Literal[
         "nerve of blood vessel of outer lamina propria of bladder fundus"
-    )
+    ] = "nerve of blood vessel of outer lamina propria of bladder fundus"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_36360"] = "EMAPA_36360"
 
@@ -49872,9 +49871,9 @@ class _Nerve_Of_Blood_Vessel_Of_Outer_Lamina_Propria_Of_Bladder_Fundus(_MouseAna
 class _Nerve_Of_Blood_Vessel_Of_Lamina_Propria_Of_Trigone(_MouseAnatomicalStructureModel):
     """Model nerve of blood vessel of lamina propria of trigone"""
 
-    name: Literal["nerve of blood vessel of lamina propria of trigone"] = (
+    name: Literal[
         "nerve of blood vessel of lamina propria of trigone"
-    )
+    ] = "nerve of blood vessel of lamina propria of trigone"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_36361"] = "EMAPA_36361"
 
@@ -49882,9 +49881,9 @@ class _Nerve_Of_Blood_Vessel_Of_Lamina_Propria_Of_Trigone(_MouseAnatomicalStruct
 class _Nerve_Of_Blood_Vessel_Of_Lamina_Propria_Of_Ventral_Bladder_Neck(_MouseAnatomicalStructureModel):
     """Model nerve of blood vessel of lamina propria of ventral bladder neck"""
 
-    name: Literal["nerve of blood vessel of lamina propria of ventral bladder neck"] = (
+    name: Literal[
         "nerve of blood vessel of lamina propria of ventral bladder neck"
-    )
+    ] = "nerve of blood vessel of lamina propria of ventral bladder neck"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_36362"] = "EMAPA_36362"
 
@@ -49892,9 +49891,9 @@ class _Nerve_Of_Blood_Vessel_Of_Lamina_Propria_Of_Ventral_Bladder_Neck(_MouseAna
 class _Nerve_Of_Nonvascular_Tissue_Of_Detrusor_Of_Bladder(_MouseAnatomicalStructureModel):
     """Model nerve of nonvascular tissue of detrusor of bladder"""
 
-    name: Literal["nerve of nonvascular tissue of detrusor of bladder"] = (
+    name: Literal[
         "nerve of nonvascular tissue of detrusor of bladder"
-    )
+    ] = "nerve of nonvascular tissue of detrusor of bladder"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_36363"] = "EMAPA_36363"
 
@@ -49934,9 +49933,9 @@ class _Nerve_Of_Detrusor_Muscle_Of_Bladder_Trigone(_MouseAnatomicalStructureMode
 class _Nerve_Of_Detrusor_Muscle_Of_Ventral_Bladder_Neck(_MouseAnatomicalStructureModel):
     """Model nerve of detrusor muscle of ventral bladder neck"""
 
-    name: Literal["nerve of detrusor muscle of ventral bladder neck"] = (
+    name: Literal[
         "nerve of detrusor muscle of ventral bladder neck"
-    )
+    ] = "nerve of detrusor muscle of ventral bladder neck"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_36368"] = "EMAPA_36368"
 
@@ -49944,9 +49943,9 @@ class _Nerve_Of_Detrusor_Muscle_Of_Ventral_Bladder_Neck(_MouseAnatomicalStructur
 class _Nerve_Of_Blood_Vessel_Of_Detrusor_Of_Bladder_Fundus(_MouseAnatomicalStructureModel):
     """Model nerve of blood vessel of detrusor of bladder fundus"""
 
-    name: Literal["nerve of blood vessel of detrusor of bladder fundus"] = (
+    name: Literal[
         "nerve of blood vessel of detrusor of bladder fundus"
-    )
+    ] = "nerve of blood vessel of detrusor of bladder fundus"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_36369"] = "EMAPA_36369"
 
@@ -49954,9 +49953,9 @@ class _Nerve_Of_Blood_Vessel_Of_Detrusor_Of_Bladder_Fundus(_MouseAnatomicalStruc
 class _Nerve_Of_Blood_Vessel_Of_Detrusor_Of_Bladder_Neck(_MouseAnatomicalStructureModel):
     """Model nerve of blood vessel of detrusor of bladder neck"""
 
-    name: Literal["nerve of blood vessel of detrusor of bladder neck"] = (
+    name: Literal[
         "nerve of blood vessel of detrusor of bladder neck"
-    )
+    ] = "nerve of blood vessel of detrusor of bladder neck"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_36370"] = "EMAPA_36370"
 
@@ -49972,9 +49971,9 @@ class _Nerve_Of_Blood_Vessel_Of_Detrusor_Of_Trigone(_MouseAnatomicalStructureMod
 class _Nerve_Of_Blood_Vessel_Of_Detrusor_Of_Ventral_Bladder_Neck(_MouseAnatomicalStructureModel):
     """Model nerve of blood vessel of detrusor of ventral bladder neck"""
 
-    name: Literal["nerve of blood vessel of detrusor of ventral bladder neck"] = (
+    name: Literal[
         "nerve of blood vessel of detrusor of ventral bladder neck"
-    )
+    ] = "nerve of blood vessel of detrusor of ventral bladder neck"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_36372"] = "EMAPA_36372"
 
@@ -49982,9 +49981,9 @@ class _Nerve_Of_Blood_Vessel_Of_Detrusor_Of_Ventral_Bladder_Neck(_MouseAnatomica
 class _Nerve_Of_Nonvascular_Tissue_Of_Outer_Layer_Of_Bladder(_MouseAnatomicalStructureModel):
     """Model nerve of nonvascular tissue of outer layer of bladder"""
 
-    name: Literal["nerve of nonvascular tissue of outer layer of bladder"] = (
+    name: Literal[
         "nerve of nonvascular tissue of outer layer of bladder"
-    )
+    ] = "nerve of nonvascular tissue of outer layer of bladder"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_36373"] = "EMAPA_36373"
 
@@ -50032,9 +50031,9 @@ class _Nerve_Of_Adventitia_Of_Ventral_Bladder_Neck(_MouseAnatomicalStructureMode
 class _Nerve_Of_Blood_Vessel_Of_Serosa_Of_Bladder_Fundus(_MouseAnatomicalStructureModel):
     """Model nerve of blood vessel of serosa of bladder fundus"""
 
-    name: Literal["nerve of blood vessel of serosa of bladder fundus"] = (
+    name: Literal[
         "nerve of blood vessel of serosa of bladder fundus"
-    )
+    ] = "nerve of blood vessel of serosa of bladder fundus"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_36379"] = "EMAPA_36379"
 
@@ -50042,9 +50041,9 @@ class _Nerve_Of_Blood_Vessel_Of_Serosa_Of_Bladder_Fundus(_MouseAnatomicalStructu
 class _Nerve_Of_Blood_Vessel_Of_Adventitia_Of_Bladder_Neck(_MouseAnatomicalStructureModel):
     """Model nerve of blood vessel of adventitia of bladder neck"""
 
-    name: Literal["nerve of blood vessel of adventitia of bladder neck"] = (
+    name: Literal[
         "nerve of blood vessel of adventitia of bladder neck"
-    )
+    ] = "nerve of blood vessel of adventitia of bladder neck"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_36380"] = "EMAPA_36380"
 
@@ -50060,9 +50059,9 @@ class _Nerve_Of_Blood_Vessel_Of_Adventitia_Of_Trigone(_MouseAnatomicalStructureM
 class _Nerve_Of_Blood_Vessel_Of_Adventitia_Of_Ventral_Bladder_Neck(_MouseAnatomicalStructureModel):
     """Model nerve of blood vessel of adventitia of ventral bladder neck"""
 
-    name: Literal["nerve of blood vessel of adventitia of ventral bladder neck"] = (
+    name: Literal[
         "nerve of blood vessel of adventitia of ventral bladder neck"
-    )
+    ] = "nerve of blood vessel of adventitia of ventral bladder neck"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_36382"] = "EMAPA_36382"
 
@@ -50222,9 +50221,9 @@ class _Male_Urogenital_Mating_Protuberance_Cartilage(_MouseAnatomicalStructureMo
 class _Male_Urogenital_Mating_Protuberance_Corpus_Cavernosum(_MouseAnatomicalStructureModel):
     """Model male urogenital mating protuberance corpus cavernosum"""
 
-    name: Literal["male urogenital mating protuberance corpus cavernosum"] = (
+    name: Literal[
         "male urogenital mating protuberance corpus cavernosum"
-    )
+    ] = "male urogenital mating protuberance corpus cavernosum"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_36402"] = "EMAPA_36402"
 
@@ -50232,9 +50231,9 @@ class _Male_Urogenital_Mating_Protuberance_Corpus_Cavernosum(_MouseAnatomicalStr
 class _Male_Urogenital_Mating_Protuberance_Surface_Epithelium(_MouseAnatomicalStructureModel):
     """Model male urogenital mating protuberance surface epithelium"""
 
-    name: Literal["male urogenital mating protuberance surface epithelium"] = (
+    name: Literal[
         "male urogenital mating protuberance surface epithelium"
-    )
+    ] = "male urogenital mating protuberance surface epithelium"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_36403"] = "EMAPA_36403"
 
@@ -50242,9 +50241,9 @@ class _Male_Urogenital_Mating_Protuberance_Surface_Epithelium(_MouseAnatomicalSt
 class _Male_Urogenital_Mating_Protuberance_Ridge_Groove(_MouseAnatomicalStructureModel):
     """Model male urogenital mating protuberance ridge groove"""
 
-    name: Literal["male urogenital mating protuberance ridge groove"] = (
+    name: Literal[
         "male urogenital mating protuberance ridge groove"
-    )
+    ] = "male urogenital mating protuberance ridge groove"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_36404"] = "EMAPA_36404"
 
@@ -50540,9 +50539,9 @@ class _Mesenchyme_Of_Glans_Of_Female_Genital_Tubercle(_MouseAnatomicalStructureM
 class _Urethral_Plate_Epithelium_Of_Urogenital_Membrane_Of_Female(_MouseAnatomicalStructureModel):
     """Model urethral plate epithelium of urogenital membrane of female"""
 
-    name: Literal["urethral plate epithelium of urogenital membrane of female"] = (
+    name: Literal[
         "urethral plate epithelium of urogenital membrane of female"
-    )
+    ] = "urethral plate epithelium of urogenital membrane of female"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_36442"] = "EMAPA_36442"
 
@@ -50558,9 +50557,9 @@ class _Skin_Of_Urogenital_Membrane_Of_Female(_MouseAnatomicalStructureModel):
 class _Urethral_Plate_Epithelium_Of_Urogenital_Membrane_Of_Male(_MouseAnatomicalStructureModel):
     """Model urethral plate epithelium of urogenital membrane of male"""
 
-    name: Literal["urethral plate epithelium of urogenital membrane of male"] = (
+    name: Literal[
         "urethral plate epithelium of urogenital membrane of male"
-    )
+    ] = "urethral plate epithelium of urogenital membrane of male"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_36444"] = "EMAPA_36444"
 
@@ -50680,9 +50679,9 @@ class _Myometrium_Inner_Circular_Smooth_Muscle_Layer(_MouseAnatomicalStructureMo
 class _Myometrium_Outer_Longitudinal_Smooth_Muscle_Layer(_MouseAnatomicalStructureModel):
     """Model myometrium outer longitudinal smooth muscle layer"""
 
-    name: Literal["myometrium outer longitudinal smooth muscle layer"] = (
+    name: Literal[
         "myometrium outer longitudinal smooth muscle layer"
-    )
+    ] = "myometrium outer longitudinal smooth muscle layer"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_36459"] = "EMAPA_36459"
 
@@ -51690,9 +51689,9 @@ class _Accessory_Olfactory_Bulb_Anlage(_MouseAnatomicalStructureModel):
 class _Accessory_Olfactory_Bulb_Anlage_Mitral_Cell_Layer(_MouseAnatomicalStructureModel):
     """Model accessory olfactory bulb anlage mitral cell layer"""
 
-    name: Literal["accessory olfactory bulb anlage mitral cell layer"] = (
+    name: Literal[
         "accessory olfactory bulb anlage mitral cell layer"
-    )
+    ] = "accessory olfactory bulb anlage mitral cell layer"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_36585"] = "EMAPA_36585"
 
@@ -51708,9 +51707,9 @@ class _Main_Olfactory_Bulb_Ventricular_Layer(_MouseAnatomicalStructureModel):
 class _Main_Olfactory_Bulb_Prospective_Glomerular_Layer(_MouseAnatomicalStructureModel):
     """Model main olfactory bulb prospective glomerular layer"""
 
-    name: Literal["main olfactory bulb prospective glomerular layer"] = (
+    name: Literal[
         "main olfactory bulb prospective glomerular layer"
-    )
+    ] = "main olfactory bulb prospective glomerular layer"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_36587"] = "EMAPA_36587"
 
@@ -51806,9 +51805,9 @@ class _Limb_Blood_Vessel(_MouseAnatomicalStructureModel):
 class _Main_Olfactory_Bulb_Prospective_Granule_Cell_Layer(_MouseAnatomicalStructureModel):
     """Model main olfactory bulb prospective granule cell layer"""
 
-    name: Literal["main olfactory bulb prospective granule cell layer"] = (
+    name: Literal[
         "main olfactory bulb prospective granule cell layer"
-    )
+    ] = "main olfactory bulb prospective granule cell layer"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_36599"] = "EMAPA_36599"
 
@@ -59464,9 +59463,9 @@ class _Large_Intestine_Smooth_Muscle_Circular_Layer(_MouseAnatomicalStructureMod
 class _Large_Intestine_Smooth_Muscle_Longitudinal_Layer(_MouseAnatomicalStructureModel):
     """Model large intestine smooth muscle longitudinal layer"""
 
-    name: Literal["large intestine smooth muscle longitudinal layer"] = (
+    name: Literal[
         "large intestine smooth muscle longitudinal layer"
-    )
+    ] = "large intestine smooth muscle longitudinal layer"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_37559"] = "EMAPA_37559"
 
@@ -59498,9 +59497,9 @@ class _Small_Intestine_Smooth_Muscle_Circular_Layer(_MouseAnatomicalStructureMod
 class _Small_Intestine_Smooth_Muscle_Longitudinal_Layer(_MouseAnatomicalStructureModel):
     """Model small intestine smooth muscle longitudinal layer"""
 
-    name: Literal["small intestine smooth muscle longitudinal layer"] = (
+    name: Literal[
         "small intestine smooth muscle longitudinal layer"
-    )
+    ] = "small intestine smooth muscle longitudinal layer"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_37563"] = "EMAPA_37563"
 
@@ -59644,9 +59643,9 @@ class _Respiratory_System_Lymphatic_Vessel_Endothelium(_MouseAnatomicalStructure
 class _Respiratory_System_Lymphatic_Vessel_Smooth_Muscle(_MouseAnatomicalStructureModel):
     """Model respiratory system lymphatic vessel smooth muscle"""
 
-    name: Literal["respiratory system lymphatic vessel smooth muscle"] = (
+    name: Literal[
         "respiratory system lymphatic vessel smooth muscle"
-    )
+    ] = "respiratory system lymphatic vessel smooth muscle"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_37582"] = "EMAPA_37582"
 
@@ -64070,9 +64069,9 @@ class _Extraembryonic_Posterior_Visceral_Endoderm(_MouseAnatomicalStructureModel
 class _Allantois_Associated_Posterior_Visceral_Endoderm(_MouseAnatomicalStructureModel):
     """Model allantois-associated posterior visceral endoderm"""
 
-    name: Literal["allantois-associated posterior visceral endoderm"] = (
+    name: Literal[
         "allantois-associated posterior visceral endoderm"
-    )
+    ] = "allantois-associated posterior visceral endoderm"
     registry: Registry.ONE_OF = Registry.EMAPA
     registry_identifier: Literal["EMAPA_38136"] = "EMAPA_38136"
 

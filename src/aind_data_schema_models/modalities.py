@@ -1,5 +1,4 @@
 """Modalities"""
-
 from enum import IntEnum
 from typing import Literal, Union
 
@@ -62,9 +61,9 @@ class _Fib(_ModalityModel):
 class _Fmost(_ModalityModel):
     """Model fMOST"""
 
-    name: Literal["Fluorescence micro-optical sectioning tomography"] = (
+    name: Literal[
         "Fluorescence micro-optical sectioning tomography"
-    )
+    ] = "Fluorescence micro-optical sectioning tomography"
     abbreviation: Literal["fMOST"] = "fMOST"
 
 
@@ -92,9 +91,9 @@ class _Mri(_ModalityModel):
 class _Merfish(_ModalityModel):
     """Model merfish"""
 
-    name: Literal["Multiplexed error-robust fluorescence in situ hybridization"] = (
+    name: Literal[
         "Multiplexed error-robust fluorescence in situ hybridization"
-    )
+    ] = "Multiplexed error-robust fluorescence in situ hybridization"
     abbreviation: Literal["merfish"] = "merfish"
 
 
@@ -273,9 +272,9 @@ class _Fib_Files(_ExpectedFilesModel):
 class _Fmost_Files(_ExpectedFilesModel):
     """Model fMOST_Files"""
 
-    name: Literal["Fluorescence micro-optical sectioning tomography"] = (
+    name: Literal[
         "Fluorescence micro-optical sectioning tomography"
-    )
+    ] = "Fluorescence micro-optical sectioning tomography"
     modality_abbreviation: Literal["fMOST"] = "fMOST"
     subject: FileRequirement = FileRequirement.REQUIRED
     data_description: FileRequirement = FileRequirement.REQUIRED
@@ -339,9 +338,9 @@ class _Mri_Files(_ExpectedFilesModel):
 class _Merfish_Files(_ExpectedFilesModel):
     """Model merfish_Files"""
 
-    name: Literal["Multiplexed error-robust fluorescence in situ hybridization"] = (
+    name: Literal[
         "Multiplexed error-robust fluorescence in situ hybridization"
-    )
+    ] = "Multiplexed error-robust fluorescence in situ hybridization"
     modality_abbreviation: Literal["merfish"] = "merfish"
     subject: FileRequirement = FileRequirement.REQUIRED
     data_description: FileRequirement = FileRequirement.REQUIRED
