@@ -166,9 +166,9 @@ class _Charles_River_Laboratories(_OrganizationModel):
     """Model Charles River Laboratories"""
 
     name: Literal["Charles River Laboratories"] = "Charles River Laboratories"
-    abbreviation: Literal[" CRL"] = " CRL"
+    abbreviation: Literal["CRL"] = "CRL"
     registry: Registry.ONE_OF = Registry.ROR
-    registry_identifier: Literal[" 03ndmsg87"] = " 03ndmsg87"
+    registry_identifier: Literal["03ndmsg87"] = "03ndmsg87"
 
 
 class _Chroma(_OrganizationModel):
@@ -907,7 +907,7 @@ class Organization:
     CARL_ZEISS = _Carl_Zeiss()
     CHAMPALIMAUD = _Champalimaud_Foundation()
     CZI = _Chan_Zuckerberg_Initiative()
-    _CRL = _Charles_River_Laboratories()
+    CRL = _Charles_River_Laboratories()
     CHROMA = _Chroma()
     COHERENT_SCIENTIFIC = _Coherent_Scientific()
     COLUMBIA = _Columbia_University()
