@@ -1125,3 +1125,12 @@ Organization.SUBJECT_SOURCES = one_of_instance(
         Organization.OTHER,
     ]
 )
+
+Organization.CATHETER_IMPLANTS = one_of_instace(
+    [
+        Organization.AIND,
+        Organization.CRL,
+        Organization.JAX,
+        Organization.OTHER,
+    ]
+)
