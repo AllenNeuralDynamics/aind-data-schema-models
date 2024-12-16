@@ -1126,7 +1126,7 @@ Organization.SUBJECT_SOURCES = one_of_instance(
     ]
 )
 
-Organization.CATHETER_IMPLANTS = one_of_instace(
+Organization.CATHETER_IMPLANTS = one_of_instance(
     [
         Organization.AIND,
         Organization.CRL,
