@@ -73220,3 +73220,11 @@ MouseAnatomicalStructure.BODY_PARTS = Annotated[
     ],
     Field(discriminator="registry_identifier"),
 ]
+
+MouseAnatomicalStructure.BLOOD_VESSELS = Annotated[
+    Union[
+        _Carotid_Artery,
+        _Jugular_Vein,
+    ],
+    Field(discriminator="registry_identifier"),
+]
