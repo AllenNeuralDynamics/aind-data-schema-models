@@ -7,6 +7,7 @@ from aind_data_schema_models.data_name_patterns import (
     DataRegex,
     RegexParts,
     build_data_name,
+    datetime_from_name_string,
     datetime_to_name_string,
 )
 
@@ -130,6 +131,12 @@ class TestDataNamePatternsMethods(unittest.TestCase):
         actual_output = datetime.fromisoformat(datetime_str)
         dt = datetime(2020, 12, 29, 1, 10, 50)
         self.assertEqual(dt, actual_output)
+
+    def test_deprecated_warning(self):
+        """Tests warning is raised for deprecated method"""
+
+        with self.assertWarns(DeprecationWarning):
+            datetime_from_name_string(d="2020-12-29", t="01-10-50")
 
     def test_build_data_name(self):
         """Tests datetime object is converted to string and attached to label"""

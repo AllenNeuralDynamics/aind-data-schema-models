@@ -98,7 +98,8 @@ def datetime_from_name_string(d: str, t: str) -> datetime:
     datetime
 
     """
-    warnings.warn("This function is deprecated. Use datetime.fromisoformat() instead.")
+    warnings.warn("This function is deprecated. Use datetime.fromisoformat() instead.",
+                  DeprecationWarning)
     d = datetime.strptime(d, "%Y-%m-%d").date()
     t = datetime.strptime(t, "%H-%M-%S").time()
     return datetime.combine(d, t)
