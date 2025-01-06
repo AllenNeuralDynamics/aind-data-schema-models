@@ -7,7 +7,7 @@ from aind_data_schema_models.registries import Registry
 from aind_data_schema_models.utils import one_of_instance
 {% endraw %}
 
-class _OrganizationModel(BaseModel):
+class OrganizationModel(BaseModel):
     """Base model for organizations"""
     model_config = ConfigDict(frozen=True)
     name: str
@@ -16,7 +16,7 @@ class _OrganizationModel(BaseModel):
     registry_identifier: str
 
 {% for _, row in data.iterrows() %}
-class {{ row['name'] | to_class_name_underscored }}(_OrganizationModel):
+class {{ row['name'] | to_class_name_underscored }}(OrganizationModel):
     """Model {{row['name']}}"""
     name: Literal["{{ row['name'] }}"] = "{{ row['name'] }}"
     {% set abbreviation = row['abbreviation'] -%}
@@ -34,9 +34,9 @@ class Organization:
     {{ (abbreviation if abbreviation == abbreviation else row['name']) | to_class_name | upper }} = {{ row['name'] | to_class_name_underscored }}()
 {%- endfor %}
 
-    ALL = tuple(_OrganizationModel.__subclasses__())
+    ALL = tuple(OrganizationModel.__subclasses__())
 
-    ONE_OF = Annotated[Union[tuple(_OrganizationModel.__subclasses__())], Field(discriminator="name")]
+    ONE_OF = Annotated[Union[tuple(OrganizationModel.__subclasses__())], Field(discriminator="name")]
 
     abbreviation_map = {m().abbreviation: m() for m in ALL if m().abbreviation is not None}
 

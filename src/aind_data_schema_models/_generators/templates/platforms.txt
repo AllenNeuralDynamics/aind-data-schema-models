@@ -5,14 +5,14 @@ from typing import Literal, Union
 from typing_extensions import Annotated
 {% endraw %}
 
-class _PlatformModel(BaseModel):
+class PlatformModel(BaseModel):
     """Base model for platform"""
     model_config = ConfigDict(frozen=True)
     name: str
     abbreviation: str
 
 {% for _, row in data.iterrows() %}
-class {{ row['abbreviation'] | to_class_name_underscored }}(_PlatformModel):
+class {{ row['abbreviation'] | to_class_name_underscored }}(PlatformModel):
     """Model {{row['abbreviation']}}"""
     name: Literal["{{ row['name'] }}"] = "{{ row['name'] }}"
     abbreviation: Literal["{{ row['abbreviation'] }}"] = "{{ row['abbreviation'] }}"
@@ -24,9 +24,9 @@ class Platform:
     {{ row['abbreviation'] | to_class_name | upper }} = {{ row['abbreviation'] | to_class_name_underscored }}()
 {%- endfor %}
 
-    ALL = tuple(_PlatformModel.__subclasses__())
+    ALL = tuple(PlatformModel.__subclasses__())
 
-    ONE_OF = Annotated[Union[tuple(_PlatformModel.__subclasses__())], Field(discriminator="name")]
+    ONE_OF = Annotated[Union[tuple(PlatformModel.__subclasses__())], Field(discriminator="name")]
 
     abbreviation_map = {m().abbreviation: m() for m in ALL}
 

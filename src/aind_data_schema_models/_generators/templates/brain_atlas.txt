@@ -5,7 +5,7 @@ from typing import Literal, Union
 from typing_extensions import Annotated
 {% endraw %}
 
-class _BrainStructureModel(BaseModel):
+class BrainStructureModel(BaseModel):
     """Base model for brain strutures"""
     model_config = ConfigDict(frozen=True)
     atlas: str
@@ -14,7 +14,7 @@ class _BrainStructureModel(BaseModel):
     id: str
 
 {% for _, row in data.iterrows() %}
-class {{ row['acronym'] | to_class_name_underscored }}(_BrainStructureModel):
+class {{ row['acronym'] | to_class_name_underscored }}(BrainStructureModel):
     """Model {{row['acronym']}}"""
     atlas: Literal["CCFv3"] = "CCFv3"
     name: Literal["{{ row['name'] }}"] = "{{ row['name'] }}"
@@ -28,9 +28,9 @@ class CCFStructure:
     {{ row['acronym'] | to_class_name | upper }} = {{ row['acronym'] | to_class_name_underscored }}()
 {%- endfor %}
 
-    ALL = tuple(_BrainStructureModel.__subclasses__())
+    ALL = tuple(BrainStructureModel.__subclasses__())
 
-    ONE_OF = Annotated[Union[tuple(_BrainStructureModel.__subclasses__())], Field(discriminator="name")]
+    ONE_OF = Annotated[Union[tuple(BrainStructureModel.__subclasses__())], Field(discriminator="name")]
 
     id_map = {m().id: m() for m in ALL}
 
