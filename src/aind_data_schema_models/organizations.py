@@ -1,5 +1,4 @@
 """Organizations"""
-
 from typing import Literal, Union
 
 from pydantic import BaseModel, ConfigDict, Field
@@ -163,6 +162,15 @@ class _Chan_Zuckerberg_Initiative(_OrganizationModel):
     registry_identifier: Literal["02qenvm24"] = "02qenvm24"
 
 
+class _Charles_River_Laboratories(_OrganizationModel):
+    """Model Charles River Laboratories"""
+
+    name: Literal["Charles River Laboratories"] = "Charles River Laboratories"
+    abbreviation: Literal["CRL"] = "CRL"
+    registry: Registry.ONE_OF = Registry.ROR
+    registry_identifier: Literal["03ndmsg87"] = "03ndmsg87"
+
+
 class _Chroma(_OrganizationModel):
     """Model Chroma"""
 
@@ -212,6 +220,15 @@ class _Custom(_OrganizationModel):
     """Model Custom"""
 
     name: Literal["Custom"] = "Custom"
+    abbreviation: Literal[None] = None
+    registry: None = None
+    registry_identifier: None = None
+
+
+class _Digikey(_OrganizationModel):
+    """Model DigiKey"""
+
+    name: Literal["DigiKey"] = "DigiKey"
     abbreviation: Literal[None] = None
     registry: None = None
     registry_identifier: None = None
@@ -361,6 +378,15 @@ class _Invitrogen(_OrganizationModel):
     registry_identifier: Literal["03x1ewr52"] = "03x1ewr52"
 
 
+class _Item(_OrganizationModel):
+    """Model Item"""
+
+    name: Literal["Item"] = "Item"
+    abbreviation: Literal[None] = None
+    registry: None = None
+    registry_identifier: None = None
+
+
 class _Jackson_Laboratory(_OrganizationModel):
     """Model Jackson Laboratory"""
 
@@ -386,6 +412,15 @@ class _Julabo(_OrganizationModel):
     abbreviation: Literal[None] = None
     registry: None = None
     registry_identifier: None = None
+
+
+class _Kowa(_OrganizationModel):
+    """Model Kowa"""
+
+    name: Literal["Kowa"] = "Kowa"
+    abbreviation: Literal[None] = None
+    registry: Registry.ONE_OF = Registry.ROR
+    registry_identifier: Literal["03zbwg482"] = "03zbwg482"
 
 
 class _Lg(_OrganizationModel):
@@ -463,9 +498,9 @@ class _Meadowlark_Optics(_OrganizationModel):
 class _Michael_J_Fox_Foundation_For_Parkinson_S_Research(_OrganizationModel):
     """Model Michael J. Fox Foundation for Parkinson's Research"""
 
-    name: Literal["Michael J. Fox Foundation for Parkinson's Research"] = (
+    name: Literal[
         "Michael J. Fox Foundation for Parkinson's Research"
-    )
+    ] = "Michael J. Fox Foundation for Parkinson's Research"
     abbreviation: Literal["MJFF"] = "MJFF"
     registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["03arq3225"] = "03arq3225"
@@ -501,9 +536,9 @@ class _Nresearch_Inc(_OrganizationModel):
 class _National_Center_For_Complementary_And_Integrative_Health(_OrganizationModel):
     """Model National Center for Complementary and Integrative Health"""
 
-    name: Literal["National Center for Complementary and Integrative Health"] = (
+    name: Literal[
         "National Center for Complementary and Integrative Health"
-    )
+    ] = "National Center for Complementary and Integrative Health"
     abbreviation: Literal["NCCIH"] = "NCCIH"
     registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["00190t495"] = "00190t495"
@@ -521,9 +556,9 @@ class _National_Institute_Of_Mental_Health(_OrganizationModel):
 class _National_Institute_Of_Neurological_Disorders_And_Stroke(_OrganizationModel):
     """Model National Institute of Neurological Disorders and Stroke"""
 
-    name: Literal["National Institute of Neurological Disorders and Stroke"] = (
+    name: Literal[
         "National Institute of Neurological Disorders and Stroke"
-    )
+    ] = "National Institute of Neurological Disorders and Stroke"
     abbreviation: Literal["NINDS"] = "NINDS"
     registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["01s5ya894"] = "01s5ya894"
@@ -628,6 +663,15 @@ class _Oxxius(_OrganizationModel):
     registry_identifier: None = None
 
 
+class _Placid_Industries(_OrganizationModel):
+    """Model Placid Industries"""
+
+    name: Literal["Placid Industries"] = "Placid Industries"
+    abbreviation: Literal[None] = None
+    registry: None = None
+    registry_identifier: None = None
+
+
 class _Prizmatix(_OrganizationModel):
     """Model Prizmatix"""
 
@@ -650,6 +694,15 @@ class _Raspberry_Pi(_OrganizationModel):
     """Model Raspberry Pi"""
 
     name: Literal["Raspberry Pi"] = "Raspberry Pi"
+    abbreviation: Literal[None] = None
+    registry: None = None
+    registry_identifier: None = None
+
+
+class _Same_Sky(_OrganizationModel):
+    """Model Same Sky"""
+
+    name: Literal["Same Sky"] = "Same Sky"
     abbreviation: Literal[None] = None
     registry: None = None
     registry_identifier: None = None
@@ -790,6 +843,15 @@ class _Thorlabs(_OrganizationModel):
     registry_identifier: Literal["04gsnvb07"] = "04gsnvb07"
 
 
+class _Transducer_Techniques(_OrganizationModel):
+    """Model Transducer Techniques"""
+
+    name: Literal["Transducer Techniques"] = "Transducer Techniques"
+    abbreviation: Literal[None] = None
+    registry: None = None
+    registry_identifier: None = None
+
+
 class _Tymphany(_OrganizationModel):
     """Model Tymphany"""
 
@@ -845,12 +907,14 @@ class Organization:
     CARL_ZEISS = _Carl_Zeiss()
     CHAMPALIMAUD = _Champalimaud_Foundation()
     CZI = _Chan_Zuckerberg_Initiative()
+    CRL = _Charles_River_Laboratories()
     CHROMA = _Chroma()
     COHERENT_SCIENTIFIC = _Coherent_Scientific()
     COLUMBIA = _Columbia_University()
     COMPUTAR = _Computar()
     CONOPTICS = _Conoptics()
     CUSTOM = _Custom()
+    DIGIKEY = _Digikey()
     DODOTRONIC = _Dodotronic()
     DORIC = _Doric()
     EALING = _Ealing()
@@ -867,9 +931,11 @@ class Organization:
     IDT = _Integrated_Dna_Technologies()
     IMEC = _Interuniversity_Microelectronics_Center()
     INVITROGEN = _Invitrogen()
+    ITEM = _Item()
     JAX = _Jackson_Laboratory()
     JANELIA = _Janelia_Research_Campus()
     JULABO = _Julabo()
+    KOWA = _Kowa()
     LG = _Lg()
     LEICA = _Leica()
     LUMEN_DYNAMICS = _Lumen_Dynamics()
@@ -896,9 +962,11 @@ class Organization:
     OPTOTUNE = _Optotune()
     OTHER = _Other()
     OXXIUS = _Oxxius()
+    PLACID_INDUSTRIES = _Placid_Industries()
     PRIZMATIX = _Prizmatix()
     QUANTIFI = _Quantifi()
     RASPBERRY_PI = _Raspberry_Pi()
+    SAME_SKY = _Same_Sky()
     SICGEN = _Sicgen()
     SCHNEIDER_KREUZNACH = _Schneider_Kreuznach()
     SECOND_ORDER_EFFECTS = _Second_Order_Effects()
@@ -914,6 +982,7 @@ class Organization:
     THE_LEE_COMPANY = _The_Lee_Company()
     THERMO_FISHER_SCIENTIFIC = _Thermo_Fisher_Scientific()
     THORLABS = _Thorlabs()
+    TRANSDUCER_TECHNIQUES = _Transducer_Techniques()
     TYMPHANY = _Tymphany()
     VIEWORKS = _Vieworks()
     VORTRAN = _Vortran()
@@ -973,6 +1042,7 @@ Organization.LENS_MANUFACTURERS = one_of_instance(
         Organization.FUJINON,
         Organization.HAMAMATSU,
         Organization.INFINITY_PHOTO_OPTICAL,
+        Organization.KOWA,
         Organization.LEICA,
         Organization.MITUTUYO,
         Organization.NAVITAR,
@@ -1017,7 +1087,9 @@ Organization.MANIPULATOR_MANUFACTURERS = one_of_instance([Organization.NEW_SCALE
 
 Organization.MONITOR_MANUFACTURERS = one_of_instance([Organization.ASUS, Organization.LG, Organization.OTHER])
 
-Organization.SPEAKER_MANUFACTURERS = one_of_instance([Organization.TYMPHANY, Organization.ISL, Organization.OTHER])
+Organization.SPEAKER_MANUFACTURERS = one_of_instance(
+    [Organization.DIGIKEY, Organization.TYMPHANY, Organization.ISL, Organization.OTHER]
+)
 
 Organization.FUNDERS = one_of_instance(
     [
@@ -1053,6 +1125,15 @@ Organization.SUBJECT_SOURCES = one_of_instance(
         Organization.JANELIA,
         Organization.JAX,
         Organization.NYU,
+        Organization.OTHER,
+    ]
+)
+
+Organization.CATHETER_IMPLANT_INSTITUTIONS = one_of_instance(
+    [
+        Organization.AIND,
+        Organization.CRL,
+        Organization.JAX,
         Organization.OTHER,
     ]
 )

@@ -1,5 +1,4 @@
 """Platforms"""
-
 from typing import Literal, Union
 
 from pydantic import BaseModel, ConfigDict, Field
@@ -173,9 +172,9 @@ class _Aip2_3(_BrainStructureModel):
     """Model AIp2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Agranular insular area, posterior part, layer 2/3"] = (
+    name: Literal[
         "Agranular insular area, posterior part, layer 2/3"
-    )
+    ] = "Agranular insular area, posterior part, layer 2/3"
     acronym: Literal["AIp2/3"] = "AIp2/3"
     id: Literal["163"] = "163"
 
@@ -193,9 +192,9 @@ class _Aip6A(_BrainStructureModel):
     """Model AIp6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Agranular insular area, posterior part, layer 6a"] = (
+    name: Literal[
         "Agranular insular area, posterior part, layer 6a"
-    )
+    ] = "Agranular insular area, posterior part, layer 6a"
     acronym: Literal["AIp6a"] = "AIp6a"
     id: Literal["314"] = "314"
 
@@ -204,9 +203,9 @@ class _Aip6B(_BrainStructureModel):
     """Model AIp6b"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Agranular insular area, posterior part, layer 6b"] = (
+    name: Literal[
         "Agranular insular area, posterior part, layer 6b"
-    )
+    ] = "Agranular insular area, posterior part, layer 6b"
     acronym: Literal["AIp6b"] = "AIp6b"
     id: Literal["355"] = "355"
 
@@ -458,9 +457,9 @@ class _Acav2_3(_BrainStructureModel):
     """Model ACAv2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Anterior cingulate area, ventral part, layer 2/3"] = (
+    name: Literal[
         "Anterior cingulate area, ventral part, layer 2/3"
-    )
+    ] = "Anterior cingulate area, ventral part, layer 2/3"
     acronym: Literal["ACAv2/3"] = "ACAv2/3"
     id: Literal["296"] = "296"
 
@@ -1063,9 +1062,9 @@ class _Coapl(_BrainStructureModel):
     """Model COApl"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Cortical amygdalar area, posterior part, lateral zone"] = (
+    name: Literal[
         "Cortical amygdalar area, posterior part, lateral zone"
-    )
+    ] = "Cortical amygdalar area, posterior part, lateral zone"
     acronym: Literal["COApl"] = "COApl"
     id: Literal["655"] = "655"
 
@@ -1074,9 +1073,9 @@ class _Coapm(_BrainStructureModel):
     """Model COApm"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Cortical amygdalar area, posterior part, medial zone"] = (
+    name: Literal[
         "Cortical amygdalar area, posterior part, medial zone"
-    )
+    ] = "Cortical amygdalar area, posterior part, medial zone"
     acronym: Literal["COApm"] = "COApm"
     id: Literal["663"] = "663"
 
@@ -1319,9 +1318,9 @@ class _Lgd_Co(_BrainStructureModel):
     """Model LGd-co"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Dorsal part of the lateral geniculate complex, core"] = (
+    name: Literal[
         "Dorsal part of the lateral geniculate complex, core"
-    )
+    ] = "Dorsal part of the lateral geniculate complex, core"
     acronym: Literal["LGd-co"] = "LGd-co"
     id: Literal["496345668"] = "496345668"
 
@@ -1330,9 +1329,9 @@ class _Lgd_Ip(_BrainStructureModel):
     """Model LGd-ip"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Dorsal part of the lateral geniculate complex, ipsilateral zone"] = (
+    name: Literal[
         "Dorsal part of the lateral geniculate complex, ipsilateral zone"
-    )
+    ] = "Dorsal part of the lateral geniculate complex, ipsilateral zone"
     acronym: Literal["LGd-ip"] = "LGd-ip"
     id: Literal["496345672"] = "496345672"
 
@@ -1341,9 +1340,9 @@ class _Lgd_Sh(_BrainStructureModel):
     """Model LGd-sh"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Dorsal part of the lateral geniculate complex, shell"] = (
+    name: Literal[
         "Dorsal part of the lateral geniculate complex, shell"
-    )
+    ] = "Dorsal part of the lateral geniculate complex, shell"
     acronym: Literal["LGd-sh"] = "LGd-sh"
     id: Literal["496345664"] = "496345664"
 
@@ -1379,9 +1378,9 @@ class _Dt(_BrainStructureModel):
     """Model DT"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Dorsal terminal nucleus of the accessory optic tract"] = (
+    name: Literal[
         "Dorsal terminal nucleus of the accessory optic tract"
-    )
+    ] = "Dorsal terminal nucleus of the accessory optic tract"
     acronym: Literal["DT"] = "DT"
     id: Literal["75"] = "75"
 
@@ -1561,9 +1560,9 @@ class _Entm1(_BrainStructureModel):
     """Model ENTm1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Entorhinal area, medial part, dorsal zone, layer 1"] = (
+    name: Literal[
         "Entorhinal area, medial part, dorsal zone, layer 1"
-    )
+    ] = "Entorhinal area, medial part, dorsal zone, layer 1"
     acronym: Literal["ENTm1"] = "ENTm1"
     id: Literal["526"] = "526"
 
@@ -1572,9 +1571,9 @@ class _Entm2(_BrainStructureModel):
     """Model ENTm2"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Entorhinal area, medial part, dorsal zone, layer 2"] = (
+    name: Literal[
         "Entorhinal area, medial part, dorsal zone, layer 2"
-    )
+    ] = "Entorhinal area, medial part, dorsal zone, layer 2"
     acronym: Literal["ENTm2"] = "ENTm2"
     id: Literal["543"] = "543"
 
@@ -1583,9 +1582,9 @@ class _Entm3(_BrainStructureModel):
     """Model ENTm3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Entorhinal area, medial part, dorsal zone, layer 3"] = (
+    name: Literal[
         "Entorhinal area, medial part, dorsal zone, layer 3"
-    )
+    ] = "Entorhinal area, medial part, dorsal zone, layer 3"
     acronym: Literal["ENTm3"] = "ENTm3"
     id: Literal["664"] = "664"
 
@@ -1594,9 +1593,9 @@ class _Entm5(_BrainStructureModel):
     """Model ENTm5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Entorhinal area, medial part, dorsal zone, layer 5"] = (
+    name: Literal[
         "Entorhinal area, medial part, dorsal zone, layer 5"
-    )
+    ] = "Entorhinal area, medial part, dorsal zone, layer 5"
     acronym: Literal["ENTm5"] = "ENTm5"
     id: Literal["727"] = "727"
 
@@ -1605,9 +1604,9 @@ class _Entm6(_BrainStructureModel):
     """Model ENTm6"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Entorhinal area, medial part, dorsal zone, layer 6"] = (
+    name: Literal[
         "Entorhinal area, medial part, dorsal zone, layer 6"
-    )
+    ] = "Entorhinal area, medial part, dorsal zone, layer 6"
     acronym: Literal["ENTm6"] = "ENTm6"
     id: Literal["743"] = "743"
 
@@ -2156,9 +2155,9 @@ class _Igl(_BrainStructureModel):
     """Model IGL"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Intergeniculate leaflet of the lateral geniculate complex"] = (
+    name: Literal[
         "Intergeniculate leaflet of the lateral geniculate complex"
-    )
+    ] = "Intergeniculate leaflet of the lateral geniculate complex"
     acronym: Literal["IGL"] = "IGL"
     id: Literal["27"] = "27"
 
@@ -2446,9 +2445,9 @@ class _Lsc(_BrainStructureModel):
     """Model LSc"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Lateral septal nucleus, caudal (caudodorsal) part"] = (
+    name: Literal[
         "Lateral septal nucleus, caudal (caudodorsal) part"
-    )
+    ] = "Lateral septal nucleus, caudal (caudodorsal) part"
     acronym: Literal["LSc"] = "LSc"
     id: Literal["250"] = "250"
 
@@ -2457,9 +2456,9 @@ class _Lsr(_BrainStructureModel):
     """Model LSr"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Lateral septal nucleus, rostral (rostroventral) part"] = (
+    name: Literal[
         "Lateral septal nucleus, rostral (rostroventral) part"
-    )
+    ] = "Lateral septal nucleus, rostral (rostroventral) part"
     acronym: Literal["LSr"] = "LSr"
     id: Literal["258"] = "258"
 
@@ -2477,9 +2476,9 @@ class _Lt(_BrainStructureModel):
     """Model LT"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Lateral terminal nucleus of the accessory optic tract"] = (
+    name: Literal[
         "Lateral terminal nucleus of the accessory optic tract"
-    )
+    ] = "Lateral terminal nucleus of the accessory optic tract"
     acronym: Literal["LT"] = "LT"
     id: Literal["66"] = "66"
 
@@ -2893,9 +2892,9 @@ class _Mt(_BrainStructureModel):
     """Model MT"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Medial terminal nucleus of the accessory optic tract"] = (
+    name: Literal[
         "Medial terminal nucleus of the accessory optic tract"
-    )
+    ] = "Medial terminal nucleus of the accessory optic tract"
     acronym: Literal["MT"] = "MT"
     id: Literal["58"] = "58"
 
@@ -3174,9 +3173,9 @@ class _Nb(_BrainStructureModel):
     """Model NB"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Nucleus of the brachium of the inferior colliculus"] = (
+    name: Literal[
         "Nucleus of the brachium of the inferior colliculus"
-    )
+    ] = "Nucleus of the brachium of the inferior colliculus"
     acronym: Literal["NB"] = "NB"
     id: Literal["580"] = "580"
 
@@ -3212,9 +3211,9 @@ class _Nlot1(_BrainStructureModel):
     """Model NLOT1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Nucleus of the lateral olfactory tract, molecular layer"] = (
+    name: Literal[
         "Nucleus of the lateral olfactory tract, molecular layer"
-    )
+    ] = "Nucleus of the lateral olfactory tract, molecular layer"
     acronym: Literal["NLOT1"] = "NLOT1"
     id: Literal["260"] = "260"
 
@@ -3223,9 +3222,9 @@ class _Nlot2(_BrainStructureModel):
     """Model NLOT2"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Nucleus of the lateral olfactory tract, pyramidal layer"] = (
+    name: Literal[
         "Nucleus of the lateral olfactory tract, pyramidal layer"
-    )
+    ] = "Nucleus of the lateral olfactory tract, pyramidal layer"
     acronym: Literal["NLOT2"] = "NLOT2"
     id: Literal["268"] = "268"
 
@@ -3648,9 +3647,9 @@ class _Pgrnd(_BrainStructureModel):
     """Model PGRNd"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Paragigantocellular reticular nucleus, dorsal part"] = (
+    name: Literal[
         "Paragigantocellular reticular nucleus, dorsal part"
-    )
+    ] = "Paragigantocellular reticular nucleus, dorsal part"
     acronym: Literal["PGRNd"] = "PGRNd"
     id: Literal["970"] = "970"
 
@@ -3659,9 +3658,9 @@ class _Pgrnl(_BrainStructureModel):
     """Model PGRNl"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Paragigantocellular reticular nucleus, lateral part"] = (
+    name: Literal[
         "Paragigantocellular reticular nucleus, lateral part"
-    )
+    ] = "Paragigantocellular reticular nucleus, lateral part"
     acronym: Literal["PGRNl"] = "PGRNl"
     id: Literal["978"] = "978"
 
@@ -3769,9 +3768,9 @@ class _Pvhd(_BrainStructureModel):
     """Model PVHd"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Paraventricular hypothalamic nucleus, descending division"] = (
+    name: Literal[
         "Paraventricular hypothalamic nucleus, descending division"
-    )
+    ] = "Paraventricular hypothalamic nucleus, descending division"
     acronym: Literal["PVHd"] = "PVHd"
     id: Literal["63"] = "63"
 
@@ -3924,9 +3923,9 @@ class _Pva(_BrainStructureModel):
     """Model PVa"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Periventricular hypothalamic nucleus, anterior part"] = (
+    name: Literal[
         "Periventricular hypothalamic nucleus, anterior part"
-    )
+    ] = "Periventricular hypothalamic nucleus, anterior part"
     acronym: Literal["PVa"] = "PVa"
     id: Literal["30"] = "30"
 
@@ -3935,9 +3934,9 @@ class _Pvi(_BrainStructureModel):
     """Model PVi"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Periventricular hypothalamic nucleus, intermediate part"] = (
+    name: Literal[
         "Periventricular hypothalamic nucleus, intermediate part"
-    )
+    ] = "Periventricular hypothalamic nucleus, intermediate part"
     acronym: Literal["PVi"] = "PVi"
     id: Literal["118"] = "118"
 
@@ -3946,9 +3945,9 @@ class _Pvp(_BrainStructureModel):
     """Model PVp"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Periventricular hypothalamic nucleus, posterior part"] = (
+    name: Literal[
         "Periventricular hypothalamic nucleus, posterior part"
-    )
+    ] = "Periventricular hypothalamic nucleus, posterior part"
     acronym: Literal["PVp"] = "PVp"
     id: Literal["126"] = "126"
 
@@ -3957,9 +3956,9 @@ class _Pvpo(_BrainStructureModel):
     """Model PVpo"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Periventricular hypothalamic nucleus, preoptic part"] = (
+    name: Literal[
         "Periventricular hypothalamic nucleus, preoptic part"
-    )
+    ] = "Periventricular hypothalamic nucleus, preoptic part"
     acronym: Literal["PVpo"] = "PVpo"
     id: Literal["133"] = "133"
 
@@ -4598,9 +4597,9 @@ class _Ssp_Bfd1(_BrainStructureModel):
     """Model SSp-bfd1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Primary somatosensory area, barrel field, layer 1"] = (
+    name: Literal[
         "Primary somatosensory area, barrel field, layer 1"
-    )
+    ] = "Primary somatosensory area, barrel field, layer 1"
     acronym: Literal["SSp-bfd1"] = "SSp-bfd1"
     id: Literal["981"] = "981"
 
@@ -4609,9 +4608,9 @@ class _Ssp_Bfd2_3(_BrainStructureModel):
     """Model SSp-bfd2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Primary somatosensory area, barrel field, layer 2/3"] = (
+    name: Literal[
         "Primary somatosensory area, barrel field, layer 2/3"
-    )
+    ] = "Primary somatosensory area, barrel field, layer 2/3"
     acronym: Literal["SSp-bfd2/3"] = "SSp-bfd2/3"
     id: Literal["201"] = "201"
 
@@ -4620,9 +4619,9 @@ class _Ssp_Bfd4(_BrainStructureModel):
     """Model SSp-bfd4"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Primary somatosensory area, barrel field, layer 4"] = (
+    name: Literal[
         "Primary somatosensory area, barrel field, layer 4"
-    )
+    ] = "Primary somatosensory area, barrel field, layer 4"
     acronym: Literal["SSp-bfd4"] = "SSp-bfd4"
     id: Literal["1047"] = "1047"
 
@@ -4631,9 +4630,9 @@ class _Ssp_Bfd5(_BrainStructureModel):
     """Model SSp-bfd5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Primary somatosensory area, barrel field, layer 5"] = (
+    name: Literal[
         "Primary somatosensory area, barrel field, layer 5"
-    )
+    ] = "Primary somatosensory area, barrel field, layer 5"
     acronym: Literal["SSp-bfd5"] = "SSp-bfd5"
     id: Literal["1070"] = "1070"
 
@@ -4642,9 +4641,9 @@ class _Ssp_Bfd6A(_BrainStructureModel):
     """Model SSp-bfd6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Primary somatosensory area, barrel field, layer 6a"] = (
+    name: Literal[
         "Primary somatosensory area, barrel field, layer 6a"
-    )
+    ] = "Primary somatosensory area, barrel field, layer 6a"
     acronym: Literal["SSp-bfd6a"] = "SSp-bfd6a"
     id: Literal["1038"] = "1038"
 
@@ -4653,9 +4652,9 @@ class _Ssp_Bfd6B(_BrainStructureModel):
     """Model SSp-bfd6b"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Primary somatosensory area, barrel field, layer 6b"] = (
+    name: Literal[
         "Primary somatosensory area, barrel field, layer 6b"
-    )
+    ] = "Primary somatosensory area, barrel field, layer 6b"
     acronym: Literal["SSp-bfd6b"] = "SSp-bfd6b"
     id: Literal["1062"] = "1062"
 
@@ -4682,9 +4681,9 @@ class _Ssp_Ll2_3(_BrainStructureModel):
     """Model SSp-ll2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Primary somatosensory area, lower limb, layer 2/3"] = (
+    name: Literal[
         "Primary somatosensory area, lower limb, layer 2/3"
-    )
+    ] = "Primary somatosensory area, lower limb, layer 2/3"
     acronym: Literal["SSp-ll2/3"] = "SSp-ll2/3"
     id: Literal["113"] = "113"
 
@@ -4711,9 +4710,9 @@ class _Ssp_Ll6A(_BrainStructureModel):
     """Model SSp-ll6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Primary somatosensory area, lower limb, layer 6a"] = (
+    name: Literal[
         "Primary somatosensory area, lower limb, layer 6a"
-    )
+    ] = "Primary somatosensory area, lower limb, layer 6a"
     acronym: Literal["SSp-ll6a"] = "SSp-ll6a"
     id: Literal["478"] = "478"
 
@@ -4722,9 +4721,9 @@ class _Ssp_Ll6B(_BrainStructureModel):
     """Model SSp-ll6b"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Primary somatosensory area, lower limb, layer 6b"] = (
+    name: Literal[
         "Primary somatosensory area, lower limb, layer 6b"
-    )
+    ] = "Primary somatosensory area, lower limb, layer 6b"
     acronym: Literal["SSp-ll6b"] = "SSp-ll6b"
     id: Literal["510"] = "510"
 
@@ -4940,9 +4939,9 @@ class _Ssp_Un2_3(_BrainStructureModel):
     """Model SSp-un2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Primary somatosensory area, unassigned, layer 2/3"] = (
+    name: Literal[
         "Primary somatosensory area, unassigned, layer 2/3"
-    )
+    ] = "Primary somatosensory area, unassigned, layer 2/3"
     acronym: Literal["SSp-un2/3"] = "SSp-un2/3"
     id: Literal["182305697"] = "182305697"
 
@@ -4969,9 +4968,9 @@ class _Ssp_Un6A(_BrainStructureModel):
     """Model SSp-un6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Primary somatosensory area, unassigned, layer 6a"] = (
+    name: Literal[
         "Primary somatosensory area, unassigned, layer 6a"
-    )
+    ] = "Primary somatosensory area, unassigned, layer 6a"
     acronym: Literal["SSp-un6a"] = "SSp-un6a"
     id: Literal["182305709"] = "182305709"
 
@@ -4980,9 +4979,9 @@ class _Ssp_Un6B(_BrainStructureModel):
     """Model SSp-un6b"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Primary somatosensory area, unassigned, layer 6b"] = (
+    name: Literal[
         "Primary somatosensory area, unassigned, layer 6b"
-    )
+    ] = "Primary somatosensory area, unassigned, layer 6b"
     acronym: Literal["SSp-un6b"] = "SSp-un6b"
     id: Literal["182305713"] = "182305713"
 
@@ -5009,9 +5008,9 @@ class _Ssp_Ul2_3(_BrainStructureModel):
     """Model SSp-ul2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Primary somatosensory area, upper limb, layer 2/3"] = (
+    name: Literal[
         "Primary somatosensory area, upper limb, layer 2/3"
-    )
+    ] = "Primary somatosensory area, upper limb, layer 2/3"
     acronym: Literal["SSp-ul2/3"] = "SSp-ul2/3"
     id: Literal["854"] = "854"
 
@@ -5038,9 +5037,9 @@ class _Ssp_Ul6A(_BrainStructureModel):
     """Model SSp-ul6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Primary somatosensory area, upper limb, layer 6a"] = (
+    name: Literal[
         "Primary somatosensory area, upper limb, layer 6a"
-    )
+    ] = "Primary somatosensory area, upper limb, layer 6a"
     acronym: Literal["SSp-ul6a"] = "SSp-ul6a"
     id: Literal["945"] = "945"
 
@@ -5049,9 +5048,9 @@ class _Ssp_Ul6B(_BrainStructureModel):
     """Model SSp-ul6b"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Primary somatosensory area, upper limb, layer 6b"] = (
+    name: Literal[
         "Primary somatosensory area, upper limb, layer 6b"
-    )
+    ] = "Primary somatosensory area, upper limb, layer 6b"
     acronym: Literal["SSp-ul6b"] = "SSp-ul6b"
     id: Literal["1026"] = "1026"
 
@@ -5276,9 +5275,9 @@ class _Rspagl1(_BrainStructureModel):
     """Model RSPagl1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Retrosplenial area, lateral agranular part, layer 1"] = (
+    name: Literal[
         "Retrosplenial area, lateral agranular part, layer 1"
-    )
+    ] = "Retrosplenial area, lateral agranular part, layer 1"
     acronym: Literal["RSPagl1"] = "RSPagl1"
     id: Literal["671"] = "671"
 
@@ -5287,9 +5286,9 @@ class _Rspagl2_3(_BrainStructureModel):
     """Model RSPagl2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Retrosplenial area, lateral agranular part, layer 2/3"] = (
+    name: Literal[
         "Retrosplenial area, lateral agranular part, layer 2/3"
-    )
+    ] = "Retrosplenial area, lateral agranular part, layer 2/3"
     acronym: Literal["RSPagl2/3"] = "RSPagl2/3"
     id: Literal["965"] = "965"
 
@@ -5298,9 +5297,9 @@ class _Rspagl5(_BrainStructureModel):
     """Model RSPagl5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Retrosplenial area, lateral agranular part, layer 5"] = (
+    name: Literal[
         "Retrosplenial area, lateral agranular part, layer 5"
-    )
+    ] = "Retrosplenial area, lateral agranular part, layer 5"
     acronym: Literal["RSPagl5"] = "RSPagl5"
     id: Literal["774"] = "774"
 
@@ -5309,9 +5308,9 @@ class _Rspagl6A(_BrainStructureModel):
     """Model RSPagl6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Retrosplenial area, lateral agranular part, layer 6a"] = (
+    name: Literal[
         "Retrosplenial area, lateral agranular part, layer 6a"
-    )
+    ] = "Retrosplenial area, lateral agranular part, layer 6a"
     acronym: Literal["RSPagl6a"] = "RSPagl6a"
     id: Literal["906"] = "906"
 
@@ -5320,9 +5319,9 @@ class _Rspagl6B(_BrainStructureModel):
     """Model RSPagl6b"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Retrosplenial area, lateral agranular part, layer 6b"] = (
+    name: Literal[
         "Retrosplenial area, lateral agranular part, layer 6b"
-    )
+    ] = "Retrosplenial area, lateral agranular part, layer 6b"
     acronym: Literal["RSPagl6b"] = "RSPagl6b"
     id: Literal["279"] = "279"
 
@@ -5574,9 +5573,9 @@ class _Spvi(_BrainStructureModel):
     """Model SPVI"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Spinal nucleus of the trigeminal, interpolar part"] = (
+    name: Literal[
         "Spinal nucleus of the trigeminal, interpolar part"
-    )
+    ] = "Spinal nucleus of the trigeminal, interpolar part"
     acronym: Literal["SPVI"] = "SPVI"
     id: Literal["437"] = "437"
 
@@ -5801,9 +5800,9 @@ class _Scdg(_BrainStructureModel):
     """Model SCdg"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Superior colliculus, motor related, deep gray layer"] = (
+    name: Literal[
         "Superior colliculus, motor related, deep gray layer"
-    )
+    ] = "Superior colliculus, motor related, deep gray layer"
     acronym: Literal["SCdg"] = "SCdg"
     id: Literal["26"] = "26"
 
@@ -5812,9 +5811,9 @@ class _Scdw(_BrainStructureModel):
     """Model SCdw"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Superior colliculus, motor related, deep white layer"] = (
+    name: Literal[
         "Superior colliculus, motor related, deep white layer"
-    )
+    ] = "Superior colliculus, motor related, deep white layer"
     acronym: Literal["SCdw"] = "SCdw"
     id: Literal["42"] = "42"
 
@@ -5823,9 +5822,9 @@ class _Scig(_BrainStructureModel):
     """Model SCig"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Superior colliculus, motor related, intermediate gray layer"] = (
+    name: Literal[
         "Superior colliculus, motor related, intermediate gray layer"
-    )
+    ] = "Superior colliculus, motor related, intermediate gray layer"
     acronym: Literal["SCig"] = "SCig"
     id: Literal["10"] = "10"
 
@@ -5834,9 +5833,9 @@ class _Sciw(_BrainStructureModel):
     """Model SCiw"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Superior colliculus, motor related, intermediate white layer"] = (
+    name: Literal[
         "Superior colliculus, motor related, intermediate white layer"
-    )
+    ] = "Superior colliculus, motor related, intermediate white layer"
     acronym: Literal["SCiw"] = "SCiw"
     id: Literal["17"] = "17"
 
@@ -6250,9 +6249,9 @@ class _Val(_BrainStructureModel):
     """Model VAL"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Ventral anterior-lateral complex of the thalamus"] = (
+    name: Literal[
         "Ventral anterior-lateral complex of the thalamus"
-    )
+    ] = "Ventral anterior-lateral complex of the thalamus"
     acronym: Literal["VAL"] = "VAL"
     id: Literal["629"] = "629"
 
@@ -6378,9 +6377,9 @@ class _Vplpc(_BrainStructureModel):
     """Model VPLpc"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Ventral posterolateral nucleus of the thalamus, parvicellular part"] = (
+    name: Literal[
         "Ventral posterolateral nucleus of the thalamus, parvicellular part"
-    )
+    ] = "Ventral posterolateral nucleus of the thalamus, parvicellular part"
     acronym: Literal["VPLpc"] = "VPLpc"
     id: Literal["725"] = "725"
 
@@ -6398,9 +6397,9 @@ class _Vpmpc(_BrainStructureModel):
     """Model VPMpc"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["Ventral posteromedial nucleus of the thalamus, parvicellular part"] = (
+    name: Literal[
         "Ventral posteromedial nucleus of the thalamus, parvicellular part"
-    )
+    ] = "Ventral posteromedial nucleus of the thalamus, parvicellular part"
     acronym: Literal["VPMpc"] = "VPMpc"
     id: Literal["741"] = "741"
 

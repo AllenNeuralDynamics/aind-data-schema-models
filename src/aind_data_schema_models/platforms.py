@@ -1,5 +1,4 @@
 """Platforms"""
-
 from typing import Literal, Union
 
 from pydantic import BaseModel, ConfigDict, Field
@@ -45,9 +44,9 @@ class _Exaspim(_PlatformModel):
 class _Fip(_PlatformModel):
     """Model FIP"""
 
-    name: Literal["Frame-projected independent-fiber photometry platform"] = (
+    name: Literal[
         "Frame-projected independent-fiber photometry platform"
-    )
+    ] = "Frame-projected independent-fiber photometry platform"
     abbreviation: Literal["FIP"] = "FIP"
 
 
