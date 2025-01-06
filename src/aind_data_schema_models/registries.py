@@ -1,4 +1,5 @@
 """Registries"""
+
 from typing import Literal, Union
 
 from pydantic import ConfigDict, Field

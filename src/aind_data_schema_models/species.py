@@ -1,4 +1,5 @@
 """Species"""
+
 from typing import Literal, Union
 
 from pydantic import BaseModel, ConfigDict, Field

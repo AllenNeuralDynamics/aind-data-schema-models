@@ -8374,7 +8374,12 @@ class MouseBodyParts(metaclass=MouseAnatomyMeta):
 
     FORELIMB = "forelimb"
     HEAD = "head"
-    Hindlimb = "hindlimb"
+    HINDLIMB = "hindlimb"
     NECK = "neck"
     TAIL = "tail"
     TRUNK = "trunk"
+
+
+class MouseBloodVessels(metaclass=MouseAnatomyMeta):
+    CAROTID_ARTERY = ("carotid artery",)
+    JUGULAR_VEIN = "jugular vein"
