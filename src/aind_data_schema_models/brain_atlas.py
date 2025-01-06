@@ -1,11 +1,12 @@
 """Platforms"""
+
 from typing import Literal, Union
 
 from pydantic import BaseModel, ConfigDict, Field
 from typing_extensions import Annotated
 
 
-class _BrainStructureModel(BaseModel):
+class BrainStructureModel(BaseModel):
     """Base model for brain strutures"""
 
     model_config = ConfigDict(frozen=True)
@@ -15,7 +16,7 @@ class _BrainStructureModel(BaseModel):
     id: str
 
 
-class _Vi(_BrainStructureModel):
+class _Vi(BrainStructureModel):
     """Model VI"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -24,7 +25,7 @@ class _Vi(_BrainStructureModel):
     id: Literal["653"] = "653"
 
 
-class _Acvii(_BrainStructureModel):
+class _Acvii(BrainStructureModel):
     """Model ACVII"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -33,7 +34,7 @@ class _Acvii(_BrainStructureModel):
     id: Literal["576"] = "576"
 
 
-class _Aob(_BrainStructureModel):
+class _Aob(BrainStructureModel):
     """Model AOB"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -42,7 +43,7 @@ class _Aob(_BrainStructureModel):
     id: Literal["151"] = "151"
 
 
-class _Aobgl(_BrainStructureModel):
+class _Aobgl(BrainStructureModel):
     """Model AOBgl"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -51,7 +52,7 @@ class _Aobgl(_BrainStructureModel):
     id: Literal["188"] = "188"
 
 
-class _Aobgr(_BrainStructureModel):
+class _Aobgr(BrainStructureModel):
     """Model AOBgr"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -60,7 +61,7 @@ class _Aobgr(_BrainStructureModel):
     id: Literal["196"] = "196"
 
 
-class _Aobmi(_BrainStructureModel):
+class _Aobmi(BrainStructureModel):
     """Model AOBmi"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -69,7 +70,7 @@ class _Aobmi(_BrainStructureModel):
     id: Literal["204"] = "204"
 
 
-class _Aso(_BrainStructureModel):
+class _Aso(BrainStructureModel):
     """Model ASO"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -78,7 +79,7 @@ class _Aso(_BrainStructureModel):
     id: Literal["332"] = "332"
 
 
-class _Acs5(_BrainStructureModel):
+class _Acs5(BrainStructureModel):
     """Model Acs5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -87,7 +88,7 @@ class _Acs5(_BrainStructureModel):
     id: Literal["549009219"] = "549009219"
 
 
-class _Ai(_BrainStructureModel):
+class _Ai(BrainStructureModel):
     """Model AI"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -96,7 +97,7 @@ class _Ai(_BrainStructureModel):
     id: Literal["95"] = "95"
 
 
-class _Aid(_BrainStructureModel):
+class _Aid(BrainStructureModel):
     """Model AId"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -105,7 +106,7 @@ class _Aid(_BrainStructureModel):
     id: Literal["104"] = "104"
 
 
-class _Aid1(_BrainStructureModel):
+class _Aid1(BrainStructureModel):
     """Model AId1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -114,7 +115,7 @@ class _Aid1(_BrainStructureModel):
     id: Literal["996"] = "996"
 
 
-class _Aid2_3(_BrainStructureModel):
+class _Aid2_3(BrainStructureModel):
     """Model AId2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -123,7 +124,7 @@ class _Aid2_3(_BrainStructureModel):
     id: Literal["328"] = "328"
 
 
-class _Aid5(_BrainStructureModel):
+class _Aid5(BrainStructureModel):
     """Model AId5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -132,7 +133,7 @@ class _Aid5(_BrainStructureModel):
     id: Literal["1101"] = "1101"
 
 
-class _Aid6A(_BrainStructureModel):
+class _Aid6A(BrainStructureModel):
     """Model AId6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -141,7 +142,7 @@ class _Aid6A(_BrainStructureModel):
     id: Literal["783"] = "783"
 
 
-class _Aid6B(_BrainStructureModel):
+class _Aid6B(BrainStructureModel):
     """Model AId6b"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -150,7 +151,7 @@ class _Aid6B(_BrainStructureModel):
     id: Literal["831"] = "831"
 
 
-class _Aip(_BrainStructureModel):
+class _Aip(BrainStructureModel):
     """Model AIp"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -159,7 +160,7 @@ class _Aip(_BrainStructureModel):
     id: Literal["111"] = "111"
 
 
-class _Aip1(_BrainStructureModel):
+class _Aip1(BrainStructureModel):
     """Model AIp1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -168,18 +169,18 @@ class _Aip1(_BrainStructureModel):
     id: Literal["120"] = "120"
 
 
-class _Aip2_3(_BrainStructureModel):
+class _Aip2_3(BrainStructureModel):
     """Model AIp2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Agranular insular area, posterior part, layer 2/3"] = (
         "Agranular insular area, posterior part, layer 2/3"
-    ] = "Agranular insular area, posterior part, layer 2/3"
+    )
     acronym: Literal["AIp2/3"] = "AIp2/3"
     id: Literal["163"] = "163"
 
 
-class _Aip5(_BrainStructureModel):
+class _Aip5(BrainStructureModel):
     """Model AIp5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -188,29 +189,29 @@ class _Aip5(_BrainStructureModel):
     id: Literal["344"] = "344"
 
 
-class _Aip6A(_BrainStructureModel):
+class _Aip6A(BrainStructureModel):
     """Model AIp6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Agranular insular area, posterior part, layer 6a"] = (
         "Agranular insular area, posterior part, layer 6a"
-    ] = "Agranular insular area, posterior part, layer 6a"
+    )
     acronym: Literal["AIp6a"] = "AIp6a"
     id: Literal["314"] = "314"
 
 
-class _Aip6B(_BrainStructureModel):
+class _Aip6B(BrainStructureModel):
     """Model AIp6b"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Agranular insular area, posterior part, layer 6b"] = (
         "Agranular insular area, posterior part, layer 6b"
-    ] = "Agranular insular area, posterior part, layer 6b"
+    )
     acronym: Literal["AIp6b"] = "AIp6b"
     id: Literal["355"] = "355"
 
 
-class _Aiv(_BrainStructureModel):
+class _Aiv(BrainStructureModel):
     """Model AIv"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -219,7 +220,7 @@ class _Aiv(_BrainStructureModel):
     id: Literal["119"] = "119"
 
 
-class _Aiv1(_BrainStructureModel):
+class _Aiv1(BrainStructureModel):
     """Model AIv1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -228,7 +229,7 @@ class _Aiv1(_BrainStructureModel):
     id: Literal["704"] = "704"
 
 
-class _Aiv2_3(_BrainStructureModel):
+class _Aiv2_3(BrainStructureModel):
     """Model AIv2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -237,7 +238,7 @@ class _Aiv2_3(_BrainStructureModel):
     id: Literal["694"] = "694"
 
 
-class _Aiv5(_BrainStructureModel):
+class _Aiv5(BrainStructureModel):
     """Model AIv5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -246,7 +247,7 @@ class _Aiv5(_BrainStructureModel):
     id: Literal["800"] = "800"
 
 
-class _Aiv6A(_BrainStructureModel):
+class _Aiv6A(BrainStructureModel):
     """Model AIv6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -255,7 +256,7 @@ class _Aiv6A(_BrainStructureModel):
     id: Literal["675"] = "675"
 
 
-class _Aiv6B(_BrainStructureModel):
+class _Aiv6B(BrainStructureModel):
     """Model AIv6b"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -264,7 +265,7 @@ class _Aiv6B(_BrainStructureModel):
     id: Literal["699"] = "699"
 
 
-class _Ca(_BrainStructureModel):
+class _Ca(BrainStructureModel):
     """Model CA"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -273,7 +274,7 @@ class _Ca(_BrainStructureModel):
     id: Literal["375"] = "375"
 
 
-class _An(_BrainStructureModel):
+class _An(BrainStructureModel):
     """Model AN"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -282,7 +283,7 @@ class _An(_BrainStructureModel):
     id: Literal["1017"] = "1017"
 
 
-class _Aaa(_BrainStructureModel):
+class _Aaa(BrainStructureModel):
     """Model AAA"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -291,7 +292,7 @@ class _Aaa(_BrainStructureModel):
     id: Literal["23"] = "23"
 
 
-class _Visa(_BrainStructureModel):
+class _Visa(BrainStructureModel):
     """Model VISa"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -300,7 +301,7 @@ class _Visa(_BrainStructureModel):
     id: Literal["312782546"] = "312782546"
 
 
-class _Visa1(_BrainStructureModel):
+class _Visa1(BrainStructureModel):
     """Model VISa1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -309,7 +310,7 @@ class _Visa1(_BrainStructureModel):
     id: Literal["312782550"] = "312782550"
 
 
-class _Visa2_3(_BrainStructureModel):
+class _Visa2_3(BrainStructureModel):
     """Model VISa2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -318,7 +319,7 @@ class _Visa2_3(_BrainStructureModel):
     id: Literal["312782554"] = "312782554"
 
 
-class _Visa4(_BrainStructureModel):
+class _Visa4(BrainStructureModel):
     """Model VISa4"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -327,7 +328,7 @@ class _Visa4(_BrainStructureModel):
     id: Literal["312782558"] = "312782558"
 
 
-class _Visa5(_BrainStructureModel):
+class _Visa5(BrainStructureModel):
     """Model VISa5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -336,7 +337,7 @@ class _Visa5(_BrainStructureModel):
     id: Literal["312782562"] = "312782562"
 
 
-class _Visa6A(_BrainStructureModel):
+class _Visa6A(BrainStructureModel):
     """Model VISa6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -345,7 +346,7 @@ class _Visa6A(_BrainStructureModel):
     id: Literal["312782566"] = "312782566"
 
 
-class _Visa6B(_BrainStructureModel):
+class _Visa6B(BrainStructureModel):
     """Model VISa6b"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -354,7 +355,7 @@ class _Visa6B(_BrainStructureModel):
     id: Literal["312782570"] = "312782570"
 
 
-class _Aca(_BrainStructureModel):
+class _Aca(BrainStructureModel):
     """Model ACA"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -363,7 +364,7 @@ class _Aca(_BrainStructureModel):
     id: Literal["31"] = "31"
 
 
-class _Acad(_BrainStructureModel):
+class _Acad(BrainStructureModel):
     """Model ACAd"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -372,7 +373,7 @@ class _Acad(_BrainStructureModel):
     id: Literal["39"] = "39"
 
 
-class _Acad1(_BrainStructureModel):
+class _Acad1(BrainStructureModel):
     """Model ACAd1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -381,7 +382,7 @@ class _Acad1(_BrainStructureModel):
     id: Literal["935"] = "935"
 
 
-class _Acad2_3(_BrainStructureModel):
+class _Acad2_3(BrainStructureModel):
     """Model ACAd2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -390,7 +391,7 @@ class _Acad2_3(_BrainStructureModel):
     id: Literal["211"] = "211"
 
 
-class _Acad5(_BrainStructureModel):
+class _Acad5(BrainStructureModel):
     """Model ACAd5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -399,7 +400,7 @@ class _Acad5(_BrainStructureModel):
     id: Literal["1015"] = "1015"
 
 
-class _Acad6A(_BrainStructureModel):
+class _Acad6A(BrainStructureModel):
     """Model ACAd6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -408,7 +409,7 @@ class _Acad6A(_BrainStructureModel):
     id: Literal["919"] = "919"
 
 
-class _Acad6B(_BrainStructureModel):
+class _Acad6B(BrainStructureModel):
     """Model ACAd6b"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -417,7 +418,7 @@ class _Acad6B(_BrainStructureModel):
     id: Literal["927"] = "927"
 
 
-class _Acav(_BrainStructureModel):
+class _Acav(BrainStructureModel):
     """Model ACAv"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -426,7 +427,7 @@ class _Acav(_BrainStructureModel):
     id: Literal["48"] = "48"
 
 
-class _Acav6A(_BrainStructureModel):
+class _Acav6A(BrainStructureModel):
     """Model ACAv6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -435,7 +436,7 @@ class _Acav6A(_BrainStructureModel):
     id: Literal["810"] = "810"
 
 
-class _Acav6B(_BrainStructureModel):
+class _Acav6B(BrainStructureModel):
     """Model ACAv6b"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -444,7 +445,7 @@ class _Acav6B(_BrainStructureModel):
     id: Literal["819"] = "819"
 
 
-class _Acav1(_BrainStructureModel):
+class _Acav1(BrainStructureModel):
     """Model ACAv1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -453,18 +454,18 @@ class _Acav1(_BrainStructureModel):
     id: Literal["588"] = "588"
 
 
-class _Acav2_3(_BrainStructureModel):
+class _Acav2_3(BrainStructureModel):
     """Model ACAv2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Anterior cingulate area, ventral part, layer 2/3"] = (
         "Anterior cingulate area, ventral part, layer 2/3"
-    ] = "Anterior cingulate area, ventral part, layer 2/3"
+    )
     acronym: Literal["ACAv2/3"] = "ACAv2/3"
     id: Literal["296"] = "296"
 
 
-class _Acav5(_BrainStructureModel):
+class _Acav5(BrainStructureModel):
     """Model ACAv5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -473,7 +474,7 @@ class _Acav5(_BrainStructureModel):
     id: Literal["772"] = "772"
 
 
-class _Atn(_BrainStructureModel):
+class _Atn(BrainStructureModel):
     """Model ATN"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -482,7 +483,7 @@ class _Atn(_BrainStructureModel):
     id: Literal["239"] = "239"
 
 
-class _Ahn(_BrainStructureModel):
+class _Ahn(BrainStructureModel):
     """Model AHN"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -491,7 +492,7 @@ class _Ahn(_BrainStructureModel):
     id: Literal["88"] = "88"
 
 
-class _Aon(_BrainStructureModel):
+class _Aon(BrainStructureModel):
     """Model AON"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -500,7 +501,7 @@ class _Aon(_BrainStructureModel):
     id: Literal["159"] = "159"
 
 
-class _Apn(_BrainStructureModel):
+class _Apn(BrainStructureModel):
     """Model APN"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -509,7 +510,7 @@ class _Apn(_BrainStructureModel):
     id: Literal["215"] = "215"
 
 
-class _At(_BrainStructureModel):
+class _At(BrainStructureModel):
     """Model AT"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -518,7 +519,7 @@ class _At(_BrainStructureModel):
     id: Literal["231"] = "231"
 
 
-class _Ad(_BrainStructureModel):
+class _Ad(BrainStructureModel):
     """Model AD"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -527,7 +528,7 @@ class _Ad(_BrainStructureModel):
     id: Literal["64"] = "64"
 
 
-class _Adp(_BrainStructureModel):
+class _Adp(BrainStructureModel):
     """Model ADP"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -536,7 +537,7 @@ class _Adp(_BrainStructureModel):
     id: Literal["72"] = "72"
 
 
-class _Visal(_BrainStructureModel):
+class _Visal(BrainStructureModel):
     """Model VISal"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -545,7 +546,7 @@ class _Visal(_BrainStructureModel):
     id: Literal["402"] = "402"
 
 
-class _Visal1(_BrainStructureModel):
+class _Visal1(BrainStructureModel):
     """Model VISal1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -554,7 +555,7 @@ class _Visal1(_BrainStructureModel):
     id: Literal["1074"] = "1074"
 
 
-class _Visal2_3(_BrainStructureModel):
+class _Visal2_3(BrainStructureModel):
     """Model VISal2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -563,7 +564,7 @@ class _Visal2_3(_BrainStructureModel):
     id: Literal["905"] = "905"
 
 
-class _Visal4(_BrainStructureModel):
+class _Visal4(BrainStructureModel):
     """Model VISal4"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -572,7 +573,7 @@ class _Visal4(_BrainStructureModel):
     id: Literal["1114"] = "1114"
 
 
-class _Visal5(_BrainStructureModel):
+class _Visal5(BrainStructureModel):
     """Model VISal5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -581,7 +582,7 @@ class _Visal5(_BrainStructureModel):
     id: Literal["233"] = "233"
 
 
-class _Visal6A(_BrainStructureModel):
+class _Visal6A(BrainStructureModel):
     """Model VISal6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -590,7 +591,7 @@ class _Visal6A(_BrainStructureModel):
     id: Literal["601"] = "601"
 
 
-class _Visal6B(_BrainStructureModel):
+class _Visal6B(BrainStructureModel):
     """Model VISal6b"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -599,7 +600,7 @@ class _Visal6B(_BrainStructureModel):
     id: Literal["649"] = "649"
 
 
-class _Am(_BrainStructureModel):
+class _Am(BrainStructureModel):
     """Model AM"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -608,7 +609,7 @@ class _Am(_BrainStructureModel):
     id: Literal["127"] = "127"
 
 
-class _Amd(_BrainStructureModel):
+class _Amd(BrainStructureModel):
     """Model AMd"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -617,7 +618,7 @@ class _Amd(_BrainStructureModel):
     id: Literal["1096"] = "1096"
 
 
-class _Amv(_BrainStructureModel):
+class _Amv(BrainStructureModel):
     """Model AMv"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -626,7 +627,7 @@ class _Amv(_BrainStructureModel):
     id: Literal["1104"] = "1104"
 
 
-class _Visam(_BrainStructureModel):
+class _Visam(BrainStructureModel):
     """Model VISam"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -635,7 +636,7 @@ class _Visam(_BrainStructureModel):
     id: Literal["394"] = "394"
 
 
-class _Visam1(_BrainStructureModel):
+class _Visam1(BrainStructureModel):
     """Model VISam1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -644,7 +645,7 @@ class _Visam1(_BrainStructureModel):
     id: Literal["281"] = "281"
 
 
-class _Visam2_3(_BrainStructureModel):
+class _Visam2_3(BrainStructureModel):
     """Model VISam2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -653,7 +654,7 @@ class _Visam2_3(_BrainStructureModel):
     id: Literal["1066"] = "1066"
 
 
-class _Visam4(_BrainStructureModel):
+class _Visam4(BrainStructureModel):
     """Model VISam4"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -662,7 +663,7 @@ class _Visam4(_BrainStructureModel):
     id: Literal["401"] = "401"
 
 
-class _Visam5(_BrainStructureModel):
+class _Visam5(BrainStructureModel):
     """Model VISam5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -671,7 +672,7 @@ class _Visam5(_BrainStructureModel):
     id: Literal["433"] = "433"
 
 
-class _Visam6A(_BrainStructureModel):
+class _Visam6A(BrainStructureModel):
     """Model VISam6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -680,7 +681,7 @@ class _Visam6A(_BrainStructureModel):
     id: Literal["1046"] = "1046"
 
 
-class _Visam6B(_BrainStructureModel):
+class _Visam6B(BrainStructureModel):
     """Model VISam6b"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -689,7 +690,7 @@ class _Visam6B(_BrainStructureModel):
     id: Literal["441"] = "441"
 
 
-class _Av(_BrainStructureModel):
+class _Av(BrainStructureModel):
     """Model AV"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -698,7 +699,7 @@ class _Av(_BrainStructureModel):
     id: Literal["255"] = "255"
 
 
-class _Avpv(_BrainStructureModel):
+class _Avpv(BrainStructureModel):
     """Model AVPV"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -707,7 +708,7 @@ class _Avpv(_BrainStructureModel):
     id: Literal["272"] = "272"
 
 
-class _Avp(_BrainStructureModel):
+class _Avp(BrainStructureModel):
     """Model AVP"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -716,7 +717,7 @@ class _Avp(_BrainStructureModel):
     id: Literal["263"] = "263"
 
 
-class _Arh(_BrainStructureModel):
+class _Arh(BrainStructureModel):
     """Model ARH"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -725,7 +726,7 @@ class _Arh(_BrainStructureModel):
     id: Literal["223"] = "223"
 
 
-class _Ap(_BrainStructureModel):
+class _Ap(BrainStructureModel):
     """Model AP"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -734,7 +735,7 @@ class _Ap(_BrainStructureModel):
     id: Literal["207"] = "207"
 
 
-class _Apr(_BrainStructureModel):
+class _Apr(BrainStructureModel):
     """Model APr"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -743,7 +744,7 @@ class _Apr(_BrainStructureModel):
     id: Literal["484682508"] = "484682508"
 
 
-class _Aud(_BrainStructureModel):
+class _Aud(BrainStructureModel):
     """Model AUD"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -752,7 +753,7 @@ class _Aud(_BrainStructureModel):
     id: Literal["247"] = "247"
 
 
-class _B(_BrainStructureModel):
+class _B(BrainStructureModel):
     """Model B"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -761,7 +762,7 @@ class _B(_BrainStructureModel):
     id: Literal["280"] = "280"
 
 
-class _Grey(_BrainStructureModel):
+class _Grey(BrainStructureModel):
     """Model grey"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -770,7 +771,7 @@ class _Grey(_BrainStructureModel):
     id: Literal["8"] = "8"
 
 
-class _Bla(_BrainStructureModel):
+class _Bla(BrainStructureModel):
     """Model BLA"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -779,7 +780,7 @@ class _Bla(_BrainStructureModel):
     id: Literal["295"] = "295"
 
 
-class _Blaa(_BrainStructureModel):
+class _Blaa(BrainStructureModel):
     """Model BLAa"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -788,7 +789,7 @@ class _Blaa(_BrainStructureModel):
     id: Literal["303"] = "303"
 
 
-class _Blap(_BrainStructureModel):
+class _Blap(BrainStructureModel):
     """Model BLAp"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -797,7 +798,7 @@ class _Blap(_BrainStructureModel):
     id: Literal["311"] = "311"
 
 
-class _Blav(_BrainStructureModel):
+class _Blav(BrainStructureModel):
     """Model BLAv"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -806,7 +807,7 @@ class _Blav(_BrainStructureModel):
     id: Literal["451"] = "451"
 
 
-class _Bma(_BrainStructureModel):
+class _Bma(BrainStructureModel):
     """Model BMA"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -815,7 +816,7 @@ class _Bma(_BrainStructureModel):
     id: Literal["319"] = "319"
 
 
-class _Bmaa(_BrainStructureModel):
+class _Bmaa(BrainStructureModel):
     """Model BMAa"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -824,7 +825,7 @@ class _Bmaa(_BrainStructureModel):
     id: Literal["327"] = "327"
 
 
-class _Bmap(_BrainStructureModel):
+class _Bmap(BrainStructureModel):
     """Model BMAp"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -833,7 +834,7 @@ class _Bmap(_BrainStructureModel):
     id: Literal["334"] = "334"
 
 
-class _Bst(_BrainStructureModel):
+class _Bst(BrainStructureModel):
     """Model BST"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -842,7 +843,7 @@ class _Bst(_BrainStructureModel):
     id: Literal["351"] = "351"
 
 
-class _Ba(_BrainStructureModel):
+class _Ba(BrainStructureModel):
     """Model BA"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -851,7 +852,7 @@ class _Ba(_BrainStructureModel):
     id: Literal["292"] = "292"
 
 
-class _Bac(_BrainStructureModel):
+class _Bac(BrainStructureModel):
     """Model BAC"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -860,7 +861,7 @@ class _Bac(_BrainStructureModel):
     id: Literal["287"] = "287"
 
 
-class _Bs(_BrainStructureModel):
+class _Bs(BrainStructureModel):
     """Model BS"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -869,7 +870,7 @@ class _Bs(_BrainStructureModel):
     id: Literal["343"] = "343"
 
 
-class _Cp(_BrainStructureModel):
+class _Cp(BrainStructureModel):
     """Model CP"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -878,7 +879,7 @@ class _Cp(_BrainStructureModel):
     id: Literal["672"] = "672"
 
 
-class _Cea(_BrainStructureModel):
+class _Cea(BrainStructureModel):
     """Model CEA"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -887,7 +888,7 @@ class _Cea(_BrainStructureModel):
     id: Literal["536"] = "536"
 
 
-class _Ceac(_BrainStructureModel):
+class _Ceac(BrainStructureModel):
     """Model CEAc"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -896,7 +897,7 @@ class _Ceac(_BrainStructureModel):
     id: Literal["544"] = "544"
 
 
-class _Ceal(_BrainStructureModel):
+class _Ceal(BrainStructureModel):
     """Model CEAl"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -905,7 +906,7 @@ class _Ceal(_BrainStructureModel):
     id: Literal["551"] = "551"
 
 
-class _Ceam(_BrainStructureModel):
+class _Ceam(BrainStructureModel):
     """Model CEAm"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -914,7 +915,7 @@ class _Ceam(_BrainStructureModel):
     id: Literal["559"] = "559"
 
 
-class _Cl(_BrainStructureModel):
+class _Cl(BrainStructureModel):
     """Model CL"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -923,7 +924,7 @@ class _Cl(_BrainStructureModel):
     id: Literal["575"] = "575"
 
 
-class _Cli(_BrainStructureModel):
+class _Cli(BrainStructureModel):
     """Model CLI"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -932,7 +933,7 @@ class _Cli(_BrainStructureModel):
     id: Literal["591"] = "591"
 
 
-class _Cent(_BrainStructureModel):
+class _Cent(BrainStructureModel):
     """Model CENT"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -941,7 +942,7 @@ class _Cent(_BrainStructureModel):
     id: Literal["920"] = "920"
 
 
-class _Cm(_BrainStructureModel):
+class _Cm(BrainStructureModel):
     """Model CM"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -950,7 +951,7 @@ class _Cm(_BrainStructureModel):
     id: Literal["599"] = "599"
 
 
-class _Cbx(_BrainStructureModel):
+class _Cbx(BrainStructureModel):
     """Model CBX"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -959,7 +960,7 @@ class _Cbx(_BrainStructureModel):
     id: Literal["528"] = "528"
 
 
-class _Cbn(_BrainStructureModel):
+class _Cbn(BrainStructureModel):
     """Model CBN"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -968,7 +969,7 @@ class _Cbn(_BrainStructureModel):
     id: Literal["519"] = "519"
 
 
-class _Cb(_BrainStructureModel):
+class _Cb(BrainStructureModel):
     """Model CB"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -977,7 +978,7 @@ class _Cb(_BrainStructureModel):
     id: Literal["512"] = "512"
 
 
-class _Ctx(_BrainStructureModel):
+class _Ctx(BrainStructureModel):
     """Model CTX"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -986,7 +987,7 @@ class _Ctx(_BrainStructureModel):
     id: Literal["688"] = "688"
 
 
-class _Cnu(_BrainStructureModel):
+class _Cnu(BrainStructureModel):
     """Model CNU"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -995,7 +996,7 @@ class _Cnu(_BrainStructureModel):
     id: Literal["623"] = "623"
 
 
-class _Ch(_BrainStructureModel):
+class _Ch(BrainStructureModel):
     """Model CH"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1004,7 +1005,7 @@ class _Ch(_BrainStructureModel):
     id: Literal["567"] = "567"
 
 
-class _Cla(_BrainStructureModel):
+class _Cla(BrainStructureModel):
     """Model CLA"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1013,7 +1014,7 @@ class _Cla(_BrainStructureModel):
     id: Literal["583"] = "583"
 
 
-class _Cn(_BrainStructureModel):
+class _Cn(BrainStructureModel):
     """Model CN"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1022,7 +1023,7 @@ class _Cn(_BrainStructureModel):
     id: Literal["607"] = "607"
 
 
-class _Copy(_BrainStructureModel):
+class _Copy(BrainStructureModel):
     """Model COPY"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1031,7 +1032,7 @@ class _Copy(_BrainStructureModel):
     id: Literal["1033"] = "1033"
 
 
-class _Coa(_BrainStructureModel):
+class _Coa(BrainStructureModel):
     """Model COA"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1040,7 +1041,7 @@ class _Coa(_BrainStructureModel):
     id: Literal["631"] = "631"
 
 
-class _Coaa(_BrainStructureModel):
+class _Coaa(BrainStructureModel):
     """Model COAa"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1049,7 +1050,7 @@ class _Coaa(_BrainStructureModel):
     id: Literal["639"] = "639"
 
 
-class _Coap(_BrainStructureModel):
+class _Coap(BrainStructureModel):
     """Model COAp"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1058,29 +1059,29 @@ class _Coap(_BrainStructureModel):
     id: Literal["647"] = "647"
 
 
-class _Coapl(_BrainStructureModel):
+class _Coapl(BrainStructureModel):
     """Model COApl"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Cortical amygdalar area, posterior part, lateral zone"] = (
         "Cortical amygdalar area, posterior part, lateral zone"
-    ] = "Cortical amygdalar area, posterior part, lateral zone"
+    )
     acronym: Literal["COApl"] = "COApl"
     id: Literal["655"] = "655"
 
 
-class _Coapm(_BrainStructureModel):
+class _Coapm(BrainStructureModel):
     """Model COApm"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Cortical amygdalar area, posterior part, medial zone"] = (
         "Cortical amygdalar area, posterior part, medial zone"
-    ] = "Cortical amygdalar area, posterior part, medial zone"
+    )
     acronym: Literal["COApm"] = "COApm"
     id: Literal["663"] = "663"
 
 
-class _Ctxpl(_BrainStructureModel):
+class _Ctxpl(BrainStructureModel):
     """Model CTXpl"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1089,7 +1090,7 @@ class _Ctxpl(_BrainStructureModel):
     id: Literal["695"] = "695"
 
 
-class _Ctxsp(_BrainStructureModel):
+class _Ctxsp(BrainStructureModel):
     """Model CTXsp"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1098,7 +1099,7 @@ class _Ctxsp(_BrainStructureModel):
     id: Literal["703"] = "703"
 
 
-class _Ancr1(_BrainStructureModel):
+class _Ancr1(BrainStructureModel):
     """Model ANcr1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1107,7 +1108,7 @@ class _Ancr1(_BrainStructureModel):
     id: Literal["1056"] = "1056"
 
 
-class _Ancr2(_BrainStructureModel):
+class _Ancr2(BrainStructureModel):
     """Model ANcr2"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1116,7 +1117,7 @@ class _Ancr2(_BrainStructureModel):
     id: Literal["1064"] = "1064"
 
 
-class _Cul(_BrainStructureModel):
+class _Cul(BrainStructureModel):
     """Model CUL"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1125,7 +1126,7 @@ class _Cul(_BrainStructureModel):
     id: Literal["928"] = "928"
 
 
-class _Cu(_BrainStructureModel):
+class _Cu(BrainStructureModel):
     """Model CU"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1134,7 +1135,7 @@ class _Cu(_BrainStructureModel):
     id: Literal["711"] = "711"
 
 
-class _Cun(_BrainStructureModel):
+class _Cun(BrainStructureModel):
     """Model CUN"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1143,7 +1144,7 @@ class _Cun(_BrainStructureModel):
     id: Literal["616"] = "616"
 
 
-class _Dec(_BrainStructureModel):
+class _Dec(BrainStructureModel):
     """Model DEC"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1152,7 +1153,7 @@ class _Dec(_BrainStructureModel):
     id: Literal["936"] = "936"
 
 
-class _Dg(_BrainStructureModel):
+class _Dg(BrainStructureModel):
     """Model DG"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1161,7 +1162,7 @@ class _Dg(_BrainStructureModel):
     id: Literal["726"] = "726"
 
 
-class _Dg_Sg(_BrainStructureModel):
+class _Dg_Sg(BrainStructureModel):
     """Model DG-sg"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1170,7 +1171,7 @@ class _Dg_Sg(_BrainStructureModel):
     id: Literal["632"] = "632"
 
 
-class _Dg_Mo(_BrainStructureModel):
+class _Dg_Mo(BrainStructureModel):
     """Model DG-mo"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1179,7 +1180,7 @@ class _Dg_Mo(_BrainStructureModel):
     id: Literal["10703"] = "10703"
 
 
-class _Dg_Po(_BrainStructureModel):
+class _Dg_Po(BrainStructureModel):
     """Model DG-po"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1188,7 +1189,7 @@ class _Dg_Po(_BrainStructureModel):
     id: Literal["10704"] = "10704"
 
 
-class _Dn(_BrainStructureModel):
+class _Dn(BrainStructureModel):
     """Model DN"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1197,7 +1198,7 @@ class _Dn(_BrainStructureModel):
     id: Literal["846"] = "846"
 
 
-class _Ndb(_BrainStructureModel):
+class _Ndb(BrainStructureModel):
     """Model NDB"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1206,7 +1207,7 @@ class _Ndb(_BrainStructureModel):
     id: Literal["596"] = "596"
 
 
-class _Audd(_BrainStructureModel):
+class _Audd(BrainStructureModel):
     """Model AUDd"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1215,7 +1216,7 @@ class _Audd(_BrainStructureModel):
     id: Literal["1011"] = "1011"
 
 
-class _Audd1(_BrainStructureModel):
+class _Audd1(BrainStructureModel):
     """Model AUDd1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1224,7 +1225,7 @@ class _Audd1(_BrainStructureModel):
     id: Literal["527"] = "527"
 
 
-class _Audd2_3(_BrainStructureModel):
+class _Audd2_3(BrainStructureModel):
     """Model AUDd2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1233,7 +1234,7 @@ class _Audd2_3(_BrainStructureModel):
     id: Literal["600"] = "600"
 
 
-class _Audd4(_BrainStructureModel):
+class _Audd4(BrainStructureModel):
     """Model AUDd4"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1242,7 +1243,7 @@ class _Audd4(_BrainStructureModel):
     id: Literal["678"] = "678"
 
 
-class _Audd5(_BrainStructureModel):
+class _Audd5(BrainStructureModel):
     """Model AUDd5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1251,7 +1252,7 @@ class _Audd5(_BrainStructureModel):
     id: Literal["252"] = "252"
 
 
-class _Audd6A(_BrainStructureModel):
+class _Audd6A(BrainStructureModel):
     """Model AUDd6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1260,7 +1261,7 @@ class _Audd6A(_BrainStructureModel):
     id: Literal["156"] = "156"
 
 
-class _Audd6B(_BrainStructureModel):
+class _Audd6B(BrainStructureModel):
     """Model AUDd6b"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1269,7 +1270,7 @@ class _Audd6B(_BrainStructureModel):
     id: Literal["243"] = "243"
 
 
-class _Dco(_BrainStructureModel):
+class _Dco(BrainStructureModel):
     """Model DCO"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1278,7 +1279,7 @@ class _Dco(_BrainStructureModel):
     id: Literal["96"] = "96"
 
 
-class _Dcn(_BrainStructureModel):
+class _Dcn(BrainStructureModel):
     """Model DCN"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1287,7 +1288,7 @@ class _Dcn(_BrainStructureModel):
     id: Literal["720"] = "720"
 
 
-class _Dmx(_BrainStructureModel):
+class _Dmx(BrainStructureModel):
     """Model DMX"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1296,7 +1297,7 @@ class _Dmx(_BrainStructureModel):
     id: Literal["839"] = "839"
 
 
-class _Dr(_BrainStructureModel):
+class _Dr(BrainStructureModel):
     """Model DR"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1305,7 +1306,7 @@ class _Dr(_BrainStructureModel):
     id: Literal["872"] = "872"
 
 
-class _Lgd(_BrainStructureModel):
+class _Lgd(BrainStructureModel):
     """Model LGd"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1314,40 +1315,40 @@ class _Lgd(_BrainStructureModel):
     id: Literal["170"] = "170"
 
 
-class _Lgd_Co(_BrainStructureModel):
+class _Lgd_Co(BrainStructureModel):
     """Model LGd-co"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Dorsal part of the lateral geniculate complex, core"] = (
         "Dorsal part of the lateral geniculate complex, core"
-    ] = "Dorsal part of the lateral geniculate complex, core"
+    )
     acronym: Literal["LGd-co"] = "LGd-co"
     id: Literal["496345668"] = "496345668"
 
 
-class _Lgd_Ip(_BrainStructureModel):
+class _Lgd_Ip(BrainStructureModel):
     """Model LGd-ip"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Dorsal part of the lateral geniculate complex, ipsilateral zone"] = (
         "Dorsal part of the lateral geniculate complex, ipsilateral zone"
-    ] = "Dorsal part of the lateral geniculate complex, ipsilateral zone"
+    )
     acronym: Literal["LGd-ip"] = "LGd-ip"
     id: Literal["496345672"] = "496345672"
 
 
-class _Lgd_Sh(_BrainStructureModel):
+class _Lgd_Sh(BrainStructureModel):
     """Model LGd-sh"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Dorsal part of the lateral geniculate complex, shell"] = (
         "Dorsal part of the lateral geniculate complex, shell"
-    ] = "Dorsal part of the lateral geniculate complex, shell"
+    )
     acronym: Literal["LGd-sh"] = "LGd-sh"
     id: Literal["496345664"] = "496345664"
 
 
-class _Dp(_BrainStructureModel):
+class _Dp(BrainStructureModel):
     """Model DP"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1356,7 +1357,7 @@ class _Dp(_BrainStructureModel):
     id: Literal["814"] = "814"
 
 
-class _Pmd(_BrainStructureModel):
+class _Pmd(BrainStructureModel):
     """Model PMd"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1365,7 +1366,7 @@ class _Pmd(_BrainStructureModel):
     id: Literal["980"] = "980"
 
 
-class _Dtn(_BrainStructureModel):
+class _Dtn(BrainStructureModel):
     """Model DTN"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1374,18 +1375,18 @@ class _Dtn(_BrainStructureModel):
     id: Literal["880"] = "880"
 
 
-class _Dt(_BrainStructureModel):
+class _Dt(BrainStructureModel):
     """Model DT"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Dorsal terminal nucleus of the accessory optic tract"] = (
         "Dorsal terminal nucleus of the accessory optic tract"
-    ] = "Dorsal terminal nucleus of the accessory optic tract"
+    )
     acronym: Literal["DT"] = "DT"
     id: Literal["75"] = "75"
 
 
-class _Dmh(_BrainStructureModel):
+class _Dmh(BrainStructureModel):
     """Model DMH"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1394,7 +1395,7 @@ class _Dmh(_BrainStructureModel):
     id: Literal["830"] = "830"
 
 
-class _Ect(_BrainStructureModel):
+class _Ect(BrainStructureModel):
     """Model ECT"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1403,7 +1404,7 @@ class _Ect(_BrainStructureModel):
     id: Literal["895"] = "895"
 
 
-class _Ect1(_BrainStructureModel):
+class _Ect1(BrainStructureModel):
     """Model ECT1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1412,7 +1413,7 @@ class _Ect1(_BrainStructureModel):
     id: Literal["836"] = "836"
 
 
-class _Ect2_3(_BrainStructureModel):
+class _Ect2_3(BrainStructureModel):
     """Model ECT2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1421,7 +1422,7 @@ class _Ect2_3(_BrainStructureModel):
     id: Literal["427"] = "427"
 
 
-class _Ect5(_BrainStructureModel):
+class _Ect5(BrainStructureModel):
     """Model ECT5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1430,7 +1431,7 @@ class _Ect5(_BrainStructureModel):
     id: Literal["988"] = "988"
 
 
-class _Ect6A(_BrainStructureModel):
+class _Ect6A(BrainStructureModel):
     """Model ECT6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1439,7 +1440,7 @@ class _Ect6A(_BrainStructureModel):
     id: Literal["977"] = "977"
 
 
-class _Ect6B(_BrainStructureModel):
+class _Ect6B(BrainStructureModel):
     """Model ECT6b"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1448,7 +1449,7 @@ class _Ect6B(_BrainStructureModel):
     id: Literal["1045"] = "1045"
 
 
-class _Ew(_BrainStructureModel):
+class _Ew(BrainStructureModel):
     """Model EW"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1457,7 +1458,7 @@ class _Ew(_BrainStructureModel):
     id: Literal["975"] = "975"
 
 
-class _Ep(_BrainStructureModel):
+class _Ep(BrainStructureModel):
     """Model EP"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1466,7 +1467,7 @@ class _Ep(_BrainStructureModel):
     id: Literal["942"] = "942"
 
 
-class _Epd(_BrainStructureModel):
+class _Epd(BrainStructureModel):
     """Model EPd"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1475,7 +1476,7 @@ class _Epd(_BrainStructureModel):
     id: Literal["952"] = "952"
 
 
-class _Epv(_BrainStructureModel):
+class _Epv(BrainStructureModel):
     """Model EPv"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1484,7 +1485,7 @@ class _Epv(_BrainStructureModel):
     id: Literal["966"] = "966"
 
 
-class _Ent(_BrainStructureModel):
+class _Ent(BrainStructureModel):
     """Model ENT"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1493,7 +1494,7 @@ class _Ent(_BrainStructureModel):
     id: Literal["909"] = "909"
 
 
-class _Entl(_BrainStructureModel):
+class _Entl(BrainStructureModel):
     """Model ENTl"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1502,7 +1503,7 @@ class _Entl(_BrainStructureModel):
     id: Literal["918"] = "918"
 
 
-class _Entl1(_BrainStructureModel):
+class _Entl1(BrainStructureModel):
     """Model ENTl1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1511,7 +1512,7 @@ class _Entl1(_BrainStructureModel):
     id: Literal["1121"] = "1121"
 
 
-class _Entl2(_BrainStructureModel):
+class _Entl2(BrainStructureModel):
     """Model ENTl2"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1520,7 +1521,7 @@ class _Entl2(_BrainStructureModel):
     id: Literal["20"] = "20"
 
 
-class _Entl3(_BrainStructureModel):
+class _Entl3(BrainStructureModel):
     """Model ENTl3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1529,7 +1530,7 @@ class _Entl3(_BrainStructureModel):
     id: Literal["52"] = "52"
 
 
-class _Entl5(_BrainStructureModel):
+class _Entl5(BrainStructureModel):
     """Model ENTl5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1538,7 +1539,7 @@ class _Entl5(_BrainStructureModel):
     id: Literal["139"] = "139"
 
 
-class _Entl6A(_BrainStructureModel):
+class _Entl6A(BrainStructureModel):
     """Model ENTl6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1547,7 +1548,7 @@ class _Entl6A(_BrainStructureModel):
     id: Literal["28"] = "28"
 
 
-class _Entm(_BrainStructureModel):
+class _Entm(BrainStructureModel):
     """Model ENTm"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1556,62 +1557,62 @@ class _Entm(_BrainStructureModel):
     id: Literal["926"] = "926"
 
 
-class _Entm1(_BrainStructureModel):
+class _Entm1(BrainStructureModel):
     """Model ENTm1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Entorhinal area, medial part, dorsal zone, layer 1"] = (
         "Entorhinal area, medial part, dorsal zone, layer 1"
-    ] = "Entorhinal area, medial part, dorsal zone, layer 1"
+    )
     acronym: Literal["ENTm1"] = "ENTm1"
     id: Literal["526"] = "526"
 
 
-class _Entm2(_BrainStructureModel):
+class _Entm2(BrainStructureModel):
     """Model ENTm2"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Entorhinal area, medial part, dorsal zone, layer 2"] = (
         "Entorhinal area, medial part, dorsal zone, layer 2"
-    ] = "Entorhinal area, medial part, dorsal zone, layer 2"
+    )
     acronym: Literal["ENTm2"] = "ENTm2"
     id: Literal["543"] = "543"
 
 
-class _Entm3(_BrainStructureModel):
+class _Entm3(BrainStructureModel):
     """Model ENTm3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Entorhinal area, medial part, dorsal zone, layer 3"] = (
         "Entorhinal area, medial part, dorsal zone, layer 3"
-    ] = "Entorhinal area, medial part, dorsal zone, layer 3"
+    )
     acronym: Literal["ENTm3"] = "ENTm3"
     id: Literal["664"] = "664"
 
 
-class _Entm5(_BrainStructureModel):
+class _Entm5(BrainStructureModel):
     """Model ENTm5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Entorhinal area, medial part, dorsal zone, layer 5"] = (
         "Entorhinal area, medial part, dorsal zone, layer 5"
-    ] = "Entorhinal area, medial part, dorsal zone, layer 5"
+    )
     acronym: Literal["ENTm5"] = "ENTm5"
     id: Literal["727"] = "727"
 
 
-class _Entm6(_BrainStructureModel):
+class _Entm6(BrainStructureModel):
     """Model ENTm6"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Entorhinal area, medial part, dorsal zone, layer 6"] = (
         "Entorhinal area, medial part, dorsal zone, layer 6"
-    ] = "Entorhinal area, medial part, dorsal zone, layer 6"
+    )
     acronym: Literal["ENTm6"] = "ENTm6"
     id: Literal["743"] = "743"
 
 
-class _Epi(_BrainStructureModel):
+class _Epi(BrainStructureModel):
     """Model EPI"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1620,7 +1621,7 @@ class _Epi(_BrainStructureModel):
     id: Literal["958"] = "958"
 
 
-class _Eth(_BrainStructureModel):
+class _Eth(BrainStructureModel):
     """Model Eth"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1629,7 +1630,7 @@ class _Eth(_BrainStructureModel):
     id: Literal["560581551"] = "560581551"
 
 
-class _Ecu(_BrainStructureModel):
+class _Ecu(BrainStructureModel):
     """Model ECU"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1638,7 +1639,7 @@ class _Ecu(_BrainStructureModel):
     id: Literal["903"] = "903"
 
 
-class _Vii(_BrainStructureModel):
+class _Vii(BrainStructureModel):
     """Model VII"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1647,7 +1648,7 @@ class _Vii(_BrainStructureModel):
     id: Literal["661"] = "661"
 
 
-class _Fc(_BrainStructureModel):
+class _Fc(BrainStructureModel):
     """Model FC"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1656,7 +1657,7 @@ class _Fc(_BrainStructureModel):
     id: Literal["982"] = "982"
 
 
-class _Fn(_BrainStructureModel):
+class _Fn(BrainStructureModel):
     """Model FN"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1665,7 +1666,7 @@ class _Fn(_BrainStructureModel):
     id: Literal["989"] = "989"
 
 
-class _Ca1(_BrainStructureModel):
+class _Ca1(BrainStructureModel):
     """Model CA1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1674,7 +1675,7 @@ class _Ca1(_BrainStructureModel):
     id: Literal["382"] = "382"
 
 
-class _Ca2(_BrainStructureModel):
+class _Ca2(BrainStructureModel):
     """Model CA2"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1683,7 +1684,7 @@ class _Ca2(_BrainStructureModel):
     id: Literal["423"] = "423"
 
 
-class _Ca3(_BrainStructureModel):
+class _Ca3(BrainStructureModel):
     """Model CA3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1692,7 +1693,7 @@ class _Ca3(_BrainStructureModel):
     id: Literal["463"] = "463"
 
 
-class _Ff(_BrainStructureModel):
+class _Ff(BrainStructureModel):
     """Model FF"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1701,7 +1702,7 @@ class _Ff(_BrainStructureModel):
     id: Literal["804"] = "804"
 
 
-class _Fl(_BrainStructureModel):
+class _Fl(BrainStructureModel):
     """Model FL"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1710,7 +1711,7 @@ class _Fl(_BrainStructureModel):
     id: Literal["1049"] = "1049"
 
 
-class _Fotu(_BrainStructureModel):
+class _Fotu(BrainStructureModel):
     """Model FOTU"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1719,7 +1720,7 @@ class _Fotu(_BrainStructureModel):
     id: Literal["944"] = "944"
 
 
-class _Frp(_BrainStructureModel):
+class _Frp(BrainStructureModel):
     """Model FRP"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1728,7 +1729,7 @@ class _Frp(_BrainStructureModel):
     id: Literal["184"] = "184"
 
 
-class _Frp1(_BrainStructureModel):
+class _Frp1(BrainStructureModel):
     """Model FRP1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1737,7 +1738,7 @@ class _Frp1(_BrainStructureModel):
     id: Literal["68"] = "68"
 
 
-class _Frp2_3(_BrainStructureModel):
+class _Frp2_3(BrainStructureModel):
     """Model FRP2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1746,7 +1747,7 @@ class _Frp2_3(_BrainStructureModel):
     id: Literal["667"] = "667"
 
 
-class _Frp5(_BrainStructureModel):
+class _Frp5(BrainStructureModel):
     """Model FRP5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1755,7 +1756,7 @@ class _Frp5(_BrainStructureModel):
     id: Literal["526157192"] = "526157192"
 
 
-class _Frp6A(_BrainStructureModel):
+class _Frp6A(BrainStructureModel):
     """Model FRP6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1764,7 +1765,7 @@ class _Frp6A(_BrainStructureModel):
     id: Literal["526157196"] = "526157196"
 
 
-class _Frp6B(_BrainStructureModel):
+class _Frp6B(BrainStructureModel):
     """Model FRP6b"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1773,7 +1774,7 @@ class _Frp6B(_BrainStructureModel):
     id: Literal["526322264"] = "526322264"
 
 
-class _Fs(_BrainStructureModel):
+class _Fs(BrainStructureModel):
     """Model FS"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1782,7 +1783,7 @@ class _Fs(_BrainStructureModel):
     id: Literal["998"] = "998"
 
 
-class _Gend(_BrainStructureModel):
+class _Gend(BrainStructureModel):
     """Model GENd"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1791,7 +1792,7 @@ class _Gend(_BrainStructureModel):
     id: Literal["1008"] = "1008"
 
 
-class _Genv(_BrainStructureModel):
+class _Genv(BrainStructureModel):
     """Model GENv"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1800,7 +1801,7 @@ class _Genv(_BrainStructureModel):
     id: Literal["1014"] = "1014"
 
 
-class _Grn(_BrainStructureModel):
+class _Grn(BrainStructureModel):
     """Model GRN"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1809,7 +1810,7 @@ class _Grn(_BrainStructureModel):
     id: Literal["1048"] = "1048"
 
 
-class _Gpe(_BrainStructureModel):
+class _Gpe(BrainStructureModel):
     """Model GPe"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1818,7 +1819,7 @@ class _Gpe(_BrainStructureModel):
     id: Literal["1022"] = "1022"
 
 
-class _Gpi(_BrainStructureModel):
+class _Gpi(BrainStructureModel):
     """Model GPi"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1827,7 +1828,7 @@ class _Gpi(_BrainStructureModel):
     id: Literal["1031"] = "1031"
 
 
-class _Gr(_BrainStructureModel):
+class _Gr(BrainStructureModel):
     """Model GR"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1836,7 +1837,7 @@ class _Gr(_BrainStructureModel):
     id: Literal["1039"] = "1039"
 
 
-class _Gu(_BrainStructureModel):
+class _Gu(BrainStructureModel):
     """Model GU"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1845,7 +1846,7 @@ class _Gu(_BrainStructureModel):
     id: Literal["1057"] = "1057"
 
 
-class _Gu1(_BrainStructureModel):
+class _Gu1(BrainStructureModel):
     """Model GU1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1854,7 +1855,7 @@ class _Gu1(_BrainStructureModel):
     id: Literal["36"] = "36"
 
 
-class _Gu2_3(_BrainStructureModel):
+class _Gu2_3(BrainStructureModel):
     """Model GU2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1863,7 +1864,7 @@ class _Gu2_3(_BrainStructureModel):
     id: Literal["180"] = "180"
 
 
-class _Gu4(_BrainStructureModel):
+class _Gu4(BrainStructureModel):
     """Model GU4"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1872,7 +1873,7 @@ class _Gu4(_BrainStructureModel):
     id: Literal["148"] = "148"
 
 
-class _Gu5(_BrainStructureModel):
+class _Gu5(BrainStructureModel):
     """Model GU5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1881,7 +1882,7 @@ class _Gu5(_BrainStructureModel):
     id: Literal["187"] = "187"
 
 
-class _Gu6A(_BrainStructureModel):
+class _Gu6A(BrainStructureModel):
     """Model GU6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1890,7 +1891,7 @@ class _Gu6A(_BrainStructureModel):
     id: Literal["638"] = "638"
 
 
-class _Gu6B(_BrainStructureModel):
+class _Gu6B(BrainStructureModel):
     """Model GU6b"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1899,7 +1900,7 @@ class _Gu6B(_BrainStructureModel):
     id: Literal["662"] = "662"
 
 
-class _Hem(_BrainStructureModel):
+class _Hem(BrainStructureModel):
     """Model HEM"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1908,7 +1909,7 @@ class _Hem(_BrainStructureModel):
     id: Literal["1073"] = "1073"
 
 
-class _Hb(_BrainStructureModel):
+class _Hb(BrainStructureModel):
     """Model HB"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1917,7 +1918,7 @@ class _Hb(_BrainStructureModel):
     id: Literal["1065"] = "1065"
 
 
-class _Hpf(_BrainStructureModel):
+class _Hpf(BrainStructureModel):
     """Model HPF"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1926,7 +1927,7 @@ class _Hpf(_BrainStructureModel):
     id: Literal["1089"] = "1089"
 
 
-class _Hip(_BrainStructureModel):
+class _Hip(BrainStructureModel):
     """Model HIP"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1935,7 +1936,7 @@ class _Hip(_BrainStructureModel):
     id: Literal["1080"] = "1080"
 
 
-class _Hata(_BrainStructureModel):
+class _Hata(BrainStructureModel):
     """Model HATA"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1944,7 +1945,7 @@ class _Hata(_BrainStructureModel):
     id: Literal["589508447"] = "589508447"
 
 
-class _Xii(_BrainStructureModel):
+class _Xii(BrainStructureModel):
     """Model XII"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1953,7 +1954,7 @@ class _Xii(_BrainStructureModel):
     id: Literal["773"] = "773"
 
 
-class _Lz(_BrainStructureModel):
+class _Lz(BrainStructureModel):
     """Model LZ"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1962,7 +1963,7 @@ class _Lz(_BrainStructureModel):
     id: Literal["290"] = "290"
 
 
-class _Mez(_BrainStructureModel):
+class _Mez(BrainStructureModel):
     """Model MEZ"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1971,7 +1972,7 @@ class _Mez(_BrainStructureModel):
     id: Literal["467"] = "467"
 
 
-class _Hy(_BrainStructureModel):
+class _Hy(BrainStructureModel):
     """Model HY"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1980,7 +1981,7 @@ class _Hy(_BrainStructureModel):
     id: Literal["1097"] = "1097"
 
 
-class _Ig(_BrainStructureModel):
+class _Ig(BrainStructureModel):
     """Model IG"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1989,7 +1990,7 @@ class _Ig(_BrainStructureModel):
     id: Literal["19"] = "19"
 
 
-class _Ic(_BrainStructureModel):
+class _Ic(BrainStructureModel):
     """Model IC"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -1998,7 +1999,7 @@ class _Ic(_BrainStructureModel):
     id: Literal["4"] = "4"
 
 
-class _Icc(_BrainStructureModel):
+class _Icc(BrainStructureModel):
     """Model ICc"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2007,7 +2008,7 @@ class _Icc(_BrainStructureModel):
     id: Literal["811"] = "811"
 
 
-class _Icd(_BrainStructureModel):
+class _Icd(BrainStructureModel):
     """Model ICd"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2016,7 +2017,7 @@ class _Icd(_BrainStructureModel):
     id: Literal["820"] = "820"
 
 
-class _Ice(_BrainStructureModel):
+class _Ice(BrainStructureModel):
     """Model ICe"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2025,7 +2026,7 @@ class _Ice(_BrainStructureModel):
     id: Literal["828"] = "828"
 
 
-class _Io(_BrainStructureModel):
+class _Io(BrainStructureModel):
     """Model IO"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2034,7 +2035,7 @@ class _Io(_BrainStructureModel):
     id: Literal["83"] = "83"
 
 
-class _Isn(_BrainStructureModel):
+class _Isn(BrainStructureModel):
     """Model ISN"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2043,7 +2044,7 @@ class _Isn(_BrainStructureModel):
     id: Literal["106"] = "106"
 
 
-class _Icb(_BrainStructureModel):
+class _Icb(BrainStructureModel):
     """Model ICB"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2052,7 +2053,7 @@ class _Icb(_BrainStructureModel):
     id: Literal["372"] = "372"
 
 
-class _Ila(_BrainStructureModel):
+class _Ila(BrainStructureModel):
     """Model ILA"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2061,7 +2062,7 @@ class _Ila(_BrainStructureModel):
     id: Literal["44"] = "44"
 
 
-class _Ila1(_BrainStructureModel):
+class _Ila1(BrainStructureModel):
     """Model ILA1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2070,7 +2071,7 @@ class _Ila1(_BrainStructureModel):
     id: Literal["707"] = "707"
 
 
-class _Ila2_3(_BrainStructureModel):
+class _Ila2_3(BrainStructureModel):
     """Model ILA2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2079,7 +2080,7 @@ class _Ila2_3(_BrainStructureModel):
     id: Literal["556"] = "556"
 
 
-class _Ila5(_BrainStructureModel):
+class _Ila5(BrainStructureModel):
     """Model ILA5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2088,7 +2089,7 @@ class _Ila5(_BrainStructureModel):
     id: Literal["827"] = "827"
 
 
-class _Ila6A(_BrainStructureModel):
+class _Ila6A(BrainStructureModel):
     """Model ILA6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2097,7 +2098,7 @@ class _Ila6A(_BrainStructureModel):
     id: Literal["1054"] = "1054"
 
 
-class _Ila6B(_BrainStructureModel):
+class _Ila6B(BrainStructureModel):
     """Model ILA6b"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2106,7 +2107,7 @@ class _Ila6B(_BrainStructureModel):
     id: Literal["1081"] = "1081"
 
 
-class _Iad(_BrainStructureModel):
+class _Iad(BrainStructureModel):
     """Model IAD"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2115,7 +2116,7 @@ class _Iad(_BrainStructureModel):
     id: Literal["1113"] = "1113"
 
 
-class _Iam(_BrainStructureModel):
+class _Iam(BrainStructureModel):
     """Model IAM"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2124,7 +2125,7 @@ class _Iam(_BrainStructureModel):
     id: Literal["1120"] = "1120"
 
 
-class _Ib(_BrainStructureModel):
+class _Ib(BrainStructureModel):
     """Model IB"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2133,7 +2134,7 @@ class _Ib(_BrainStructureModel):
     id: Literal["1129"] = "1129"
 
 
-class _Ia(_BrainStructureModel):
+class _Ia(BrainStructureModel):
     """Model IA"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2142,7 +2143,7 @@ class _Ia(_BrainStructureModel):
     id: Literal["1105"] = "1105"
 
 
-class _If(_BrainStructureModel):
+class _If(BrainStructureModel):
     """Model IF"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2151,18 +2152,18 @@ class _If(_BrainStructureModel):
     id: Literal["12"] = "12"
 
 
-class _Igl(_BrainStructureModel):
+class _Igl(BrainStructureModel):
     """Model IGL"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Intergeniculate leaflet of the lateral geniculate complex"] = (
         "Intergeniculate leaflet of the lateral geniculate complex"
-    ] = "Intergeniculate leaflet of the lateral geniculate complex"
+    )
     acronym: Literal["IGL"] = "IGL"
     id: Literal["27"] = "27"
 
 
-class _Intg(_BrainStructureModel):
+class _Intg(BrainStructureModel):
     """Model IntG"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2171,7 +2172,7 @@ class _Intg(_BrainStructureModel):
     id: Literal["563807439"] = "563807439"
 
 
-class _Irn(_BrainStructureModel):
+class _Irn(BrainStructureModel):
     """Model IRN"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2180,7 +2181,7 @@ class _Irn(_BrainStructureModel):
     id: Literal["136"] = "136"
 
 
-class _Imd(_BrainStructureModel):
+class _Imd(BrainStructureModel):
     """Model IMD"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2189,7 +2190,7 @@ class _Imd(_BrainStructureModel):
     id: Literal["59"] = "59"
 
 
-class _Ipn(_BrainStructureModel):
+class _Ipn(BrainStructureModel):
     """Model IPN"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2198,7 +2199,7 @@ class _Ipn(_BrainStructureModel):
     id: Literal["100"] = "100"
 
 
-class _Ipa(_BrainStructureModel):
+class _Ipa(BrainStructureModel):
     """Model IPA"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2207,7 +2208,7 @@ class _Ipa(_BrainStructureModel):
     id: Literal["607344842"] = "607344842"
 
 
-class _Ipc(_BrainStructureModel):
+class _Ipc(BrainStructureModel):
     """Model IPC"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2216,7 +2217,7 @@ class _Ipc(_BrainStructureModel):
     id: Literal["607344838"] = "607344838"
 
 
-class _Ipdl(_BrainStructureModel):
+class _Ipdl(BrainStructureModel):
     """Model IPDL"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2225,7 +2226,7 @@ class _Ipdl(_BrainStructureModel):
     id: Literal["607344858"] = "607344858"
 
 
-class _Ipdm(_BrainStructureModel):
+class _Ipdm(BrainStructureModel):
     """Model IPDM"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2234,7 +2235,7 @@ class _Ipdm(_BrainStructureModel):
     id: Literal["607344854"] = "607344854"
 
 
-class _Ipi(_BrainStructureModel):
+class _Ipi(BrainStructureModel):
     """Model IPI"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2243,7 +2244,7 @@ class _Ipi(_BrainStructureModel):
     id: Literal["607344850"] = "607344850"
 
 
-class _Ipl(_BrainStructureModel):
+class _Ipl(BrainStructureModel):
     """Model IPL"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2252,7 +2253,7 @@ class _Ipl(_BrainStructureModel):
     id: Literal["607344846"] = "607344846"
 
 
-class _Ipr(_BrainStructureModel):
+class _Ipr(BrainStructureModel):
     """Model IPR"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2261,7 +2262,7 @@ class _Ipr(_BrainStructureModel):
     id: Literal["607344834"] = "607344834"
 
 
-class _Iprl(_BrainStructureModel):
+class _Iprl(BrainStructureModel):
     """Model IPRL"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2270,7 +2271,7 @@ class _Iprl(_BrainStructureModel):
     id: Literal["607344862"] = "607344862"
 
 
-class _Ip(_BrainStructureModel):
+class _Ip(BrainStructureModel):
     """Model IP"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2279,7 +2280,7 @@ class _Ip(_BrainStructureModel):
     id: Literal["91"] = "91"
 
 
-class _Inc(_BrainStructureModel):
+class _Inc(BrainStructureModel):
     """Model INC"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2288,7 +2289,7 @@ class _Inc(_BrainStructureModel):
     id: Literal["67"] = "67"
 
 
-class _I5(_BrainStructureModel):
+class _I5(BrainStructureModel):
     """Model I5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2297,7 +2298,7 @@ class _I5(_BrainStructureModel):
     id: Literal["549009227"] = "549009227"
 
 
-class _Ilm(_BrainStructureModel):
+class _Ilm(BrainStructureModel):
     """Model ILM"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2306,7 +2307,7 @@ class _Ilm(_BrainStructureModel):
     id: Literal["51"] = "51"
 
 
-class _Isocortex(_BrainStructureModel):
+class _Isocortex(BrainStructureModel):
     """Model Isocortex"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2315,7 +2316,7 @@ class _Isocortex(_BrainStructureModel):
     id: Literal["315"] = "315"
 
 
-class _Kf(_BrainStructureModel):
+class _Kf(BrainStructureModel):
     """Model KF"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2324,7 +2325,7 @@ class _Kf(_BrainStructureModel):
     id: Literal["123"] = "123"
 
 
-class _La(_BrainStructureModel):
+class _La(BrainStructureModel):
     """Model LA"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2333,7 +2334,7 @@ class _La(_BrainStructureModel):
     id: Literal["131"] = "131"
 
 
-class _Ld(_BrainStructureModel):
+class _Ld(BrainStructureModel):
     """Model LD"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2342,7 +2343,7 @@ class _Ld(_BrainStructureModel):
     id: Literal["155"] = "155"
 
 
-class _Lat(_BrainStructureModel):
+class _Lat(BrainStructureModel):
     """Model LAT"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2351,7 +2352,7 @@ class _Lat(_BrainStructureModel):
     id: Literal["138"] = "138"
 
 
-class _Lh(_BrainStructureModel):
+class _Lh(BrainStructureModel):
     """Model LH"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2360,7 +2361,7 @@ class _Lh(_BrainStructureModel):
     id: Literal["186"] = "186"
 
 
-class _Lha(_BrainStructureModel):
+class _Lha(BrainStructureModel):
     """Model LHA"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2369,7 +2370,7 @@ class _Lha(_BrainStructureModel):
     id: Literal["194"] = "194"
 
 
-class _Lm(_BrainStructureModel):
+class _Lm(BrainStructureModel):
     """Model LM"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2378,7 +2379,7 @@ class _Lm(_BrainStructureModel):
     id: Literal["210"] = "210"
 
 
-class _Lp(_BrainStructureModel):
+class _Lp(BrainStructureModel):
     """Model LP"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2387,7 +2388,7 @@ class _Lp(_BrainStructureModel):
     id: Literal["218"] = "218"
 
 
-class _Lpo(_BrainStructureModel):
+class _Lpo(BrainStructureModel):
     """Model LPO"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2396,7 +2397,7 @@ class _Lpo(_BrainStructureModel):
     id: Literal["226"] = "226"
 
 
-class _Lrn(_BrainStructureModel):
+class _Lrn(BrainStructureModel):
     """Model LRN"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2405,7 +2406,7 @@ class _Lrn(_BrainStructureModel):
     id: Literal["235"] = "235"
 
 
-class _Lrnm(_BrainStructureModel):
+class _Lrnm(BrainStructureModel):
     """Model LRNm"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2414,7 +2415,7 @@ class _Lrnm(_BrainStructureModel):
     id: Literal["955"] = "955"
 
 
-class _Lrnp(_BrainStructureModel):
+class _Lrnp(BrainStructureModel):
     """Model LRNp"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2423,7 +2424,7 @@ class _Lrnp(_BrainStructureModel):
     id: Literal["963"] = "963"
 
 
-class _Lsx(_BrainStructureModel):
+class _Lsx(BrainStructureModel):
     """Model LSX"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2432,7 +2433,7 @@ class _Lsx(_BrainStructureModel):
     id: Literal["275"] = "275"
 
 
-class _Ls(_BrainStructureModel):
+class _Ls(BrainStructureModel):
     """Model LS"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2441,29 +2442,29 @@ class _Ls(_BrainStructureModel):
     id: Literal["242"] = "242"
 
 
-class _Lsc(_BrainStructureModel):
+class _Lsc(BrainStructureModel):
     """Model LSc"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Lateral septal nucleus, caudal (caudodorsal) part"] = (
         "Lateral septal nucleus, caudal (caudodorsal) part"
-    ] = "Lateral septal nucleus, caudal (caudodorsal) part"
+    )
     acronym: Literal["LSc"] = "LSc"
     id: Literal["250"] = "250"
 
 
-class _Lsr(_BrainStructureModel):
+class _Lsr(BrainStructureModel):
     """Model LSr"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Lateral septal nucleus, rostral (rostroventral) part"] = (
         "Lateral septal nucleus, rostral (rostroventral) part"
-    ] = "Lateral septal nucleus, rostral (rostroventral) part"
+    )
     acronym: Literal["LSr"] = "LSr"
     id: Literal["258"] = "258"
 
 
-class _Lsv(_BrainStructureModel):
+class _Lsv(BrainStructureModel):
     """Model LSv"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2472,18 +2473,18 @@ class _Lsv(_BrainStructureModel):
     id: Literal["266"] = "266"
 
 
-class _Lt(_BrainStructureModel):
+class _Lt(BrainStructureModel):
     """Model LT"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Lateral terminal nucleus of the accessory optic tract"] = (
         "Lateral terminal nucleus of the accessory optic tract"
-    ] = "Lateral terminal nucleus of the accessory optic tract"
+    )
     acronym: Literal["LT"] = "LT"
     id: Literal["66"] = "66"
 
 
-class _Lav(_BrainStructureModel):
+class _Lav(BrainStructureModel):
     """Model LAV"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2492,7 +2493,7 @@ class _Lav(_BrainStructureModel):
     id: Literal["209"] = "209"
 
 
-class _Visl(_BrainStructureModel):
+class _Visl(BrainStructureModel):
     """Model VISl"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2501,7 +2502,7 @@ class _Visl(_BrainStructureModel):
     id: Literal["409"] = "409"
 
 
-class _Visl1(_BrainStructureModel):
+class _Visl1(BrainStructureModel):
     """Model VISl1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2510,7 +2511,7 @@ class _Visl1(_BrainStructureModel):
     id: Literal["421"] = "421"
 
 
-class _Visl2_3(_BrainStructureModel):
+class _Visl2_3(BrainStructureModel):
     """Model VISl2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2519,7 +2520,7 @@ class _Visl2_3(_BrainStructureModel):
     id: Literal["973"] = "973"
 
 
-class _Visl4(_BrainStructureModel):
+class _Visl4(BrainStructureModel):
     """Model VISl4"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2528,7 +2529,7 @@ class _Visl4(_BrainStructureModel):
     id: Literal["573"] = "573"
 
 
-class _Visl5(_BrainStructureModel):
+class _Visl5(BrainStructureModel):
     """Model VISl5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2537,7 +2538,7 @@ class _Visl5(_BrainStructureModel):
     id: Literal["613"] = "613"
 
 
-class _Visl6A(_BrainStructureModel):
+class _Visl6A(BrainStructureModel):
     """Model VISl6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2546,7 +2547,7 @@ class _Visl6A(_BrainStructureModel):
     id: Literal["74"] = "74"
 
 
-class _Visl6B(_BrainStructureModel):
+class _Visl6B(BrainStructureModel):
     """Model VISl6b"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2555,7 +2556,7 @@ class _Visl6B(_BrainStructureModel):
     id: Literal["121"] = "121"
 
 
-class _Ldt(_BrainStructureModel):
+class _Ldt(BrainStructureModel):
     """Model LDT"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2564,7 +2565,7 @@ class _Ldt(_BrainStructureModel):
     id: Literal["162"] = "162"
 
 
-class _Visli(_BrainStructureModel):
+class _Visli(BrainStructureModel):
     """Model VISli"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2573,7 +2574,7 @@ class _Visli(_BrainStructureModel):
     id: Literal["312782574"] = "312782574"
 
 
-class _Visli1(_BrainStructureModel):
+class _Visli1(BrainStructureModel):
     """Model VISli1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2582,7 +2583,7 @@ class _Visli1(_BrainStructureModel):
     id: Literal["312782578"] = "312782578"
 
 
-class _Visli2_3(_BrainStructureModel):
+class _Visli2_3(BrainStructureModel):
     """Model VISli2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2591,7 +2592,7 @@ class _Visli2_3(_BrainStructureModel):
     id: Literal["312782582"] = "312782582"
 
 
-class _Visli4(_BrainStructureModel):
+class _Visli4(BrainStructureModel):
     """Model VISli4"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2600,7 +2601,7 @@ class _Visli4(_BrainStructureModel):
     id: Literal["312782586"] = "312782586"
 
 
-class _Visli5(_BrainStructureModel):
+class _Visli5(BrainStructureModel):
     """Model VISli5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2609,7 +2610,7 @@ class _Visli5(_BrainStructureModel):
     id: Literal["312782590"] = "312782590"
 
 
-class _Visli6A(_BrainStructureModel):
+class _Visli6A(BrainStructureModel):
     """Model VISli6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2618,7 +2619,7 @@ class _Visli6A(_BrainStructureModel):
     id: Literal["312782594"] = "312782594"
 
 
-class _Visli6B(_BrainStructureModel):
+class _Visli6B(BrainStructureModel):
     """Model VISli6b"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2627,7 +2628,7 @@ class _Visli6B(_BrainStructureModel):
     id: Literal["312782598"] = "312782598"
 
 
-class _Lin(_BrainStructureModel):
+class _Lin(BrainStructureModel):
     """Model LIN"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2636,7 +2637,7 @@ class _Lin(_BrainStructureModel):
     id: Literal["203"] = "203"
 
 
-class _Ling(_BrainStructureModel):
+class _Ling(BrainStructureModel):
     """Model LING"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2645,7 +2646,7 @@ class _Ling(_BrainStructureModel):
     id: Literal["912"] = "912"
 
 
-class _Cent2(_BrainStructureModel):
+class _Cent2(BrainStructureModel):
     """Model CENT2"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2654,7 +2655,7 @@ class _Cent2(_BrainStructureModel):
     id: Literal["976"] = "976"
 
 
-class _Cent3(_BrainStructureModel):
+class _Cent3(BrainStructureModel):
     """Model CENT3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2663,7 +2664,7 @@ class _Cent3(_BrainStructureModel):
     id: Literal["984"] = "984"
 
 
-class _Cul4_5(_BrainStructureModel):
+class _Cul4_5(BrainStructureModel):
     """Model CUL4, 5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2672,7 +2673,7 @@ class _Cul4_5(_BrainStructureModel):
     id: Literal["1091"] = "1091"
 
 
-class _Lc(_BrainStructureModel):
+class _Lc(BrainStructureModel):
     """Model LC"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2681,7 +2682,7 @@ class _Lc(_BrainStructureModel):
     id: Literal["147"] = "147"
 
 
-class _Ma(_BrainStructureModel):
+class _Ma(BrainStructureModel):
     """Model MA"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2690,7 +2691,7 @@ class _Ma(_BrainStructureModel):
     id: Literal["298"] = "298"
 
 
-class _Marn(_BrainStructureModel):
+class _Marn(BrainStructureModel):
     """Model MARN"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2699,7 +2700,7 @@ class _Marn(_BrainStructureModel):
     id: Literal["307"] = "307"
 
 
-class _Mob(_BrainStructureModel):
+class _Mob(BrainStructureModel):
     """Model MOB"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2708,7 +2709,7 @@ class _Mob(_BrainStructureModel):
     id: Literal["507"] = "507"
 
 
-class _Mbo(_BrainStructureModel):
+class _Mbo(BrainStructureModel):
     """Model MBO"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2717,7 +2718,7 @@ class _Mbo(_BrainStructureModel):
     id: Literal["331"] = "331"
 
 
-class _Ma3(_BrainStructureModel):
+class _Ma3(BrainStructureModel):
     """Model MA3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2726,7 +2727,7 @@ class _Ma3(_BrainStructureModel):
     id: Literal["549009211"] = "549009211"
 
 
-class _Mea(_BrainStructureModel):
+class _Mea(BrainStructureModel):
     """Model MEA"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2735,7 +2736,7 @@ class _Mea(_BrainStructureModel):
     id: Literal["403"] = "403"
 
 
-class _Mg(_BrainStructureModel):
+class _Mg(BrainStructureModel):
     """Model MG"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2744,7 +2745,7 @@ class _Mg(_BrainStructureModel):
     id: Literal["475"] = "475"
 
 
-class _Mgd(_BrainStructureModel):
+class _Mgd(BrainStructureModel):
     """Model MGd"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2753,7 +2754,7 @@ class _Mgd(_BrainStructureModel):
     id: Literal["1072"] = "1072"
 
 
-class _Mgm(_BrainStructureModel):
+class _Mgm(BrainStructureModel):
     """Model MGm"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2762,7 +2763,7 @@ class _Mgm(_BrainStructureModel):
     id: Literal["1088"] = "1088"
 
 
-class _Mgv(_BrainStructureModel):
+class _Mgv(BrainStructureModel):
     """Model MGv"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2771,7 +2772,7 @@ class _Mgv(_BrainStructureModel):
     id: Literal["1079"] = "1079"
 
 
-class _Med(_BrainStructureModel):
+class _Med(BrainStructureModel):
     """Model MED"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2780,7 +2781,7 @@ class _Med(_BrainStructureModel):
     id: Literal["444"] = "444"
 
 
-class _Mh(_BrainStructureModel):
+class _Mh(BrainStructureModel):
     """Model MH"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2789,7 +2790,7 @@ class _Mh(_BrainStructureModel):
     id: Literal["483"] = "483"
 
 
-class _Mm(_BrainStructureModel):
+class _Mm(BrainStructureModel):
     """Model MM"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2798,7 +2799,7 @@ class _Mm(_BrainStructureModel):
     id: Literal["491"] = "491"
 
 
-class _Mmd(_BrainStructureModel):
+class _Mmd(BrainStructureModel):
     """Model MMd"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2807,7 +2808,7 @@ class _Mmd(_BrainStructureModel):
     id: Literal["606826659"] = "606826659"
 
 
-class _Mml(_BrainStructureModel):
+class _Mml(BrainStructureModel):
     """Model MMl"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2816,7 +2817,7 @@ class _Mml(_BrainStructureModel):
     id: Literal["606826647"] = "606826647"
 
 
-class _Mmm(_BrainStructureModel):
+class _Mmm(BrainStructureModel):
     """Model MMm"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2825,7 +2826,7 @@ class _Mmm(_BrainStructureModel):
     id: Literal["606826651"] = "606826651"
 
 
-class _Mmme(_BrainStructureModel):
+class _Mmme(BrainStructureModel):
     """Model MMme"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2834,7 +2835,7 @@ class _Mmme(_BrainStructureModel):
     id: Literal["732"] = "732"
 
 
-class _Mmp(_BrainStructureModel):
+class _Mmp(BrainStructureModel):
     """Model MMp"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2843,7 +2844,7 @@ class _Mmp(_BrainStructureModel):
     id: Literal["606826655"] = "606826655"
 
 
-class _Mpo(_BrainStructureModel):
+class _Mpo(BrainStructureModel):
     """Model MPO"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2852,7 +2853,7 @@ class _Mpo(_BrainStructureModel):
     id: Literal["523"] = "523"
 
 
-class _Mpn(_BrainStructureModel):
+class _Mpn(BrainStructureModel):
     """Model MPN"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2861,7 +2862,7 @@ class _Mpn(_BrainStructureModel):
     id: Literal["515"] = "515"
 
 
-class _Mpt(_BrainStructureModel):
+class _Mpt(BrainStructureModel):
     """Model MPT"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2870,7 +2871,7 @@ class _Mpt(_BrainStructureModel):
     id: Literal["531"] = "531"
 
 
-class _Msc(_BrainStructureModel):
+class _Msc(BrainStructureModel):
     """Model MSC"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2879,7 +2880,7 @@ class _Msc(_BrainStructureModel):
     id: Literal["904"] = "904"
 
 
-class _Ms(_BrainStructureModel):
+class _Ms(BrainStructureModel):
     """Model MS"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2888,18 +2889,18 @@ class _Ms(_BrainStructureModel):
     id: Literal["564"] = "564"
 
 
-class _Mt(_BrainStructureModel):
+class _Mt(BrainStructureModel):
     """Model MT"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Medial terminal nucleus of the accessory optic tract"] = (
         "Medial terminal nucleus of the accessory optic tract"
-    ] = "Medial terminal nucleus of the accessory optic tract"
+    )
     acronym: Literal["MT"] = "MT"
     id: Literal["58"] = "58"
 
 
-class _Mv(_BrainStructureModel):
+class _Mv(BrainStructureModel):
     """Model MV"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2908,7 +2909,7 @@ class _Mv(_BrainStructureModel):
     id: Literal["202"] = "202"
 
 
-class _Me(_BrainStructureModel):
+class _Me(BrainStructureModel):
     """Model ME"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2917,7 +2918,7 @@ class _Me(_BrainStructureModel):
     id: Literal["10671"] = "10671"
 
 
-class _Mepo(_BrainStructureModel):
+class _Mepo(BrainStructureModel):
     """Model MEPO"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2926,7 +2927,7 @@ class _Mepo(_BrainStructureModel):
     id: Literal["452"] = "452"
 
 
-class _Md(_BrainStructureModel):
+class _Md(BrainStructureModel):
     """Model MD"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2935,7 +2936,7 @@ class _Md(_BrainStructureModel):
     id: Literal["362"] = "362"
 
 
-class _My(_BrainStructureModel):
+class _My(BrainStructureModel):
     """Model MY"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2944,7 +2945,7 @@ class _My(_BrainStructureModel):
     id: Literal["354"] = "354"
 
 
-class _My_Sat(_BrainStructureModel):
+class _My_Sat(BrainStructureModel):
     """Model MY-sat"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2953,7 +2954,7 @@ class _My_Sat(_BrainStructureModel):
     id: Literal["379"] = "379"
 
 
-class _My_Mot(_BrainStructureModel):
+class _My_Mot(BrainStructureModel):
     """Model MY-mot"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2962,7 +2963,7 @@ class _My_Mot(_BrainStructureModel):
     id: Literal["370"] = "370"
 
 
-class _My_Sen(_BrainStructureModel):
+class _My_Sen(BrainStructureModel):
     """Model MY-sen"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2971,7 +2972,7 @@ class _My_Sen(_BrainStructureModel):
     id: Literal["386"] = "386"
 
 
-class _Mdrn(_BrainStructureModel):
+class _Mdrn(BrainStructureModel):
     """Model MDRN"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2980,7 +2981,7 @@ class _Mdrn(_BrainStructureModel):
     id: Literal["395"] = "395"
 
 
-class _Mdrnd(_BrainStructureModel):
+class _Mdrnd(BrainStructureModel):
     """Model MDRNd"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2989,7 +2990,7 @@ class _Mdrnd(_BrainStructureModel):
     id: Literal["1098"] = "1098"
 
 
-class _Mdrnv(_BrainStructureModel):
+class _Mdrnv(BrainStructureModel):
     """Model MDRNv"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -2998,7 +2999,7 @@ class _Mdrnv(_BrainStructureModel):
     id: Literal["1107"] = "1107"
 
 
-class _Mb(_BrainStructureModel):
+class _Mb(BrainStructureModel):
     """Model MB"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3007,7 +3008,7 @@ class _Mb(_BrainStructureModel):
     id: Literal["313"] = "313"
 
 
-class _Ramb(_BrainStructureModel):
+class _Ramb(BrainStructureModel):
     """Model RAmb"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3016,7 +3017,7 @@ class _Ramb(_BrainStructureModel):
     id: Literal["165"] = "165"
 
 
-class _Mrn(_BrainStructureModel):
+class _Mrn(BrainStructureModel):
     """Model MRN"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3025,7 +3026,7 @@ class _Mrn(_BrainStructureModel):
     id: Literal["128"] = "128"
 
 
-class _Rr(_BrainStructureModel):
+class _Rr(BrainStructureModel):
     """Model RR"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3034,7 +3035,7 @@ class _Rr(_BrainStructureModel):
     id: Literal["246"] = "246"
 
 
-class _Mev(_BrainStructureModel):
+class _Mev(BrainStructureModel):
     """Model MEV"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3043,7 +3044,7 @@ class _Mev(_BrainStructureModel):
     id: Literal["460"] = "460"
 
 
-class _Mbsta(_BrainStructureModel):
+class _Mbsta(BrainStructureModel):
     """Model MBsta"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3052,7 +3053,7 @@ class _Mbsta(_BrainStructureModel):
     id: Literal["348"] = "348"
 
 
-class _Mbmot(_BrainStructureModel):
+class _Mbmot(BrainStructureModel):
     """Model MBmot"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3061,7 +3062,7 @@ class _Mbmot(_BrainStructureModel):
     id: Literal["323"] = "323"
 
 
-class _Mbsen(_BrainStructureModel):
+class _Mbsen(BrainStructureModel):
     """Model MBsen"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3070,7 +3071,7 @@ class _Mbsen(_BrainStructureModel):
     id: Literal["339"] = "339"
 
 
-class _Mtn(_BrainStructureModel):
+class _Mtn(BrainStructureModel):
     """Model MTN"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3079,7 +3080,7 @@ class _Mtn(_BrainStructureModel):
     id: Literal["571"] = "571"
 
 
-class _V(_BrainStructureModel):
+class _V(BrainStructureModel):
     """Model V"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3088,7 +3089,7 @@ class _V(_BrainStructureModel):
     id: Literal["621"] = "621"
 
 
-class _Nod(_BrainStructureModel):
+class _Nod(BrainStructureModel):
     """Model NOD"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3097,7 +3098,7 @@ class _Nod(_BrainStructureModel):
     id: Literal["968"] = "968"
 
 
-class _Acb(_BrainStructureModel):
+class _Acb(BrainStructureModel):
     """Model ACB"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3106,7 +3107,7 @@ class _Acb(_BrainStructureModel):
     id: Literal["56"] = "56"
 
 
-class _Amb(_BrainStructureModel):
+class _Amb(BrainStructureModel):
     """Model AMB"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3115,7 +3116,7 @@ class _Amb(_BrainStructureModel):
     id: Literal["135"] = "135"
 
 
-class _Ambd(_BrainStructureModel):
+class _Ambd(BrainStructureModel):
     """Model AMBd"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3124,7 +3125,7 @@ class _Ambd(_BrainStructureModel):
     id: Literal["939"] = "939"
 
 
-class _Ambv(_BrainStructureModel):
+class _Ambv(BrainStructureModel):
     """Model AMBv"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3133,7 +3134,7 @@ class _Ambv(_BrainStructureModel):
     id: Literal["143"] = "143"
 
 
-class _Ni(_BrainStructureModel):
+class _Ni(BrainStructureModel):
     """Model NI"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3142,7 +3143,7 @@ class _Ni(_BrainStructureModel):
     id: Literal["604"] = "604"
 
 
-class _Nd(_BrainStructureModel):
+class _Nd(BrainStructureModel):
     """Model ND"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3151,7 +3152,7 @@ class _Nd(_BrainStructureModel):
     id: Literal["587"] = "587"
 
 
-class _Nr(_BrainStructureModel):
+class _Nr(BrainStructureModel):
     """Model NR"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3160,7 +3161,7 @@ class _Nr(_BrainStructureModel):
     id: Literal["177"] = "177"
 
 
-class _Re(_BrainStructureModel):
+class _Re(BrainStructureModel):
     """Model RE"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3169,18 +3170,18 @@ class _Re(_BrainStructureModel):
     id: Literal["181"] = "181"
 
 
-class _Nb(_BrainStructureModel):
+class _Nb(BrainStructureModel):
     """Model NB"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Nucleus of the brachium of the inferior colliculus"] = (
         "Nucleus of the brachium of the inferior colliculus"
-    ] = "Nucleus of the brachium of the inferior colliculus"
+    )
     acronym: Literal["NB"] = "NB"
     id: Literal["580"] = "580"
 
 
-class _Nll(_BrainStructureModel):
+class _Nll(BrainStructureModel):
     """Model NLL"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3189,7 +3190,7 @@ class _Nll(_BrainStructureModel):
     id: Literal["612"] = "612"
 
 
-class _Nlot(_BrainStructureModel):
+class _Nlot(BrainStructureModel):
     """Model NLOT"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3198,7 +3199,7 @@ class _Nlot(_BrainStructureModel):
     id: Literal["619"] = "619"
 
 
-class _Nlot3(_BrainStructureModel):
+class _Nlot3(BrainStructureModel):
     """Model NLOT3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3207,29 +3208,29 @@ class _Nlot3(_BrainStructureModel):
     id: Literal["1139"] = "1139"
 
 
-class _Nlot1(_BrainStructureModel):
+class _Nlot1(BrainStructureModel):
     """Model NLOT1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Nucleus of the lateral olfactory tract, molecular layer"] = (
         "Nucleus of the lateral olfactory tract, molecular layer"
-    ] = "Nucleus of the lateral olfactory tract, molecular layer"
+    )
     acronym: Literal["NLOT1"] = "NLOT1"
     id: Literal["260"] = "260"
 
 
-class _Nlot2(_BrainStructureModel):
+class _Nlot2(BrainStructureModel):
     """Model NLOT2"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Nucleus of the lateral olfactory tract, pyramidal layer"] = (
         "Nucleus of the lateral olfactory tract, pyramidal layer"
-    ] = "Nucleus of the lateral olfactory tract, pyramidal layer"
+    )
     acronym: Literal["NLOT2"] = "NLOT2"
     id: Literal["268"] = "268"
 
 
-class _Not(_BrainStructureModel):
+class _Not(BrainStructureModel):
     """Model NOT"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3238,7 +3239,7 @@ class _Not(_BrainStructureModel):
     id: Literal["628"] = "628"
 
 
-class _Npc(_BrainStructureModel):
+class _Npc(BrainStructureModel):
     """Model NPC"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3247,7 +3248,7 @@ class _Npc(_BrainStructureModel):
     id: Literal["634"] = "634"
 
 
-class _Nts(_BrainStructureModel):
+class _Nts(BrainStructureModel):
     """Model NTS"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3256,7 +3257,7 @@ class _Nts(_BrainStructureModel):
     id: Literal["651"] = "651"
 
 
-class _Ntb(_BrainStructureModel):
+class _Ntb(BrainStructureModel):
     """Model NTB"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3265,7 +3266,7 @@ class _Ntb(_BrainStructureModel):
     id: Literal["642"] = "642"
 
 
-class _Prp(_BrainStructureModel):
+class _Prp(BrainStructureModel):
     """Model PRP"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3274,7 +3275,7 @@ class _Prp(_BrainStructureModel):
     id: Literal["169"] = "169"
 
 
-class _Rm(_BrainStructureModel):
+class _Rm(BrainStructureModel):
     """Model RM"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3283,7 +3284,7 @@ class _Rm(_BrainStructureModel):
     id: Literal["206"] = "206"
 
 
-class _Ro(_BrainStructureModel):
+class _Ro(BrainStructureModel):
     """Model RO"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3292,7 +3293,7 @@ class _Ro(_BrainStructureModel):
     id: Literal["222"] = "222"
 
 
-class _Rpa(_BrainStructureModel):
+class _Rpa(BrainStructureModel):
     """Model RPA"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3301,7 +3302,7 @@ class _Rpa(_BrainStructureModel):
     id: Literal["230"] = "230"
 
 
-class _Rpo(_BrainStructureModel):
+class _Rpo(BrainStructureModel):
     """Model RPO"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3310,7 +3311,7 @@ class _Rpo(_BrainStructureModel):
     id: Literal["238"] = "238"
 
 
-class _Sag(_BrainStructureModel):
+class _Sag(BrainStructureModel):
     """Model SAG"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3319,7 +3320,7 @@ class _Sag(_BrainStructureModel):
     id: Literal["271"] = "271"
 
 
-class _X(_BrainStructureModel):
+class _X(BrainStructureModel):
     """Model x"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3328,7 +3329,7 @@ class _X(_BrainStructureModel):
     id: Literal["765"] = "765"
 
 
-class _Y(_BrainStructureModel):
+class _Y(BrainStructureModel):
     """Model y"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3337,7 +3338,7 @@ class _Y(_BrainStructureModel):
     id: Literal["781"] = "781"
 
 
-class _Iii(_BrainStructureModel):
+class _Iii(BrainStructureModel):
     """Model III"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3346,7 +3347,7 @@ class _Iii(_BrainStructureModel):
     id: Literal["35"] = "35"
 
 
-class _Olf(_BrainStructureModel):
+class _Olf(BrainStructureModel):
     """Model OLF"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3355,7 +3356,7 @@ class _Olf(_BrainStructureModel):
     id: Literal["698"] = "698"
 
 
-class _Ot(_BrainStructureModel):
+class _Ot(BrainStructureModel):
     """Model OT"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3364,7 +3365,7 @@ class _Ot(_BrainStructureModel):
     id: Literal["754"] = "754"
 
 
-class _Op(_BrainStructureModel):
+class _Op(BrainStructureModel):
     """Model OP"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3373,7 +3374,7 @@ class _Op(_BrainStructureModel):
     id: Literal["706"] = "706"
 
 
-class _Orb(_BrainStructureModel):
+class _Orb(BrainStructureModel):
     """Model ORB"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3382,7 +3383,7 @@ class _Orb(_BrainStructureModel):
     id: Literal["714"] = "714"
 
 
-class _Orbl(_BrainStructureModel):
+class _Orbl(BrainStructureModel):
     """Model ORBl"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3391,7 +3392,7 @@ class _Orbl(_BrainStructureModel):
     id: Literal["723"] = "723"
 
 
-class _Orbl1(_BrainStructureModel):
+class _Orbl1(BrainStructureModel):
     """Model ORBl1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3400,7 +3401,7 @@ class _Orbl1(_BrainStructureModel):
     id: Literal["448"] = "448"
 
 
-class _Orbl2_3(_BrainStructureModel):
+class _Orbl2_3(BrainStructureModel):
     """Model ORBl2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3409,7 +3410,7 @@ class _Orbl2_3(_BrainStructureModel):
     id: Literal["412"] = "412"
 
 
-class _Orbl5(_BrainStructureModel):
+class _Orbl5(BrainStructureModel):
     """Model ORBl5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3418,7 +3419,7 @@ class _Orbl5(_BrainStructureModel):
     id: Literal["630"] = "630"
 
 
-class _Orbl6A(_BrainStructureModel):
+class _Orbl6A(BrainStructureModel):
     """Model ORBl6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3427,7 +3428,7 @@ class _Orbl6A(_BrainStructureModel):
     id: Literal["440"] = "440"
 
 
-class _Orbl6B(_BrainStructureModel):
+class _Orbl6B(BrainStructureModel):
     """Model ORBl6b"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3436,7 +3437,7 @@ class _Orbl6B(_BrainStructureModel):
     id: Literal["488"] = "488"
 
 
-class _Orbm(_BrainStructureModel):
+class _Orbm(BrainStructureModel):
     """Model ORBm"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3445,7 +3446,7 @@ class _Orbm(_BrainStructureModel):
     id: Literal["731"] = "731"
 
 
-class _Orbm1(_BrainStructureModel):
+class _Orbm1(BrainStructureModel):
     """Model ORBm1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3454,7 +3455,7 @@ class _Orbm1(_BrainStructureModel):
     id: Literal["484"] = "484"
 
 
-class _Orbm2_3(_BrainStructureModel):
+class _Orbm2_3(BrainStructureModel):
     """Model ORBm2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3463,7 +3464,7 @@ class _Orbm2_3(_BrainStructureModel):
     id: Literal["582"] = "582"
 
 
-class _Orbm5(_BrainStructureModel):
+class _Orbm5(BrainStructureModel):
     """Model ORBm5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3472,7 +3473,7 @@ class _Orbm5(_BrainStructureModel):
     id: Literal["620"] = "620"
 
 
-class _Orbm6A(_BrainStructureModel):
+class _Orbm6A(BrainStructureModel):
     """Model ORBm6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3481,7 +3482,7 @@ class _Orbm6A(_BrainStructureModel):
     id: Literal["910"] = "910"
 
 
-class _Orbm6B(_BrainStructureModel):
+class _Orbm6B(BrainStructureModel):
     """Model ORBm6b"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3490,7 +3491,7 @@ class _Orbm6B(_BrainStructureModel):
     id: Literal["527696977"] = "527696977"
 
 
-class _Orbvl(_BrainStructureModel):
+class _Orbvl(BrainStructureModel):
     """Model ORBvl"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3499,7 +3500,7 @@ class _Orbvl(_BrainStructureModel):
     id: Literal["746"] = "746"
 
 
-class _Orbvl1(_BrainStructureModel):
+class _Orbvl1(BrainStructureModel):
     """Model ORBvl1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3508,7 +3509,7 @@ class _Orbvl1(_BrainStructureModel):
     id: Literal["969"] = "969"
 
 
-class _Orbvl2_3(_BrainStructureModel):
+class _Orbvl2_3(BrainStructureModel):
     """Model ORBvl2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3517,7 +3518,7 @@ class _Orbvl2_3(_BrainStructureModel):
     id: Literal["288"] = "288"
 
 
-class _Orbvl5(_BrainStructureModel):
+class _Orbvl5(BrainStructureModel):
     """Model ORBvl5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3526,7 +3527,7 @@ class _Orbvl5(_BrainStructureModel):
     id: Literal["1125"] = "1125"
 
 
-class _Orbvl6A(_BrainStructureModel):
+class _Orbvl6A(BrainStructureModel):
     """Model ORBvl6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3535,7 +3536,7 @@ class _Orbvl6A(_BrainStructureModel):
     id: Literal["608"] = "608"
 
 
-class _Orbvl6B(_BrainStructureModel):
+class _Orbvl6B(BrainStructureModel):
     """Model ORBvl6b"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3544,7 +3545,7 @@ class _Orbvl6B(_BrainStructureModel):
     id: Literal["680"] = "680"
 
 
-class _Pal(_BrainStructureModel):
+class _Pal(BrainStructureModel):
     """Model PAL"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3553,7 +3554,7 @@ class _Pal(_BrainStructureModel):
     id: Literal["803"] = "803"
 
 
-class _Palc(_BrainStructureModel):
+class _Palc(BrainStructureModel):
     """Model PALc"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3562,7 +3563,7 @@ class _Palc(_BrainStructureModel):
     id: Literal["809"] = "809"
 
 
-class _Pald(_BrainStructureModel):
+class _Pald(BrainStructureModel):
     """Model PALd"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3571,7 +3572,7 @@ class _Pald(_BrainStructureModel):
     id: Literal["818"] = "818"
 
 
-class _Palm(_BrainStructureModel):
+class _Palm(BrainStructureModel):
     """Model PALm"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3580,7 +3581,7 @@ class _Palm(_BrainStructureModel):
     id: Literal["826"] = "826"
 
 
-class _Palv(_BrainStructureModel):
+class _Palv(BrainStructureModel):
     """Model PALv"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3589,7 +3590,7 @@ class _Palv(_BrainStructureModel):
     id: Literal["835"] = "835"
 
 
-class _Pbg(_BrainStructureModel):
+class _Pbg(BrainStructureModel):
     """Model PBG"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3598,7 +3599,7 @@ class _Pbg(_BrainStructureModel):
     id: Literal["874"] = "874"
 
 
-class _Pb(_BrainStructureModel):
+class _Pb(BrainStructureModel):
     """Model PB"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3607,7 +3608,7 @@ class _Pb(_BrainStructureModel):
     id: Literal["867"] = "867"
 
 
-class _Pcn(_BrainStructureModel):
+class _Pcn(BrainStructureModel):
     """Model PCN"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3616,7 +3617,7 @@ class _Pcn(_BrainStructureModel):
     id: Literal["907"] = "907"
 
 
-class _Pf(_BrainStructureModel):
+class _Pf(BrainStructureModel):
     """Model PF"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3625,7 +3626,7 @@ class _Pf(_BrainStructureModel):
     id: Literal["930"] = "930"
 
 
-class _Pfl(_BrainStructureModel):
+class _Pfl(BrainStructureModel):
     """Model PFL"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3634,7 +3635,7 @@ class _Pfl(_BrainStructureModel):
     id: Literal["1041"] = "1041"
 
 
-class _Pgrn(_BrainStructureModel):
+class _Pgrn(BrainStructureModel):
     """Model PGRN"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3643,29 +3644,29 @@ class _Pgrn(_BrainStructureModel):
     id: Literal["938"] = "938"
 
 
-class _Pgrnd(_BrainStructureModel):
+class _Pgrnd(BrainStructureModel):
     """Model PGRNd"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Paragigantocellular reticular nucleus, dorsal part"] = (
         "Paragigantocellular reticular nucleus, dorsal part"
-    ] = "Paragigantocellular reticular nucleus, dorsal part"
+    )
     acronym: Literal["PGRNd"] = "PGRNd"
     id: Literal["970"] = "970"
 
 
-class _Pgrnl(_BrainStructureModel):
+class _Pgrnl(BrainStructureModel):
     """Model PGRNl"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Paragigantocellular reticular nucleus, lateral part"] = (
         "Paragigantocellular reticular nucleus, lateral part"
-    ] = "Paragigantocellular reticular nucleus, lateral part"
+    )
     acronym: Literal["PGRNl"] = "PGRNl"
     id: Literal["978"] = "978"
 
 
-class _Prm(_BrainStructureModel):
+class _Prm(BrainStructureModel):
     """Model PRM"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3674,7 +3675,7 @@ class _Prm(_BrainStructureModel):
     id: Literal["1025"] = "1025"
 
 
-class _Pn(_BrainStructureModel):
+class _Pn(BrainStructureModel):
     """Model PN"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3683,7 +3684,7 @@ class _Pn(_BrainStructureModel):
     id: Literal["607344830"] = "607344830"
 
 
-class _Ppy(_BrainStructureModel):
+class _Ppy(BrainStructureModel):
     """Model PPY"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3692,7 +3693,7 @@ class _Ppy(_BrainStructureModel):
     id: Literal["1069"] = "1069"
 
 
-class _Pas(_BrainStructureModel):
+class _Pas(BrainStructureModel):
     """Model PAS"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3701,7 +3702,7 @@ class _Pas(_BrainStructureModel):
     id: Literal["859"] = "859"
 
 
-class _Ps(_BrainStructureModel):
+class _Ps(BrainStructureModel):
     """Model PS"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3710,7 +3711,7 @@ class _Ps(_BrainStructureModel):
     id: Literal["1109"] = "1109"
 
 
-class _Par(_BrainStructureModel):
+class _Par(BrainStructureModel):
     """Model PAR"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3719,7 +3720,7 @@ class _Par(_BrainStructureModel):
     id: Literal["843"] = "843"
 
 
-class _Pstn(_BrainStructureModel):
+class _Pstn(BrainStructureModel):
     """Model PSTN"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3728,7 +3729,7 @@ class _Pstn(_BrainStructureModel):
     id: Literal["364"] = "364"
 
 
-class _Pt(_BrainStructureModel):
+class _Pt(BrainStructureModel):
     """Model PT"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3737,7 +3738,7 @@ class _Pt(_BrainStructureModel):
     id: Literal["15"] = "15"
 
 
-class _Pa5(_BrainStructureModel):
+class _Pa5(BrainStructureModel):
     """Model Pa5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3746,7 +3747,7 @@ class _Pa5(_BrainStructureModel):
     id: Literal["589508451"] = "589508451"
 
 
-class _Pa4(_BrainStructureModel):
+class _Pa4(BrainStructureModel):
     """Model Pa4"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3755,7 +3756,7 @@ class _Pa4(_BrainStructureModel):
     id: Literal["606826663"] = "606826663"
 
 
-class _Pvh(_BrainStructureModel):
+class _Pvh(BrainStructureModel):
     """Model PVH"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3764,18 +3765,18 @@ class _Pvh(_BrainStructureModel):
     id: Literal["38"] = "38"
 
 
-class _Pvhd(_BrainStructureModel):
+class _Pvhd(BrainStructureModel):
     """Model PVHd"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Paraventricular hypothalamic nucleus, descending division"] = (
         "Paraventricular hypothalamic nucleus, descending division"
-    ] = "Paraventricular hypothalamic nucleus, descending division"
+    )
     acronym: Literal["PVHd"] = "PVHd"
     id: Literal["63"] = "63"
 
 
-class _Pvt(_BrainStructureModel):
+class _Pvt(BrainStructureModel):
     """Model PVT"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3784,7 +3785,7 @@ class _Pvt(_BrainStructureModel):
     id: Literal["149"] = "149"
 
 
-class _Pc5(_BrainStructureModel):
+class _Pc5(BrainStructureModel):
     """Model PC5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3793,7 +3794,7 @@ class _Pc5(_BrainStructureModel):
     id: Literal["549009223"] = "549009223"
 
 
-class _Parn(_BrainStructureModel):
+class _Parn(BrainStructureModel):
     """Model PARN"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3802,7 +3803,7 @@ class _Parn(_BrainStructureModel):
     id: Literal["852"] = "852"
 
 
-class _Ppn(_BrainStructureModel):
+class _Ppn(BrainStructureModel):
     """Model PPN"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3811,7 +3812,7 @@ class _Ppn(_BrainStructureModel):
     id: Literal["1052"] = "1052"
 
 
-class _Pag(_BrainStructureModel):
+class _Pag(BrainStructureModel):
     """Model PAG"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3820,7 +3821,7 @@ class _Pag(_BrainStructureModel):
     id: Literal["795"] = "795"
 
 
-class _Pef(_BrainStructureModel):
+class _Pef(BrainStructureModel):
     """Model PeF"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3829,7 +3830,7 @@ class _Pef(_BrainStructureModel):
     id: Literal["576073704"] = "576073704"
 
 
-class _Phy(_BrainStructureModel):
+class _Phy(BrainStructureModel):
     """Model PHY"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3838,7 +3839,7 @@ class _Phy(_BrainStructureModel):
     id: Literal["154"] = "154"
 
 
-class _Pp(_BrainStructureModel):
+class _Pp(BrainStructureModel):
     """Model PP"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3847,7 +3848,7 @@ class _Pp(_BrainStructureModel):
     id: Literal["1044"] = "1044"
 
 
-class _Pr(_BrainStructureModel):
+class _Pr(BrainStructureModel):
     """Model PR"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3856,7 +3857,7 @@ class _Pr(_BrainStructureModel):
     id: Literal["1077"] = "1077"
 
 
-class _Peri(_BrainStructureModel):
+class _Peri(BrainStructureModel):
     """Model PERI"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3865,7 +3866,7 @@ class _Peri(_BrainStructureModel):
     id: Literal["922"] = "922"
 
 
-class _Peri1(_BrainStructureModel):
+class _Peri1(BrainStructureModel):
     """Model PERI1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3874,7 +3875,7 @@ class _Peri1(_BrainStructureModel):
     id: Literal["540"] = "540"
 
 
-class _Peri2_3(_BrainStructureModel):
+class _Peri2_3(BrainStructureModel):
     """Model PERI2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3883,7 +3884,7 @@ class _Peri2_3(_BrainStructureModel):
     id: Literal["888"] = "888"
 
 
-class _Peri5(_BrainStructureModel):
+class _Peri5(BrainStructureModel):
     """Model PERI5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3892,7 +3893,7 @@ class _Peri5(_BrainStructureModel):
     id: Literal["692"] = "692"
 
 
-class _Peri6A(_BrainStructureModel):
+class _Peri6A(BrainStructureModel):
     """Model PERI6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3901,7 +3902,7 @@ class _Peri6A(_BrainStructureModel):
     id: Literal["335"] = "335"
 
 
-class _Peri6B(_BrainStructureModel):
+class _Peri6B(BrainStructureModel):
     """Model PERI6b"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3910,7 +3911,7 @@ class _Peri6B(_BrainStructureModel):
     id: Literal["368"] = "368"
 
 
-class _P5(_BrainStructureModel):
+class _P5(BrainStructureModel):
     """Model P5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3919,51 +3920,51 @@ class _P5(_BrainStructureModel):
     id: Literal["549009215"] = "549009215"
 
 
-class _Pva(_BrainStructureModel):
+class _Pva(BrainStructureModel):
     """Model PVa"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Periventricular hypothalamic nucleus, anterior part"] = (
         "Periventricular hypothalamic nucleus, anterior part"
-    ] = "Periventricular hypothalamic nucleus, anterior part"
+    )
     acronym: Literal["PVa"] = "PVa"
     id: Literal["30"] = "30"
 
 
-class _Pvi(_BrainStructureModel):
+class _Pvi(BrainStructureModel):
     """Model PVi"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Periventricular hypothalamic nucleus, intermediate part"] = (
         "Periventricular hypothalamic nucleus, intermediate part"
-    ] = "Periventricular hypothalamic nucleus, intermediate part"
+    )
     acronym: Literal["PVi"] = "PVi"
     id: Literal["118"] = "118"
 
 
-class _Pvp(_BrainStructureModel):
+class _Pvp(BrainStructureModel):
     """Model PVp"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Periventricular hypothalamic nucleus, posterior part"] = (
         "Periventricular hypothalamic nucleus, posterior part"
-    ] = "Periventricular hypothalamic nucleus, posterior part"
+    )
     acronym: Literal["PVp"] = "PVp"
     id: Literal["126"] = "126"
 
 
-class _Pvpo(_BrainStructureModel):
+class _Pvpo(BrainStructureModel):
     """Model PVpo"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Periventricular hypothalamic nucleus, preoptic part"] = (
         "Periventricular hypothalamic nucleus, preoptic part"
-    ] = "Periventricular hypothalamic nucleus, preoptic part"
+    )
     acronym: Literal["PVpo"] = "PVpo"
     id: Literal["133"] = "133"
 
 
-class _Pvr(_BrainStructureModel):
+class _Pvr(BrainStructureModel):
     """Model PVR"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3972,7 +3973,7 @@ class _Pvr(_BrainStructureModel):
     id: Literal["141"] = "141"
 
 
-class _Pvz(_BrainStructureModel):
+class _Pvz(BrainStructureModel):
     """Model PVZ"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3981,7 +3982,7 @@ class _Pvz(_BrainStructureModel):
     id: Literal["157"] = "157"
 
 
-class _Pir(_BrainStructureModel):
+class _Pir(BrainStructureModel):
     """Model PIR"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3990,7 +3991,7 @@ class _Pir(_BrainStructureModel):
     id: Literal["961"] = "961"
 
 
-class _Paa(_BrainStructureModel):
+class _Paa(BrainStructureModel):
     """Model PAA"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -3999,7 +4000,7 @@ class _Paa(_BrainStructureModel):
     id: Literal["788"] = "788"
 
 
-class _P(_BrainStructureModel):
+class _P(BrainStructureModel):
     """Model P"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4008,7 +4009,7 @@ class _P(_BrainStructureModel):
     id: Literal["771"] = "771"
 
 
-class _P_Sat(_BrainStructureModel):
+class _P_Sat(BrainStructureModel):
     """Model P-sat"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4017,7 +4018,7 @@ class _P_Sat(_BrainStructureModel):
     id: Literal["1117"] = "1117"
 
 
-class _P_Mot(_BrainStructureModel):
+class _P_Mot(BrainStructureModel):
     """Model P-mot"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4026,7 +4027,7 @@ class _P_Mot(_BrainStructureModel):
     id: Literal["987"] = "987"
 
 
-class _P_Sen(_BrainStructureModel):
+class _P_Sen(BrainStructureModel):
     """Model P-sen"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4035,7 +4036,7 @@ class _P_Sen(_BrainStructureModel):
     id: Literal["1132"] = "1132"
 
 
-class _Pcg(_BrainStructureModel):
+class _Pcg(BrainStructureModel):
     """Model PCG"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4044,7 +4045,7 @@ class _Pcg(_BrainStructureModel):
     id: Literal["898"] = "898"
 
 
-class _Pg(_BrainStructureModel):
+class _Pg(BrainStructureModel):
     """Model PG"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4053,7 +4054,7 @@ class _Pg(_BrainStructureModel):
     id: Literal["931"] = "931"
 
 
-class _Prnr(_BrainStructureModel):
+class _Prnr(BrainStructureModel):
     """Model PRNr"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4062,7 +4063,7 @@ class _Prnr(_BrainStructureModel):
     id: Literal["146"] = "146"
 
 
-class _Prnc(_BrainStructureModel):
+class _Prnc(BrainStructureModel):
     """Model PRNc"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4071,7 +4072,7 @@ class _Prnc(_BrainStructureModel):
     id: Literal["1093"] = "1093"
 
 
-class _Pa(_BrainStructureModel):
+class _Pa(BrainStructureModel):
     """Model PA"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4080,7 +4081,7 @@ class _Pa(_BrainStructureModel):
     id: Literal["780"] = "780"
 
 
-class _Audpo(_BrainStructureModel):
+class _Audpo(BrainStructureModel):
     """Model AUDpo"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4089,7 +4090,7 @@ class _Audpo(_BrainStructureModel):
     id: Literal["1027"] = "1027"
 
 
-class _Audpo1(_BrainStructureModel):
+class _Audpo1(BrainStructureModel):
     """Model AUDpo1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4098,7 +4099,7 @@ class _Audpo1(_BrainStructureModel):
     id: Literal["696"] = "696"
 
 
-class _Audpo2_3(_BrainStructureModel):
+class _Audpo2_3(BrainStructureModel):
     """Model AUDpo2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4107,7 +4108,7 @@ class _Audpo2_3(_BrainStructureModel):
     id: Literal["643"] = "643"
 
 
-class _Audpo4(_BrainStructureModel):
+class _Audpo4(BrainStructureModel):
     """Model AUDpo4"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4116,7 +4117,7 @@ class _Audpo4(_BrainStructureModel):
     id: Literal["759"] = "759"
 
 
-class _Audpo5(_BrainStructureModel):
+class _Audpo5(BrainStructureModel):
     """Model AUDpo5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4125,7 +4126,7 @@ class _Audpo5(_BrainStructureModel):
     id: Literal["791"] = "791"
 
 
-class _Audpo6A(_BrainStructureModel):
+class _Audpo6A(BrainStructureModel):
     """Model AUDpo6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4134,7 +4135,7 @@ class _Audpo6A(_BrainStructureModel):
     id: Literal["249"] = "249"
 
 
-class _Audpo6B(_BrainStructureModel):
+class _Audpo6B(BrainStructureModel):
     """Model AUDpo6b"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4143,7 +4144,7 @@ class _Audpo6B(_BrainStructureModel):
     id: Literal["456"] = "456"
 
 
-class _Po(_BrainStructureModel):
+class _Po(BrainStructureModel):
     """Model PO"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4152,7 +4153,7 @@ class _Po(_BrainStructureModel):
     id: Literal["1020"] = "1020"
 
 
-class _Ph(_BrainStructureModel):
+class _Ph(BrainStructureModel):
     """Model PH"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4161,7 +4162,7 @@ class _Ph(_BrainStructureModel):
     id: Literal["946"] = "946"
 
 
-class _Pil(_BrainStructureModel):
+class _Pil(BrainStructureModel):
     """Model PIL"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4170,7 +4171,7 @@ class _Pil(_BrainStructureModel):
     id: Literal["560581563"] = "560581563"
 
 
-class _Pol(_BrainStructureModel):
+class _Pol(BrainStructureModel):
     """Model POL"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4179,7 +4180,7 @@ class _Pol(_BrainStructureModel):
     id: Literal["1029"] = "1029"
 
 
-class _Ptlp(_BrainStructureModel):
+class _Ptlp(BrainStructureModel):
     """Model PTLp"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4188,7 +4189,7 @@ class _Ptlp(_BrainStructureModel):
     id: Literal["22"] = "22"
 
 
-class _Ppt(_BrainStructureModel):
+class _Ppt(BrainStructureModel):
     """Model PPT"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4197,7 +4198,7 @@ class _Ppt(_BrainStructureModel):
     id: Literal["1061"] = "1061"
 
 
-class _Pot(_BrainStructureModel):
+class _Pot(BrainStructureModel):
     """Model PoT"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4206,7 +4207,7 @@ class _Pot(_BrainStructureModel):
     id: Literal["563807435"] = "563807435"
 
 
-class _Pd(_BrainStructureModel):
+class _Pd(BrainStructureModel):
     """Model PD"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4215,7 +4216,7 @@ class _Pd(_BrainStructureModel):
     id: Literal["914"] = "914"
 
 
-class _Pdtg(_BrainStructureModel):
+class _Pdtg(BrainStructureModel):
     """Model PDTg"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4224,7 +4225,7 @@ class _Pdtg(_BrainStructureModel):
     id: Literal["599626927"] = "599626927"
 
 
-class _Vispl(_BrainStructureModel):
+class _Vispl(BrainStructureModel):
     """Model VISpl"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4233,7 +4234,7 @@ class _Vispl(_BrainStructureModel):
     id: Literal["425"] = "425"
 
 
-class _Vispl1(_BrainStructureModel):
+class _Vispl1(BrainStructureModel):
     """Model VISpl1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4242,7 +4243,7 @@ class _Vispl1(_BrainStructureModel):
     id: Literal["750"] = "750"
 
 
-class _Vispl2_3(_BrainStructureModel):
+class _Vispl2_3(BrainStructureModel):
     """Model VISpl2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4251,7 +4252,7 @@ class _Vispl2_3(_BrainStructureModel):
     id: Literal["269"] = "269"
 
 
-class _Vispl4(_BrainStructureModel):
+class _Vispl4(BrainStructureModel):
     """Model VISpl4"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4260,7 +4261,7 @@ class _Vispl4(_BrainStructureModel):
     id: Literal["869"] = "869"
 
 
-class _Vispl5(_BrainStructureModel):
+class _Vispl5(BrainStructureModel):
     """Model VISpl5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4269,7 +4270,7 @@ class _Vispl5(_BrainStructureModel):
     id: Literal["902"] = "902"
 
 
-class _Vispl6A(_BrainStructureModel):
+class _Vispl6A(BrainStructureModel):
     """Model VISpl6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4278,7 +4279,7 @@ class _Vispl6A(_BrainStructureModel):
     id: Literal["377"] = "377"
 
 
-class _Vispl6B(_BrainStructureModel):
+class _Vispl6B(BrainStructureModel):
     """Model VISpl6b"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4287,7 +4288,7 @@ class _Vispl6B(_BrainStructureModel):
     id: Literal["393"] = "393"
 
 
-class _Tr(_BrainStructureModel):
+class _Tr(BrainStructureModel):
     """Model TR"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4296,7 +4297,7 @@ class _Tr(_BrainStructureModel):
     id: Literal["566"] = "566"
 
 
-class _Vispor(_BrainStructureModel):
+class _Vispor(BrainStructureModel):
     """Model VISpor"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4305,7 +4306,7 @@ class _Vispor(_BrainStructureModel):
     id: Literal["312782628"] = "312782628"
 
 
-class _Vispor1(_BrainStructureModel):
+class _Vispor1(BrainStructureModel):
     """Model VISpor1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4314,7 +4315,7 @@ class _Vispor1(_BrainStructureModel):
     id: Literal["312782632"] = "312782632"
 
 
-class _Vispor2_3(_BrainStructureModel):
+class _Vispor2_3(BrainStructureModel):
     """Model VISpor2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4323,7 +4324,7 @@ class _Vispor2_3(_BrainStructureModel):
     id: Literal["312782636"] = "312782636"
 
 
-class _Vispor4(_BrainStructureModel):
+class _Vispor4(BrainStructureModel):
     """Model VISpor4"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4332,7 +4333,7 @@ class _Vispor4(_BrainStructureModel):
     id: Literal["312782640"] = "312782640"
 
 
-class _Vispor5(_BrainStructureModel):
+class _Vispor5(BrainStructureModel):
     """Model VISpor5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4341,7 +4342,7 @@ class _Vispor5(_BrainStructureModel):
     id: Literal["312782644"] = "312782644"
 
 
-class _Vispor6A(_BrainStructureModel):
+class _Vispor6A(BrainStructureModel):
     """Model VISpor6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4350,7 +4351,7 @@ class _Vispor6A(_BrainStructureModel):
     id: Literal["312782648"] = "312782648"
 
 
-class _Vispor6B(_BrainStructureModel):
+class _Vispor6B(BrainStructureModel):
     """Model VISpor6b"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4359,7 +4360,7 @@ class _Vispor6B(_BrainStructureModel):
     id: Literal["312782652"] = "312782652"
 
 
-class _Post(_BrainStructureModel):
+class _Post(BrainStructureModel):
     """Model POST"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4368,7 +4369,7 @@ class _Post(_BrainStructureModel):
     id: Literal["1037"] = "1037"
 
 
-class _Prc(_BrainStructureModel):
+class _Prc(BrainStructureModel):
     """Model PRC"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4377,7 +4378,7 @@ class _Prc(_BrainStructureModel):
     id: Literal["50"] = "50"
 
 
-class _Pl(_BrainStructureModel):
+class _Pl(BrainStructureModel):
     """Model PL"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4386,7 +4387,7 @@ class _Pl(_BrainStructureModel):
     id: Literal["972"] = "972"
 
 
-class _Pl1(_BrainStructureModel):
+class _Pl1(BrainStructureModel):
     """Model PL1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4395,7 +4396,7 @@ class _Pl1(_BrainStructureModel):
     id: Literal["171"] = "171"
 
 
-class _Pl2_3(_BrainStructureModel):
+class _Pl2_3(BrainStructureModel):
     """Model PL2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4404,7 +4405,7 @@ class _Pl2_3(_BrainStructureModel):
     id: Literal["304"] = "304"
 
 
-class _Pl5(_BrainStructureModel):
+class _Pl5(BrainStructureModel):
     """Model PL5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4413,7 +4414,7 @@ class _Pl5(_BrainStructureModel):
     id: Literal["363"] = "363"
 
 
-class _Pl6A(_BrainStructureModel):
+class _Pl6A(BrainStructureModel):
     """Model PL6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4422,7 +4423,7 @@ class _Pl6A(_BrainStructureModel):
     id: Literal["84"] = "84"
 
 
-class _Pl6B(_BrainStructureModel):
+class _Pl6B(BrainStructureModel):
     """Model PL6b"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4431,7 +4432,7 @@ class _Pl6B(_BrainStructureModel):
     id: Literal["132"] = "132"
 
 
-class _Pst(_BrainStructureModel):
+class _Pst(BrainStructureModel):
     """Model PST"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4440,7 +4441,7 @@ class _Pst(_BrainStructureModel):
     id: Literal["356"] = "356"
 
 
-class _Pre(_BrainStructureModel):
+class _Pre(BrainStructureModel):
     """Model PRE"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4449,7 +4450,7 @@ class _Pre(_BrainStructureModel):
     id: Literal["1084"] = "1084"
 
 
-class _Prt(_BrainStructureModel):
+class _Prt(BrainStructureModel):
     """Model PRT"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4458,7 +4459,7 @@ class _Prt(_BrainStructureModel):
     id: Literal["1100"] = "1100"
 
 
-class _Audp(_BrainStructureModel):
+class _Audp(BrainStructureModel):
     """Model AUDp"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4467,7 +4468,7 @@ class _Audp(_BrainStructureModel):
     id: Literal["1002"] = "1002"
 
 
-class _Audp1(_BrainStructureModel):
+class _Audp1(BrainStructureModel):
     """Model AUDp1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4476,7 +4477,7 @@ class _Audp1(_BrainStructureModel):
     id: Literal["735"] = "735"
 
 
-class _Audp2_3(_BrainStructureModel):
+class _Audp2_3(BrainStructureModel):
     """Model AUDp2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4485,7 +4486,7 @@ class _Audp2_3(_BrainStructureModel):
     id: Literal["251"] = "251"
 
 
-class _Audp4(_BrainStructureModel):
+class _Audp4(BrainStructureModel):
     """Model AUDp4"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4494,7 +4495,7 @@ class _Audp4(_BrainStructureModel):
     id: Literal["816"] = "816"
 
 
-class _Audp5(_BrainStructureModel):
+class _Audp5(BrainStructureModel):
     """Model AUDp5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4503,7 +4504,7 @@ class _Audp5(_BrainStructureModel):
     id: Literal["847"] = "847"
 
 
-class _Audp6A(_BrainStructureModel):
+class _Audp6A(BrainStructureModel):
     """Model AUDp6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4512,7 +4513,7 @@ class _Audp6A(_BrainStructureModel):
     id: Literal["954"] = "954"
 
 
-class _Audp6B(_BrainStructureModel):
+class _Audp6B(BrainStructureModel):
     """Model AUDp6b"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4521,7 +4522,7 @@ class _Audp6B(_BrainStructureModel):
     id: Literal["1005"] = "1005"
 
 
-class _Mop(_BrainStructureModel):
+class _Mop(BrainStructureModel):
     """Model MOp"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4530,7 +4531,7 @@ class _Mop(_BrainStructureModel):
     id: Literal["985"] = "985"
 
 
-class _Mop1(_BrainStructureModel):
+class _Mop1(BrainStructureModel):
     """Model MOp1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4539,7 +4540,7 @@ class _Mop1(_BrainStructureModel):
     id: Literal["320"] = "320"
 
 
-class _Mop2_3(_BrainStructureModel):
+class _Mop2_3(BrainStructureModel):
     """Model MOp2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4548,7 +4549,7 @@ class _Mop2_3(_BrainStructureModel):
     id: Literal["943"] = "943"
 
 
-class _Mop5(_BrainStructureModel):
+class _Mop5(BrainStructureModel):
     """Model MOp5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4557,7 +4558,7 @@ class _Mop5(_BrainStructureModel):
     id: Literal["648"] = "648"
 
 
-class _Mop6A(_BrainStructureModel):
+class _Mop6A(BrainStructureModel):
     """Model MOp6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4566,7 +4567,7 @@ class _Mop6A(_BrainStructureModel):
     id: Literal["844"] = "844"
 
 
-class _Mop6B(_BrainStructureModel):
+class _Mop6B(BrainStructureModel):
     """Model MOp6b"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4575,7 +4576,7 @@ class _Mop6B(_BrainStructureModel):
     id: Literal["882"] = "882"
 
 
-class _Ssp(_BrainStructureModel):
+class _Ssp(BrainStructureModel):
     """Model SSp"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4584,7 +4585,7 @@ class _Ssp(_BrainStructureModel):
     id: Literal["322"] = "322"
 
 
-class _Ssp_Bfd(_BrainStructureModel):
+class _Ssp_Bfd(BrainStructureModel):
     """Model SSp-bfd"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4593,73 +4594,73 @@ class _Ssp_Bfd(_BrainStructureModel):
     id: Literal["329"] = "329"
 
 
-class _Ssp_Bfd1(_BrainStructureModel):
+class _Ssp_Bfd1(BrainStructureModel):
     """Model SSp-bfd1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Primary somatosensory area, barrel field, layer 1"] = (
         "Primary somatosensory area, barrel field, layer 1"
-    ] = "Primary somatosensory area, barrel field, layer 1"
+    )
     acronym: Literal["SSp-bfd1"] = "SSp-bfd1"
     id: Literal["981"] = "981"
 
 
-class _Ssp_Bfd2_3(_BrainStructureModel):
+class _Ssp_Bfd2_3(BrainStructureModel):
     """Model SSp-bfd2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Primary somatosensory area, barrel field, layer 2/3"] = (
         "Primary somatosensory area, barrel field, layer 2/3"
-    ] = "Primary somatosensory area, barrel field, layer 2/3"
+    )
     acronym: Literal["SSp-bfd2/3"] = "SSp-bfd2/3"
     id: Literal["201"] = "201"
 
 
-class _Ssp_Bfd4(_BrainStructureModel):
+class _Ssp_Bfd4(BrainStructureModel):
     """Model SSp-bfd4"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Primary somatosensory area, barrel field, layer 4"] = (
         "Primary somatosensory area, barrel field, layer 4"
-    ] = "Primary somatosensory area, barrel field, layer 4"
+    )
     acronym: Literal["SSp-bfd4"] = "SSp-bfd4"
     id: Literal["1047"] = "1047"
 
 
-class _Ssp_Bfd5(_BrainStructureModel):
+class _Ssp_Bfd5(BrainStructureModel):
     """Model SSp-bfd5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Primary somatosensory area, barrel field, layer 5"] = (
         "Primary somatosensory area, barrel field, layer 5"
-    ] = "Primary somatosensory area, barrel field, layer 5"
+    )
     acronym: Literal["SSp-bfd5"] = "SSp-bfd5"
     id: Literal["1070"] = "1070"
 
 
-class _Ssp_Bfd6A(_BrainStructureModel):
+class _Ssp_Bfd6A(BrainStructureModel):
     """Model SSp-bfd6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Primary somatosensory area, barrel field, layer 6a"] = (
         "Primary somatosensory area, barrel field, layer 6a"
-    ] = "Primary somatosensory area, barrel field, layer 6a"
+    )
     acronym: Literal["SSp-bfd6a"] = "SSp-bfd6a"
     id: Literal["1038"] = "1038"
 
 
-class _Ssp_Bfd6B(_BrainStructureModel):
+class _Ssp_Bfd6B(BrainStructureModel):
     """Model SSp-bfd6b"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Primary somatosensory area, barrel field, layer 6b"] = (
         "Primary somatosensory area, barrel field, layer 6b"
-    ] = "Primary somatosensory area, barrel field, layer 6b"
+    )
     acronym: Literal["SSp-bfd6b"] = "SSp-bfd6b"
     id: Literal["1062"] = "1062"
 
 
-class _Ssp_Ll(_BrainStructureModel):
+class _Ssp_Ll(BrainStructureModel):
     """Model SSp-ll"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4668,7 +4669,7 @@ class _Ssp_Ll(_BrainStructureModel):
     id: Literal["337"] = "337"
 
 
-class _Ssp_Ll1(_BrainStructureModel):
+class _Ssp_Ll1(BrainStructureModel):
     """Model SSp-ll1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4677,18 +4678,18 @@ class _Ssp_Ll1(_BrainStructureModel):
     id: Literal["1030"] = "1030"
 
 
-class _Ssp_Ll2_3(_BrainStructureModel):
+class _Ssp_Ll2_3(BrainStructureModel):
     """Model SSp-ll2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Primary somatosensory area, lower limb, layer 2/3"] = (
         "Primary somatosensory area, lower limb, layer 2/3"
-    ] = "Primary somatosensory area, lower limb, layer 2/3"
+    )
     acronym: Literal["SSp-ll2/3"] = "SSp-ll2/3"
     id: Literal["113"] = "113"
 
 
-class _Ssp_Ll4(_BrainStructureModel):
+class _Ssp_Ll4(BrainStructureModel):
     """Model SSp-ll4"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4697,7 +4698,7 @@ class _Ssp_Ll4(_BrainStructureModel):
     id: Literal["1094"] = "1094"
 
 
-class _Ssp_Ll5(_BrainStructureModel):
+class _Ssp_Ll5(BrainStructureModel):
     """Model SSp-ll5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4706,29 +4707,29 @@ class _Ssp_Ll5(_BrainStructureModel):
     id: Literal["1128"] = "1128"
 
 
-class _Ssp_Ll6A(_BrainStructureModel):
+class _Ssp_Ll6A(BrainStructureModel):
     """Model SSp-ll6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Primary somatosensory area, lower limb, layer 6a"] = (
         "Primary somatosensory area, lower limb, layer 6a"
-    ] = "Primary somatosensory area, lower limb, layer 6a"
+    )
     acronym: Literal["SSp-ll6a"] = "SSp-ll6a"
     id: Literal["478"] = "478"
 
 
-class _Ssp_Ll6B(_BrainStructureModel):
+class _Ssp_Ll6B(BrainStructureModel):
     """Model SSp-ll6b"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Primary somatosensory area, lower limb, layer 6b"] = (
         "Primary somatosensory area, lower limb, layer 6b"
-    ] = "Primary somatosensory area, lower limb, layer 6b"
+    )
     acronym: Literal["SSp-ll6b"] = "SSp-ll6b"
     id: Literal["510"] = "510"
 
 
-class _Ssp_M(_BrainStructureModel):
+class _Ssp_M(BrainStructureModel):
     """Model SSp-m"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4737,7 +4738,7 @@ class _Ssp_M(_BrainStructureModel):
     id: Literal["345"] = "345"
 
 
-class _Ssp_M1(_BrainStructureModel):
+class _Ssp_M1(BrainStructureModel):
     """Model SSp-m1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4746,7 +4747,7 @@ class _Ssp_M1(_BrainStructureModel):
     id: Literal["878"] = "878"
 
 
-class _Ssp_M2_3(_BrainStructureModel):
+class _Ssp_M2_3(BrainStructureModel):
     """Model SSp-m2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4755,7 +4756,7 @@ class _Ssp_M2_3(_BrainStructureModel):
     id: Literal["657"] = "657"
 
 
-class _Ssp_M4(_BrainStructureModel):
+class _Ssp_M4(BrainStructureModel):
     """Model SSp-m4"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4764,7 +4765,7 @@ class _Ssp_M4(_BrainStructureModel):
     id: Literal["950"] = "950"
 
 
-class _Ssp_M5(_BrainStructureModel):
+class _Ssp_M5(BrainStructureModel):
     """Model SSp-m5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4773,7 +4774,7 @@ class _Ssp_M5(_BrainStructureModel):
     id: Literal["974"] = "974"
 
 
-class _Ssp_M6A(_BrainStructureModel):
+class _Ssp_M6A(BrainStructureModel):
     """Model SSp-m6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4782,7 +4783,7 @@ class _Ssp_M6A(_BrainStructureModel):
     id: Literal["1102"] = "1102"
 
 
-class _Ssp_M6B(_BrainStructureModel):
+class _Ssp_M6B(BrainStructureModel):
     """Model SSp-m6b"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4791,7 +4792,7 @@ class _Ssp_M6B(_BrainStructureModel):
     id: Literal["2"] = "2"
 
 
-class _Ssp_N(_BrainStructureModel):
+class _Ssp_N(BrainStructureModel):
     """Model SSp-n"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4800,7 +4801,7 @@ class _Ssp_N(_BrainStructureModel):
     id: Literal["353"] = "353"
 
 
-class _Ssp_N1(_BrainStructureModel):
+class _Ssp_N1(BrainStructureModel):
     """Model SSp-n1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4809,7 +4810,7 @@ class _Ssp_N1(_BrainStructureModel):
     id: Literal["558"] = "558"
 
 
-class _Ssp_N2_3(_BrainStructureModel):
+class _Ssp_N2_3(BrainStructureModel):
     """Model SSp-n2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4818,7 +4819,7 @@ class _Ssp_N2_3(_BrainStructureModel):
     id: Literal["838"] = "838"
 
 
-class _Ssp_N4(_BrainStructureModel):
+class _Ssp_N4(BrainStructureModel):
     """Model SSp-n4"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4827,7 +4828,7 @@ class _Ssp_N4(_BrainStructureModel):
     id: Literal["654"] = "654"
 
 
-class _Ssp_N5(_BrainStructureModel):
+class _Ssp_N5(BrainStructureModel):
     """Model SSp-n5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4836,7 +4837,7 @@ class _Ssp_N5(_BrainStructureModel):
     id: Literal["702"] = "702"
 
 
-class _Ssp_N6A(_BrainStructureModel):
+class _Ssp_N6A(BrainStructureModel):
     """Model SSp-n6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4845,7 +4846,7 @@ class _Ssp_N6A(_BrainStructureModel):
     id: Literal["889"] = "889"
 
 
-class _Ssp_N6B(_BrainStructureModel):
+class _Ssp_N6B(BrainStructureModel):
     """Model SSp-n6b"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4854,7 +4855,7 @@ class _Ssp_N6B(_BrainStructureModel):
     id: Literal["929"] = "929"
 
 
-class _Ssp_Tr(_BrainStructureModel):
+class _Ssp_Tr(BrainStructureModel):
     """Model SSp-tr"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4863,7 +4864,7 @@ class _Ssp_Tr(_BrainStructureModel):
     id: Literal["361"] = "361"
 
 
-class _Ssp_Tr1(_BrainStructureModel):
+class _Ssp_Tr1(BrainStructureModel):
     """Model SSp-tr1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4872,7 +4873,7 @@ class _Ssp_Tr1(_BrainStructureModel):
     id: Literal["1006"] = "1006"
 
 
-class _Ssp_Tr2_3(_BrainStructureModel):
+class _Ssp_Tr2_3(BrainStructureModel):
     """Model SSp-tr2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4881,7 +4882,7 @@ class _Ssp_Tr2_3(_BrainStructureModel):
     id: Literal["670"] = "670"
 
 
-class _Ssp_Tr4(_BrainStructureModel):
+class _Ssp_Tr4(BrainStructureModel):
     """Model SSp-tr4"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4890,7 +4891,7 @@ class _Ssp_Tr4(_BrainStructureModel):
     id: Literal["1086"] = "1086"
 
 
-class _Ssp_Tr5(_BrainStructureModel):
+class _Ssp_Tr5(BrainStructureModel):
     """Model SSp-tr5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4899,7 +4900,7 @@ class _Ssp_Tr5(_BrainStructureModel):
     id: Literal["1111"] = "1111"
 
 
-class _Ssp_Tr6A(_BrainStructureModel):
+class _Ssp_Tr6A(BrainStructureModel):
     """Model SSp-tr6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4908,7 +4909,7 @@ class _Ssp_Tr6A(_BrainStructureModel):
     id: Literal["9"] = "9"
 
 
-class _Ssp_Tr6B(_BrainStructureModel):
+class _Ssp_Tr6B(BrainStructureModel):
     """Model SSp-tr6b"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4917,7 +4918,7 @@ class _Ssp_Tr6B(_BrainStructureModel):
     id: Literal["461"] = "461"
 
 
-class _Ssp_Un(_BrainStructureModel):
+class _Ssp_Un(BrainStructureModel):
     """Model SSp-un"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4926,7 +4927,7 @@ class _Ssp_Un(_BrainStructureModel):
     id: Literal["182305689"] = "182305689"
 
 
-class _Ssp_Un1(_BrainStructureModel):
+class _Ssp_Un1(BrainStructureModel):
     """Model SSp-un1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4935,18 +4936,18 @@ class _Ssp_Un1(_BrainStructureModel):
     id: Literal["182305693"] = "182305693"
 
 
-class _Ssp_Un2_3(_BrainStructureModel):
+class _Ssp_Un2_3(BrainStructureModel):
     """Model SSp-un2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Primary somatosensory area, unassigned, layer 2/3"] = (
         "Primary somatosensory area, unassigned, layer 2/3"
-    ] = "Primary somatosensory area, unassigned, layer 2/3"
+    )
     acronym: Literal["SSp-un2/3"] = "SSp-un2/3"
     id: Literal["182305697"] = "182305697"
 
 
-class _Ssp_Un4(_BrainStructureModel):
+class _Ssp_Un4(BrainStructureModel):
     """Model SSp-un4"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4955,7 +4956,7 @@ class _Ssp_Un4(_BrainStructureModel):
     id: Literal["182305701"] = "182305701"
 
 
-class _Ssp_Un5(_BrainStructureModel):
+class _Ssp_Un5(BrainStructureModel):
     """Model SSp-un5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4964,29 +4965,29 @@ class _Ssp_Un5(_BrainStructureModel):
     id: Literal["182305705"] = "182305705"
 
 
-class _Ssp_Un6A(_BrainStructureModel):
+class _Ssp_Un6A(BrainStructureModel):
     """Model SSp-un6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Primary somatosensory area, unassigned, layer 6a"] = (
         "Primary somatosensory area, unassigned, layer 6a"
-    ] = "Primary somatosensory area, unassigned, layer 6a"
+    )
     acronym: Literal["SSp-un6a"] = "SSp-un6a"
     id: Literal["182305709"] = "182305709"
 
 
-class _Ssp_Un6B(_BrainStructureModel):
+class _Ssp_Un6B(BrainStructureModel):
     """Model SSp-un6b"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Primary somatosensory area, unassigned, layer 6b"] = (
         "Primary somatosensory area, unassigned, layer 6b"
-    ] = "Primary somatosensory area, unassigned, layer 6b"
+    )
     acronym: Literal["SSp-un6b"] = "SSp-un6b"
     id: Literal["182305713"] = "182305713"
 
 
-class _Ssp_Ul(_BrainStructureModel):
+class _Ssp_Ul(BrainStructureModel):
     """Model SSp-ul"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -4995,7 +4996,7 @@ class _Ssp_Ul(_BrainStructureModel):
     id: Literal["369"] = "369"
 
 
-class _Ssp_Ul1(_BrainStructureModel):
+class _Ssp_Ul1(BrainStructureModel):
     """Model SSp-ul1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5004,18 +5005,18 @@ class _Ssp_Ul1(_BrainStructureModel):
     id: Literal["450"] = "450"
 
 
-class _Ssp_Ul2_3(_BrainStructureModel):
+class _Ssp_Ul2_3(BrainStructureModel):
     """Model SSp-ul2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Primary somatosensory area, upper limb, layer 2/3"] = (
         "Primary somatosensory area, upper limb, layer 2/3"
-    ] = "Primary somatosensory area, upper limb, layer 2/3"
+    )
     acronym: Literal["SSp-ul2/3"] = "SSp-ul2/3"
     id: Literal["854"] = "854"
 
 
-class _Ssp_Ul4(_BrainStructureModel):
+class _Ssp_Ul4(BrainStructureModel):
     """Model SSp-ul4"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5024,7 +5025,7 @@ class _Ssp_Ul4(_BrainStructureModel):
     id: Literal["577"] = "577"
 
 
-class _Ssp_Ul5(_BrainStructureModel):
+class _Ssp_Ul5(BrainStructureModel):
     """Model SSp-ul5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5033,29 +5034,29 @@ class _Ssp_Ul5(_BrainStructureModel):
     id: Literal["625"] = "625"
 
 
-class _Ssp_Ul6A(_BrainStructureModel):
+class _Ssp_Ul6A(BrainStructureModel):
     """Model SSp-ul6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Primary somatosensory area, upper limb, layer 6a"] = (
         "Primary somatosensory area, upper limb, layer 6a"
-    ] = "Primary somatosensory area, upper limb, layer 6a"
+    )
     acronym: Literal["SSp-ul6a"] = "SSp-ul6a"
     id: Literal["945"] = "945"
 
 
-class _Ssp_Ul6B(_BrainStructureModel):
+class _Ssp_Ul6B(BrainStructureModel):
     """Model SSp-ul6b"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Primary somatosensory area, upper limb, layer 6b"] = (
         "Primary somatosensory area, upper limb, layer 6b"
-    ] = "Primary somatosensory area, upper limb, layer 6b"
+    )
     acronym: Literal["SSp-ul6b"] = "SSp-ul6b"
     id: Literal["1026"] = "1026"
 
 
-class _Visp(_BrainStructureModel):
+class _Visp(BrainStructureModel):
     """Model VISp"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5064,7 +5065,7 @@ class _Visp(_BrainStructureModel):
     id: Literal["385"] = "385"
 
 
-class _Visp1(_BrainStructureModel):
+class _Visp1(BrainStructureModel):
     """Model VISp1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5073,7 +5074,7 @@ class _Visp1(_BrainStructureModel):
     id: Literal["593"] = "593"
 
 
-class _Visp2_3(_BrainStructureModel):
+class _Visp2_3(BrainStructureModel):
     """Model VISp2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5082,7 +5083,7 @@ class _Visp2_3(_BrainStructureModel):
     id: Literal["821"] = "821"
 
 
-class _Visp4(_BrainStructureModel):
+class _Visp4(BrainStructureModel):
     """Model VISp4"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5091,7 +5092,7 @@ class _Visp4(_BrainStructureModel):
     id: Literal["721"] = "721"
 
 
-class _Visp5(_BrainStructureModel):
+class _Visp5(BrainStructureModel):
     """Model VISp5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5100,7 +5101,7 @@ class _Visp5(_BrainStructureModel):
     id: Literal["778"] = "778"
 
 
-class _Visp6A(_BrainStructureModel):
+class _Visp6A(BrainStructureModel):
     """Model VISp6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5109,7 +5110,7 @@ class _Visp6A(_BrainStructureModel):
     id: Literal["33"] = "33"
 
 
-class _Visp6B(_BrainStructureModel):
+class _Visp6B(BrainStructureModel):
     """Model VISp6b"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5118,7 +5119,7 @@ class _Visp6B(_BrainStructureModel):
     id: Literal["305"] = "305"
 
 
-class _Psv(_BrainStructureModel):
+class _Psv(BrainStructureModel):
     """Model PSV"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5127,7 +5128,7 @@ class _Psv(_BrainStructureModel):
     id: Literal["7"] = "7"
 
 
-class _Pros(_BrainStructureModel):
+class _Pros(BrainStructureModel):
     """Model ProS"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5136,7 +5137,7 @@ class _Pros(_BrainStructureModel):
     id: Literal["484682470"] = "484682470"
 
 
-class _Pyr(_BrainStructureModel):
+class _Pyr(BrainStructureModel):
     """Model PYR"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5145,7 +5146,7 @@ class _Pyr(_BrainStructureModel):
     id: Literal["951"] = "951"
 
 
-class _Rn(_BrainStructureModel):
+class _Rn(BrainStructureModel):
     """Model RN"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5154,7 +5155,7 @@ class _Rn(_BrainStructureModel):
     id: Literal["214"] = "214"
 
 
-class _Rt(_BrainStructureModel):
+class _Rt(BrainStructureModel):
     """Model RT"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5163,7 +5164,7 @@ class _Rt(_BrainStructureModel):
     id: Literal["262"] = "262"
 
 
-class _Rch(_BrainStructureModel):
+class _Rch(BrainStructureModel):
     """Model RCH"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5172,7 +5173,7 @@ class _Rch(_BrainStructureModel):
     id: Literal["173"] = "173"
 
 
-class _Rhp(_BrainStructureModel):
+class _Rhp(BrainStructureModel):
     """Model RHP"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5181,7 +5182,7 @@ class _Rhp(_BrainStructureModel):
     id: Literal["822"] = "822"
 
 
-class _Rpf(_BrainStructureModel):
+class _Rpf(BrainStructureModel):
     """Model RPF"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5190,7 +5191,7 @@ class _Rpf(_BrainStructureModel):
     id: Literal["549009203"] = "549009203"
 
 
-class _Rsp(_BrainStructureModel):
+class _Rsp(BrainStructureModel):
     """Model RSP"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5199,7 +5200,7 @@ class _Rsp(_BrainStructureModel):
     id: Literal["254"] = "254"
 
 
-class _Rspd(_BrainStructureModel):
+class _Rspd(BrainStructureModel):
     """Model RSPd"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5208,7 +5209,7 @@ class _Rspd(_BrainStructureModel):
     id: Literal["879"] = "879"
 
 
-class _Rspd1(_BrainStructureModel):
+class _Rspd1(BrainStructureModel):
     """Model RSPd1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5217,7 +5218,7 @@ class _Rspd1(_BrainStructureModel):
     id: Literal["442"] = "442"
 
 
-class _Rspd2_3(_BrainStructureModel):
+class _Rspd2_3(BrainStructureModel):
     """Model RSPd2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5226,7 +5227,7 @@ class _Rspd2_3(_BrainStructureModel):
     id: Literal["434"] = "434"
 
 
-class _Rspd4(_BrainStructureModel):
+class _Rspd4(BrainStructureModel):
     """Model RSPd4"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5235,7 +5236,7 @@ class _Rspd4(_BrainStructureModel):
     id: Literal["545"] = "545"
 
 
-class _Rspd5(_BrainStructureModel):
+class _Rspd5(BrainStructureModel):
     """Model RSPd5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5244,7 +5245,7 @@ class _Rspd5(_BrainStructureModel):
     id: Literal["610"] = "610"
 
 
-class _Rspd6A(_BrainStructureModel):
+class _Rspd6A(BrainStructureModel):
     """Model RSPd6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5253,7 +5254,7 @@ class _Rspd6A(_BrainStructureModel):
     id: Literal["274"] = "274"
 
 
-class _Rspd6B(_BrainStructureModel):
+class _Rspd6B(BrainStructureModel):
     """Model RSPd6b"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5262,7 +5263,7 @@ class _Rspd6B(_BrainStructureModel):
     id: Literal["330"] = "330"
 
 
-class _Rspagl(_BrainStructureModel):
+class _Rspagl(BrainStructureModel):
     """Model RSPagl"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5271,62 +5272,62 @@ class _Rspagl(_BrainStructureModel):
     id: Literal["894"] = "894"
 
 
-class _Rspagl1(_BrainStructureModel):
+class _Rspagl1(BrainStructureModel):
     """Model RSPagl1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Retrosplenial area, lateral agranular part, layer 1"] = (
         "Retrosplenial area, lateral agranular part, layer 1"
-    ] = "Retrosplenial area, lateral agranular part, layer 1"
+    )
     acronym: Literal["RSPagl1"] = "RSPagl1"
     id: Literal["671"] = "671"
 
 
-class _Rspagl2_3(_BrainStructureModel):
+class _Rspagl2_3(BrainStructureModel):
     """Model RSPagl2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Retrosplenial area, lateral agranular part, layer 2/3"] = (
         "Retrosplenial area, lateral agranular part, layer 2/3"
-    ] = "Retrosplenial area, lateral agranular part, layer 2/3"
+    )
     acronym: Literal["RSPagl2/3"] = "RSPagl2/3"
     id: Literal["965"] = "965"
 
 
-class _Rspagl5(_BrainStructureModel):
+class _Rspagl5(BrainStructureModel):
     """Model RSPagl5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Retrosplenial area, lateral agranular part, layer 5"] = (
         "Retrosplenial area, lateral agranular part, layer 5"
-    ] = "Retrosplenial area, lateral agranular part, layer 5"
+    )
     acronym: Literal["RSPagl5"] = "RSPagl5"
     id: Literal["774"] = "774"
 
 
-class _Rspagl6A(_BrainStructureModel):
+class _Rspagl6A(BrainStructureModel):
     """Model RSPagl6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Retrosplenial area, lateral agranular part, layer 6a"] = (
         "Retrosplenial area, lateral agranular part, layer 6a"
-    ] = "Retrosplenial area, lateral agranular part, layer 6a"
+    )
     acronym: Literal["RSPagl6a"] = "RSPagl6a"
     id: Literal["906"] = "906"
 
 
-class _Rspagl6B(_BrainStructureModel):
+class _Rspagl6B(BrainStructureModel):
     """Model RSPagl6b"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Retrosplenial area, lateral agranular part, layer 6b"] = (
         "Retrosplenial area, lateral agranular part, layer 6b"
-    ] = "Retrosplenial area, lateral agranular part, layer 6b"
+    )
     acronym: Literal["RSPagl6b"] = "RSPagl6b"
     id: Literal["279"] = "279"
 
 
-class _Rspv(_BrainStructureModel):
+class _Rspv(BrainStructureModel):
     """Model RSPv"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5335,7 +5336,7 @@ class _Rspv(_BrainStructureModel):
     id: Literal["886"] = "886"
 
 
-class _Rspv1(_BrainStructureModel):
+class _Rspv1(BrainStructureModel):
     """Model RSPv1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5344,7 +5345,7 @@ class _Rspv1(_BrainStructureModel):
     id: Literal["542"] = "542"
 
 
-class _Rspv2_3(_BrainStructureModel):
+class _Rspv2_3(BrainStructureModel):
     """Model RSPv2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5353,7 +5354,7 @@ class _Rspv2_3(_BrainStructureModel):
     id: Literal["430"] = "430"
 
 
-class _Rspv5(_BrainStructureModel):
+class _Rspv5(BrainStructureModel):
     """Model RSPv5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5362,7 +5363,7 @@ class _Rspv5(_BrainStructureModel):
     id: Literal["687"] = "687"
 
 
-class _Rspv6A(_BrainStructureModel):
+class _Rspv6A(BrainStructureModel):
     """Model RSPv6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5371,7 +5372,7 @@ class _Rspv6A(_BrainStructureModel):
     id: Literal["590"] = "590"
 
 
-class _Rspv6B(_BrainStructureModel):
+class _Rspv6B(BrainStructureModel):
     """Model RSPv6b"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5380,7 +5381,7 @@ class _Rspv6B(_BrainStructureModel):
     id: Literal["622"] = "622"
 
 
-class _Rh(_BrainStructureModel):
+class _Rh(BrainStructureModel):
     """Model RH"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5389,7 +5390,7 @@ class _Rh(_BrainStructureModel):
     id: Literal["189"] = "189"
 
 
-class _Rl(_BrainStructureModel):
+class _Rl(BrainStructureModel):
     """Model RL"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5398,7 +5399,7 @@ class _Rl(_BrainStructureModel):
     id: Literal["197"] = "197"
 
 
-class _Visrl1(_BrainStructureModel):
+class _Visrl1(BrainStructureModel):
     """Model VISrl1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5407,7 +5408,7 @@ class _Visrl1(_BrainStructureModel):
     id: Literal["312782604"] = "312782604"
 
 
-class _Visrl2_3(_BrainStructureModel):
+class _Visrl2_3(BrainStructureModel):
     """Model VISrl2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5416,7 +5417,7 @@ class _Visrl2_3(_BrainStructureModel):
     id: Literal["312782608"] = "312782608"
 
 
-class _Visrl4(_BrainStructureModel):
+class _Visrl4(BrainStructureModel):
     """Model VISrl4"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5425,7 +5426,7 @@ class _Visrl4(_BrainStructureModel):
     id: Literal["312782612"] = "312782612"
 
 
-class _Visrl5(_BrainStructureModel):
+class _Visrl5(BrainStructureModel):
     """Model VISrl5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5434,7 +5435,7 @@ class _Visrl5(_BrainStructureModel):
     id: Literal["312782616"] = "312782616"
 
 
-class _Visrl6A(_BrainStructureModel):
+class _Visrl6A(BrainStructureModel):
     """Model VISrl6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5443,7 +5444,7 @@ class _Visrl6A(_BrainStructureModel):
     id: Literal["312782620"] = "312782620"
 
 
-class _Visrl6B(_BrainStructureModel):
+class _Visrl6B(BrainStructureModel):
     """Model VISrl6b"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5452,7 +5453,7 @@ class _Visrl6B(_BrainStructureModel):
     id: Literal["312782624"] = "312782624"
 
 
-class _Visrl(_BrainStructureModel):
+class _Visrl(BrainStructureModel):
     """Model VISrl"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5461,7 +5462,7 @@ class _Visrl(_BrainStructureModel):
     id: Literal["417"] = "417"
 
 
-class _Mos(_BrainStructureModel):
+class _Mos(BrainStructureModel):
     """Model MOs"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5470,7 +5471,7 @@ class _Mos(_BrainStructureModel):
     id: Literal["993"] = "993"
 
 
-class _Mos1(_BrainStructureModel):
+class _Mos1(BrainStructureModel):
     """Model MOs1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5479,7 +5480,7 @@ class _Mos1(_BrainStructureModel):
     id: Literal["656"] = "656"
 
 
-class _Mos2_3(_BrainStructureModel):
+class _Mos2_3(BrainStructureModel):
     """Model MOs2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5488,7 +5489,7 @@ class _Mos2_3(_BrainStructureModel):
     id: Literal["962"] = "962"
 
 
-class _Mos5(_BrainStructureModel):
+class _Mos5(BrainStructureModel):
     """Model MOs5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5497,7 +5498,7 @@ class _Mos5(_BrainStructureModel):
     id: Literal["767"] = "767"
 
 
-class _Mos6A(_BrainStructureModel):
+class _Mos6A(BrainStructureModel):
     """Model MOs6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5506,7 +5507,7 @@ class _Mos6A(_BrainStructureModel):
     id: Literal["1021"] = "1021"
 
 
-class _Mos6B(_BrainStructureModel):
+class _Mos6B(BrainStructureModel):
     """Model MOs6b"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5515,7 +5516,7 @@ class _Mos6B(_BrainStructureModel):
     id: Literal["1085"] = "1085"
 
 
-class _Sf(_BrainStructureModel):
+class _Sf(BrainStructureModel):
     """Model SF"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5524,7 +5525,7 @@ class _Sf(_BrainStructureModel):
     id: Literal["310"] = "310"
 
 
-class _Sh(_BrainStructureModel):
+class _Sh(BrainStructureModel):
     """Model SH"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5533,7 +5534,7 @@ class _Sh(_BrainStructureModel):
     id: Literal["333"] = "333"
 
 
-class _Sim(_BrainStructureModel):
+class _Sim(BrainStructureModel):
     """Model SIM"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5542,7 +5543,7 @@ class _Sim(_BrainStructureModel):
     id: Literal["1007"] = "1007"
 
 
-class _Mo(_BrainStructureModel):
+class _Mo(BrainStructureModel):
     """Model MO"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5551,7 +5552,7 @@ class _Mo(_BrainStructureModel):
     id: Literal["500"] = "500"
 
 
-class _Ss(_BrainStructureModel):
+class _Ss(BrainStructureModel):
     """Model SS"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5560,7 +5561,7 @@ class _Ss(_BrainStructureModel):
     id: Literal["453"] = "453"
 
 
-class _Spvc(_BrainStructureModel):
+class _Spvc(BrainStructureModel):
     """Model SPVC"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5569,18 +5570,18 @@ class _Spvc(_BrainStructureModel):
     id: Literal["429"] = "429"
 
 
-class _Spvi(_BrainStructureModel):
+class _Spvi(BrainStructureModel):
     """Model SPVI"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Spinal nucleus of the trigeminal, interpolar part"] = (
         "Spinal nucleus of the trigeminal, interpolar part"
-    ] = "Spinal nucleus of the trigeminal, interpolar part"
+    )
     acronym: Literal["SPVI"] = "SPVI"
     id: Literal["437"] = "437"
 
 
-class _Spvo(_BrainStructureModel):
+class _Spvo(BrainStructureModel):
     """Model SPVO"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5589,7 +5590,7 @@ class _Spvo(_BrainStructureModel):
     id: Literal["445"] = "445"
 
 
-class _Spiv(_BrainStructureModel):
+class _Spiv(BrainStructureModel):
     """Model SPIV"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5598,7 +5599,7 @@ class _Spiv(_BrainStructureModel):
     id: Literal["225"] = "225"
 
 
-class _Str(_BrainStructureModel):
+class _Str(BrainStructureModel):
     """Model STR"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5607,7 +5608,7 @@ class _Str(_BrainStructureModel):
     id: Literal["477"] = "477"
 
 
-class _Strd(_BrainStructureModel):
+class _Strd(BrainStructureModel):
     """Model STRd"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5616,7 +5617,7 @@ class _Strd(_BrainStructureModel):
     id: Literal["485"] = "485"
 
 
-class _Strv(_BrainStructureModel):
+class _Strv(BrainStructureModel):
     """Model STRv"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5625,7 +5626,7 @@ class _Strv(_BrainStructureModel):
     id: Literal["493"] = "493"
 
 
-class _Samy(_BrainStructureModel):
+class _Samy(BrainStructureModel):
     """Model sAMY"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5634,7 +5635,7 @@ class _Samy(_BrainStructureModel):
     id: Literal["278"] = "278"
 
 
-class _Slc(_BrainStructureModel):
+class _Slc(BrainStructureModel):
     """Model SLC"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5643,7 +5644,7 @@ class _Slc(_BrainStructureModel):
     id: Literal["350"] = "350"
 
 
-class _Sco(_BrainStructureModel):
+class _Sco(BrainStructureModel):
     """Model SCO"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5652,7 +5653,7 @@ class _Sco(_BrainStructureModel):
     id: Literal["599626923"] = "599626923"
 
 
-class _Sfo(_BrainStructureModel):
+class _Sfo(BrainStructureModel):
     """Model SFO"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5661,7 +5662,7 @@ class _Sfo(_BrainStructureModel):
     id: Literal["338"] = "338"
 
 
-class _Subg(_BrainStructureModel):
+class _Subg(BrainStructureModel):
     """Model SubG"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5670,7 +5671,7 @@ class _Subg(_BrainStructureModel):
     id: Literal["321"] = "321"
 
 
-class _Sub(_BrainStructureModel):
+class _Sub(BrainStructureModel):
     """Model SUB"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5679,7 +5680,7 @@ class _Sub(_BrainStructureModel):
     id: Literal["502"] = "502"
 
 
-class _Sld(_BrainStructureModel):
+class _Sld(BrainStructureModel):
     """Model SLD"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5688,7 +5689,7 @@ class _Sld(_BrainStructureModel):
     id: Literal["358"] = "358"
 
 
-class _Smt(_BrainStructureModel):
+class _Smt(BrainStructureModel):
     """Model SMT"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5697,7 +5698,7 @@ class _Smt(_BrainStructureModel):
     id: Literal["366"] = "366"
 
 
-class _Spa(_BrainStructureModel):
+class _Spa(BrainStructureModel):
     """Model SPA"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5706,7 +5707,7 @@ class _Spa(_BrainStructureModel):
     id: Literal["609"] = "609"
 
 
-class _Spf(_BrainStructureModel):
+class _Spf(BrainStructureModel):
     """Model SPF"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5715,7 +5716,7 @@ class _Spf(_BrainStructureModel):
     id: Literal["406"] = "406"
 
 
-class _Spfm(_BrainStructureModel):
+class _Spfm(BrainStructureModel):
     """Model SPFm"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5724,7 +5725,7 @@ class _Spfm(_BrainStructureModel):
     id: Literal["414"] = "414"
 
 
-class _Spfp(_BrainStructureModel):
+class _Spfp(BrainStructureModel):
     """Model SPFp"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5733,7 +5734,7 @@ class _Spfp(_BrainStructureModel):
     id: Literal["422"] = "422"
 
 
-class _Sbpv(_BrainStructureModel):
+class _Sbpv(BrainStructureModel):
     """Model SBPV"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5742,7 +5743,7 @@ class _Sbpv(_BrainStructureModel):
     id: Literal["347"] = "347"
 
 
-class _Si(_BrainStructureModel):
+class _Si(BrainStructureModel):
     """Model SI"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5751,7 +5752,7 @@ class _Si(_BrainStructureModel):
     id: Literal["342"] = "342"
 
 
-class _Snc(_BrainStructureModel):
+class _Snc(BrainStructureModel):
     """Model SNc"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5760,7 +5761,7 @@ class _Snc(_BrainStructureModel):
     id: Literal["374"] = "374"
 
 
-class _Snr(_BrainStructureModel):
+class _Snr(BrainStructureModel):
     """Model SNr"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5769,7 +5770,7 @@ class _Snr(_BrainStructureModel):
     id: Literal["381"] = "381"
 
 
-class _Stn(_BrainStructureModel):
+class _Stn(BrainStructureModel):
     """Model STN"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5778,7 +5779,7 @@ class _Stn(_BrainStructureModel):
     id: Literal["470"] = "470"
 
 
-class _Cs(_BrainStructureModel):
+class _Cs(BrainStructureModel):
     """Model CS"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5787,7 +5788,7 @@ class _Cs(_BrainStructureModel):
     id: Literal["679"] = "679"
 
 
-class _Scm(_BrainStructureModel):
+class _Scm(BrainStructureModel):
     """Model SCm"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5796,51 +5797,51 @@ class _Scm(_BrainStructureModel):
     id: Literal["294"] = "294"
 
 
-class _Scdg(_BrainStructureModel):
+class _Scdg(BrainStructureModel):
     """Model SCdg"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Superior colliculus, motor related, deep gray layer"] = (
         "Superior colliculus, motor related, deep gray layer"
-    ] = "Superior colliculus, motor related, deep gray layer"
+    )
     acronym: Literal["SCdg"] = "SCdg"
     id: Literal["26"] = "26"
 
 
-class _Scdw(_BrainStructureModel):
+class _Scdw(BrainStructureModel):
     """Model SCdw"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Superior colliculus, motor related, deep white layer"] = (
         "Superior colliculus, motor related, deep white layer"
-    ] = "Superior colliculus, motor related, deep white layer"
+    )
     acronym: Literal["SCdw"] = "SCdw"
     id: Literal["42"] = "42"
 
 
-class _Scig(_BrainStructureModel):
+class _Scig(BrainStructureModel):
     """Model SCig"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Superior colliculus, motor related, intermediate gray layer"] = (
         "Superior colliculus, motor related, intermediate gray layer"
-    ] = "Superior colliculus, motor related, intermediate gray layer"
+    )
     acronym: Literal["SCig"] = "SCig"
     id: Literal["10"] = "10"
 
 
-class _Sciw(_BrainStructureModel):
+class _Sciw(BrainStructureModel):
     """Model SCiw"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Superior colliculus, motor related, intermediate white layer"] = (
         "Superior colliculus, motor related, intermediate white layer"
-    ] = "Superior colliculus, motor related, intermediate white layer"
+    )
     acronym: Literal["SCiw"] = "SCiw"
     id: Literal["17"] = "17"
 
 
-class _Scop(_BrainStructureModel):
+class _Scop(BrainStructureModel):
     """Model SCop"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5849,7 +5850,7 @@ class _Scop(_BrainStructureModel):
     id: Literal["851"] = "851"
 
 
-class _Scs(_BrainStructureModel):
+class _Scs(BrainStructureModel):
     """Model SCs"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5858,7 +5859,7 @@ class _Scs(_BrainStructureModel):
     id: Literal["302"] = "302"
 
 
-class _Scsg(_BrainStructureModel):
+class _Scsg(BrainStructureModel):
     """Model SCsg"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5867,7 +5868,7 @@ class _Scsg(_BrainStructureModel):
     id: Literal["842"] = "842"
 
 
-class _Sczo(_BrainStructureModel):
+class _Sczo(BrainStructureModel):
     """Model SCzo"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5876,7 +5877,7 @@ class _Sczo(_BrainStructureModel):
     id: Literal["834"] = "834"
 
 
-class _Soc(_BrainStructureModel):
+class _Soc(BrainStructureModel):
     """Model SOC"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5885,7 +5886,7 @@ class _Soc(_BrainStructureModel):
     id: Literal["398"] = "398"
 
 
-class _Socl(_BrainStructureModel):
+class _Socl(BrainStructureModel):
     """Model SOCl"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5894,7 +5895,7 @@ class _Socl(_BrainStructureModel):
     id: Literal["114"] = "114"
 
 
-class _Socm(_BrainStructureModel):
+class _Socm(BrainStructureModel):
     """Model SOCm"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5903,7 +5904,7 @@ class _Socm(_BrainStructureModel):
     id: Literal["105"] = "105"
 
 
-class _Por(_BrainStructureModel):
+class _Por(BrainStructureModel):
     """Model POR"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5912,7 +5913,7 @@ class _Por(_BrainStructureModel):
     id: Literal["122"] = "122"
 
 
-class _Suv(_BrainStructureModel):
+class _Suv(BrainStructureModel):
     """Model SUV"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5921,7 +5922,7 @@ class _Suv(_BrainStructureModel):
     id: Literal["217"] = "217"
 
 
-class _Sss(_BrainStructureModel):
+class _Sss(BrainStructureModel):
     """Model SSs"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5930,7 +5931,7 @@ class _Sss(_BrainStructureModel):
     id: Literal["378"] = "378"
 
 
-class _Sss1(_BrainStructureModel):
+class _Sss1(BrainStructureModel):
     """Model SSs1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5939,7 +5940,7 @@ class _Sss1(_BrainStructureModel):
     id: Literal["873"] = "873"
 
 
-class _Sss2_3(_BrainStructureModel):
+class _Sss2_3(BrainStructureModel):
     """Model SSs2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5948,7 +5949,7 @@ class _Sss2_3(_BrainStructureModel):
     id: Literal["806"] = "806"
 
 
-class _Sss4(_BrainStructureModel):
+class _Sss4(BrainStructureModel):
     """Model SSs4"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5957,7 +5958,7 @@ class _Sss4(_BrainStructureModel):
     id: Literal["1035"] = "1035"
 
 
-class _Sss5(_BrainStructureModel):
+class _Sss5(BrainStructureModel):
     """Model SSs5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5966,7 +5967,7 @@ class _Sss5(_BrainStructureModel):
     id: Literal["1090"] = "1090"
 
 
-class _Sss6A(_BrainStructureModel):
+class _Sss6A(BrainStructureModel):
     """Model SSs6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5975,7 +5976,7 @@ class _Sss6A(_BrainStructureModel):
     id: Literal["862"] = "862"
 
 
-class _Sss6B(_BrainStructureModel):
+class _Sss6B(BrainStructureModel):
     """Model SSs6b"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5984,7 +5985,7 @@ class _Sss6B(_BrainStructureModel):
     id: Literal["893"] = "893"
 
 
-class _Sch(_BrainStructureModel):
+class _Sch(BrainStructureModel):
     """Model SCH"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -5993,7 +5994,7 @@ class _Sch(_BrainStructureModel):
     id: Literal["286"] = "286"
 
 
-class _Sgn(_BrainStructureModel):
+class _Sgn(BrainStructureModel):
     """Model SGN"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6002,7 +6003,7 @@ class _Sgn(_BrainStructureModel):
     id: Literal["325"] = "325"
 
 
-class _Sg(_BrainStructureModel):
+class _Sg(BrainStructureModel):
     """Model SG"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6011,7 +6012,7 @@ class _Sg(_BrainStructureModel):
     id: Literal["318"] = "318"
 
 
-class _Sum(_BrainStructureModel):
+class _Sum(BrainStructureModel):
     """Model SUM"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6020,7 +6021,7 @@ class _Sum(_BrainStructureModel):
     id: Literal["525"] = "525"
 
 
-class _Su3(_BrainStructureModel):
+class _Su3(BrainStructureModel):
     """Model Su3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6029,7 +6030,7 @@ class _Su3(_BrainStructureModel):
     id: Literal["614454277"] = "614454277"
 
 
-class _So(_BrainStructureModel):
+class _So(BrainStructureModel):
     """Model SO"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6038,7 +6039,7 @@ class _So(_BrainStructureModel):
     id: Literal["390"] = "390"
 
 
-class _Sut(_BrainStructureModel):
+class _Sut(BrainStructureModel):
     """Model SUT"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6047,7 +6048,7 @@ class _Sut(_BrainStructureModel):
     id: Literal["534"] = "534"
 
 
-class _Tt(_BrainStructureModel):
+class _Tt(BrainStructureModel):
     """Model TT"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6056,7 +6057,7 @@ class _Tt(_BrainStructureModel):
     id: Literal["589"] = "589"
 
 
-class _Ttd(_BrainStructureModel):
+class _Ttd(BrainStructureModel):
     """Model TTd"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6065,7 +6066,7 @@ class _Ttd(_BrainStructureModel):
     id: Literal["597"] = "597"
 
 
-class _Ttv(_BrainStructureModel):
+class _Ttv(BrainStructureModel):
     """Model TTv"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6074,7 +6075,7 @@ class _Ttv(_BrainStructureModel):
     id: Literal["605"] = "605"
 
 
-class _Trn(_BrainStructureModel):
+class _Trn(BrainStructureModel):
     """Model TRN"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6083,7 +6084,7 @@ class _Trn(_BrainStructureModel):
     id: Literal["574"] = "574"
 
 
-class _Tea(_BrainStructureModel):
+class _Tea(BrainStructureModel):
     """Model TEa"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6092,7 +6093,7 @@ class _Tea(_BrainStructureModel):
     id: Literal["541"] = "541"
 
 
-class _Tea1(_BrainStructureModel):
+class _Tea1(BrainStructureModel):
     """Model TEa1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6101,7 +6102,7 @@ class _Tea1(_BrainStructureModel):
     id: Literal["97"] = "97"
 
 
-class _Tea2_3(_BrainStructureModel):
+class _Tea2_3(BrainStructureModel):
     """Model TEa2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6110,7 +6111,7 @@ class _Tea2_3(_BrainStructureModel):
     id: Literal["1127"] = "1127"
 
 
-class _Tea4(_BrainStructureModel):
+class _Tea4(BrainStructureModel):
     """Model TEa4"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6119,7 +6120,7 @@ class _Tea4(_BrainStructureModel):
     id: Literal["234"] = "234"
 
 
-class _Tea5(_BrainStructureModel):
+class _Tea5(BrainStructureModel):
     """Model TEa5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6128,7 +6129,7 @@ class _Tea5(_BrainStructureModel):
     id: Literal["289"] = "289"
 
 
-class _Tea6A(_BrainStructureModel):
+class _Tea6A(BrainStructureModel):
     """Model TEa6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6137,7 +6138,7 @@ class _Tea6A(_BrainStructureModel):
     id: Literal["729"] = "729"
 
 
-class _Tea6B(_BrainStructureModel):
+class _Tea6B(BrainStructureModel):
     """Model TEa6b"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6146,7 +6147,7 @@ class _Tea6B(_BrainStructureModel):
     id: Literal["786"] = "786"
 
 
-class _Th(_BrainStructureModel):
+class _Th(BrainStructureModel):
     """Model TH"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6155,7 +6156,7 @@ class _Th(_BrainStructureModel):
     id: Literal["549"] = "549"
 
 
-class _Dorpm(_BrainStructureModel):
+class _Dorpm(BrainStructureModel):
     """Model DORpm"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6164,7 +6165,7 @@ class _Dorpm(_BrainStructureModel):
     id: Literal["856"] = "856"
 
 
-class _Dorsm(_BrainStructureModel):
+class _Dorsm(BrainStructureModel):
     """Model DORsm"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6173,7 +6174,7 @@ class _Dorsm(_BrainStructureModel):
     id: Literal["864"] = "864"
 
 
-class _Trs(_BrainStructureModel):
+class _Trs(BrainStructureModel):
     """Model TRS"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6182,7 +6183,7 @@ class _Trs(_BrainStructureModel):
     id: Literal["581"] = "581"
 
 
-class _Iv(_BrainStructureModel):
+class _Iv(BrainStructureModel):
     """Model IV"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6191,7 +6192,7 @@ class _Iv(_BrainStructureModel):
     id: Literal["115"] = "115"
 
 
-class _Tu(_BrainStructureModel):
+class _Tu(BrainStructureModel):
     """Model TU"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6200,7 +6201,7 @@ class _Tu(_BrainStructureModel):
     id: Literal["614"] = "614"
 
 
-class _Tm(_BrainStructureModel):
+class _Tm(BrainStructureModel):
     """Model TM"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6209,7 +6210,7 @@ class _Tm(_BrainStructureModel):
     id: Literal["557"] = "557"
 
 
-class _Tmd(_BrainStructureModel):
+class _Tmd(BrainStructureModel):
     """Model TMd"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6218,7 +6219,7 @@ class _Tmd(_BrainStructureModel):
     id: Literal["1126"] = "1126"
 
 
-class _Tmv(_BrainStructureModel):
+class _Tmv(BrainStructureModel):
     """Model TMv"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6227,7 +6228,7 @@ class _Tmv(_BrainStructureModel):
     id: Literal["1"] = "1"
 
 
-class _Uvu(_BrainStructureModel):
+class _Uvu(BrainStructureModel):
     """Model UVU"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6236,7 +6237,7 @@ class _Uvu(_BrainStructureModel):
     id: Literal["957"] = "957"
 
 
-class _Ov(_BrainStructureModel):
+class _Ov(BrainStructureModel):
     """Model OV"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6245,18 +6246,18 @@ class _Ov(_BrainStructureModel):
     id: Literal["763"] = "763"
 
 
-class _Val(_BrainStructureModel):
+class _Val(BrainStructureModel):
     """Model VAL"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Ventral anterior-lateral complex of the thalamus"] = (
         "Ventral anterior-lateral complex of the thalamus"
-    ] = "Ventral anterior-lateral complex of the thalamus"
+    )
     acronym: Literal["VAL"] = "VAL"
     id: Literal["629"] = "629"
 
 
-class _Audv(_BrainStructureModel):
+class _Audv(BrainStructureModel):
     """Model AUDv"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6265,7 +6266,7 @@ class _Audv(_BrainStructureModel):
     id: Literal["1018"] = "1018"
 
 
-class _Audv1(_BrainStructureModel):
+class _Audv1(BrainStructureModel):
     """Model AUDv1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6274,7 +6275,7 @@ class _Audv1(_BrainStructureModel):
     id: Literal["959"] = "959"
 
 
-class _Audv2_3(_BrainStructureModel):
+class _Audv2_3(BrainStructureModel):
     """Model AUDv2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6283,7 +6284,7 @@ class _Audv2_3(_BrainStructureModel):
     id: Literal["755"] = "755"
 
 
-class _Audv4(_BrainStructureModel):
+class _Audv4(BrainStructureModel):
     """Model AUDv4"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6292,7 +6293,7 @@ class _Audv4(_BrainStructureModel):
     id: Literal["990"] = "990"
 
 
-class _Audv5(_BrainStructureModel):
+class _Audv5(BrainStructureModel):
     """Model AUDv5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6301,7 +6302,7 @@ class _Audv5(_BrainStructureModel):
     id: Literal["1023"] = "1023"
 
 
-class _Audv6A(_BrainStructureModel):
+class _Audv6A(BrainStructureModel):
     """Model AUDv6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6310,7 +6311,7 @@ class _Audv6A(_BrainStructureModel):
     id: Literal["520"] = "520"
 
 
-class _Audv6B(_BrainStructureModel):
+class _Audv6B(BrainStructureModel):
     """Model AUDv6b"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6319,7 +6320,7 @@ class _Audv6B(_BrainStructureModel):
     id: Literal["598"] = "598"
 
 
-class _Vco(_BrainStructureModel):
+class _Vco(BrainStructureModel):
     """Model VCO"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6328,7 +6329,7 @@ class _Vco(_BrainStructureModel):
     id: Literal["101"] = "101"
 
 
-class _Vent(_BrainStructureModel):
+class _Vent(BrainStructureModel):
     """Model VENT"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6337,7 +6338,7 @@ class _Vent(_BrainStructureModel):
     id: Literal["637"] = "637"
 
 
-class _Vm(_BrainStructureModel):
+class _Vm(BrainStructureModel):
     """Model VM"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6346,7 +6347,7 @@ class _Vm(_BrainStructureModel):
     id: Literal["685"] = "685"
 
 
-class _Lgv(_BrainStructureModel):
+class _Lgv(BrainStructureModel):
     """Model LGv"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6355,7 +6356,7 @@ class _Lgv(_BrainStructureModel):
     id: Literal["178"] = "178"
 
 
-class _Vp(_BrainStructureModel):
+class _Vp(BrainStructureModel):
     """Model VP"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6364,7 +6365,7 @@ class _Vp(_BrainStructureModel):
     id: Literal["709"] = "709"
 
 
-class _Vpl(_BrainStructureModel):
+class _Vpl(BrainStructureModel):
     """Model VPL"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6373,18 +6374,18 @@ class _Vpl(_BrainStructureModel):
     id: Literal["718"] = "718"
 
 
-class _Vplpc(_BrainStructureModel):
+class _Vplpc(BrainStructureModel):
     """Model VPLpc"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Ventral posterolateral nucleus of the thalamus, parvicellular part"] = (
         "Ventral posterolateral nucleus of the thalamus, parvicellular part"
-    ] = "Ventral posterolateral nucleus of the thalamus, parvicellular part"
+    )
     acronym: Literal["VPLpc"] = "VPLpc"
     id: Literal["725"] = "725"
 
 
-class _Vpm(_BrainStructureModel):
+class _Vpm(BrainStructureModel):
     """Model VPM"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6393,18 +6394,18 @@ class _Vpm(_BrainStructureModel):
     id: Literal["733"] = "733"
 
 
-class _Vpmpc(_BrainStructureModel):
+class _Vpmpc(BrainStructureModel):
     """Model VPMpc"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal[
+    name: Literal["Ventral posteromedial nucleus of the thalamus, parvicellular part"] = (
         "Ventral posteromedial nucleus of the thalamus, parvicellular part"
-    ] = "Ventral posteromedial nucleus of the thalamus, parvicellular part"
+    )
     acronym: Literal["VPMpc"] = "VPMpc"
     id: Literal["741"] = "741"
 
 
-class _Pmv(_BrainStructureModel):
+class _Pmv(BrainStructureModel):
     """Model PMv"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6413,7 +6414,7 @@ class _Pmv(_BrainStructureModel):
     id: Literal["1004"] = "1004"
 
 
-class _Vta(_BrainStructureModel):
+class _Vta(BrainStructureModel):
     """Model VTA"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6422,7 +6423,7 @@ class _Vta(_BrainStructureModel):
     id: Literal["749"] = "749"
 
 
-class _Vtn(_BrainStructureModel):
+class _Vtn(BrainStructureModel):
     """Model VTN"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6431,7 +6432,7 @@ class _Vtn(_BrainStructureModel):
     id: Literal["757"] = "757"
 
 
-class _Vlpo(_BrainStructureModel):
+class _Vlpo(BrainStructureModel):
     """Model VLPO"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6440,7 +6441,7 @@ class _Vlpo(_BrainStructureModel):
     id: Literal["689"] = "689"
 
 
-class _Vmh(_BrainStructureModel):
+class _Vmh(BrainStructureModel):
     """Model VMH"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6449,7 +6450,7 @@ class _Vmh(_BrainStructureModel):
     id: Literal["693"] = "693"
 
 
-class _Vmpo(_BrainStructureModel):
+class _Vmpo(BrainStructureModel):
     """Model VMPO"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6458,7 +6459,7 @@ class _Vmpo(_BrainStructureModel):
     id: Literal["576073699"] = "576073699"
 
 
-class _Verm(_BrainStructureModel):
+class _Verm(BrainStructureModel):
     """Model VERM"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6467,7 +6468,7 @@ class _Verm(_BrainStructureModel):
     id: Literal["645"] = "645"
 
 
-class _Vnc(_BrainStructureModel):
+class _Vnc(BrainStructureModel):
     """Model VNC"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6476,7 +6477,7 @@ class _Vnc(_BrainStructureModel):
     id: Literal["701"] = "701"
 
 
-class _Vecb(_BrainStructureModel):
+class _Vecb(BrainStructureModel):
     """Model VeCB"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6485,7 +6486,7 @@ class _Vecb(_BrainStructureModel):
     id: Literal["589508455"] = "589508455"
 
 
-class _Visc(_BrainStructureModel):
+class _Visc(BrainStructureModel):
     """Model VISC"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6494,7 +6495,7 @@ class _Visc(_BrainStructureModel):
     id: Literal["677"] = "677"
 
 
-class _Visc1(_BrainStructureModel):
+class _Visc1(BrainStructureModel):
     """Model VISC1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6503,7 +6504,7 @@ class _Visc1(_BrainStructureModel):
     id: Literal["897"] = "897"
 
 
-class _Visc2_3(_BrainStructureModel):
+class _Visc2_3(BrainStructureModel):
     """Model VISC2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6512,7 +6513,7 @@ class _Visc2_3(_BrainStructureModel):
     id: Literal["1106"] = "1106"
 
 
-class _Visc4(_BrainStructureModel):
+class _Visc4(BrainStructureModel):
     """Model VISC4"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6521,7 +6522,7 @@ class _Visc4(_BrainStructureModel):
     id: Literal["1010"] = "1010"
 
 
-class _Visc5(_BrainStructureModel):
+class _Visc5(BrainStructureModel):
     """Model VISC5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6530,7 +6531,7 @@ class _Visc5(_BrainStructureModel):
     id: Literal["1058"] = "1058"
 
 
-class _Visc6A(_BrainStructureModel):
+class _Visc6A(BrainStructureModel):
     """Model VISC6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6539,7 +6540,7 @@ class _Visc6A(_BrainStructureModel):
     id: Literal["857"] = "857"
 
 
-class _Visc6B(_BrainStructureModel):
+class _Visc6B(BrainStructureModel):
     """Model VISC6b"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6548,7 +6549,7 @@ class _Visc6B(_BrainStructureModel):
     id: Literal["849"] = "849"
 
 
-class _Vis(_BrainStructureModel):
+class _Vis(BrainStructureModel):
     """Model VIS"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6557,7 +6558,7 @@ class _Vis(_BrainStructureModel):
     id: Literal["669"] = "669"
 
 
-class _Xi(_BrainStructureModel):
+class _Xi(BrainStructureModel):
     """Model Xi"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6566,7 +6567,7 @@ class _Xi(_BrainStructureModel):
     id: Literal["560581559"] = "560581559"
 
 
-class _Zi(_BrainStructureModel):
+class _Zi(BrainStructureModel):
     """Model ZI"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6575,7 +6576,7 @@ class _Zi(_BrainStructureModel):
     id: Literal["797"] = "797"
 
 
-class _Alv(_BrainStructureModel):
+class _Alv(BrainStructureModel):
     """Model alv"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6584,7 +6585,7 @@ class _Alv(_BrainStructureModel):
     id: Literal["466"] = "466"
 
 
-class _Amc(_BrainStructureModel):
+class _Amc(BrainStructureModel):
     """Model amc"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6593,7 +6594,7 @@ class _Amc(_BrainStructureModel):
     id: Literal["884"] = "884"
 
 
-class _Aco(_BrainStructureModel):
+class _Aco(BrainStructureModel):
     """Model aco"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6602,7 +6603,7 @@ class _Aco(_BrainStructureModel):
     id: Literal["900"] = "900"
 
 
-class _Act(_BrainStructureModel):
+class _Act(BrainStructureModel):
     """Model act"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6611,7 +6612,7 @@ class _Act(_BrainStructureModel):
     id: Literal["908"] = "908"
 
 
-class _Arb(_BrainStructureModel):
+class _Arb(BrainStructureModel):
     """Model arb"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6620,7 +6621,7 @@ class _Arb(_BrainStructureModel):
     id: Literal["728"] = "728"
 
 
-class _Ar(_BrainStructureModel):
+class _Ar(BrainStructureModel):
     """Model ar"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6629,7 +6630,7 @@ class _Ar(_BrainStructureModel):
     id: Literal["484682524"] = "484682524"
 
 
-class _Bic(_BrainStructureModel):
+class _Bic(BrainStructureModel):
     """Model bic"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6638,7 +6639,7 @@ class _Bic(_BrainStructureModel):
     id: Literal["482"] = "482"
 
 
-class _Bsc(_BrainStructureModel):
+class _Bsc(BrainStructureModel):
     """Model bsc"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6647,7 +6648,7 @@ class _Bsc(_BrainStructureModel):
     id: Literal["916"] = "916"
 
 
-class _C(_BrainStructureModel):
+class _C(BrainStructureModel):
     """Model c"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6656,7 +6657,7 @@ class _C(_BrainStructureModel):
     id: Literal["164"] = "164"
 
 
-class _Cpd(_BrainStructureModel):
+class _Cpd(BrainStructureModel):
     """Model cpd"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6665,7 +6666,7 @@ class _Cpd(_BrainStructureModel):
     id: Literal["924"] = "924"
 
 
-class _Cbc(_BrainStructureModel):
+class _Cbc(BrainStructureModel):
     """Model cbc"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6674,7 +6675,7 @@ class _Cbc(_BrainStructureModel):
     id: Literal["744"] = "744"
 
 
-class _Cbp(_BrainStructureModel):
+class _Cbp(BrainStructureModel):
     """Model cbp"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6683,7 +6684,7 @@ class _Cbp(_BrainStructureModel):
     id: Literal["752"] = "752"
 
 
-class _Cbf(_BrainStructureModel):
+class _Cbf(BrainStructureModel):
     """Model cbf"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6692,7 +6693,7 @@ class _Cbf(_BrainStructureModel):
     id: Literal["960"] = "960"
 
 
-class _Aq(_BrainStructureModel):
+class _Aq(BrainStructureModel):
     """Model AQ"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6701,7 +6702,7 @@ class _Aq(_BrainStructureModel):
     id: Literal["140"] = "140"
 
 
-class _Epsc(_BrainStructureModel):
+class _Epsc(BrainStructureModel):
     """Model epsc"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6710,7 +6711,7 @@ class _Epsc(_BrainStructureModel):
     id: Literal["760"] = "760"
 
 
-class _Mfbc(_BrainStructureModel):
+class _Mfbc(BrainStructureModel):
     """Model mfbc"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6719,7 +6720,7 @@ class _Mfbc(_BrainStructureModel):
     id: Literal["768"] = "768"
 
 
-class _Cett(_BrainStructureModel):
+class _Cett(BrainStructureModel):
     """Model cett"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6728,7 +6729,7 @@ class _Cett(_BrainStructureModel):
     id: Literal["932"] = "932"
 
 
-class _Chpl(_BrainStructureModel):
+class _Chpl(BrainStructureModel):
     """Model chpl"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6737,7 +6738,7 @@ class _Chpl(_BrainStructureModel):
     id: Literal["108"] = "108"
 
 
-class _Cing(_BrainStructureModel):
+class _Cing(BrainStructureModel):
     """Model cing"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6746,7 +6747,7 @@ class _Cing(_BrainStructureModel):
     id: Literal["940"] = "940"
 
 
-class _Cviiin(_BrainStructureModel):
+class _Cviiin(BrainStructureModel):
     """Model cVIIIn"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6755,7 +6756,7 @@ class _Cviiin(_BrainStructureModel):
     id: Literal["948"] = "948"
 
 
-class _Fx(_BrainStructureModel):
+class _Fx(BrainStructureModel):
     """Model fx"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6764,7 +6765,7 @@ class _Fx(_BrainStructureModel):
     id: Literal["436"] = "436"
 
 
-class _Stc(_BrainStructureModel):
+class _Stc(BrainStructureModel):
     """Model stc"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6773,7 +6774,7 @@ class _Stc(_BrainStructureModel):
     id: Literal["484682528"] = "484682528"
 
 
-class _Cc(_BrainStructureModel):
+class _Cc(BrainStructureModel):
     """Model cc"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6782,7 +6783,7 @@ class _Cc(_BrainStructureModel):
     id: Literal["776"] = "776"
 
 
-class _Fa(_BrainStructureModel):
+class _Fa(BrainStructureModel):
     """Model fa"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6791,7 +6792,7 @@ class _Fa(_BrainStructureModel):
     id: Literal["956"] = "956"
 
 
-class _Ccb(_BrainStructureModel):
+class _Ccb(BrainStructureModel):
     """Model ccb"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6800,7 +6801,7 @@ class _Ccb(_BrainStructureModel):
     id: Literal["484682516"] = "484682516"
 
 
-class _Ee(_BrainStructureModel):
+class _Ee(BrainStructureModel):
     """Model ee"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6809,7 +6810,7 @@ class _Ee(_BrainStructureModel):
     id: Literal["964"] = "964"
 
 
-class _Fp(_BrainStructureModel):
+class _Fp(BrainStructureModel):
     """Model fp"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6818,7 +6819,7 @@ class _Fp(_BrainStructureModel):
     id: Literal["971"] = "971"
 
 
-class _Ccs(_BrainStructureModel):
+class _Ccs(BrainStructureModel):
     """Model ccs"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6827,7 +6828,7 @@ class _Ccs(_BrainStructureModel):
     id: Literal["986"] = "986"
 
 
-class _Cst(_BrainStructureModel):
+class _Cst(BrainStructureModel):
     """Model cst"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6836,7 +6837,7 @@ class _Cst(_BrainStructureModel):
     id: Literal["784"] = "784"
 
 
-class _Cne(_BrainStructureModel):
+class _Cne(BrainStructureModel):
     """Model cne"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6845,7 +6846,7 @@ class _Cne(_BrainStructureModel):
     id: Literal["967"] = "967"
 
 
-class _Tspc(_BrainStructureModel):
+class _Tspc(BrainStructureModel):
     """Model tspc"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6854,7 +6855,7 @@ class _Tspc(_BrainStructureModel):
     id: Literal["1043"] = "1043"
 
 
-class _Cuf(_BrainStructureModel):
+class _Cuf(BrainStructureModel):
     """Model cuf"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6863,7 +6864,7 @@ class _Cuf(_BrainStructureModel):
     id: Literal["380"] = "380"
 
 
-class _Tspd(_BrainStructureModel):
+class _Tspd(BrainStructureModel):
     """Model tspd"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6872,7 +6873,7 @@ class _Tspd(_BrainStructureModel):
     id: Literal["1051"] = "1051"
 
 
-class _Dtd(_BrainStructureModel):
+class _Dtd(BrainStructureModel):
     """Model dtd"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6881,7 +6882,7 @@ class _Dtd(_BrainStructureModel):
     id: Literal["1060"] = "1060"
 
 
-class _Das(_BrainStructureModel):
+class _Das(BrainStructureModel):
     """Model das"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6890,7 +6891,7 @@ class _Das(_BrainStructureModel):
     id: Literal["506"] = "506"
 
 
-class _Dc(_BrainStructureModel):
+class _Dc(BrainStructureModel):
     """Model dc"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6899,7 +6900,7 @@ class _Dc(_BrainStructureModel):
     id: Literal["514"] = "514"
 
 
-class _Df(_BrainStructureModel):
+class _Df(BrainStructureModel):
     """Model df"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6908,7 +6909,7 @@ class _Df(_BrainStructureModel):
     id: Literal["530"] = "530"
 
 
-class _Dhc(_BrainStructureModel):
+class _Dhc(BrainStructureModel):
     """Model dhc"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6917,7 +6918,7 @@ class _Dhc(_BrainStructureModel):
     id: Literal["443"] = "443"
 
 
-class _Lotd(_BrainStructureModel):
+class _Lotd(BrainStructureModel):
     """Model lotd"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6926,7 +6927,7 @@ class _Lotd(_BrainStructureModel):
     id: Literal["538"] = "538"
 
 
-class _Drt(_BrainStructureModel):
+class _Drt(BrainStructureModel):
     """Model drt"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6935,7 +6936,7 @@ class _Drt(_BrainStructureModel):
     id: Literal["792"] = "792"
 
 
-class _Sctd(_BrainStructureModel):
+class _Sctd(BrainStructureModel):
     """Model sctd"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6944,7 +6945,7 @@ class _Sctd(_BrainStructureModel):
     id: Literal["553"] = "553"
 
 
-class _Mfbse(_BrainStructureModel):
+class _Mfbse(BrainStructureModel):
     """Model mfbse"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6953,7 +6954,7 @@ class _Mfbse(_BrainStructureModel):
     id: Literal["1083"] = "1083"
 
 
-class _Ec(_BrainStructureModel):
+class _Ec(BrainStructureModel):
     """Model ec"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6962,7 +6963,7 @@ class _Ec(_BrainStructureModel):
     id: Literal["579"] = "579"
 
 
-class _Em(_BrainStructureModel):
+class _Em(BrainStructureModel):
     """Model em"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6971,7 +6972,7 @@ class _Em(_BrainStructureModel):
     id: Literal["1092"] = "1092"
 
 
-class _Eps(_BrainStructureModel):
+class _Eps(BrainStructureModel):
     """Model eps"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6980,7 +6981,7 @@ class _Eps(_BrainStructureModel):
     id: Literal["1000"] = "1000"
 
 
-class _Viin(_BrainStructureModel):
+class _Viin(BrainStructureModel):
     """Model VIIn"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6989,7 +6990,7 @@ class _Viin(_BrainStructureModel):
     id: Literal["798"] = "798"
 
 
-class _Fr(_BrainStructureModel):
+class _Fr(BrainStructureModel):
     """Model fr"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -6998,7 +6999,7 @@ class _Fr(_BrainStructureModel):
     id: Literal["595"] = "595"
 
 
-class _Fiber_Tracts(_BrainStructureModel):
+class _Fiber_Tracts(BrainStructureModel):
     """Model fiber tracts"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7007,7 +7008,7 @@ class _Fiber_Tracts(_BrainStructureModel):
     id: Literal["1009"] = "1009"
 
 
-class _Fi(_BrainStructureModel):
+class _Fi(BrainStructureModel):
     """Model fi"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7016,7 +7017,7 @@ class _Fi(_BrainStructureModel):
     id: Literal["603"] = "603"
 
 
-class _Fxs(_BrainStructureModel):
+class _Fxs(BrainStructureModel):
     """Model fxs"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7025,7 +7026,7 @@ class _Fxs(_BrainStructureModel):
     id: Literal["1099"] = "1099"
 
 
-class _V4(_BrainStructureModel):
+class _V4(BrainStructureModel):
     """Model V4"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7034,7 +7035,7 @@ class _V4(_BrainStructureModel):
     id: Literal["145"] = "145"
 
 
-class _Ccg(_BrainStructureModel):
+class _Ccg(BrainStructureModel):
     """Model ccg"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7043,7 +7044,7 @@ class _Ccg(_BrainStructureModel):
     id: Literal["1108"] = "1108"
 
 
-class _Gviin(_BrainStructureModel):
+class _Gviin(BrainStructureModel):
     """Model gVIIn"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7052,7 +7053,7 @@ class _Gviin(_BrainStructureModel):
     id: Literal["1116"] = "1116"
 
 
-class _Hbc(_BrainStructureModel):
+class _Hbc(BrainStructureModel):
     """Model hbc"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7061,7 +7062,7 @@ class _Hbc(_BrainStructureModel):
     id: Literal["611"] = "611"
 
 
-class _Hc(_BrainStructureModel):
+class _Hc(BrainStructureModel):
     """Model hc"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7070,7 +7071,7 @@ class _Hc(_BrainStructureModel):
     id: Literal["618"] = "618"
 
 
-class _Mfsbshy(_BrainStructureModel):
+class _Mfsbshy(BrainStructureModel):
     """Model mfsbshy"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7079,7 +7080,7 @@ class _Mfsbshy(_BrainStructureModel):
     id: Literal["824"] = "824"
 
 
-class _Icp(_BrainStructureModel):
+class _Icp(BrainStructureModel):
     """Model icp"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7088,7 +7089,7 @@ class _Icp(_BrainStructureModel):
     id: Literal["1123"] = "1123"
 
 
-class _Cic(_BrainStructureModel):
+class _Cic(BrainStructureModel):
     """Model cic"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7097,7 +7098,7 @@ class _Cic(_BrainStructureModel):
     id: Literal["633"] = "633"
 
 
-class _Int(_BrainStructureModel):
+class _Int(BrainStructureModel):
     """Model int"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7106,7 +7107,7 @@ class _Int(_BrainStructureModel):
     id: Literal["6"] = "6"
 
 
-class _Lfbs(_BrainStructureModel):
+class _Lfbs(BrainStructureModel):
     """Model lfbs"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7115,7 +7116,7 @@ class _Lfbs(_BrainStructureModel):
     id: Literal["983"] = "983"
 
 
-class _Ll(_BrainStructureModel):
+class _Ll(BrainStructureModel):
     """Model ll"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7124,7 +7125,7 @@ class _Ll(_BrainStructureModel):
     id: Literal["658"] = "658"
 
 
-class _Lot(_BrainStructureModel):
+class _Lot(BrainStructureModel):
     """Model lot"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7133,7 +7134,7 @@ class _Lot(_BrainStructureModel):
     id: Literal["665"] = "665"
 
 
-class _Lotg(_BrainStructureModel):
+class _Lotg(BrainStructureModel):
     """Model lotg"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7142,7 +7143,7 @@ class _Lotg(_BrainStructureModel):
     id: Literal["21"] = "21"
 
 
-class _V4R(_BrainStructureModel):
+class _V4R(BrainStructureModel):
     """Model V4r"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7151,7 +7152,7 @@ class _V4R(_BrainStructureModel):
     id: Literal["153"] = "153"
 
 
-class _Vl(_BrainStructureModel):
+class _Vl(BrainStructureModel):
     """Model VL"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7160,7 +7161,7 @@ class _Vl(_BrainStructureModel):
     id: Literal["81"] = "81"
 
 
-class _Mp(_BrainStructureModel):
+class _Mp(BrainStructureModel):
     """Model mp"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7169,7 +7170,7 @@ class _Mp(_BrainStructureModel):
     id: Literal["673"] = "673"
 
 
-class _Mfbsma(_BrainStructureModel):
+class _Mfbsma(BrainStructureModel):
     """Model mfbsma"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7178,7 +7179,7 @@ class _Mfbsma(_BrainStructureModel):
     id: Literal["46"] = "46"
 
 
-class _Mtg(_BrainStructureModel):
+class _Mtg(BrainStructureModel):
     """Model mtg"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7187,7 +7188,7 @@ class _Mtg(_BrainStructureModel):
     id: Literal["681"] = "681"
 
 
-class _Mtt(_BrainStructureModel):
+class _Mtt(BrainStructureModel):
     """Model mtt"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7196,7 +7197,7 @@ class _Mtt(_BrainStructureModel):
     id: Literal["690"] = "690"
 
 
-class _Mct(_BrainStructureModel):
+class _Mct(BrainStructureModel):
     """Model mct"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7205,7 +7206,7 @@ class _Mct(_BrainStructureModel):
     id: Literal["428"] = "428"
 
 
-class _Mfb(_BrainStructureModel):
+class _Mfb(BrainStructureModel):
     """Model mfb"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7214,7 +7215,7 @@ class _Mfb(_BrainStructureModel):
     id: Literal["54"] = "54"
 
 
-class _Mfbs(_BrainStructureModel):
+class _Mfbs(BrainStructureModel):
     """Model mfbs"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7223,7 +7224,7 @@ class _Mfbs(_BrainStructureModel):
     id: Literal["991"] = "991"
 
 
-class _Ml(_BrainStructureModel):
+class _Ml(BrainStructureModel):
     """Model ml"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7232,7 +7233,7 @@ class _Ml(_BrainStructureModel):
     id: Literal["697"] = "697"
 
 
-class _Mlf(_BrainStructureModel):
+class _Mlf(BrainStructureModel):
     """Model mlf"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7241,7 +7242,7 @@ class _Mlf(_BrainStructureModel):
     id: Literal["62"] = "62"
 
 
-class _Mcp(_BrainStructureModel):
+class _Mcp(BrainStructureModel):
     """Model mcp"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7250,7 +7251,7 @@ class _Mcp(_BrainStructureModel):
     id: Literal["78"] = "78"
 
 
-class _Mov(_BrainStructureModel):
+class _Mov(BrainStructureModel):
     """Model moV"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7259,7 +7260,7 @@ class _Mov(_BrainStructureModel):
     id: Literal["93"] = "93"
 
 
-class _Nst(_BrainStructureModel):
+class _Nst(BrainStructureModel):
     """Model nst"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7268,7 +7269,7 @@ class _Nst(_BrainStructureModel):
     id: Literal["102"] = "102"
 
 
-class _Iiin(_BrainStructureModel):
+class _Iiin(BrainStructureModel):
     """Model IIIn"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7277,7 +7278,7 @@ class _Iiin(_BrainStructureModel):
     id: Literal["832"] = "832"
 
 
-class _In(_BrainStructureModel):
+class _In(BrainStructureModel):
     """Model In"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7286,7 +7287,7 @@ class _In(_BrainStructureModel):
     id: Literal["840"] = "840"
 
 
-class _Onl(_BrainStructureModel):
+class _Onl(BrainStructureModel):
     """Model onl"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7295,7 +7296,7 @@ class _Onl(_BrainStructureModel):
     id: Literal["1016"] = "1016"
 
 
-class _Och(_BrainStructureModel):
+class _Och(BrainStructureModel):
     """Model och"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7304,7 +7305,7 @@ class _Och(_BrainStructureModel):
     id: Literal["117"] = "117"
 
 
-class _Iin(_BrainStructureModel):
+class _Iin(BrainStructureModel):
     """Model IIn"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7313,7 +7314,7 @@ class _Iin(_BrainStructureModel):
     id: Literal["848"] = "848"
 
 
-class _Or(_BrainStructureModel):
+class _Or(BrainStructureModel):
     """Model or"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7322,7 +7323,7 @@ class _Or(_BrainStructureModel):
     id: Literal["484682520"] = "484682520"
 
 
-class _Opt(_BrainStructureModel):
+class _Opt(BrainStructureModel):
     """Model opt"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7331,7 +7332,7 @@ class _Opt(_BrainStructureModel):
     id: Literal["125"] = "125"
 
 
-class _Fxpo(_BrainStructureModel):
+class _Fxpo(BrainStructureModel):
     """Model fxpo"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7340,7 +7341,7 @@ class _Fxpo(_BrainStructureModel):
     id: Literal["737"] = "737"
 
 
-class _Pc(_BrainStructureModel):
+class _Pc(BrainStructureModel):
     """Model pc"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7349,7 +7350,7 @@ class _Pc(_BrainStructureModel):
     id: Literal["158"] = "158"
 
 
-class _Vispm(_BrainStructureModel):
+class _Vispm(BrainStructureModel):
     """Model VISpm"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7358,7 +7359,7 @@ class _Vispm(_BrainStructureModel):
     id: Literal["533"] = "533"
 
 
-class _Vispm1(_BrainStructureModel):
+class _Vispm1(BrainStructureModel):
     """Model VISpm1"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7367,7 +7368,7 @@ class _Vispm1(_BrainStructureModel):
     id: Literal["805"] = "805"
 
 
-class _Vispm2_3(_BrainStructureModel):
+class _Vispm2_3(BrainStructureModel):
     """Model VISpm2/3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7376,7 +7377,7 @@ class _Vispm2_3(_BrainStructureModel):
     id: Literal["41"] = "41"
 
 
-class _Vispm4(_BrainStructureModel):
+class _Vispm4(BrainStructureModel):
     """Model VISpm4"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7385,7 +7386,7 @@ class _Vispm4(_BrainStructureModel):
     id: Literal["501"] = "501"
 
 
-class _Vispm5(_BrainStructureModel):
+class _Vispm5(BrainStructureModel):
     """Model VISpm5"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7394,7 +7395,7 @@ class _Vispm5(_BrainStructureModel):
     id: Literal["565"] = "565"
 
 
-class _Vispm6A(_BrainStructureModel):
+class _Vispm6A(BrainStructureModel):
     """Model VISpm6a"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7403,7 +7404,7 @@ class _Vispm6A(_BrainStructureModel):
     id: Literal["257"] = "257"
 
 
-class _Vispm6B(_BrainStructureModel):
+class _Vispm6B(BrainStructureModel):
     """Model VISpm6b"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7412,7 +7413,7 @@ class _Vispm6B(_BrainStructureModel):
     id: Literal["469"] = "469"
 
 
-class _Pm(_BrainStructureModel):
+class _Pm(BrainStructureModel):
     """Model pm"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7421,7 +7422,7 @@ class _Pm(_BrainStructureModel):
     id: Literal["753"] = "753"
 
 
-class _Py(_BrainStructureModel):
+class _Py(BrainStructureModel):
     """Model py"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7430,7 +7431,7 @@ class _Py(_BrainStructureModel):
     id: Literal["190"] = "190"
 
 
-class _Pyd(_BrainStructureModel):
+class _Pyd(BrainStructureModel):
     """Model pyd"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7439,7 +7440,7 @@ class _Pyd(_BrainStructureModel):
     id: Literal["198"] = "198"
 
 
-class _Root(_BrainStructureModel):
+class _Root(BrainStructureModel):
     """Model root"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7448,7 +7449,7 @@ class _Root(_BrainStructureModel):
     id: Literal["997"] = "997"
 
 
-class _Rust(_BrainStructureModel):
+class _Rust(BrainStructureModel):
     """Model rust"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7457,7 +7458,7 @@ class _Rust(_BrainStructureModel):
     id: Literal["863"] = "863"
 
 
-class _Sv(_BrainStructureModel):
+class _Sv(BrainStructureModel):
     """Model sV"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7466,7 +7467,7 @@ class _Sv(_BrainStructureModel):
     id: Literal["229"] = "229"
 
 
-class _Ts(_BrainStructureModel):
+class _Ts(BrainStructureModel):
     """Model ts"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7475,7 +7476,7 @@ class _Ts(_BrainStructureModel):
     id: Literal["237"] = "237"
 
 
-class _Sptv(_BrainStructureModel):
+class _Sptv(BrainStructureModel):
     """Model sptV"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7484,7 +7485,7 @@ class _Sptv(_BrainStructureModel):
     id: Literal["794"] = "794"
 
 
-class _Sm(_BrainStructureModel):
+class _Sm(BrainStructureModel):
     """Model sm"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7493,7 +7494,7 @@ class _Sm(_BrainStructureModel):
     id: Literal["802"] = "802"
 
 
-class _St(_BrainStructureModel):
+class _St(BrainStructureModel):
     """Model st"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7502,7 +7503,7 @@ class _St(_BrainStructureModel):
     id: Literal["301"] = "301"
 
 
-class _Sez(_BrainStructureModel):
+class _Sez(BrainStructureModel):
     """Model SEZ"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7511,7 +7512,7 @@ class _Sez(_BrainStructureModel):
     id: Literal["98"] = "98"
 
 
-class _Scp(_BrainStructureModel):
+class _Scp(BrainStructureModel):
     """Model scp"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7520,7 +7521,7 @@ class _Scp(_BrainStructureModel):
     id: Literal["326"] = "326"
 
 
-class _Dscp(_BrainStructureModel):
+class _Dscp(BrainStructureModel):
     """Model dscp"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7529,7 +7530,7 @@ class _Dscp(_BrainStructureModel):
     id: Literal["812"] = "812"
 
 
-class _Csc(_BrainStructureModel):
+class _Csc(BrainStructureModel):
     """Model csc"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7538,7 +7539,7 @@ class _Csc(_BrainStructureModel):
     id: Literal["336"] = "336"
 
 
-class _Scwm(_BrainStructureModel):
+class _Scwm(BrainStructureModel):
     """Model scwm"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7547,7 +7548,7 @@ class _Scwm(_BrainStructureModel):
     id: Literal["484682512"] = "484682512"
 
 
-class _Sup(_BrainStructureModel):
+class _Sup(BrainStructureModel):
     """Model sup"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7556,7 +7557,7 @@ class _Sup(_BrainStructureModel):
     id: Literal["349"] = "349"
 
 
-class _Tsp(_BrainStructureModel):
+class _Tsp(BrainStructureModel):
     """Model tsp"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7565,7 +7566,7 @@ class _Tsp(_BrainStructureModel):
     id: Literal["877"] = "877"
 
 
-class _Lfbst(_BrainStructureModel):
+class _Lfbst(BrainStructureModel):
     """Model lfbst"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7574,7 +7575,7 @@ class _Lfbst(_BrainStructureModel):
     id: Literal["896"] = "896"
 
 
-class _V3(_BrainStructureModel):
+class _V3(BrainStructureModel):
     """Model V3"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7583,7 +7584,7 @@ class _V3(_BrainStructureModel):
     id: Literal["129"] = "129"
 
 
-class _Tb(_BrainStructureModel):
+class _Tb(BrainStructureModel):
     """Model tb"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7592,7 +7593,7 @@ class _Tb(_BrainStructureModel):
     id: Literal["841"] = "841"
 
 
-class _Vn(_BrainStructureModel):
+class _Vn(BrainStructureModel):
     """Model Vn"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7601,7 +7602,7 @@ class _Vn(_BrainStructureModel):
     id: Literal["901"] = "901"
 
 
-class _Ivn(_BrainStructureModel):
+class _Ivn(BrainStructureModel):
     """Model IVn"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7610,7 +7611,7 @@ class _Ivn(_BrainStructureModel):
     id: Literal["911"] = "911"
 
 
-class _Uf(_BrainStructureModel):
+class _Uf(BrainStructureModel):
     """Model uf"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7619,7 +7620,7 @@ class _Uf(_BrainStructureModel):
     id: Literal["850"] = "850"
 
 
-class _Xn(_BrainStructureModel):
+class _Xn(BrainStructureModel):
     """Model Xn"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7628,7 +7629,7 @@ class _Xn(_BrainStructureModel):
     id: Literal["917"] = "917"
 
 
-class _Vhc(_BrainStructureModel):
+class _Vhc(BrainStructureModel):
     """Model vhc"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7637,7 +7638,7 @@ class _Vhc(_BrainStructureModel):
     id: Literal["449"] = "449"
 
 
-class _Sctv(_BrainStructureModel):
+class _Sctv(BrainStructureModel):
     """Model sctv"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7646,7 +7647,7 @@ class _Sctv(_BrainStructureModel):
     id: Literal["866"] = "866"
 
 
-class _Vtd(_BrainStructureModel):
+class _Vtd(BrainStructureModel):
     """Model vtd"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7655,7 +7656,7 @@ class _Vtd(_BrainStructureModel):
     id: Literal["397"] = "397"
 
 
-class _Vs(_BrainStructureModel):
+class _Vs(BrainStructureModel):
     """Model VS"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7664,7 +7665,7 @@ class _Vs(_BrainStructureModel):
     id: Literal["73"] = "73"
 
 
-class _Vviiin(_BrainStructureModel):
+class _Vviiin(BrainStructureModel):
     """Model vVIIIn"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7673,7 +7674,7 @@ class _Vviiin(_BrainStructureModel):
     id: Literal["413"] = "413"
 
 
-class _Viiin(_BrainStructureModel):
+class _Viiin(BrainStructureModel):
     """Model VIIIn"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -7682,7 +7683,7 @@ class _Viiin(_BrainStructureModel):
     id: Literal["933"] = "933"
 
 
-class _Von(_BrainStructureModel):
+class _Von(BrainStructureModel):
     """Model von"""
 
     atlas: Literal["CCFv3"] = "CCFv3"
@@ -8535,9 +8536,9 @@ class CCFStructure:
     VIIIN = _Viiin()
     VON = _Von()
 
-    ALL = tuple(_BrainStructureModel.__subclasses__())
+    ALL = tuple(BrainStructureModel.__subclasses__())
 
-    ONE_OF = Annotated[Union[tuple(_BrainStructureModel.__subclasses__())], Field(discriminator="name")]
+    ONE_OF = Annotated[Union[tuple(BrainStructureModel.__subclasses__())], Field(discriminator="name")]
 
     id_map = {m().id: m() for m in ALL}
 
