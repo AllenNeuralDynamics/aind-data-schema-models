@@ -8,7 +8,7 @@ from typing_extensions import Annotated
 from aind_data_schema_models.pid_names import BaseName
 
 
-class _RegistryModel(BaseName):
+class RegistryModel(BaseName):
     """Base model for registries"""
 
     model_config = ConfigDict(frozen=True)
@@ -16,49 +16,49 @@ class _RegistryModel(BaseName):
     abbreviation: str
 
 
-class _Addgene(_RegistryModel):
+class _Addgene(RegistryModel):
     """Model ADDGENE"""
 
     name: Literal["Addgene"] = "Addgene"
     abbreviation: Literal["ADDGENE"] = "ADDGENE"
 
 
-class _Emapa(_RegistryModel):
+class _Emapa(RegistryModel):
     """Model EMAPA"""
 
     name: Literal["Edinburgh Mouse Atlas Project"] = "Edinburgh Mouse Atlas Project"
     abbreviation: Literal["EMAPA"] = "EMAPA"
 
 
-class _Mgi(_RegistryModel):
+class _Mgi(RegistryModel):
     """Model MGI"""
 
     name: Literal["Mouse Genome Informatics"] = "Mouse Genome Informatics"
     abbreviation: Literal["MGI"] = "MGI"
 
 
-class _Ncbi(_RegistryModel):
+class _Ncbi(RegistryModel):
     """Model NCBI"""
 
     name: Literal["National Center for Biotechnology Information"] = "National Center for Biotechnology Information"
     abbreviation: Literal["NCBI"] = "NCBI"
 
 
-class _Orcid(_RegistryModel):
+class _Orcid(RegistryModel):
     """Model ORCID"""
 
     name: Literal["Open Researcher and Contributor ID"] = "Open Researcher and Contributor ID"
     abbreviation: Literal["ORCID"] = "ORCID"
 
 
-class _Ror(_RegistryModel):
+class _Ror(RegistryModel):
     """Model ROR"""
 
     name: Literal["Research Organization Registry"] = "Research Organization Registry"
     abbreviation: Literal["ROR"] = "ROR"
 
 
-class _Rrid(_RegistryModel):
+class _Rrid(RegistryModel):
     """Model RRID"""
 
     name: Literal["Research Resource Identifiers"] = "Research Resource Identifiers"
@@ -76,9 +76,9 @@ class Registry:
     ROR = _Ror()
     RRID = _Rrid()
 
-    ALL = tuple(_RegistryModel.__subclasses__())
+    ALL = tuple(RegistryModel.__subclasses__())
 
-    ONE_OF = Annotated[Union[tuple(_RegistryModel.__subclasses__())], Field(discriminator="abbreviation")]
+    ONE_OF = Annotated[Union[tuple(RegistryModel.__subclasses__())], Field(discriminator="abbreviation")]
 
     abbreviation_map = {m().abbreviation: m() for m in ALL}
 

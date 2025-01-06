@@ -6,7 +6,7 @@ from pydantic import BaseModel, ConfigDict, Field
 from typing_extensions import Annotated
 
 
-class _HarpDeviceTypeModel(BaseModel):
+class HarpDeviceTypeModel(BaseModel):
     """Base model for platform"""
 
     model_config = ConfigDict(frozen=True)
@@ -14,112 +14,112 @@ class _HarpDeviceTypeModel(BaseModel):
     name: str = Field(..., title="Harp device type name")
 
 
-class _Behavior(_HarpDeviceTypeModel):
+class _Behavior(HarpDeviceTypeModel):
     """Model Behavior"""
 
     name: Literal["Behavior"] = "Behavior"
     whoami: Literal[1216] = 1216
 
 
-class _Camera_Controller(_HarpDeviceTypeModel):
+class _Camera_Controller(HarpDeviceTypeModel):
     """Model Camera Controller"""
 
     name: Literal["Camera Controller"] = "Camera Controller"
     whoami: Literal[1168] = 1168
 
 
-class _Clock_Synchronizer(_HarpDeviceTypeModel):
+class _Clock_Synchronizer(HarpDeviceTypeModel):
     """Model Clock Synchronizer"""
 
     name: Literal["Clock Synchronizer"] = "Clock Synchronizer"
     whoami: Literal[1152] = 1152
 
 
-class _Cuttlefish(_HarpDeviceTypeModel):
+class _Cuttlefish(HarpDeviceTypeModel):
     """Model Cuttlefish"""
 
     name: Literal["Cuttlefish"] = "Cuttlefish"
     whoami: Literal[1403] = 1403
 
 
-class _Generic_Harp_Device(_HarpDeviceTypeModel):
+class _Generic_Harp_Device(HarpDeviceTypeModel):
     """Model Generic Harp Device"""
 
     name: Literal["Generic Harp Device"] = "Generic Harp Device"
     whoami: Literal[0] = 0
 
 
-class _Input_Expander(_HarpDeviceTypeModel):
+class _Input_Expander(HarpDeviceTypeModel):
     """Model Input Expander"""
 
     name: Literal["Input Expander"] = "Input Expander"
     whoami: Literal[1106] = 1106
 
 
-class _Lickety_Split(_HarpDeviceTypeModel):
+class _Lickety_Split(HarpDeviceTypeModel):
     """Model Lickety Split"""
 
     name: Literal["Lickety Split"] = "Lickety Split"
     whoami: Literal[1400] = 1400
 
 
-class _Load_Cells(_HarpDeviceTypeModel):
+class _Load_Cells(HarpDeviceTypeModel):
     """Model Load Cells"""
 
     name: Literal["Load Cells"] = "Load Cells"
     whoami: Literal[1232] = 1232
 
 
-class _Olfactometer(_HarpDeviceTypeModel):
+class _Olfactometer(HarpDeviceTypeModel):
     """Model Olfactometer"""
 
     name: Literal["Olfactometer"] = "Olfactometer"
     whoami: Literal[1140] = 1140
 
 
-class _Sniff_Detector(_HarpDeviceTypeModel):
+class _Sniff_Detector(HarpDeviceTypeModel):
     """Model Sniff Detector"""
 
     name: Literal["Sniff Detector"] = "Sniff Detector"
     whoami: Literal[1401] = 1401
 
 
-class _Sound_Card(_HarpDeviceTypeModel):
+class _Sound_Card(HarpDeviceTypeModel):
     """Model Sound Card"""
 
     name: Literal["Sound Card"] = "Sound Card"
     whoami: Literal[1280] = 1280
 
 
-class _Stepper_Driver(_HarpDeviceTypeModel):
+class _Stepper_Driver(HarpDeviceTypeModel):
     """Model Stepper Driver"""
 
     name: Literal["Stepper Driver"] = "Stepper Driver"
     whoami: Literal[1130] = 1130
 
 
-class _Synchronizer(_HarpDeviceTypeModel):
+class _Synchronizer(HarpDeviceTypeModel):
     """Model Synchronizer"""
 
     name: Literal["Synchronizer"] = "Synchronizer"
     whoami: Literal[1104] = 1104
 
 
-class _Timestamp_Generator_Gen_1(_HarpDeviceTypeModel):
+class _Timestamp_Generator_Gen_1(HarpDeviceTypeModel):
     """Model Timestamp Generator Gen 1"""
 
     name: Literal["Timestamp Generator Gen 1"] = "Timestamp Generator Gen 1"
     whoami: Literal[1154] = 1154
 
 
-class _Timestamp_Generator_Gen_3(_HarpDeviceTypeModel):
+class _Timestamp_Generator_Gen_3(HarpDeviceTypeModel):
     """Model Timestamp Generator Gen 3"""
 
     name: Literal["Timestamp Generator Gen 3"] = "Timestamp Generator Gen 3"
     whoami: Literal[1158] = 1158
 
 
-class _Treadmill(_HarpDeviceTypeModel):
+class _Treadmill(HarpDeviceTypeModel):
     """Model Treadmill"""
 
     name: Literal["Treadmill"] = "Treadmill"
@@ -146,6 +146,6 @@ class HarpDeviceType:
     TIMESTAMP_GENERATOR_GEN_3 = _Timestamp_Generator_Gen_3()
     TREADMILL = _Treadmill()
 
-    ALL = tuple(_HarpDeviceTypeModel.__subclasses__())
+    ALL = tuple(HarpDeviceTypeModel.__subclasses__())
 
-    ONE_OF = Annotated[Union[tuple(_HarpDeviceTypeModel.__subclasses__())], Field(discriminator="name")]
+    ONE_OF = Annotated[Union[tuple(HarpDeviceTypeModel.__subclasses__())], Field(discriminator="name")]
