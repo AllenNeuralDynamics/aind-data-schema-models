@@ -8381,5 +8381,7 @@ class MouseBodyParts(metaclass=MouseAnatomyMeta):
 
 
 class MouseBloodVessels(metaclass=MouseAnatomyMeta):
+    """Blood vessels"""
+
     CAROTID_ARTERY = "carotid artery"
     JUGULAR_VEIN = "jugular vein"
