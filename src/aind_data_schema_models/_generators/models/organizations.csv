@@ -15,12 +15,14 @@ Cambridge Technology,,,
 Carl Zeiss,,ROR,01xk5xs43
 Champalimaud Foundation,Champalimaud,ROR,03g001n57
 Chan Zuckerberg Initiative,CZI,ROR,02qenvm24
+Charles River Laboratories,CRL,ROR,03ndmsg87
 Chroma,,,
 Coherent Scientific,,ROR,031tysd23
 Columbia University,Columbia,ROR,00hj8s172
 Computar,,,
 Conoptics,,,
 Custom,,,
+DigiKey,,,
 Dodotronic,,,
 Doric,,ROR,059n53q30
 Ealing,,,
@@ -37,9 +39,11 @@ Infinity Photo-Optical,,,
 Integrated DNA Technologies,IDT,ROR,009jvpf03
 Interuniversity Microelectronics Center,IMEC,ROR,02kcbn207
 Invitrogen,,ROR,03x1ewr52
+Item,,,
 Jackson Laboratory,JAX,ROR,021sy4w91
 Janelia Research Campus,Janelia,ROR,013sk6x84
 Julabo,,,
+Kowa,,ROR,03zbwg482
 LG,,ROR,02b948n83
 Leica,,,
 Lumen Dynamics,,,
@@ -66,14 +70,16 @@ Open Ephys Production Site,OEPS,ROR,007rkz355
 Optotune,,,
 Other,,,
 Oxxius,,,
+Placid Industries,,,
 Prizmatix,,,
 Quantifi,,,
 Raspberry Pi,,,
+Same Sky,,,
 SICGEN,,,
 Schneider-Kreuznach,,,
 Second Order Effects,,,
 Semrock,,,
-Sigma-Aldritch,,,
+Sigma-Aldrich,,,
 Simons Foundation,,ROR,01cmst727
 Spinnaker,,,
 Tamron,,,
@@ -84,6 +90,7 @@ The Imaging Source,,,
 The Lee Company,,,
 Thermo Fisher Scientific,,ROR,03x1ewr52
 Thorlabs,,ROR,04gsnvb07
+Transducer Techniques,,,
 Tymphany,,,
 Vieworks,,,
 Vortran,,,

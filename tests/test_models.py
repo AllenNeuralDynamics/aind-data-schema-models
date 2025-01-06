@@ -21,6 +21,7 @@ class LiteralAndDefaultTests(unittest.TestCase):
             model = organization()
             round_trip = model.model_validate_json(model.model_dump_json())
             self.assertIsNotNone(round_trip)
+            self.assertEqual(model, round_trip)
 
     def test_harp(self):
         """Test Literals match defaults"""
@@ -29,6 +30,7 @@ class LiteralAndDefaultTests(unittest.TestCase):
             model = harp()
             round_trip = model.model_validate_json(model.model_dump_json())
             self.assertIsNotNone(round_trip)
+            self.assertEqual(model, round_trip)
 
     def test_registry(self):
         """Test Literals match defaults"""
@@ -37,6 +39,7 @@ class LiteralAndDefaultTests(unittest.TestCase):
             model = registry()
             round_trip = model.model_validate_json(model.model_dump_json())
             self.assertIsNotNone(round_trip)
+            self.assertEqual(model, round_trip)
 
     def test_platforms(self):
         """Test Literals match defaults"""
@@ -45,6 +48,7 @@ class LiteralAndDefaultTests(unittest.TestCase):
             model = platform()
             round_trip = model.model_validate_json(model.model_dump_json())
             self.assertIsNotNone(round_trip)
+            self.assertEqual(model, round_trip)
 
     def test_species(self):
         """Test Literals match defaults"""
@@ -53,6 +57,7 @@ class LiteralAndDefaultTests(unittest.TestCase):
             model = species()
             round_trip = model.model_validate_json(model.model_dump_json())
             self.assertIsNotNone(round_trip)
+            self.assertEqual(model, round_trip)
 
     def test_ccf(self):
         """Test Literals match defaults"""
@@ -60,6 +65,7 @@ class LiteralAndDefaultTests(unittest.TestCase):
             model = structure()
             round_trip = model.model_validate_json(model.model_dump_json())
             self.assertIsNotNone(round_trip)
+            self.assertEqual(model, round_trip)
 
     def test_mouse_anatomy(self):
         """Test Literals match defaults"""
@@ -68,6 +74,7 @@ class LiteralAndDefaultTests(unittest.TestCase):
             model = structure()
             round_trip = model.model_validate_json(model.model_dump_json())
             self.assertIsNotNone(round_trip)
+            self.assertEqual(model, round_trip)
 
 
 if __name__ == "__main__":
