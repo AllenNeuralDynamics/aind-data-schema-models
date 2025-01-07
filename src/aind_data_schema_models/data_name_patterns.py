@@ -83,7 +83,7 @@ def datetime_to_name_string(dt: datetime) -> str:
 
 def datetime_from_name_string(d: str, t: str) -> datetime:
     """
-    DEPRECATED
+    DEPRECATED: Use datetime.fromisoformat() instead.
 
     Take date and time strings, generate datetime object
     Parameters
