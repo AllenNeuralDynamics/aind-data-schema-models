@@ -1,4 +1,6 @@
 """Species"""
+{% set species_data = data | unique_rows("species") %}
+{% set strain_data = data | unique_rows("strain") %}
 {% raw -%}
 from pydantic import BaseModel, Field, ConfigDict
 from typing import Literal, Union
@@ -14,7 +16,7 @@ class StrainModel(BaseModel):
     registry: Registry.ONE_OF
     registry_identifier: str
 
-{% for _, row in data.iterrows() %}
+{% for _, row in strain_data.iterrows() %}
 class {{ row['strain'] | to_class_name_underscored }}(StrainModel):
     """Model {{row['strain']}}"""
     name: Literal["{{ row['strain'] }}"] = "{{ row['strain'] }}"
@@ -25,7 +27,7 @@ class {{ row['strain'] | to_class_name_underscored }}(StrainModel):
 {% endfor %}
 class Strain:
     """Strain"""
-{% for _, row in data.iterrows() %}
+{% for _, row in strain_data.iterrows() %}
     {{ row['strain'] | to_class_name | upper }} = {{ row['strain'] | to_class_name_underscored }}()
 {%- endfor %}
 
@@ -41,7 +43,7 @@ class SpeciesModel(BaseModel):
     registry: Registry.ONE_OF
     registry_identifier: str
 
-{% for _, row in data.iterrows() %}
+{% for _, row in species_data.iterrows() %}
 class {{ row['species'] | to_class_name_underscored }}(SpeciesModel):
     """Model {{row['species']}}"""
     name: Literal["{{ row['species'] }}"] = "{{ row['species'] }}"
@@ -51,8 +53,8 @@ class {{ row['species'] | to_class_name_underscored }}(SpeciesModel):
 {% endfor %}
 class Species:
     """Species"""
-{% for _, row in data.iterrows() %}
-    {{ row['name'] | to_class_name | upper }} = {{ row['name'] | to_class_name_underscored }}()
+{% for _, row in species_data.iterrows() %}
+    {{ row['species'] | to_class_name | upper }} = {{ row['species'] | to_class_name_underscored }}()
 {%- endfor %}
 
     ALL = tuple(SpeciesModel.__subclasses__())

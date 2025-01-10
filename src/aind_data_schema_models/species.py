@@ -1,4 +1,5 @@
 """Species"""
+
 from typing import Literal, Union
 
 from pydantic import BaseModel, ConfigDict, Field
@@ -9,6 +10,7 @@ from aind_data_schema_models.registries import Registry
 
 class StrainModel(BaseModel):
     """Base model for a strain"""
+
     model_config = ConfigDict(frozen=True)
     name: str
     species: str
@@ -16,63 +18,39 @@ class StrainModel(BaseModel):
     registry_identifier: str
 
 
-class _A(StrainModel):
-    """Model a"""
-    name: Literal["a"] = "a"
-    species: Literal["NCBI"] = "NCBI"
-    registry: Registry.ONE_OF = Registry.A
+class _Default(StrainModel):
+    """Model default"""
+
+    name: Literal["default"] = "default"
+    species: Literal["Callithrix jacchus"] = "Callithrix jacchus"
+    registry: Registry.ONE_OF = Registry.NAN
     registry_identifier: Literal["nan"] = "nan"
 
 
-class _A(StrainModel):
-    """Model a"""
-    name: Literal["a"] = "a"
-    species: Literal["NCBI"] = "NCBI"
-    registry: Registry.ONE_OF = Registry.A
+class _C57Bl_6J(StrainModel):
+    """Model C57BL/6J"""
+
+    name: Literal["C57BL/6J"] = "C57BL/6J"
+    species: Literal["Mus musculus"] = "Mus musculus"
+    registry: Registry.ONE_OF = Registry.NAN
     registry_identifier: Literal["nan"] = "nan"
 
 
-class _A(StrainModel):
-    """Model a"""
-    name: Literal["a"] = "a"
-    species: Literal["NCBI"] = "NCBI"
-    registry: Registry.ONE_OF = Registry.A
-    registry_identifier: Literal["nan"] = "nan"
+class _Balb_C(StrainModel):
+    """Model BALB/c"""
 
-
-class _A(StrainModel):
-    """Model a"""
-    name: Literal["a"] = "a"
-    species: Literal["NCBI"] = "NCBI"
-    registry: Registry.ONE_OF = Registry.A
-    registry_identifier: Literal["nan"] = "nan"
-
-
-class _A(StrainModel):
-    """Model a"""
-    name: Literal["a"] = "a"
-    species: Literal["NCBI"] = "NCBI"
-    registry: Registry.ONE_OF = Registry.A
-    registry_identifier: Literal["nan"] = "nan"
-
-
-class _A(StrainModel):
-    """Model a"""
-    name: Literal["a"] = "a"
-    species: Literal["NCBI"] = "NCBI"
-    registry: Registry.ONE_OF = Registry.A
+    name: Literal["BALB/c"] = "BALB/c"
+    species: Literal["Mus musculus"] = "Mus musculus"
+    registry: Registry.ONE_OF = Registry.NAN
     registry_identifier: Literal["nan"] = "nan"
 
 
 class Strain:
     """Strain"""
 
-    A = _A()
-    A = _A()
-    A = _A()
-    A = _A()
-    A = _A()
-    A = _A()
+    DEFAULT = _Default()
+    C57BL_6J = _C57Bl_6J()
+    BALB_C = _Balb_C()
 
     ALL = tuple(StrainModel.__subclasses__())
 
@@ -81,52 +59,51 @@ class Strain:
 
 class SpeciesModel(BaseModel):
     """Base model for species"""
+
     model_config = ConfigDict(frozen=True)
     name: str
     registry: Registry.ONE_OF
     registry_identifier: str
 
 
-class _Ncbi(SpeciesModel):
-    """Model NCBI"""
-    name: Literal["NCBI"] = "NCBI"
-    registry: Registry.ONE_OF = Registry.NCBI:TXID9483
-    registry_identifier: Literal["default"] = "default"
+class _Callithrix_Jacchus(SpeciesModel):
+    """Model Callithrix jacchus"""
+
+    name: Literal["Callithrix jacchus"] = "Callithrix jacchus"
+    registry: Registry.ONE_OF = Registry.NCBI
+    registry_identifier: Literal["NCBI:txid9483"] = "NCBI:txid9483"
 
 
-class _Ncbi(SpeciesModel):
-    """Model NCBI"""
-    name: Literal["NCBI"] = "NCBI"
-    registry: Registry.ONE_OF = Registry.NCBI:TXID9606
-    registry_identifier: Literal["default"] = "default"
+class _Homo_Sapiens(SpeciesModel):
+    """Model Homo sapiens"""
+
+    name: Literal["Homo sapiens"] = "Homo sapiens"
+    registry: Registry.ONE_OF = Registry.NCBI
+    registry_identifier: Literal["NCBI:txid9606"] = "NCBI:txid9606"
 
 
-class _Ncbi(SpeciesModel):
-    """Model NCBI"""
-    name: Literal["NCBI"] = "NCBI"
-    registry: Registry.ONE_OF = Registry.NCBI:TXID9544
-    registry_identifier: Literal["default"] = "default"
+class _Macaca_Mulatta(SpeciesModel):
+    """Model Macaca mulatta"""
+
+    name: Literal["Macaca mulatta"] = "Macaca mulatta"
+    registry: Registry.ONE_OF = Registry.NCBI
+    registry_identifier: Literal["NCBI:txid9544"] = "NCBI:txid9544"
 
 
-class _Ncbi(SpeciesModel):
-    """Model NCBI"""
-    name: Literal["NCBI"] = "NCBI"
-    registry: Registry.ONE_OF = Registry.NCBI:TXID10090
-    registry_identifier: Literal["C57BL/6J"] = "C57BL/6J"
+class _Mus_Musculus(SpeciesModel):
+    """Model Mus musculus"""
+
+    name: Literal["Mus musculus"] = "Mus musculus"
+    registry: Registry.ONE_OF = Registry.NCBI
+    registry_identifier: Literal["NCBI:txid10090"] = "NCBI:txid10090"
 
 
-class _Ncbi(SpeciesModel):
-    """Model NCBI"""
-    name: Literal["NCBI"] = "NCBI"
-    registry: Registry.ONE_OF = Registry.NCBI:TXID10090
-    registry_identifier: Literal["BALB/c"] = "BALB/c"
+class _Rattus_Norvegicus(SpeciesModel):
+    """Model Rattus norvegicus"""
 
-
-class _Ncbi(SpeciesModel):
-    """Model NCBI"""
-    name: Literal["NCBI"] = "NCBI"
-    registry: Registry.ONE_OF = Registry.NCBI:TXID10116
-    registry_identifier: Literal["default"] = "default"
+    name: Literal["Rattus norvegicus"] = "Rattus norvegicus"
+    registry: Registry.ONE_OF = Registry.NCBI
+    registry_identifier: Literal["NCBI:txid10116"] = "NCBI:txid10116"
 
 
 class Species:
@@ -135,7 +112,6 @@ class Species:
     CALLITHRIX_JACCHUS = _Callithrix_Jacchus()
     HOMO_SAPIENS = _Homo_Sapiens()
     MACACA_MULATTA = _Macaca_Mulatta()
-    MUS_MUSCULUS = _Mus_Musculus()
     MUS_MUSCULUS = _Mus_Musculus()
     RATTUS_NORVEGICUS = _Rattus_Norvegicus()
 
