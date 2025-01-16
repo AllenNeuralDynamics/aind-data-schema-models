@@ -166,8 +166,6 @@ class ExpectedFilesModel(BaseModel):
     subject: FileRequirement
     data_description: FileRequirement
     procedures: FileRequirement
-    session: FileRequirement
-    rig: FileRequirement
     processing: FileRequirement
     acquisition: FileRequirement
     instrument: FileRequirement
@@ -182,11 +180,9 @@ class _Behavior_Files(ExpectedFilesModel):
     subject: FileRequirement = FileRequirement.REQUIRED
     data_description: FileRequirement = FileRequirement.REQUIRED
     procedures: FileRequirement = FileRequirement.REQUIRED
-    session: FileRequirement = FileRequirement.REQUIRED
-    rig: FileRequirement = FileRequirement.REQUIRED
     processing: FileRequirement = FileRequirement.OPTIONAL
-    acquisition: FileRequirement = FileRequirement.EXCLUDED
-    instrument: FileRequirement = FileRequirement.EXCLUDED
+    acquisition: FileRequirement = FileRequirement.REQUIRED
+    instrument: FileRequirement = FileRequirement.REQUIRED
     quality_control: FileRequirement = FileRequirement.OPTIONAL
 
 
@@ -198,11 +194,9 @@ class _Behavior_Videos_Files(ExpectedFilesModel):
     subject: FileRequirement = FileRequirement.REQUIRED
     data_description: FileRequirement = FileRequirement.REQUIRED
     procedures: FileRequirement = FileRequirement.REQUIRED
-    session: FileRequirement = FileRequirement.REQUIRED
-    rig: FileRequirement = FileRequirement.REQUIRED
     processing: FileRequirement = FileRequirement.OPTIONAL
-    acquisition: FileRequirement = FileRequirement.EXCLUDED
-    instrument: FileRequirement = FileRequirement.EXCLUDED
+    acquisition: FileRequirement = FileRequirement.REQUIRED
+    instrument: FileRequirement = FileRequirement.REQUIRED
     quality_control: FileRequirement = FileRequirement.OPTIONAL
 
 
@@ -214,8 +208,6 @@ class _Confocal_Files(ExpectedFilesModel):
     subject: FileRequirement = FileRequirement.REQUIRED
     data_description: FileRequirement = FileRequirement.REQUIRED
     procedures: FileRequirement = FileRequirement.REQUIRED
-    session: FileRequirement = FileRequirement.EXCLUDED
-    rig: FileRequirement = FileRequirement.EXCLUDED
     processing: FileRequirement = FileRequirement.REQUIRED
     acquisition: FileRequirement = FileRequirement.REQUIRED
     instrument: FileRequirement = FileRequirement.REQUIRED
@@ -230,11 +222,9 @@ class _Emg_Files(ExpectedFilesModel):
     subject: FileRequirement = FileRequirement.REQUIRED
     data_description: FileRequirement = FileRequirement.REQUIRED
     procedures: FileRequirement = FileRequirement.REQUIRED
-    session: FileRequirement = FileRequirement.REQUIRED
-    rig: FileRequirement = FileRequirement.REQUIRED
     processing: FileRequirement = FileRequirement.OPTIONAL
-    acquisition: FileRequirement = FileRequirement.EXCLUDED
-    instrument: FileRequirement = FileRequirement.EXCLUDED
+    acquisition: FileRequirement = FileRequirement.REQUIRED
+    instrument: FileRequirement = FileRequirement.REQUIRED
     quality_control: FileRequirement = FileRequirement.OPTIONAL
 
 
@@ -246,11 +236,9 @@ class _Ecephys_Files(ExpectedFilesModel):
     subject: FileRequirement = FileRequirement.REQUIRED
     data_description: FileRequirement = FileRequirement.REQUIRED
     procedures: FileRequirement = FileRequirement.REQUIRED
-    session: FileRequirement = FileRequirement.REQUIRED
-    rig: FileRequirement = FileRequirement.REQUIRED
     processing: FileRequirement = FileRequirement.OPTIONAL
-    acquisition: FileRequirement = FileRequirement.EXCLUDED
-    instrument: FileRequirement = FileRequirement.EXCLUDED
+    acquisition: FileRequirement = FileRequirement.REQUIRED
+    instrument: FileRequirement = FileRequirement.REQUIRED
     quality_control: FileRequirement = FileRequirement.OPTIONAL
 
 
@@ -262,11 +250,9 @@ class _Fib_Files(ExpectedFilesModel):
     subject: FileRequirement = FileRequirement.REQUIRED
     data_description: FileRequirement = FileRequirement.REQUIRED
     procedures: FileRequirement = FileRequirement.REQUIRED
-    session: FileRequirement = FileRequirement.REQUIRED
-    rig: FileRequirement = FileRequirement.REQUIRED
     processing: FileRequirement = FileRequirement.OPTIONAL
-    acquisition: FileRequirement = FileRequirement.EXCLUDED
-    instrument: FileRequirement = FileRequirement.EXCLUDED
+    acquisition: FileRequirement = FileRequirement.REQUIRED
+    instrument: FileRequirement = FileRequirement.REQUIRED
     quality_control: FileRequirement = FileRequirement.OPTIONAL
 
 
@@ -280,8 +266,6 @@ class _Fmost_Files(ExpectedFilesModel):
     subject: FileRequirement = FileRequirement.REQUIRED
     data_description: FileRequirement = FileRequirement.REQUIRED
     procedures: FileRequirement = FileRequirement.REQUIRED
-    session: FileRequirement = FileRequirement.EXCLUDED
-    rig: FileRequirement = FileRequirement.EXCLUDED
     processing: FileRequirement = FileRequirement.REQUIRED
     acquisition: FileRequirement = FileRequirement.REQUIRED
     instrument: FileRequirement = FileRequirement.REQUIRED
@@ -296,11 +280,9 @@ class _Icephys_Files(ExpectedFilesModel):
     subject: FileRequirement = FileRequirement.REQUIRED
     data_description: FileRequirement = FileRequirement.REQUIRED
     procedures: FileRequirement = FileRequirement.REQUIRED
-    session: FileRequirement = FileRequirement.REQUIRED
-    rig: FileRequirement = FileRequirement.REQUIRED
     processing: FileRequirement = FileRequirement.OPTIONAL
-    acquisition: FileRequirement = FileRequirement.EXCLUDED
-    instrument: FileRequirement = FileRequirement.EXCLUDED
+    acquisition: FileRequirement = FileRequirement.REQUIRED
+    instrument: FileRequirement = FileRequirement.REQUIRED
     quality_control: FileRequirement = FileRequirement.OPTIONAL
 
 
@@ -312,11 +294,9 @@ class _Isi_Files(ExpectedFilesModel):
     subject: FileRequirement = FileRequirement.REQUIRED
     data_description: FileRequirement = FileRequirement.REQUIRED
     procedures: FileRequirement = FileRequirement.REQUIRED
-    session: FileRequirement = FileRequirement.REQUIRED
-    rig: FileRequirement = FileRequirement.REQUIRED
     processing: FileRequirement = FileRequirement.OPTIONAL
-    acquisition: FileRequirement = FileRequirement.EXCLUDED
-    instrument: FileRequirement = FileRequirement.EXCLUDED
+    acquisition: FileRequirement = FileRequirement.REQUIRED
+    instrument: FileRequirement = FileRequirement.REQUIRED
     quality_control: FileRequirement = FileRequirement.OPTIONAL
 
 
@@ -328,11 +308,9 @@ class _Mri_Files(ExpectedFilesModel):
     subject: FileRequirement = FileRequirement.REQUIRED
     data_description: FileRequirement = FileRequirement.REQUIRED
     procedures: FileRequirement = FileRequirement.REQUIRED
-    session: FileRequirement = FileRequirement.REQUIRED
-    rig: FileRequirement = FileRequirement.REQUIRED
     processing: FileRequirement = FileRequirement.OPTIONAL
-    acquisition: FileRequirement = FileRequirement.EXCLUDED
-    instrument: FileRequirement = FileRequirement.EXCLUDED
+    acquisition: FileRequirement = FileRequirement.REQUIRED
+    instrument: FileRequirement = FileRequirement.REQUIRED
     quality_control: FileRequirement = FileRequirement.OPTIONAL
 
 
@@ -346,8 +324,6 @@ class _Merfish_Files(ExpectedFilesModel):
     subject: FileRequirement = FileRequirement.REQUIRED
     data_description: FileRequirement = FileRequirement.REQUIRED
     procedures: FileRequirement = FileRequirement.REQUIRED
-    session: FileRequirement = FileRequirement.EXCLUDED
-    rig: FileRequirement = FileRequirement.EXCLUDED
     processing: FileRequirement = FileRequirement.REQUIRED
     acquisition: FileRequirement = FileRequirement.REQUIRED
     instrument: FileRequirement = FileRequirement.REQUIRED
@@ -362,11 +338,9 @@ class _Pophys_Files(ExpectedFilesModel):
     subject: FileRequirement = FileRequirement.REQUIRED
     data_description: FileRequirement = FileRequirement.REQUIRED
     procedures: FileRequirement = FileRequirement.REQUIRED
-    session: FileRequirement = FileRequirement.REQUIRED
-    rig: FileRequirement = FileRequirement.REQUIRED
     processing: FileRequirement = FileRequirement.OPTIONAL
-    acquisition: FileRequirement = FileRequirement.EXCLUDED
-    instrument: FileRequirement = FileRequirement.EXCLUDED
+    acquisition: FileRequirement = FileRequirement.REQUIRED
+    instrument: FileRequirement = FileRequirement.REQUIRED
     quality_control: FileRequirement = FileRequirement.OPTIONAL
 
 
@@ -378,11 +352,9 @@ class _Slap_Files(ExpectedFilesModel):
     subject: FileRequirement = FileRequirement.REQUIRED
     data_description: FileRequirement = FileRequirement.REQUIRED
     procedures: FileRequirement = FileRequirement.REQUIRED
-    session: FileRequirement = FileRequirement.REQUIRED
-    rig: FileRequirement = FileRequirement.REQUIRED
     processing: FileRequirement = FileRequirement.OPTIONAL
-    acquisition: FileRequirement = FileRequirement.EXCLUDED
-    instrument: FileRequirement = FileRequirement.EXCLUDED
+    acquisition: FileRequirement = FileRequirement.REQUIRED
+    instrument: FileRequirement = FileRequirement.REQUIRED
     quality_control: FileRequirement = FileRequirement.OPTIONAL
 
 
@@ -394,8 +366,6 @@ class _Spim_Files(ExpectedFilesModel):
     subject: FileRequirement = FileRequirement.REQUIRED
     data_description: FileRequirement = FileRequirement.REQUIRED
     procedures: FileRequirement = FileRequirement.REQUIRED
-    session: FileRequirement = FileRequirement.EXCLUDED
-    rig: FileRequirement = FileRequirement.EXCLUDED
     processing: FileRequirement = FileRequirement.REQUIRED
     acquisition: FileRequirement = FileRequirement.REQUIRED
     instrument: FileRequirement = FileRequirement.REQUIRED
