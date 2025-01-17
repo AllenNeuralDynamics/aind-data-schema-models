@@ -16,8 +16,8 @@ class RegexParts(str, Enum):
 class DataRegex(str, Enum):
     """Regular expression patterns for different kinds of data and their properties"""
 
+    # Deprecated patterns, keeping for legacy support
     DATA_OLD = f"^(?P<label>.+?)_(?P<c_date>{RegexParts.DATE.value})_(?P<c_time>{RegexParts.TIME.value})$"
-    DATA = f"^(?P<label>.+?)_(?P<c_date>{RegexParts.DATETIME.value})$"
     RAW_OLD = (
         f"^(?P<platform_abbreviation>.+?)_(?P<subject_id>.+?)_(?P<c_date>{RegexParts.DATE.value})_(?P<c_time>"
         f"{RegexParts.TIME.value})$"
@@ -30,8 +30,10 @@ class DataRegex(str, Enum):
         f"^(?P<project_abbreviation>.+?)_(?P<analysis_name>.+?)_(?P<c_date>"
         f"{RegexParts.DATE.value})_(?P<c_time>{RegexParts.TIME.value})$"
     )
+    # New patterns
+    DATA = f"^(?P<label>.+?)_(?P<c_date>{RegexParts.DATETIME.value})$"
     RAW = (
-        f"^(?P<platform_abbreviation>.+?)_(?P<subject_id>.+?)_(?P<c_date>{RegexParts.DATETIME.value})$"
+        f"^(?P<subject_id>.+?)_(?P<c_date>{RegexParts.DATETIME.value})$"
     )
     DERIVED = (
         f"^(?P<input>.+?_{RegexParts.DATETIME.value})_(?P<process_name>.+?)_(?P<c_date>"
@@ -66,16 +68,17 @@ class Group(str, Enum):
 
 def datetime_to_name_string(dt: datetime) -> str:
     """
-    Take a datetime object, format it as a string
+    Take a datetime object, format it as an ISO-compatible string
+
     Parameters
     ----------
     dt : datetime
-      For example, datetime(2020, 12, 29, 10, 04, 59, 567000)
+      For example, datetime(2020, 12, 29, 10, 04, 59)
 
     Returns
     -------
     str
-      For example, '2020-12-29T100459.567'
+      For example, '2020-12-29T100459'
 
     """
     return dt.strftime("%Y-%m-%dT%H%M%S")
@@ -105,13 +108,13 @@ def datetime_from_name_string(d: str, t: str) -> datetime:
     return datetime.combine(d, t)
 
 
-def build_data_name(subject_id: str, creation_datetime: datetime) -> str:
+def build_data_name(label: str, creation_datetime: datetime) -> str:
     """
     Construct a data description name from a label and datetime object
     Parameters
     ----------
-    subject_id : str
-      For example, '123456'
+    label : str
+      For example a subject_id, '123456'
     creation_datetime : datetime
       For example, datetime(2020, 12, 29, 10, 04, 59)
 
@@ -122,4 +125,4 @@ def build_data_name(subject_id: str, creation_datetime: datetime) -> str:
 
     """
     dt_str = datetime_to_name_string(creation_datetime)
-    return f"{subject_id}_{dt_str}"
+    return f"{label}_{dt_str}"
