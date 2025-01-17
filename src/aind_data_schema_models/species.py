@@ -18,22 +18,13 @@ class StrainModel(BaseModel):
     registry_identifier: str
 
 
-class _Default(StrainModel):
-    """Model default"""
-
-    name: Literal["default"] = "default"
-    species: Literal["Callithrix jacchus"] = "Callithrix jacchus"
-    registry: Registry.ONE_OF = Registry.NAN
-    registry_identifier: Literal["nan"] = "nan"
-
-
 class _C57Bl_6J(StrainModel):
     """Model C57BL/6J"""
 
     name: Literal["C57BL/6J"] = "C57BL/6J"
     species: Literal["Mus musculus"] = "Mus musculus"
-    registry: Registry.ONE_OF = Registry.NAN
-    registry_identifier: Literal["nan"] = "nan"
+    registry: Registry.ONE_OF = Registry.MGI
+    registry_identifier: Literal["MGI:3028467"] = "MGI:3028467"
 
 
 class _Balb_C(StrainModel):
@@ -41,15 +32,15 @@ class _Balb_C(StrainModel):
 
     name: Literal["BALB/c"] = "BALB/c"
     species: Literal["Mus musculus"] = "Mus musculus"
-    registry: Registry.ONE_OF = Registry.NAN
-    registry_identifier: Literal["nan"] = "nan"
+    registry: Registry.ONE_OF = Registry.MGI
+    registry_identifier: Literal["MGI:2159737"] = "MGI:2159737"
 
 
 class Strain:
     """Strain"""
 
-    DEFAULT = _Default()
     C57BL_6J = _C57Bl_6J()
+
     BALB_C = _Balb_C()
 
     ALL = tuple(StrainModel.__subclasses__())

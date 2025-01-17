@@ -17,18 +17,21 @@ class StrainModel(BaseModel):
     registry_identifier: str
 
 {% for _, row in strain_data.iterrows() %}
+{% if row['strain'] != 'default' %}
 class {{ row['strain'] | to_class_name_underscored }}(StrainModel):
     """Model {{row['strain']}}"""
     name: Literal["{{ row['strain'] }}"] = "{{ row['strain'] }}"
     species: Literal["{{ row['species'] }}"] = "{{ row['species'] }}"
     registry: Registry.ONE_OF = Registry.{{ row['strain_registry_abbreviation'] | upper }}
     registry_identifier: Literal["{{ row['strain_registry_identifier'] }}"] = "{{ row['strain_registry_identifier'] }}"
-
+{% endif %}
 {% endfor %}
 class Strain:
     """Strain"""
 {% for _, row in strain_data.iterrows() %}
+{% if row['strain'] != 'default' %}
     {{ row['strain'] | to_class_name | upper }} = {{ row['strain'] | to_class_name_underscored }}()
+{% endif %}
 {%- endfor %}
 
     ALL = tuple(StrainModel.__subclasses__())
