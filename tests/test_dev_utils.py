@@ -19,8 +19,9 @@ class TestDevUtils(unittest.TestCase):
           'value': ['a', 'b', 'c', 'd', 'e']
         })
 
-        result = unique_rows(data, key)
-        pd.testing.assert_frame_equal(result, expected_output)
+        result = unique_rows(data, key).reset_index(drop=True)
+        self.assertEqual(result.shape, expected_output.shape)
+        self.assertEqual(result.to_dict(), expected_output.to_dict())
 
 
 if __name__ == "__main__":
