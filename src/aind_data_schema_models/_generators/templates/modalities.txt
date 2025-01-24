@@ -54,8 +54,6 @@ class ExpectedFilesModel(BaseModel):
     subject: FileRequirement
     data_description: FileRequirement
     procedures: FileRequirement
-    session: FileRequirement
-    rig: FileRequirement
     processing: FileRequirement
     acquisition: FileRequirement
     instrument: FileRequirement
@@ -69,8 +67,6 @@ class {{ row['abbreviation'] | to_class_name_underscored }}_Files(ExpectedFilesM
     subject: FileRequirement = {% if row['subject'] == 1 %} FileRequirement.REQUIRED {% elif row['subject'] == 0 %} FileRequirement.OPTIONAL {% else %} FileRequirement.EXCLUDED {% endif %}
     data_description: FileRequirement = {% if row['data_description'] == 1 %} FileRequirement.REQUIRED {% elif row['data_description'] == 0 %} FileRequirement.OPTIONAL {% else %} FileRequirement.EXCLUDED {% endif %}
     procedures: FileRequirement = {% if row['procedures'] == 1 %} FileRequirement.REQUIRED {% elif row['procedures'] == 0 %} FileRequirement.OPTIONAL {% else %} FileRequirement.EXCLUDED {% endif %}
-    session: FileRequirement = {% if row['session'] == 1 %} FileRequirement.REQUIRED {% elif row['session'] == 0 %} FileRequirement.OPTIONAL {% else %} FileRequirement.EXCLUDED {% endif %}
-    rig: FileRequirement = {% if row['rig'] == 1 %} FileRequirement.REQUIRED {% elif row['rig'] == 0 %} FileRequirement.OPTIONAL {% else %} FileRequirement.EXCLUDED {% endif %}
     processing: FileRequirement = {% if row['processing'] == 1 %} FileRequirement.REQUIRED {% elif row['processing'] == 0 %} FileRequirement.OPTIONAL {% else %} FileRequirement.EXCLUDED {% endif %}
     acquisition: FileRequirement = {% if row['acquisition'] == 1 %} FileRequirement.REQUIRED {% elif row['acquisition'] == 0 %} FileRequirement.OPTIONAL {% else %} FileRequirement.EXCLUDED {% endif %}
     instrument: FileRequirement = {% if row['instrument'] == 1 %} FileRequirement.REQUIRED {% elif row['instrument'] == 0 %} FileRequirement.OPTIONAL {% else %} FileRequirement.EXCLUDED {% endif %}
