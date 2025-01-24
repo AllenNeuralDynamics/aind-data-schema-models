@@ -8,8 +8,48 @@ from typing_extensions import Annotated
 from aind_data_schema_models.registries import Registry
 
 
+class StrainModel(BaseModel):
+    """Base model for a strain"""
+
+    model_config = ConfigDict(frozen=True)
+    name: str
+    species: str
+    registry: Registry.ONE_OF
+    registry_identifier: str
+
+
+class _C57Bl_6J(StrainModel):
+    """Model C57BL/6J"""
+
+    name: Literal["C57BL/6J"] = "C57BL/6J"
+    species: Literal["Mus musculus"] = "Mus musculus"
+    registry: Registry.ONE_OF = Registry.MGI
+    registry_identifier: Literal["MGI:3028467"] = "MGI:3028467"
+
+
+class _Balb_C(StrainModel):
+    """Model BALB/c"""
+
+    name: Literal["BALB/c"] = "BALB/c"
+    species: Literal["Mus musculus"] = "Mus musculus"
+    registry: Registry.ONE_OF = Registry.MGI
+    registry_identifier: Literal["MGI:2159737"] = "MGI:2159737"
+
+
+class Strain:
+    """Strain"""
+
+    C57BL_6J = _C57Bl_6J()
+
+    BALB_C = _Balb_C()
+
+    ALL = tuple(StrainModel.__subclasses__())
+
+    ONE_OF = Annotated[Union[tuple(StrainModel.__subclasses__())], Field(discriminator="name")]
+
+
 class SpeciesModel(BaseModel):
-    """Base model for platform"""
+    """Base model for species"""
 
     model_config = ConfigDict(frozen=True)
     name: str
