@@ -5,6 +5,7 @@ from datetime import datetime, timezone
 
 from aind_data_schema_models.data_name_patterns import (
     DataRegex,
+    DataRegexLegacy,
     RegexParts,
     build_data_name,
     datetime_from_name_string,
@@ -58,10 +59,10 @@ class TestDataRegex(unittest.TestCase):
         derived_dt = "ecephys_123455_2020-10-19T083059_sorted_2020-11-21T093158"
         analyzed_dt = "project_analysis_3033-12-21T042211"
 
-        self.assertRegex(data, DataRegex.DATA_OLD)
-        self.assertRegex(raw, DataRegex.RAW_OLD)
-        self.assertRegex(derived, DataRegex.DERIVED_OLD)
-        self.assertRegex(analyzed, DataRegex.ANALYZED_OLD)
+        self.assertRegex(data, DataRegexLegacy.DATA)
+        self.assertRegex(raw, DataRegexLegacy.RAW)
+        self.assertRegex(derived, DataRegexLegacy.DERIVED)
+        self.assertRegex(analyzed, DataRegexLegacy.ANALYZED)
         self.assertRegex(no_underscores, DataRegex.NO_UNDERSCORES)
         self.assertRegex(no_special_chars, DataRegex.NO_SPECIAL_CHARS)
         self.assertRegex(no_special_chars_except_space, DataRegex.NO_SPECIAL_CHARS_EXCEPT_SPACE)
@@ -143,7 +144,7 @@ class TestDataNamePatternsMethods(unittest.TestCase):
 
         subject_id = "123456"
         dt = datetime(2020, 12, 29, 1, 10, 50)
-        actual_output = build_data_name(subject_id=subject_id, creation_datetime=dt)
+        actual_output = build_data_name(label=subject_id, creation_datetime=dt)
 
         self.assertEqual("123456_2020-12-29T011050", actual_output)
 
