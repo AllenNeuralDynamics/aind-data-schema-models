@@ -13,24 +13,27 @@ class RegexParts(str, Enum):
     DATETIME = r"\d{4}-\d{2}-\d{2}T\d{2}\d{2}\d{2}"
 
 
-class DataRegex(str, Enum):
-    """Regular expression patterns for different kinds of data and their properties"""
-
+class DataRegexLegacy(str, Enum):
+    """Deprecated regular expression patterns from aind-data-schema-models v1 and earlier"""
     # Deprecated patterns, keeping for legacy support
-    DATA_OLD = f"^(?P<label>.+?)_(?P<c_date>{RegexParts.DATE.value})_(?P<c_time>{RegexParts.TIME.value})$"
-    RAW_OLD = (
+    DATA = f"^(?P<label>.+?)_(?P<c_date>{RegexParts.DATE.value})_(?P<c_time>{RegexParts.TIME.value})$"
+    RAW = (
         f"^(?P<platform_abbreviation>.+?)_(?P<subject_id>.+?)_(?P<c_date>{RegexParts.DATE.value})_(?P<c_time>"
         f"{RegexParts.TIME.value})$"
     )
-    DERIVED_OLD = (
+    DERIVED = (
         f"^(?P<input>.+?_{RegexParts.DATE.value}_{RegexParts.TIME.value})_(?P<process_name>.+?)_(?P<c_date>"
         f"{RegexParts.DATE.value})_(?P<c_time>{RegexParts.TIME.value})"
     )
-    ANALYZED_OLD = (
+    ANALYZED = (
         f"^(?P<project_abbreviation>.+?)_(?P<analysis_name>.+?)_(?P<c_date>"
         f"{RegexParts.DATE.value})_(?P<c_time>{RegexParts.TIME.value})$"
     )
-    # New patterns
+
+
+class DataRegex(str, Enum):
+    """Regular expression patterns for different kinds of data and their properties"""
+
     DATA = f"^(?P<label>.+?)_(?P<c_date>{RegexParts.DATETIME.value})$"
     RAW = (
         f"^(?P<subject_id>.+?)_(?P<c_date>{RegexParts.DATETIME.value})$"
