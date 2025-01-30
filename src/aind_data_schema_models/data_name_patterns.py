@@ -34,16 +34,16 @@ class DataRegexLegacy(str, Enum):
 class DataRegex(str, Enum):
     """Regular expression patterns for different kinds of data and their properties"""
 
-    DATA = f"^(?P<label>.+?)_(?P<c_date>{RegexParts.DATETIME.value})$"
+    DATA = f"^(?P<label>.+?)_(?P<c_datetime>{RegexParts.DATETIME.value})$"
     RAW = (
-        f"^(?P<subject_id>.+?)_(?P<c_date>{RegexParts.DATETIME.value})$"
+        f"^(?P<subject_id>.+?)_(?P<c_datetime>{RegexParts.DATETIME.value})$"
     )
     DERIVED = (
-        f"^(?P<input>.+?_{RegexParts.DATETIME.value})_(?P<process_name>.+?)_(?P<c_date>"
+        f"^(?P<input>.+?_{RegexParts.DATETIME.value})_(?P<process_name>.+?)_(?P<c_datetime>"
         f"{RegexParts.DATETIME.value})"
     )
     ANALYZED = (
-        f"^(?P<project_abbreviation>.+?)_(?P<analysis_name>.+?)_(?P<c_date>"
+        f"^(?P<project_abbreviation>.+?)_(?P<analysis_name>.+?)_(?P<c_datetime>"
         f"{RegexParts.DATETIME.value})$"
     )
     NO_UNDERSCORES = r"^[^_]+$"
