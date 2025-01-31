@@ -140,6 +140,7 @@ Organization.SPEAKER_MANUFACTURERS = one_of_instance(
 Organization.FUNDERS = one_of_instance(
     [
         Organization.AI,
+        Organization.AIND,
         Organization.CZI,
         Organization.MBF,
         Organization.MJFF,
