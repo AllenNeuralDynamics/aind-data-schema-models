@@ -9,15 +9,9 @@ class TestDevUtils(unittest.TestCase):
     def test_unique_rows(self):
         """Test unique_rows function"""
 
-        data = pd.DataFrame({
-          'id': [1, 2, 2, 3, 4, 4, 5],
-          'value': ['a', 'b', 'b', 'c', 'd', 'd', 'e']
-        })
-        key = 'id'
-        expected_output = pd.DataFrame({
-          'id': [1, 2, 3, 4, 5],
-          'value': ['a', 'b', 'c', 'd', 'e']
-        })
+        data = pd.DataFrame({"id": [1, 2, 2, 3, 4, 4, 5], "value": ["a", "b", "b", "c", "d", "d", "e"]})
+        key = "id"
+        expected_output = pd.DataFrame({"id": [1, 2, 3, 4, 5], "value": ["a", "b", "c", "d", "e"]})
 
         result = unique_rows(data, key).reset_index(drop=True)
         self.assertEqual(result.shape, expected_output.shape)

@@ -15,6 +15,7 @@ class RegexParts(str, Enum):
 
 class DataRegexLegacy(str, Enum):
     """Deprecated regular expression patterns from aind-data-schema-models v1 and earlier"""
+
     # Deprecated patterns, keeping for legacy support
     DATA = f"^(?P<label>.+?)_(?P<c_date>{RegexParts.DATE.value})_(?P<c_time>{RegexParts.TIME.value})$"
     RAW = (
@@ -35,17 +36,12 @@ class DataRegex(str, Enum):
     """Regular expression patterns for different kinds of data and their properties"""
 
     DATA = f"^(?P<label>.+?)_(?P<c_datetime>{RegexParts.DATETIME.value})$"
-    RAW = (
-        f"^(?P<subject_id>.+?)_(?P<c_datetime>{RegexParts.DATETIME.value})$"
-    )
+    RAW = f"^(?P<subject_id>.+?)_(?P<c_datetime>{RegexParts.DATETIME.value})$"
     DERIVED = (
         f"^(?P<input>.+?_{RegexParts.DATETIME.value})_(?P<process_name>.+?)_(?P<c_datetime>"
         f"{RegexParts.DATETIME.value})"
     )
-    ANALYZED = (
-        f"^(?P<project_abbreviation>.+?)_(?P<analysis_name>.+?)_(?P<c_datetime>"
-        f"{RegexParts.DATETIME.value})$"
-    )
+    ANALYZED = f"^(?P<project_abbreviation>.+?)_(?P<analysis_name>.+?)_(?P<c_datetime>" f"{RegexParts.DATETIME.value})$"
     NO_UNDERSCORES = r"^[^_]+$"
     NO_SPECIAL_CHARS = r'^[^<>:;"/|? \\_]+$'
     NO_SPECIAL_CHARS_EXCEPT_SPACE = r'^[^<>:;"/|?\\_]+$'
@@ -104,8 +100,7 @@ def datetime_from_name_string(d: str, t: str) -> datetime:
     datetime
 
     """
-    warnings.warn("This function is deprecated. Use datetime.fromisoformat() instead.",
-                  DeprecationWarning)
+    warnings.warn("This function is deprecated. Use datetime.fromisoformat() instead.", DeprecationWarning)
     d = datetime.strptime(d, "%Y-%m-%d").date()
     t = datetime.strptime(t, "%H-%M-%S").time()
     return datetime.combine(d, t)

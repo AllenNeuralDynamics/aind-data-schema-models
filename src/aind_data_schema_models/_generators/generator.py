@@ -1,4 +1,5 @@
 """Code generator for data schema models."""
+
 import argparse
 from jinja2 import Environment
 import pandas as pd
