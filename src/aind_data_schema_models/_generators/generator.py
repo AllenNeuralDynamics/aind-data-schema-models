@@ -2,7 +2,8 @@
 import argparse
 from jinja2 import Environment
 import pandas as pd
-from aind_data_schema_models.utils import to_class_name, to_class_name_underscored, unique_rows
+from aind_data_schema_models.utils import to_class_name, to_class_name_underscored
+from aind_data_schema_models._generators.dev_utils import unique_rows
 from pathlib import Path
 import subprocess
 
