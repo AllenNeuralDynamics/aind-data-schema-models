@@ -3,6 +3,7 @@
 from datetime import datetime
 from enum import Enum
 import warnings
+import sys
 
 
 class RegexParts(str, Enum):
@@ -83,27 +84,22 @@ def datetime_to_name_string(dt: datetime) -> str:
     return dt.strftime("%Y-%m-%dT%H%M%S")
 
 
-def datetime_from_name_string(d: str, t: str) -> datetime:
+def datetime_from_name_string(dt: str) -> datetime:
     """
-    DEPRECATED: Use datetime.fromisoformat() instead.
+    DEPRECATED: Use datetime.fromisoformat() instead, except on Python 3.10
 
-    Take date and time strings, generate datetime object
-    Parameters
-    ----------
-    d : str
-      Date string formatted as %Y-%m-%d
-    t : str
-      Time string formatted as %H-%M-%S
+    Take datetime string, generate datetime object
 
     Returns
     -------
     datetime
 
-    """
-    warnings.warn("This function is deprecated. Use datetime.fromisoformat() instead.", DeprecationWarning)
-    d = datetime.strptime(d, "%Y-%m-%d").date()
-    t = datetime.strptime(t, "%H-%M-%S").time()
-    return datetime.combine(d, t)
+    """    
+    if sys.version_info.minor > 10:
+        warnings.warn("Use datetime.fromisoformat() instead.", DeprecationWarning)
+        return datetime.fromisoformat(dt)
+    else:
+        return datetime.strptime(dt, "%Y-%m-%dT%H%M%S")
 
 
 def build_data_name(label: str, creation_datetime: datetime) -> str:

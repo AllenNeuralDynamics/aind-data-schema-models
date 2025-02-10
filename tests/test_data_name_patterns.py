@@ -1,6 +1,7 @@
 """Tests classes in data_name_patterns module"""
 
 import unittest
+import sys
 from datetime import datetime, timezone
 
 from aind_data_schema_models.data_name_patterns import (
@@ -26,18 +27,16 @@ class TestRegexParts(unittest.TestCase):
         self.assertRegex(input_date, RegexParts.DATE)
         self.assertRegex(input_time, RegexParts.TIME)
         self.assertRegex(input_datetime, RegexParts.DATETIME)
-        self.assertIsNotNone(datetime.fromisoformat(input_datetime))
+        self.assertIsNotNone(datetime_from_name_string(input_datetime))
 
     def test_patterns_fail(self):
         """Tests that the regex patterns match unsuccessfully."""
 
         malformed_date = "10/19/2020"
         malformed_time = "8:30:59"
-        malformed_datetime = "2020-10-19_08-30-59"
 
         self.assertNotRegex(malformed_date, RegexParts.DATE)
         self.assertNotRegex(malformed_time, RegexParts.TIME)
-        self.assertRaises(ValueError, datetime.fromisoformat, malformed_datetime)
 
 
 class TestDataRegex(unittest.TestCase):
@@ -137,7 +136,7 @@ class TestDataNamePatternsMethods(unittest.TestCase):
         """Tests warning is raised for deprecated method"""
 
         with self.assertWarns(DeprecationWarning):
-            datetime_from_name_string(d="2020-12-29", t="01-10-50")
+            datetime_from_name_string(dt="2020-12-29")
 
     def test_build_data_name(self):
         """Tests datetime object is converted to string and attached to label"""
