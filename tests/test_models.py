@@ -85,6 +85,7 @@ class LiteralAndDefaultTests(unittest.TestCase):
         # generate a model from the class
         class TestModel(BaseModel):
             """test class"""
+
             structure: MouseAnatomyModel = MouseAnatomy.ANATOMICAL_STRUCTURE
 
         test = TestModel()
@@ -93,6 +94,7 @@ class LiteralAndDefaultTests(unittest.TestCase):
         # generate a test model using the emg group
         class TestModel2(BaseModel):
             """test class"""
+
             structure: MouseAnatomyModel = MouseEmgMuscles.DELTOID
 
         test = TestModel2()
