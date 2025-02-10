@@ -94,7 +94,7 @@ def datetime_from_name_string(dt: str) -> datetime:
     -------
     datetime
 
-    """    
+    """
     if sys.version_info.minor > 10:
         warnings.warn("Use datetime.fromisoformat() instead.", DeprecationWarning)
         return datetime.fromisoformat(dt)
