@@ -135,11 +135,11 @@ class TestDataNamePatternsMethods(unittest.TestCase):
     def test_deprecated_warning(self):
         """Tests warning is raised for deprecated method"""
 
-        if sys.version_info.minor > 10:
-            self.skipTest("DeprecationWarning is not raised in Python 3.11 and above")
+        if sys.version_info.minor <= 10:
+            self.skipTest("DeprecationWarning is not raised in Python 3.10")
         else:
             with self.assertWarns(DeprecationWarning):
-                datetime_from_name_string(dt="2020-12-29")
+                datetime_from_name_string(dt="2020-12-29T100459")
 
     def test_build_data_name(self):
         """Tests datetime object is converted to string and attached to label"""
