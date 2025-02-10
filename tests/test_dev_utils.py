@@ -1,3 +1,5 @@
+"""Dev utils tests"""
+
 import unittest
 import pandas as pd
 from aind_data_schema_models._generators.dev_utils import unique_rows
