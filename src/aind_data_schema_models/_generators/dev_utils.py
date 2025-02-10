@@ -3,7 +3,7 @@
 import pandas as pd
 
 
-def unique_rows(value, key):
+def unique_rows(data, key):
     """Generate a unique subset of a dataframe based on a key column.
 
     Parameters
@@ -15,7 +15,7 @@ def unique_rows(value, key):
     """
     seen = set()
     unique_rows = []
-    for _, row in value.iterrows():
+    for _, row in data.iterrows():
         if row[key] not in seen:
             seen.add(row[key])
             unique_rows.append(row)
