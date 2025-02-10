@@ -1,6 +1,7 @@
 """Tests classes in data_name_patterns module"""
 
 import unittest
+import sys
 from datetime import datetime, timezone
 
 from aind_data_schema_models.data_name_patterns import (
@@ -127,15 +128,18 @@ class TestDataNamePatternsMethods(unittest.TestCase):
         """Tests date and time strings are converted to datetime object"""
 
         datetime_str = "2020-12-29T011050"
-        actual_output = datetime.fromisoformat(datetime_str)
+        actual_output = datetime_from_name_string(datetime_str)
         dt = datetime(2020, 12, 29, 1, 10, 50)
         self.assertEqual(dt, actual_output)
 
     def test_deprecated_warning(self):
         """Tests warning is raised for deprecated method"""
 
-        with self.assertWarns(DeprecationWarning):
-            datetime_from_name_string(dt="2020-12-29")
+        if sys.version_info.minor > 10:
+            self.skipTest("DeprecationWarning is not raised in Python 3.11 and above")
+        else:
+            with self.assertWarns(DeprecationWarning):
+                datetime_from_name_string(dt="2020-12-29")
 
     def test_build_data_name(self):
         """Tests datetime object is converted to string and attached to label"""
