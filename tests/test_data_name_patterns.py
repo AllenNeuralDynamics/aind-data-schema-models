@@ -135,9 +135,9 @@ class TestDataNamePatternsMethods(unittest.TestCase):
     def test_deprecated_warning(self):
         """Tests warning is raised for deprecated method"""
 
-        if sys.version_info.minor <= 10:
+        if sys.version_info.minor <= 10:  # pragma: no cover
             self.skipTest("DeprecationWarning is not raised in Python 3.10")
-        else:
+        else:  # pragma: no cover
             with self.assertWarns(DeprecationWarning):
                 datetime_from_name_string(dt="2020-12-29T100459")
 
