@@ -9,7 +9,7 @@ import pandas as pd
 
 def unique_rows(value, key):
     """Generate a unique subset of a dataframe based on a key column.
-    
+
     Parameters
     ----------
     data : pd.DataFrame

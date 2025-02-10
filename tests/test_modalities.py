@@ -23,11 +23,9 @@ class TestExpectedFiles(unittest.TestCase):
         self.assertEqual(ExpectedFiles.ECEPHYS.subject, FileRequirement.REQUIRED)
         self.assertEqual(ExpectedFiles.ECEPHYS.data_description, FileRequirement.REQUIRED)
         self.assertEqual(ExpectedFiles.ECEPHYS.procedures, FileRequirement.REQUIRED)
-        self.assertEqual(ExpectedFiles.ECEPHYS.session, FileRequirement.REQUIRED)
-        self.assertEqual(ExpectedFiles.ECEPHYS.rig, FileRequirement.REQUIRED)
         self.assertEqual(ExpectedFiles.ECEPHYS.processing, FileRequirement.OPTIONAL)
-        self.assertEqual(ExpectedFiles.ECEPHYS.acquisition, FileRequirement.EXCLUDED)
-        self.assertEqual(ExpectedFiles.ECEPHYS.instrument, FileRequirement.EXCLUDED)
+        self.assertEqual(ExpectedFiles.ECEPHYS.acquisition, FileRequirement.REQUIRED)
+        self.assertEqual(ExpectedFiles.ECEPHYS.instrument, FileRequirement.REQUIRED)
         self.assertEqual(ExpectedFiles.ECEPHYS.quality_control, FileRequirement.OPTIONAL)
 
 
