@@ -30,7 +30,7 @@ class TestDevUtils(unittest.TestCase):
         # Edge cases
         self.assertEqual(to_class_name("a-b-c"), "A_B_C")  # Hyphenated
         self.assertEqual(to_class_name("_Already-Underscored"), "_Already_Underscored")
-        
+
         # Check that non-alphanumeric characters are replaced with _
         self.assertEqual(to_class_name("123test"), "_123Test")  # Replace number with _
         self.assertEqual(to_class_name("#a"), "_A")  # Replace alphanumeric with _
