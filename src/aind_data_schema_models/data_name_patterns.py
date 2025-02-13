@@ -2,6 +2,8 @@
 
 from datetime import datetime
 from enum import Enum
+import warnings
+import sys
 
 
 class RegexParts(str, Enum):
@@ -9,11 +11,13 @@ class RegexParts(str, Enum):
 
     DATE = r"\d{4}-\d{2}-\d{2}"
     TIME = r"\d{2}-\d{2}-\d{2}"
+    DATETIME = r"\d{4}-\d{2}-\d{2}T\d{2}\d{2}\d{2}"
 
 
-class DataRegex(str, Enum):
-    """Regular expression patterns for different kinds of data and their properties"""
+class DataRegexLegacy(str, Enum):
+    """Deprecated regular expression patterns from aind-data-schema-models v1 and earlier"""
 
+    # Deprecated patterns, keeping for legacy support
     DATA = f"^(?P<label>.+?)_(?P<c_date>{RegexParts.DATE.value})_(?P<c_time>{RegexParts.TIME.value})$"
     RAW = (
         f"^(?P<platform_abbreviation>.+?)_(?P<subject_id>.+?)_(?P<c_date>{RegexParts.DATE.value})_(?P<c_time>"
@@ -27,6 +31,18 @@ class DataRegex(str, Enum):
         f"^(?P<project_abbreviation>.+?)_(?P<analysis_name>.+?)_(?P<c_date>"
         f"{RegexParts.DATE.value})_(?P<c_time>{RegexParts.TIME.value})$"
     )
+
+
+class DataRegex(str, Enum):
+    """Regular expression patterns for different kinds of data and their properties"""
+
+    DATA = f"^(?P<label>.+?)_(?P<c_datetime>{RegexParts.DATETIME.value})$"
+    RAW = f"^(?P<subject_id>.+?)_(?P<c_datetime>{RegexParts.DATETIME.value})$"
+    DERIVED = (
+        f"^(?P<input>.+?_{RegexParts.DATETIME.value})_(?P<process_name>.+?)_(?P<c_datetime>"
+        f"{RegexParts.DATETIME.value})"
+    )
+    ANALYZED = f"^(?P<project_abbreviation>.+?)_(?P<analysis_name>.+?)_(?P<c_datetime>" f"{RegexParts.DATETIME.value})$"
     NO_UNDERSCORES = r"^[^_]+$"
     NO_SPECIAL_CHARS = r'^[^<>:;"/|? \\_]+$'
     NO_SPECIAL_CHARS_EXCEPT_SPACE = r'^[^<>:;"/|?\\_]+$'
@@ -52,7 +68,8 @@ class Group(str, Enum):
 
 def datetime_to_name_string(dt: datetime) -> str:
     """
-    Take a datetime object, format it as a string
+    Take a datetime object, format it as an ISO-compatible string
+
     Parameters
     ----------
     dt : datetime
@@ -61,30 +78,28 @@ def datetime_to_name_string(dt: datetime) -> str:
     Returns
     -------
     str
-      For example, '2020-12-29_10-04-59'
+      For example, '2020-12-29T100459'
 
     """
-    return dt.strftime("%Y-%m-%d_%H-%M-%S")
+    return dt.strftime("%Y-%m-%dT%H%M%S")
 
 
-def datetime_from_name_string(d: str, t: str) -> datetime:
+def datetime_from_name_string(dt: str) -> datetime:
     """
-    Take date and time strings, generate datetime object
-    Parameters
-    ----------
-    d : str
-      Date string formatted as %Y-%m-%d
-    t : str
-      Time string formatted as %H-%M-%S
+    DEPRECATED: Use datetime.fromisoformat() instead, except on Python 3.10
+
+    Take datetime string, generate datetime object
 
     Returns
     -------
     datetime
 
     """
-    d = datetime.strptime(d, "%Y-%m-%d").date()
-    t = datetime.strptime(t, "%H-%M-%S").time()
-    return datetime.combine(d, t)
+    if sys.version_info.minor > 10:
+        warnings.warn("Use datetime.fromisoformat() instead.", DeprecationWarning)
+        return datetime.fromisoformat(dt)
+    else:
+        return datetime.strptime(dt, "%Y-%m-%dT%H%M%S")
 
 
 def build_data_name(label: str, creation_datetime: datetime) -> str:
@@ -93,14 +108,14 @@ def build_data_name(label: str, creation_datetime: datetime) -> str:
     Parameters
     ----------
     label : str
-      For example, 'ecephys_123456'
+      For example a subject_id, '123456'
     creation_datetime : datetime
       For example, datetime(2020, 12, 29, 10, 04, 59)
 
     Returns
     -------
     str
-      For example, 'ecephys_123456_2020-12-29_10-04-59'
+      For example, '123456_2020-12-29T100459'
 
     """
     dt_str = datetime_to_name_string(creation_datetime)

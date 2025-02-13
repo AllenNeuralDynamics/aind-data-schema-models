@@ -1,7 +1,9 @@
+"""Code generator for data schema models."""
+
 import argparse
 from jinja2 import Environment
 import pandas as pd
-from aind_data_schema_models.utils import to_class_name, to_class_name_underscored
+from aind_data_schema_models._generators.dev_utils import to_class_name, to_class_name_underscored
 from pathlib import Path
 import subprocess
 
@@ -34,6 +36,7 @@ def generate_code(data_type: str, root_path: str, isort: bool = True, black: boo
     env = Environment()
     env.filters["to_class_name"] = to_class_name
     env.filters["to_class_name_underscored"] = to_class_name_underscored
+    env.filters["unique_rows"] = lambda data, key: data.drop_duplicates(subset=key)
     rendered_template = env.from_string(template)
 
     # Render template with data

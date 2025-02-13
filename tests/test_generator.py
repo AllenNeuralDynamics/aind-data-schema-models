@@ -75,7 +75,7 @@ class TestGenerateCode(unittest.TestCase):
 
     @patch("pandas.read_csv", side_effect=FileNotFoundError)
     def test_generate_code_missing_data_file(self, mock_read_csv):
-        # Run the function expecting a FileNotFoundError due to missing CSV file
+        """Test that the function crashes if a file is missing"""
         with self.assertRaises(FileNotFoundError):
             generate_code("missing_data", root_path=ROOT_DIR)
 

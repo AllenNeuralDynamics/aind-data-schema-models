@@ -1,19 +1,8 @@
 """ General utilities for constructing models from CSV files """
 
-import re
 from pydantic import BaseModel, Field
 from typing import Union, List, Type, Any
 from typing_extensions import Annotated
-
-
-def to_class_name_underscored(name: str) -> str:
-    """Convert a name to a valid class name by capitalizing and removing non-alphanumeric characters."""
-    return "_" + re.sub(r"\W+", "_", name.title()).replace(" ", "")
-
-
-def to_class_name(name: str) -> str:
-    """Convert a name to a valid class name by capitalizing and removing non-alphanumeric characters."""
-    return re.sub(r"\W|^(?=\d)", "_", name.title()).replace(" ", "")
 
 
 def one_of_instance(instances: List[Type[BaseModel]], discriminator="name") -> Annotated[Union[Any], Field]:

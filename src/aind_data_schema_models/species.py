@@ -1,4 +1,5 @@
 """Species"""
+
 from typing import Literal, Union
 
 from pydantic import BaseModel, ConfigDict, Field
@@ -7,8 +8,48 @@ from typing_extensions import Annotated
 from aind_data_schema_models.registries import Registry
 
 
-class _SpeciesModel(BaseModel):
-    """Base model for platform"""
+class StrainModel(BaseModel):
+    """Base model for a strain"""
+
+    model_config = ConfigDict(frozen=True)
+    name: str
+    species: str
+    registry: Registry.ONE_OF
+    registry_identifier: str
+
+
+class _C57Bl_6J(StrainModel):
+    """Model C57BL/6J"""
+
+    name: Literal["C57BL/6J"] = "C57BL/6J"
+    species: Literal["Mus musculus"] = "Mus musculus"
+    registry: Registry.ONE_OF = Registry.MGI
+    registry_identifier: Literal["MGI:3028467"] = "MGI:3028467"
+
+
+class _Balb_C(StrainModel):
+    """Model BALB/c"""
+
+    name: Literal["BALB/c"] = "BALB/c"
+    species: Literal["Mus musculus"] = "Mus musculus"
+    registry: Registry.ONE_OF = Registry.MGI
+    registry_identifier: Literal["MGI:2159737"] = "MGI:2159737"
+
+
+class Strain:
+    """Strain"""
+
+    C57BL_6J = _C57Bl_6J()
+
+    BALB_C = _Balb_C()
+
+    ALL = tuple(StrainModel.__subclasses__())
+
+    ONE_OF = Annotated[Union[tuple(StrainModel.__subclasses__())], Field(discriminator="name")]
+
+
+class SpeciesModel(BaseModel):
+    """Base model for species"""
 
     model_config = ConfigDict(frozen=True)
     name: str
@@ -16,7 +57,7 @@ class _SpeciesModel(BaseModel):
     registry_identifier: str
 
 
-class _Callithrix_Jacchus(_SpeciesModel):
+class _Callithrix_Jacchus(SpeciesModel):
     """Model Callithrix jacchus"""
 
     name: Literal["Callithrix jacchus"] = "Callithrix jacchus"
@@ -24,7 +65,7 @@ class _Callithrix_Jacchus(_SpeciesModel):
     registry_identifier: Literal["NCBI:txid9483"] = "NCBI:txid9483"
 
 
-class _Homo_Sapiens(_SpeciesModel):
+class _Homo_Sapiens(SpeciesModel):
     """Model Homo sapiens"""
 
     name: Literal["Homo sapiens"] = "Homo sapiens"
@@ -32,7 +73,7 @@ class _Homo_Sapiens(_SpeciesModel):
     registry_identifier: Literal["NCBI:txid9606"] = "NCBI:txid9606"
 
 
-class _Macaca_Mulatta(_SpeciesModel):
+class _Macaca_Mulatta(SpeciesModel):
     """Model Macaca mulatta"""
 
     name: Literal["Macaca mulatta"] = "Macaca mulatta"
@@ -40,7 +81,7 @@ class _Macaca_Mulatta(_SpeciesModel):
     registry_identifier: Literal["NCBI:txid9544"] = "NCBI:txid9544"
 
 
-class _Mus_Musculus(_SpeciesModel):
+class _Mus_Musculus(SpeciesModel):
     """Model Mus musculus"""
 
     name: Literal["Mus musculus"] = "Mus musculus"
@@ -48,7 +89,7 @@ class _Mus_Musculus(_SpeciesModel):
     registry_identifier: Literal["NCBI:txid10090"] = "NCBI:txid10090"
 
 
-class _Rattus_Norvegicus(_SpeciesModel):
+class _Rattus_Norvegicus(SpeciesModel):
     """Model Rattus norvegicus"""
 
     name: Literal["Rattus norvegicus"] = "Rattus norvegicus"
@@ -65,6 +106,6 @@ class Species:
     MUS_MUSCULUS = _Mus_Musculus()
     RATTUS_NORVEGICUS = _Rattus_Norvegicus()
 
-    ALL = tuple(_SpeciesModel.__subclasses__())
+    ALL = tuple(SpeciesModel.__subclasses__())
 
-    ONE_OF = Annotated[Union[tuple(_SpeciesModel.__subclasses__())], Field(discriminator="name")]
+    ONE_OF = Annotated[Union[tuple(SpeciesModel.__subclasses__())], Field(discriminator="name")]
