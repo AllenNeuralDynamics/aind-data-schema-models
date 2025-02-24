@@ -7,6 +7,7 @@ class ProcessName(str, Enum):
     """Process names"""
 
     ANALYSIS = "Analysis"
+    PIPELINE = "Pipeline"
     COMPRESSION = "Compression"
     DENOISING = "Denoising"
     DF_F_ESTIMATION = "dF/F estimation"
