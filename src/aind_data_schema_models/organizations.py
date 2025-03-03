@@ -1170,10 +1170,16 @@ Organization.RESEARCH_INSTITUTIONS = one_of_instance(
     [
         Organization.AIBS,
         Organization.AIND,
+        Organization.MIT_BCS,
+        Organization.BU,
         Organization.COLUMBIA,
         Organization.HUST,
         Organization.JANELIA,
+        Organization.JHU,
+        Organization.MIBR,
+        Organization.MIT,
         Organization.NYU,
+        Organization.UCSD,
         Organization.OTHER,
     ]
 )
