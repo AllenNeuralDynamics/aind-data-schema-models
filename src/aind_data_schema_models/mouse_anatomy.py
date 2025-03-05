@@ -8380,6 +8380,19 @@ class MouseBodyParts(metaclass=MouseAnatomyMeta):
     TRUNK = "trunk"
 
 
+class GroundWireLocations(metaclass=MouseAnatomyMeta):
+    """Ground wire locations"""
+
+    FORELIMB = "forelimb"
+    HEAD = "head"
+    HINDLIMB = "hindlimb"
+    NECK = "neck"
+    TAIL = "tail"
+    TRUNK = "trunk"
+    BRAIN = "brain"
+    CRANIUM = "cranium"
+
+
 class MouseBloodVessels(metaclass=MouseAnatomyMeta):
     """Blood vessels"""
 
