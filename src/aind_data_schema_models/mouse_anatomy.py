@@ -8398,3 +8398,10 @@ class MouseBloodVessels(metaclass=MouseAnatomyMeta):
 
     CAROTID_ARTERY = "carotid artery"
     JUGULAR_VEIN = "jugular vein"
+
+
+class InjectionTargets(metaclass=MouseAnatomyMeta):
+    """Common injection targets"""
+
+    VENOUS_SINUS = "venous sinus"
+    PERITONEAL_CAVITY = "peritoneal cavity"
