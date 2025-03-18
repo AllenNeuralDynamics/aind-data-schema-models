@@ -1,5 +1,4 @@
 """Organizations"""
-
 from typing import Literal, Union
 
 from pydantic import BaseModel, ConfigDict, Field
@@ -125,6 +124,15 @@ class _Basler(OrganizationModel):
     abbreviation: Literal[None] = None
     registry: None = None
     registry_identifier: None = None
+
+
+class _Baylor_College_Of_Medicine(OrganizationModel):
+    """Model Baylor College of Medicine"""
+
+    name: Literal["Baylor College of Medicine"] = "Baylor College of Medicine"
+    abbreviation: Literal["BCM"] = "BCM"
+    registry: Registry.ONE_OF = Registry.ROR
+    registry_identifier: Literal["02pttbw34"] = "02pttbw34"
 
 
 class _Cambridge_Technology(OrganizationModel):
@@ -499,9 +507,9 @@ class _Meadowlark_Optics(OrganizationModel):
 class _Michael_J_Fox_Foundation_For_Parkinson_S_Research(OrganizationModel):
     """Model Michael J. Fox Foundation for Parkinson's Research"""
 
-    name: Literal["Michael J. Fox Foundation for Parkinson's Research"] = (
+    name: Literal[
         "Michael J. Fox Foundation for Parkinson's Research"
-    )
+    ] = "Michael J. Fox Foundation for Parkinson's Research"
     abbreviation: Literal["MJFF"] = "MJFF"
     registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["03arq3225"] = "03arq3225"
@@ -537,9 +545,9 @@ class _Nresearch_Inc(OrganizationModel):
 class _National_Center_For_Complementary_And_Integrative_Health(OrganizationModel):
     """Model National Center for Complementary and Integrative Health"""
 
-    name: Literal["National Center for Complementary and Integrative Health"] = (
+    name: Literal[
         "National Center for Complementary and Integrative Health"
-    )
+    ] = "National Center for Complementary and Integrative Health"
     abbreviation: Literal["NCCIH"] = "NCCIH"
     registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["00190t495"] = "00190t495"
@@ -557,9 +565,9 @@ class _National_Institute_Of_Mental_Health(OrganizationModel):
 class _National_Institute_Of_Neurological_Disorders_And_Stroke(OrganizationModel):
     """Model National Institute of Neurological Disorders and Stroke"""
 
-    name: Literal["National Institute of Neurological Disorders and Stroke"] = (
+    name: Literal[
         "National Institute of Neurological Disorders and Stroke"
-    )
+    ] = "National Institute of Neurological Disorders and Stroke"
     abbreviation: Literal["NINDS"] = "NINDS"
     registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["01s5ya894"] = "01s5ya894"
@@ -889,60 +897,6 @@ class _Ams_Osram(OrganizationModel):
     registry_identifier: Literal["045d0h266"] = "045d0h266"
 
 
-class _Mcgovern_Institute_For_Brain_Research(OrganizationModel):
-    """Model McGovern Institute for Brain Research"""
-
-    name: Literal["McGovern Institute for Brain Research"] = "McGovern Institute for Brain Research"
-    abbreviation: Literal["MIBR"] = "MIBR"
-    registry: Registry.ONE_OF = Registry.ROR
-    registry_identifier: Literal["05ymca674"] = "05ymca674"
-
-
-class _Mit_Department_Of_Brain_And_Cognitive_Sciences(OrganizationModel):
-    """Model MIT Department of Brain and Cognitive Sciences"""
-
-    name: Literal["MIT Department of Brain and Cognitive Sciences"] = "MIT Department of Brain and Cognitive Sciences"
-    abbreviation: Literal["MIT-BCS"] = "MIT-BCS"
-    registry: None = None
-    registry_identifier: None = None
-
-
-class _Massachusetts_Institute_Of_Technology(OrganizationModel):
-    """Model Massachusetts Institute of Technology"""
-
-    name: Literal["Massachusetts Institute of Technology"] = "Massachusetts Institute of Technology"
-    abbreviation: Literal["MIT"] = "MIT"
-    registry: Registry.ONE_OF = Registry.ROR
-    registry_identifier: Literal["042nb2s44"] = "042nb2s44"
-
-
-class _University_Of_California_San_Diego(OrganizationModel):
-    """Model University of California, San Diego"""
-
-    name: Literal["University of California, San Diego"] = "University of California, San Diego"
-    abbreviation: Literal["UCSD"] = "UCSD"
-    registry: Registry.ONE_OF = Registry.ROR
-    registry_identifier: Literal["0168r3w48"] = "0168r3w48"
-
-
-class _Johns_Hopkins_University(OrganizationModel):
-    """Model Johns Hopkins University"""
-
-    name: Literal["Johns Hopkins University"] = "Johns Hopkins University"
-    abbreviation: Literal["JHU"] = "JHU"
-    registry: Registry.ONE_OF = Registry.ROR
-    registry_identifier: Literal["00za53h95"] = "00za53h95"
-
-
-class _Boston_University(OrganizationModel):
-    """Model Boston University"""
-
-    name: Literal["Boston University"] = "Boston University"
-    abbreviation: Literal["BU"] = "BU"
-    registry: Registry.ONE_OF = Registry.ROR
-    registry_identifier: Literal["05qwgg493"] = "05qwgg493"
-
-
 class Organization:
     """Organization"""
 
@@ -958,6 +912,7 @@ class Organization:
     ASI = _Applied_Scientific_Instrumentation()
     ARECONT_VISION_COSTAR = _Arecont_Vision_Costar()
     BASLER = _Basler()
+    BCM = _Baylor_College_Of_Medicine()
     CAMBRIDGE_TECHNOLOGY = _Cambridge_Technology()
     CARL_ZEISS = _Carl_Zeiss()
     CHAMPALIMAUD = _Champalimaud_Foundation()
@@ -1042,12 +997,6 @@ class Organization:
     VIEWORKS = _Vieworks()
     VORTRAN = _Vortran()
     AMS_OSRAM = _Ams_Osram()
-    MIBR = _Mcgovern_Institute_For_Brain_Research()
-    MIT_BCS = _Mit_Department_Of_Brain_And_Cognitive_Sciences()
-    MIT = _Massachusetts_Institute_Of_Technology()
-    UCSD = _University_Of_California_San_Diego()
-    JHU = _Johns_Hopkins_University()
-    BU = _Boston_University()
 
     ALL = tuple(OrganizationModel.__subclasses__())
 
@@ -1187,6 +1136,7 @@ Organization.RESEARCH_INSTITUTIONS = one_of_instance(
 Organization.SUBJECT_SOURCES = one_of_instance(
     [
         Organization.AI,
+        Organization.BCM,
         Organization.COLUMBIA,
         Organization.HUST,
         Organization.JANELIA,
