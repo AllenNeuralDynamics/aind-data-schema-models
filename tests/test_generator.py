@@ -4,7 +4,7 @@ import unittest
 from unittest.mock import patch, mock_open, MagicMock
 from pathlib import Path
 import pandas as pd
-from aind_data_schema_models._generators.generator import generate_code
+from aind_data_schema_models._generators.generator import generate_code, check_black_version
 import os
 
 
@@ -89,6 +89,19 @@ class TestGenerateCode(unittest.TestCase):
         # Run the function expecting a FileNotFoundError due to missing template file
         with self.assertRaises(FileNotFoundError):
             generate_code("missing_template", root_path=ROOT_DIR)
+
+    def test_check_black_version_too_old(self):
+        """Test check_black_version when black version is too old"""
+        with patch("black.__version__", "24.0.0"):
+            with self.assertRaises(AssertionError) as context:
+                check_black_version()
+
+            self.assertIn("Please upgrade the black package to version 25.0.0 or later.", str(context.exception))
+
+    def test_check_black_version_valid(self):
+        """Test check_black_version when black version is valid"""
+        with patch("black.__version__", "25.0.0"):
+            check_black_version()
 
 
 if __name__ == "__main__":

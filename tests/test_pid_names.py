@@ -1,4 +1,4 @@
-"""Tests classes in pid_names """
+"""Tests classes in pid_names"""
 
 import unittest
 

@@ -8,6 +8,15 @@ from pathlib import Path
 import subprocess
 
 
+def check_black_version():
+    """Check that the version of the black package is >= 25.0.0"""
+    import black
+    from packaging import version
+
+    if version.parse(black.__version__) < version.parse("25.0.0"):
+        raise AssertionError("Please upgrade the black package to version 25.0.0 or later.")
+
+
 def generate_code(data_type: str, root_path: str, isort: bool = True, black: bool = True):
     """Generate code from the template type
 
@@ -20,6 +29,7 @@ def generate_code(data_type: str, root_path: str, isort: bool = True, black: boo
     black : bool, optional
         Whether to run black on the output, by default True
     """
+
     ROOT_DIR = Path(root_path)
     data_file = ROOT_DIR / "_generators" / "models" / f"{data_type}.csv"
     template_file = ROOT_DIR / "_generators" / "templates" / f"{data_type}.txt"
@@ -57,6 +67,8 @@ def generate_code(data_type: str, root_path: str, isort: bool = True, black: boo
 
 
 if __name__ == "__main__":
+    check_black_version()
+
     parser = argparse.ArgumentParser(description="Generate code from templates.")
     parser.add_argument("--type", required=True, help="The data type to generate code for (e.g., 'platforms').")
     parser.add_argument(
