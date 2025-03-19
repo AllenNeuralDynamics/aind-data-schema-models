@@ -9,9 +9,10 @@ import subprocess
 
 
 def check_black_version():
-    """ Check that the version of the black package is >= 25.0.0 """
+    """Check that the version of the black package is >= 25.0.0"""
     import black
     from packaging import version
+
     if version.parse(black.__version__) < version.parse("25.0.0"):
         raise AssertionError("Please upgrade the black package to version 25.0.0 or later.")
 

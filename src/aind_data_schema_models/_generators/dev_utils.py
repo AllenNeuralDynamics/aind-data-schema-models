@@ -1,4 +1,4 @@
-""" Dev utilities for constructing models from CSV files """
+"""Dev utilities for constructing models from CSV files"""
 
 import re
 

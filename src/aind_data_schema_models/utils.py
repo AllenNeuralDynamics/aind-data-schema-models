@@ -1,4 +1,4 @@
-""" General utilities for constructing models from CSV files """
+"""General utilities for constructing models from CSV files"""
 
 from pydantic import BaseModel, Field
 from typing import Union, List, Type, Any
