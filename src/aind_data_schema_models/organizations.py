@@ -127,6 +127,15 @@ class _Basler(OrganizationModel):
     registry_identifier: None = None
 
 
+class _Baylor_College_Of_Medicine(OrganizationModel):
+    """Model Baylor College of Medicine"""
+
+    name: Literal["Baylor College of Medicine"] = "Baylor College of Medicine"
+    abbreviation: Literal["BCM"] = "BCM"
+    registry: Registry.ONE_OF = Registry.ROR
+    registry_identifier: Literal["02pttbw34"] = "02pttbw34"
+
+
 class _Cambridge_Technology(OrganizationModel):
     """Model Cambridge Technology"""
 
@@ -958,6 +967,7 @@ class Organization:
     ASI = _Applied_Scientific_Instrumentation()
     ARECONT_VISION_COSTAR = _Arecont_Vision_Costar()
     BASLER = _Basler()
+    BCM = _Baylor_College_Of_Medicine()
     CAMBRIDGE_TECHNOLOGY = _Cambridge_Technology()
     CARL_ZEISS = _Carl_Zeiss()
     CHAMPALIMAUD = _Champalimaud_Foundation()
@@ -1187,6 +1197,7 @@ Organization.RESEARCH_INSTITUTIONS = one_of_instance(
 Organization.SUBJECT_SOURCES = one_of_instance(
     [
         Organization.AI,
+        Organization.BCM,
         Organization.COLUMBIA,
         Organization.HUST,
         Organization.JANELIA,

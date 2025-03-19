@@ -172,6 +172,7 @@ Organization.RESEARCH_INSTITUTIONS = one_of_instance(
 Organization.SUBJECT_SOURCES = one_of_instance(
     [
         Organization.AI,
+        Organization.BCM,
         Organization.COLUMBIA,
         Organization.HUST,
         Organization.JANELIA,
