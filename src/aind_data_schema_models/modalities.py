@@ -1,4 +1,5 @@
 """Modalities"""
+
 from typing import Literal, Union
 
 from pydantic import ConfigDict, Field
@@ -60,9 +61,9 @@ class _Fib(ModalityModel):
 class _Fmost(ModalityModel):
     """Model fMOST"""
 
-    name: Literal[
+    name: Literal["Fluorescence micro-optical sectioning tomography"] = (
         "Fluorescence micro-optical sectioning tomography"
-    ] = "Fluorescence micro-optical sectioning tomography"
+    )
     abbreviation: Literal["fMOST"] = "fMOST"
 
 
@@ -90,9 +91,9 @@ class _Mri(ModalityModel):
 class _Merfish(ModalityModel):
     """Model merfish"""
 
-    name: Literal[
+    name: Literal["Multiplexed error-robust fluorescence in situ hybridization"] = (
         "Multiplexed error-robust fluorescence in situ hybridization"
-    ] = "Multiplexed error-robust fluorescence in situ hybridization"
+    )
     abbreviation: Literal["merfish"] = "merfish"
 
 

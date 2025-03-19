@@ -1,4 +1,5 @@
 """Organizations"""
+
 from typing import Literal, Union
 
 from pydantic import BaseModel, ConfigDict, Field
@@ -507,9 +508,9 @@ class _Meadowlark_Optics(OrganizationModel):
 class _Michael_J_Fox_Foundation_For_Parkinson_S_Research(OrganizationModel):
     """Model Michael J. Fox Foundation for Parkinson's Research"""
 
-    name: Literal[
+    name: Literal["Michael J. Fox Foundation for Parkinson's Research"] = (
         "Michael J. Fox Foundation for Parkinson's Research"
-    ] = "Michael J. Fox Foundation for Parkinson's Research"
+    )
     abbreviation: Literal["MJFF"] = "MJFF"
     registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["03arq3225"] = "03arq3225"
@@ -545,9 +546,9 @@ class _Nresearch_Inc(OrganizationModel):
 class _National_Center_For_Complementary_And_Integrative_Health(OrganizationModel):
     """Model National Center for Complementary and Integrative Health"""
 
-    name: Literal[
+    name: Literal["National Center for Complementary and Integrative Health"] = (
         "National Center for Complementary and Integrative Health"
-    ] = "National Center for Complementary and Integrative Health"
+    )
     abbreviation: Literal["NCCIH"] = "NCCIH"
     registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["00190t495"] = "00190t495"
@@ -565,9 +566,9 @@ class _National_Institute_Of_Mental_Health(OrganizationModel):
 class _National_Institute_Of_Neurological_Disorders_And_Stroke(OrganizationModel):
     """Model National Institute of Neurological Disorders and Stroke"""
 
-    name: Literal[
+    name: Literal["National Institute of Neurological Disorders and Stroke"] = (
         "National Institute of Neurological Disorders and Stroke"
-    ] = "National Institute of Neurological Disorders and Stroke"
+    )
     abbreviation: Literal["NINDS"] = "NINDS"
     registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["01s5ya894"] = "01s5ya894"

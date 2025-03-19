@@ -1,4 +1,5 @@
 """Mouse anatomy"""
+
 import requests
 from pydantic import BaseModel, ConfigDict
 
