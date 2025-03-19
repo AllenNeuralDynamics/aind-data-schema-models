@@ -897,6 +897,60 @@ class _Ams_Osram(OrganizationModel):
     registry_identifier: Literal["045d0h266"] = "045d0h266"
 
 
+class _Mcgovern_Institute_For_Brain_Research(OrganizationModel):
+    """Model McGovern Institute for Brain Research"""
+
+    name: Literal["McGovern Institute for Brain Research"] = "McGovern Institute for Brain Research"
+    abbreviation: Literal["MIBR"] = "MIBR"
+    registry: Registry.ONE_OF = Registry.ROR
+    registry_identifier: Literal["05ymca674"] = "05ymca674"
+
+
+class _Mit_Department_Of_Brain_And_Cognitive_Sciences(OrganizationModel):
+    """Model MIT Department of Brain and Cognitive Sciences"""
+
+    name: Literal["MIT Department of Brain and Cognitive Sciences"] = "MIT Department of Brain and Cognitive Sciences"
+    abbreviation: Literal["MIT-BCS"] = "MIT-BCS"
+    registry: None = None
+    registry_identifier: None = None
+
+
+class _Massachusetts_Institute_Of_Technology(OrganizationModel):
+    """Model Massachusetts Institute of Technology"""
+
+    name: Literal["Massachusetts Institute of Technology"] = "Massachusetts Institute of Technology"
+    abbreviation: Literal["MIT"] = "MIT"
+    registry: Registry.ONE_OF = Registry.ROR
+    registry_identifier: Literal["042nb2s44"] = "042nb2s44"
+
+
+class _University_Of_California_San_Diego(OrganizationModel):
+    """Model University of California, San Diego"""
+
+    name: Literal["University of California, San Diego"] = "University of California, San Diego"
+    abbreviation: Literal["UCSD"] = "UCSD"
+    registry: Registry.ONE_OF = Registry.ROR
+    registry_identifier: Literal["0168r3w48"] = "0168r3w48"
+
+
+class _Johns_Hopkins_University(OrganizationModel):
+    """Model Johns Hopkins University"""
+
+    name: Literal["Johns Hopkins University"] = "Johns Hopkins University"
+    abbreviation: Literal["JHU"] = "JHU"
+    registry: Registry.ONE_OF = Registry.ROR
+    registry_identifier: Literal["00za53h95"] = "00za53h95"
+
+
+class _Boston_University(OrganizationModel):
+    """Model Boston University"""
+
+    name: Literal["Boston University"] = "Boston University"
+    abbreviation: Literal["BU"] = "BU"
+    registry: Registry.ONE_OF = Registry.ROR
+    registry_identifier: Literal["05qwgg493"] = "05qwgg493"
+
+
 class Organization:
     """Organization"""
 
@@ -997,6 +1051,12 @@ class Organization:
     VIEWORKS = _Vieworks()
     VORTRAN = _Vortran()
     AMS_OSRAM = _Ams_Osram()
+    MIBR = _Mcgovern_Institute_For_Brain_Research()
+    MIT_BCS = _Mit_Department_Of_Brain_And_Cognitive_Sciences()
+    MIT = _Massachusetts_Institute_Of_Technology()
+    UCSD = _University_Of_California_San_Diego()
+    JHU = _Johns_Hopkins_University()
+    BU = _Boston_University()
 
     ALL = tuple(OrganizationModel.__subclasses__())
 
