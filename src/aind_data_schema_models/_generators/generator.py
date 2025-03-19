@@ -10,16 +10,10 @@ import subprocess
 
 def check_black_version():
     """ Check that the version of the black package is >= 25.0.0 """
-
-    try:
-        import black
-        from packaging import version
-        assert version.parse(black.__version__) >= version.parse("25.0.0")
-    except AssertionError:
-        print("Please upgrade the black package to version 25.0.0 or later.")
-        print("You can upgrade it with the following command:")
-        print("pip install -U black")
-        exit(1)
+    import black
+    from packaging import version
+    if version.parse(black.__version__) < version.parse("25.0.0"):
+        raise AssertionError("Please upgrade the black package to version 25.0.0 or later.")
 
 
 def generate_code(data_type: str, root_path: str, isort: bool = True, black: bool = True):
