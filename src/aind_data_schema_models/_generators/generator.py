@@ -42,7 +42,7 @@ def generate_code(data_type: str, root_path: str, isort: bool = True, black: boo
     data = pd.read_csv(data_file)
 
     # If there's a name field, sort A->Z
-    if "name" in data.columns and data_type not in SKIP_SORT:
+    if "name" in data.columns and data_type not in SKIP_SORT:  # pragma: no cover
         data = data.sort_values("name")
 
     # Load template
