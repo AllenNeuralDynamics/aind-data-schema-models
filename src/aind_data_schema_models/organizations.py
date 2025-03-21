@@ -136,6 +136,15 @@ class _Baylor_College_Of_Medicine(OrganizationModel):
     registry_identifier: Literal["02pttbw34"] = "02pttbw34"
 
 
+class _Boston_University(OrganizationModel):
+    """Model Boston University"""
+
+    name: Literal["Boston University"] = "Boston University"
+    abbreviation: Literal["BU"] = "BU"
+    registry: Registry.ONE_OF = Registry.ROR
+    registry_identifier: Literal["05qwgg493"] = "05qwgg493"
+
+
 class _Cambridge_Technology(OrganizationModel):
     """Model Cambridge Technology"""
 
@@ -415,6 +424,15 @@ class _Janelia_Research_Campus(OrganizationModel):
     registry_identifier: Literal["013sk6x84"] = "013sk6x84"
 
 
+class _Johns_Hopkins_University(OrganizationModel):
+    """Model Johns Hopkins University"""
+
+    name: Literal["Johns Hopkins University"] = "Johns Hopkins University"
+    abbreviation: Literal["JHU"] = "JHU"
+    registry: Registry.ONE_OF = Registry.ROR
+    registry_identifier: Literal["00za53h95"] = "00za53h95"
+
+
 class _Julabo(OrganizationModel):
     """Model Julabo"""
 
@@ -451,19 +469,19 @@ class _Leica(OrganizationModel):
     registry_identifier: None = None
 
 
-class _Lumen_Dynamics(OrganizationModel):
-    """Model Lumen Dynamics"""
+class _Lifecanvas(OrganizationModel):
+    """Model LifeCanvas"""
 
-    name: Literal["Lumen Dynamics"] = "Lumen Dynamics"
+    name: Literal["LifeCanvas"] = "LifeCanvas"
     abbreviation: Literal[None] = None
     registry: None = None
     registry_identifier: None = None
 
 
-class _Lifecanvas(OrganizationModel):
-    """Model LifeCanvas"""
+class _Lumen_Dynamics(OrganizationModel):
+    """Model Lumen Dynamics"""
 
-    name: Literal["LifeCanvas"] = "LifeCanvas"
+    name: Literal["Lumen Dynamics"] = "Lumen Dynamics"
     abbreviation: Literal[None] = None
     registry: None = None
     registry_identifier: None = None
@@ -476,6 +494,15 @@ class _Mbf_Bioscience(OrganizationModel):
     abbreviation: Literal["MBF"] = "MBF"
     registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["02zynam48"] = "02zynam48"
+
+
+class _Mit_Department_Of_Brain_And_Cognitive_Sciences(OrganizationModel):
+    """Model MIT Department of Brain and Cognitive Sciences"""
+
+    name: Literal["MIT Department of Brain and Cognitive Sciences"] = "MIT Department of Brain and Cognitive Sciences"
+    abbreviation: Literal["MIT-BCS"] = "MIT-BCS"
+    registry: None = None
+    registry_identifier: None = None
 
 
 class _Mks_Newport(OrganizationModel):
@@ -494,6 +521,24 @@ class _Mpi(OrganizationModel):
     abbreviation: Literal["MPI"] = "MPI"
     registry: None = None
     registry_identifier: None = None
+
+
+class _Massachusetts_Institute_Of_Technology(OrganizationModel):
+    """Model Massachusetts Institute of Technology"""
+
+    name: Literal["Massachusetts Institute of Technology"] = "Massachusetts Institute of Technology"
+    abbreviation: Literal["MIT"] = "MIT"
+    registry: Registry.ONE_OF = Registry.ROR
+    registry_identifier: Literal["042nb2s44"] = "042nb2s44"
+
+
+class _Mcgovern_Institute_For_Brain_Research(OrganizationModel):
+    """Model McGovern Institute for Brain Research"""
+
+    name: Literal["McGovern Institute for Brain Research"] = "McGovern Institute for Brain Research"
+    abbreviation: Literal["MIBR"] = "MIBR"
+    registry: Registry.ONE_OF = Registry.ROR
+    registry_identifier: Literal["05ymca674"] = "05ymca674"
 
 
 class _Meadowlark_Optics(OrganizationModel):
@@ -709,19 +754,19 @@ class _Raspberry_Pi(OrganizationModel):
     registry_identifier: None = None
 
 
-class _Same_Sky(OrganizationModel):
-    """Model Same Sky"""
+class _Sicgen(OrganizationModel):
+    """Model SICGEN"""
 
-    name: Literal["Same Sky"] = "Same Sky"
+    name: Literal["SICGEN"] = "SICGEN"
     abbreviation: Literal[None] = None
     registry: None = None
     registry_identifier: None = None
 
 
-class _Sicgen(OrganizationModel):
-    """Model SICGEN"""
+class _Same_Sky(OrganizationModel):
+    """Model Same Sky"""
 
-    name: Literal["SICGEN"] = "SICGEN"
+    name: Literal["Same Sky"] = "Same Sky"
     abbreviation: Literal[None] = None
     registry: None = None
     registry_identifier: None = None
@@ -871,6 +916,15 @@ class _Tymphany(OrganizationModel):
     registry_identifier: None = None
 
 
+class _University_Of_California_San_Diego(OrganizationModel):
+    """Model University of California, San Diego"""
+
+    name: Literal["University of California, San Diego"] = "University of California, San Diego"
+    abbreviation: Literal["UCSD"] = "UCSD"
+    registry: Registry.ONE_OF = Registry.ROR
+    registry_identifier: Literal["0168r3w48"] = "0168r3w48"
+
+
 class _Vieworks(OrganizationModel):
     """Model Vieworks"""
 
@@ -898,60 +952,6 @@ class _Ams_Osram(OrganizationModel):
     registry_identifier: Literal["045d0h266"] = "045d0h266"
 
 
-class _Mcgovern_Institute_For_Brain_Research(OrganizationModel):
-    """Model McGovern Institute for Brain Research"""
-
-    name: Literal["McGovern Institute for Brain Research"] = "McGovern Institute for Brain Research"
-    abbreviation: Literal["MIBR"] = "MIBR"
-    registry: Registry.ONE_OF = Registry.ROR
-    registry_identifier: Literal["05ymca674"] = "05ymca674"
-
-
-class _Mit_Department_Of_Brain_And_Cognitive_Sciences(OrganizationModel):
-    """Model MIT Department of Brain and Cognitive Sciences"""
-
-    name: Literal["MIT Department of Brain and Cognitive Sciences"] = "MIT Department of Brain and Cognitive Sciences"
-    abbreviation: Literal["MIT-BCS"] = "MIT-BCS"
-    registry: None = None
-    registry_identifier: None = None
-
-
-class _Massachusetts_Institute_Of_Technology(OrganizationModel):
-    """Model Massachusetts Institute of Technology"""
-
-    name: Literal["Massachusetts Institute of Technology"] = "Massachusetts Institute of Technology"
-    abbreviation: Literal["MIT"] = "MIT"
-    registry: Registry.ONE_OF = Registry.ROR
-    registry_identifier: Literal["042nb2s44"] = "042nb2s44"
-
-
-class _University_Of_California_San_Diego(OrganizationModel):
-    """Model University of California, San Diego"""
-
-    name: Literal["University of California, San Diego"] = "University of California, San Diego"
-    abbreviation: Literal["UCSD"] = "UCSD"
-    registry: Registry.ONE_OF = Registry.ROR
-    registry_identifier: Literal["0168r3w48"] = "0168r3w48"
-
-
-class _Johns_Hopkins_University(OrganizationModel):
-    """Model Johns Hopkins University"""
-
-    name: Literal["Johns Hopkins University"] = "Johns Hopkins University"
-    abbreviation: Literal["JHU"] = "JHU"
-    registry: Registry.ONE_OF = Registry.ROR
-    registry_identifier: Literal["00za53h95"] = "00za53h95"
-
-
-class _Boston_University(OrganizationModel):
-    """Model Boston University"""
-
-    name: Literal["Boston University"] = "Boston University"
-    abbreviation: Literal["BU"] = "BU"
-    registry: Registry.ONE_OF = Registry.ROR
-    registry_identifier: Literal["05qwgg493"] = "05qwgg493"
-
-
 class Organization:
     """Organization"""
 
@@ -968,6 +968,7 @@ class Organization:
     ARECONT_VISION_COSTAR = _Arecont_Vision_Costar()
     BASLER = _Basler()
     BCM = _Baylor_College_Of_Medicine()
+    BU = _Boston_University()
     CAMBRIDGE_TECHNOLOGY = _Cambridge_Technology()
     CARL_ZEISS = _Carl_Zeiss()
     CHAMPALIMAUD = _Champalimaud_Foundation()
@@ -999,15 +1000,19 @@ class Organization:
     ITEM = _Item()
     JAX = _Jackson_Laboratory()
     JANELIA = _Janelia_Research_Campus()
+    JHU = _Johns_Hopkins_University()
     JULABO = _Julabo()
     KOWA = _Kowa()
     LG = _Lg()
     LEICA = _Leica()
-    LUMEN_DYNAMICS = _Lumen_Dynamics()
     LIFECANVAS = _Lifecanvas()
+    LUMEN_DYNAMICS = _Lumen_Dynamics()
     MBF = _Mbf_Bioscience()
+    MIT_BCS = _Mit_Department_Of_Brain_And_Cognitive_Sciences()
     MKS_NEWPORT = _Mks_Newport()
     MPI = _Mpi()
+    MIT = _Massachusetts_Institute_Of_Technology()
+    MIBR = _Mcgovern_Institute_For_Brain_Research()
     MEADOWLARK_OPTICS = _Meadowlark_Optics()
     MJFF = _Michael_J_Fox_Foundation_For_Parkinson_S_Research()
     MIDOPT = _Midwest_Optical_Systems_Inc_()
@@ -1031,8 +1036,8 @@ class Organization:
     PRIZMATIX = _Prizmatix()
     QUANTIFI = _Quantifi()
     RASPBERRY_PI = _Raspberry_Pi()
-    SAME_SKY = _Same_Sky()
     SICGEN = _Sicgen()
+    SAME_SKY = _Same_Sky()
     SCHNEIDER_KREUZNACH = _Schneider_Kreuznach()
     SECOND_ORDER_EFFECTS = _Second_Order_Effects()
     SEMROCK = _Semrock()
@@ -1049,15 +1054,10 @@ class Organization:
     THORLABS = _Thorlabs()
     TRANSDUCER_TECHNIQUES = _Transducer_Techniques()
     TYMPHANY = _Tymphany()
+    UCSD = _University_Of_California_San_Diego()
     VIEWORKS = _Vieworks()
     VORTRAN = _Vortran()
     AMS_OSRAM = _Ams_Osram()
-    MIBR = _Mcgovern_Institute_For_Brain_Research()
-    MIT_BCS = _Mit_Department_Of_Brain_And_Cognitive_Sciences()
-    MIT = _Massachusetts_Institute_Of_Technology()
-    UCSD = _University_Of_California_San_Diego()
-    JHU = _Johns_Hopkins_University()
-    BU = _Boston_University()
 
     ALL = tuple(OrganizationModel.__subclasses__())
 
