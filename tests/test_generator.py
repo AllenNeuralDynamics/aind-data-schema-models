@@ -142,5 +142,6 @@ class TestGenerateCode(unittest.TestCase):
         with self.assertRaises(FileNotFoundError):
             load_data("missing_data", root_path="root")
 
+
 if __name__ == "__main__":
     unittest.main()
