@@ -8403,5 +8403,5 @@ class MouseBloodVessels(metaclass=MouseAnatomyMeta):
 class InjectionTargets(metaclass=MouseAnatomyMeta):
     """Common injection targets"""
 
-    VENOUS_SINUS = "venous sinus"
-    PERITONEAL_CAVITY = "peritoneal cavity"
+    RETRO_ORBITAL = "venous sinus"
+    INTRAPERITONEAL = "peritoneal cavity"
