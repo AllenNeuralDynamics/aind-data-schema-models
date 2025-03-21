@@ -4,7 +4,7 @@ import unittest
 from unittest.mock import patch, mock_open, MagicMock
 from pathlib import Path
 import pandas as pd
-from aind_data_schema_models._generators.generator import generate_code, check_black_version
+from aind_data_schema_models._generators.generator import generate_code, check_black_version, load_data
 import os
 
 
@@ -103,6 +103,44 @@ class TestGenerateCode(unittest.TestCase):
         with patch("black.__version__", "25.0.0"):
             check_black_version()
 
+    @patch("pandas.read_csv")
+    def test_load_data(self, mock_read_csv):
+        """Test load_data function"""
+        # Mock the CSV data
+        mock_data = pd.DataFrame({"name": ["value1", "value2"], "column": ["value1", "value2"]})
+        mock_read_csv.return_value = mock_data
+
+        # Call the function
+        data = load_data("test_data", root_path="root")
+
+        # Check if the CSV file was read correctly
+        mock_read_csv.assert_called_once_with(Path("root/_generators/models/test_data.csv"))
+
+        # Check if the data was returned correctly
+        pd.testing.assert_frame_equal(data, mock_data)
+
+    @patch("pandas.read_csv")
+    def test_load_data_with_sorting(self, mock_read_csv):
+        """Test load_data function with sorting"""
+        # Mock the CSV data
+        mock_data = pd.DataFrame({"name": ["value2", "value1"], "column": ["value2", "value1"]})
+        sorted_data = mock_data.sort_values("name")
+        mock_read_csv.return_value = mock_data
+
+        # Call the function
+        data = load_data("test_data", root_path="root")
+
+        # Check if the CSV file was read correctly
+        mock_read_csv.assert_called_once_with(Path("root/_generators/models/test_data.csv"))
+
+        # Check if the data was sorted correctly
+        pd.testing.assert_frame_equal(data, sorted_data)
+
+    @patch("pandas.read_csv", side_effect=FileNotFoundError)
+    def test_load_data_missing_file(self, mock_read_csv):
+        """Test load_data function when the file is missing"""
+        with self.assertRaises(FileNotFoundError):
+            load_data("missing_data", root_path="root")
 
 if __name__ == "__main__":
     unittest.main()

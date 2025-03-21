@@ -20,6 +20,20 @@ def check_black_version():
         raise AssertionError("Please upgrade the black package to version 25.0.0 or later.")
 
 
+def load_data(data_type: str, root_path: str) -> pd.DataFrame:
+    """Load the data for the given data type"""
+
+    ROOT_DIR = Path(root_path)
+    data_file = ROOT_DIR / "_generators" / "models" / f"{data_type}.csv"
+    data = pd.read_csv(data_file)
+
+    # If there's a name field, sort A->Z
+    if "name" in data.columns and data_type not in SKIP_SORT:
+        data = data.sort_values("name")
+
+    return data
+
+
 def generate_code(data_type: str, root_path: str, isort: bool = True, black: bool = True):
     """Generate code from the template type
 
@@ -34,16 +48,10 @@ def generate_code(data_type: str, root_path: str, isort: bool = True, black: boo
     """
 
     ROOT_DIR = Path(root_path)
-    data_file = ROOT_DIR / "_generators" / "models" / f"{data_type}.csv"
     template_file = ROOT_DIR / "_generators" / "templates" / f"{data_type}.txt"
     output_file = ROOT_DIR / f"{data_type}.py"
 
-    # Load data
-    data = pd.read_csv(data_file)
-
-    # If there's a name field, sort A->Z
-    if "name" in data.columns and data_type not in SKIP_SORT:  # pragma: no cover
-        data = data.sort_values("name")
+    data = load_data(data_type, root_path)
 
     # Load template
     with open(template_file) as f:
