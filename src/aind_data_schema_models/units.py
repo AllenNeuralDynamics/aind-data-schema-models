@@ -33,6 +33,14 @@ class FrequencyUnit(str, Enum):
     mHZ = "millihertz"
 
 
+class PressureUnit(str, Enum):
+    """Enumeration of Pressure Measurements"""
+
+    MPA = "millipascal"
+    PA = "pascal"
+    KPA = "kilopascal"
+
+
 class SpeedUnit(str, Enum):
     """Enumeration of Speed Measurements"""
 
