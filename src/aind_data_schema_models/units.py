@@ -129,6 +129,14 @@ class MemoryUnit(str, Enum):
     EB = "Exabyte"
 
 
+class MagneticFieldUnit(str, Enum):
+    """Magnetic field units"""
+
+    T = "tesla"
+    MT = "millitesla"
+    UT = "microtesla"
+
+
 class UnitlessUnit(str, Enum):
     """Unitless options"""
 
