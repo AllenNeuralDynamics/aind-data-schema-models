@@ -1,3 +1,4 @@
+"""Coordinate enums for data schema"""
 from enum import Enum
 
 
