@@ -1,7 +1,7 @@
 """Module for defining UnitWithValue classes"""
 
 from enum import Enum
-
+from typing import Union
 
 class SizeUnit(str, Enum):
     """Enumeration of Length Measurements"""
@@ -142,3 +142,24 @@ class UnitlessUnit(str, Enum):
 
     PERCENT = "percent"
     FC = "fraction of cycle"
+
+
+UNITS = Union[
+    SizeUnit,
+    MassUnit,
+    FrequencyUnit,
+    SpeedUnit,
+    VolumeUnit,
+    AngleUnit,
+    TimeUnit,
+    PowerUnit,
+    CurrentUnit,
+    ConcentrationUnit,
+    TemperatureUnit,
+    SoundIntensityUnit,
+    VoltageUnit,
+    MemoryUnit,
+    UnitlessUnit,
+    MagneticFieldUnit,
+    PressureUnit,
+]
