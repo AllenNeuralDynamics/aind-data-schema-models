@@ -2,7 +2,7 @@
 
 import unittest
 
-from aind_data_schema_models.coordinate_enums import AxisName
+from aind_data_schema_models.coordinates import AxisName
 
 
 class UnitsTests(unittest.TestCase):

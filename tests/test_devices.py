@@ -2,7 +2,7 @@
 
 import unittest
 
-from aind_data_schema_models.device_enums import BinMode
+from aind_data_schema_models.devices import BinMode
 
 
 class UnitsTests(unittest.TestCase):
