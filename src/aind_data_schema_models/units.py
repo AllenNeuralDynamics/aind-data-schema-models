@@ -1,6 +1,7 @@
 """Module for defining UnitWithValue classes"""
 
 from enum import Enum
+from typing import Union
 
 
 class SizeUnit(str, Enum):
@@ -129,8 +130,37 @@ class MemoryUnit(str, Enum):
     EB = "Exabyte"
 
 
+class MagneticFieldUnit(str, Enum):
+    """Magnetic field units"""
+
+    T = "tesla"
+    MT = "millitesla"
+    UT = "microtesla"
+
+
 class UnitlessUnit(str, Enum):
     """Unitless options"""
 
     PERCENT = "percent"
     FC = "fraction of cycle"
+
+
+UNITS = Union[
+    SizeUnit,
+    MassUnit,
+    FrequencyUnit,
+    SpeedUnit,
+    VolumeUnit,
+    AngleUnit,
+    TimeUnit,
+    PowerUnit,
+    CurrentUnit,
+    ConcentrationUnit,
+    TemperatureUnit,
+    SoundIntensityUnit,
+    VoltageUnit,
+    MemoryUnit,
+    UnitlessUnit,
+    MagneticFieldUnit,
+    PressureUnit,
+]
