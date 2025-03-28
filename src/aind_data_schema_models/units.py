@@ -3,6 +3,7 @@
 from enum import Enum
 from typing import Union
 
+
 class SizeUnit(str, Enum):
     """Enumeration of Length Measurements"""
 
