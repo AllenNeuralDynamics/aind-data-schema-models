@@ -40,11 +40,14 @@ class CPUArchitecture(str, Enum):
     RISC_V = "RISC-V"
 
 
-class ModelBackbone(str, Enum):
-    """Model backbones"""
+class ModelArchitecture(str, Enum):
+    """Model architectures"""
 
     ALEXNET = "AlexNet"
     CUSTOM = "Custom"
     RESNET = "ResNet"
     VGGNET = "VGGNet"
     UNET = "UNet"
+    TRANSFORMER = "Transformer"
+    RANDOM_FOREST = "Random Forest"
+    SVM = "Support Vector Machine"
