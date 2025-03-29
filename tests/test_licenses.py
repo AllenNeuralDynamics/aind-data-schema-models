@@ -6,6 +6,7 @@ from aind_data_schema_models.licenses import License
 
 
 class UnitsTests(unittest.TestCase):
+    """Unit tests for the License class"""
 
     def test_licenses(self):
         """Tests creation of a License object"""
