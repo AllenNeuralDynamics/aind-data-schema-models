@@ -65,3 +65,4 @@ class AnatomicalRelative(str, Enum):
     RIGHT = "Right"
     MEDIAL = "Medial"
     LATERAL = "Lateral"
+    ORIGIN = "Origin"  # on the origin
