@@ -1,4 +1,4 @@
-"""Module for computer system and architecture definitions"""
+"""Module for definition of software and data licenses"""
 
 from enum import Enum
 
