@@ -6,6 +6,7 @@ from enum import Enum
 class SpecimenProcedureType(str, Enum):
     """Specimen procedures"""
 
+    BARSEQ = "BARSeq"
     CLEARING = "Clearing"
     DELIPIDATION = "Delipidation"
     EMBEDDING = "Embedding"
