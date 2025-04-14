@@ -26,6 +26,7 @@ class ProcessName(str, Enum):
     IMAGE_FLAT_FIELD_CORRECTION = "Image flat-field correction"
     IMAGE_IMPORTING = "Image importing"
     IMAGE_MIP_VISUALIZATION = "Image mip visualization"
+    IMAGE_RADIAL_CORRECTION = "Image radial correction"
     IMAGE_SPOT_DETECTION = "Image spot detection"
     IMAGE_SPOT_SPECTRAL_UNMIXING = "Image spot spectral unmixing"
     IMAGE_THRESHOLDING = "Image thresholding"
