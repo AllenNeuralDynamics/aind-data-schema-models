@@ -48,10 +48,11 @@ class Direction(str, Enum):
     SI = "Superior_to_inferior"
     FB = "Front_to_back"
     BF = "Back_to_front"
-    TB = "Top_to_bottom"
-    BT = "Bottom_to_top"
+    UD = "Up_to_down"
+    DU = "Down_to_up"
     OTHER = "Other"
     POS = "Positive"
+    NEG = "Negative"
 
 
 class AnatomicalRelative(str, Enum):
