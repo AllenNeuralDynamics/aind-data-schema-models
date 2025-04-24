@@ -11,7 +11,7 @@ class RegexParts(str, Enum):
 
     DATE = r"\d{4}-\d{2}-\d{2}"
     TIME = r"\d{2}-\d{2}-\d{2}"
-    DATETIME = r"\d{4}-\d{2}-\d{2}T\d{2}\d{2}\d{2}"
+    DATETIME = r"\d{4}-\d{2}-\d{2}_\d{2}-\d{2}-\d{2}"
 
 
 class DataRegexLegacy(str, Enum):
@@ -68,7 +68,7 @@ class Group(str, Enum):
 
 def datetime_to_name_string(dt: datetime) -> str:
     """
-    Take a datetime object, format it as an ISO-compatible string
+    Take a datetime object, format it as a legaxy AIND datetime string
 
     Parameters
     ----------
@@ -78,10 +78,10 @@ def datetime_to_name_string(dt: datetime) -> str:
     Returns
     -------
     str
-      For example, '2020-12-29T100459'
+      For example, '2020-12-29_10-04-59'
 
     """
-    return dt.strftime("%Y-%m-%dT%H%M%S")
+    return dt.strftime("%Y-%m-%d_%H-%M-%S")
 
 
 def datetime_from_name_string(dt: str) -> datetime:
@@ -95,11 +95,7 @@ def datetime_from_name_string(dt: str) -> datetime:
     datetime
 
     """
-    if sys.version_info.minor > 10:
-        warnings.warn("Use datetime.fromisoformat() instead.", DeprecationWarning)
-        return datetime.fromisoformat(dt)
-    else:
-        return datetime.strptime(dt, "%Y-%m-%dT%H%M%S")
+    return datetime.strptime(dt, "%Y-%m-%d_%H-%M-%S")
 
 
 def build_data_name(label: str, creation_datetime: datetime) -> str:
@@ -115,7 +111,7 @@ def build_data_name(label: str, creation_datetime: datetime) -> str:
     Returns
     -------
     str
-      For example, '123456_2020-12-29T100459'
+      For example, '123456_2020-12-29_10-04-59'
 
     """
     dt_str = datetime_to_name_string(creation_datetime)
