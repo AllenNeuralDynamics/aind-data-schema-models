@@ -1,7 +1,6 @@
 """Tests classes in data_name_patterns module"""
 
 import unittest
-import sys
 from datetime import datetime, timezone
 
 from aind_data_schema_models.data_name_patterns import (

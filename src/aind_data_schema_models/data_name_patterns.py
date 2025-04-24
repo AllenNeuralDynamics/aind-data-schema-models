@@ -2,8 +2,6 @@
 
 from datetime import datetime
 from enum import Enum
-import warnings
-import sys
 
 
 class RegexParts(str, Enum):
