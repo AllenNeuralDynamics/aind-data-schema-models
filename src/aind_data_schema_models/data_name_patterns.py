@@ -66,7 +66,7 @@ class Group(str, Enum):
 
 def datetime_to_name_string(dt: datetime) -> str:
     """
-    Take a datetime object, format it as a legaxy AIND datetime string
+    Take a datetime object, format it as a legacy AIND datetime string
 
     Parameters
     ----------
