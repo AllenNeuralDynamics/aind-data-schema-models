@@ -1,7 +1,6 @@
 """Tests classes in data_name_patterns module"""
 
 import unittest
-import sys
 from datetime import datetime, timezone
 
 from aind_data_schema_models.data_name_patterns import (
@@ -22,7 +21,7 @@ class TestRegexParts(unittest.TestCase):
 
         input_date = "2020-10-19"
         input_time = "08-30-59"
-        input_datetime = "2020-10-19T083059"
+        input_datetime = "2020-10-19_08-30-59"
 
         self.assertRegex(input_date, RegexParts.DATE)
         self.assertRegex(input_time, RegexParts.TIME)
@@ -53,10 +52,10 @@ class TestDataRegex(unittest.TestCase):
         no_special_chars = "abc-123"
         no_special_chars_except_space = "abc efg - 123"
 
-        data_dt = "ecephys_2020-10-19T083059"
-        raw_dt = "ecephys_123455_2020-10-19T083059"
-        derived_dt = "ecephys_123455_2020-10-19T083059_sorted_2020-11-21T093158"
-        analyzed_dt = "project_analysis_3033-12-21T042211"
+        data_dt = "ecephys_2020-10-19_08-30-59"
+        raw_dt = "ecephys_123455_2020-10-19_08-30-59"
+        derived_dt = "ecephys_123455_2020-10-19_08-30-59_sorted_2020-11-21_09-31-58"
+        analyzed_dt = "project_analysis_3033-12-21_04-22-11"
 
         self.assertRegex(data, DataRegexLegacy.DATA)
         self.assertRegex(raw, DataRegexLegacy.RAW)
@@ -115,31 +114,22 @@ class TestDataNamePatternsMethods(unittest.TestCase):
 
         dt = datetime(2020, 12, 29, 1, 10, 50)
         actual_output = datetime_to_name_string(dt)
-        self.assertEqual("2020-12-29T011050", actual_output)
+        self.assertEqual("2020-12-29_01-10-50", actual_output)
 
     def test_datetime_with_tz_to_name_string(self):
         """Tests datetime object with timezone is converted to string"""
 
         dt = datetime(2020, 12, 29, 1, 10, 50, tzinfo=timezone.utc)
         actual_output = datetime_to_name_string(dt)
-        self.assertEqual("2020-12-29T011050", actual_output)
+        self.assertEqual("2020-12-29_01-10-50", actual_output)
 
     def test_datetime_from_name_string(self):
         """Tests date and time strings are converted to datetime object"""
 
-        datetime_str = "2020-12-29T011050"
+        datetime_str = "2020-12-29_01-10-50"
         actual_output = datetime_from_name_string(datetime_str)
         dt = datetime(2020, 12, 29, 1, 10, 50)
         self.assertEqual(dt, actual_output)
-
-    def test_deprecated_warning(self):
-        """Tests warning is raised for deprecated method"""
-
-        if sys.version_info.minor <= 10:  # pragma: no cover
-            self.skipTest("DeprecationWarning is not raised in Python 3.10")
-        else:  # pragma: no cover
-            with self.assertWarns(DeprecationWarning):
-                datetime_from_name_string(dt="2020-12-29T100459")
 
     def test_build_data_name(self):
         """Tests datetime object is converted to string and attached to label"""
@@ -148,7 +138,7 @@ class TestDataNamePatternsMethods(unittest.TestCase):
         dt = datetime(2020, 12, 29, 1, 10, 50)
         actual_output = build_data_name(label=subject_id, creation_datetime=dt)
 
-        self.assertEqual("123456_2020-12-29T011050", actual_output)
+        self.assertEqual("123456_2020-12-29_01-10-50", actual_output)
 
 
 if __name__ == "__main__":
