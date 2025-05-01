@@ -11,7 +11,7 @@ class TestStimulusModality(unittest.TestCase):
     def test_class_construction(self):
         """Tests enum can be instantiated via string"""
 
-        self.assertEqual(StimulusModality.NO_STIMULUS, StimulusModality("NO_STIMULUS"))
+        self.assertEqual(StimulusModality.NO_STIMULUS, StimulusModality("No stimulus"))
 
 
 if __name__ == "__main__":
