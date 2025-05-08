@@ -424,6 +424,15 @@ class _Janelia_Research_Campus(OrganizationModel):
     registry_identifier: Literal["013sk6x84"] = "013sk6x84"
 
 
+class _Jenoptik(OrganizationModel):
+    """Model Jenoptik"""
+
+    name: Literal["Jenoptik"] = "Jenoptik"
+    abbreviation: Literal[None] = None
+    registry: Registry.ONE_OF = Registry.ROR
+    registry_identifier: Literal["05g7t5c49"] = "05g7t5c49"
+
+
 class _Johns_Hopkins_University(OrganizationModel):
     """Model Johns Hopkins University"""
 
@@ -1000,6 +1009,7 @@ class Organization:
     ITEM = _Item()
     JAX = _Jackson_Laboratory()
     JANELIA = _Janelia_Research_Campus()
+    JENOPTIK = _Jenoptik()
     JHU = _Johns_Hopkins_University()
     JULABO = _Julabo()
     KOWA = _Kowa()
