@@ -145,6 +145,15 @@ class _Boston_University(OrganizationModel):
     registry_identifier: Literal["05qwgg493"] = "05qwgg493"
 
 
+class _Cajal_Neuroscience(OrganizationModel):
+    """Model Cajal Neuroscience"""
+
+    name: Literal["Cajal Neuroscience"] = "Cajal Neuroscience"
+    abbreviation: Literal["Cajal"] = "Cajal"
+    registry: Registry.ONE_OF = Registry.ROR
+    registry_identifier: Literal["05pdc0q70"] = "05pdc0q70"
+
+
 class _Cambridge_Technology(OrganizationModel):
     """Model Cambridge Technology"""
 
@@ -978,6 +987,7 @@ class Organization:
     BASLER = _Basler()
     BCM = _Baylor_College_Of_Medicine()
     BU = _Boston_University()
+    CAJAL = _Cajal_Neuroscience()
     CAMBRIDGE_TECHNOLOGY = _Cambridge_Technology()
     CARL_ZEISS = _Carl_Zeiss()
     CHAMPALIMAUD = _Champalimaud_Foundation()
