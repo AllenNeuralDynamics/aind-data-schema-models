@@ -41,7 +41,7 @@ class _Unknown(StrainModel):
 
     name: Literal["Unknown"] = "Unknown"
     species: Literal["Mus musculus"] = "Mus musculus"
-    registry: Registry.ONE_OF = Registry.NAN
+    registry: None = None
     registry_identifier: Literal["nan"] = "nan"
 
 
