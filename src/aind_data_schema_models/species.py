@@ -36,12 +36,23 @@ class _Balb_C(StrainModel):
     registry_identifier: Literal["MGI:2159737"] = "MGI:2159737"
 
 
+class _Unknown(StrainModel):
+    """Model Unknown"""
+
+    name: Literal["Unknown"] = "Unknown"
+    species: Literal["Mus musculus"] = "Mus musculus"
+    registry: Registry.ONE_OF = Registry.NAN
+    registry_identifier: Literal["nan"] = "nan"
+
+
 class Strain:
     """Strain"""
 
     C57BL_6J = _C57Bl_6J()
 
     BALB_C = _Balb_C()
+
+    UNKNOWN = _Unknown()
 
     ALL = tuple(StrainModel.__subclasses__())
 
