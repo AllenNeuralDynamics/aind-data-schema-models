@@ -129,6 +129,7 @@ class ProbeModel(str, Enum):
     NP2_SINGLE_SHANK = "Neuropixels 2.0 (Single Shank)"
     NP2_MULTI_SHANK = "Neuropixels 2.0 (Multi Shank)"
     NP2_QUAD_BASE = "Neuropixels 2.0 (Quad Base)"
+    CUSTOM = "Custom"
 
 
 class DetectorType(str, Enum):
