@@ -144,7 +144,7 @@ class Cooling(str, Enum):
 
     AIR = "Air"
     WATER = "Water"
-    NONE = "None"
+    NO_COOLING = "No cooling"
 
 
 class BinMode(str, Enum):
@@ -152,7 +152,7 @@ class BinMode(str, Enum):
 
     ADDITIVE = "Additive"
     AVERAGE = "Average"
-    NONE = "None"
+    NO_BINNING = "No binning"
 
 
 class FerruleMaterial(str, Enum):
