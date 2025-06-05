@@ -14,7 +14,6 @@ class SpecimenProcedureType(str, Enum):
     FIXATION = "Fixation"
     FIXATION_AND_PERMEABILIZATION = "Fixation and permeabilization"
     GELATION = "Gelation"
-    HYBRIDICATION_AND_AMPLIFICATION = "Hybridication and amplification"
     HYBRIDIZATION_CHAIN_REACTION = "Hybridization Chain Reaction"
     IMMUNOLABELING = "Immunolabeling"
     MOUNTING = "Mounting"
