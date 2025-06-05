@@ -1165,6 +1165,7 @@ Organization.LASER_MANUFACTURERS = one_of_instance(
         Organization.HAMAMATSU,
         Organization.OXXIUS,
         Organization.QUANTIFI,
+        Organization.THORLABS,
         Organization.VORTRAN,
         Organization.OTHER,
     ]
