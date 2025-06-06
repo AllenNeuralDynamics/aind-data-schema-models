@@ -655,10 +655,10 @@ class _Navitar(OrganizationModel):
     registry_identifier: None = None
 
 
-class _Neuroalynx(OrganizationModel):
-    """Model NeuroaLynx"""
+class _Neuralynx(OrganizationModel):
+    """Model NeuraLynx"""
 
-    name: Literal["NeuroaLynx"] = "NeuroaLynx"
+    name: Literal["NeuraLynx"] = "NeuraLynx"
     abbreviation: Literal[None] = None
     registry: None = None
     registry_identifier: None = None
@@ -1052,7 +1052,7 @@ class Organization:
     NINDS = _National_Institute_Of_Neurological_Disorders_And_Stroke()
     NATIONAL_INSTRUMENTS = _National_Instruments()
     NAVITAR = _Navitar()
-    NEUROALYNX = _Neuroalynx()
+    NEURALYNX = _Neuralynx()
     NEUROPHOTOMETRICS = _Neurophotometrics()
     NEW_SCALE_TECHNOLOGIES = _New_Scale_Technologies()
     NYU = _New_York_University()
