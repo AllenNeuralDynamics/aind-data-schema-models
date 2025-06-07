@@ -34,7 +34,8 @@ dev = [
     'furo',
     'aind-flake8-extensions==0.5.2',
     'jinja2',
-    'pandas'
+    'pandas',
+    'pyyaml',
 ]
 
 build = [
