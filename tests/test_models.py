@@ -51,14 +51,6 @@ class LiteralAndDefaultTests(unittest.TestCase):
             self.assertIsNotNone(round_trip)
             self.assertEqual(model, round_trip)
 
-    def test_ccf(self):
-        """Test Literals match defaults"""
-        for structure in CCFStructure.ALL:
-            model = structure()
-            round_trip = model.model_validate_json(model.model_dump_json())
-            self.assertIsNotNone(round_trip)
-            self.assertEqual(model, round_trip)
-
     def test_mouse_anatomy(self):
         """Test Literals match defaults"""
         structures = [

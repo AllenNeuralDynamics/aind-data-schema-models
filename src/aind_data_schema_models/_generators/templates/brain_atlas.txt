@@ -13,24 +13,16 @@ class BrainStructureModel(BaseModel):
     acronym: str
     id: str
 
-{% for _, row in data.iterrows() %}
-class {{ row['acronym'] | to_class_name_underscored }}(BrainStructureModel):
-    """Model {{row['acronym']}}"""
-    atlas: Literal["CCFv3"] = "CCFv3"
-    name: Literal["{{ row['name'] }}"] = "{{ row['name'] }}"
-    acronym: Literal["{{ row['acronym'] }}"] = "{{ row['acronym'] }}"
-    id: Literal["{{ row['id'] }}"] = "{{ row['id'] }}"
-
-{% endfor %}
 class CCFStructure:
     """CCFStructure"""
 {% for _, row in data.iterrows() %}
-    {{ row['acronym'] | to_class_name | upper }} = {{ row['acronym'] | to_class_name_underscored }}()
+    {{ row['acronym'] | to_class_name | upper }} = BrainStructureModel(
+        atlas="CCFv3",
+        name="{{ row['name'] }}",
+        acronym="{{ row['acronym'] }}",
+        id="{{ row['id'] }}",
+    )
 {%- endfor %}
-
-    ALL = tuple(BrainStructureModel.__subclasses__())
-
-    ONE_OF = Annotated[Union[tuple(BrainStructureModel.__subclasses__())], Field(discriminator="name")]
 
     id_map = {m().id: m() for m in ALL}
 
