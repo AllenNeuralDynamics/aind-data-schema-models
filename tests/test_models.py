@@ -9,7 +9,6 @@ from aind_data_schema_models.organizations import Organization
 from aind_data_schema_models.registries import Registry
 from aind_data_schema_models.species import Species
 from aind_data_schema_models.mouse_anatomy import MouseAnatomy, MouseAnatomyModel, MouseEmgMuscles
-from aind_data_schema_models.brain_atlas import CCFStructure
 
 
 class LiteralAndDefaultTests(unittest.TestCase):
