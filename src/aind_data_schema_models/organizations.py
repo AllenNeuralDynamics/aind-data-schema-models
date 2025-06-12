@@ -469,6 +469,15 @@ class _Kowa(OrganizationModel):
     registry_identifier: Literal["03zbwg482"] = "03zbwg482"
 
 
+class _Lasos_Lasertechnik(OrganizationModel):
+    """Model LASOS Lasertechnik"""
+
+    name: Literal["LASOS Lasertechnik"] = "LASOS Lasertechnik"
+    abbreviation: Literal["LASOS"] = "LASOS"
+    registry: None = None
+    registry_identifier: None = None
+
+
 class _Lg(OrganizationModel):
     """Model LG"""
 
@@ -844,6 +853,15 @@ class _Simons_Foundation(OrganizationModel):
     registry_identifier: Literal["01cmst727"] = "01cmst727"
 
 
+class _Spectra_Physics(OrganizationModel):
+    """Model Spectra-Physics"""
+
+    name: Literal["Spectra-Physics"] = "Spectra-Physics"
+    abbreviation: Literal[None] = None
+    registry: Registry.ONE_OF = Registry.ROR
+    registry_identifier: Literal["02ad9kp97"] = "02ad9kp97"
+
+
 class _Spinnaker(OrganizationModel):
     """Model Spinnaker"""
 
@@ -1041,6 +1059,7 @@ class Organization:
     JHU = _Johns_Hopkins_University()
     JULABO = _Julabo()
     KOWA = _Kowa()
+    LASOS = _Lasos_Lasertechnik()
     LG = _Lg()
     LEICA = _Leica()
     LIFECANVAS = _Lifecanvas()
@@ -1082,6 +1101,7 @@ class Organization:
     SEMROCK = _Semrock()
     SIGMA_ALDRICH = _Sigma_Aldrich()
     SIMONS_FOUNDATION = _Simons_Foundation()
+    SPECTRA_PHYSICS = _Spectra_Physics()
     SPINNAKER = _Spinnaker()
     TAMRON = _Tamron()
     TMC = _Technical_Manufacturing_Corporation()
@@ -1183,8 +1203,10 @@ Organization.LASER_MANUFACTURERS = one_of_instance(
     [
         Organization.COHERENT_SCIENTIFIC,
         Organization.HAMAMATSU,
+        Organization.LASOS,
         Organization.OXXIUS,
         Organization.QUANTIFI,
+        Organization.SPECTRA - PHYSICS,
         Organization.THORLABS,
         Organization.VORTRAN,
         Organization.OTHER,
