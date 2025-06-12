@@ -180,6 +180,7 @@ Organization.SUBJECT_SOURCES = one_of_instance(
         Organization.JANELIA,
         Organization.JAX,
         Organization.NYU,
+        Organization.UPENN,
         Organization.OTHER,
     ]
 )
