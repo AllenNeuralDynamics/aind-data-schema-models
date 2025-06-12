@@ -166,6 +166,7 @@ Organization.RESEARCH_INSTITUTIONS = one_of_instance(
         Organization.MIT,
         Organization.NYU,
         Organization.UCSD,
+        Organization.UPENN,
         Organization.OTHER,
     ]
 )
