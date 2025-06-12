@@ -65,11 +65,11 @@ class _Rrid(RegistryModel):
     abbreviation: Literal["RRID"] = "RRID"
 
 
-class __Uniprot(RegistryModel):
-    """Model  UNIPROT"""
+class _Uniprot(RegistryModel):
+    """Model UNIPROT"""
 
     name: Literal["Universal Protein Resource"] = "Universal Protein Resource"
-    abbreviation: Literal[" UNIPROT"] = " UNIPROT"
+    abbreviation: Literal["UNIPROT"] = "UNIPROT"
 
 
 class Registry:
@@ -82,7 +82,7 @@ class Registry:
     ORCID = _Orcid()
     ROR = _Ror()
     RRID = _Rrid()
-    _UNIPROT = __Uniprot()
+    UNIPROT = _Uniprot()
 
     ALL = tuple(RegistryModel.__subclasses__())
 
