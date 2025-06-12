@@ -166,6 +166,7 @@ Organization.RESEARCH_INSTITUTIONS = one_of_instance(
         Organization.MIT,
         Organization.NYU,
         Organization.UCSD,
+        Organization.UPENN,
         Organization.OTHER,
     ]
 )
@@ -179,6 +180,7 @@ Organization.SUBJECT_SOURCES = one_of_instance(
         Organization.JANELIA,
         Organization.JAX,
         Organization.NYU,
+        Organization.UPENN,
         Organization.OTHER,
     ]
 )
