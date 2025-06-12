@@ -952,6 +952,15 @@ class _University_Of_California_San_Diego(OrganizationModel):
     registry_identifier: Literal["0168r3w48"] = "0168r3w48"
 
 
+class _University_Of_Pennsylvania(OrganizationModel):
+    """Model University of Pennsylvania"""
+
+    name: Literal["University of Pennsylvania"] = "University of Pennsylvania"
+    abbreviation: Literal["UPENN"] = "UPENN"
+    registry: Registry.ONE_OF = Registry.ROR
+    registry_identifier: Literal["00b30xv10"] = "00b30xv10"
+
+
 class _Vieworks(OrganizationModel):
     """Model Vieworks"""
 
@@ -1085,6 +1094,7 @@ class Organization:
     TRANSDUCER_TECHNIQUES = _Transducer_Techniques()
     TYMPHANY = _Tymphany()
     UCSD = _University_Of_California_San_Diego()
+    UPENN = _University_Of_Pennsylvania()
     VIEWORKS = _Vieworks()
     VORTRAN = _Vortran()
     AMS_OSRAM = _Ams_Osram()
@@ -1221,6 +1231,7 @@ Organization.RESEARCH_INSTITUTIONS = one_of_instance(
         Organization.MIT,
         Organization.NYU,
         Organization.UCSD,
+        Organization.UPENN,
         Organization.OTHER,
     ]
 )
@@ -1234,6 +1245,7 @@ Organization.SUBJECT_SOURCES = one_of_instance(
         Organization.JANELIA,
         Organization.JAX,
         Organization.NYU,
+        Organization.UPENN,
         Organization.OTHER,
     ]
 )
