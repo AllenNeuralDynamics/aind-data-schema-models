@@ -1,9 +1,6 @@
 """Platforms"""
 
-from typing import Literal, Union
-
-from pydantic import BaseModel, ConfigDict, Field
-from typing_extensions import Annotated
+from pydantic import BaseModel, ConfigDict
 
 
 class BrainStructureModel(BaseModel):
@@ -5060,29 +5057,9 @@ class CCFStructure:
         id="949",
     )
 
-    @classmethod
-    def from_id(cls, id: str):
-        """Get structure by ID"""
-        for attr_name in dir(cls):
-            attr = getattr(cls, attr_name)
-            if isinstance(attr, BrainStructureModel) and attr.id == id:
-                return attr
-        raise ValueError(f"Structure with ID {id} not found.")
+    id_map = {m().id: m() for m in ALL}
 
     @classmethod
-    def by_name(cls, name: str):
-        """Get structure by name"""
-        for attr_name in dir(cls):
-            attr = getattr(cls, attr_name)
-            if isinstance(attr, BrainStructureModel) and attr.name == name:
-                return attr
-        raise ValueError(f"Structure with name '{name}' not found.")
-
-    @classmethod
-    def by_acronym(cls, acronym: str):
-        """Get structure by acronym"""
-        for attr_name in dir(cls):
-            attr = getattr(cls, attr_name)
-            if isinstance(attr, BrainStructureModel) and attr.acronym == acronym:
-                return attr
-        raise ValueError(f"Structure with acronym '{acronym}' not found.")
+    def from_id(cls, id: int):
+        """Get structure from id"""
+        return cls.id_map.get(id, None)

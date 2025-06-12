@@ -1,8 +1,6 @@
 """Platforms"""
 {% raw -%}
-from pydantic import BaseModel, Field, ConfigDict
-from typing import Literal, Union
-from typing_extensions import Annotated
+from pydantic import BaseModel, ConfigDict
 {% endraw %}
 
 class BrainStructureModel(BaseModel):
