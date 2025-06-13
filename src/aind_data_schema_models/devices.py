@@ -16,6 +16,7 @@ class ImagingDeviceType(str, Enum):
     OBJECTIVE = "Objective"
     ROTATION_MOUNT = "Rotation mount"
     SLIT = "Slit"
+    SLM = "Spatial light modulator"
     TUNABLE_LENS = "Tunable lens"
     OTHER = "Other"
 
