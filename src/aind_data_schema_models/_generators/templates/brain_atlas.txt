@@ -1,4 +1,4 @@
-"""Platforms"""
+"""Brain atlases"""
 {% raw -%}
 from pydantic import BaseModel, ConfigDict
 {% endraw %}

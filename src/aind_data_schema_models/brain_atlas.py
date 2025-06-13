@@ -13,7 +13,7 @@ class BrainStructureModel(BaseModel):
     id: str
 
 
-class CCFStructure:
+class CCFv3:
     """CCFStructure"""
 
     VI = BrainStructureModel(
