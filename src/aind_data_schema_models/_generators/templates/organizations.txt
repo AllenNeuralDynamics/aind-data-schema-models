@@ -118,8 +118,10 @@ Organization.LASER_MANUFACTURERS = one_of_instance(
     [
         Organization.COHERENT_SCIENTIFIC,
         Organization.HAMAMATSU,
+        Organization.LASOS,
         Organization.OXXIUS,
         Organization.QUANTIFI,
+        Organization.SPECTRA_PHYSICS,
         Organization.THORLABS,
         Organization.VORTRAN,
         Organization.OTHER,
