@@ -14,6 +14,20 @@ class HarpDeviceTypeModel(BaseModel):
     name: str = Field(..., title="Harp device type name")
 
 
+class _Analoginput(HarpDeviceTypeModel):
+    """Model AnalogInput"""
+
+    name: Literal["AnalogInput"] = "AnalogInput"
+    whoami: Literal[1236] = 1236
+
+
+class _Archimedes(HarpDeviceTypeModel):
+    """Model Archimedes"""
+
+    name: Literal["Archimedes"] = "Archimedes"
+    whoami: Literal[1136] = 1136
+
+
 class _Behavior(HarpDeviceTypeModel):
     """Model Behavior"""
 
@@ -21,53 +35,102 @@ class _Behavior(HarpDeviceTypeModel):
     whoami: Literal[1216] = 1216
 
 
-class _Camera_Controller(HarpDeviceTypeModel):
-    """Model Camera Controller"""
+class _Cameracontroller(HarpDeviceTypeModel):
+    """Model CameraController"""
 
-    name: Literal["Camera Controller"] = "Camera Controller"
+    name: Literal["CameraController"] = "CameraController"
     whoami: Literal[1168] = 1168
 
 
-class _Clock_Synchronizer(HarpDeviceTypeModel):
-    """Model Clock Synchronizer"""
+class _Cameracontrollergen2(HarpDeviceTypeModel):
+    """Model CameraControllerGen2"""
 
-    name: Literal["Clock Synchronizer"] = "Clock Synchronizer"
+    name: Literal["CameraControllerGen2"] = "CameraControllerGen2"
+    whoami: Literal[1170] = 1170
+
+
+class _Clocksynchronizer(HarpDeviceTypeModel):
+    """Model ClockSynchronizer"""
+
+    name: Literal["ClockSynchronizer"] = "ClockSynchronizer"
     whoami: Literal[1152] = 1152
 
 
-class _Cuttlefish(HarpDeviceTypeModel):
-    """Model Cuttlefish"""
+class _Driver12Volts(HarpDeviceTypeModel):
+    """Model Driver12Volts"""
 
-    name: Literal["Cuttlefish"] = "Cuttlefish"
-    whoami: Literal[1403] = 1403
-
-
-class _Generic_Harp_Device(HarpDeviceTypeModel):
-    """Model Generic Harp Device"""
-
-    name: Literal["Generic Harp Device"] = "Generic Harp Device"
-    whoami: Literal[0] = 0
+    name: Literal["Driver12Volts"] = "Driver12Volts"
+    whoami: Literal[1072] = 1072
 
 
-class _Input_Expander(HarpDeviceTypeModel):
-    """Model Input Expander"""
+class _Environmentsensor(HarpDeviceTypeModel):
+    """Model EnvironmentSensor"""
 
-    name: Literal["Input Expander"] = "Input Expander"
+    name: Literal["EnvironmentSensor"] = "EnvironmentSensor"
+    whoami: Literal[1405] = 1405
+
+
+class _Flypad(HarpDeviceTypeModel):
+    """Model FlyPad"""
+
+    name: Literal["FlyPad"] = "FlyPad"
+    whoami: Literal[1200] = 1200
+
+
+class _Hobgoblin(HarpDeviceTypeModel):
+    """Model Hobgoblin"""
+
+    name: Literal["Hobgoblin"] = "Hobgoblin"
+    whoami: Literal[123] = 123
+
+
+class _Ibl_Behavior_Control(HarpDeviceTypeModel):
+    """Model Ibl_behavior_control"""
+
+    name: Literal["Ibl_behavior_control"] = "Ibl_behavior_control"
+    whoami: Literal[2080] = 2080
+
+
+class _Inputexpander(HarpDeviceTypeModel):
+    """Model InputExpander"""
+
+    name: Literal["InputExpander"] = "InputExpander"
     whoami: Literal[1106] = 1106
 
 
-class _Lickety_Split(HarpDeviceTypeModel):
-    """Model Lickety Split"""
+class _Ledcontroller(HarpDeviceTypeModel):
+    """Model LedController"""
 
-    name: Literal["Lickety Split"] = "Lickety Split"
+    name: Literal["LedController"] = "LedController"
+    whoami: Literal[1088] = 1088
+
+
+class _Licketysplit(HarpDeviceTypeModel):
+    """Model LicketySplit"""
+
+    name: Literal["LicketySplit"] = "LicketySplit"
     whoami: Literal[1400] = 1400
 
 
-class _Load_Cells(HarpDeviceTypeModel):
-    """Model Load Cells"""
+class _Loadcells(HarpDeviceTypeModel):
+    """Model LoadCells"""
 
-    name: Literal["Load Cells"] = "Load Cells"
+    name: Literal["LoadCells"] = "LoadCells"
     whoami: Literal[1232] = 1232
+
+
+class _Multipwmgenerator(HarpDeviceTypeModel):
+    """Model MultiPwmGenerator"""
+
+    name: Literal["MultiPwmGenerator"] = "MultiPwmGenerator"
+    whoami: Literal[1040] = 1040
+
+
+class _Neurophotometricsfp3002(HarpDeviceTypeModel):
+    """Model NeurophotometricsFP3002"""
+
+    name: Literal["NeurophotometricsFP3002"] = "NeurophotometricsFP3002"
+    whoami: Literal[2064] = 2064
 
 
 class _Olfactometer(HarpDeviceTypeModel):
@@ -77,24 +140,73 @@ class _Olfactometer(HarpDeviceTypeModel):
     whoami: Literal[1140] = 1140
 
 
-class _Sniff_Detector(HarpDeviceTypeModel):
-    """Model Sniff Detector"""
+class _Outputexpander(HarpDeviceTypeModel):
+    """Model OutputExpander"""
 
-    name: Literal["Sniff Detector"] = "Sniff Detector"
+    name: Literal["OutputExpander"] = "OutputExpander"
+    whoami: Literal[1108] = 1108
+
+
+class _Pluma(HarpDeviceTypeModel):
+    """Model Pluma"""
+
+    name: Literal["Pluma"] = "Pluma"
+    whoami: Literal[2110] = 2110
+
+
+class _Poke(HarpDeviceTypeModel):
+    """Model Poke"""
+
+    name: Literal["Poke"] = "Poke"
+    whoami: Literal[1024] = 1024
+
+
+class _Pycontroladapter(HarpDeviceTypeModel):
+    """Model PyControlAdapter"""
+
+    name: Literal["PyControlAdapter"] = "PyControlAdapter"
+    whoami: Literal[1184] = 1184
+
+
+class _Rfidreader(HarpDeviceTypeModel):
+    """Model RfidReader"""
+
+    name: Literal["RfidReader"] = "RfidReader"
+    whoami: Literal[2094] = 2094
+
+
+class _Rgbarray(HarpDeviceTypeModel):
+    """Model RgbArray"""
+
+    name: Literal["RgbArray"] = "RgbArray"
+    whoami: Literal[1248] = 1248
+
+
+class _Simpleanaloggenerator(HarpDeviceTypeModel):
+    """Model SimpleAnalogGenerator"""
+
+    name: Literal["SimpleAnalogGenerator"] = "SimpleAnalogGenerator"
+    whoami: Literal[1121] = 1121
+
+
+class _Sniffdetector(HarpDeviceTypeModel):
+    """Model SniffDetector"""
+
+    name: Literal["SniffDetector"] = "SniffDetector"
     whoami: Literal[1401] = 1401
 
 
-class _Sound_Card(HarpDeviceTypeModel):
-    """Model Sound Card"""
+class _Soundcard(HarpDeviceTypeModel):
+    """Model SoundCard"""
 
-    name: Literal["Sound Card"] = "Sound Card"
+    name: Literal["SoundCard"] = "SoundCard"
     whoami: Literal[1280] = 1280
 
 
-class _Stepper_Driver(HarpDeviceTypeModel):
-    """Model Stepper Driver"""
+class _Stepperdriver(HarpDeviceTypeModel):
+    """Model StepperDriver"""
 
-    name: Literal["Stepper Driver"] = "Stepper Driver"
+    name: Literal["StepperDriver"] = "StepperDriver"
     whoami: Literal[1130] = 1130
 
 
@@ -105,17 +217,24 @@ class _Synchronizer(HarpDeviceTypeModel):
     whoami: Literal[1104] = 1104
 
 
-class _Timestamp_Generator_Gen_1(HarpDeviceTypeModel):
-    """Model Timestamp Generator Gen 1"""
+class _Syringepump(HarpDeviceTypeModel):
+    """Model SyringePump"""
 
-    name: Literal["Timestamp Generator Gen 1"] = "Timestamp Generator Gen 1"
+    name: Literal["SyringePump"] = "SyringePump"
+    whoami: Literal[1296] = 1296
+
+
+class _Timestampgeneratorgen1(HarpDeviceTypeModel):
+    """Model TimestampGeneratorGen1"""
+
+    name: Literal["TimestampGeneratorGen1"] = "TimestampGeneratorGen1"
     whoami: Literal[1154] = 1154
 
 
-class _Timestamp_Generator_Gen_3(HarpDeviceTypeModel):
-    """Model Timestamp Generator Gen 3"""
+class _Timestampgeneratorgen3(HarpDeviceTypeModel):
+    """Model TimestampGeneratorGen3"""
 
-    name: Literal["Timestamp Generator Gen 3"] = "Timestamp Generator Gen 3"
+    name: Literal["TimestampGeneratorGen3"] = "TimestampGeneratorGen3"
     whoami: Literal[1158] = 1158
 
 
@@ -126,25 +245,106 @@ class _Treadmill(HarpDeviceTypeModel):
     whoami: Literal[1402] = 1402
 
 
+class _Usbhub(HarpDeviceTypeModel):
+    """Model USBHub"""
+
+    name: Literal["USBHub"] = "USBHub"
+    whoami: Literal[256] = 256
+
+
+class _Vestibularh1(HarpDeviceTypeModel):
+    """Model VestibularH1"""
+
+    name: Literal["VestibularH1"] = "VestibularH1"
+    whoami: Literal[1224] = 1224
+
+
+class _Vestibularh2(HarpDeviceTypeModel):
+    """Model VestibularH2"""
+
+    name: Literal["VestibularH2"] = "VestibularH2"
+    whoami: Literal[1225] = 1225
+
+
+class _Wear(HarpDeviceTypeModel):
+    """Model Wear"""
+
+    name: Literal["Wear"] = "Wear"
+    whoami: Literal[1056] = 1056
+
+
+class _Wearbasestationgen2(HarpDeviceTypeModel):
+    """Model WearBaseStationGen2"""
+
+    name: Literal["WearBaseStationGen2"] = "WearBaseStationGen2"
+    whoami: Literal[1058] = 1058
+
+
+class _Whiterabbit(HarpDeviceTypeModel):
+    """Model WhiteRabbit"""
+
+    name: Literal["WhiteRabbit"] = "WhiteRabbit"
+    whoami: Literal[1404] = 1404
+
+
+class _Cuttlefish(HarpDeviceTypeModel):
+    """Model cuTTLefish"""
+
+    name: Literal["cuTTLefish"] = "cuTTLefish"
+    whoami: Literal[1403] = 1403
+
+
+class _Cuttlefishfip(HarpDeviceTypeModel):
+    """Model cuTTLefishFip"""
+
+    name: Literal["cuTTLefishFip"] = "cuTTLefishFip"
+    whoami: Literal[1407] = 1407
+
+
 class HarpDeviceType:
     """Harp device types"""
 
+    ANALOGINPUT = _Analoginput()
+    ARCHIMEDES = _Archimedes()
     BEHAVIOR = _Behavior()
-    CAMERA_CONTROLLER = _Camera_Controller()
-    CLOCK_SYNCHRONIZER = _Clock_Synchronizer()
-    CUTTLEFISH = _Cuttlefish()
-    GENERIC_HARP_DEVICE = _Generic_Harp_Device()
-    INPUT_EXPANDER = _Input_Expander()
-    LICKETY_SPLIT = _Lickety_Split()
-    LOAD_CELLS = _Load_Cells()
+    CAMERACONTROLLER = _Cameracontroller()
+    CAMERACONTROLLERGEN2 = _Cameracontrollergen2()
+    CLOCKSYNCHRONIZER = _Clocksynchronizer()
+    DRIVER12VOLTS = _Driver12Volts()
+    ENVIRONMENTSENSOR = _Environmentsensor()
+    FLYPAD = _Flypad()
+    HOBGOBLIN = _Hobgoblin()
+    IBL_BEHAVIOR_CONTROL = _Ibl_Behavior_Control()
+    INPUTEXPANDER = _Inputexpander()
+    LEDCONTROLLER = _Ledcontroller()
+    LICKETYSPLIT = _Licketysplit()
+    LOADCELLS = _Loadcells()
+    MULTIPWMGENERATOR = _Multipwmgenerator()
+    NEUROPHOTOMETRICSFP3002 = _Neurophotometricsfp3002()
     OLFACTOMETER = _Olfactometer()
-    SNIFF_DETECTOR = _Sniff_Detector()
-    SOUND_CARD = _Sound_Card()
-    STEPPER_DRIVER = _Stepper_Driver()
+    OUTPUTEXPANDER = _Outputexpander()
+    PLUMA = _Pluma()
+    POKE = _Poke()
+    PYCONTROLADAPTER = _Pycontroladapter()
+    RFIDREADER = _Rfidreader()
+    RGBARRAY = _Rgbarray()
+    SIMPLEANALOGGENERATOR = _Simpleanaloggenerator()
+    SNIFFDETECTOR = _Sniffdetector()
+    SOUNDCARD = _Soundcard()
+    STEPPERDRIVER = _Stepperdriver()
     SYNCHRONIZER = _Synchronizer()
-    TIMESTAMP_GENERATOR_GEN_1 = _Timestamp_Generator_Gen_1()
-    TIMESTAMP_GENERATOR_GEN_3 = _Timestamp_Generator_Gen_3()
+    SYRINGEPUMP = _Syringepump()
+    TIMESTAMPGENERATORGEN1 = _Timestampgeneratorgen1()
+    TIMESTAMPGENERATORGEN3 = _Timestampgeneratorgen3()
     TREADMILL = _Treadmill()
+    USBHUB = _Usbhub()
+    VESTIBULARH1 = _Vestibularh1()
+    VESTIBULARH2 = _Vestibularh2()
+    WEAR = _Wear()
+    WEARBASESTATIONGEN2 = _Wearbasestationgen2()
+    WHITERABBIT = _Whiterabbit()
+    CUTTLEFISH = _Cuttlefish()
+    CUTTLEFISHFIP = _Cuttlefishfip()
 
     ALL = tuple(HarpDeviceTypeModel.__subclasses__())
 
