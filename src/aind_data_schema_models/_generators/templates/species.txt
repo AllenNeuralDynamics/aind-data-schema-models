@@ -21,7 +21,7 @@ class StrainModel(BaseModel):
 class {{ row['strain'] | to_class_name_underscored }}(StrainModel):
     """Model {{row['strain']}}"""
     name: Literal["{{ row['strain'] }}"] = "{{ row['strain'] }}"
-    species: Literal["{{ row['species'] }}"] = "{{ row['species'] }}"
+    species: Literal["{{ row['name'] }}"] = "{{ row['name'] }}"
     {%- set reg_abb = row['strain_registry_abbreviation'] %}
     registry: {{"Registry.ONE_OF" if reg_abb == reg_abb else "None"}} = {{None if reg_abb != reg_abb else "Registry." + (reg_abb | upper)}}
     registry_identifier: Literal["{{ row['strain_registry_identifier'] }}"] = "{{ row['strain_registry_identifier'] }}"
@@ -49,9 +49,9 @@ class SpeciesModel(BaseModel):
     registry_identifier: str
 
 {% for _, row in species_data.iterrows() %}
-class {{ row['species'] | to_class_name_underscored }}(SpeciesModel):
-    """Model {{row['species']}}"""
-    name: Literal["{{ row['species'] }}"] = "{{ row['species'] }}"
+class {{ row['name'] | to_class_name_underscored }}(SpeciesModel):
+    """Model {{row['name']}}"""
+    name: Literal["{{ row['name'] }}"] = "{{ row['name'] }}"
     common_name: Literal["{{ row['common_name'] }}"] = "{{ row['common_name'] }}"
     registry: Registry.ONE_OF = Registry.{{ row['species_registry_abbreviation'] | upper }}
     registry_identifier: Literal["{{ row['species_registry_identifier'] }}"] = "{{ row['species_registry_identifier'] }}"
@@ -60,7 +60,7 @@ class {{ row['species'] | to_class_name_underscored }}(SpeciesModel):
 class Species:
     """Species"""
 {% for _, row in species_data.iterrows() %}
-    {{ row['species'] | to_class_name | upper }} = {{ row['species'] | to_class_name_underscored }}()
+    {{ row['name'] | to_class_name | upper }} = {{ row['name'] | to_class_name_underscored }}()
 {%- endfor %}
 
     ALL = tuple(SpeciesModel.__subclasses__())
