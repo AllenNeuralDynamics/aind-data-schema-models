@@ -11,8 +11,8 @@ class BrainStructureModel(BaseModel):
     acronym: str
     id: str
 
-class CCFStructure:
-    """CCFStructure"""
+class CCFv3:
+    """CCFv3"""
 {% for _, row in data.iterrows() %}
     {{ row['acronym'] | to_class_name | upper }} = BrainStructureModel(
         atlas="CCFv3",

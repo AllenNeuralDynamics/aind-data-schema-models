@@ -1,4 +1,4 @@
-"""Platforms"""
+"""Brain atlases"""
 
 from pydantic import BaseModel, ConfigDict
 
@@ -14,7 +14,7 @@ class BrainStructureModel(BaseModel):
 
 
 class CCFv3:
-    """CCFStructure"""
+    """CCFv3"""
 
     VI = BrainStructureModel(
         atlas="CCFv3",
