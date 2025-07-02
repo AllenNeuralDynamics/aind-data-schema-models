@@ -26,6 +26,7 @@ def to_class_name(name: str) -> str:
 def update_harp_types(
     url: str = "https://raw.githubusercontent.com/harp-tech/whoami/refs/heads/main/whoami.yml",
 ):
+    """Pull the latest harp types from the whoami.yml file and save them to a CSV file."""
     response = requests.get(url, allow_redirects=True, timeout=5)
     content = response.content.decode("utf-8")
     content = yaml.safe_load(content)
