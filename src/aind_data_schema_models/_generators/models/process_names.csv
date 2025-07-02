@@ -21,6 +21,7 @@ Image destriping
 Image flat-field correction
 Image importing
 Image mip visualization
+Image radial correction
 Image thresholding
 Image tile alignment
 Image tile fusing

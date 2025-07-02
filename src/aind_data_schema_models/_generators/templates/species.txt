@@ -22,7 +22,8 @@ class {{ row['strain'] | to_class_name_underscored }}(StrainModel):
     """Model {{row['strain']}}"""
     name: Literal["{{ row['strain'] }}"] = "{{ row['strain'] }}"
     species: Literal["{{ row['species'] }}"] = "{{ row['species'] }}"
-    registry: Registry.ONE_OF = Registry.{{ row['strain_registry_abbreviation'] | upper }}
+    {%- set reg_abb = row['strain_registry_abbreviation'] %}
+    registry: {{"Registry.ONE_OF" if reg_abb == reg_abb else "None"}} = {{None if reg_abb != reg_abb else "Registry." + (reg_abb | upper)}}
     registry_identifier: Literal["{{ row['strain_registry_identifier'] }}"] = "{{ row['strain_registry_identifier'] }}"
 {% endif %}
 {% endfor %}
