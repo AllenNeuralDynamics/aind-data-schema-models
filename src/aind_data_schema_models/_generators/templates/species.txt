@@ -44,6 +44,7 @@ class SpeciesModel(BaseModel):
     """Base model for species"""
     model_config = ConfigDict(frozen=True)
     name: str
+    common_name: str
     registry: Registry.ONE_OF
     registry_identifier: str
 
@@ -51,6 +52,7 @@ class SpeciesModel(BaseModel):
 class {{ row['species'] | to_class_name_underscored }}(SpeciesModel):
     """Model {{row['species']}}"""
     name: Literal["{{ row['species'] }}"] = "{{ row['species'] }}"
+    common_name: Literal["{{ row['common_name'] }}"] = "{{ row['common_name'] }}"
     registry: Registry.ONE_OF = Registry.{{ row['species_registry_abbreviation'] | upper }}
     registry_identifier: Literal["{{ row['species_registry_identifier'] }}"] = "{{ row['species_registry_identifier'] }}"
 
@@ -65,3 +67,15 @@ class Species:
 
     ONE_OF = Annotated[Union[tuple(SpeciesModel.__subclasses__())], Field(discriminator="name")]
 
+    name_map = {m().name: m() for m in ALL}
+    common_name_map = {m().common_name: m() for m in ALL}
+
+    @classmethod
+    def from_name(cls, name: str):
+        """Get SpeciesModel from name"""
+        return cls.name_map.get(name, None)
+
+    @classmethod
+    def from_common_name(cls, common_name: str):
+        """Get SpeciesModel from common_name"""
+        return cls.common_name_map.get(common_name, None)
