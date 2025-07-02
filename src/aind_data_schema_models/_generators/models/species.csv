@@ -1,4 +1,4 @@
-species,species_registry_abbreviation,species_registry_identifier,strain,strain_registry_abbreviation,strain_registry_identifier,common_name
+name,species_registry_abbreviation,species_registry_identifier,strain,strain_registry_abbreviation,strain_registry_identifier,common_name
 Callithrix jacchus,NCBI,NCBI:txid9483,default,,,Common marmoset
 Homo sapiens,NCBI,NCBI:txid9606,default,,,Human
 Macaca mulatta,NCBI,NCBI:txid9544,default,,,Rhesus macaque
