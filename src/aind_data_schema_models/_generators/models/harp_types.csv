@@ -1,4 +1,5 @@
 name,whoami
+Hobgoblin,123
 USBHub,256
 Poke,1024
 MultiPwmGenerator,1040
@@ -38,3 +39,4 @@ Treadmill,1402
 cuTTLefish,1403
 WhiteRabbit,1404
 EnvironmentSensor,1405
+cuTTLefishFip,1407
