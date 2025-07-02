@@ -1,4 +1,5 @@
-""" Update the harp type CSV file """
+"""Update the harp type CSV file"""
+
 from aind_data_schema_models._generators.dev_utils import update_harp_types
 
 
