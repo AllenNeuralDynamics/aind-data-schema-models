@@ -1,5 +1,5 @@
 """Species"""
-{% set species_data = data | unique_rows("species") %}
+{% set species_data = data | unique_rows("name") %}
 {% set strain_data = data | unique_rows("strain") %}
 {% raw -%}
 from pydantic import BaseModel, Field, ConfigDict
@@ -60,7 +60,7 @@ class {{ row['name'] | to_class_name_underscored }}(SpeciesModel):
 class Species:
     """Species"""
 {% for _, row in species_data.iterrows() %}
-    {{ row['name'] | to_class_name | upper }} = {{ row['name'] | to_class_name_underscored }}()
+    {{ row['common_name'] | to_class_name | upper }} = {{ row['name'] | to_class_name_underscored }}()
 {%- endfor %}
 
     ALL = tuple(SpeciesModel.__subclasses__())

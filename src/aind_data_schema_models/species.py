@@ -78,6 +78,42 @@ class _Callithrix_Jacchus(SpeciesModel):
     registry_identifier: Literal["NCBI:txid9483"] = "NCBI:txid9483"
 
 
+class _Carpa_Hircus(SpeciesModel):
+    """Model Carpa hircus"""
+
+    name: Literal["Carpa hircus"] = "Carpa hircus"
+    common_name: Literal["Goat"] = "Goat"
+    registry: Registry.ONE_OF = Registry.NCBI
+    registry_identifier: Literal["NCBI:txid9925"] = "NCBI:txid9925"
+
+
+class _Cavia_Porcellus(SpeciesModel):
+    """Model Cavia porcellus"""
+
+    name: Literal["Cavia porcellus"] = "Cavia porcellus"
+    common_name: Literal["Guinea pig"] = "Guinea pig"
+    registry: Registry.ONE_OF = Registry.NCBI
+    registry_identifier: Literal["NCBI:txid10141"] = "NCBI:txid10141"
+
+
+class _Equus_Asinus(SpeciesModel):
+    """Model Equus asinus"""
+
+    name: Literal["Equus asinus"] = "Equus asinus"
+    common_name: Literal["Donkey"] = "Donkey"
+    registry: Registry.ONE_OF = Registry.NCBI
+    registry_identifier: Literal["NCBI:txid9793"] = "NCBI:txid9793"
+
+
+class _Gallus_Gallus(SpeciesModel):
+    """Model Gallus gallus"""
+
+    name: Literal["Gallus gallus"] = "Gallus gallus"
+    common_name: Literal["Chicken"] = "Chicken"
+    registry: Registry.ONE_OF = Registry.NCBI
+    registry_identifier: Literal["NCBI:txid9031"] = "NCBI:txid9031"
+
+
 class _Homo_Sapiens(SpeciesModel):
     """Model Homo sapiens"""
 
@@ -85,6 +121,15 @@ class _Homo_Sapiens(SpeciesModel):
     common_name: Literal["Human"] = "Human"
     registry: Registry.ONE_OF = Registry.NCBI
     registry_identifier: Literal["NCBI:txid9606"] = "NCBI:txid9606"
+
+
+class _Lama_Glama(SpeciesModel):
+    """Model Lama glama"""
+
+    name: Literal["Lama glama"] = "Lama glama"
+    common_name: Literal["Llama"] = "Llama"
+    registry: Registry.ONE_OF = Registry.NCBI
+    registry_identifier: Literal["NCBI:txid9844"] = "NCBI:txid9844"
 
 
 class _Macaca_Mulatta(SpeciesModel):
@@ -105,24 +150,6 @@ class _Mus_Musculus(SpeciesModel):
     registry_identifier: Literal["NCBI:txid10090"] = "NCBI:txid10090"
 
 
-class _Rattus_Norvegicus(SpeciesModel):
-    """Model Rattus norvegicus"""
-
-    name: Literal["Rattus norvegicus"] = "Rattus norvegicus"
-    common_name: Literal["Norway rat"] = "Norway rat"
-    registry: Registry.ONE_OF = Registry.NCBI
-    registry_identifier: Literal["NCBI:txid10116"] = "NCBI:txid10116"
-
-
-class _Gallus_Gallus(SpeciesModel):
-    """Model Gallus gallus"""
-
-    name: Literal["Gallus gallus"] = "Gallus gallus"
-    common_name: Literal["Chicken"] = "Chicken"
-    registry: Registry.ONE_OF = Registry.NCBI
-    registry_identifier: Literal["NCBI:txid9031"] = "NCBI:txid9031"
-
-
 class _Oryctolagus_Cuniculus(SpeciesModel):
     """Model Oryctolagus cuniculus"""
 
@@ -132,40 +159,13 @@ class _Oryctolagus_Cuniculus(SpeciesModel):
     registry_identifier: Literal["NCBI:txid9986"] = "NCBI:txid9986"
 
 
-class _Cavia_Porcellus(SpeciesModel):
-    """Model Cavia porcellus"""
+class _Rattus_Norvegicus(SpeciesModel):
+    """Model Rattus norvegicus"""
 
-    name: Literal["Cavia porcellus"] = "Cavia porcellus"
-    common_name: Literal["Guinea pig"] = "Guinea pig"
+    name: Literal["Rattus norvegicus"] = "Rattus norvegicus"
+    common_name: Literal["Norway rat"] = "Norway rat"
     registry: Registry.ONE_OF = Registry.NCBI
-    registry_identifier: Literal["NCBI:txid10141"] = "NCBI:txid10141"
-
-
-class _Carpa_Hircus(SpeciesModel):
-    """Model Carpa hircus"""
-
-    name: Literal["Carpa hircus"] = "Carpa hircus"
-    common_name: Literal["Goat"] = "Goat"
-    registry: Registry.ONE_OF = Registry.NCBI
-    registry_identifier: Literal["NCBI:txid9925"] = "NCBI:txid9925"
-
-
-class _Equus_Asinus(SpeciesModel):
-    """Model Equus asinus"""
-
-    name: Literal["Equus asinus"] = "Equus asinus"
-    common_name: Literal["Donkey"] = "Donkey"
-    registry: Registry.ONE_OF = Registry.NCBI
-    registry_identifier: Literal["NCBI:txid9793"] = "NCBI:txid9793"
-
-
-class _Lama_Glama(SpeciesModel):
-    """Model Lama glama"""
-
-    name: Literal["Lama glama"] = "Lama glama"
-    common_name: Literal["Llama"] = "Llama"
-    registry: Registry.ONE_OF = Registry.NCBI
-    registry_identifier: Literal["NCBI:txid9844"] = "NCBI:txid9844"
+    registry_identifier: Literal["NCBI:txid10116"] = "NCBI:txid10116"
 
 
 class _Vicuna_Pacos(SpeciesModel):
@@ -180,18 +180,18 @@ class _Vicuna_Pacos(SpeciesModel):
 class Species:
     """Species"""
 
-    CALLITHRIX_JACCHUS = _Callithrix_Jacchus()
-    HOMO_SAPIENS = _Homo_Sapiens()
-    MACACA_MULATTA = _Macaca_Mulatta()
-    MUS_MUSCULUS = _Mus_Musculus()
-    RATTUS_NORVEGICUS = _Rattus_Norvegicus()
-    GALLUS_GALLUS = _Gallus_Gallus()
-    ORYCTOLAGUS_CUNICULUS = _Oryctolagus_Cuniculus()
-    CAVIA_PORCELLUS = _Cavia_Porcellus()
-    CARPA_HIRCUS = _Carpa_Hircus()
-    EQUUS_ASINUS = _Equus_Asinus()
-    LAMA_GLAMA = _Lama_Glama()
-    VICUNA_PACOS = _Vicuna_Pacos()
+    COMMON_MARMOSET = _Callithrix_Jacchus()
+    GOAT = _Carpa_Hircus()
+    GUINEA_PIG = _Cavia_Porcellus()
+    DONKEY = _Equus_Asinus()
+    CHICKEN = _Gallus_Gallus()
+    HUMAN = _Homo_Sapiens()
+    LLAMA = _Lama_Glama()
+    RHESUS_MACAQUE = _Macaca_Mulatta()
+    HOUSE_MOUSE = _Mus_Musculus()
+    EUROPEAN_RABBIT = _Oryctolagus_Cuniculus()
+    NORWAY_RAT = _Rattus_Norvegicus()
+    ALPACA = _Vicuna_Pacos()
 
     ALL = tuple(SpeciesModel.__subclasses__())
 
