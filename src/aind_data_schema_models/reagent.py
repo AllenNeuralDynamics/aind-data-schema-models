@@ -6,9 +6,12 @@ from enum import Enum
 class StainType(str, Enum):
     """Stain types for probes describing what is being labeled"""
 
-    RNA = "RNA"
-    NUCLEAR = "Nuclear"
+    CYTOSKELETON = "Cytoskeleton"
     FILL = "Fill"
+    RNA = "RNA"
+    PROTEIN = "Protein"
+    NUCLEAR = "Nuclear"
+    VASCULATURE = "Vasculature"
 
 
 class FluorophoreType(str, Enum):
