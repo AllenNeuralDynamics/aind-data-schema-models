@@ -6,7 +6,6 @@ from pydantic import BaseModel
 
 from aind_data_schema_models.harp_types import HarpDeviceType
 from aind_data_schema_models.organizations import Organization
-from aind_data_schema_models.registries import Registry
 from aind_data_schema_models.species import Species
 from aind_data_schema_models.mouse_anatomy import MouseAnatomy, MouseAnatomyModel, MouseEmgMuscles
 
