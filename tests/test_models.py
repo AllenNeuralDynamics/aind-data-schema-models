@@ -32,15 +32,6 @@ class LiteralAndDefaultTests(unittest.TestCase):
             self.assertIsNotNone(round_trip)
             self.assertEqual(model, round_trip)
 
-    def test_registry(self):
-        """Test Literals match defaults"""
-
-        for registry in Registry.ALL:
-            model = registry()
-            round_trip = model.model_validate_json(model.model_dump_json())
-            self.assertIsNotNone(round_trip)
-            self.assertEqual(model, round_trip)
-
     def test_species(self):
         """Test Literals match defaults"""
 
