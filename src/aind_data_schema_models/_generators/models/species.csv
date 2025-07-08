@@ -2,8 +2,8 @@ name,species_registry_abbreviation,species_registry_identifier,strain,strain_reg
 Callithrix jacchus,NCBI,txid9483,default,,,Common marmoset
 Homo sapiens,NCBI,txid9606,default,,,Human
 Macaca mulatta,NCBI,txid9544,default,,,Rhesus macaque
-Mus musculus,NCBI,txid10090,C57BL/6J,MGI,MGI:3028467,House mouse
-Mus musculus,NCBI,txid10090,BALB/c,MGI,MGI:2159737,House mouse
+Mus musculus,NCBI,txid10090,C57BL/6J,MGI,3028467,House mouse
+Mus musculus,NCBI,txid10090,BALB/c,MGI,2159737,House mouse
 Mus musculus,NCBI,txid10090,Unknown,,,House mouse
 Rattus norvegicus,NCBI,txid10116,default,,,Norway rat
 Gallus gallus,NCBI,txid9031,default,,,Chicken
