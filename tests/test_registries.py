@@ -11,7 +11,7 @@ class TestRegistry(unittest.TestCase):
     def test_class_construction(self):
         """Tests enum can be instantiated via string"""
 
-        self.assertEqual(Registry.ADDGENE, "ADDGENE")
+        self.assertEqual(Registry.ADDGENE, "Addgene (ADDGENE)")
 
 
 if __name__ == "__main__":
