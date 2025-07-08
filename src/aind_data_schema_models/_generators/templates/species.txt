@@ -13,8 +13,8 @@ class StrainModel(BaseModel):
     model_config = ConfigDict(frozen=True)
     name: str
     species: str
-    registry: Optional[Registry]
-    registry_identifier: Optional[str]
+    registry: Optional[Registry] = Field(default=None)
+    registry_identifier: Optional[str] = Field(default=None)
 
 {% for _, row in strain_data.iterrows() %}
 {% if row['strain'] != 'default' %}
@@ -23,8 +23,8 @@ class {{ row['strain'] | to_class_name_underscored }}(StrainModel):
     name: Literal["{{ row['strain'] }}"] = "{{ row['strain'] }}"
     species: Literal["{{ row['name'] }}"] = "{{ row['name'] }}"
     {%- set reg_abb = row['strain_registry_abbreviation'] %}
-    registry: Optional[Registry] = {% if reg_abb == reg_abb %}Registry.{{ reg_abb | upper }}{% else %}Field(default=None){% endif %}
-    registry_identifier: Optional[str] = {% if reg_abb == reg_abb %}"{{ row['strain_registry_identifier'] }}"{% else %}Field(default=None){% endif %}
+    registry: Optional[Registry] = {% if reg_abb == reg_abb %}Field(default=Registry.{{ reg_abb | upper }}){% else %}Field(default=None){% endif %}
+    registry_identifier: Optional[str] = {% if reg_abb == reg_abb %}Field(default="{{ row['strain_registry_identifier'] }}"){% else %}Field(default=None){% endif %}
 {% endif %}
 {% endfor %}
 class Strain:

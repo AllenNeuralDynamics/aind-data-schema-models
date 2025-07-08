@@ -14,8 +14,8 @@ class StrainModel(BaseModel):
     model_config = ConfigDict(frozen=True)
     name: str
     species: str
-    registry: Optional[Registry]
-    registry_identifier: Optional[str]
+    registry: Optional[Registry] = Field(default=None)
+    registry_identifier: Optional[str] = Field(default=None)
 
 
 class _C57Bl_6J(StrainModel):
@@ -23,8 +23,8 @@ class _C57Bl_6J(StrainModel):
 
     name: Literal["C57BL/6J"] = "C57BL/6J"
     species: Literal["Mus musculus"] = "Mus musculus"
-    registry: Optional[Registry] = Registry.MGI
-    registry_identifier: Optional[str] = "MGI:3028467"
+    registry: Optional[Registry] = Field(default=Registry.MGI)
+    registry_identifier: Optional[str] = Field(default="MGI:3028467")
 
 
 class _Balb_C(StrainModel):
@@ -32,8 +32,8 @@ class _Balb_C(StrainModel):
 
     name: Literal["BALB/c"] = "BALB/c"
     species: Literal["Mus musculus"] = "Mus musculus"
-    registry: Optional[Registry] = Registry.MGI
-    registry_identifier: Optional[str] = "MGI:2159737"
+    registry: Optional[Registry] = Field(default=Registry.MGI)
+    registry_identifier: Optional[str] = Field(default="MGI:2159737")
 
 
 class _Unknown(StrainModel):

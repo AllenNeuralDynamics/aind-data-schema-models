@@ -12,8 +12,8 @@ class OrganizationModel(BaseModel):
     model_config = ConfigDict(frozen=True)
     name: str
     abbreviation: str
-    registry: Optional[Registry]
-    registry_identifier: Optional[str]
+    registry: Optional[Registry] = Field(default=None)
+    registry_identifier: Optional[str] = Field(default=None)
 
 {% for _, row in data.iterrows() %}
 class {{ row['name'] | to_class_name_underscored }}(OrganizationModel):
@@ -23,8 +23,8 @@ class {{ row['name'] | to_class_name_underscored }}(OrganizationModel):
     {% set registry_abbreviation = row['registry_abbreviation'] -%}
     {% set registry_identifier = row['registry_identifier'] -%}
     abbreviation: Literal[{% if abbreviation == abbreviation %}"{{ abbreviation }}"{% else %}None{% endif %}] = {% if abbreviation == abbreviation %}"{{ abbreviation }}"{% else %}None{% endif %}
-    registry: Optional[Registry] = {% if registry_abbreviation == registry_abbreviation %}Registry.{{ registry_abbreviation }}{% else %}Field(default=None){% endif %}
-    registry_identifier: Optional[str] = {% if registry_identifier == registry_identifier %}"{{ registry_identifier }}"{% else %}Field(default=None){% endif %}
+    registry: Optional[Registry] = {% if registry_abbreviation == registry_abbreviation %}Field(default=Registry.{{ registry_abbreviation }}){% else %}Field(default=None){% endif %}
+    registry_identifier: Optional[str] = {% if registry_identifier == registry_identifier %}Field(default="{{ registry_identifier }}"){% else %}Field(default=None){% endif %}
 
 {% endfor %}
 class Organization:
