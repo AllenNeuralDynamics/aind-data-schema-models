@@ -6,6 +6,6 @@ from enum import Enum
 class Registry(str, Enum):
     """Registries"""
 {% for _, row in data.iterrows() %}
-    {{ row['abbreviation'] }} = "{{ row['abbreviation'] }}"
+    {{ row['abbreviation'] }} = "{{ row['name'] }} ({{ row['abbreviation'] }})"
 {%- endfor %}
 
