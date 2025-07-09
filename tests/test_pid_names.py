@@ -16,6 +16,8 @@ class TestPidNames(unittest.TestCase):
 
         self.assertIsNotNone(pid_name)
 
-        pid_name_other_reg = PIDName(name="Test PID Name", abbreviation="TPN", registry="Test Registry (TR)", registry_identifier="1234")
+        pid_name_other_reg = PIDName(
+            name="Test PID Name", abbreviation="TPN", registry="Test Registry (TR)", registry_identifier="1234"
+        )
 
         self.assertIsNotNone(pid_name_other_reg)
