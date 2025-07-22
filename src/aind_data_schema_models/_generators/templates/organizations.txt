@@ -105,6 +105,7 @@ Organization.LENS_MANUFACTURERS = one_of_instance(
 Organization.DAQ_DEVICE_MANUFACTURERS = one_of_instance(
     [
         Organization.AIND,
+        Organization.ARDUINO,
         Organization.CHAMPALIMAUD,
         Organization.NATIONAL_INSTRUMENTS,
         Organization.IMEC,
