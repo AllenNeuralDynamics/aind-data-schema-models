@@ -1,6 +1,7 @@
 name,abbreviation
 Behavior,behavior
 Behavior videos,behavior-videos
+Brightfield microscopy,brightfield
 Confocal microscopy,confocal
 Electromyography,EMG
 Extracellular electrophysiology,ecephys
@@ -13,3 +14,4 @@ Multiplexed error-robust fluorescence in situ hybridization,merfish
 Planar optical physiology,pophys
 Scanned line projection imaging,slap
 Selective plane illumination microscopy,SPIM
+Serial two-photon tomogrophy,STPT
