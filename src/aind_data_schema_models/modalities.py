@@ -51,11 +51,11 @@ class _Emg(ModalityModel):
     abbreviation: Literal["EMG"] = "EMG"
 
 
-class __Em(ModalityModel):
-    """Model  EM"""
+class _Em(ModalityModel):
+    """Model EM"""
 
     name: Literal["Electron microscopy"] = "Electron microscopy"
-    abbreviation: Literal[" EM"] = " EM"
+    abbreviation: Literal["EM"] = "EM"
 
 
 class _Ecephys(ModalityModel):
@@ -147,7 +147,7 @@ class Modality:
     BRIGHTFIELD = _Brightfield()
     CONFOCAL = _Confocal()
     EMG = _Emg()
-    _EM = __Em()
+    EM = _Em()
     ECEPHYS = _Ecephys()
     FIB = _Fib()
     FMOST = _Fmost()
