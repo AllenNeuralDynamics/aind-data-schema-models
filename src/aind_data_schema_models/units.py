@@ -143,6 +143,7 @@ class UnitlessUnit(str, Enum):
 
     PERCENT = "percent"
     FC = "fraction of cycle"
+    DIGITAL_INPUT = "digital input"
 
 
 UNITS = Union[
