@@ -35,6 +35,7 @@ class ProcessName(str, Enum):
     IMAGE_TILE_PROJECTION = "Image tile projection"
     MODEL_EVALUATION = "Model evaluation"
     MODEL_TRAINING = "Model training"
+    NEURON_SKELETON_PROCESSING = "Neuron skeleton processing"
     NEUROPIL_SUBTRACTION = "Neuropil subtraction"
     OTHER = "Other"
     PIPELINE = "Pipeline"
