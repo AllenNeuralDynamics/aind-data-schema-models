@@ -138,6 +138,12 @@ class MagneticFieldUnit(str, Enum):
     UT = "microtesla"
 
 
+class TorqueUnit(str, Enum):
+    """Torque units"""
+
+    NM = "newton meter"
+
+
 class UnitlessUnit(str, Enum):
     """Unitless options"""
 
@@ -163,4 +169,5 @@ UNITS = Union[
     UnitlessUnit,
     MagneticFieldUnit,
     PressureUnit,
+    TorqueUnit,
 ]
