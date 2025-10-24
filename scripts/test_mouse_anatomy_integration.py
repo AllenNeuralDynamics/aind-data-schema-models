@@ -10,7 +10,8 @@ def main():
         # This will trigger a real call to the EMAPA database
         heart = MouseAnatomy.HEART
         print(
-            f"MouseAnatomy.HEART: name={heart.name}, registry={heart.registry}, registry_identifier={heart.registry_identifier}"
+            f"MouseAnatomy.HEART: name={heart.name}, registry={heart.registry}"
+            f", registry_identifier={heart.registry_identifier}"
         )
         assert heart.name.lower() == "heart"
         assert heart.registry.name == "EMAPA"
