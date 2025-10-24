@@ -2,7 +2,7 @@ import sys
 
 from aind_data_schema_models.gene import Gene
 
-  
+
 def main():
     accession_id = "LN515608"
     gene = Gene()
