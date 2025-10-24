@@ -1,9 +1,11 @@
+"""Integration test for GenBank data retrieval and parsing."""
 import sys
 
 from aind_data_schema_models.gene import Gene
 
 
 def main():
+    """Main function to test GenBank integration"""
     accession_id = "LN515608"
     gene = Gene()
     try:

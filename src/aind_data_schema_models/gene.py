@@ -18,6 +18,7 @@ class NucleotideModel(BaseModel):
 
 
 def fetch_genbank_record(accession_id: str) -> NucleotideModel:
+    """Helper function to fetch GenBank record by accession ID"""
     url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi"
     params = {"db": "nuccore", "id": accession_id, "rettype": "gb", "retmode": "text"}
     response = requests.get(url, params=params)
@@ -38,6 +39,8 @@ def fetch_genbank_record(accession_id: str) -> NucleotideModel:
 
 
 class Gene:
+    """Gene model"""
 
     def from_genbank_accession_id(self, accession_id: str) -> NucleotideModel:
+        """Fetch gene information from GenBank by accession ID"""
         return fetch_genbank_record(accession_id)

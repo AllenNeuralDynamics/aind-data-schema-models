@@ -11,6 +11,7 @@ class TestGene(unittest.TestCase):
     """Tests for Gene model"""
 
     def setUp(self):
+        """Setup"""
         self.gene = Gene()
         # Load the mock GenBank response from file
         resource_path = Path(__file__).parent / "resources" / "genbank_response.txt"
@@ -19,6 +20,7 @@ class TestGene(unittest.TestCase):
 
     @patch("aind_data_schema_models.gene.requests.get")
     def test_from_genbank_accession_id(self, mock_get):
+        """Test fetching nucleotide data from GenBank accession ID."""
         # Setup mock response
         mock_response = Mock()
         mock_response.status_code = 200
@@ -34,6 +36,7 @@ class TestGene(unittest.TestCase):
 
     @patch("aind_data_schema_models.gene.requests.get")
     def test_from_genbank_accession_id_blank_response_raises(self, mock_get):
+        """Test that a blank GenBank response raises a ValueError."""
         # Setup mock response with blank text
         mock_response = Mock()
         mock_response.status_code = 200
