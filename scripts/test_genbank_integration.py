@@ -8,9 +8,8 @@ from aind_data_schema_models.gene import Gene
 def main():
     """Main function to test GenBank integration"""
     accession_id = "LN515608"
-    gene = Gene()
     try:
-        nucleotide = gene.from_genbank_accession_id(accession_id)
+        nucleotide = Gene.from_genbank_accession_id(accession_id)
     except Exception as e:
         print(f"Failed to fetch GenBank record: {e}", file=sys.stderr)
         sys.exit(1)

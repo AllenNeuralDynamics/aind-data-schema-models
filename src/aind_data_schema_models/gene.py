@@ -41,6 +41,7 @@ def fetch_genbank_record(accession_id: str) -> NucleotideModel:
 class Gene:
     """Gene model"""
 
-    def from_genbank_accession_id(self, accession_id: str) -> NucleotideModel:
+    @classmethod
+    def from_genbank_accession_id(cls, accession_id: str) -> NucleotideModel:
         """Fetch gene information from GenBank by accession ID"""
         return fetch_genbank_record(accession_id)

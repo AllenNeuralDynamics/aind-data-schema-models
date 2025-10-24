@@ -12,7 +12,6 @@ class TestGene(unittest.TestCase):
 
     def setUp(self):
         """Setup"""
-        self.gene = Gene()
         # Load the mock GenBank response from file
         resource_path = Path(__file__).parent / "resources" / "genbank_response.txt"
         with open(resource_path, "r") as f:
@@ -28,7 +27,7 @@ class TestGene(unittest.TestCase):
         mock_get.return_value = mock_response
 
         accession_id = "LN515608"
-        nucleotide = self.gene.from_genbank_accession_id(accession_id)
+        nucleotide = Gene.from_genbank_accession_id(accession_id)
         self.assertIsInstance(nucleotide, NucleotideModel)
         self.assertIn("Synthetic construct for Aequorea victoria partial gfp gene for GFP.", nucleotide.description)
         self.assertEqual(nucleotide.registry_identifier, "LN515608")
@@ -45,7 +44,7 @@ class TestGene(unittest.TestCase):
 
         accession_id = "LN000000"
         with self.assertRaises(ValueError):
-            self.gene.from_genbank_accession_id(accession_id)
+            Gene.from_genbank_accession_id(accession_id)
 
 
 if __name__ == "__main__":
