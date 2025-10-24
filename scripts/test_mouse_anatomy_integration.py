@@ -1,4 +1,3 @@
-
 """Integration test for MouseAnatomy model EMAPA lookup."""
 
 import sys
@@ -10,7 +9,9 @@ def main():
     try:
         # This will trigger a real call to the EMAPA database
         heart = MouseAnatomy.HEART
-        print(f"MouseAnatomy.HEART: name={heart.name}, registry={heart.registry}, registry_identifier={heart.registry_identifier}")
+        print(
+            f"MouseAnatomy.HEART: name={heart.name}, registry={heart.registry}, registry_identifier={heart.registry_identifier}"
+        )
         assert heart.name.lower() == "heart"
         assert heart.registry.name == "EMAPA"
         assert heart.registry_identifier is not None and heart.registry_identifier != ""

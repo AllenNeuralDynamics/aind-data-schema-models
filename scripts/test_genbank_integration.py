@@ -1,4 +1,5 @@
 """Integration test for GenBank data retrieval and parsing."""
+
 import sys
 
 from aind_data_schema_models.gene import Gene
