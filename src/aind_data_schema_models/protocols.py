@@ -709,3 +709,27 @@ class Protocols:
     ALL = tuple(ProtocolModel.__subclasses__())
 
     ONE_OF = Annotated[Union[tuple(ProtocolModel.__subclasses__())], Field(discriminator="title")]
+
+    doi_map = {m().registry_identifier: m() for m in ALL if getattr(m(), "registry_identifier", None)}
+
+    @classmethod
+    def from_doi(cls, doi: str) -> ProtocolModel:
+        """Return protocol model by DOI."""
+        return cls.doi_map.get(doi, None)
+
+    @classmethod
+    def from_url(cls, url: str) -> ProtocolModel:
+        """Return protocol model by DOI, stripping URL prefixes."""
+        prefixes = [
+            "https://dx.doi.org/",
+            "dx.doi.org/",
+            "https://doi.org/",
+            "doi.org/",
+            "http://dx.doi.org/",
+            "http://doi.org/",
+        ]
+        doi = url
+        for prefix in prefixes:
+            if doi.startswith(prefix):
+                doi = doi[len(prefix) :]
+        return cls.from_doi(doi)

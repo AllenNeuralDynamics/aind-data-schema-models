@@ -58,9 +58,9 @@ def main():
         doi = p.get("doi", "")
         # Strip URL prefix if present
         if doi.startswith("dx.doi.org/"):
-            doi = doi[len("dx.doi.org/"):]  # Remove the prefix
+            doi = doi[len("dx.doi.org/") :]  # Remove the prefix
         elif doi.startswith("https://dx.doi.org/"):
-            doi = doi[len("https://dx.doi.org/"):]  # Remove the prefix
+            doi = doi[len("https://dx.doi.org/") :]  # Remove the prefix
         authors = []
         for author in p.get("authors", []):
             name = author.get("name")

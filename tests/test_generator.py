@@ -142,6 +142,17 @@ class TestGenerateCode(unittest.TestCase):
         with self.assertRaises(FileNotFoundError):
             load_data("missing_data", root_path="root")
 
+    def test_regex_search(self):
+        """Minimal test for regex_search function"""
+        from aind_data_schema_models._generators.generator import regex_search
+
+        # Should match and return groups
+        result = regex_search("abc123", r"([a-z]+)(\d+)")
+        self.assertEqual(result, ("abc", "123"))
+        # Should not match, return empty list
+        result = regex_search("no_match", r"\d+")
+        self.assertEqual(result, [])
+
 
 if __name__ == "__main__":
     unittest.main()
