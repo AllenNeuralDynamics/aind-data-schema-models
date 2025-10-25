@@ -1,10 +1,8 @@
-
 """Script to grab protocol information from protocols.IO using the official API.
 
 Requires you set PROTOCOLS_CLIENT_TOKEN environment variable with your API token, from
 protocols.io/developers
 """
-
 
 import requests
 import pandas as pd
@@ -21,7 +19,6 @@ def get_access_token():
     if not token:
         raise RuntimeError("PROTOCOLS_CLIENT_TOKEN environment variable not set.")
     return token
-
 
 
 def get_workspace_protocols(token, workspace_uri):
