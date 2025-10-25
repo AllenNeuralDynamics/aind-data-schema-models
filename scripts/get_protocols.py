@@ -15,6 +15,7 @@ API_BASE = "https://www.protocols.io/api"
 
 
 def get_access_token():
+    """Get access token from environment variable."""
     token = os.environ.get("PROTOCOLS_CLIENT_TOKEN")
     if not token:
         raise RuntimeError("PROTOCOLS_CLIENT_TOKEN environment variable not set.")
@@ -22,6 +23,7 @@ def get_access_token():
 
 
 def get_workspace_protocols(token, workspace_uri):
+    """Get protocols from a given workspace."""
     headers = {"Authorization": f"Bearer {token}"}
     all_items = []
     page = 1
@@ -44,6 +46,7 @@ def get_workspace_protocols(token, workspace_uri):
 
 
 def main():
+    """Main function to fetch protocols and save to CSV."""
     token = get_access_token()
     print("Fetching protocols from workspace...")
     protocols = get_workspace_protocols(token, WORKSPACE_URI)

@@ -83,6 +83,7 @@ class LiteralAndDefaultTests(unittest.TestCase):
         self.assertIsNotNone(test)
 
     def test_protocols_instantiation(self):
+        """Test that Protocols can be instantiated and have correct names"""
         self.assertIsNotNone(Protocols.SOLENOID_VALVE_CALIBRATION_FOR_BEHAVIOR_RIGS_UTILIZING_WATER_REWARD)
         self.assertEqual(
             Protocols.SOLENOID_VALVE_CALIBRATION_FOR_BEHAVIOR_RIGS_UTILIZING_WATER_REWARD.name,
