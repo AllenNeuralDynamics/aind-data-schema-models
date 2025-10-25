@@ -35,6 +35,7 @@ def load_data(data_type: str, root_path: str) -> pd.DataFrame:
 
 
 def regex_search(value, pattern):
+    """Perform regex search on a value and return matched groups."""
     import re
 
     match = re.search(pattern, value)
