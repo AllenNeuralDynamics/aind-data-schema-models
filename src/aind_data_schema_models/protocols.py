@@ -1,5 +1,6 @@
 """Protocols"""
 
+import re
 from typing import Literal, Union
 
 from pydantic import ConfigDict, Field
@@ -720,16 +721,6 @@ class Protocols:
     @classmethod
     def from_url(cls, url: str) -> ProtocolModel:
         """Return protocol model by DOI, stripping URL prefixes."""
-        prefixes = [
-            "https://dx.doi.org/",
-            "dx.doi.org/",
-            "https://doi.org/",
-            "doi.org/",
-            "http://dx.doi.org/",
-            "http://doi.org/",
-        ]
-        doi = url
-        for prefix in prefixes:
-            if doi.startswith(prefix):
-                doi = doi[len(prefix) :]
+        # Remove any leading protocol/domain up to the DOI
+        doi = re.sub(r"^(https?://)?(dx\.)?doi\.org/", "", url)
         return cls.from_doi(doi)
