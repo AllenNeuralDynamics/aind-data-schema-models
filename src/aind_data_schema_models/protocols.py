@@ -1,7 +1,7 @@
 """Protocols"""
 
 import re
-from typing import Union
+from typing import Optional, Union
 
 from pydantic import ConfigDict, Field
 from typing_extensions import Annotated
@@ -714,12 +714,12 @@ class Protocols:
     doi_map = {m().registry_identifier: m() for m in ALL if getattr(m(), "registry_identifier", None)}
 
     @classmethod
-    def from_doi(cls, doi: str) -> ProtocolModel:
+    def from_doi(cls, doi: str) -> Optional[ProtocolModel]:
         """Return protocol model by DOI."""
         return cls.doi_map.get(doi, None)
 
     @classmethod
-    def from_url(cls, url: str) -> ProtocolModel:
+    def from_url(cls, url: str) -> Optional[ProtocolModel]:
         """Return protocol model by DOI, stripping URL prefixes."""
         # Remove any leading protocol/domain up to the DOI
         doi = re.sub(r"^(https?://)?(dx\.)?doi\.org/", "", url)
