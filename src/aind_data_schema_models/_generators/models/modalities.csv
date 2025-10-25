@@ -1,4 +1,5 @@
 name,abbreviation
+Barcoded anatomy resolved by sequencing, BARseq
 Behavior,behavior
 Behavior videos,behavior-videos
 Brightfield microscopy,brightfield
@@ -11,6 +12,7 @@ Fluorescence micro-optical sectioning tomography,fMOST
 Intracellular electrophysiology,icephys
 Intrinsic signal imaging,ISI
 Magnetic resonance imaging,MRI
+Multiplexed analysis of projections by sequencing, MAPseq
 Multiplexed error-robust fluorescence in situ hybridization,merfish
 Planar optical physiology,pophys
 Scanned line projection imaging,slap
