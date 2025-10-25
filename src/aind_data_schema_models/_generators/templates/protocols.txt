@@ -1,7 +1,7 @@
 """Protocols"""
 {% raw -%}
 from pydantic import Field, ConfigDict
-from typing import Literal, Union
+from typing import Union
 from typing_extensions import Annotated
 from aind_data_schema_models.pid_names import BaseName
 from aind_data_schema_models.registries import Registry
