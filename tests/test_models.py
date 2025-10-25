@@ -8,6 +8,7 @@ from aind_data_schema_models.harp_types import HarpDeviceType
 from aind_data_schema_models.organizations import Organization
 from aind_data_schema_models.species import Species
 from aind_data_schema_models.mouse_anatomy import MouseAnatomy, MouseAnatomyModel, MouseEmgMuscles
+from aind_data_schema_models.protocols import Protocols
 
 
 class LiteralAndDefaultTests(unittest.TestCase):
@@ -80,6 +81,13 @@ class LiteralAndDefaultTests(unittest.TestCase):
 
         test = TestModel2()
         self.assertIsNotNone(test)
+
+    def test_protocols_instantiation(self):
+        self.assertIsNotNone(Protocols.SOLENOID_VALVE_CALIBRATION_FOR_BEHAVIOR_RIGS_UTILIZING_WATER_REWARD)
+        self.assertEqual(
+            Protocols.SOLENOID_VALVE_CALIBRATION_FOR_BEHAVIOR_RIGS_UTILIZING_WATER_REWARD.title,
+            "Solenoid Valve Calibration for Behavior Rigs Utilizing Water Reward",
+        )
 
 
 if __name__ == "__main__":
