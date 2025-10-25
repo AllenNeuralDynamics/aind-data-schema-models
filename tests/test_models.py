@@ -85,7 +85,7 @@ class LiteralAndDefaultTests(unittest.TestCase):
     def test_protocols_instantiation(self):
         self.assertIsNotNone(Protocols.SOLENOID_VALVE_CALIBRATION_FOR_BEHAVIOR_RIGS_UTILIZING_WATER_REWARD)
         self.assertEqual(
-            Protocols.SOLENOID_VALVE_CALIBRATION_FOR_BEHAVIOR_RIGS_UTILIZING_WATER_REWARD.title,
+            Protocols.SOLENOID_VALVE_CALIBRATION_FOR_BEHAVIOR_RIGS_UTILIZING_WATER_REWARD.name,
             "Solenoid Valve Calibration for Behavior Rigs Utilizing Water Reward",
         )
 
