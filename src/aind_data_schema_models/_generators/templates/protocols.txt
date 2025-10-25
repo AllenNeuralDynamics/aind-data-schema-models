@@ -1,0 +1,39 @@
+"""Protocols"""
+{% raw -%}
+from pydantic import Field, ConfigDict
+from typing import Literal, Union
+from typing_extensions import Annotated
+from aind_data_schema_models.pid_names import BaseName
+from aind_data_schema_models.registries import Registry
+{% endraw %}
+
+class ProtocolModel(BaseName):
+    """Base model for protocol"""
+    model_config = ConfigDict(frozen=True)
+    title: strip
+    authors: list[str]
+    registry: Registry
+    registry_identifier: str
+
+{% for _, row in data.iterrows() %}
+class {{ row['title'] | to_class_name_underscored }}(ProtocolModel):
+    """Model {{ row['title'] }}"""
+    title: Literal["{{ row['title'] }}"] = "{{ row['title'] }}"
+    authors: list[str] = [
+        {%- for author in row['authors'].split(',') %}
+        "{{ author.strip() }}",
+        {%- endfor %}
+    ]
+    registry: Literal[Registry.DOI] = Registry.DOI
+    registry_identifier: Literal["{{ row['DOI'] }}"] = "{{ row['DOI'] }}"
+{% endfor %}
+
+class Protocols:
+    """Protocols"""
+{% for _, row in data.iterrows() %}
+    {{ row['title'] | to_class_name | upper }} = {{ row['title'] | to_class_name_underscored }}()
+{%- endfor %}
+
+    ALL = tuple(ProtocolModel.__subclasses__())
+
+    ONE_OF = Annotated[Union[tuple(ProtocolModel.__subclasses__())], Field(discriminator="title")]

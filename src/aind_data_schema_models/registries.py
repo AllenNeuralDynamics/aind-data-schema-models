@@ -7,6 +7,7 @@ class Registry(str, Enum):
     """Registries"""
 
     ADDGENE = "Addgene (ADDGENE)"
+    DOI = "Digital Object Identifier (DOI)"
     EMAPA = "Edinburgh Mouse Atlas Project (EMAPA)"
     MGI = "Mouse Genome Informatics (MGI)"
     NCBI = "National Center for Biotechnology Information (NCBI)"
