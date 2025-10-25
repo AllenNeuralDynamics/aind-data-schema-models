@@ -28,7 +28,7 @@ def get_workspace_protocols(token, workspace_uri):
     all_items = []
     page = 1
     while True:
-        url = f"{API_BASE}/v3/workspaces/{workspace_uri}/protocols?page={page}"
+        url = f"{API_BASE}/v3/workspaces/{workspace_uri}/protocols?page={page}&page_size=10000"
         resp = requests.get(url, headers=headers)
         resp.raise_for_status()
         data = resp.json()
@@ -70,11 +70,6 @@ def main():
         # Only add if DOI is not already present
         if doi and doi not in results_by_doi:
             results_by_doi[doi] = {"title": title, "DOI": doi, "authors": authors_str}
-        elif not doi:
-            # If no DOI, use title+authors as a fallback key
-            key = f"{title}|{authors_str}"
-            if key not in results_by_doi:
-                results_by_doi[key] = {"title": title, "DOI": doi, "authors": authors_str}
     results = list(results_by_doi.values())
     # Ensure output directory exists
     os.makedirs(os.path.dirname(OUTPUT_CSV), exist_ok=True)

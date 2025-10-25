@@ -1,11 +1,45 @@
 title,DOI,authors
 Solenoid Valve Calibration for Behavior Rigs Utilizing Water Reward,10.17504/protocols.io.261gerq7dl47/v1,"Ella Hilton-VanOsdall, Heston Smith"
-Stereotaxic Injection by Iontophoresis,10.17504/protocols.io.14egn8ewzg5d/v6,Allen Institute for Brain Science
 Stereotaxic Injection by Nanoject Protocol,10.17504/protocols.io.bp2l6nr7kgqe/v6,Allen Institute for Brain Science
-Plug Removal for acute in vivo Electrophysiology Experiments,10.17504/protocols.io.eq2lywz8qvx9/v1,"Ryan Gillis, Mikayla Carlson, Severine Durand"
-Dual Hemisphere Craniotomy for Electrophysiology,10.17504/protocols.io.rm7vzjoe2lx1/v1,"Anna Lakunina, Conor Grasso, Benjamin Barad, Avalon Amaya"
-General Setup and Takedown Procedures for Rodent Neurosurgery,10.17504/protocols.io.kqdg392o7g25/v2,"Avalon Amaya, Jackie Swapp, Ali Williford, Robert E Howard"
-Multiplexed RNA FISH on Expanded Mouse Brain Slices,10.17504/protocols.io.dm6gpzj28lzp/v1,"Rachel Flannery, Molly Logsdon, Laura Roy, Kevin Cao, Jayaram Chandrashekar"
-Modified Frame-projected  Independent Fiber  Photometry (FIP) System_Hardware,10.17504/protocols.io.261ge39edl47/v2,"Kenta M. Hagihara, Bryan J MacLennan"
+Stereotaxic Injection by Iontophoresis,10.17504/protocols.io.14egn8ewzg5d/v6,Allen Institute for Brain Science
+Mouse Habituation - Head Fixation on Disk,10.17504/protocols.io.j8nlkojmxv5r/v1,"Avalon Amaya, Jackie Swapp"
 Mouse Water Restriction,10.17504/protocols.io.x54v9pn34g3e/v1,"Avalon Amaya, Jackie Swapp"
 Mouse Habituation - Head Fixation into Tube,10.17504/protocols.io.rm7vzxd74gx1/v1,"Avalon Amaya, Jackie Swapp"
+Modified Frame-projected  Independent Fiber  Photometry (FIP) System_Hardware,10.17504/protocols.io.261ge39edl47/v2,"Kenta M. Hagihara, Bryan J MacLennan"
+Making Agarose for use in acute in vivo Electrophysiology Experiments ,10.17504/protocols.io.5jyl8py89g2w/v1,"Ryan Gillis, Mikayla Carlson, Severine Durand"
+Plug Removal for acute in vivo Electrophysiology Experiments,10.17504/protocols.io.eq2lywz8qvx9/v1,"Ryan Gillis, Mikayla Carlson, Severine Durand"
+Intraperitoneal Injection in an Adult Mouse,10.17504/protocols.io.5qpvo5w8dl4o/v2,Allen Institute for Brain Science
+Multiplexed RNA FISH on Expanded Mouse Brain Slices,10.17504/protocols.io.dm6gpzj28lzp/v1,"Rachel Flannery, Molly Logsdon, Laura Roy, Kevin Cao, Jayaram Chandrashekar"
+General Setup and Takedown Procedures for Rodent Neurosurgery,10.17504/protocols.io.kqdg392o7g25/v2,"Avalon Amaya, Jackie Swapp, Ali Williford, Robert E Howard"
+Dual Hemisphere Craniotomy for Electrophysiology,10.17504/protocols.io.rm7vzjoe2lx1/v1,"Anna Lakunina, Conor Grasso, Benjamin Barad, Avalon Amaya"
+Aqueous (SBiP) Delipidation for Whole Mouse Brain After morphoFISH Perfusion ,10.17504/protocols.io.rm7vzjz54lx1/v1,"Monique Copeland, MouseLight Project Team, Tiago A Ferreira"
+Mouse Habituation - Head Fixation on Disk,10.17504/protocols.io.j8nlkojmxv5r/v2,"Avalon Amaya, Jackie Swapp"
+Preparation of Lipopolysaccharide for Intraperitoneal Injection,10.17504/protocols.io.14egn9y1ml5d/v1,Adrien Stanley
+Temporal Assessment of Immune Response,10.17504/protocols.io.5jyl8dqx6g2w/v1,Adrien Stanley
+Mouse VAB Catheter Maintenance,10.17504/protocols.io.8epv52o5dv1b/v1,Adrien Stanley
+Processing Blood Intended for Olink Assay,10.17504/protocols.io.261ger81jl47/v1,Adrien Stanley
+BARseq 2.5,10.17504/protocols.io.kqdg3ke9qv25/v1,"Jonathan Wang, Yoh Isogai"
+Aqueous (SBiP) Delipidation of a Whole Mouse Brain,10.17504/protocols.io.n2bvj81mwgk5/v2,"Andrew Recknagel, Kevin Cao, Naveen Ouellette, Molly Logsdon, Judith Baka, Jayaram Chandrashekar, Rajvi Javeri"
+Tetrahydrofuran and Dichloromethane Delipidation of a Whole Mouse Brain,10.17504/protocols.io.36wgqj1kxvk5/v2,"Andrew Recknagel, Kevin Cao, Judith Baka, Naveen Ouellette, Molly Logsdon, Jayaram Chandrashekar, Rajvi Javeri"
+Imaging cleared mouse brains on SmartSPIM,10.17504/protocols.io.3byl4jo1rlo5/v1,John Rohde
+General Setup and Takedown Procedures for Rodent Neurosurgery,10.17504/protocols.io.kqdg392o7g25/v1,"Avalon Amaya, Jackie Swapp, Ali Williford, Robert E Howard"
+"Whole Mouse Brain Delipidation, Immunolabeling, and Expansion Microscopy",10.17504/protocols.io.n92ldpwjxl5b/v1,"Naveen Ouellette, Andrew Recknagel, Kevin Cao, Judith Baka, Jayaram Chandrashekar, Molly Logsdon"
+Aqueous (SBiP) Delipidation of a Whole Mouse Brain,10.17504/protocols.io.n2bvj81mwgk5/v1,"Andrew Recknagel, Kevin Cao, Naveen Ouellette, Molly Logsdon, Judith Baka, Jayaram Chandrashekar"
+Tetrahydrofuran and Dichloromethane Delipidation of a Whole Mouse Brain,10.17504/protocols.io.36wgqj1kxvk5/v1,"Andrew Recknagel, Kevin Cao, Judith Baka, Naveen Ouellette, Molly Logsdon, Jayaram Chandrashekar"
+Immunolabeling of a Whole Mouse Brain,10.17504/protocols.io.ewov1okwylr2/v1,"Andrew Recknagel, Kevin Cao, Judith Baka, Naveen Ouellette, Jayaram Chandrashekar, Molly Logsdon"
+Structural MRI Using the University of Washington 14T Vertical Bore Bruker MRI,10.17504/protocols.io.3byl4j8p2lo5/v1,"Yoni Browning, Galen Lynch, Josh Siegle"
+Duragel Application for Acute Electrophysiology Recordings,10.17504/protocols.io.14egn2dwqg5d/v1,Anna Lakunina
+SmartSPIM setup and alignment,10.17504/protocols.io.5jyl8jyb7g2w/v1,John Rohde
+Refractive Index Matching - EasyIndex,10.17504/protocols.io.kxygx965kg8j/v1,"Holly Myers, Daphne Toglia"
+Preparing a 3D Printed Implant for Acute In Vivo Electrophysiology,10.17504/protocols.io.6qpvr4jmogmk/v1,"Xinxin Yin, Anna Lakunina, Josh Siegle"
+Mouse Cardiac Perfusion Fixation and Brain Collection,10.17504/protocols.io.bg5vjy66,Allen Institute for Brain Science
+Whole Mouse Brain Delipidation - Dichloromethane,10.17504/protocols.io.dm6gpj7n5gzp/v1,"Holly Myers, Daphne Toglia"
+Refractive Index Matching - Ethyl Cinnamate,10.17504/protocols.io.n2bvj8k4bgk5/v1,"Holly Myers, Daphne Toglia"
+DAPI Staining Mouse Brain Sections,10.17504/protocols.io.3byl4jm6rlo5/v1,"Daphne Toglia, Holly Myers"
+Modified Frame-projected Independent Fiber Photometry (FIP) System_Triggering system,10.17504/protocols.io.kxygx3e6wg8j/v1,Kenta M. Hagihara
+Multi-Site Optic Fiber Implants,10.17504/protocols.io.6qpvr3dqovmk/v1,"Avalon Amaya, Kenta M. Hagihara, Benjamin Ouellette, Conor Grasso"
+Immunohistochemistry (IHC) Staining Mouse Brain Sections,10.17504/protocols.io.5qpvo3b7bv4o/v1,"Naveen Ouellette, Daphne Toglia, Holly Myers"
+Sectioning Mouse Brain with Sliding Microtome,10.17504/protocols.io.5jyl8p97rg2w/v1,"Naveen Ouellette, Daphne Toglia, Holly Myers"
+Mounting and Coverslipping Mouse Brain Sections,10.17504/protocols.io.n92ldmpy7l5b/v1,"Naveen Ouellette, Daphne Toglia, Holly Myers"
+Stereotactic Injections with Headframe Implant,10.17504/protocols.io.eq2lyj72elx9/v1,"Avalon Amaya, Katrina Nguyen"
+"Protocol Collection: Perfusing, Sectioning, IHC, Mounting and Coverslipping Mouse Brain Specimens",10.17504/protocols.io.kxygx3yxkg8j/v1,"Naveen Ouellette, Daphne Toglia, Holly Myers"
