@@ -13,7 +13,7 @@ class ProtocolModel(BaseName):
     """Base model for protocol"""
 
     model_config = ConfigDict(frozen=True)
-    title: str
+    name: str
     authors: list[str]
     registry: Registry
     registry_identifier: str
@@ -22,7 +22,7 @@ class ProtocolModel(BaseName):
 class _Solenoid_Valve_Calibration_For_Behavior_Rigs_Utilizing_Water_Reward(ProtocolModel):
     """Model Solenoid Valve Calibration for Behavior Rigs Utilizing Water Reward"""
 
-    title: Literal["Solenoid Valve Calibration for Behavior Rigs Utilizing Water Reward"] = (
+    name: Literal["Solenoid Valve Calibration for Behavior Rigs Utilizing Water Reward"] = (
         "Solenoid Valve Calibration for Behavior Rigs Utilizing Water Reward"
     )
     authors: list[str] = [
@@ -36,7 +36,7 @@ class _Solenoid_Valve_Calibration_For_Behavior_Rigs_Utilizing_Water_Reward(Proto
 class _Stereotaxic_Injection_By_Iontophoresis(ProtocolModel):
     """Model Stereotaxic Injection by Iontophoresis"""
 
-    title: Literal["Stereotaxic Injection by Iontophoresis"] = "Stereotaxic Injection by Iontophoresis"
+    name: Literal["Stereotaxic Injection by Iontophoresis"] = "Stereotaxic Injection by Iontophoresis"
     authors: list[str] = [
         "Allen Institute for Brain Science",
     ]
@@ -47,7 +47,7 @@ class _Stereotaxic_Injection_By_Iontophoresis(ProtocolModel):
 class _Stereotaxic_Injection_By_Nanoject_Protocol(ProtocolModel):
     """Model Stereotaxic Injection by Nanoject Protocol"""
 
-    title: Literal["Stereotaxic Injection by Nanoject Protocol"] = "Stereotaxic Injection by Nanoject Protocol"
+    name: Literal["Stereotaxic Injection by Nanoject Protocol"] = "Stereotaxic Injection by Nanoject Protocol"
     authors: list[str] = [
         "Allen Institute for Brain Science",
     ]
@@ -58,7 +58,7 @@ class _Stereotaxic_Injection_By_Nanoject_Protocol(ProtocolModel):
 class _Plug_Removal_For_Acute_In_Vivo_Electrophysiology_Experiments(ProtocolModel):
     """Model Plug Removal for acute in vivo Electrophysiology Experiments"""
 
-    title: Literal["Plug Removal for acute in vivo Electrophysiology Experiments"] = (
+    name: Literal["Plug Removal for acute in vivo Electrophysiology Experiments"] = (
         "Plug Removal for acute in vivo Electrophysiology Experiments"
     )
     authors: list[str] = [
@@ -73,7 +73,7 @@ class _Plug_Removal_For_Acute_In_Vivo_Electrophysiology_Experiments(ProtocolMode
 class _Dual_Hemisphere_Craniotomy_For_Electrophysiology(ProtocolModel):
     """Model Dual Hemisphere Craniotomy for Electrophysiology"""
 
-    title: Literal["Dual Hemisphere Craniotomy for Electrophysiology"] = (
+    name: Literal["Dual Hemisphere Craniotomy for Electrophysiology"] = (
         "Dual Hemisphere Craniotomy for Electrophysiology"
     )
     authors: list[str] = [
@@ -89,7 +89,7 @@ class _Dual_Hemisphere_Craniotomy_For_Electrophysiology(ProtocolModel):
 class _General_Setup_And_Takedown_Procedures_For_Rodent_Neurosurgery(ProtocolModel):
     """Model General Setup and Takedown Procedures for Rodent Neurosurgery"""
 
-    title: Literal["General Setup and Takedown Procedures for Rodent Neurosurgery"] = (
+    name: Literal["General Setup and Takedown Procedures for Rodent Neurosurgery"] = (
         "General Setup and Takedown Procedures for Rodent Neurosurgery"
     )
     authors: list[str] = [
@@ -105,7 +105,7 @@ class _General_Setup_And_Takedown_Procedures_For_Rodent_Neurosurgery(ProtocolMod
 class _Multiplexed_Rna_Fish_On_Expanded_Mouse_Brain_Slices(ProtocolModel):
     """Model Multiplexed RNA FISH on Expanded Mouse Brain Slices"""
 
-    title: Literal["Multiplexed RNA FISH on Expanded Mouse Brain Slices"] = (
+    name: Literal["Multiplexed RNA FISH on Expanded Mouse Brain Slices"] = (
         "Multiplexed RNA FISH on Expanded Mouse Brain Slices"
     )
     authors: list[str] = [
@@ -122,7 +122,7 @@ class _Multiplexed_Rna_Fish_On_Expanded_Mouse_Brain_Slices(ProtocolModel):
 class _Modified_Frame_Projected_Independent_Fiber_Photometry_Fip_System_Hardware(ProtocolModel):
     """Model Modified Frame-projected  Independent Fiber  Photometry (FIP) System_Hardware"""
 
-    title: Literal["Modified Frame-projected  Independent Fiber  Photometry (FIP) System_Hardware"] = (
+    name: Literal["Modified Frame-projected  Independent Fiber  Photometry (FIP) System_Hardware"] = (
         "Modified Frame-projected  Independent Fiber  Photometry (FIP) System_Hardware"
     )
     authors: list[str] = [
@@ -136,7 +136,7 @@ class _Modified_Frame_Projected_Independent_Fiber_Photometry_Fip_System_Hardware
 class _Mouse_Water_Restriction(ProtocolModel):
     """Model Mouse Water Restriction"""
 
-    title: Literal["Mouse Water Restriction"] = "Mouse Water Restriction"
+    name: Literal["Mouse Water Restriction"] = "Mouse Water Restriction"
     authors: list[str] = [
         "Avalon Amaya",
         "Jackie Swapp",
@@ -148,7 +148,7 @@ class _Mouse_Water_Restriction(ProtocolModel):
 class _Mouse_Habituation_Head_Fixation_Into_Tube(ProtocolModel):
     """Model Mouse Habituation - Head Fixation into Tube"""
 
-    title: Literal["Mouse Habituation - Head Fixation into Tube"] = "Mouse Habituation - Head Fixation into Tube"
+    name: Literal["Mouse Habituation - Head Fixation into Tube"] = "Mouse Habituation - Head Fixation into Tube"
     authors: list[str] = [
         "Avalon Amaya",
         "Jackie Swapp",
