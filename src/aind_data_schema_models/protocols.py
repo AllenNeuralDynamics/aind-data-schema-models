@@ -13,7 +13,7 @@ class ProtocolModel(BaseName):
     """Base model for protocol"""
 
     model_config = ConfigDict(frozen=True)
-    title: strip
+    title: str
     authors: list[str]
     registry: Registry
     registry_identifier: str
