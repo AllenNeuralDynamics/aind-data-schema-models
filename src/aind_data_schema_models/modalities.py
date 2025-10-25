@@ -16,6 +16,13 @@ class ModalityModel(BaseName):
     abbreviation: str
 
 
+class _Barseq(ModalityModel):
+    """Model BARseq"""
+
+    name: Literal["Barcoded anatomy resolved by sequencing"] = "Barcoded anatomy resolved by sequencing"
+    abbreviation: Literal["BARseq"] = "BARseq"
+
+
 class _Behavior(ModalityModel):
     """Model behavior"""
 
@@ -102,6 +109,15 @@ class _Mri(ModalityModel):
     abbreviation: Literal["MRI"] = "MRI"
 
 
+class _Mapseq(ModalityModel):
+    """Model MAPseq"""
+
+    name: Literal["Multiplexed analysis of projections by sequencing"] = (
+        "Multiplexed analysis of projections by sequencing"
+    )
+    abbreviation: Literal["MAPseq"] = "MAPseq"
+
+
 class _Merfish(ModalityModel):
     """Model merfish"""
 
@@ -142,6 +158,7 @@ class _Stpt(ModalityModel):
 class Modality:
     """Modalities"""
 
+    BARSEQ = _Barseq()
     BEHAVIOR = _Behavior()
     BEHAVIOR_VIDEOS = _Behavior_Videos()
     BRIGHTFIELD = _Brightfield()
@@ -154,6 +171,7 @@ class Modality:
     ICEPHYS = _Icephys()
     ISI = _Isi()
     MRI = _Mri()
+    MAPSEQ = _Mapseq()
     MERFISH = _Merfish()
     POPHYS = _Pophys()
     SLAP = _Slap()
