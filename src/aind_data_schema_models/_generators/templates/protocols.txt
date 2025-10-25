@@ -16,23 +16,29 @@ class ProtocolModel(BaseName):
     registry_identifier: str
 
 {% for _, row in data.iterrows() %}
-class {{ row['title'] | to_class_name_underscored }}(ProtocolModel):
+{%- set version_match = row['DOI'] | regex_search('/v([\w\d]+)$') -%}
+{%- set version = '_V' ~ version_match[0] if version_match else '' -%}
+class {{ row['title'] | to_class_name_underscored }}{{ version }}(ProtocolModel):
     """Model {{ row['title'] }}"""
-    name: Literal["{{ row['title'] }}"] = "{{ row['title'] }}"
+    name: str = "{{ row['title'] }}"
     authors: list[str] = [
         {%- for author in row['authors'].split(',') %}
         "{{ author.strip() }}",
         {%- endfor %}
     ]
-    registry: Literal[Registry.DOI] = Registry.DOI
-    registry_identifier: Literal["{{ row['DOI'] }}"] = "{{ row['DOI'] }}"
+    registry: Registry = Registry.DOI
+    registry_identifier: str = "{{ row['DOI'] }}"
+
+
 {% endfor %}
 
 class Protocols:
     """Protocols"""
 {% for _, row in data.iterrows() %}
-    {{ row['title'] | to_class_name | upper }} = {{ row['title'] | to_class_name_underscored }}()
-{%- endfor %}
+    {% set version_match = row['DOI'] | regex_search('/v([\w\d]+)$') %}
+    {% set version = '_V' ~ version_match[0] if version_match else '' %}
+    {{ row['title'] | to_class_name | upper }}{{ version }} = {{ row['title'] | to_class_name_underscored }}{{ version }}()
+{% endfor %}
 
     ALL = tuple(ProtocolModel.__subclasses__())
 
