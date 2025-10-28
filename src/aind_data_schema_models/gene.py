@@ -12,6 +12,7 @@ class NucleotideModel(BaseModel):
     """Nucleotide model"""
 
     model_config = ConfigDict(frozen=True)
+    name: str
     description: str
     registry: Registry = Registry.GENBANK
     registry_identifier: str = ""
@@ -35,7 +36,13 @@ def fetch_genbank_record(accession_id: str) -> NucleotideModel:
         definition = match.group(1).replace("\n", " ").replace("  ", " ").strip()
     else:
         raise ValueError("DEFINITION line not found in GenBank record")
-    return NucleotideModel(description=definition, registry_identifier=accession_id)
+    # Extract gene name using gene="<name>" pattern
+    gene_match = re.search(r'gene="([^"]+)"', text)
+    if gene_match:
+        gene_name = gene_match.group(1)
+    else:
+        raise ValueError("Gene name not found in GenBank record")
+    return NucleotideModel(name=gene_name, description=definition, registry_identifier=accession_id)
 
 
 class Gene:

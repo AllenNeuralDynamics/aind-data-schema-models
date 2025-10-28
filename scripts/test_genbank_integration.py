@@ -13,10 +13,12 @@ def main():
     except Exception as e:
         print(f"Failed to fetch GenBank record: {e}", file=sys.stderr)
         sys.exit(1)
+    print(f"Name: {nucleotide.name}")
     print(f"Description: {nucleotide.description}")
     print(f"Registry: {nucleotide.registry}")
     print(f"Registry Identifier: {nucleotide.registry_identifier}")
     assert "Synthetic construct for Aequorea victoria partial gfp gene for GFP." in nucleotide.description
+    assert nucleotide.name == "gfp"
     print("Integration test passed.")
 
 

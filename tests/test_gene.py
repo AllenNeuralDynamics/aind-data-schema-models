@@ -32,6 +32,7 @@ class TestGene(unittest.TestCase):
         self.assertIn("Synthetic construct for Aequorea victoria partial gfp gene for GFP.", nucleotide.description)
         self.assertEqual(nucleotide.registry_identifier, "LN515608")
         self.assertEqual(nucleotide.registry.name, "GENBANK")
+        self.assertEqual(nucleotide.name, "gfp")
 
     @patch("aind_data_schema_models.gene.requests.get")
     def test_from_genbank_accession_id_blank_response_raises(self, mock_get):
@@ -43,6 +44,19 @@ class TestGene(unittest.TestCase):
         mock_get.return_value = mock_response
 
         accession_id = "LN000000"
+        with self.assertRaises(ValueError):
+            Gene.from_genbank_accession_id(accession_id)
+
+    @patch("aind_data_schema_models.gene.requests.get")
+    def test_from_genbank_accession_id_missing_gene_name_raises(self, mock_get):
+        """Test that missing gene name in GenBank response raises a ValueError."""
+        # Setup mock response with DEFINITION but no gene name
+        mock_response = Mock()
+        mock_response.status_code = 200
+        mock_response.text = "DEFINITION  Synthetic construct for Aequorea victoria partial gfp gene for GFP.\nACCESSION   LN515608\n"  # No gene="..." in text
+        mock_get.return_value = mock_response
+
+        accession_id = "LN515608"
         with self.assertRaises(ValueError):
             Gene.from_genbank_accession_id(accession_id)
 
