@@ -53,7 +53,10 @@ class TestGene(unittest.TestCase):
         # Setup mock response with DEFINITION but no gene name
         mock_response = Mock()
         mock_response.status_code = 200
-        mock_response.text = "DEFINITION  Synthetic construct for Aequorea victoria partial gfp gene for GFP.\nACCESSION   LN515608\n"  # No gene="..." in text
+        mock_response.text = (
+            "DEFINITION  Synthetic construct for Aequorea victoria partial gfp gene for GFP."
+            "\nACCESSION   LN515608\n"  # No gene="..." in text
+        )
         mock_get.return_value = mock_response
 
         accession_id = "LN515608"

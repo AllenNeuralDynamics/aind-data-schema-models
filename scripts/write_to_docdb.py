@@ -19,7 +19,7 @@ def csv_to_json(csv_file_path: str) -> Iterator:
     """
     Returns Iterator of dict
     """
-    with open(csv_file_path, mode='r', encoding='utf-8') as csv_file:
+    with open(csv_file_path, mode="r", encoding="utf-8") as csv_file:
         csv_reader = csv.DictReader(csv_file)
         for row in csv_reader:
             yield row
@@ -32,7 +32,7 @@ def publish_to_docdb(folder_path: str, credentials: DocumentDbSSHCredentials) ->
     with DocumentDbSSHClient(credentials=credentials) as doc_db_client:
         database = doc_db_client._client[doc_db_client.database_name]
         for file_name in os.listdir(folder_path):
-            if file_name.endswith('.csv'):
+            if file_name.endswith(".csv"):
                 collection_name = file_name[:-4]
                 collection = database[collection_name]
                 csv_file_path = os.path.join(folder_path, file_name)
@@ -46,8 +46,7 @@ def publish_to_docdb(folder_path: str, credentials: DocumentDbSSHCredentials) ->
 if __name__ == "__main__":
     folder_path = PATH_TO_MODELS
     credentials = DocumentDbSSHCredentials.from_secrets_manager(
-        doc_db_secret_name=DOCDB_READWRITE_SECRET,
-        ssh_secret_name=DOCDB_SSH_TUNNEL_SECRET
+        doc_db_secret_name=DOCDB_READWRITE_SECRET, ssh_secret_name=DOCDB_SSH_TUNNEL_SECRET
     )
     credentials.database = DB_NAME
     publish_to_docdb(folder_path, credentials)
