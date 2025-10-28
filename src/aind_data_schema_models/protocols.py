@@ -1,7 +1,7 @@
 """Protocols"""
 
 import re
-from typing import Optional, Union
+from typing import Union
 
 from pydantic import ConfigDict, Field
 from typing_extensions import Annotated
@@ -16,6 +16,7 @@ class ProtocolModel(BaseName):
     model_config = ConfigDict(frozen=True)
     name: str
     authors: list[str]
+    version: str
     registry: Registry
     registry_identifier: str
 
@@ -28,6 +29,7 @@ class _Solenoid_Valve_Calibration_For_Behavior_Rigs_Utilizing_Water_Reward_V1(Pr
         "Ella Hilton-VanOsdall",
         "Heston Smith",
     ]
+    version: "v1"
     registry: Registry = Registry.DOI
     registry_identifier: str = "10.17504/protocols.io.261gerq7dl47/v1"
 
@@ -39,6 +41,7 @@ class _Stereotaxic_Injection_By_Nanoject_Protocol_V6(ProtocolModel):
     authors: list[str] = [
         "Allen Institute for Brain Science",
     ]
+    version: "v6"
     registry: Registry = Registry.DOI
     registry_identifier: str = "10.17504/protocols.io.bp2l6nr7kgqe/v6"
 
@@ -50,6 +53,7 @@ class _Stereotaxic_Injection_By_Iontophoresis_V6(ProtocolModel):
     authors: list[str] = [
         "Allen Institute for Brain Science",
     ]
+    version: "v6"
     registry: Registry = Registry.DOI
     registry_identifier: str = "10.17504/protocols.io.14egn8ewzg5d/v6"
 
@@ -62,6 +66,7 @@ class _Mouse_Habituation_Head_Fixation_On_Disk_V1(ProtocolModel):
         "Avalon Amaya",
         "Jackie Swapp",
     ]
+    version: "v1"
     registry: Registry = Registry.DOI
     registry_identifier: str = "10.17504/protocols.io.j8nlkojmxv5r/v1"
 
@@ -74,6 +79,7 @@ class _Mouse_Water_Restriction_V1(ProtocolModel):
         "Avalon Amaya",
         "Jackie Swapp",
     ]
+    version: "v1"
     registry: Registry = Registry.DOI
     registry_identifier: str = "10.17504/protocols.io.x54v9pn34g3e/v1"
 
@@ -86,6 +92,7 @@ class _Mouse_Habituation_Head_Fixation_Into_Tube_V1(ProtocolModel):
         "Avalon Amaya",
         "Jackie Swapp",
     ]
+    version: "v1"
     registry: Registry = Registry.DOI
     registry_identifier: str = "10.17504/protocols.io.rm7vzxd74gx1/v1"
 
@@ -98,6 +105,7 @@ class _Modified_Frame_Projected_Independent_Fiber_Photometry_Fip_System_Hardware
         "Kenta M. Hagihara",
         "Bryan J MacLennan",
     ]
+    version: "v2"
     registry: Registry = Registry.DOI
     registry_identifier: str = "10.17504/protocols.io.261ge39edl47/v2"
 
@@ -111,6 +119,7 @@ class _Making_Agarose_For_Use_In_Acute_In_Vivo_Electrophysiology_Experiments__V1
         "Mikayla Carlson",
         "Severine Durand",
     ]
+    version: "v1"
     registry: Registry = Registry.DOI
     registry_identifier: str = "10.17504/protocols.io.5jyl8py89g2w/v1"
 
@@ -124,6 +133,7 @@ class _Plug_Removal_For_Acute_In_Vivo_Electrophysiology_Experiments_V1(ProtocolM
         "Mikayla Carlson",
         "Severine Durand",
     ]
+    version: "v1"
     registry: Registry = Registry.DOI
     registry_identifier: str = "10.17504/protocols.io.eq2lywz8qvx9/v1"
 
@@ -135,6 +145,7 @@ class _Intraperitoneal_Injection_In_An_Adult_Mouse_V2(ProtocolModel):
     authors: list[str] = [
         "Allen Institute for Brain Science",
     ]
+    version: "v2"
     registry: Registry = Registry.DOI
     registry_identifier: str = "10.17504/protocols.io.5qpvo5w8dl4o/v2"
 
@@ -150,6 +161,7 @@ class _Multiplexed_Rna_Fish_On_Expanded_Mouse_Brain_Slices_V1(ProtocolModel):
         "Kevin Cao",
         "Jayaram Chandrashekar",
     ]
+    version: "v1"
     registry: Registry = Registry.DOI
     registry_identifier: str = "10.17504/protocols.io.dm6gpzj28lzp/v1"
 
@@ -164,6 +176,7 @@ class _General_Setup_And_Takedown_Procedures_For_Rodent_Neurosurgery_V2(Protocol
         "Ali Williford",
         "Robert E Howard",
     ]
+    version: "v2"
     registry: Registry = Registry.DOI
     registry_identifier: str = "10.17504/protocols.io.kqdg392o7g25/v2"
 
@@ -178,6 +191,7 @@ class _Dual_Hemisphere_Craniotomy_For_Electrophysiology_V1(ProtocolModel):
         "Benjamin Barad",
         "Avalon Amaya",
     ]
+    version: "v1"
     registry: Registry = Registry.DOI
     registry_identifier: str = "10.17504/protocols.io.rm7vzjoe2lx1/v1"
 
@@ -191,6 +205,7 @@ class _Aqueous_Sbip_Delipidation_For_Whole_Mouse_Brain_After_Morphofish_Perfusio
         "MouseLight Project Team",
         "Tiago A Ferreira",
     ]
+    version: "v1"
     registry: Registry = Registry.DOI
     registry_identifier: str = "10.17504/protocols.io.rm7vzjz54lx1/v1"
 
@@ -203,6 +218,7 @@ class _Mouse_Habituation_Head_Fixation_On_Disk_V2(ProtocolModel):
         "Avalon Amaya",
         "Jackie Swapp",
     ]
+    version: "v2"
     registry: Registry = Registry.DOI
     registry_identifier: str = "10.17504/protocols.io.j8nlkojmxv5r/v2"
 
@@ -214,6 +230,7 @@ class _Preparation_Of_Lipopolysaccharide_For_Intraperitoneal_Injection_V1(Protoc
     authors: list[str] = [
         "Adrien Stanley",
     ]
+    version: "v1"
     registry: Registry = Registry.DOI
     registry_identifier: str = "10.17504/protocols.io.14egn9y1ml5d/v1"
 
@@ -225,6 +242,7 @@ class _Temporal_Assessment_Of_Immune_Response_V1(ProtocolModel):
     authors: list[str] = [
         "Adrien Stanley",
     ]
+    version: "v1"
     registry: Registry = Registry.DOI
     registry_identifier: str = "10.17504/protocols.io.5jyl8dqx6g2w/v1"
 
@@ -236,6 +254,7 @@ class _Mouse_Vab_Catheter_Maintenance_V1(ProtocolModel):
     authors: list[str] = [
         "Adrien Stanley",
     ]
+    version: "v1"
     registry: Registry = Registry.DOI
     registry_identifier: str = "10.17504/protocols.io.8epv52o5dv1b/v1"
 
@@ -247,6 +266,7 @@ class _Processing_Blood_Intended_For_Olink_Assay_V1(ProtocolModel):
     authors: list[str] = [
         "Adrien Stanley",
     ]
+    version: "v1"
     registry: Registry = Registry.DOI
     registry_identifier: str = "10.17504/protocols.io.261ger81jl47/v1"
 
@@ -259,6 +279,7 @@ class _Barseq_2_5_V1(ProtocolModel):
         "Jonathan Wang",
         "Yoh Isogai",
     ]
+    version: "v1"
     registry: Registry = Registry.DOI
     registry_identifier: str = "10.17504/protocols.io.kqdg3ke9qv25/v1"
 
@@ -276,6 +297,7 @@ class _Aqueous_Sbip_Delipidation_Of_A_Whole_Mouse_Brain_V2(ProtocolModel):
         "Jayaram Chandrashekar",
         "Rajvi Javeri",
     ]
+    version: "v2"
     registry: Registry = Registry.DOI
     registry_identifier: str = "10.17504/protocols.io.n2bvj81mwgk5/v2"
 
@@ -293,6 +315,7 @@ class _Tetrahydrofuran_And_Dichloromethane_Delipidation_Of_A_Whole_Mouse_Brain_V
         "Jayaram Chandrashekar",
         "Rajvi Javeri",
     ]
+    version: "v2"
     registry: Registry = Registry.DOI
     registry_identifier: str = "10.17504/protocols.io.36wgqj1kxvk5/v2"
 
@@ -304,6 +327,7 @@ class _Imaging_Cleared_Mouse_Brains_On_Smartspim_V1(ProtocolModel):
     authors: list[str] = [
         "John Rohde",
     ]
+    version: "v1"
     registry: Registry = Registry.DOI
     registry_identifier: str = "10.17504/protocols.io.3byl4jo1rlo5/v1"
 
@@ -318,6 +342,7 @@ class _General_Setup_And_Takedown_Procedures_For_Rodent_Neurosurgery_V1(Protocol
         "Ali Williford",
         "Robert E Howard",
     ]
+    version: "v1"
     registry: Registry = Registry.DOI
     registry_identifier: str = "10.17504/protocols.io.kqdg392o7g25/v1"
 
@@ -334,6 +359,7 @@ class _Whole_Mouse_Brain_Delipidation_Immunolabeling_And_Expansion_Microscopy_V1
         "Jayaram Chandrashekar",
         "Molly Logsdon",
     ]
+    version: "v1"
     registry: Registry = Registry.DOI
     registry_identifier: str = "10.17504/protocols.io.n92ldpwjxl5b/v1"
 
@@ -350,6 +376,7 @@ class _Aqueous_Sbip_Delipidation_Of_A_Whole_Mouse_Brain_V1(ProtocolModel):
         "Judith Baka",
         "Jayaram Chandrashekar",
     ]
+    version: "v1"
     registry: Registry = Registry.DOI
     registry_identifier: str = "10.17504/protocols.io.n2bvj81mwgk5/v1"
 
@@ -366,6 +393,7 @@ class _Tetrahydrofuran_And_Dichloromethane_Delipidation_Of_A_Whole_Mouse_Brain_V
         "Molly Logsdon",
         "Jayaram Chandrashekar",
     ]
+    version: "v1"
     registry: Registry = Registry.DOI
     registry_identifier: str = "10.17504/protocols.io.36wgqj1kxvk5/v1"
 
@@ -382,6 +410,7 @@ class _Immunolabeling_Of_A_Whole_Mouse_Brain_V1(ProtocolModel):
         "Jayaram Chandrashekar",
         "Molly Logsdon",
     ]
+    version: "v1"
     registry: Registry = Registry.DOI
     registry_identifier: str = "10.17504/protocols.io.ewov1okwylr2/v1"
 
@@ -395,6 +424,7 @@ class _Structural_Mri_Using_The_University_Of_Washington_14T_Vertical_Bore_Bruke
         "Galen Lynch",
         "Josh Siegle",
     ]
+    version: "v1"
     registry: Registry = Registry.DOI
     registry_identifier: str = "10.17504/protocols.io.3byl4j8p2lo5/v1"
 
@@ -406,6 +436,7 @@ class _Duragel_Application_For_Acute_Electrophysiology_Recordings_V1(ProtocolMod
     authors: list[str] = [
         "Anna Lakunina",
     ]
+    version: "v1"
     registry: Registry = Registry.DOI
     registry_identifier: str = "10.17504/protocols.io.14egn2dwqg5d/v1"
 
@@ -417,6 +448,7 @@ class _Smartspim_Setup_And_Alignment_V1(ProtocolModel):
     authors: list[str] = [
         "John Rohde",
     ]
+    version: "v1"
     registry: Registry = Registry.DOI
     registry_identifier: str = "10.17504/protocols.io.5jyl8jyb7g2w/v1"
 
@@ -429,6 +461,7 @@ class _Refractive_Index_Matching_Easyindex_V1(ProtocolModel):
         "Holly Myers",
         "Daphne Toglia",
     ]
+    version: "v1"
     registry: Registry = Registry.DOI
     registry_identifier: str = "10.17504/protocols.io.kxygx965kg8j/v1"
 
@@ -442,6 +475,7 @@ class _Preparing_A_3D_Printed_Implant_For_Acute_In_Vivo_Electrophysiology_V1(Pro
         "Anna Lakunina",
         "Josh Siegle",
     ]
+    version: "v1"
     registry: Registry = Registry.DOI
     registry_identifier: str = "10.17504/protocols.io.6qpvr4jmogmk/v1"
 
@@ -453,6 +487,7 @@ class _Mouse_Cardiac_Perfusion_Fixation_And_Brain_Collection(ProtocolModel):
     authors: list[str] = [
         "Allen Institute for Brain Science",
     ]
+    version: "v"
     registry: Registry = Registry.DOI
     registry_identifier: str = "10.17504/protocols.io.bg5vjy66"
 
@@ -465,6 +500,7 @@ class _Whole_Mouse_Brain_Delipidation_Dichloromethane_V1(ProtocolModel):
         "Holly Myers",
         "Daphne Toglia",
     ]
+    version: "v1"
     registry: Registry = Registry.DOI
     registry_identifier: str = "10.17504/protocols.io.dm6gpj7n5gzp/v1"
 
@@ -477,6 +513,7 @@ class _Refractive_Index_Matching_Ethyl_Cinnamate_V1(ProtocolModel):
         "Holly Myers",
         "Daphne Toglia",
     ]
+    version: "v1"
     registry: Registry = Registry.DOI
     registry_identifier: str = "10.17504/protocols.io.n2bvj8k4bgk5/v1"
 
@@ -489,6 +526,7 @@ class _Dapi_Staining_Mouse_Brain_Sections_V1(ProtocolModel):
         "Daphne Toglia",
         "Holly Myers",
     ]
+    version: "v1"
     registry: Registry = Registry.DOI
     registry_identifier: str = "10.17504/protocols.io.3byl4jm6rlo5/v1"
 
@@ -500,6 +538,7 @@ class _Modified_Frame_Projected_Independent_Fiber_Photometry_Fip_System_Triggeri
     authors: list[str] = [
         "Kenta M. Hagihara",
     ]
+    version: "v1"
     registry: Registry = Registry.DOI
     registry_identifier: str = "10.17504/protocols.io.kxygx3e6wg8j/v1"
 
@@ -514,6 +553,7 @@ class _Multi_Site_Optic_Fiber_Implants_V1(ProtocolModel):
         "Benjamin Ouellette",
         "Conor Grasso",
     ]
+    version: "v1"
     registry: Registry = Registry.DOI
     registry_identifier: str = "10.17504/protocols.io.6qpvr3dqovmk/v1"
 
@@ -527,6 +567,7 @@ class _Immunohistochemistry_Ihc_Staining_Mouse_Brain_Sections_V1(ProtocolModel):
         "Daphne Toglia",
         "Holly Myers",
     ]
+    version: "v1"
     registry: Registry = Registry.DOI
     registry_identifier: str = "10.17504/protocols.io.5qpvo3b7bv4o/v1"
 
@@ -540,6 +581,7 @@ class _Sectioning_Mouse_Brain_With_Sliding_Microtome_V1(ProtocolModel):
         "Daphne Toglia",
         "Holly Myers",
     ]
+    version: "v1"
     registry: Registry = Registry.DOI
     registry_identifier: str = "10.17504/protocols.io.5jyl8p97rg2w/v1"
 
@@ -553,6 +595,7 @@ class _Mounting_And_Coverslipping_Mouse_Brain_Sections_V1(ProtocolModel):
         "Daphne Toglia",
         "Holly Myers",
     ]
+    version: "v1"
     registry: Registry = Registry.DOI
     registry_identifier: str = "10.17504/protocols.io.n92ldmpy7l5b/v1"
 
@@ -565,6 +608,7 @@ class _Stereotactic_Injections_With_Headframe_Implant_V1(ProtocolModel):
         "Avalon Amaya",
         "Katrina Nguyen",
     ]
+    version: "v1"
     registry: Registry = Registry.DOI
     registry_identifier: str = "10.17504/protocols.io.eq2lyj72elx9/v1"
 
@@ -578,6 +622,7 @@ class _Protocol_Collection_Perfusing_Sectioning_Ihc_Mounting_And_Coverslipping_M
         "Daphne Toglia",
         "Holly Myers",
     ]
+    version: "v1"
     registry: Registry = Registry.DOI
     registry_identifier: str = "10.17504/protocols.io.kxygx3yxkg8j/v1"
 
@@ -714,12 +759,12 @@ class Protocols:
     doi_map = {m().registry_identifier: m() for m in ALL if getattr(m(), "registry_identifier", None)}
 
     @classmethod
-    def from_doi(cls, doi: str) -> Optional[ProtocolModel]:
+    def from_doi(cls, doi: str) -> ProtocolModel:
         """Return protocol model by DOI."""
         return cls.doi_map.get(doi, None)
 
     @classmethod
-    def from_url(cls, url: str) -> Optional[ProtocolModel]:
+    def from_url(cls, url: str) -> ProtocolModel:
         """Return protocol model by DOI, stripping URL prefixes."""
         # Remove any leading protocol/domain up to the DOI
         doi = re.sub(r"^(https?://)?(dx\.)?doi\.org/", "", url)

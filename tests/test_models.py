@@ -89,6 +89,10 @@ class LiteralAndDefaultTests(unittest.TestCase):
             Protocols.SOLENOID_VALVE_CALIBRATION_FOR_BEHAVIOR_RIGS_UTILIZING_WATER_REWARD_V1.name,
             "Solenoid Valve Calibration for Behavior Rigs Utilizing Water Reward",
         )
+        self.assertEqual(
+            Protocols.SOLENOID_VALVE_CALIBRATION_FOR_BEHAVIOR_RIGS_UTILIZING_WATER_REWARD_V1.version,
+            "v1",
+        )
 
 
 if __name__ == "__main__":

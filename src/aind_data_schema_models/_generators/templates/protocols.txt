@@ -13,6 +13,7 @@ class ProtocolModel(BaseName):
     model_config = ConfigDict(frozen=True)
     name: str
     authors: list[str]
+    version: str
     registry: Registry
     registry_identifier: str
 
@@ -27,6 +28,7 @@ class {{ row['title'] | to_class_name_underscored }}{{ version }}(ProtocolModel)
         "{{ author.strip() }}",
         {%- endfor %}
     ]
+    version: "v{{ version_match[0] if version_match else '' }}"
     registry: Registry = Registry.DOI
     registry_identifier: str = "{{ row['DOI'] }}"
 
