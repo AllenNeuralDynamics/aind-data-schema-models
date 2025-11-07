@@ -988,6 +988,15 @@ class _University_Of_Pennsylvania(OrganizationModel):
     registry_identifier: Optional[str] = Field(default="00b30xv10")
 
 
+class _Unknown(OrganizationModel):
+    """Model Unknown"""
+
+    name: Literal["Unknown"] = "Unknown"
+    abbreviation: Literal["UNKNOWN"] = "UNKNOWN"
+    registry: Optional[Registry] = Field(default=None)
+    registry_identifier: Optional[str] = Field(default=None)
+
+
 class _Vieworks(OrganizationModel):
     """Model Vieworks"""
 
@@ -1125,6 +1134,7 @@ class Organization:
     TYMPHANY = _Tymphany()
     UCSD = _University_Of_California_San_Diego()
     UPENN = _University_Of_Pennsylvania()
+    UNKNOWN = _Unknown()
     VIEWORKS = _Vieworks()
     VORTRAN = _Vortran()
     AMS_OSRAM = _Ams_Osram()
