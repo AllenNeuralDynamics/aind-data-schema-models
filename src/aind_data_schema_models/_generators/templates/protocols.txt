@@ -1,0 +1,62 @@
+"""Protocols"""
+{% raw -%}
+from pydantic import Field, ConfigDict
+from typing import Union
+from typing_extensions import Annotated
+from aind_data_schema_models.pid_names import BaseName
+from aind_data_schema_models.registries import Registry
+import re
+{% endraw %}
+
+class ProtocolModel(BaseName):
+    """Base model for protocol"""
+    model_config = ConfigDict(frozen=True)
+    name: str
+    authors: list[str]
+    version: str
+    registry: Registry
+    registry_identifier: str
+
+{% for _, row in data.iterrows() %}
+{%- set version_match = row['DOI'] | regex_search('/v([\w\d]+)$') -%}
+{%- set version = '_V' ~ version_match[0] if version_match else '' -%}
+class {{ row['title'] | to_class_name_underscored }}{{ version }}(ProtocolModel):
+    """Model {{ row['title'] }}"""
+    name: str = "{{ row['title'] }}"
+    authors: list[str] = [
+        {%- for author in row['authors'].split(',') %}
+        "{{ author.strip() }}",
+        {%- endfor %}
+    ]
+    version: "v{{ version_match[0] if version_match else '' }}"
+    registry: Registry = Registry.DOI
+    registry_identifier: str = "{{ row['DOI'] }}"
+
+
+{% endfor %}
+
+class Protocols:
+    """Protocols"""
+{% for _, row in data.iterrows() %}
+    {% set version_match = row['DOI'] | regex_search('/v([\w\d]+)$') %}
+    {% set version = '_V' ~ version_match[0] if version_match else '' %}
+    {{ row['title'] | to_class_name | upper }}{{ version }} = {{ row['title'] | to_class_name_underscored }}{{ version }}()
+{% endfor %}
+
+    ALL = tuple(ProtocolModel.__subclasses__())
+
+    ONE_OF = Annotated[Union[tuple(ProtocolModel.__subclasses__())], Field(discriminator="title")]
+
+    doi_map = {m().registry_identifier: m() for m in ALL if getattr(m(), "registry_identifier", None)}
+
+    @classmethod
+    def from_doi(cls, doi: str) -> ProtocolModel:
+        """Return protocol model by DOI."""
+        return cls.doi_map.get(doi, None)
+
+    @classmethod
+    def from_url(cls, url: str) -> ProtocolModel:
+        """Return protocol model by DOI, stripping URL prefixes."""
+        # Remove any leading protocol/domain up to the DOI
+        doi = re.sub(r'^(https?://)?(dx\.)?doi\.org/', '', url)
+        return cls.from_doi(doi)
