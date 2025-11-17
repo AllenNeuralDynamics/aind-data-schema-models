@@ -4,7 +4,6 @@ Requires you set PROTOCOLS_CLIENT_TOKEN environment variable with your API token
 protocols.io/developers
 """
 
-import json
 import re
 import requests
 import pandas as pd
