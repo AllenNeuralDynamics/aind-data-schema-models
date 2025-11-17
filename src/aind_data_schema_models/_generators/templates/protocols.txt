@@ -12,23 +12,15 @@ class ProtocolModel(BaseName):
     """Base model for protocol"""
     model_config = ConfigDict(frozen=True)
     name: str
-    authors: list[str]
-    version: str
+    version: int
     registry: Registry
     registry_identifier: str
 
 {% for _, row in data.iterrows() %}
-{%- set version_match = row['DOI'] | regex_search('/v([\w\d]+)$') -%}
-{%- set version = '_V' ~ version_match[0] if version_match else '' -%}
-class {{ row['title'] | to_class_name_underscored }}{{ version }}(ProtocolModel):
+class {{ row['title'] | to_class_name_underscored }}_V{{ row['version'] }}(ProtocolModel):
     """Model {{ row['title'] }}"""
     name: str = "{{ row['title'] }}"
-    authors: list[str] = [
-        {%- for author in row['authors'].split(',') %}
-        "{{ author.strip() }}",
-        {%- endfor %}
-    ]
-    version: "v{{ version_match[0] if version_match else '' }}"
+    version: int = {{ row['version'] }}
     registry: Registry = Registry.DOI
     registry_identifier: str = "{{ row['DOI'] }}"
 
@@ -38,9 +30,7 @@ class {{ row['title'] | to_class_name_underscored }}{{ version }}(ProtocolModel)
 class Protocols:
     """Protocols"""
 {% for _, row in data.iterrows() %}
-    {% set version_match = row['DOI'] | regex_search('/v([\w\d]+)$') %}
-    {% set version = '_V' ~ version_match[0] if version_match else '' %}
-    {{ row['title'] | to_class_name | upper }}{{ version }} = {{ row['title'] | to_class_name_underscored }}{{ version }}()
+    {{ row['title'] | to_class_name | upper }}_V{{ row['version'] }} = {{ row['title'] | to_class_name_underscored }}_V{{ row['version'] }}()
 {% endfor %}
 
     ALL = tuple(ProtocolModel.__subclasses__())

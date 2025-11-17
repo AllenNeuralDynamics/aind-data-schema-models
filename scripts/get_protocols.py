@@ -4,6 +4,8 @@ Requires you set PROTOCOLS_CLIENT_TOKEN environment variable with your API token
 protocols.io/developers
 """
 
+import json
+import re
 import requests
 import pandas as pd
 import os
@@ -45,6 +47,24 @@ def get_workspace_protocols(token, workspace_uri):
     return all_items
 
 
+def parse_protocol(protocol: dict) -> list[dict]:
+    """Parse protocol information to extract title and DOI."""
+    title = protocol.get("title", "")
+
+    versions = protocol.get("versions", [])
+
+    protocols = []
+
+    for version in versions:
+        version_doi = version.get("doi", "")
+        version_doi = re.sub(r"^(https?://)?(dx\.)?doi\.org/", "", version_doi)
+        version_id = int(version.get("version_id", "")) + 1  # version_id is 0-based
+
+        protocols.append({"title": title, "DOI": version_doi, "version": version_id})
+
+    return protocols
+
+
 def main():
     """Main function to fetch protocols and save to CSV."""
     token = get_access_token()
@@ -54,22 +74,12 @@ def main():
     # Deduplicate by DOI
     results_by_doi = {}
     for p in protocols:
-        title = p.get("title", "")
-        doi = p.get("doi", "")
-        # Strip URL prefix if present
-        if doi.startswith("dx.doi.org/"):
-            doi = doi[len("dx.doi.org/"):]  # Remove the prefix
-        elif doi.startswith("https://dx.doi.org/"):
-            doi = doi[len("https://dx.doi.org/"):]  # Remove the prefix
-        authors = []
-        for author in p.get("authors", []):
-            name = author.get("name")
-            if name:
-                authors.append(name)
-        authors_str = ", ".join(authors)
-        # Only add if DOI is not already present
-        if doi and doi not in results_by_doi:
-            results_by_doi[doi] = {"title": title, "DOI": doi, "authors": authors_str}
+        print(f"Processing protocol: {p.get('title', '')}")
+        parsed_protocols = parse_protocol(p)
+        for proto in parsed_protocols:
+            doi = proto["DOI"]
+            if doi and doi not in results_by_doi:
+                results_by_doi[doi] = proto
     results = list(results_by_doi.values())
     # Ensure output directory exists
     os.makedirs(os.path.dirname(OUTPUT_CSV), exist_ok=True)

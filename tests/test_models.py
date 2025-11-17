@@ -91,7 +91,7 @@ class LiteralAndDefaultTests(unittest.TestCase):
         )
         self.assertEqual(
             Protocols.SOLENOID_VALVE_CALIBRATION_FOR_BEHAVIOR_RIGS_UTILIZING_WATER_REWARD_V1.version,
-            "v1",
+            1,
         )
 
 
