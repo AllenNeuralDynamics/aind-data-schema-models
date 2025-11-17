@@ -8,6 +8,7 @@ from aind_data_schema_models.harp_types import HarpDeviceType
 from aind_data_schema_models.organizations import Organization
 from aind_data_schema_models.species import Species
 from aind_data_schema_models.mouse_anatomy import MouseAnatomy, MouseAnatomyModel, MouseEmgMuscles
+from aind_data_schema_models.protocols import Protocols
 
 
 class LiteralAndDefaultTests(unittest.TestCase):
@@ -80,6 +81,18 @@ class LiteralAndDefaultTests(unittest.TestCase):
 
         test = TestModel2()
         self.assertIsNotNone(test)
+
+    def test_protocols_instantiation(self):
+        """Test that Protocols can be instantiated and have correct names"""
+        self.assertIsNotNone(Protocols.SOLENOID_VALVE_CALIBRATION_FOR_BEHAVIOR_RIGS_UTILIZING_WATER_REWARD_V1)
+        self.assertEqual(
+            Protocols.SOLENOID_VALVE_CALIBRATION_FOR_BEHAVIOR_RIGS_UTILIZING_WATER_REWARD_V1.name,
+            "Solenoid Valve Calibration for Behavior Rigs Utilizing Water Reward",
+        )
+        self.assertEqual(
+            Protocols.SOLENOID_VALVE_CALIBRATION_FOR_BEHAVIOR_RIGS_UTILIZING_WATER_REWARD_V1.version,
+            1,
+        )
 
 
 if __name__ == "__main__":
