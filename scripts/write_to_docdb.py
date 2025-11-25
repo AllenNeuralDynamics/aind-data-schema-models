@@ -3,15 +3,12 @@
 import os
 import csv
 from typing import Iterator
-from aind_data_access_api.document_db_ssh import (
-    DocumentDbSSHClient,
-    DocumentDbSSHCredentials,
-)
+from aind_data_access_api.document_db import Client as DocDBClient
 
-DB_NAME = os.getenv("DB_NAME")
+DOCDB_HOST = os.getenv("DOCDB_HOST")
+DOCDB_DATABASE = os.getenv("DOCDB_DATABASE")
+
 PATH_TO_MODELS = os.getenv("PATH_TO_MODELS")
-DOCDB_READWRITE_SECRET = os.getenv("DOCDB_READWRITE_SECRET")
-DOCDB_SSH_TUNNEL_SECRET = os.getenv("DOCDB_SSH_TUNNEL_SECRET")
 AWS_DEFAULT_REGION = os.getenv("AWS_DEFAULT_REGION")
 
 
@@ -25,28 +22,44 @@ def csv_to_json(csv_file_path: str) -> Iterator:
             yield row
 
 
-def publish_to_docdb(folder_path: str, credentials: DocumentDbSSHCredentials) -> None:
+def publish_to_docdb(folder_path: str) -> None:
     """
     Writes models to docdb
     """
-    with DocumentDbSSHClient(credentials=credentials) as doc_db_client:
-        database = doc_db_client._client[doc_db_client.database_name]
-        for file_name in os.listdir(folder_path):
-            if file_name.endswith(".csv"):
-                collection_name = file_name[:-4]
-                collection = database[collection_name]
-                csv_file_path = os.path.join(folder_path, file_name)
-                json_data = csv_to_json(csv_file_path)
-                for records in json_data:
-                    filter = {"name": records["name"]}
-                    response = collection.update_one(filter=filter, update={"$set": records}, upsert=True)
-                    print(response.raw_result)
+    for file_name in os.listdir(folder_path):
+        if file_name.endswith(".csv"):
+            # Get all items from each csv file/model type, e.g. all modalities
+            csv_file_path = os.path.join(folder_path, file_name)
+            json_models = csv_to_json(csv_file_path)
+            # Each model type is written to its own collection
+            collection_name = file_name[:-4]
+            with DocDBClient(
+                host=DOCDB_HOST,
+                database=DOCDB_DATABASE,
+                collection=collection_name,
+            ) as docdb_client:
+                # Process each item in the csv
+                # Assumes each item has a unique "name" field
+                for json_model in json_models:
+                    # Delete existing records with the same name
+                    name = json_model["name"]
+                    filter = {"name": json_model["name"]}
+                    records = docdb_client.retrieve_docdb_records(
+                        filter_query=filter,
+                        projection={"_id": 1},
+                    )
+                    if records:
+                        print(f"Deleting {len(records)} existing records for {collection_name}, name={name}")
+                        ids_to_delete = [r["_id"] for r in records]
+                        response = docdb_client.delete_many_records(data_asset_record_ids=ids_to_delete)
+                        print(response.json())
+
+                    # Insert new record
+                    print(f"Inserting new record for {collection_name}, name={name}")
+                    response = docdb_client.insert_one_docdb_record(record=json_model)
+                    print(response.json())
 
 
 if __name__ == "__main__":
     folder_path = PATH_TO_MODELS
-    credentials = DocumentDbSSHCredentials.from_secrets_manager(
-        doc_db_secret_name=DOCDB_READWRITE_SECRET, ssh_secret_name=DOCDB_SSH_TUNNEL_SECRET
-    )
-    credentials.database = DB_NAME
-    publish_to_docdb(folder_path, credentials)
+    publish_to_docdb(folder_path=folder_path)
