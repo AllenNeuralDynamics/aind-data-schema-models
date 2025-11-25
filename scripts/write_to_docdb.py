@@ -1,9 +1,12 @@
 """Module to publish models to docdb"""
 
-import os
 import csv
+import os
 from typing import Iterator
+from uuid import uuid4
+
 from aind_data_access_api.document_db import Client as DocDBClient
+from requests import HTTPError
 
 DOCDB_HOST = os.getenv("DOCDB_HOST")
 DOCDB_DATABASE = os.getenv("DOCDB_DATABASE")
@@ -28,6 +31,7 @@ def publish_to_docdb(folder_path: str) -> None:
     """
     for file_name in os.listdir(folder_path):
         if file_name.endswith(".csv"):
+            print(f"Processing file: {file_name}")
             # Get all items from each csv file/model type, e.g. all modalities
             csv_file_path = os.path.join(folder_path, file_name)
             json_models = csv_to_json(csv_file_path)
@@ -56,10 +60,15 @@ def publish_to_docdb(folder_path: str) -> None:
 
                     # Insert new record
                     print(f"Inserting new record for {collection_name}, name={name}")
+                    json_model["_id"] = str(uuid4())
                     response = docdb_client.insert_one_docdb_record(record=json_model)
                     print(response.json())
 
 
 if __name__ == "__main__":
     folder_path = PATH_TO_MODELS
-    publish_to_docdb(folder_path=folder_path)
+    try:
+        publish_to_docdb(folder_path=folder_path)
+    except HTTPError as error:
+        print(f"HTTP error {error.response.status_code}: {error.response.text}")
+        raise error
