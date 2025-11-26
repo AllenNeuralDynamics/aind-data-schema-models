@@ -1,4 +1,4 @@
-name: Publish models to dev
+name: Publish models to dev docdb
 on:
   push:
     branches:
@@ -14,9 +14,9 @@ jobs:
       contents: read
     env:
       AWS_DATA_SCHEMA_MODELS_ROLE: ${{ secrets.AWS_DATA_SCHEMA_MODELS_ROLE_DEV }}
-      DB_NAME: ${{ vars.DB_NAME_DEV }}
-      DOCDB_READWRITE_SECRET: ${{ vars.DOCDB_READWRITE_SECRET_DEV }}
-      DOCDB_SSH_TUNNEL_SECRET: ${{ vars.DOCDB_SSH_TUNNEL_SECRET_DEV }}
+      DOCDB_HOST: ${{ vars.DOCDB_HOST_DEV }}
+      DOCDB_DATABASE: ${{ vars.DOCDB_DATABASE }}
+      DOCDB_COLLECTION: ${{ vars.DOCDB_COLLECTION }}
       AWS_DEFAULT_REGION : ${{ vars.AWS_REGION_DEV }}
       PATH_TO_MODELS: ${{ vars.PATH_TO_MODELS }}
     steps:
