@@ -62,7 +62,7 @@ def remove_unmatched_records(file_paths: List[str], docdb_client: DocDBClient) -
 
     records = docdb_client.retrieve_docdb_records(projection={"_id": 1})
     ids_from_docdb = {record["_id"] for record in records}
-    
+
     ids_to_delete = ids_from_docdb - ids_from_csvs
     print(f"Ids in DocDB with no corresponding CSV file: {ids_to_delete}")
     if ids_to_delete:
