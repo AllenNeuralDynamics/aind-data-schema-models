@@ -10,6 +10,7 @@ from requests import HTTPError
 
 DOCDB_HOST = os.getenv("DOCDB_HOST")
 DOCDB_DATABASE = os.getenv("DOCDB_DATABASE")
+DOCDB_COLLECTION = os.getenv("DOCDB_COLLECTION")
 
 PATH_TO_MODELS = os.getenv("PATH_TO_MODELS")
 AWS_DEFAULT_REGION = os.getenv("AWS_DEFAULT_REGION")
@@ -32,37 +33,26 @@ def publish_to_docdb(folder_path: str) -> None:
     for file_name in os.listdir(folder_path):
         if file_name.endswith(".csv"):
             print(f"Processing file: {file_name}")
-            # Get all items from each csv file/model type, e.g. all modalities
+            # Get all items from each csv file, e.g. all modalities
             csv_file_path = os.path.join(folder_path, file_name)
-            json_models = csv_to_json(csv_file_path)
-            # Each model type is written to its own collection
-            collection_name = file_name[:-4]
+            csv_contents = list(csv_to_json(csv_file_path))
+            # Create 1 record that contains all items
+            # Assumes file size does not exceed API gateway and DocDB limits
+            record = {
+                "_id": file_name.removesuffix(".csv"),
+                "file_name": file_name,
+                "count": len(csv_contents),
+                "contents": csv_contents,
+            }
+            # Upsert to docdb
             with DocDBClient(
                 host=DOCDB_HOST,
                 database=DOCDB_DATABASE,
-                collection=collection_name,
+                collection=DOCDB_COLLECTION,
             ) as docdb_client:
-                # Process each item in the csv
-                # Assumes each item has a unique "name" field
-                for json_model in json_models:
-                    # Delete existing records with the same name
-                    name = json_model["name"]
-                    filter = {"name": json_model["name"]}
-                    records = docdb_client.retrieve_docdb_records(
-                        filter_query=filter,
-                        projection={"_id": 1},
-                    )
-                    if records:
-                        print(f"Deleting {len(records)} existing records for {collection_name}, name={name}")
-                        ids_to_delete = [r["_id"] for r in records]
-                        response = docdb_client.delete_many_records(data_asset_record_ids=ids_to_delete)
-                        print(response.json())
-
-                    # Insert new record
-                    print(f"Inserting new record for {collection_name}, name={name}")
-                    json_model["_id"] = str(uuid4())
-                    response = docdb_client.insert_one_docdb_record(record=json_model)
-                    print(response.json())
+                print(f"Upserting {file_name} contents to {DOCDB_DATABASE}/{DOCDB_COLLECTION}")
+                response = docdb_client.upsert_one_docdb_record(record=record)
+                print(response.json())
 
 
 if __name__ == "__main__":
