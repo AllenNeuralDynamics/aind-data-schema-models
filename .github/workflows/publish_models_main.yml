@@ -1,4 +1,4 @@
-name: Publish models to prod
+name: Publish models to prod docdb
 on:
   push:
     branches:
@@ -14,9 +14,9 @@ jobs:
       contents: read
     env:
       AWS_DATA_SCHEMA_MODELS_ROLE: ${{ secrets.AWS_DATA_SCHEMA_MODELS_ROLE_PROD }}
-      DB_NAME: ${{ vars.DB_NAME_PROD }}
-      DOCDB_READWRITE_SECRET: ${{ vars.DOCDB_READWRITE_SECRET_PROD }}
-      DOCDB_SSH_TUNNEL_SECRET: ${{ vars.DOCDB_SSH_TUNNEL_SECRET_PROD }}
+      DOCDB_HOST: ${{ vars.DOCDB_HOST_PROD }}
+      DOCDB_DATABASE: ${{ vars.DOCDB_DATABASE }}
+      DOCDB_COLLECTION: ${{ vars.DOCDB_COLLECTION }}
       AWS_DEFAULT_REGION : ${{ vars.AWS_REGION_PROD }}
       PATH_TO_MODELS: ${{ vars.PATH_TO_MODELS }}
     steps:

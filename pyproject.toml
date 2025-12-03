@@ -39,7 +39,7 @@ dev = [
 ]
 
 build = [
-    'aind-data-access-api[docdb]'
+    'aind-data-access-api>=1.9.2,<2.0'
 ]
 
 [tool.setuptools.packages.find]
