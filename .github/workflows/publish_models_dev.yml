@@ -3,9 +3,8 @@ on:
   push:
     branches:
       - main
-      - test-docdb-gh-action
-    # paths:
-    #   - 'src/aind_data_schema_models/_generators/models/**'
+    paths:
+      - 'src/aind_data_schema_models/_generators/models/**'
 
 jobs:
   publish_models:
