@@ -5,6 +5,7 @@ on:
       - main
     paths:
       - 'src/aind_data_schema_models/_generators/models/**'
+  workflow_dispatch:
 
 jobs:
   publish_models:
@@ -20,9 +21,7 @@ jobs:
       AWS_DEFAULT_REGION : ${{ vars.AWS_REGION_DEV }}
       PATH_TO_MODELS: ${{ vars.PATH_TO_MODELS }}
     steps:
-      - uses: actions/checkout@master
-      - name: Pull latest changes
-        run: git pull origin main
+      - uses: actions/checkout@v5
       - name: Set up Python 3.10
         uses: actions/setup-python@v3
         with:
