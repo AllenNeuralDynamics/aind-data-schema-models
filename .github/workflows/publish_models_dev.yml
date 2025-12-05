@@ -5,6 +5,7 @@ on:
       - main
     paths:
       - 'src/aind_data_schema_models/_generators/models/**'
+  workflow_dispatch:
 
 jobs:
   publish_models:
