@@ -155,6 +155,13 @@ class _Stpt(ModalityModel):
     abbreviation: Literal["STPT"] = "STPT"
 
 
+class __Scrnaseq(ModalityModel):
+    """Model  scRNAseq"""
+
+    name: Literal["Single cell RNA sequencing"] = "Single cell RNA sequencing"
+    abbreviation: Literal[" scRNAseq"] = " scRNAseq"
+
+
 class Modality:
     """Modalities"""
 
@@ -177,6 +184,7 @@ class Modality:
     SLAP = _Slap()
     SPIM = _Spim()
     STPT = _Stpt()
+    _SCRNASEQ = __Scrnaseq()
 
     ALL = tuple(ModalityModel.__subclasses__())
 
