@@ -134,6 +134,13 @@ class _Pophys(ModalityModel):
     abbreviation: Literal["pophys"] = "pophys"
 
 
+class _Slap2(ModalityModel):
+    """Model slap2"""
+
+    name: Literal["Random access projection microscopy"] = "Random access projection microscopy"
+    abbreviation: Literal["slap2"] = "slap2"
+
+
 class _Slap(ModalityModel):
     """Model slap"""
 
@@ -181,6 +188,7 @@ class Modality:
     MAPSEQ = _Mapseq()
     MERFISH = _Merfish()
     POPHYS = _Pophys()
+    SLAP2 = _Slap2()
     SLAP = _Slap()
     SPIM = _Spim()
     STPT = _Stpt()
