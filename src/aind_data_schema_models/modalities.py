@@ -141,13 +141,6 @@ class _Slap2(ModalityModel):
     abbreviation: Literal["slap2"] = "slap2"
 
 
-class _Slap(ModalityModel):
-    """Model slap"""
-
-    name: Literal["Scanned line projection imaging"] = "Scanned line projection imaging"
-    abbreviation: Literal["slap"] = "slap"
-
-
 class _Spim(ModalityModel):
     """Model SPIM"""
 
@@ -189,7 +182,6 @@ class Modality:
     MERFISH = _Merfish()
     POPHYS = _Pophys()
     SLAP2 = _Slap2()
-    SLAP = _Slap()
     SPIM = _Spim()
     STPT = _Stpt()
     SCRNASEQ = _Scrnaseq()
