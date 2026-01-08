@@ -253,6 +253,15 @@ class _Conoptics(OrganizationModel):
     registry_identifier: Optional[str] = Field(default=None)
 
 
+class _Crestoptics(OrganizationModel):
+    """Model Crestoptics"""
+
+    name: Literal["Crestoptics"] = "Crestoptics"
+    abbreviation: Literal[None] = None
+    registry: Optional[Registry] = Field(default=None)
+    registry_identifier: Optional[str] = Field(default=None)
+
+
 class _Custom(OrganizationModel):
     """Model Custom"""
 
@@ -518,6 +527,15 @@ class _Lumen_Dynamics(OrganizationModel):
     """Model Lumen Dynamics"""
 
     name: Literal["Lumen Dynamics"] = "Lumen Dynamics"
+    abbreviation: Literal[None] = None
+    registry: Optional[Registry] = Field(default=None)
+    registry_identifier: Optional[str] = Field(default=None)
+
+
+class _Lumencor(OrganizationModel):
+    """Model Lumencor"""
+
+    name: Literal["Lumencor"] = "Lumencor"
     abbreviation: Literal[None] = None
     registry: Optional[Registry] = Field(default=None)
     registry_identifier: Optional[str] = Field(default=None)
@@ -907,6 +925,15 @@ class _Teledyne_Flir(OrganizationModel):
     registry_identifier: Optional[str] = Field(default="01j1gwp17")
 
 
+class _Teledyne_Vision_Solutions(OrganizationModel):
+    """Model Teledyne Vision Solutions"""
+
+    name: Literal["Teledyne Vision Solutions"] = "Teledyne Vision Solutions"
+    abbreviation: Literal[None] = None
+    registry: Optional[Registry] = Field(default=None)
+    registry_identifier: Optional[str] = Field(default=None)
+
+
 class _Templeton_World_Charity_Foundation(OrganizationModel):
     """Model Templeton World Charity Foundation"""
 
@@ -1053,6 +1080,7 @@ class Organization:
     COLUMBIA = _Columbia_University()
     COMPUTAR = _Computar()
     CONOPTICS = _Conoptics()
+    CRESTOPTICS = _Crestoptics()
     CUSTOM = _Custom()
     DIGIKEY = _Digikey()
     DODOTRONIC = _Dodotronic()
@@ -1083,6 +1111,7 @@ class Organization:
     LEICA = _Leica()
     LIFECANVAS = _Lifecanvas()
     LUMEN_DYNAMICS = _Lumen_Dynamics()
+    LUMENCOR = _Lumencor()
     MBF = _Mbf_Bioscience()
     MIT_BCS = _Mit_Department_Of_Brain_And_Cognitive_Sciences()
     MKS_NEWPORT = _Mks_Newport()
@@ -1125,6 +1154,7 @@ class Organization:
     TAMRON = _Tamron()
     TMC = _Technical_Manufacturing_Corporation()
     FLIR = _Teledyne_Flir()
+    TELEDYNE_VISION_SOLUTIONS = _Teledyne_Vision_Solutions()
     TWCF = _Templeton_World_Charity_Foundation()
     THE_IMAGING_SOURCE = _The_Imaging_Source()
     THE_LEE_COMPANY = _The_Lee_Company()
