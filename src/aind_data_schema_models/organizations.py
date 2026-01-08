@@ -254,9 +254,9 @@ class _Conoptics(OrganizationModel):
 
 
 class _Crestoptics(OrganizationModel):
-    """Model Crestoptics"""
+    """Model CrestOptics"""
 
-    name: Literal["Crestoptics"] = "Crestoptics"
+    name: Literal["CrestOptics"] = "CrestOptics"
     abbreviation: Literal[None] = None
     registry: Optional[Registry] = Field(default=None)
     registry_identifier: Optional[str] = Field(default=None)
@@ -1262,6 +1262,7 @@ Organization.LASER_MANUFACTURERS = one_of_instance(
         Organization.THORLABS,
         Organization.VORTRAN,
         Organization.OTHER,
+        Organization.LUMENCOR,
     ]
 )
 
