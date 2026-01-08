@@ -127,6 +127,7 @@ Organization.LASER_MANUFACTURERS = one_of_instance(
         Organization.THORLABS,
         Organization.VORTRAN,
         Organization.OTHER,
+        Organization.LUMENCOR,
     ]
 )
 
