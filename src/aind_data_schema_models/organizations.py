@@ -898,6 +898,15 @@ class _Spinnaker(OrganizationModel):
     registry_identifier: Optional[str] = Field(default=None)
 
 
+class _Te_Connectivity(OrganizationModel):
+    """Model TE Connectivity"""
+
+    name: Literal["TE Connectivity"] = "TE Connectivity"
+    abbreviation: Literal[None] = None
+    registry: Optional[Registry] = Field(default=Registry.ROR)
+    registry_identifier: Optional[str] = Field(default="034frgp20")
+
+
 class _Tamron(OrganizationModel):
     """Model Tamron"""
 
@@ -1151,6 +1160,7 @@ class Organization:
     SIMONS_FOUNDATION = _Simons_Foundation()
     SPECTRA_PHYSICS = _Spectra_Physics()
     SPINNAKER = _Spinnaker()
+    TE_CONNECTIVITY = _Te_Connectivity()
     TAMRON = _Tamron()
     TMC = _Technical_Manufacturing_Corporation()
     FLIR = _Teledyne_Flir()
