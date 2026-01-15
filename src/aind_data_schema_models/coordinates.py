@@ -19,6 +19,7 @@ class Origin(str, Enum):
     BETWEEN_T1_T2 = "Between_T1-T2"
     TIP = "Tip"  # of a probe
     FRONT_CENTER = "Front_center"  # front center of a device, e.g. camera
+    BACK_LEFT_BOTTOM = "Back_left_bottom"  # back left bottom of a device (NewScale manipulator origin)
     ARENA_CENTER = "Arena_center"  # center of an arena on the ground surface
     ARENA_FRONT_LEFT = "Arena_front_left"
     ARENA_FRONT_RIGHT = "Arena_front_right"
