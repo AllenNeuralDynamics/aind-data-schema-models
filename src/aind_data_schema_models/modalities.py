@@ -188,7 +188,31 @@ class Modality:
 
     ALL = tuple(ModalityModel.__subclasses__())
 
-    ONE_OF = Annotated[Union[tuple(ModalityModel.__subclasses__())], Field(discriminator="abbreviation")]
+    ONE_OF = Annotated[
+        Union[
+            _Barseq,
+            _Behavior,
+            _Behavior_Videos,
+            _Brightfield,
+            _Confocal,
+            _Emg,
+            _Em,
+            _Ecephys,
+            _Fib,
+            _Fmost,
+            _Icephys,
+            _Isi,
+            _Mri,
+            _Mapseq,
+            _Merfish,
+            _Pophys,
+            _Slap2,
+            _Spim,
+            _Stpt,
+            _Scrnaseq,
+        ],
+        Field(discriminator="abbreviation"),
+    ]
 
     abbreviation_map = {m().abbreviation: m() for m in ALL}
 
