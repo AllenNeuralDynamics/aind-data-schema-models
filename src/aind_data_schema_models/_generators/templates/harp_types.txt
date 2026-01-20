@@ -26,4 +26,4 @@ class HarpDeviceType:
 
     ALL = tuple(HarpDeviceTypeModel.__subclasses__())
 
-    ONE_OF = Annotated[Union[tuple(HarpDeviceTypeModel.__subclasses__())], Field(discriminator="name")]
+    ONE_OF = Annotated[Union[{% for _, row in data.iterrows() %}{{ row['name'] | to_class_name_underscored }}{{ ", " if not loop.last else "" }}{% endfor %}], Field(discriminator="name")]

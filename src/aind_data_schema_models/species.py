@@ -56,7 +56,7 @@ class Strain:
 
     ALL = tuple(StrainModel.__subclasses__())
 
-    ONE_OF = Annotated[Union[tuple(StrainModel.__subclasses__())], Field(discriminator="name")]
+    ONE_OF = Annotated[Union[_C57Bl_6J, _Balb_C, _Unknown], Field(discriminator="name")]
 
 
 class SpeciesModel(BaseModel):
@@ -195,7 +195,23 @@ class Species:
 
     ALL = tuple(SpeciesModel.__subclasses__())
 
-    ONE_OF = Annotated[Union[tuple(SpeciesModel.__subclasses__())], Field(discriminator="name")]
+    ONE_OF = Annotated[
+        Union[
+            _Callithrix_Jacchus,
+            _Carpa_Hircus,
+            _Cavia_Porcellus,
+            _Equus_Asinus,
+            _Gallus_Gallus,
+            _Homo_Sapiens,
+            _Lama_Glama,
+            _Macaca_Mulatta,
+            _Mus_Musculus,
+            _Oryctolagus_Cuniculus,
+            _Rattus_Norvegicus,
+            _Vicuna_Pacos,
+        ],
+        Field(discriminator="name"),
+    ]
 
     name_map = {m().name: m() for m in ALL}
     common_name_map = {m().common_name: m() for m in ALL}

@@ -35,7 +35,7 @@ class Protocols:
 
     ALL = tuple(ProtocolModel.__subclasses__())
 
-    ONE_OF = Annotated[Union[tuple(ProtocolModel.__subclasses__())], Field(discriminator="title")]
+    ONE_OF = Annotated[Union[{% for _, row in data.iterrows() %}{{ row['title'] | to_class_name_underscored }}_V{{ row['version'] }}{{ ", " if not loop.last else "" }}{% endfor %}], Field(discriminator="title")]
 
     doi_map = {m().registry_identifier: m() for m in ALL if getattr(m(), "registry_identifier", None)}
 

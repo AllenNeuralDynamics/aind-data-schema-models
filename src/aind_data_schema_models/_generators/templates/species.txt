@@ -37,7 +37,7 @@ class Strain:
 
     ALL = tuple(StrainModel.__subclasses__())
 
-    ONE_OF = Annotated[Union[tuple(StrainModel.__subclasses__())], Field(discriminator="name")]
+    ONE_OF = Annotated[Union[{% for _, row in strain_data.iterrows() %}{% if row['strain'] != 'default' %}{{ row['strain'] | to_class_name_underscored }}{{ ", " if not loop.last else "" }}{% endif %}{% endfor %}], Field(discriminator="name")]
 
 
 class SpeciesModel(BaseModel):
@@ -65,7 +65,7 @@ class Species:
 
     ALL = tuple(SpeciesModel.__subclasses__())
 
-    ONE_OF = Annotated[Union[tuple(SpeciesModel.__subclasses__())], Field(discriminator="name")]
+    ONE_OF = Annotated[Union[{% for _, row in species_data.iterrows() %}{{ row['name'] | to_class_name_underscored }}{{ ", " if not loop.last else "" }}{% endfor %}], Field(discriminator="name")]
 
     name_map = {m().name: m() for m in ALL}
     common_name_map = {m().common_name: m() for m in ALL}
