@@ -1208,6 +1208,7 @@ Organization.DETECTOR_MANUFACTURERS = one_of_instance(
         Organization.HAMAMATSU,
         Organization.SPINNAKER,
         Organization.FLIR,
+        Organization.TELEDYNE_VISION_SOLUTIONS,
         Organization.THE_IMAGING_SOURCE,
         Organization.THORLABS,
         Organization.VIEWORKS,
