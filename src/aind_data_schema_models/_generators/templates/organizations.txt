@@ -36,7 +36,7 @@ class Organization:
 
     ALL = tuple(OrganizationModel.__subclasses__())
 
-    ONE_OF = Annotated[Union[tuple(OrganizationModel.__subclasses__())], Field(discriminator="name")]
+    ONE_OF = Annotated[Union[{% for _, row in data.iterrows() %}{{ row['name'] | to_class_name_underscored }}{{ ", " if not loop.last else "" }}{% endfor %}], Field(discriminator="name")]
 
     abbreviation_map = {m().abbreviation: m() for m in ALL if m().abbreviation is not None}
 
