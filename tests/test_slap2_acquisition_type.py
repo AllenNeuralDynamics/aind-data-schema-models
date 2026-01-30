@@ -11,7 +11,7 @@ class TestSlap2AcquisitionType(unittest.TestCase):
     def test_class_construction(self):
         """Tests enum can be instantiated via string"""
 
-        self.assertEqual(Slap2AcquisitionType.BAND_SCAN, Slap2AcquisitionType("band scan"))
+        self.assertEqual(Slap2AcquisitionType.INTEGRATION_SCAN, Slap2AcquisitionType("integration scan"))
 
 
 if __name__ == "__main__":
