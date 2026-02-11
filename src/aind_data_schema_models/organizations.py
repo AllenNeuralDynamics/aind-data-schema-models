@@ -154,6 +154,15 @@ class _Boston_University(OrganizationModel):
     registry_identifier: Optional[str] = Field(default="05qwgg493")
 
 
+class _Bruker(OrganizationModel):
+    """Model Bruker"""
+
+    name: Literal["Bruker"] = "Bruker"
+    abbreviation: Literal[None] = None
+    registry: Optional[Registry] = Field(default=Registry.ROR)
+    registry_identifier: Optional[str] = Field(default="04r739x86")
+
+
 class _Cajal_Neuroscience(OrganizationModel):
     """Model Cajal Neuroscience"""
 
@@ -1078,6 +1087,7 @@ class Organization:
     BASLER = _Basler()
     BCM = _Baylor_College_Of_Medicine()
     BU = _Boston_University()
+    BRUKER = _Bruker()
     CAJAL = _Cajal_Neuroscience()
     CAMBRIDGE_TECHNOLOGY = _Cambridge_Technology()
     CARL_ZEISS = _Carl_Zeiss()
@@ -1198,6 +1208,7 @@ class Organization:
             _Basler,
             _Baylor_College_Of_Medicine,
             _Boston_University,
+            _Bruker,
             _Cajal_Neuroscience,
             _Cambridge_Technology,
             _Carl_Zeiss,
