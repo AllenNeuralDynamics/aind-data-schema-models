@@ -139,6 +139,7 @@ class DetectorType(str, Enum):
 
     CAMERA = "Camera"
     PMT = "Photomultiplier Tube"
+    SiPM = "Silicon Photomultiplier"
     OTHER = "Other"
 
 
