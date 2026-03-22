@@ -3,7 +3,6 @@
 import unittest
 
 from aind_data_schema_models.organizations import Organization
-from typing import get_args
 
 
 class TestOrganization(unittest.TestCase):
@@ -23,6 +22,7 @@ class TestOrganization(unittest.TestCase):
         """Test that you can't get an organization from None"""
 
         self.assertEqual(Organization.from_abbreviation(None), None)
+
 
 if __name__ == "__main__":
     unittest.main()
