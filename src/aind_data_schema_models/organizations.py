@@ -6,7 +6,6 @@ from pydantic import BaseModel, ConfigDict, Field
 from typing_extensions import Annotated
 
 from aind_data_schema_models.registries import Registry
-from aind_data_schema_models.utils import one_of_instance
 
 
 class OrganizationModel(BaseModel):
