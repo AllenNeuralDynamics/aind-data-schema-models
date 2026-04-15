@@ -642,6 +642,15 @@ class _Mitutuyo(OrganizationModel):
     registry_identifier: Optional[str] = Field(default=None)
 
 
+class _Molecular_Instruments(OrganizationModel):
+    """Model Molecular Instruments"""
+
+    name: Literal["Molecular Instruments"] = "Molecular Instruments"
+    abbreviation: Literal[None] = None
+    registry: Optional[Registry] = Field(default=None)
+    registry_identifier: Optional[str] = Field(default=None)
+
+
 class _Nresearch_Inc(OrganizationModel):
     """Model NResearch Inc"""
 
@@ -1141,6 +1150,7 @@ class Organization:
     MJFF = _Michael_J_Fox_Foundation_For_Parkinson_S_Research()
     MIDOPT = _Midwest_Optical_Systems_Inc_()
     MITUTUYO = _Mitutuyo()
+    MOLECULAR_INSTRUMENTS = _Molecular_Instruments()
     NRESEARCH_INC = _Nresearch_Inc()
     NCCIH = _National_Center_For_Complementary_And_Integrative_Health()
     NIMH = _National_Institute_Of_Mental_Health()
@@ -1262,6 +1272,7 @@ class Organization:
             _Michael_J_Fox_Foundation_For_Parkinson_S_Research,
             _Midwest_Optical_Systems_Inc_,
             _Mitutuyo,
+            _Molecular_Instruments,
             _Nresearch_Inc,
             _National_Center_For_Complementary_And_Integrative_Health,
             _National_Institute_Of_Mental_Health,
