@@ -343,6 +343,15 @@ class _Euresys(OrganizationModel):
     registry_identifier: Optional[str] = Field(default=None)
 
 
+class _Excelitas_Technologies(OrganizationModel):
+    """Model Excelitas Technologies"""
+
+    name: Literal["Excelitas Technologies"] = "Excelitas Technologies"
+    abbreviation: Literal[None] = None
+    registry: Optional[Registry] = Field(default=Registry.ROR)
+    registry_identifier: Optional[str] = Field(default="01tpbbf75")
+
+
 class _Fujinon(OrganizationModel):
     """Model Fujinon"""
 
@@ -1117,6 +1126,7 @@ class Organization:
     EDMUND_OPTICS = _Edmund_Optics()
     EMORY = _Emory_University()
     EURESYS = _Euresys()
+    EXCELITAS_TECHNOLOGIES = _Excelitas_Technologies()
     FUJINON = _Fujinon()
     HAMAMATSU = _Hamamatsu()
     HAMILTON = _Hamilton()
@@ -1239,6 +1249,7 @@ class Organization:
             _Edmund_Optics,
             _Emory_University,
             _Euresys,
+            _Excelitas_Technologies,
             _Fujinon,
             _Hamamatsu,
             _Hamilton,
@@ -1419,7 +1430,14 @@ Organization.LASER_MANUFACTURERS = one_of_instance(
 )
 
 Organization.LED_MANUFACTURERS = one_of_instance(
-    [Organization.AMS_OSRAM, Organization.DORIC, Organization.PRIZMATIX, Organization.THORLABS, Organization.OTHER]
+    [
+        Organization.AMS_OSRAM,
+        Organization.DORIC,
+        Organization.EXCELITAS_TECHNOLOGIES,
+        Organization.PRIZMATIX,
+        Organization.THORLABS,
+        Organization.OTHER,
+    ]
 )
 
 Organization.MANIPULATOR_MANUFACTURERS = one_of_instance([Organization.NEW_SCALE_TECHNOLOGIES, Organization.OTHER])
