@@ -133,7 +133,7 @@ Organization.LASER_MANUFACTURERS = one_of_instance(
 )
 
 Organization.LED_MANUFACTURERS = one_of_instance(
-    [Organization.AMS_OSRAM, Organization.DORIC, Organization.PRIZMATIX, Organization.THORLABS, Organization.OTHER]
+    [Organization.AMS_OSRAM, Organization.DORIC, Organization.EXCELITAS_TECHNOLOGIES, Organization.PRIZMATIX, Organization.THORLABS, Organization.OTHER]
 )
 
 Organization.MANIPULATOR_MANUFACTURERS = one_of_instance([Organization.NEW_SCALE_TECHNOLOGIES, Organization.OTHER])
