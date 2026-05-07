@@ -322,6 +322,13 @@ class _Cuttlefishfip(HarpDeviceTypeModel):
     whoami: Literal[1407] = 1407
 
 
+class _Deluxdriver(HarpDeviceTypeModel):
+    """Model deLuxDriver"""
+
+    name: Literal["deLuxDriver"] = "deLuxDriver"
+    whoami: Literal[1410] = 1410
+
+
 class HarpDeviceType:
     """Harp device types"""
 
@@ -369,6 +376,7 @@ class HarpDeviceType:
     WHITERABBIT = _Whiterabbit()
     CUTTLEFISH = _Cuttlefish()
     CUTTLEFISHFIP = _Cuttlefishfip()
+    DELUXDRIVER = _Deluxdriver()
 
     ALL = tuple(HarpDeviceTypeModel.__subclasses__())
 
@@ -418,6 +426,7 @@ class HarpDeviceType:
             _Whiterabbit,
             _Cuttlefish,
             _Cuttlefishfip,
+            _Deluxdriver,
         ],
         Field(discriminator="name"),
     ]

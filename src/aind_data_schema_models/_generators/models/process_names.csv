@@ -10,6 +10,7 @@ Ephys preprocessing
 Ephys visualization
 Fiducial segmentation
 File format conversion
+Fix color range
 Fluorescence event detection
 Image atlas alignment
 Image background subtraction
@@ -21,6 +22,7 @@ Image destriping
 Image flat-field correction
 Image importing
 Image mip visualization
+Image multiscaling
 Image radial correction
 Image thresholding
 Image tile alignment
