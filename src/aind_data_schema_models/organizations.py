@@ -154,6 +154,15 @@ class _Boston_University(OrganizationModel):
     registry_identifier: Optional[str] = Field(default="05qwgg493")
 
 
+class _Broadcom(OrganizationModel):
+    """Model Broadcom"""
+
+    name: Literal["Broadcom"] = "Broadcom"
+    abbreviation: Literal[None] = None
+    registry: Optional[Registry] = Field(default=Registry.ROR)
+    registry_identifier: Optional[str] = Field(default="035gt5s03")
+
+
 class _Bruker(OrganizationModel):
     """Model Bruker"""
 
@@ -487,6 +496,15 @@ class _Julabo(OrganizationModel):
     registry_identifier: Optional[str] = Field(default=None)
 
 
+class _Kent_Scientific_Corporation(OrganizationModel):
+    """Model Kent Scientific Corporation"""
+
+    name: Literal["Kent Scientific Corporation"] = "Kent Scientific Corporation"
+    abbreviation: Literal[None] = None
+    registry: Optional[Registry] = Field(default=Registry.ROR)
+    registry_identifier: Optional[str] = Field(default="03xkj6a08")
+
+
 class _Kowa(OrganizationModel):
     """Model Kowa"""
 
@@ -790,6 +808,15 @@ class _Other(OrganizationModel):
     registry_identifier: Optional[str] = Field(default=None)
 
 
+class _Oxford_Instruments(OrganizationModel):
+    """Model Oxford Instruments"""
+
+    name: Literal["Oxford Instruments"] = "Oxford Instruments"
+    abbreviation: Literal[None] = None
+    registry: Optional[Registry] = Field(default=Registry.ROR)
+    registry_identifier: Optional[str] = Field(default="01age2z78")
+
+
 class _Oxxius(OrganizationModel):
     """Model Oxxius"""
 
@@ -1069,6 +1096,15 @@ class _Vortran(OrganizationModel):
     registry_identifier: Optional[str] = Field(default=None)
 
 
+class _World_Precision_Intstruments(OrganizationModel):
+    """Model World Precision Intstruments"""
+
+    name: Literal["World Precision Intstruments"] = "World Precision Intstruments"
+    abbreviation: Literal["WPI"] = "WPI"
+    registry: Optional[Registry] = Field(default=Registry.ROR)
+    registry_identifier: Optional[str] = Field(default="03st5df34")
+
+
 class _Ams_Osram(OrganizationModel):
     """Model ams OSRAM"""
 
@@ -1096,6 +1132,7 @@ class Organization:
     BASLER = _Basler()
     BCM = _Baylor_College_Of_Medicine()
     BU = _Boston_University()
+    BROADCOM = _Broadcom()
     BRUKER = _Bruker()
     CAJAL = _Cajal_Neuroscience()
     CAMBRIDGE_TECHNOLOGY = _Cambridge_Technology()
@@ -1133,6 +1170,7 @@ class Organization:
     JENOPTIK = _Jenoptik()
     JHU = _Johns_Hopkins_University()
     JULABO = _Julabo()
+    KENT_SCIENTIFIC_CORPORATION = _Kent_Scientific_Corporation()
     KOWA = _Kowa()
     LASOS = _Lasos_Lasertechnik()
     LG = _Lg()
@@ -1166,6 +1204,7 @@ class Organization:
     OEPS = _Open_Ephys_Production_Site()
     OPTOTUNE = _Optotune()
     OTHER = _Other()
+    OXFORD_INSTRUMENTS = _Oxford_Instruments()
     OXXIUS = _Oxxius()
     PLACID_INDUSTRIES = _Placid_Industries()
     PRIZMATIX = _Prizmatix()
@@ -1197,6 +1236,7 @@ class Organization:
     UNKNOWN = _Unknown()
     VIEWORKS = _Vieworks()
     VORTRAN = _Vortran()
+    WPI = _World_Precision_Intstruments()
     AMS_OSRAM = _Ams_Osram()
 
     ALL = tuple(OrganizationModel.__subclasses__())
@@ -1218,6 +1258,7 @@ class Organization:
             _Basler,
             _Baylor_College_Of_Medicine,
             _Boston_University,
+            _Broadcom,
             _Bruker,
             _Cajal_Neuroscience,
             _Cambridge_Technology,
@@ -1255,6 +1296,7 @@ class Organization:
             _Jenoptik,
             _Johns_Hopkins_University,
             _Julabo,
+            _Kent_Scientific_Corporation,
             _Kowa,
             _Lasos_Lasertechnik,
             _Lg,
@@ -1288,6 +1330,7 @@ class Organization:
             _Open_Ephys_Production_Site,
             _Optotune,
             _Other,
+            _Oxford_Instruments,
             _Oxxius,
             _Placid_Industries,
             _Prizmatix,
@@ -1319,6 +1362,7 @@ class Organization:
             _Unknown,
             _Vieworks,
             _Vortran,
+            _World_Precision_Intstruments,
             _Ams_Osram,
         ],
         Field(discriminator="name"),
@@ -1349,6 +1393,7 @@ Organization.DETECTOR_MANUFACTURERS = one_of_instance(
         Organization.HAMAMATSU,
         Organization.SPINNAKER,
         Organization.FLIR,
+        Organization.OXFORD_INSTRUMENTS,
         Organization.TELEDYNE_VISION_SOLUTIONS,
         Organization.THE_IMAGING_SOURCE,
         Organization.THORLABS,
