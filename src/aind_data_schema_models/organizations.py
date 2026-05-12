@@ -871,6 +871,15 @@ class _Schneider_Kreuznach(OrganizationModel):
     registry_identifier: Optional[str] = Field(default=None)
 
 
+class _Scientifica(OrganizationModel):
+    """Model Scientifica"""
+
+    name: Literal["Scientifica"] = "Scientifica"
+    abbreviation: Literal[None] = None
+    registry: Optional[Registry] = Field(default=Registry.ROR)
+    registry_identifier: Optional[str] = Field(default="00z72df47")
+
+
 class _Second_Order_Effects(OrganizationModel):
     """Model Second Order Effects"""
 
@@ -1184,6 +1193,7 @@ class Organization:
     SICGEN = _Sicgen()
     SAME_SKY = _Same_Sky()
     SCHNEIDER_KREUZNACH = _Schneider_Kreuznach()
+    SCIENTIFICA = _Scientifica()
     SECOND_ORDER_EFFECTS = _Second_Order_Effects()
     SEMROCK = _Semrock()
     SIGMA_ALDRICH = _Sigma_Aldrich()
@@ -1307,6 +1317,7 @@ class Organization:
             _Sicgen,
             _Same_Sky,
             _Schneider_Kreuznach,
+            _Scientifica,
             _Second_Order_Effects,
             _Semrock,
             _Sigma_Aldrich,
