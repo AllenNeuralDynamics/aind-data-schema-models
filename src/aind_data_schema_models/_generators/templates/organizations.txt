@@ -66,6 +66,7 @@ Organization.DETECTOR_MANUFACTURERS = one_of_instance(
         Organization.TELEDYNE_VISION_SOLUTIONS,
         Organization.THE_IMAGING_SOURCE,
         Organization.THORLABS,
+        Organization.UNKNOWN,
         Organization.VIEWORKS,
         Organization.OTHER,
     ]
