@@ -127,6 +127,13 @@ class _Merfish(ModalityModel):
     abbreviation: Literal["merfish"] = "merfish"
 
 
+class _One_Photon(ModalityModel):
+    """Model one-photon"""
+
+    name: Literal["One-photon imaging"] = "One-photon imaging"
+    abbreviation: Literal["one-photon"] = "one-photon"
+
+
 class _Pophys(ModalityModel):
     """Model pophys"""
 
@@ -180,6 +187,7 @@ class Modality:
     MRI = _Mri()
     MAPSEQ = _Mapseq()
     MERFISH = _Merfish()
+    ONE_PHOTON = _One_Photon()
     POPHYS = _Pophys()
     SLAP2 = _Slap2()
     SPIM = _Spim()
@@ -205,6 +213,7 @@ class Modality:
             _Mri,
             _Mapseq,
             _Merfish,
+            _One_Photon,
             _Pophys,
             _Slap2,
             _Spim,
