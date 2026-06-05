@@ -28,6 +28,13 @@ class _Archimedes(HarpDeviceTypeModel):
     whoami: Literal[1136] = 1136
 
 
+class _Audioswitch(HarpDeviceTypeModel):
+    """Model AudioSwitch"""
+
+    name: Literal["AudioSwitch"] = "AudioSwitch"
+    whoami: Literal[1248] = 1248
+
+
 class _Behavior(HarpDeviceTypeModel):
     """Model Behavior"""
 
@@ -54,6 +61,13 @@ class _Clocksynchronizer(HarpDeviceTypeModel):
 
     name: Literal["ClockSynchronizer"] = "ClockSynchronizer"
     whoami: Literal[1152] = 1152
+
+
+class _Currentdriver(HarpDeviceTypeModel):
+    """Model CurrentDriver"""
+
+    name: Literal["CurrentDriver"] = "CurrentDriver"
+    whoami: Literal[1282] = 1282
 
 
 class _Driver12Volts(HarpDeviceTypeModel):
@@ -96,6 +110,13 @@ class _Inputexpander(HarpDeviceTypeModel):
 
     name: Literal["InputExpander"] = "InputExpander"
     whoami: Literal[1106] = 1106
+
+
+class _Laserdrivercontroller(HarpDeviceTypeModel):
+    """Model LaserDriverController"""
+
+    name: Literal["LaserDriverController"] = "LaserDriverController"
+    whoami: Literal[1298] = 1298
 
 
 class _Ledcontroller(HarpDeviceTypeModel):
@@ -179,7 +200,7 @@ class _Rgbarray(HarpDeviceTypeModel):
     """Model RgbArray"""
 
     name: Literal["RgbArray"] = "RgbArray"
-    whoami: Literal[1248] = 1248
+    whoami: Literal[1264] = 1264
 
 
 class _Simpleanaloggenerator(HarpDeviceTypeModel):
@@ -301,21 +322,31 @@ class _Cuttlefishfip(HarpDeviceTypeModel):
     whoami: Literal[1407] = 1407
 
 
+class _Deluxdriver(HarpDeviceTypeModel):
+    """Model deLuxDriver"""
+
+    name: Literal["deLuxDriver"] = "deLuxDriver"
+    whoami: Literal[1410] = 1410
+
+
 class HarpDeviceType:
     """Harp device types"""
 
     ANALOGINPUT = _Analoginput()
     ARCHIMEDES = _Archimedes()
+    AUDIOSWITCH = _Audioswitch()
     BEHAVIOR = _Behavior()
     CAMERACONTROLLER = _Cameracontroller()
     CAMERACONTROLLERGEN2 = _Cameracontrollergen2()
     CLOCKSYNCHRONIZER = _Clocksynchronizer()
+    CURRENTDRIVER = _Currentdriver()
     DRIVER12VOLTS = _Driver12Volts()
     ENVIRONMENTSENSOR = _Environmentsensor()
     FLYPAD = _Flypad()
     HOBGOBLIN = _Hobgoblin()
     IBL_BEHAVIOR_CONTROL = _Ibl_Behavior_Control()
     INPUTEXPANDER = _Inputexpander()
+    LASERDRIVERCONTROLLER = _Laserdrivercontroller()
     LEDCONTROLLER = _Ledcontroller()
     LICKETYSPLIT = _Licketysplit()
     LOADCELLS = _Loadcells()
@@ -345,6 +376,7 @@ class HarpDeviceType:
     WHITERABBIT = _Whiterabbit()
     CUTTLEFISH = _Cuttlefish()
     CUTTLEFISHFIP = _Cuttlefishfip()
+    DELUXDRIVER = _Deluxdriver()
 
     ALL = tuple(HarpDeviceTypeModel.__subclasses__())
 
@@ -352,16 +384,19 @@ class HarpDeviceType:
         Union[
             _Analoginput,
             _Archimedes,
+            _Audioswitch,
             _Behavior,
             _Cameracontroller,
             _Cameracontrollergen2,
             _Clocksynchronizer,
+            _Currentdriver,
             _Driver12Volts,
             _Environmentsensor,
             _Flypad,
             _Hobgoblin,
             _Ibl_Behavior_Control,
             _Inputexpander,
+            _Laserdrivercontroller,
             _Ledcontroller,
             _Licketysplit,
             _Loadcells,
@@ -391,6 +426,7 @@ class HarpDeviceType:
             _Whiterabbit,
             _Cuttlefish,
             _Cuttlefishfip,
+            _Deluxdriver,
         ],
         Field(discriminator="name"),
     ]

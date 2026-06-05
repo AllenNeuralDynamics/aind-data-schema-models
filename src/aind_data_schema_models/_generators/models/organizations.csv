@@ -15,6 +15,7 @@ Arduino,,,
 Basler,,,
 Baylor College of Medicine,BCM,ROR,02pttbw34
 Boston University,BU,ROR,05qwgg493
+Broadcom,,ROR,035gt5s03
 Bruker,,ROR,04r739x86
 Cambridge Technology,,,
 Cajal Neuroscience,Cajal,ROR,05pdc0q70
@@ -36,6 +37,7 @@ Ealing,,,
 Edmund Optics,,ROR,01j1gwp17
 Emory University,Emory,ROR,03czfpz43
 Euresys,,,
+Excelitas Technologies,,ROR,01tpbbf75
 Fujinon,,,
 Hamamatsu,,ROR,03natb733
 Hamilton,,,
@@ -52,6 +54,7 @@ Janelia Research Campus,Janelia,ROR,013sk6x84
 Jenoptik,,ROR,05g7t5c49
 Johns Hopkins University,JHU,ROR,00za53h95
 Julabo,,,
+Kent Scientific Corporation,,ROR,03xkj6a08
 Kowa,,ROR,03zbwg482
 LASOS Lasertechnik,LASOS,,
 LG,,ROR,02b948n83
@@ -68,6 +71,7 @@ Meadowlark Optics,,ROR,00n8qbq54
 Michael J. Fox Foundation for Parkinson's Research,MJFF,ROR,03arq3225
 "Midwest Optical Systems, Inc.",MidOpt,,
 MIT Department of Brain and Cognitive Sciences,MIT-BCS,,
+Molecular Instruments,,,
 Mitutuyo,,,
 NResearch Inc,,,
 National Center for Complementary and Integrative Health,NCCIH,ROR,00190t495
@@ -84,6 +88,7 @@ Olympus,,ROR,02vcdte90
 Open Ephys Production Site,OEPS,ROR,007rkz355
 Optotune,,,
 Other,,,
+Oxford Instruments,,ROR,01age2z78
 Oxxius,,,
 Placid Industries,,,
 Prizmatix,,,
@@ -92,6 +97,7 @@ Raspberry Pi,,,
 Same Sky,,,
 SICGEN,,,
 Schneider-Kreuznach,,,
+Scientifica,,ROR,00z72df47
 Second Order Effects,,,
 Semrock,,,
 Sigma-Aldrich,,,
@@ -115,3 +121,4 @@ University of Pennsylvania,UPENN,ROR,00b30xv10
 Unknown,UNKNOWN,,
 Vieworks,,,
 Vortran,,,
+World Precision Intstruments,WPI,ROR,03st5df34

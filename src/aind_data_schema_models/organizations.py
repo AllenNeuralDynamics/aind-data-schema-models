@@ -153,6 +153,15 @@ class _Boston_University(OrganizationModel):
     registry_identifier: Optional[str] = Field(default="05qwgg493")
 
 
+class _Broadcom(OrganizationModel):
+    """Model Broadcom"""
+
+    name: Literal["Broadcom"] = "Broadcom"
+    abbreviation: Literal[None] = None
+    registry: Optional[Registry] = Field(default=Registry.ROR)
+    registry_identifier: Optional[str] = Field(default="035gt5s03")
+
+
 class _Bruker(OrganizationModel):
     """Model Bruker"""
 
@@ -342,6 +351,15 @@ class _Euresys(OrganizationModel):
     registry_identifier: Optional[str] = Field(default=None)
 
 
+class _Excelitas_Technologies(OrganizationModel):
+    """Model Excelitas Technologies"""
+
+    name: Literal["Excelitas Technologies"] = "Excelitas Technologies"
+    abbreviation: Literal[None] = None
+    registry: Optional[Registry] = Field(default=Registry.ROR)
+    registry_identifier: Optional[str] = Field(default="01tpbbf75")
+
+
 class _Fujinon(OrganizationModel):
     """Model Fujinon"""
 
@@ -484,6 +502,15 @@ class _Julabo(OrganizationModel):
     abbreviation: Literal[None] = None
     registry: Optional[Registry] = Field(default=None)
     registry_identifier: Optional[str] = Field(default=None)
+
+
+class _Kent_Scientific_Corporation(OrganizationModel):
+    """Model Kent Scientific Corporation"""
+
+    name: Literal["Kent Scientific Corporation"] = "Kent Scientific Corporation"
+    abbreviation: Literal[None] = None
+    registry: Optional[Registry] = Field(default=Registry.ROR)
+    registry_identifier: Optional[str] = Field(default="03xkj6a08")
 
 
 class _Kowa(OrganizationModel):
@@ -641,6 +668,15 @@ class _Mitutuyo(OrganizationModel):
     registry_identifier: Optional[str] = Field(default=None)
 
 
+class _Molecular_Instruments(OrganizationModel):
+    """Model Molecular Instruments"""
+
+    name: Literal["Molecular Instruments"] = "Molecular Instruments"
+    abbreviation: Literal[None] = None
+    registry: Optional[Registry] = Field(default=None)
+    registry_identifier: Optional[str] = Field(default=None)
+
+
 class _Nresearch_Inc(OrganizationModel):
     """Model NResearch Inc"""
 
@@ -780,6 +816,15 @@ class _Other(OrganizationModel):
     registry_identifier: Optional[str] = Field(default=None)
 
 
+class _Oxford_Instruments(OrganizationModel):
+    """Model Oxford Instruments"""
+
+    name: Literal["Oxford Instruments"] = "Oxford Instruments"
+    abbreviation: Literal[None] = None
+    registry: Optional[Registry] = Field(default=Registry.ROR)
+    registry_identifier: Optional[str] = Field(default="01age2z78")
+
+
 class _Oxxius(OrganizationModel):
     """Model Oxxius"""
 
@@ -850,6 +895,15 @@ class _Schneider_Kreuznach(OrganizationModel):
     abbreviation: Literal[None] = None
     registry: Optional[Registry] = Field(default=None)
     registry_identifier: Optional[str] = Field(default=None)
+
+
+class _Scientifica(OrganizationModel):
+    """Model Scientifica"""
+
+    name: Literal["Scientifica"] = "Scientifica"
+    abbreviation: Literal[None] = None
+    registry: Optional[Registry] = Field(default=Registry.ROR)
+    registry_identifier: Optional[str] = Field(default="00z72df47")
 
 
 class _Second_Order_Effects(OrganizationModel):
@@ -1059,6 +1113,15 @@ class _Vortran(OrganizationModel):
     registry_identifier: Optional[str] = Field(default=None)
 
 
+class _World_Precision_Intstruments(OrganizationModel):
+    """Model World Precision Intstruments"""
+
+    name: Literal["World Precision Intstruments"] = "World Precision Intstruments"
+    abbreviation: Literal["WPI"] = "WPI"
+    registry: Optional[Registry] = Field(default=Registry.ROR)
+    registry_identifier: Optional[str] = Field(default="03st5df34")
+
+
 class _Ams_Osram(OrganizationModel):
     """Model ams OSRAM"""
 
@@ -1086,6 +1149,7 @@ class Organization:
     BASLER = _Basler()
     BCM = _Baylor_College_Of_Medicine()
     BU = _Boston_University()
+    BROADCOM = _Broadcom()
     BRUKER = _Bruker()
     CAJAL = _Cajal_Neuroscience()
     CAMBRIDGE_TECHNOLOGY = _Cambridge_Technology()
@@ -1107,6 +1171,7 @@ class Organization:
     EDMUND_OPTICS = _Edmund_Optics()
     EMORY = _Emory_University()
     EURESYS = _Euresys()
+    EXCELITAS_TECHNOLOGIES = _Excelitas_Technologies()
     FUJINON = _Fujinon()
     HAMAMATSU = _Hamamatsu()
     HAMILTON = _Hamilton()
@@ -1123,6 +1188,7 @@ class Organization:
     JENOPTIK = _Jenoptik()
     JHU = _Johns_Hopkins_University()
     JULABO = _Julabo()
+    KENT_SCIENTIFIC_CORPORATION = _Kent_Scientific_Corporation()
     KOWA = _Kowa()
     LASOS = _Lasos_Lasertechnik()
     LG = _Lg()
@@ -1140,6 +1206,7 @@ class Organization:
     MJFF = _Michael_J_Fox_Foundation_For_Parkinson_S_Research()
     MIDOPT = _Midwest_Optical_Systems_Inc_()
     MITUTUYO = _Mitutuyo()
+    MOLECULAR_INSTRUMENTS = _Molecular_Instruments()
     NRESEARCH_INC = _Nresearch_Inc()
     NCCIH = _National_Center_For_Complementary_And_Integrative_Health()
     NIMH = _National_Institute_Of_Mental_Health()
@@ -1155,6 +1222,7 @@ class Organization:
     OEPS = _Open_Ephys_Production_Site()
     OPTOTUNE = _Optotune()
     OTHER = _Other()
+    OXFORD_INSTRUMENTS = _Oxford_Instruments()
     OXXIUS = _Oxxius()
     PLACID_INDUSTRIES = _Placid_Industries()
     PRIZMATIX = _Prizmatix()
@@ -1163,6 +1231,7 @@ class Organization:
     SICGEN = _Sicgen()
     SAME_SKY = _Same_Sky()
     SCHNEIDER_KREUZNACH = _Schneider_Kreuznach()
+    SCIENTIFICA = _Scientifica()
     SECOND_ORDER_EFFECTS = _Second_Order_Effects()
     SEMROCK = _Semrock()
     SIGMA_ALDRICH = _Sigma_Aldrich()
@@ -1186,6 +1255,7 @@ class Organization:
     UNKNOWN = _Unknown()
     VIEWORKS = _Vieworks()
     VORTRAN = _Vortran()
+    WPI = _World_Precision_Intstruments()
     AMS_OSRAM = _Ams_Osram()
 
     ALL = tuple(OrganizationModel.__subclasses__())
@@ -1207,6 +1277,7 @@ class Organization:
             _Basler,
             _Baylor_College_Of_Medicine,
             _Boston_University,
+            _Broadcom,
             _Bruker,
             _Cajal_Neuroscience,
             _Cambridge_Technology,
@@ -1228,6 +1299,7 @@ class Organization:
             _Edmund_Optics,
             _Emory_University,
             _Euresys,
+            _Excelitas_Technologies,
             _Fujinon,
             _Hamamatsu,
             _Hamilton,
@@ -1244,6 +1316,7 @@ class Organization:
             _Jenoptik,
             _Johns_Hopkins_University,
             _Julabo,
+            _Kent_Scientific_Corporation,
             _Kowa,
             _Lasos_Lasertechnik,
             _Lg,
@@ -1261,6 +1334,7 @@ class Organization:
             _Michael_J_Fox_Foundation_For_Parkinson_S_Research,
             _Midwest_Optical_Systems_Inc_,
             _Mitutuyo,
+            _Molecular_Instruments,
             _Nresearch_Inc,
             _National_Center_For_Complementary_And_Integrative_Health,
             _National_Institute_Of_Mental_Health,
@@ -1276,6 +1350,7 @@ class Organization:
             _Open_Ephys_Production_Site,
             _Optotune,
             _Other,
+            _Oxford_Instruments,
             _Oxxius,
             _Placid_Industries,
             _Prizmatix,
@@ -1284,6 +1359,7 @@ class Organization:
             _Sicgen,
             _Same_Sky,
             _Schneider_Kreuznach,
+            _Scientifica,
             _Second_Order_Effects,
             _Semrock,
             _Sigma_Aldrich,
@@ -1307,6 +1383,7 @@ class Organization:
             _Unknown,
             _Vieworks,
             _Vortran,
+            _World_Precision_Intstruments,
             _Ams_Osram,
         ],
         Field(discriminator="name"),
