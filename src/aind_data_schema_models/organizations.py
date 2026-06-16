@@ -960,6 +960,15 @@ class _Spinnaker(OrganizationModel):
     registry_identifier: Optional[str] = Field(default=None)
 
 
+class _Stanford_University(OrganizationModel):
+    """Model Stanford University"""
+
+    name: Literal["Stanford University"] = "Stanford University"
+    abbreviation: Literal[None] = None
+    registry: Optional[Registry] = Field(default=Registry.ROR)
+    registry_identifier: Optional[str] = Field(default="00f54p054")
+
+
 class _Te_Connectivity(OrganizationModel):
     """Model TE Connectivity"""
 
@@ -1238,6 +1247,7 @@ class Organization:
     SIMONS_FOUNDATION = _Simons_Foundation()
     SPECTRA_PHYSICS = _Spectra_Physics()
     SPINNAKER = _Spinnaker()
+    STANFORD_UNIVERSITY = _Stanford_University()
     TE_CONNECTIVITY = _Te_Connectivity()
     TAMRON = _Tamron()
     TMC = _Technical_Manufacturing_Corporation()
@@ -1366,6 +1376,7 @@ class Organization:
             _Simons_Foundation,
             _Spectra_Physics,
             _Spinnaker,
+            _Stanford_University,
             _Te_Connectivity,
             _Tamron,
             _Technical_Manufacturing_Corporation,
