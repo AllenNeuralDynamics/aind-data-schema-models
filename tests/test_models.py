@@ -8,6 +8,10 @@ from aind_data_schema_models.harp_types import HarpDeviceType
 from aind_data_schema_models.organizations import Organization
 from aind_data_schema_models.species import Species
 from aind_data_schema_models.mouse_anatomy import MouseAnatomy, MouseAnatomyModel, MouseEmgMuscles
+from aind_data_schema_models.mouse_developmental_stage import MouseDevelopmentalStage
+from aind_data_schema_models.human_developmental_stage import HumanDevelopmentalStage
+from aind_data_schema_models.drosophila_developmental_stage import DrosophilaDevelopmentalStage
+from aind_data_schema_models.celegans_developmental_stage import CElegansDevelopmentalStage
 from aind_data_schema_models.protocols import Protocols
 
 
@@ -54,6 +58,46 @@ class LiteralAndDefaultTests(unittest.TestCase):
 
         for structure in structures:
             model = getattr(MouseAnatomy, structure)
+            round_trip = model.model_validate_json(model.model_dump_json())
+            self.assertIsNotNone(round_trip)
+            self.assertEqual(model, round_trip)
+
+    def test_mouse_developmental_stage(self):
+        """Test Literals match defaults"""
+        stages = ["LIFE_CYCLE_STAGE", "YOUNG_ADULT_STAGE", "LATE_ADULT_STAGE"]
+
+        for stage in stages:
+            model = getattr(MouseDevelopmentalStage, stage)
+            round_trip = model.model_validate_json(model.model_dump_json())
+            self.assertIsNotNone(round_trip)
+            self.assertEqual(model, round_trip)
+
+    def test_human_developmental_stage(self):
+        """Test Literals match defaults"""
+        stages = ["ADULT_STAGE", "LATE_ADULT_STAGE", "PRIME_ADULT_STAGE"]
+
+        for stage in stages:
+            model = getattr(HumanDevelopmentalStage, stage)
+            round_trip = model.model_validate_json(model.model_dump_json())
+            self.assertIsNotNone(round_trip)
+            self.assertEqual(model, round_trip)
+
+    def test_drosophila_developmental_stage(self):
+        """Test Literals match defaults"""
+        stages = ["ADULT_STAGE", "ADULT_AGE_IN_DAYS"]
+
+        for stage in stages:
+            model = getattr(DrosophilaDevelopmentalStage, stage)
+            round_trip = model.model_validate_json(model.model_dump_json())
+            self.assertIsNotNone(round_trip)
+            self.assertEqual(model, round_trip)
+
+    def test_celegans_developmental_stage(self):
+        """Test Literals match defaults"""
+        stages = ["C__ELEGANS_LIFE_STAGE"]
+
+        for stage in stages:
+            model = getattr(CElegansDevelopmentalStage, stage)
             round_trip = model.model_validate_json(model.model_dump_json())
             self.assertIsNotNone(round_trip)
             self.assertEqual(model, round_trip)

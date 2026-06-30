@@ -1,0 +1,124 @@
+"""C. elegans developmental stage"""
+{% raw -%}
+from pydantic import BaseModel, ConfigDict
+import requests
+
+from aind_data_schema_models.registries import Registry
+{% endraw %}
+"""C. elegans developmental stage"""
+
+
+class CElegansDevelopmentalStageModel(BaseModel):
+    """Base model for C. elegans developmental stage"""
+
+    model_config = ConfigDict(frozen=True)
+    name: str
+    registry: Registry
+    registry_identifier: str
+
+
+def search_wbls_exact_match(class_name):
+    """Pull the exact name match from the WBLS ontology
+
+    Parameters
+    ----------
+    class_name : str
+        Name of class
+
+    Returns
+    -------
+    list
+
+    Raises
+    ------
+    Exception
+        OLS query failed on any status code other than 200
+    """
+    base_url = "https://www.ebi.ac.uk/ols4/api/search"
+    params = {
+        "q": class_name,
+        "ontology": "wbls",  # Specify the ontology
+        "type": "class",      # Search for classes
+    }
+    response = requests.get(base_url, params=params)
+    if response.status_code == 200:
+        results = response.json()
+        # Extract terms with exact label match
+        exact_matches = [
+            {
+                "iri": entry["iri"],
+                "label": entry["label"],
+            }
+            for entry in results.get("response", {}).get("docs", [])
+            if entry["label"].lower() == class_name.lower()
+        ]
+        return exact_matches
+    else:
+        raise Exception(f"OLS query failed: {response.status_code}, {response.text}")
+
+
+def get_wbls_id(class_name):
+    """Get the WBLS ID for a given class name
+
+    Parameters
+    ----------
+    class_name : str
+
+    Returns
+    -------
+    int
+    """
+    results = search_wbls_exact_match(class_name)
+
+    if results:
+        return results[0]['iri'].split('_')[1]
+    else:
+        return None
+
+
+class CElegansDevelopmentalStageMeta(type):
+    """Meta class for CElegansDevelopmentalStage groups
+    """
+    def __getattribute__(cls, name):
+        """Custom get attribute function, validates developmental stage names against external WBLS registry
+
+        Parameters
+        ----------
+        name : str
+            Attribute name
+
+        Raises
+        ------
+        ValueError
+            Name not found in the WBLS registry
+        """
+
+        # bypass
+        if name.startswith("__"):
+            return object.__getattribute__(cls, name)
+
+        class_dict = object.__getattribute__(cls, "__dict__")
+
+        if name in class_dict:
+            original_name = super().__getattribute__(name)
+
+            wbls_id = get_wbls_id(original_name)
+
+            if wbls_id:
+                return CElegansDevelopmentalStageModel(
+                    name=original_name,
+                    registry=Registry.WBLS,
+                    registry_identifier=wbls_id,
+                )
+            else:
+                raise ValueError(f"Could not find WBLS ID for {original_name}")
+
+        # second bypass for defined values
+        return super().__getattribute__(name)
+
+
+class CElegansDevelopmentalStage(metaclass=CElegansDevelopmentalStageMeta):
+    """C. elegans developmental stage"""
+{% for _, row in data.iterrows() %}
+    {{ row['name'] | to_class_name | upper }} = "{{ row['name'] }}"
+{%- endfor %}

@@ -34,7 +34,7 @@ def search_emapa_exact_match(class_name):
     Exception
         OLS query failed on any status code other than 200
     """
-    base_url = "https://www.ebi.ac.uk/ols/api/search"
+    base_url = "https://www.ebi.ac.uk/ols4/api/search"
     params = {
         "q": class_name,
         "ontology": "emapa",  # Specify the ontology
