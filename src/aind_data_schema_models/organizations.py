@@ -64,6 +64,15 @@ class _Ailipu_Technology_Co(OrganizationModel):
     registry_identifier: Optional[str] = Field(default=None)
 
 
+class _Aligning_Science_Across_Parkinson_S(OrganizationModel):
+    """Model Aligning Science Across Parkinson's"""
+
+    name: Literal["Aligning Science Across Parkinson's"] = "Aligning Science Across Parkinson's"
+    abbreviation: Literal["ASAP"] = "ASAP"
+    registry: Optional[Registry] = Field(default=Registry.ROR)
+    registry_identifier: Optional[str] = Field(default="03zj4c476")
+
+
 class _Allen_Institute(OrganizationModel):
     """Model Allen Institute"""
 
@@ -352,6 +361,15 @@ class _Hamilton(OrganizationModel):
     registry_identifier: Optional[str] = Field(default=None)
 
 
+class _Helen_Hay_Whitney_Foundation(OrganizationModel):
+    """Model Helen Hay Whitney Foundation"""
+
+    name: Literal["Helen Hay Whitney Foundation"] = "Helen Hay Whitney Foundation"
+    abbreviation: Literal[None] = None
+    registry: Optional[Registry] = Field(default=Registry.ROR)
+    registry_identifier: Optional[str] = Field(default="037ebw447")
+
+
 class _Huazhong_University_Of_Science_And_Technology(OrganizationModel):
     """Model Huazhong University of Science and Technology"""
 
@@ -467,6 +485,15 @@ class _Julabo(OrganizationModel):
     abbreviation: Literal[None] = None
     registry: Optional[Registry] = Field(default=None)
     registry_identifier: Optional[str] = Field(default=None)
+
+
+class _Klingenstein_Foundation(OrganizationModel):
+    """Model Klingenstein Foundation"""
+
+    name: Literal["Klingenstein Foundation"] = "Klingenstein Foundation"
+    abbreviation: Literal[None] = None
+    registry: Optional[Registry] = Field(default=Registry.ROR)
+    registry_identifier: Optional[str] = Field(default="01q222b25")
 
 
 class _Kowa(OrganizationModel):
@@ -662,6 +689,15 @@ class _National_Instruments(OrganizationModel):
     abbreviation: Literal[None] = None
     registry: Optional[Registry] = Field(default=Registry.ROR)
     registry_identifier: Optional[str] = Field(default="026exqw73")
+
+
+class _National_Science_Foundation(OrganizationModel):
+    """Model National Science Foundation"""
+
+    name: Literal["National Science Foundation"] = "National Science Foundation"
+    abbreviation: Literal["NSF"] = "NSF"
+    registry: Optional[Registry] = Field(default=Registry.ROR)
+    registry_identifier: Optional[str] = Field(default="021nxhr62")
 
 
 class _Navitar(OrganizationModel):
@@ -1006,6 +1042,15 @@ class _Vortran(OrganizationModel):
     registry_identifier: Optional[str] = Field(default=None)
 
 
+class _Warren_Alpert_Foundation(OrganizationModel):
+    """Model Warren Alpert Foundation"""
+
+    name: Literal["Warren Alpert Foundation"] = "Warren Alpert Foundation"
+    abbreviation: Literal[None] = None
+    registry: Optional[Registry] = Field(default=Registry.ROR)
+    registry_identifier: Optional[str] = Field(default="041ztcd61")
+
+
 class _Ams_Osram(OrganizationModel):
     """Model ams OSRAM"""
 
@@ -1023,6 +1068,7 @@ class Organization:
     ABCAM = _Abcam()
     ADDGENE = _Addgene()
     AILIPU = _Ailipu_Technology_Co()
+    ASAP = _Aligning_Science_Across_Parkinson_S()
     AI = _Allen_Institute()
     AIBS = _Allen_Institute_For_Brain_Science()
     AIND = _Allen_Institute_For_Neural_Dynamics()
@@ -1055,6 +1101,7 @@ class Organization:
     FUJINON = _Fujinon()
     HAMAMATSU = _Hamamatsu()
     HAMILTON = _Hamilton()
+    HELEN_HAY_WHITNEY_FOUNDATION = _Helen_Hay_Whitney_Foundation()
     HUST = _Huazhong_University_Of_Science_And_Technology()
     IR_ROBOT_CO = _Ir_Robot_Co()
     ISL = _Isl_Products_International()
@@ -1068,6 +1115,7 @@ class Organization:
     JENOPTIK = _Jenoptik()
     JHU = _Johns_Hopkins_University()
     JULABO = _Julabo()
+    KLINGENSTEIN_FOUNDATION = _Klingenstein_Foundation()
     KOWA = _Kowa()
     LASOS = _Lasos_Lasertechnik()
     LG = _Lg()
@@ -1089,6 +1137,7 @@ class Organization:
     NIMH = _National_Institute_Of_Mental_Health()
     NINDS = _National_Institute_Of_Neurological_Disorders_And_Stroke()
     NATIONAL_INSTRUMENTS = _National_Instruments()
+    NSF = _National_Science_Foundation()
     NAVITAR = _Navitar()
     NEURALYNX = _Neuralynx()
     NEUROPHOTOMETRICS = _Neurophotometrics()
@@ -1127,6 +1176,7 @@ class Organization:
     UPENN = _University_Of_Pennsylvania()
     VIEWORKS = _Vieworks()
     VORTRAN = _Vortran()
+    WARREN_ALPERT_FOUNDATION = _Warren_Alpert_Foundation()
     AMS_OSRAM = _Ams_Osram()
 
     ALL = tuple(OrganizationModel.__subclasses__())
