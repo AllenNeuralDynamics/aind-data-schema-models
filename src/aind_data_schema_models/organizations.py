@@ -360,6 +360,15 @@ class _Emory_University(OrganizationModel):
     registry_identifier: Optional[str] = Field(default="03czfpz43")
 
 
+class _Esther_A_Joseph_Klingenstein_Fund(OrganizationModel):
+    """Model Esther A. & Joseph Klingenstein Fund"""
+
+    name: Literal["Esther A. & Joseph Klingenstein Fund"] = "Esther A. & Joseph Klingenstein Fund"
+    abbreviation: Literal[None] = None
+    registry: Optional[Registry] = Field(default=Registry.ROR)
+    registry_identifier: Optional[str] = Field(default="01q222b25")
+
+
 class _Euresys(OrganizationModel):
     """Model Euresys"""
 
@@ -538,15 +547,6 @@ class _Kent_Scientific_Corporation(OrganizationModel):
     abbreviation: Literal[None] = None
     registry: Optional[Registry] = Field(default=Registry.ROR)
     registry_identifier: Optional[str] = Field(default="03xkj6a08")
-
-
-class _Klingenstein_Foundation(OrganizationModel):
-    """Model Klingenstein Foundation"""
-
-    name: Literal["Klingenstein Foundation"] = "Klingenstein Foundation"
-    abbreviation: Literal[None] = None
-    registry: Optional[Registry] = Field(default=Registry.ROR)
-    registry_identifier: Optional[str] = Field(default="01q222b25")
 
 
 class _Kowa(OrganizationModel):
@@ -760,15 +760,6 @@ class _National_Instruments(OrganizationModel):
     abbreviation: Literal[None] = None
     registry: Optional[Registry] = Field(default=Registry.ROR)
     registry_identifier: Optional[str] = Field(default="026exqw73")
-
-
-class _National_Science_Foundation(OrganizationModel):
-    """Model National Science Foundation"""
-
-    name: Literal["National Science Foundation"] = "National Science Foundation"
-    abbreviation: Literal["NSF"] = "NSF"
-    registry: Optional[Registry] = Field(default=Registry.ROR)
-    registry_identifier: Optional[str] = Field(default="021nxhr62")
 
 
 class _Navitar(OrganizationModel):
@@ -1140,6 +1131,15 @@ class _Tymphany(OrganizationModel):
     registry_identifier: Optional[str] = Field(default=None)
 
 
+class _U_S_National_Science_Foundation(OrganizationModel):
+    """Model U.S. National Science Foundation"""
+
+    name: Literal["U.S. National Science Foundation"] = "U.S. National Science Foundation"
+    abbreviation: Literal["NSF"] = "NSF"
+    registry: Optional[Registry] = Field(default=Registry.ROR)
+    registry_identifier: Optional[str] = Field(default="021nxhr62")
+
+
 class _University_Of_California_San_Diego(OrganizationModel):
     """Model University of California, San Diego"""
 
@@ -1253,6 +1253,7 @@ class Organization:
     EALING = _Ealing()
     EDMUND_OPTICS = _Edmund_Optics()
     EMORY = _Emory_University()
+    ESTHER_A____JOSEPH_KLINGENSTEIN_FUND = _Esther_A_Joseph_Klingenstein_Fund()
     EURESYS = _Euresys()
     EXCELITAS_TECHNOLOGIES = _Excelitas_Technologies()
     FUJINON = _Fujinon()
@@ -1273,7 +1274,6 @@ class Organization:
     JHU = _Johns_Hopkins_University()
     JULABO = _Julabo()
     KENT_SCIENTIFIC_CORPORATION = _Kent_Scientific_Corporation()
-    KLINGENSTEIN_FOUNDATION = _Klingenstein_Foundation()
     KOWA = _Kowa()
     LASOS = _Lasos_Lasertechnik()
     LG = _Lg()
@@ -1297,7 +1297,6 @@ class Organization:
     NIMH = _National_Institute_Of_Mental_Health()
     NINDS = _National_Institute_Of_Neurological_Disorders_And_Stroke()
     NATIONAL_INSTRUMENTS = _National_Instruments()
-    NSF = _National_Science_Foundation()
     NAVITAR = _Navitar()
     NEURALYNX = _Neuralynx()
     NEUROPHOTOMETRICS = _Neurophotometrics()
@@ -1339,6 +1338,7 @@ class Organization:
     THORLABS = _Thorlabs()
     TRANSDUCER_TECHNIQUES = _Transducer_Techniques()
     TYMPHANY = _Tymphany()
+    NSF = _U_S_National_Science_Foundation()
     UCSD = _University_Of_California_San_Diego()
     UPENN = _University_Of_Pennsylvania()
     UNKNOWN = _Unknown()
@@ -1390,6 +1390,7 @@ class Organization:
             _Ealing,
             _Edmund_Optics,
             _Emory_University,
+            _Esther_A_Joseph_Klingenstein_Fund,
             _Euresys,
             _Excelitas_Technologies,
             _Fujinon,
@@ -1410,7 +1411,6 @@ class Organization:
             _Johns_Hopkins_University,
             _Julabo,
             _Kent_Scientific_Corporation,
-            _Klingenstein_Foundation,
             _Kowa,
             _Lasos_Lasertechnik,
             _Lg,
@@ -1434,7 +1434,6 @@ class Organization:
             _National_Institute_Of_Mental_Health,
             _National_Institute_Of_Neurological_Disorders_And_Stroke,
             _National_Instruments,
-            _National_Science_Foundation,
             _Navitar,
             _Neuralynx,
             _Neurophotometrics,
@@ -1476,6 +1475,7 @@ class Organization:
             _Thorlabs,
             _Transducer_Techniques,
             _Tymphany,
+            _U_S_National_Science_Foundation,
             _University_Of_California_San_Diego,
             _University_Of_Pennsylvania,
             _Unknown,
