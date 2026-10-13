@@ -1,4 +1,5 @@
 """Organizations"""
+
 from typing import Literal, Union
 
 from pydantic import BaseModel, ConfigDict, Field
@@ -63,6 +64,15 @@ class _Ailipu_Technology_Co(_OrganizationModel):
     registry_identifier: None = None
 
 
+class _Aligning_Science_Across_Parkinson_S(_OrganizationModel):
+    """Model Aligning Science Across Parkinson's"""
+
+    name: Literal["Aligning Science Across Parkinson's"] = "Aligning Science Across Parkinson's"
+    abbreviation: Literal["ASAP"] = "ASAP"
+    registry: Registry.ONE_OF = Registry.ROR
+    registry_identifier: Literal["03zj4c476"] = "03zj4c476"
+
+
 class _Allen_Institute(_OrganizationModel):
     """Model Allen Institute"""
 
@@ -94,6 +104,15 @@ class _Allied(_OrganizationModel):
     """Model Allied"""
 
     name: Literal["Allied"] = "Allied"
+    abbreviation: Literal[None] = None
+    registry: None = None
+    registry_identifier: None = None
+
+
+class _Antibodies_Inc(_OrganizationModel):
+    """Model Antibodies Inc"""
+
+    name: Literal["Antibodies Inc"] = "Antibodies Inc"
     abbreviation: Literal[None] = None
     registry: None = None
     registry_identifier: None = None
@@ -279,6 +298,15 @@ class _Emory_University(_OrganizationModel):
     registry_identifier: Literal["03czfpz43"] = "03czfpz43"
 
 
+class _Esther_A_Joseph_Klingenstein_Fund(_OrganizationModel):
+    """Model Esther A. & Joseph Klingenstein Fund"""
+
+    name: Literal["Esther A. & Joseph Klingenstein Fund"] = "Esther A. & Joseph Klingenstein Fund"
+    abbreviation: Literal[None] = None
+    registry: Registry.ONE_OF = Registry.ROR
+    registry_identifier: Literal["01q222b25"] = "01q222b25"
+
+
 class _Euresys(_OrganizationModel):
     """Model Euresys"""
 
@@ -297,6 +325,15 @@ class _Fujinon(_OrganizationModel):
     registry_identifier: None = None
 
 
+class _G_Harold_Leila_Y_Mathers_Foundation(_OrganizationModel):
+    """Model G. Harold & Leila Y. Mathers Foundation"""
+
+    name: Literal["G. Harold & Leila Y. Mathers Foundation"] = "G. Harold & Leila Y. Mathers Foundation"
+    abbreviation: Literal[None] = None
+    registry: Registry.ONE_OF = Registry.ROR
+    registry_identifier: Literal["02a7hjv13"] = "02a7hjv13"
+
+
 class _Hamamatsu(_OrganizationModel):
     """Model Hamamatsu"""
 
@@ -313,6 +350,15 @@ class _Hamilton(_OrganizationModel):
     abbreviation: Literal[None] = None
     registry: None = None
     registry_identifier: None = None
+
+
+class _Helen_Hay_Whitney_Foundation(_OrganizationModel):
+    """Model Helen Hay Whitney Foundation"""
+
+    name: Literal["Helen Hay Whitney Foundation"] = "Helen Hay Whitney Foundation"
+    abbreviation: Literal[None] = None
+    registry: Registry.ONE_OF = Registry.ROR
+    registry_identifier: Literal["037ebw447"] = "037ebw447"
 
 
 class _Huazhong_University_Of_Science_And_Technology(_OrganizationModel):
@@ -414,6 +460,15 @@ class _Julabo(_OrganizationModel):
     registry_identifier: None = None
 
 
+class _Klingenstein_Third_Generation_Foundation(_OrganizationModel):
+    """Model Klingenstein Third Generation Foundation"""
+
+    name: Literal["Klingenstein Third Generation Foundation"] = "Klingenstein Third Generation Foundation"
+    abbreviation: Literal["KTGF"] = "KTGF"
+    registry: Registry.ONE_OF = Registry.ROR
+    registry_identifier: Literal["00cxc2y95"] = "00cxc2y95"
+
+
 class _Kowa(_OrganizationModel):
     """Model Kowa"""
 
@@ -459,6 +514,15 @@ class _Lifecanvas(_OrganizationModel):
     registry_identifier: None = None
 
 
+class _Life_Sciences_Research_Foundation(_OrganizationModel):
+    """Model Life Sciences Research Foundation"""
+
+    name: Literal["Life Sciences Research Foundation"] = "Life Sciences Research Foundation"
+    abbreviation: Literal["LSRF"] = "LSRF"
+    registry: Registry.ONE_OF = Registry.ROR
+    registry_identifier: Literal["0195dxj21"] = "0195dxj21"
+
+
 class _Mbf_Bioscience(_OrganizationModel):
     """Model MBF Bioscience"""
 
@@ -466,6 +530,24 @@ class _Mbf_Bioscience(_OrganizationModel):
     abbreviation: Literal["MBF"] = "MBF"
     registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["02zynam48"] = "02zynam48"
+
+
+class _Mcknight_Brain_Research_Foundation(_OrganizationModel):
+    """Model McKnight Brain Research Foundation"""
+
+    name: Literal["McKnight Brain Research Foundation"] = "McKnight Brain Research Foundation"
+    abbreviation: Literal[None] = None
+    registry: Registry.ONE_OF = Registry.ROR
+    registry_identifier: Literal["00vsf1v04"] = "00vsf1v04"
+
+
+class _Mcknight_Foundation(_OrganizationModel):
+    """Model McKnight Foundation"""
+
+    name: Literal["McKnight Foundation"] = "McKnight Foundation"
+    abbreviation: Literal[None] = None
+    registry: Registry.ONE_OF = Registry.ROR
+    registry_identifier: Literal["003ghvj67"] = "003ghvj67"
 
 
 class _Mks_Newport(_OrganizationModel):
@@ -498,9 +580,9 @@ class _Meadowlark_Optics(_OrganizationModel):
 class _Michael_J_Fox_Foundation_For_Parkinson_S_Research(_OrganizationModel):
     """Model Michael J. Fox Foundation for Parkinson's Research"""
 
-    name: Literal[
+    name: Literal["Michael J. Fox Foundation for Parkinson's Research"] = (
         "Michael J. Fox Foundation for Parkinson's Research"
-    ] = "Michael J. Fox Foundation for Parkinson's Research"
+    )
     abbreviation: Literal["MJFF"] = "MJFF"
     registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["03arq3225"] = "03arq3225"
@@ -536,9 +618,9 @@ class _Nresearch_Inc(_OrganizationModel):
 class _National_Center_For_Complementary_And_Integrative_Health(_OrganizationModel):
     """Model National Center for Complementary and Integrative Health"""
 
-    name: Literal[
+    name: Literal["National Center for Complementary and Integrative Health"] = (
         "National Center for Complementary and Integrative Health"
-    ] = "National Center for Complementary and Integrative Health"
+    )
     abbreviation: Literal["NCCIH"] = "NCCIH"
     registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["00190t495"] = "00190t495"
@@ -556,12 +638,21 @@ class _National_Institute_Of_Mental_Health(_OrganizationModel):
 class _National_Institute_Of_Neurological_Disorders_And_Stroke(_OrganizationModel):
     """Model National Institute of Neurological Disorders and Stroke"""
 
-    name: Literal[
+    name: Literal["National Institute of Neurological Disorders and Stroke"] = (
         "National Institute of Neurological Disorders and Stroke"
-    ] = "National Institute of Neurological Disorders and Stroke"
+    )
     abbreviation: Literal["NINDS"] = "NINDS"
     registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["01s5ya894"] = "01s5ya894"
+
+
+class _National_Institute_On_Aging(_OrganizationModel):
+    """Model National Institute on Aging"""
+
+    name: Literal["National Institute on Aging"] = "National Institute on Aging"
+    abbreviation: Literal["NIA"] = "NIA"
+    registry: Registry.ONE_OF = Registry.ROR
+    registry_identifier: Literal["049v75w11"] = "049v75w11"
 
 
 class _National_Instruments(_OrganizationModel):
@@ -571,6 +662,15 @@ class _National_Instruments(_OrganizationModel):
     abbreviation: Literal[None] = None
     registry: Registry.ONE_OF = Registry.ROR
     registry_identifier: Literal["026exqw73"] = "026exqw73"
+
+
+class _U_S_National_Science_Foundation(_OrganizationModel):
+    """Model U.S. National Science Foundation"""
+
+    name: Literal["U.S. National Science Foundation"] = "U.S. National Science Foundation"
+    abbreviation: Literal["NSF"] = "NSF"
+    registry: Registry.ONE_OF = Registry.ROR
+    registry_identifier: Literal["021nxhr62"] = "021nxhr62"
 
 
 class _Navitar(_OrganizationModel):
@@ -663,6 +763,15 @@ class _Oxxius(_OrganizationModel):
     registry_identifier: None = None
 
 
+class _Pew_Charitable_Trusts(_OrganizationModel):
+    """Model Pew Charitable Trusts"""
+
+    name: Literal["Pew Charitable Trusts"] = "Pew Charitable Trusts"
+    abbreviation: Literal[None] = None
+    registry: Registry.ONE_OF = Registry.ROR
+    registry_identifier: Literal["02xhk2825"] = "02xhk2825"
+
+
 class _Placid_Industries(_OrganizationModel):
     """Model Placid Industries"""
 
@@ -697,6 +806,15 @@ class _Raspberry_Pi(_OrganizationModel):
     abbreviation: Literal[None] = None
     registry: None = None
     registry_identifier: None = None
+
+
+class _Rockland_Immunochemicals(_OrganizationModel):
+    """Model Rockland Immunochemicals"""
+
+    name: Literal["Rockland Immunochemicals"] = "Rockland Immunochemicals"
+    abbreviation: Literal["ROCKLAND"] = "ROCKLAND"
+    registry: Registry.ONE_OF = Registry.ROR
+    registry_identifier: Literal["02z2r2t61"] = "02z2r2t61"
 
 
 class _Same_Sky(_OrganizationModel):
@@ -766,6 +884,15 @@ class _Spinnaker(_OrganizationModel):
     """Model Spinnaker"""
 
     name: Literal["Spinnaker"] = "Spinnaker"
+    abbreviation: Literal[None] = None
+    registry: None = None
+    registry_identifier: None = None
+
+
+class _Synaptic_Systems(_OrganizationModel):
+    """Model Synaptic Systems"""
+
+    name: Literal["Synaptic Systems"] = "Synaptic Systems"
     abbreviation: Literal[None] = None
     registry: None = None
     registry_identifier: None = None
@@ -861,6 +988,24 @@ class _Tymphany(_OrganizationModel):
     registry_identifier: None = None
 
 
+class _United_States_Department_Of_Defense(_OrganizationModel):
+    """Model United States Department of Defense"""
+
+    name: Literal["United States Department of Defense"] = "United States Department of Defense"
+    abbreviation: Literal["DOD"] = "DOD"
+    registry: Registry.ONE_OF = Registry.ROR
+    registry_identifier: Literal["0447fe631"] = "0447fe631"
+
+
+class _United_States_Department_Of_Energy(_OrganizationModel):
+    """Model United States Department of Energy"""
+
+    name: Literal["United States Department of Energy"] = "United States Department of Energy"
+    abbreviation: Literal["DOE"] = "DOE"
+    registry: Registry.ONE_OF = Registry.ROR
+    registry_identifier: Literal["01bj3aw27"] = "01bj3aw27"
+
+
 class _Vieworks(_OrganizationModel):
     """Model Vieworks"""
 
@@ -877,6 +1022,24 @@ class _Vortran(_OrganizationModel):
     abbreviation: Literal[None] = None
     registry: None = None
     registry_identifier: None = None
+
+
+class _W_M_Keck_Foundation(_OrganizationModel):
+    """Model W. M. Keck Foundation"""
+
+    name: Literal["W. M. Keck Foundation"] = "W. M. Keck Foundation"
+    abbreviation: Literal[None] = None
+    registry: Registry.ONE_OF = Registry.ROR
+    registry_identifier: Literal["000dswa46"] = "000dswa46"
+
+
+class _Warren_Alpert_Foundation(_OrganizationModel):
+    """Model Warren Alpert Foundation"""
+
+    name: Literal["Warren Alpert Foundation"] = "Warren Alpert Foundation"
+    abbreviation: Literal[None] = None
+    registry: Registry.ONE_OF = Registry.ROR
+    registry_identifier: Literal["041ztcd61"] = "041ztcd61"
 
 
 class _Ams_Osram(_OrganizationModel):
@@ -896,10 +1059,12 @@ class Organization:
     ABCAM = _Abcam()
     ADDGENE = _Addgene()
     AILIPU = _Ailipu_Technology_Co()
+    ASAP = _Aligning_Science_Across_Parkinson_S()
     AI = _Allen_Institute()
     AIBS = _Allen_Institute_For_Brain_Science()
     AIND = _Allen_Institute_For_Neural_Dynamics()
     ALLIED = _Allied()
+    ANTIBODIES_INC = _Antibodies_Inc()
     ASI = _Applied_Scientific_Instrumentation()
     ARECONT_VISION_COSTAR = _Arecont_Vision_Costar()
     BASLER = _Basler()
@@ -920,10 +1085,13 @@ class Organization:
     EALING = _Ealing()
     EDMUND_OPTICS = _Edmund_Optics()
     EMORY = _Emory_University()
+    ESTHER_A____JOSEPH_KLINGENSTEIN_FUND = _Esther_A_Joseph_Klingenstein_Fund()
     EURESYS = _Euresys()
     FUJINON = _Fujinon()
+    G__HAROLD___LEILA_Y__MATHERS_FOUNDATION = _G_Harold_Leila_Y_Mathers_Foundation()
     HAMAMATSU = _Hamamatsu()
     HAMILTON = _Hamilton()
+    HELEN_HAY_WHITNEY_FOUNDATION = _Helen_Hay_Whitney_Foundation()
     HUST = _Huazhong_University_Of_Science_And_Technology()
     IR_ROBOT_CO = _Ir_Robot_Co()
     ISL = _Isl_Products_International()
@@ -935,12 +1103,16 @@ class Organization:
     JAX = _Jackson_Laboratory()
     JANELIA = _Janelia_Research_Campus()
     JULABO = _Julabo()
+    KTGF = _Klingenstein_Third_Generation_Foundation()
     KOWA = _Kowa()
     LG = _Lg()
     LEICA = _Leica()
     LUMEN_DYNAMICS = _Lumen_Dynamics()
     LIFECANVAS = _Lifecanvas()
+    LSRF = _Life_Sciences_Research_Foundation()
     MBF = _Mbf_Bioscience()
+    MCKNIGHT_BRAIN_RESEARCH_FOUNDATION = _Mcknight_Brain_Research_Foundation()
+    MCKNIGHT_FOUNDATION = _Mcknight_Foundation()
     MKS_NEWPORT = _Mks_Newport()
     MPI = _Mpi()
     MEADOWLARK_OPTICS = _Meadowlark_Optics()
@@ -951,7 +1123,9 @@ class Organization:
     NCCIH = _National_Center_For_Complementary_And_Integrative_Health()
     NIMH = _National_Institute_Of_Mental_Health()
     NINDS = _National_Institute_Of_Neurological_Disorders_And_Stroke()
+    NIA = _National_Institute_On_Aging()
     NATIONAL_INSTRUMENTS = _National_Instruments()
+    NSF = _U_S_National_Science_Foundation()
     NAVITAR = _Navitar()
     NEUROPHOTOMETRICS = _Neurophotometrics()
     NEW_SCALE_TECHNOLOGIES = _New_Scale_Technologies()
@@ -962,10 +1136,12 @@ class Organization:
     OPTOTUNE = _Optotune()
     OTHER = _Other()
     OXXIUS = _Oxxius()
+    PEW_CHARITABLE_TRUSTS = _Pew_Charitable_Trusts()
     PLACID_INDUSTRIES = _Placid_Industries()
     PRIZMATIX = _Prizmatix()
     QUANTIFI = _Quantifi()
     RASPBERRY_PI = _Raspberry_Pi()
+    ROCKLAND = _Rockland_Immunochemicals()
     SAME_SKY = _Same_Sky()
     SICGEN = _Sicgen()
     SCHNEIDER_KREUZNACH = _Schneider_Kreuznach()
@@ -974,6 +1150,7 @@ class Organization:
     SIGMA_ALDRICH = _Sigma_Aldrich()
     SIMONS_FOUNDATION = _Simons_Foundation()
     SPINNAKER = _Spinnaker()
+    SYNAPTIC_SYSTEMS = _Synaptic_Systems()
     TAMRON = _Tamron()
     TMC = _Technical_Manufacturing_Corporation()
     FLIR = _Teledyne_Flir()
@@ -984,8 +1161,12 @@ class Organization:
     THORLABS = _Thorlabs()
     TRANSDUCER_TECHNIQUES = _Transducer_Techniques()
     TYMPHANY = _Tymphany()
+    DOD = _United_States_Department_Of_Defense()
+    DOE = _United_States_Department_Of_Energy()
     VIEWORKS = _Vieworks()
     VORTRAN = _Vortran()
+    W__M__KECK_FOUNDATION = _W_M_Keck_Foundation()
+    WARREN_ALPERT_FOUNDATION = _Warren_Alpert_Foundation()
     AMS_OSRAM = _Ams_Osram()
 
     ALL = tuple(_OrganizationModel.__subclasses__())
@@ -1094,14 +1275,29 @@ Organization.SPEAKER_MANUFACTURERS = one_of_instance(
 Organization.FUNDERS = one_of_instance(
     [
         Organization.AI,
+        Organization.ASAP,
         Organization.CZI,
+        Organization.ESTHER_A____JOSEPH_KLINGENSTEIN_FUND,
+        Organization.G__HAROLD___LEILA_Y__MATHERS_FOUNDATION,
+        Organization.HELEN_HAY_WHITNEY_FOUNDATION,
+        Organization.KTGF,
+        Organization.LSRF,
         Organization.MBF,
+        Organization.MCKNIGHT_BRAIN_RESEARCH_FOUNDATION,
+        Organization.MCKNIGHT_FOUNDATION,
         Organization.MJFF,
         Organization.NCCIH,
+        Organization.NIA,
         Organization.NIMH,
         Organization.NINDS,
+        Organization.NSF,
+        Organization.PEW_CHARITABLE_TRUSTS,
         Organization.SIMONS_FOUNDATION,
         Organization.TWCF,
+        Organization.DOD,
+        Organization.DOE,
+        Organization.W__M__KECK_FOUNDATION,
+        Organization.WARREN_ALPERT_FOUNDATION,
     ]
 )
 

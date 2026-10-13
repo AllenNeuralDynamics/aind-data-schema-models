@@ -140,14 +140,29 @@ Organization.SPEAKER_MANUFACTURERS = one_of_instance(
 Organization.FUNDERS = one_of_instance(
     [
         Organization.AI,
+        Organization.ASAP,
         Organization.CZI,
+        Organization.ESTHER_A____JOSEPH_KLINGENSTEIN_FUND,
+        Organization.G__HAROLD___LEILA_Y__MATHERS_FOUNDATION,
+        Organization.HELEN_HAY_WHITNEY_FOUNDATION,
+        Organization.KTGF,
+        Organization.LSRF,
         Organization.MBF,
+        Organization.MCKNIGHT_BRAIN_RESEARCH_FOUNDATION,
+        Organization.MCKNIGHT_FOUNDATION,
         Organization.MJFF,
         Organization.NCCIH,
+        Organization.NIA,
         Organization.NIMH,
         Organization.NINDS,
+        Organization.NSF,
+        Organization.PEW_CHARITABLE_TRUSTS,
         Organization.SIMONS_FOUNDATION,
         Organization.TWCF,
+        Organization.DOD,
+        Organization.DOE,
+        Organization.W__M__KECK_FOUNDATION,
+        Organization.WARREN_ALPERT_FOUNDATION,
     ]
 )
 

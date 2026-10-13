@@ -1,0 +1,30 @@
+name: Publish v0.8.0 to PyPI
+
+on:
+  push:
+    tags:
+      - "v0.8.0"
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.10"
+      - name: Verify tag version, build, and validate distributions
+        run: |
+          package_version="$(PYTHONPATH=src python -c 'from aind_data_schema_models import __version__; print(__version__)')"
+          test "$GITHUB_REF_NAME" = "v${package_version}"
+          python -m pip install --upgrade build twine
+          python -m build
+          python -m twine check dist/*
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          password: ${{ secrets.AIND_PYPI_TOKEN }}
