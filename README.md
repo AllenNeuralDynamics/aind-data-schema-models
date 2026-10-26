@@ -11,6 +11,8 @@
 
 `aind-data-schema-models` is a dependency of `aind-data-schema`. You should not need to install it directly.
 
+**Note on dependencies:** this package is updated frequently, because new vocabulary and registry entries are added as the schema evolves. If you take a dependency on `aind-data-schema-models`, expect frequent releases and be prepared to update your own package regularly to keep your pinned version up to date.
+
 ## Contributing
 
 Install the dev dependencies:
